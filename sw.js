@@ -1,9 +1,11 @@
-// LoLDB Service Worker - Offline Cache
-const CACHE_NAME = 'loldb-cache-v1';
+// LoLDB Service Worker - Offline Cache v2
+const CACHE_NAME = 'loldb-cache-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './manifest.json'
+  './manifest.json',
+  './icon.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -31,14 +33,33 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // キャッシュファースト（オフライン動作の最優先）
+  const url = new URL(event.request.url);
+
+  // 1. メインHTML（ナビゲーション）は Network-First（オンライン時は最新、オフライン時はキャッシュ）
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname === '/') {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+          }
+          return networkResponse;
+        })
+        .catch(() => {
+          return caches.match('./index.html') || caches.match('./');
+        })
+    );
+    return;
+  }
+
+  // 2. その他の静的アセット（画像等）は Cache-First
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
         return response;
       }
       return fetch(event.request).then((networkResponse) => {
-        // 画像等は動的キャッシュ
         if (networkResponse && networkResponse.status === 200 && event.request.method === 'GET') {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
@@ -46,9 +67,6 @@ self.addEventListener('fetch', (event) => {
           });
         }
         return networkResponse;
-      }).catch(() => {
-        // オフラインフォールバック
-        return caches.match('./index.html');
       });
     })
   );

@@ -8,6 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="description" content="全チャンピオンのスキル、推奨ビルド、ルーン、対面相性を完全網羅したオフライン対応攻略アプリ">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="manifest.json">
   <style>
     :root {
@@ -341,18 +343,42 @@
     /* スキル */
     .skill-card {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       padding: 10px;
       background: #101726;
       border-radius: 8px;
       margin-bottom: 8px;
       border: 1px solid #1e293b;
+      align-items: flex-start;
     }
-    .skill-slot {
-      font-weight: 800;
-      color: var(--primary);
-      font-size: 14px;
-      min-width: 24px;
+    .skill-icon-wrap {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0b0f19;
+      flex-shrink: 0;
+      border: 1px solid #334155;
+    }
+    .skill-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .skill-slot-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.9);
+      color: #38bdf8;
+      font-weight: 900;
+      font-size: 11px;
+      padding: 1px 4px;
+      border-top-left-radius: 4px;
+      border-left: 1px solid #0284c7;
+      border-top: 1px solid #0284c7;
     }
     .skill-content {
       flex: 1;
@@ -361,11 +387,13 @@
       font-weight: 700;
       font-size: 13px;
       margin-bottom: 4px;
+      color: #fff;
     }
     .skill-meta {
       font-size: 11px;
       color: var(--accent);
       margin-bottom: 4px;
+      font-weight: 600;
     }
     .skill-desc {
       font-size: 12px;
@@ -385,7 +413,7 @@
     }
     .matchup-col {
       background: #101726;
-      padding: 10px;
+      padding: 12px;
       border-radius: 8px;
       border: 1px solid #1e293b;
     }
@@ -393,16 +421,34 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 6px 0;
+      padding: 8px 0;
       border-bottom: 1px solid #1e293b;
       font-size: 12px;
     }
     .matchup-item:last-child { border-bottom: none; }
+    .matchup-champ-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .matchup-champ-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #334155;
+      background: #0b0f19;
+      flex-shrink: 0;
+    }
+    .matchup-champ-name {
+      font-weight: 600;
+      color: #f1f5f9;
+    }
     .badge-fav { color: var(--favorable); font-weight: 700; }
     .badge-unfav { color: var(--unfavorable); font-weight: 700; }
     /* ビルド */
     .build-group {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .build-group-title {
       font-size: 12px;
@@ -413,15 +459,46 @@
     .item-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
     }
     .item-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: #101726;
       border: 1px solid #1e293b;
       padding: 4px 8px;
       border-radius: 6px;
       font-size: 12px;
       color: #e2e8f0;
+      font-weight: 600;
+    }
+    .item-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #334155;
+    }
+    .item-step {
+      background: #0284c7;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spell-img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1px solid #334155;
     }
     /* ルーン */
     .rune-row {
@@ -437,16 +514,20 @@
     }
     .spells-badge-list {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       margin-top: 4px;
+      flex-wrap: wrap;
     }
     .spell-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: #101726;
       border: 1px solid #38bdf8;
       color: #38bdf8;
       font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
       font-size: 12px;
     }
   </style>
@@ -458,7 +539,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB 攻略マスター</span>
-          <span class="patch-badge" id="patchBadge">Patch 16.19</span>
+          <span class="patch-badge" id="patchBadge">Patch 16.19 (v1.1.1 リッチ画像)</span>
         </div>
       </div>
       <div class="controls">
@@ -575,20 +656,44 @@
       const c = CHAMPIONS[champId];
       if (!c) return;
 
+      const patch = c.patch || "16.19.1";
       modalNameEl.textContent = c.name;
-      modalTitleEl.textContent = `${c.id} - ${c.title || ""} (Patch ${c.patch})`;
+      modalTitleEl.textContent = `${c.id} - ${c.title || ""} (Patch ${patch})`;
 
-      const spellsBadge = (c.summoner_spells || []).map(s => 
-        `<span class="spell-pill">${s}</span>`
-      ).join("") || "<span style='color:var(--text-muted); font-size:12px;'>標準スペル</span>";
+      const SPELL_IMG_MAP = {
+        "フラッシュ": "SummonerFlash.png",
+        "イグナイト": "SummonerDot.png",
+        "テレポート": "SummonerTeleport.png",
+        "スマイト": "SummonerSmite.png",
+        "ヒール": "SummonerHeal.png",
+        "バリア": "SummonerBarrier.png",
+        "イグゾースト": "SummonerExhaust.png",
+        "ゴースト": "SummonerHaste.png",
+        "クレンズ": "SummonerBoost.png"
+      };
+
+      const spellsBadge = (c.summoner_spells || []).map(s => {
+        const sImg = SPELL_IMG_MAP[s] || "SummonerFlash.png";
+        const sUrl = `https://ddragon.leagueoflegends.com/cdn/${patch}/img/spell/${sImg}`;
+        return `
+          <span class="spell-pill">
+            <img class="spell-img" src="${sUrl}" alt="${s}" onerror="this.style.display='none';">
+            <span>${s}</span>
+          </span>
+        `;
+      }).join("") || "<span style='color:var(--text-muted); font-size:12px;'>標準スペル</span>";
 
       // スキル一覧
       let skillsHtml = "";
       if (c.abilities && c.abilities.length > 0) {
         c.abilities.forEach(a => {
+          const pImg = a.image ? `https://ddragon.leagueoflegends.com/cdn/${patch}/img/passive/${a.image}` : "";
           skillsHtml += `
             <div class="skill-card">
-              <div class="skill-slot">P</div>
+              <div class="skill-icon-wrap">
+                <img class="skill-img" src="${pImg}" alt="${a.name}" onerror="this.style.display='none';">
+                <span class="skill-slot-badge">P</span>
+              </div>
               <div class="skill-content">
                 <div class="skill-name">${a.name}</div>
                 <div class="skill-desc">${a.description || ""}</div>
@@ -599,9 +704,13 @@
       }
       if (c.spells && c.spells.length > 0) {
         c.spells.forEach(s => {
+          const spImg = s.image ? `https://ddragon.leagueoflegends.com/cdn/${patch}/img/spell/${s.image}` : "";
           skillsHtml += `
             <div class="skill-card">
-              <div class="skill-slot">${s.slot}</div>
+              <div class="skill-icon-wrap">
+                <img class="skill-img" src="${spImg}" alt="${s.name}" onerror="this.style.display='none';">
+                <span class="skill-slot-badge">${s.slot}</span>
+              </div>
               <div class="skill-content">
                 <div class="skill-name">${s.name}</div>
                 <div class="skill-meta">CD: ${s.cooldown || "なし"} | コスト: ${s.cost || "0"}</div>
@@ -615,32 +724,71 @@
       // 相性
       let favHtml = "";
       if (c.matchups && c.matchups.favorable && c.matchups.favorable.length > 0) {
-        favHtml = c.matchups.favorable.map(m => `
-          <div class="matchup-item">
-            <span>${m.name || m.champion_id}</span>
-            <span class="badge-fav">${m.reason}</span>
-          </div>
-        `).join("");
+        favHtml = c.matchups.favorable.map(m => {
+          const oppImg = `https://ddragon.leagueoflegends.com/cdn/${patch}/img/champion/${m.champion_id}.png`;
+          return `
+            <div class="matchup-item">
+              <div class="matchup-champ-info">
+                <img class="matchup-champ-img" src="${oppImg}" alt="${m.name || m.champion_id}" onerror="this.style.display='none';">
+                <span class="matchup-champ-name">${m.name || m.champion_id}</span>
+              </div>
+              <span class="badge-fav">${m.reason}</span>
+            </div>
+          `;
+        }).join("");
       } else {
         favHtml = "<div style='color:var(--text-muted); font-size:12px; padding:6px 0;'>統計データなし</div>";
       }
 
       let unfavHtml = "";
       if (c.matchups && c.matchups.unfavorable && c.matchups.unfavorable.length > 0) {
-        unfavHtml = c.matchups.unfavorable.map(m => `
-          <div class="matchup-item">
-            <span>${m.name || m.champion_id}</span>
-            <span class="badge-unfav">${m.reason}</span>
-          </div>
-        `).join("");
+        unfavHtml = c.matchups.unfavorable.map(m => {
+          const oppImg = `https://ddragon.leagueoflegends.com/cdn/${patch}/img/champion/${m.champion_id}.png`;
+          return `
+            <div class="matchup-item">
+              <div class="matchup-champ-info">
+                <img class="matchup-champ-img" src="${oppImg}" alt="${m.name || m.champion_id}" onerror="this.style.display='none';">
+                <span class="matchup-champ-name">${m.name || m.champion_id}</span>
+              </div>
+              <span class="badge-unfav">${m.reason}</span>
+            </div>
+          `;
+        }).join("");
       } else {
         unfavHtml = "<div style='color:var(--text-muted); font-size:12px; padding:6px 0;'>統計データなし</div>";
       }
 
       // ビルド
-      let starterItems = (c.build?.starter || []).map(i => `<span class="item-pill">${i.name}</span>`).join("") || "データなし";
-      let bootsItems = (c.build?.boots || []).map(b => `<span class="item-pill">${b.name}</span>`).join("") || "データなし";
-      let coreItems = (c.build?.core || []).map(i => `<span class="item-pill">${i.step}. ${i.name}</span>`).join("") || "データなし";
+      let starterItems = (c.build?.starter || []).map(i => {
+        const itemImg = `https://ddragon.leagueoflegends.com/cdn/${patch}/img/item/${i.item_id}.png`;
+        return `
+          <span class="item-pill">
+            <img class="item-img" src="${itemImg}" alt="${i.name}" onerror="this.style.display='none';">
+            <span>${i.name}</span>
+          </span>
+        `;
+      }).join("") || "データなし";
+
+      let bootsItems = (c.build?.boots || []).map(b => {
+        const bImg = `https://ddragon.leagueoflegends.com/cdn/${patch}/img/item/${b.item_id}.png`;
+        return `
+          <span class="item-pill">
+            <img class="item-img" src="${bImg}" alt="${b.name}" onerror="this.style.display='none';">
+            <span>${b.name}</span>
+          </span>
+        `;
+      }).join("") || "データなし";
+
+      let coreItems = (c.build?.core || []).map(i => {
+        const cImg = `https://ddragon.leagueoflegends.com/cdn/${patch}/img/item/${i.item_id}.png`;
+        return `
+          <span class="item-pill">
+            <span class="item-step">${i.step}</span>
+            <img class="item-img" src="${cImg}" alt="${i.name}" onerror="this.style.display='none';">
+            <span>${i.name}</span>
+          </span>
+        `;
+      }).join("") || "データなし";
 
       // ルーン
       const r = c.runes || {};
@@ -740,11 +888,14 @@
     // 初期レンダリング
     renderList();
 
-    // Service Worker 登録
+    // Service Worker 登録（更新チェック付き）
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('ServiceWorker registered:', reg.scope))
+          .then(reg => {
+            console.log('ServiceWorker registered:', reg.scope);
+            reg.update();
+          })
           .catch(err => console.log('ServiceWorker registration failed:', err));
       });
     }
