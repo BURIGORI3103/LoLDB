@@ -1,0 +1,188 @@
+{
+  "id": "Kaisa",
+  "key": "145",
+  "name": "カイ＝サ",
+  "title": "虚無を知る娘",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 640,
+    "hpperlevel": 102,
+    "mp": 345,
+    "mpperlevel": 40,
+    "movespeed": 335,
+    "armor": 25,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 525,
+    "hpregen": 4,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8.2,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.8,
+    "attackspeed": 0.644
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ヴォイドスキン",
+      "description": "カイ＝サの通常攻撃はプラズマスタックを付与し、スタック数に応じて与える追加魔法ダメージが増加していく。味方の移動不能効果もプラズマスタックを付与する。さらに、アイテム購入によってアルティメット以外のスキルがアップグレードされる。",
+      "image": "Kaisa_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "イカシアの雨",
+      "description": "多数のミサイルを乱射する。ミサイルは周囲の敵を追尾する。<br><br>共生兵器: 「イカシアの雨」がアップグレードされて、ミサイル数が増加する。",
+      "cooldown": "10/9/8/7/6",
+      "cost": "55",
+      "image": "KaisaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ヴォイドシーカー",
+      "description": "遠距離ミサイルを発射して、命中した敵にプラズマスタックを付与する。<br><br>共生兵器: 「ヴォイドシーカー」がアップグレードされて、付与するスタック数が増加し、チャンピオンに当たるとクールダウンが短縮されるようになる。",
+      "cooldown": "20/18.5/17/15.5/14",
+      "cost": "55/60/65/70/75",
+      "image": "KaisaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スーパーチャージ",
+      "description": "一時的に移動速度が増加し、その後攻撃速度が増加する。<br><br>共生兵器: 「スーパーチャージ」がアップグレードされて、一時的にインビジブル状態を獲得できるようになる。",
+      "cooldown": "16/14.5/13/11.5/10",
+      "cost": "30",
+      "image": "KaisaE.png"
+    },
+    {
+      "slot": "R",
+      "name": "キラーヴォイド",
+      "description": "敵チャンピオンの近くまでダッシュする。",
+      "cooldown": "130/100/70",
+      "cost": "100",
+      "image": "KaisaR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 55.89%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 55.51%（統計的に有利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 52.73%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Nilah",
+        "name": "ニーラ",
+        "reason": "勝率 45.14%（統計的に不利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 45.42%（統計的に不利）"
+      },
+      {
+        "champion_id": "Jinx",
+        "name": "ジンクス",
+        "reason": "勝率 46.07%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6672",
+        "name": "クラーケン スレイヤー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3124",
+        "name": "グインソー レイジブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3302",
+        "name": "テルミヌス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: 血脈",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "ビスケットデリバリー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

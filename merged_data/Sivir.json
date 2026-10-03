@@ -1,0 +1,188 @@
+{
+  "id": "Sivir",
+  "key": "15",
+  "name": "シヴィア",
+  "title": "戦場の女王",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 104,
+    "mp": 340,
+    "mpperlevel": 45,
+    "movespeed": 335,
+    "armor": 30,
+    "armorperlevel": 4,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 500,
+    "hpregen": 3.25,
+    "hpregenperlevel": 0.55,
+    "mpregen": 6,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.6,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "戦駆け",
+      "description": "敵チャンピオンを攻撃すると移動速度が短時間増加する。",
+      "image": "Sivir_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ブーメランブレード",
+      "description": "クロスブレードをブーメランのように投げ、往復のそれぞれで命中した敵ユニットすべてにダメージを与える。",
+      "cooldown": "10/9.5/9/8.5/8",
+      "cost": "55/60/65/70/75",
+      "image": "SivirQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "跳刃",
+      "description": "次の数回の通常攻撃は攻撃速度が増加し、対象の周囲に跳ね返るようになる。跳ね返った攻撃は与えるダメージが低下する。",
+      "cooldown": "12",
+      "cost": "60",
+      "image": "SivirW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スペルシールド",
+      "description": "魔法のバリアを張り、一度だけ敵のスキル攻撃やその付随効果をブロックする。スキルをブロックすると体力が回復して、少しの間だけ移動速度が増加する。",
+      "cooldown": "24/22.5/21/19.5/18",
+      "cost": "0",
+      "image": "SivirE.png"
+    },
+    {
+      "slot": "R",
+      "name": "戦姫の号令",
+      "description": "発動するとシヴィアの号令により、自身と味方の移動速度を一定時間増加させる。また、自身は通常攻撃するたびに、スキルのクールダウンを短縮できる。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "SivirR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Nilah",
+        "name": "ニーラ",
+        "reason": "勝率 57.09%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 55.7%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 55.45%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "AurelionSol",
+        "name": "オレリオン・ソル",
+        "reason": "勝率 40.78%（統計的に不利）"
+      },
+      {
+        "champion_id": "Katarina",
+        "name": "カタリナ",
+        "reason": "勝率 41.5%（統計的に不利）"
+      },
+      {
+        "champion_id": "Twitch",
+        "name": "トゥイッチ",
+        "reason": "勝率 45.85%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3508",
+        "name": "エッセンス リーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6675",
+        "name": "ナヴォリ フリッカーブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: 血脈",
+        "切り崩し"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "キャッシュバック",
+        "トリプル トニック"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

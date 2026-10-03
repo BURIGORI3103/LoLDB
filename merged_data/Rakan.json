@@ -1,0 +1,184 @@
+{
+  "id": "Rakan",
+  "key": "497",
+  "name": "ラカン",
+  "title": "魅惑の翼",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 610,
+    "hpperlevel": 99,
+    "mp": 315,
+    "mpperlevel": 50,
+    "movespeed": 335,
+    "armor": 30,
+    "armorperlevel": 4.9,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 300,
+    "hpregen": 5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 8.75,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.635
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "神秘の翼",
+      "description": "ラカンは定期的にシールドを獲得する。",
+      "image": "Rakan_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "キラリ羽根",
+      "description": "魔法の羽根を投げて魔法ダメージを与える。敵チャンピオンかエピックモンスターに当たると、ラカンが味方を回復できる。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "45",
+      "image": "RakanQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "華麗なる登場",
+      "description": "指定地点にダッシュして、到着時に周囲の敵ユニットをノックアップさせる。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/60/70/80/90",
+      "image": "RakanW.png"
+    },
+    {
+      "slot": "E",
+      "name": "バトルダンス",
+      "description": "味方チャンピオンのところまで飛びシールドを付与する。このスキルは少しの間だけコスト無しで再使用できる。",
+      "cooldown": "0",
+      "cost": "40/45/50/55/60",
+      "image": "RakanE.png"
+    },
+    {
+      "slot": "R",
+      "name": "みんなオレに夢中",
+      "description": "移動速度が増加して、触れた敵ユニットにチャームと魔法ダメージを与える。",
+      "cooldown": "130/110/90",
+      "cost": "100",
+      "image": "RakanR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 64.86%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 61.34%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yuumi",
+        "name": "ユーミ",
+        "reason": "勝率 58.86%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Poppy",
+        "name": "ポッピー",
+        "reason": "勝率 47.44%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zoe",
+        "name": "ゾーイ",
+        "reason": "勝率 47.44%（統計的に不利）"
+      },
+      {
+        "champion_id": "Senna",
+        "name": "セナ",
+        "reason": "勝率 47.48%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3050",
+        "name": "ジーク コンバージェンス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3109",
+        "name": "騎士の誓い",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8465",
+      "keystone_name": "ガーディアン",
+      "choices": [
+        "生命の泉",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "第六感",
+        "至極の賞金首狩り"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

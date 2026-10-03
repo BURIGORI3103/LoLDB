@@ -1,0 +1,121 @@
+{
+  "name": "繧ｷ繝｣繧ｳ",
+  "slug": "shaco",
+  "roles": [
+    "JUG",
+    "SUP"
+  ],
+  "summoner_spells": [
+    "スマイト",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ambessa",
+        "name": "アンベッサ",
+        "reason": "勝率 58.49%（統計的に有利）"
+      },
+      {
+        "champion_id": "Jayce",
+        "name": "ジェイス",
+        "reason": "勝率 56.75%（統計的に有利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 54.76%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 44.94%（統計的に不利）"
+      },
+      {
+        "champion_id": "Maokai",
+        "name": "マオカイ",
+        "reason": "勝率 45.71%（統計的に不利）"
+      },
+      {
+        "champion_id": "Talon",
+        "name": "タロン",
+        "reason": "勝率 46.5%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2503",
+        "name": "黒炎のトーチ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4005",
+        "name": "帝国の指令",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "9923",
+      "keystone_name": "ヘイルブレード",
+      "choices": [
+        "サドンインパクト",
+        "グリスリー メメント",
+        "執拗な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "レジェンド: 迅速",
+        "最期の慈悲"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

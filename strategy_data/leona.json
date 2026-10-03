@@ -1,0 +1,112 @@
+{
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 65.02%（統計的に有利）"
+      },
+      {
+        "champion_id": "Camille",
+        "name": "カミール",
+        "reason": "勝率 57.91%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 56.81%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Renata",
+        "name": "レナータ・グラスク",
+        "reason": "勝率 47.28%（統計的に不利）"
+      },
+      {
+        "champion_id": "Leblanc",
+        "name": "ルブラン",
+        "reason": "勝率 47.72%（統計的に不利）"
+      },
+      {
+        "champion_id": "Morgana",
+        "name": "モルガナ",
+        "reason": "勝率 48.46%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3109",
+        "name": "騎士の誓い",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2524",
+        "name": "バンドルパイプ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "生命の泉",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "name": "レオナ",
+  "slug": "leona"
+}

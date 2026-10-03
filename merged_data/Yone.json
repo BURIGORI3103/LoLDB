@@ -1,0 +1,189 @@
+{
+  "id": "Yone",
+  "key": "777",
+  "name": "ヨネ",
+  "title": "忘られざる者",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP",
+    "MID"
+  ],
+  "resource": "つむじ風",
+  "stats": {
+    "hp": 620,
+    "hpperlevel": 105,
+    "mp": 500,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 33,
+    "armorperlevel": 4.6,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 7.5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "狩鬼道",
+      "description": "通常攻撃2回ごとに魔法ダメージを与える。さらに、クリティカル率が増加する。",
+      "image": "YonePassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "斬命刀",
+      "description": "前方に突きを放ち、直線上の敵すべてにダメージを与える。<br><br>このスキルが命中すると「つむじ風」のスタックを数秒間得る。2スタックになると、「斬命刀」を使用した際、一陣の風をまとって前方にダッシュし、敵を<status>ノックアップ</status>させる。",
+      "cooldown": "4",
+      "cost": "0",
+      "image": "YoneQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "霊断刀",
+      "description": "前方をなぎ払い、扇状の範囲内にいるすべての敵にダメージを与え、シールドを獲得する。シールド量はなぎ払いが命中したチャンピオンの数に応じて増加する。<br><br>攻撃速度が増加すると「霊断刀」のクールダウンと詠唱時間が短縮される。",
+      "cooldown": "14",
+      "cost": "0",
+      "image": "YoneW.png"
+    },
+    {
+      "slot": "E",
+      "name": "縛魂の解放",
+      "description": "自身の霊魂が肉体を離れ、移動速度が増加する。スキル終了時にこの霊魂は肉体に強制的に戻り、霊魂として与えたダメージの一部をもう一度与える。",
+      "cooldown": "22/19/16/13/10",
+      "cost": "0",
+      "image": "YoneE.png"
+    },
+    {
+      "slot": "R",
+      "name": "冥封一閃",
+      "description": "直線上の最後にいるチャンピオンの背後に強力な斬撃を与えてブリンクし、当たった敵すべてを自身の方向に引き寄せる。",
+      "cooldown": "120/100/80",
+      "cost": "0",
+      "image": "YoneR.png"
+    }
+  ],
+  "summoner_spells": [
+    "イグゾースト",
+    "フラッシュ"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 59.11%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 58.31%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yorick",
+        "name": "ヨリック",
+        "reason": "勝率 57.02%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "MonkeyKing",
+        "name": "ウーコン",
+        "reason": "勝率 46.35%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kled",
+        "name": "クレッド",
+        "reason": "勝率 46.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fiora",
+        "name": "フィオラ",
+        "reason": "勝率 46.44%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3153",
+        "name": "ルインドキング ブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6673",
+        "name": "イモータル シールドボウ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "体力吸収",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

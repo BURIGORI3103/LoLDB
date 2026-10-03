@@ -1,0 +1,189 @@
+{
+  "id": "Viktor",
+  "key": "112",
+  "name": "ビクター",
+  "title": "アーケインの先触れ",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 100,
+    "mp": 405,
+    "mpperlevel": 45,
+    "movespeed": 335,
+    "armor": 23,
+    "armorperlevel": 4.4,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 525,
+    "hpregen": 8,
+    "hpregenperlevel": 0.65,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 53,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.11,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "グロリアス・エヴォリューション",
+      "description": "敵を倒すたびに「ヘクス フラグメント」を獲得する。「ヘクス フラグメント」を100個獲得するごとに、発動効果スキルが1つ恒久的に強化される。すべての通常スキルをアップグレードすると、「ヘクス フラグメント」を100個獲得してアルティメットスキルが強化できる。",
+      "image": "Viktor_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "パワーブラスト",
+      "description": "敵ユニットを狙い撃って魔法ダメージを与え、自身にシールドを張り、次の通常攻撃のダメージが強化される。<br><br>強化: 「パワーブラスト」のシールドが60%増加し、このスキルを発動後、移動速度が増加する。<br>",
+      "cooldown": "9/8/7/6/5",
+      "cost": "45/50/55/60/65",
+      "image": "ViktorQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "グラビティフィールド",
+      "description": "強力な重力場を発生させる装置を展開し、範囲内の敵にスロウ効果を付与する。 また、装置から抜け出せなかった敵にスタン効果を付与する。<br><br>強化: スキルが敵にスロウ効果を付与する。<br>",
+      "cooldown": "17/16/15/14/13",
+      "cost": "65",
+      "image": "ViktorW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ヘクステック レイ",
+      "description": "バイオメカニカルアームから「ヘクステック レイ」を発射し、一直線にフィールドを焼き払いながら、命中した敵ユニットにダメージを与える。<br><br>強化: 「ヘクステック レイ」が焼き払った地面が爆発し、魔法ダメージを与える。<br>",
+      "cooldown": "12/11/10/9/8",
+      "cost": "60/70/80/90/100",
+      "image": "ViktorE.png"
+    },
+    {
+      "slot": "R",
+      "name": "アーケインストーム",
+      "description": "フィールド上に「アーケインストーム」を召喚し、魔法ダメージを与えて、敵の詠唱を中断させる。嵐は一定時間ごとに周囲のすべての敵に魔法ダメージを与え、ビクターが移動方向を変えられる。<br><br>強化: 「アーケインストーム」の移動速度が25%増加し、嵐でダメージを受けたチャンピオンが倒されるたびに嵐が大きくなり、効果時間が延長される。<br><br>",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "ViktorR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 64.32%（統計的に有利）"
+      },
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 59.77%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 59.74%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Talon",
+        "name": "タロン",
+        "reason": "勝率 45.52%（統計的に不利）"
+      },
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 46.31%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zoe",
+        "name": "ゾーイ",
+        "reason": "勝率 46.71%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2503",
+        "name": "黒炎のトーチ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3152",
+        "name": "ヘクステック ロケットベルト",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8992",
+      "keystone_name": "死神の残り火",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "シールドバッシュ",
+        "ボーンアーマー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

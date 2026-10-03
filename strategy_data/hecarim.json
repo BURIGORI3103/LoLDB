@@ -1,0 +1,120 @@
+{
+  "name": "繝倥き繝ｪ繝",
+  "slug": "hecarim",
+  "roles": [
+    "JUG"
+  ],
+  "summoner_spells": [
+    "ゴースト",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 57.65%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ambessa",
+        "name": "アンベッサ",
+        "reason": "勝率 56.41%（統計的に有利）"
+      },
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 54.55%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Chogath",
+        "name": "チョ＝ガス",
+        "reason": "勝率 43.01%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 44.94%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 45.0%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3161",
+        "name": "ショウジンの矛",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2517",
+        "name": "終わりなき飢え",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8230",
+      "keystone_name": "嵐乗りの勇躍",
+      "choices": [
+        "ニンバスクローク",
+        "追い風",
+        "水走り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

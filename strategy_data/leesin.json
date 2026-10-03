@@ -1,0 +1,116 @@
+{
+  "roles": [
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 54.86%（統計的に有利）"
+      },
+      {
+        "champion_id": "Zed",
+        "name": "ゼド",
+        "reason": "勝率 52.77%（統計的に有利）"
+      },
+      {
+        "champion_id": "Jayce",
+        "name": "ジェイス",
+        "reason": "勝率 52.14%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 45.05%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 45.52%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zyra",
+        "name": "ザイラ",
+        "reason": "勝率 46.15%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6692",
+        "name": "赤月の刃",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "name": "リー・シン",
+  "slug": "leesin"
+}

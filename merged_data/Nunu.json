@@ -1,0 +1,188 @@
+{
+  "id": "Nunu",
+  "key": "20",
+  "name": "ヌヌ＆ウィルンプ",
+  "title": "少年とイエティ",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 610,
+    "hpperlevel": 90,
+    "mp": 280,
+    "mpperlevel": 42,
+    "movespeed": 345,
+    "armor": 29,
+    "armorperlevel": 4.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 5,
+    "hpregenperlevel": 0.8,
+    "mpregen": 7,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 61,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.25,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "フレヨルドの呼び声",
+      "description": "ヌヌがウィルンプと近くにいる味方1体の攻撃速度と移動速度を増加させる。さらに、ウィルンプの通常攻撃が対象の周囲にいる敵にもダメージを与えるようになる。",
+      "image": "NunuPassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "丸かじり",
+      "description": "ウィルンプがミニオンかモンスター、または敵チャンピオンにかぶりつき、ダメージを与えて自身の体力を回復する。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "60",
+      "image": "NunuQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "超特大の雪玉！",
+      "description": "ウィルンプが雪玉をつくって転がす。雪玉を転がす間、雪玉のサイズとスピードが増加していく。雪玉は敵にダメージを与えてノックアップする。",
+      "cooldown": "14",
+      "cost": "50/55/60/65/70",
+      "image": "NunuW.png"
+    },
+    {
+      "slot": "E",
+      "name": "雪玉連射",
+      "description": "ヌヌが雪玉を複数投げて敵にダメージを与える。その後、雪玉が当たったチャンピオンと大型モンスターにウィルンプがスネア効果を与える。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/55/60/65/70",
+      "image": "NunuE.png"
+    },
+    {
+      "slot": "R",
+      "name": "アブソリュート・ゼロ",
+      "description": "ヌヌとウィルンプが一定範囲内に強力な猛吹雪をつくりだして敵にスロウ効果を与え、詠唱完了時に大ダメージを与える。",
+      "cooldown": "110/100/90",
+      "cost": "100",
+      "image": "NunuR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Maokai",
+        "name": "マオカイ",
+        "reason": "勝率 66.67%（統計的に有利）"
+      },
+      {
+        "champion_id": "Zyra",
+        "name": "ザイラ",
+        "reason": "勝率 59.3%（統計的に有利）"
+      },
+      {
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 58.89%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Ivern",
+        "name": "アイバーン",
+        "reason": "勝率 40.48%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 42.59%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 44.19%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3742",
+        "name": "デッド マン プレート",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3065",
+        "name": "スピリット ビサージュ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8128",
+      "keystone_name": "魂の収穫",
+      "choices": [
+        "追い打ち",
+        "グリスリー メメント",
+        "執拗な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "追い風",
+        "水走り"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

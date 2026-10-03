@@ -1,0 +1,184 @@
+{
+  "id": "Alistar",
+  "key": "12",
+  "name": "アリスター",
+  "title": "ミノタウロスの戦士",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 685,
+    "hpperlevel": 120,
+    "mp": 350,
+    "mpperlevel": 40,
+    "movespeed": 335,
+    "armor": 40,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.85,
+    "mpregen": 8.5,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.125,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "戦士の咆哮",
+      "description": "敵チャンピオンをスタンさせるか弾き飛ばした時、または周囲で敵ユニットが倒されると「咆哮」をチャージする。最大までチャージされると自身および近くにいるすべての味方チャンピオンの体力を回復する。",
+      "image": "Alistar_E.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "圧砕",
+      "description": "地面をたたきつけ、周囲にいる敵ユニットにダメージを与えてノックアップする。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/55/60/65/70",
+      "image": "Pulverize.png"
+    },
+    {
+      "slot": "W",
+      "name": "頭突き",
+      "description": "対象に「頭突き」を食らわせてダメージを与え、ノックバックさせる。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/55/60/65/70",
+      "image": "Headbutt.png"
+    },
+    {
+      "slot": "E",
+      "name": "踏破",
+      "description": "周囲の敵を踏みつけてユニットをすり抜けるようになる。これでチャンピオンにダメージを与えた場合、スタックを1つ獲得。スタックが最大になるとチャンピオンに対する次の通常攻撃に追加魔法ダメージとスタン効果を付与する。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "50/55/60/65/70",
+      "image": "AlistarE.png"
+    },
+    {
+      "slot": "R",
+      "name": "不屈の意志",
+      "description": "荒々しい雄叫びをあげ、自身に付与された行動妨害効果をすべて解除する。効果時間中は自身が受ける物理ダメージと魔法ダメージを軽減する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "FerociousHowl.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Yuumi",
+        "name": "ユーミ",
+        "reason": "勝率 57.54%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "reason": "勝率 57.19%（統計的に有利）"
+      },
+      {
+        "champion_id": "Camille",
+        "name": "カミール",
+        "reason": "勝率 54.86%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Renata",
+        "name": "レナータ・グラスク",
+        "reason": "勝率 46.48%（統計的に不利）"
+      },
+      {
+        "champion_id": "Morgana",
+        "name": "モルガナ",
+        "reason": "勝率 47.36%（統計的に不利）"
+      },
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 47.83%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3050",
+        "name": "ジーク コンバージェンス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3109",
+        "name": "騎士の誓い",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "生命の泉",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ヘクステックフラッシュネイター",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

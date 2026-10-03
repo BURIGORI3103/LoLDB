@@ -1,0 +1,188 @@
+{
+  "id": "MissFortune",
+  "key": "21",
+  "name": "ミス・フォーチュン",
+  "title": "美貌の賞金稼ぎ",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 625,
+    "hpperlevel": 100,
+    "mp": 300,
+    "mpperlevel": 40,
+    "movespeed": 325,
+    "armor": 25,
+    "armorperlevel": 4,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.65,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.656
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ラブタップ",
+      "description": "新しい対象に通常攻撃するたびに追加物理ダメージを与える。",
+      "image": "MissFortune_W.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ダブルアップ",
+      "description": "指定した敵に発砲しダメージを与える。対象の背後に敵がいた場合、跳弾して後ろの敵にもダメージを与える。弾丸はどちらも「ラブタップ」の効果が適用される。",
+      "cooldown": "7/6/5/4/3",
+      "cost": "40",
+      "image": "MissFortuneRicochetShot.png"
+    },
+    {
+      "slot": "W",
+      "name": "ストラット",
+      "description": "攻撃を受けずにいると、自動効果により移動速度が増加するようになる。発動すると、短時間攻撃速度が増加する。クールダウン中は、「ラブタップ」によってクールダウンが短縮される。",
+      "cooldown": "12",
+      "cost": "45",
+      "image": "MissFortuneViciousStrikes.png"
+    },
+    {
+      "slot": "E",
+      "name": "レイニングバレット",
+      "description": "一定範囲内に弾丸の雨を降らせて視界を確保するとともに、範囲内の敵に継続ダメージを与えてスロウ効果を付与する。",
+      "cooldown": "18/17/16/15/14",
+      "cost": "80",
+      "image": "MissFortuneScattershot.png"
+    },
+    {
+      "slot": "R",
+      "name": "バレットタイム",
+      "description": "前方の扇状範囲に大量の銃弾を放ち、範囲内にいる敵に大量のダメージを与える。波状に発射される弾丸の各ウェーブ毎にクリティカル判定を持つ。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "MissFortuneBulletTime.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 55.64%（統計的に有利）"
+      },
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 54.75%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 52.71%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Vladimir",
+        "name": "ブラッドミア",
+        "reason": "勝率 41.96%（統計的に不利）"
+      },
+      {
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 42.82%（統計的に不利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 43.49%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6697",
+        "name": "ヒュブリス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6676",
+        "name": "コレクター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8005",
+      "keystone_name": "プレスアタック",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: 血脈",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "ビスケットデリバリー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

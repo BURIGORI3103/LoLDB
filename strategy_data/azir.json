@@ -1,0 +1,116 @@
+{
+  "name": "繧｢繧ｸ繝ｼ繝ｫ",
+  "slug": "azir",
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 55.71%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 54.15%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 54.13%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Taric",
+        "name": "タリック",
+        "reason": "勝率 43.32%（統計的に不利）"
+      },
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 44.49%（統計的に不利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 45.1%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3742",
+        "name": "デッド マン プレート",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2524",
+        "name": "バンドルパイプ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8112",
+      "keystone_name": "電撃",
+      "choices": [
+        "追い打ち",
+        "ディープワード",
+        "貪欲な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "なんでも屋"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Move Speed",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

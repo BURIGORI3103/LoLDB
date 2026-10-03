@@ -1,0 +1,121 @@
+{
+  "name": "繝√Ι・昴ぎ繧ｹ",
+  "slug": "chogath",
+  "roles": [
+    "JUG",
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Darius",
+        "name": "ダリウス",
+        "reason": "勝率 59.88%（統計的に有利）"
+      },
+      {
+        "champion_id": "Hecarim",
+        "name": "ヘカリム",
+        "reason": "勝率 56.95%（統計的に有利）"
+      },
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 55.46%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Ivern",
+        "name": "アイバーン",
+        "reason": "勝率 44.96%（統計的に不利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 46.45%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 46.68%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3084",
+        "name": "心の鋼",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3742",
+        "name": "デッド マン プレート",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4401",
+        "name": "自然の力",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "9923",
+      "keystone_name": "ヘイルブレード",
+      "choices": [
+        "追い打ち",
+        "グリスリー メメント",
+        "至極の賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "アクシオム アルカニスト",
+        "追い風"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Move Speed",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

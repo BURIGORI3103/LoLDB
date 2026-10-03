@@ -1,0 +1,190 @@
+{
+  "id": "Hwei",
+  "key": "910",
+  "name": "フェイ",
+  "title": "夢想家",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "ADC",
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 580,
+    "hpperlevel": 109,
+    "mp": 480,
+    "mpperlevel": 30,
+    "movespeed": 330,
+    "armor": 21,
+    "armorperlevel": 4.7,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.75,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 54,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.69
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "夢想家の銘",
+      "description": "スキルで敵チャンピオンにダメージを与えると、最後の仕上げとなるサインを施せるよう、対象を下塗りする。<br><br>2つ目の攻撃スキルを敵に命中させるとサインが完成し、対象の足元に残る。少しするとサインは爆発し、範囲内のすべての敵に魔法ダメージを与える。",
+      "image": "HweiPassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "題材: 厄災",
+      "description": "終わりなき厄災を思い描き、壊滅的な一撃を描く力を得る。<br><br>このスキルは、フェイのスキルを攻撃スキル「荒廃の炎」、「断ち切る稲妻」、「沸き立つ大地」に置き換える。",
+      "cooldown": "10/9/8/7/6",
+      "cost": "80/90/100/110/120",
+      "image": "HweiQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "題材: 静謐",
+      "description": "終わりなき静穏を思い描き、爽快な作品を描く力を得る。<br><br>このスキルは、フェイのスキルを補助系スキル「流るる蒼」、「内省の泉」、「迸る光彩」に置き換える。",
+      "cooldown": "18/17.5/17/16.5/16",
+      "cost": "90/95/100/105/110",
+      "image": "HweiW.png"
+    },
+    {
+      "slot": "E",
+      "name": "題材: 苦悩",
+      "description": "終わりなき苦悩を思い描き、支配欲に満ちた表情を描く力を得る。<br><br>このスキルは、フェイのスキルを行動妨害スキル「恐怖の形相」、「深淵の眼差し」、「粉砕の牙」に置き換える。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "50/55/60/65/70",
+      "image": "HweiE.png"
+    },
+    {
+      "slot": "R",
+      "name": "絶望の渦",
+      "description": "純粋なる絶望のビジョンを描く。最初に命中した敵チャンピオンが拡大する絵画の中心となり、周囲の敵にスロウ効果とダメージを与える。ビジョンは最大サイズに達するか、最初に命中したチャンピオンがデスすると爆発する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "HweiR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 65.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 62.02%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 61.71%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 41.5%（統計的に不利）"
+      },
+      {
+        "champion_id": "Garen",
+        "name": "ガレン",
+        "reason": "勝率 45.08%（統計的に不利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 46.16%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2503",
+        "name": "黒炎のトーチ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4645",
+        "name": "シャドウフレイム",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8229",
+      "keystone_name": "秘儀の彗星",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "レジェンド: ヘイスト",
+        "切り崩し"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

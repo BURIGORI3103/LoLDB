@@ -1,0 +1,118 @@
+{
+  "name": "繝ｴ繧ｧ繝ｫ・昴さ繧ｺ",
+  "slug": "velkoz",
+  "roles": [
+    "SUP",
+    "MID",
+    "ADC"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 61.33%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "reason": "勝率 58.72%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 58.09%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Fiddlesticks",
+        "name": "フィドルスティックス",
+        "reason": "勝率 42.86%（統計的に不利）"
+      },
+      {
+        "champion_id": "Shen",
+        "name": "シェン",
+        "reason": "勝率 43.97%（統計的に不利）"
+      },
+      {
+        "champion_id": "Poppy",
+        "name": "ポッピー",
+        "reason": "勝率 44.92%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6655",
+        "name": "ルーデン エコー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4645",
+        "name": "シャドウフレイム",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8229",
+      "keystone_name": "秘儀の彗星",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "追い打ち",
+        "至極の賞金首狩り"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

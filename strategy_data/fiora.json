@@ -1,0 +1,120 @@
+{
+  "name": "繝輔ぅ繧ｪ繝ｩ",
+  "slug": "fiora",
+  "roles": [
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 57.5%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 55.71%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yorick",
+        "name": "ヨリック",
+        "reason": "勝率 55.53%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Heimerdinger",
+        "name": "ハイマーディンガー",
+        "reason": "勝率 42.86%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 43.17%（統計的に不利）"
+      },
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 44.38%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3074",
+        "name": "ラヴァナス ハイドラ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8005",
+      "keystone_name": "プレスアタック",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "なんでも屋"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

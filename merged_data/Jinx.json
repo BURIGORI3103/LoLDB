@@ -1,0 +1,188 @@
+{
+  "id": "Jinx",
+  "key": "222",
+  "name": "ジンクス",
+  "title": "暴走パンクガール",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 630,
+    "hpperlevel": 105,
+    "mp": 260,
+    "mpperlevel": 50,
+    "movespeed": 325,
+    "armor": 26,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 525,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.5,
+    "mpregen": 6.7,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "超エキサイティン！",
+      "description": "敵チャンピオン、エピックジャングルモンスター、建造物のキルまたは破壊に貢献すると、移動速度と攻撃速度が大幅に増加する。",
+      "image": "Jinx_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "スイッチング！",
+      "description": "スキルを使用するたび、通常攻撃が「パウパウガン」(ミニガン)と「フィッシュボーン」(ロケットランチャー)の間で切り替わる。「パウパウガン」で敵を攻撃し続けると攻撃速度が増加する。「フィッシュボーン」は射程が長く、範囲ダメージを発生させることができるが、攻撃速度が低下してマナを消費するようになる。",
+      "cooldown": "0.9",
+      "cost": "20",
+      "image": "JinxQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "シビレーザー！",
+      "description": "スタンガンの一種であるシビレーザーを発射する。最初に命中した敵にダメージとスロウ効果を与え、さらに可視状態にする。",
+      "cooldown": "8/7/6/5/4",
+      "cost": "40/45/50/55/60",
+      "image": "JinxW.png"
+    },
+    {
+      "slot": "E",
+      "name": "パックンチョッパー！",
+      "description": "一列にならんだ爆雷を3個投げる。敵チャンピオンが爆雷に触れるとトラップが起動してスネア効果を与える。爆雷は触れられなくても5秒後に自動的に爆発し、周囲にいる敵にダメージを与える。",
+      "cooldown": "24/20.5/17/13.5/10",
+      "cost": "90",
+      "image": "JinxE.png"
+    },
+    {
+      "slot": "R",
+      "name": "スーパーメガデスロケット！",
+      "description": "指定方向にどこまでも直進してゆくスーパーメガデスロケットを発射する。<br>発射したロケット弾が敵チャンピオンに命中すればその場で爆発し、周囲の敵にもダメージを与える。ダメージは敵の現在体力が少ないほど威力が増加する。",
+      "cooldown": "85/65/45",
+      "cost": "100",
+      "image": "JinxR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 55.74%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 55.65%（統計的に有利）"
+      },
+      {
+        "champion_id": "Varus",
+        "name": "ヴァルス",
+        "reason": "勝率 55.17%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 44.68%（統計的に不利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 46.59%（統計的に不利）"
+      },
+      {
+        "champion_id": "Lux",
+        "name": "ラックス",
+        "reason": "勝率 47.76%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2523",
+        "name": "ヘクスオプティックC44",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3085",
+        "name": "ルナーン ハリケーン",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: 血脈",
+        "切り崩し"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "キャッシュバック",
+        "トリプル トニック"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "Zac",
+  "key": "154",
+  "name": "ザック",
+  "title": "親愛なる秘密兵器",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "JUG"
+  ],
+  "resource": "なし",
+  "stats": {
+    "hp": 685,
+    "hpperlevel": 109,
+    "mp": 0,
+    "mpperlevel": 0,
+    "movespeed": 340,
+    "armor": 33,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.6,
+    "attackspeed": 0.736
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "はぐれスライム",
+      "description": "スキルによる攻撃を命中させるたびスライムが飛び散り、回収すると体力が回復する。致命的なダメージを受けた場合、ザックは4体のスライムに分裂する。その後数秒かけて再融合し、この時に生き残っていたスライムの体力に応じた体力で復活する。各スライムはザックの最大体力、物理防御、魔法防御の数パーセントに相当するステータスを持つ。ザックは一度分裂すると、ふたたび分裂するために5分間のクールダウンが必要になる。",
+      "image": "ZacPassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "スライムパンチ",
+      "description": "片手を伸ばして敵ユニットを掴む。別の敵ユニットを攻撃すると両者を互いにぶつけ合わせる。",
+      "cooldown": "14/12.5/11/9.5/8",
+      "cost": "0",
+      "image": "ZacQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "スライムクラッシュ",
+      "description": "体を爆発させることで近くの敵に向かって突進し、最大体力の一定割合を魔法ダメージとして与える。",
+      "cooldown": "5",
+      "cost": "0",
+      "image": "ZacW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ブッ飛びスライム",
+      "description": "ザックが両手をついて反発力を溜め込み、対象に勢いよく飛びかかる。",
+      "cooldown": "21/18/15/12/9",
+      "cost": "0",
+      "image": "ZacE.png"
+    },
+    {
+      "slot": "R",
+      "name": "レッツバウンス！",
+      "description": "4回バウンドし、命中した敵をノックアップさせてスロウ状態にする。",
+      "cooldown": "120/105/90",
+      "cost": "0",
+      "image": "ZacR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 65.92%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 59.32%（統計的に有利）"
+      },
+      {
+        "champion_id": "Tristana",
+        "name": "トリスターナ",
+        "reason": "勝率 57.22%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 45.26%（統計的に不利）"
+      },
+      {
+        "champion_id": "Nasus",
+        "name": "ナサス",
+        "reason": "勝率 45.62%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 46.77%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6699",
+        "name": "ボルテイク サイクロソード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2520",
+        "name": "バスティオンブレイカー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6694",
+        "name": "セリルダの怨恨",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "天啓",
+      "keystone": "8369",
+      "keystone_name": "ファーストストライク",
+      "choices": [
+        "キャッシュバック",
+        "トリプル トニック",
+        "なんでも屋"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "レジェンド: ヘイスト",
+        "切り崩し"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

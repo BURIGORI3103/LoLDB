@@ -1,0 +1,189 @@
+{
+  "id": "Qiyana",
+  "key": "246",
+  "name": "キヤナ",
+  "title": "エレメントの女帝",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG",
+    "MID"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 590,
+    "hpperlevel": 115,
+    "mp": 375,
+    "mpperlevel": 60,
+    "movespeed": 335,
+    "armor": 31,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 8,
+    "hpregenperlevel": 0.9,
+    "mpregen": 8,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 64,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.1,
+    "attackspeed": 0.688
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "女帝の威風",
+      "description": "それぞれの敵に対する最初の通常攻撃またはスキルに追加ダメージが付与される。",
+      "image": "Qiyana_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "エレメントの怒り/イシュタルの切先",
+      "description": "武器を振り、保持しているエレメントに応じた追加効果の付いたダメージを与える。",
+      "cooldown": "7",
+      "cost": "35",
+      "image": "QiyanaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "大地の力",
+      "description": "目標地点までダッシュし、武器にエレメントの力を付与する。武器にエレメントの力がついている間は、通常攻撃とスキルに追加ダメージが付与される。",
+      "cooldown": "7",
+      "cost": "25/30/35/40/45",
+      "image": "QiyanaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "俊烈",
+      "description": "敵に向かってダッシュし、ダメージを与える。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "40/45/50/55/60",
+      "image": "QiyanaE.png"
+    },
+    {
+      "slot": "R",
+      "name": "天賦絢爛",
+      "description": "エレメントに命中すると爆発する衝撃波を放ち、周囲の敵をスタンさせながらダメージを与える。",
+      "cooldown": "120",
+      "cost": "100",
+      "image": "QiyanaR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Volibear",
+        "name": "ボリベア",
+        "reason": "勝率 55.67%（統計的に有利）"
+      },
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 55.15%（統計的に有利）"
+      },
+      {
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 53.44%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 43.21%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 43.34%（統計的に不利）"
+      },
+      {
+        "champion_id": "Rengar",
+        "name": "レンガー",
+        "reason": "勝率 44.83%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6699",
+        "name": "ボルテイク サイクロソード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2520",
+        "name": "バスティオンブレイカー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3814",
+        "name": "ナイト エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "天啓",
+      "keystone": "8369",
+      "keystone_name": "ファーストストライク",
+      "choices": [
+        "魔法の靴",
+        "トリプル トニック",
+        "宇宙の英知"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "サドンインパクト",
+        "至極の賞金首狩り"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

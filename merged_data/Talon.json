@@ -1,0 +1,189 @@
+{
+  "id": "Talon",
+  "key": "91",
+  "name": "タロン",
+  "title": "将軍の懐刀",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG",
+    "MID"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 658,
+    "hpperlevel": 109,
+    "mp": 400,
+    "mpperlevel": 37,
+    "movespeed": 335,
+    "armor": 30,
+    "armorperlevel": 4.7,
+    "spellblock": 36,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 7.6,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.9,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "血塗られし慈悲",
+      "description": "タロンのスキルは敵チャンピオンまたは大型モンスターに3回までスタックする「傷」を付与する。「傷」のスタックが3つになった敵チャンピオンに通常攻撃を行うと、そのチャンピオンは出血して継続的に大ダメージを受ける。",
+      "image": "TalonP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ノクサスの刃",
+      "description": "タロンが対象を突き刺す。近接攻撃の射程内であれば、この攻撃はクリティカルダメージを与える。近接攻撃の射程外であれば、対象までジャンプしてから突き刺す。このスキルで対象を倒すと体力の一部が回復し、クールダウンの一部が解消する。",
+      "cooldown": "8/7.5/7/6.5/6",
+      "cost": "40",
+      "image": "TalonQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "飛燕手裏剣",
+      "description": "ブーメランのように戻ってくる刃を同時に複数投げる。刃は往路と復路で敵を貫通するたびに物理ダメージを与える。復路で刃が敵ユニットに命中すると、追加ダメージと短時間のスロウ効果を与える。",
+      "cooldown": "9/8.5/8/7.5/7",
+      "cost": "50/55/60/65/70",
+      "image": "TalonW.png"
+    },
+    {
+      "slot": "E",
+      "name": "暗殺者の跳躍",
+      "description": "タロンはどんな地形や建造物も最大距離まで飛び越えられる。このスキルのクールダウンは短いが、飛び越えた地形や建造物に対しては長いクールダウンに入る。",
+      "cooldown": "0",
+      "cost": "0",
+      "image": "TalonE.png"
+    },
+    {
+      "slot": "R",
+      "name": "シャドウアサルト",
+      "description": "複数の刃を全方向に投げ、インビジブル状態になって移動速度が増加する。インビジブル状態が解除されると、投げた刃がタロンのいる地点に一斉に戻ってくる。飛んでいった時と戻ってきた時のそれぞれで、刃が命中した敵に物理ダメージを与える。",
+      "cooldown": "100/80/60",
+      "cost": "100",
+      "image": "TalonR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Trundle",
+        "name": "トランドル",
+        "reason": "勝率 59.55%（統計的に有利）"
+      },
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 55.76%（統計的に有利）"
+      },
+      {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 55.35%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Darius",
+        "name": "ダリウス",
+        "reason": "勝率 45.24%（統計的に不利）"
+      },
+      {
+        "champion_id": "Skarner",
+        "name": "スカーナー",
+        "reason": "勝率 45.87%（統計的に不利）"
+      },
+      {
+        "champion_id": "Maokai",
+        "name": "マオカイ",
+        "reason": "勝率 46.48%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3179",
+        "name": "アンブラル グレイブ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2520",
+        "name": "バスティオンブレイカー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6699",
+        "name": "ボルテイク サイクロソード",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8021",
+      "keystone_name": "フリートフットワーク",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

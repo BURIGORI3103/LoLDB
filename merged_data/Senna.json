@@ -1,0 +1,184 @@
+{
+  "id": "Senna",
+  "key": "235",
+  "name": "セナ",
+  "title": "救済者",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 530,
+    "hpperlevel": 89,
+    "mp": 350,
+    "mpperlevel": 45,
+    "movespeed": 330,
+    "armor": 25,
+    "armorperlevel": 4,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 600,
+    "hpregen": 3.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 50,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.6,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "魂の赦し",
+      "description": "セナの周囲でユニットが倒されると、一定時間ごとにその魂が「黒き霧」に囚われる。セナはこの魂を通常攻撃して解放することで、魂を死の世界に閉じ込めていた「霧」を吸収することができる。「霧」によって「レリックキャノン」が強化されて、攻撃力、射程距離、クリティカル率が増加する。<br><br>通常攻撃で「レリックキャノン」を発射するまでにかかる時間は長くなるが、追加ダメージを与えるようになり、さらに一時的に対象の移動速度の一部を獲得する。",
+      "image": "Senna_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ピアシングダークネス",
+      "description": "「レリックキャノン」のツインバレルから光と影が一体となったビームを発射して対象を撃ち抜き、味方は回復して敵にはダメージを与える。",
+      "cooldown": "15",
+      "cost": "70/80/90/100/110",
+      "image": "SennaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "最期の抱擁",
+      "description": "前方に「黒き霧」を放つ。霧は当たった敵に絡みつき、少ししてから対象と周囲のすべての敵ユニットにスネア効果を付与する。",
+      "cooldown": "11",
+      "cost": "50/55/60/65/70",
+      "image": "SennaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "黒き霧の呪い",
+      "description": "武器に取り込んだ「霧」を利用して周囲に嵐を引き起こし、闇を受け入れて亡霊に変化する。範囲内に入った味方はカモフラージュ状態になり、「霧」の作用によって亡霊の姿となる。亡霊の姿になると移動速度が増加し、対象指定不可になり、正体が隠される。",
+      "cooldown": "26/24.5/23/21.5/20",
+      "cost": "70",
+      "image": "SennaE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ドーニングシャドウ",
+      "description": "亡くなった光の番人のレリックストーンに呼びかけ、「レリックキャノン」が聖なる影と光に分かれる。その後、超大射程のビームを発射して命中した味方にはシールドを展開し、ビームの中心にいた敵にはダメージを与える。",
+      "cooldown": "140/120/100",
+      "cost": "100",
+      "image": "SennaR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 61.36%（統計的に有利）"
+      },
+      {
+        "champion_id": "Fiddlesticks",
+        "name": "フィドルスティックス",
+        "reason": "勝率 54.8%（統計的に有利）"
+      },
+      {
+        "champion_id": "Morgana",
+        "name": "モルガナ",
+        "reason": "勝率 54.13%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 45.69%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zoe",
+        "name": "ゾーイ",
+        "reason": "勝率 46.41%（統計的に不利）"
+      },
+      {
+        "champion_id": "Elise",
+        "name": "エリス",
+        "reason": "勝率 46.57%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3087",
+        "name": "スタティック シヴ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3094",
+        "name": "ラピッド ファイアキャノン",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8992",
+      "keystone_name": "死神の残り火",
+      "choices": [
+        "マナフローバンド",
+        "追い風",
+        "強まる嵐"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "なんでも屋"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

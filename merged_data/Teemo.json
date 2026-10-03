@@ -1,0 +1,190 @@
+{
+  "id": "Teemo",
+  "key": "17",
+  "name": "ティーモ",
+  "title": "俊足の斥候",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP",
+    "JUG",
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 615,
+    "hpperlevel": 104,
+    "mp": 334,
+    "mpperlevel": 25,
+    "movespeed": 330,
+    "armor": 24,
+    "armorperlevel": 4.5,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 500,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.65,
+    "mpregen": 9.6,
+    "mpregenperlevel": 0.45,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 54,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.38,
+    "attackspeed": 0.69
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "やぶからヨードル",
+      "description": "短時間行動せずにいると無限にインビジブル状態になる。茂みの中であれば移動中でもインビジブル状態になり、動き回っても解除されない。インビジブル状態が解除されると「奇襲モード」になり、攻撃速度が数秒間増加する。",
+      "image": "TeemoPassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "目つぶしダーツ",
+      "description": "強力な毒で敵1体の視力を低下させる。攻撃を受けた敵はダメージを受け、一定時間ブラインド状態になる。",
+      "cooldown": "7",
+      "cost": "70/75/80/85/90",
+      "image": "TeemoQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "駆け足！",
+      "description": "移動速度が増加。ただし、敵チャンピオンまたはタワーから攻撃を受けると効果が消滅する。数秒間、移動速度が増加。この間は、攻撃を受けても効果が持続する。",
+      "cooldown": "14",
+      "cost": "40",
+      "image": "TeemoW.png"
+    },
+    {
+      "slot": "E",
+      "name": "毒たっぷり吹き矢",
+      "description": "通常攻撃のたびに、対象を毒状態%i:OnHit%<OnHit>通常攻撃時効果</OnHit>にする。攻撃を受けた対象は命中時にダメージを受け、さらにその後4秒にわたって毎秒ダメージを受ける。",
+      "cooldown": "0",
+      "cost": "0",
+      "image": "TeemoE.png"
+    },
+    {
+      "slot": "R",
+      "name": "毒キノコ",
+      "description": "バックパックに収納した「毒キノコ」を1つ取り出し、破裂性の毒トラップを仕掛ける。敵がトラップを踏むと毒霧が放出され、近くにいる敵ユニットをスロウ状態にし、継続ダメージを与える。毒キノコを他の毒キノコに投げつけると、バウンドしてさらに遠くに飛んでいく。",
+      "cooldown": "0.25",
+      "cost": "75/55/35",
+      "image": "TeemoR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 63.17%（統計的に有利）"
+      },
+      {
+        "champion_id": "Zaahen",
+        "name": "ザーヘン",
+        "reason": "勝率 57.54%（統計的に有利）"
+      },
+      {
+        "champion_id": "KSante",
+        "name": "カ・サンテ",
+        "reason": "勝率 56.5%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Ornn",
+        "name": "オーン",
+        "reason": "勝率 45.55%（統計的に不利）"
+      },
+      {
+        "champion_id": "Akali",
+        "name": "アカリ",
+        "reason": "勝率 45.84%（統計的に不利）"
+      },
+      {
+        "champion_id": "Olaf",
+        "name": "オラフ",
+        "reason": "勝率 46.08%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3087",
+        "name": "スタティック シヴ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3118",
+        "name": "マリグナンス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8005",
+      "keystone_name": "プレスアタック",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ボーンアーマー",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "name": "繧ｯ繧､繝ｳ",
+  "slug": "quinn",
+  "roles": [
+    "JUG",
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 61.54%（統計的に有利）"
+      },
+      {
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 60.61%（統計的に有利）"
+      },
+      {
+        "champion_id": "Jayce",
+        "name": "ジェイス",
+        "reason": "勝率 59.8%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 28.3%（統計的に不利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 38.1%（統計的に不利）"
+      },
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 40.0%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6697",
+        "name": "ヒュブリス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6676",
+        "name": "コレクター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3036",
+        "name": "ドミニク リガード",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8112",
+      "keystone_name": "電撃",
+      "choices": [
+        "サドンインパクト",
+        "グリスリー メメント",
+        "貪欲な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "英気集中",
+        "強まる嵐"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

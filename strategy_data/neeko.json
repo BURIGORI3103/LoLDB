@@ -1,0 +1,116 @@
+{
+  "name": "繝九・繧ｳ",
+  "slug": "neeko",
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 59.26%（統計的に有利）"
+      },
+      {
+        "champion_id": "Shen",
+        "name": "シェン",
+        "reason": "勝率 57.53%（統計的に有利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 54.24%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 37.08%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zoe",
+        "name": "ゾーイ",
+        "reason": "勝率 40.24%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taric",
+        "name": "タリック",
+        "reason": "勝率 40.82%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3152",
+        "name": "ヘクステック ロケットベルト",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4646",
+        "name": "ストームサージ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8229",
+      "keystone_name": "秘儀の彗星",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

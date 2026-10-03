@@ -1,0 +1,117 @@
+{
+  "name": "繝槭が繧ｫ繧､",
+  "slug": "maokai",
+  "roles": [
+    "SUP",
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 63.83%（統計的に有利）"
+      },
+      {
+        "champion_id": "Shen",
+        "name": "シェン",
+        "reason": "勝率 63.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 62.65%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Braum",
+        "name": "ブラウム",
+        "reason": "勝率 46.07%（統計的に不利）"
+      },
+      {
+        "champion_id": "Janna",
+        "name": "ジャンナ",
+        "reason": "勝率 46.08%（統計的に不利）"
+      },
+      {
+        "champion_id": "Thresh",
+        "name": "スレッシュ",
+        "reason": "勝率 46.28%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2524",
+        "name": "バンドルパイプ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3075",
+        "name": "ソーンメイル",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "生命の泉",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

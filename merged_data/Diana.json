@@ -1,0 +1,189 @@
+{
+  "id": "Diana",
+  "key": "131",
+  "name": "ダイアナ",
+  "title": "嘲りの月",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 640,
+    "hpperlevel": 109,
+    "mp": 375,
+    "mpperlevel": 25,
+    "movespeed": 345,
+    "armor": 31,
+    "armorperlevel": 4.3,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 6.5,
+    "hpregenperlevel": 0.85,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 57,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "繊月の刃",
+      "description": "通常攻撃3回ごとに周囲の敵に追加魔法ダメージを与える。スキル使用後、5秒間、攻撃速度が増加する。",
+      "image": "Diana_Passive_LunarBlade.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "月影",
+      "description": "弧を描くように月の力を放ち、命中した敵ユニットに魔法ダメージを与える。<br><br>命中した敵には「月光」を付与し、ステルス状態の敵をのぞいて3秒間可視状態にする。",
+      "cooldown": "8/7.5/7/6.5/6",
+      "cost": "50",
+      "image": "DianaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "朧月の羽衣",
+      "description": "体の周囲を3つの月光の玉が旋回し、敵と接触すると爆発して有効範囲内の敵ユニットにダメージを与える。さらに発動と同時に、ダイアナを守るシールドが発生する。3つ目の光の玉が爆発すると、シールドを再び展開する。",
+      "cooldown": "15/13.5/12/10.5/9",
+      "cost": "40/45/50/55/60",
+      "image": "DianaOrbs.png"
+    },
+    {
+      "slot": "E",
+      "name": "月下美刃",
+      "description": "復讐心に燃える月の化身となり、敵のところまでダッシュして魔法ダメージを与える。<br><br>「月光」が付与された敵に使用した場合、クールダウンがリセットされると同時に、全ての敵ユニットの「月光」が解除される。",
+      "cooldown": "22/20/18/16/14",
+      "cost": "40/45/50/55/60",
+      "image": "DianaTeleport.png"
+    },
+    {
+      "slot": "R",
+      "name": "崩月",
+      "description": "周囲のすべての敵を可視化して自身の方向に引き寄せ、スロウ効果を与える。<br><br>1体以上の敵チャンピオンを引き寄せると、少ししてから自身の上に月光が降り注ぎ、周囲の範囲内の敵に魔法ダメージを与える。このダメージは2体目以降に引き寄せた対象が1体増えるごとに増加する。",
+      "cooldown": "100/90/80",
+      "cost": "100",
+      "image": "DianaR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 62.72%（統計的に有利）"
+      },
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 57.82%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 56.9%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 44.26%（統計的に不利）"
+      },
+      {
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 45.21%（統計的に不利）"
+      },
+      {
+        "champion_id": "Garen",
+        "name": "ガレン",
+        "reason": "勝率 45.95%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "4646",
+        "name": "ストームサージ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4645",
+        "name": "シャドウフレイム",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8112",
+      "keystone_name": "電撃",
+      "choices": [
+        "サドンインパクト",
+        "グリスリー メメント",
+        "貪欲な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "シールドバッシュ",
+        "ボーンアーマー"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

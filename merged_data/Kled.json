@@ -1,0 +1,188 @@
+{
+  "id": "Kled",
+  "key": "240",
+  "name": "クレッド",
+  "title": "狂乱の騎兵",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP"
+  ],
+  "resource": "勇気の護り",
+  "stats": {
+    "hp": 410,
+    "hpperlevel": 84,
+    "mp": 100,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 35,
+    "armorperlevel": 5.2,
+    "spellblock": 28,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 6,
+    "hpregenperlevel": 0.75,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 65,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "弱虫トカゲ「スカール」",
+      "description": "クレッドが彼の信頼する愛馬、スカールに騎乗している時は、クレッドの代わりにスカールがダメージを受けてくれる。スカールの体力がなくなるとクレッドはスカールから降ろされる。<br><br>非騎乗時はクレッドのスキルが変化して敵チャンピオンに与えるダメージが減少する。クレッドは敵と交戦することでスカールの「勇気」を回復できる。「勇気」が最大になると、クレッドは再び騎乗してスカールの体力を獲得する。",
+      "image": "Kled_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "トラバサミロープ",
+      "description": "ダメージを与えるトラバサミを投げて、敵チャンピオンに引っ掛ける。引っ掛かった状態を少しの間維持すると、対象に追加物理ダメージを与えて自身の方向に引き寄せる。<br><br>非騎乗時では、このスキルは「ポケットピストル」に変化する。これは銃を発砲する遠隔攻撃で、反動で自らを後方に飛ばし、「勇気」を回復する。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "0",
+      "image": "KledQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "狂暴の宴",
+      "description": "次の4回の通常攻撃を繰り出す速度が大きく増加する。4回目の通常攻撃はダメージが増加する。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "0",
+      "image": "KledW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ジャウスト",
+      "description": "ダッシュして物理ダメージを与え、一時的に移動速度が増加する。スキルを再使用すると、最初に攻撃した対象にダッシュで戻り、初回と同量のダメージを与える。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "0",
+      "image": "KledE.png"
+    },
+    {
+      "slot": "R",
+      "name": "チャァァァァァァァジ！！！",
+      "description": "クレッドとスカールが指定した位置に突撃してシールドを獲得し、通り道に移動速度を増加させる効果を残していく。スカールは最初に遭遇した敵チャンピオンにロックオンして体当たりする。",
+      "cooldown": "140/125/110",
+      "cost": "0",
+      "image": "KledR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 61.25%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 60.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rumble",
+        "name": "ランブル",
+        "reason": "勝率 59.28%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 43.59%（統計的に不利）"
+      },
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 44.44%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kennen",
+        "name": "ケネン",
+        "reason": "勝率 45.81%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3748",
+        "name": "タイタン ハイドラ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2501",
+        "name": "覇王のブラッドメイル",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "打ちこわし",
+        "ボーンアーマー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

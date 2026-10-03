@@ -1,0 +1,185 @@
+{
+  "id": "Maokai",
+  "key": "57",
+  "name": "マオカイ",
+  "title": "歪みし樹人",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP",
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 665,
+    "hpperlevel": 109,
+    "mp": 375,
+    "mpperlevel": 43,
+    "movespeed": 335,
+    "armor": 35,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 6,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 64,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.125,
+    "attackspeed": 0.8
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "魔樹液",
+      "description": "通常攻撃が自身の体力を回復し、追加ダメージを与える。この効果にはある程度のクールダウンはあるが、スキルを使用するか、敵のスキルが自身に命中すると、このクールダウンが短縮される。",
+      "image": "Maokai_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "茨打ち",
+      "description": "衝撃波で周囲の敵ユニットをノックバックして魔法ダメージとスロウ効果を与える。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "40",
+      "image": "MaokaiQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "樹人の進撃",
+      "description": "巨大な根の塊になって対象指定されなくなり、指定した対象に向かってダッシュする。対象に到達するとスネア効果を与える。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "60",
+      "image": "MaokaiW.png"
+    },
+    {
+      "slot": "E",
+      "name": "苗木投げ",
+      "description": "指定地点に苗木を投げて見張らせる。茂みの中ならより効果的になる。",
+      "cooldown": "18/17/16/15/14",
+      "cost": "60/65/70/75/80",
+      "image": "MaokaiE.png"
+    },
+    {
+      "slot": "R",
+      "name": "大地の捕縛",
+      "description": "大量の茨や棘で出来た巨大な壁を召喚する。壁はゆっくりと前進しながら、通り道にいる敵ユニットにダメージとスネア効果を与える。",
+      "cooldown": "130/110/90",
+      "cost": "100",
+      "image": "MaokaiR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 63.83%（統計的に有利）"
+      },
+      {
+        "champion_id": "Shen",
+        "name": "シェン",
+        "reason": "勝率 63.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 62.65%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Braum",
+        "name": "ブラウム",
+        "reason": "勝率 46.07%（統計的に不利）"
+      },
+      {
+        "champion_id": "Janna",
+        "name": "ジャンナ",
+        "reason": "勝率 46.08%（統計的に不利）"
+      },
+      {
+        "champion_id": "Thresh",
+        "name": "スレッシュ",
+        "reason": "勝率 46.28%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2524",
+        "name": "バンドルパイプ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3075",
+        "name": "ソーンメイル",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "生命の泉",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

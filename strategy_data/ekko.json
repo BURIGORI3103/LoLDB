@@ -1,0 +1,121 @@
+{
+  "name": "繧ｨ繧ｳ繝ｼ",
+  "slug": "ekko",
+  "roles": [
+    "JUG",
+    "MID"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Karthus",
+        "name": "カーサス",
+        "reason": "勝率 57.73%（統計的に有利）"
+      },
+      {
+        "champion_id": "Volibear",
+        "name": "ボリベア",
+        "reason": "勝率 57.3%（統計的に有利）"
+      },
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 56.83%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Rammus",
+        "name": "ラムス",
+        "reason": "勝率 44.47%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kindred",
+        "name": "キンドレッド",
+        "reason": "勝率 46.98%（統計的に不利）"
+      },
+      {
+        "champion_id": "Ambessa",
+        "name": "アンベッサ",
+        "reason": "勝率 47.56%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2510",
+        "name": "黄昏と暁",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4645",
+        "name": "シャドウフレイム",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3089",
+        "name": "ラバドン デスキャップ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8128",
+      "keystone_name": "魂の収穫",
+      "choices": [
+        "サドンインパクト",
+        "グリスリー メメント",
+        "貪欲な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

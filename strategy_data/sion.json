@@ -1,0 +1,121 @@
+{
+  "name": "繧ｵ繧､繧ｪ繝ｳ",
+  "slug": "sion",
+  "roles": [
+    "TOP",
+    "MID"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 59.6%（統計的に有利）"
+      },
+      {
+        "champion_id": "Jayce",
+        "name": "ジェイス",
+        "reason": "勝率 56.53%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 56.2%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Singed",
+        "name": "シンジド",
+        "reason": "勝率 43.14%（統計的に不利）"
+      },
+      {
+        "champion_id": "Riven",
+        "name": "リヴェン",
+        "reason": "勝率 44.89%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 45.01%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1054",
+        "name": "ドラン シールド"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6664",
+        "name": "ホロウ レディアンス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2502",
+        "name": "終わりなき絶望",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6665",
+        "name": "変幻自在のジャック＝ショー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8437",
+      "keystone_name": "不死者の握撃",
+      "choices": [
+        "打ちこわし",
+        "心身調整",
+        "超成長"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "キャッシュバック",
+        "疾駆"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

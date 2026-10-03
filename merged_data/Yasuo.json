@@ -1,0 +1,189 @@
+{
+  "id": "Yasuo",
+  "key": "157",
+  "name": "ヤスオ",
+  "title": "赦されざる者",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP",
+    "MID"
+  ],
+  "resource": "つむじ風",
+  "stats": {
+    "hp": 590,
+    "hpperlevel": 110,
+    "mp": 100,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 32,
+    "armorperlevel": 4.6,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 6.5,
+    "hpregenperlevel": 0.9,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.697
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "浪人道",
+      "description": "クリティカル率が増加する。また、移動距離に応じてシールドがチャージされ、敵チャンピオンおよび中立モンスターからダメージを受けると発動する。",
+      "image": "Yasuo_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "抜刀",
+      "description": "指定方向に突きを放ち、直線上の敵すべてにダメージを与える。<br><br>このスキルが命中するとヤスオは「つむじ風」のスタックを数秒間得る。スタックが2つたまるとヤスオは風を身にまとい、次の「抜刀」と同時に「つむじ風」を放つ。「つむじ風」は指定方向に吹き抜け、触れた敵ユニットを<font color='#6655CC'>ノックアップ</font>させる。<br><br>「抜刀」は通常攻撃扱いのため、通常攻撃と同じように強化される。",
+      "cooldown": "4",
+      "cost": "0",
+      "image": "YasuoQ1Wrapper.png"
+    },
+    {
+      "slot": "W",
+      "name": "風殺の壁",
+      "description": "4秒間持続し、少しずつ前進する風の壁を生み出す。敵のあらゆる発射物は、この壁に触れると消滅する。",
+      "cooldown": "25/23/21/19/17",
+      "cost": "0",
+      "image": "YasuoW.png"
+    },
+    {
+      "slot": "E",
+      "name": "風薙ぎ",
+      "description": "指定した敵を通り過ぎるようにダッシュし、魔法ダメージを与える。発動ごとに、その後のダッシュで与えるダメージが増加する(上限あり)。<br><br>同一の敵に対しては数秒間、このスキルを再発動できない。<br><br><font color='#99FF99'>このスキルのダッシュ中に「抜刀」を発動すると、円状に斬撃を繰り出す。</font>",
+      "cooldown": "0.5/0.4/0.3/0.2/0.1",
+      "cost": "0",
+      "image": "YasuoE.png"
+    },
+    {
+      "slot": "R",
+      "name": "鬼哭啾々",
+      "description": "<factionIonia1>ノックアップ状態</factionIonia1>の敵チャンピオンのもとへブリンクし、空中で斬撃を繰り出して物理ダメージを与える。また、範囲内の<factionIonia1>ノックアップ中</factionIonia1>の敵をさらに<factionIonia1>ノックアップ</factionIonia1>させる。発動と同時に波動ゲージが満タンになるが「つむじ風」のスタックをすべて消費する。<br><br>少しの間、クリティカル時に対象の物理防御増加分を大きく貫通する。",
+      "cooldown": "70/50/30",
+      "cost": "0",
+      "image": "YasuoR.png"
+    }
+  ],
+  "summoner_spells": [
+    "イグゾースト",
+    "フラッシュ"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 59.11%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 58.31%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yorick",
+        "name": "ヨリック",
+        "reason": "勝率 57.02%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "MonkeyKing",
+        "name": "ウーコン",
+        "reason": "勝率 46.35%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kled",
+        "name": "クレッド",
+        "reason": "勝率 46.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fiora",
+        "name": "フィオラ",
+        "reason": "勝率 46.44%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3153",
+        "name": "ルインドキング ブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6673",
+        "name": "イモータル シールドボウ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "体力吸収",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

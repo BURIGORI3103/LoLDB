@@ -1,0 +1,189 @@
+{
+  "id": "Garen",
+  "key": "86",
+  "name": "ガレン",
+  "title": "デマーシアの勇士",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP",
+    "MID"
+  ],
+  "resource": "なし",
+  "stats": {
+    "hp": 690,
+    "hpperlevel": 98,
+    "mp": 0,
+    "mpperlevel": 0,
+    "movespeed": 340,
+    "armor": 38,
+    "armorperlevel": 4.2,
+    "spellblock": 32,
+    "spellblockperlevel": 1.55,
+    "attackrange": 175,
+    "hpregen": 8,
+    "hpregenperlevel": 0.5,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 69,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.65,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "タフガイ",
+      "description": "一定時間ダメージや敵のスキルを受けていなければ、毎秒最大体力の一定割合を回復する。",
+      "image": "Garen_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "断固たる一撃",
+      "description": "自身にかけられたスロウ効果を解除し、移動速度が増加する。次の攻撃で敵の急所を斬りつけて追加ダメージを与え、サイレンス効果を付与する。",
+      "cooldown": "8",
+      "cost": "0",
+      "image": "GarenQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "勇気の護り",
+      "description": "自動効果: 敵ユニットを倒すたびに物理防御と魔法防御が増加する。<br><br>発動効果: 瞬間的にシールドと行動妨害耐性を獲得し、その後は軽減率が低下するものの、ダメージ軽減効果が長い時間持続する。",
+      "cooldown": "22/19.5/17/14.5/12",
+      "cost": "0",
+      "image": "GarenW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ジャッジメント",
+      "description": "高速で回転しながら剣を振り回し、周囲の敵に物理ダメージを与える。",
+      "cooldown": "9/8.25/7.5/6.75/6",
+      "cost": "0",
+      "image": "GarenE.png"
+    },
+    {
+      "slot": "R",
+      "name": "デマーシアの正義",
+      "description": "デマーシア魂を燃え上がらせ、指定した敵チャンピオンに必殺の一撃を繰り出す。",
+      "cooldown": "120/100/80",
+      "cost": "0",
+      "image": "GarenR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Cassiopeia",
+        "name": "カシオペア",
+        "reason": "勝率 57.93%（統計的に有利）"
+      },
+      {
+        "champion_id": "Akali",
+        "name": "アカリ",
+        "reason": "勝率 56.69%（統計的に有利）"
+      },
+      {
+        "champion_id": "Poppy",
+        "name": "ポッピー",
+        "reason": "勝率 55.93%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Zac",
+        "name": "ザック",
+        "reason": "勝率 44.59%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 45.33%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kennen",
+        "name": "ケネン",
+        "reason": "勝率 45.45%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1054",
+        "name": "ドラン シールド"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6631",
+        "name": "ストライドブレイカー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3046",
+        "name": "ファントム ダンサー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3033",
+        "name": "モータル リマインダー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "アクシオム アルカニスト",
+        "追い風"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "Pyke",
+  "key": "555",
+  "name": "パイク",
+  "title": "ブラッドハーバーの殺戮鬼",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG",
+    "MID"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 670,
+    "hpperlevel": 110,
+    "mp": 415,
+    "mpperlevel": 50,
+    "movespeed": 330,
+    "armor": 37,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 7,
+    "hpregenperlevel": 0.5,
+    "mpregen": 8,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.667
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "沈みし者の力",
+      "description": "敵の視界外にいると、直前にチャンピオンからの攻撃で失った体力を回復する。また、パイクはいずれのソースからも増加最大体力を得ることはできず、代わりに増加攻撃力を得る。",
+      "image": "PykePassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ボーンスキューア",
+      "description": "前方にいる1体の敵を突き刺すか、1体の敵を引き寄せる。",
+      "cooldown": "10/9.5/9/8.5/8",
+      "cost": "70/75/80/85/90",
+      "image": "PykeQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ゴーストウォーター",
+      "description": "カモフラージュ状態になり、移動速度が大きく増加する。移動速度は徐々に元に戻る。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "65",
+      "image": "PykeW.png"
+    },
+    {
+      "slot": "E",
+      "name": "亡者の引き波",
+      "description": "亡霊を残してダッシュする。亡霊はパイクのところまで戻ってきて触れた敵チャンピオンをスタンさせる。",
+      "cooldown": "15/14/13/12/11",
+      "cost": "40",
+      "image": "PykeE.png"
+    },
+    {
+      "slot": "R",
+      "name": "水底の急襲",
+      "description": "ブリンクして体力の低下した敵にとどめを刺す。とどめを刺すと再度使用可能になり、アシストした味方1人に追加ゴールドを付与する。",
+      "cooldown": "100/85/70",
+      "cost": "100",
+      "image": "PykeR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Volibear",
+        "name": "ボリベア",
+        "reason": "勝率 55.67%（統計的に有利）"
+      },
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 55.15%（統計的に有利）"
+      },
+      {
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 53.44%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 43.21%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 43.34%（統計的に不利）"
+      },
+      {
+        "champion_id": "Rengar",
+        "name": "レンガー",
+        "reason": "勝率 44.83%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6699",
+        "name": "ボルテイク サイクロソード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2520",
+        "name": "バスティオンブレイカー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3814",
+        "name": "ナイト エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "天啓",
+      "keystone": "8369",
+      "keystone_name": "ファーストストライク",
+      "choices": [
+        "魔法の靴",
+        "トリプル トニック",
+        "宇宙の英知"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "サドンインパクト",
+        "至極の賞金首狩り"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

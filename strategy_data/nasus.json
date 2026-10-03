@@ -1,0 +1,121 @@
+{
+  "name": "繝翫し繧ｹ",
+  "slug": "nasus",
+  "roles": [
+    "TOP",
+    "MID"
+  ],
+  "summoner_spells": [
+    "ゴースト",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Vladimir",
+        "name": "ブラッドミア",
+        "reason": "勝率 58.3%（統計的に有利）"
+      },
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 57.54%（統計的に有利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 56.9%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Zac",
+        "name": "ザック",
+        "reason": "勝率 45.24%（統計的に不利）"
+      },
+      {
+        "champion_id": "Garen",
+        "name": "ガレン",
+        "reason": "勝率 46.7%（統計的に不利）"
+      },
+      {
+        "champion_id": "Anivia",
+        "name": "アニビア",
+        "reason": "勝率 47.25%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1054",
+        "name": "ドラン シールド"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3110",
+        "name": "フローズン ハート",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3065",
+        "name": "スピリット ビサージュ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8021",
+      "keystone_name": "フリートフットワーク",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "気迫"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

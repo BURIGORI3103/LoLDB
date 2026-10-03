@@ -1,0 +1,184 @@
+{
+  "id": "Nautilus",
+  "key": "111",
+  "name": "ノーチラス",
+  "title": "深海の巨人",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 646,
+    "hpperlevel": 100,
+    "mp": 400,
+    "mpperlevel": 47,
+    "movespeed": 325,
+    "armor": 39,
+    "armorperlevel": 4.95,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8.65,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1,
+    "attackspeed": 0.706
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "鉄の錨",
+      "description": "対象に最初に行う通常攻撃は与える物理ダメージが増加し、短時間スネア効果を与える。",
+      "image": "Nautilus_StaggeringBlow.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "錨投げ",
+      "description": "前方に錨を投げる。敵に命中すると自身と対象を同時に引き寄せ、魔法ダメージを与える。錨が地形に命中した場合、自身を錨の地点まで引き寄せる。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "60",
+      "image": "NautilusAnchorDrag.png"
+    },
+    {
+      "slot": "W",
+      "name": "大海の激憤",
+      "description": "一時的にシールドを獲得する。シールドが持続している間は通常攻撃が対象と周囲の敵に継続ダメージを与える。",
+      "cooldown": "12",
+      "cost": "60",
+      "image": "NautilusPiercingGaze.png"
+    },
+    {
+      "slot": "E",
+      "name": "粉砕水",
+      "description": "自身の周囲に3回爆発する衝撃波を発生させる。爆発のたびに敵にダメージとスロウ効果を与える。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "50/60/70/80/90",
+      "image": "NautilusSplashZone.png"
+    },
+    {
+      "slot": "R",
+      "name": "爆雷発射",
+      "description": "錨を地面にたたきつけ、狙った敵チャンピオンを追尾する爆雷を発射する。爆雷は対象を追尾しながら、通った場所に衝撃波を引き起こし、巻き込んだ敵ユニットに魔法ダメージとノックアップを与える。爆雷が対象に命中すると爆発がおき、対象にノックアップとスタンを付与する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "NautilusGrandLine.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 60.93%（統計的に有利）"
+      },
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 60.31%（統計的に有利）"
+      },
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 59.07%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 43.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taric",
+        "name": "タリック",
+        "reason": "勝率 43.45%（統計的に不利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 43.83%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3109",
+        "name": "騎士の誓い",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2524",
+        "name": "バンドルパイプ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "シールドバッシュ",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "",
+    "teamfight": ""
+  }
+}

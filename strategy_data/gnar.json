@@ -1,0 +1,120 @@
+{
+  "name": "繝翫・",
+  "slug": "gnar",
+  "roles": [
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Zac",
+        "name": "ザック",
+        "reason": "勝率 57.93%（統計的に有利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 56.96%（統計的に有利）"
+      },
+      {
+        "champion_id": "Volibear",
+        "name": "ボリベア",
+        "reason": "勝率 55.31%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 44.05%（統計的に不利）"
+      },
+      {
+        "champion_id": "Aurora",
+        "name": "オーロラ",
+        "reason": "勝率 44.74%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 45.53%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3053",
+        "name": "ステラックの篭手",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8021",
+      "keystone_name": "フリートフットワーク",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ボーンアーマー",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "name": "繝吶う繧ｬ繝ｼ",
+  "slug": "veigar",
+  "roles": [
+    "MID",
+    "ADC"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 66.99%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 60.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sion",
+        "name": "サイオン",
+        "reason": "勝率 60.0%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 36.75%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kayle",
+        "name": "ケイル",
+        "reason": "勝率 43.89%（統計的に不利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 44.25%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3070",
+        "name": "女神の涙",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6657",
+        "name": "ロッド オブ エイジス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3040",
+        "name": "セラフ エンブレイス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "天啓",
+      "keystone": "8369",
+      "keystone_name": "ファーストストライク",
+      "choices": [
+        "魔法の靴",
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "マナフローバンド",
+        "至高"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

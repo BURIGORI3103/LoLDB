@@ -1,0 +1,120 @@
+{
+  "name": "繧ｹ繧ｫ繝ｼ繝翫・",
+  "slug": "skarner",
+  "roles": [
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Karthus",
+        "name": "カーサス",
+        "reason": "勝率 65.63%（統計的に有利）"
+      },
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 60.61%（統計的に有利）"
+      },
+      {
+        "champion_id": "Darius",
+        "name": "ダリウス",
+        "reason": "勝率 56.86%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 40.24%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zyra",
+        "name": "ザイラ",
+        "reason": "勝率 44.3%（統計的に不利）"
+      },
+      {
+        "champion_id": "RekSai",
+        "name": "レク＝サイ",
+        "reason": "勝率 44.95%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1103",
+        "name": "モスストンパーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3084",
+        "name": "心の鋼",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2502",
+        "name": "終わりなき絶望",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3065",
+        "name": "スピリット ビサージュ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8437",
+      "keystone_name": "不死者の握撃",
+      "choices": [
+        "シールドバッシュ",
+        "心身調整",
+        "超成長"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "疾駆"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "id": "Kayn",
+  "key": "141",
+  "name": "ケイン",
+  "title": "無情の影",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 655,
+    "hpperlevel": 103,
+    "mp": 410,
+    "mpperlevel": 50,
+    "movespeed": 340,
+    "armor": 38,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 8,
+    "hpregenperlevel": 0.75,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.95,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.7,
+    "attackspeed": 0.669
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "緋眼の大鎌",
+      "description": "ケインは自我を持つダーキンの古代武器ラーストを用いており、両者は常に互いの支配権をかけて争っている。この戦いは<font color='#fe5c50'>ダーキン</font>がケインを取り込むか、ケインがラーストを使いこなし<font color='#8484fb'>影の暗殺者</font>となるまで続く。<br><br><font color='#fe5c50'>ダーキン:</font> 敵チャンピオンにスキルで与えたダメージの一定割合にあたる体力を回復する。<br><br><font color='#8484fb'>影の暗殺者:</font> 敵チャンピオンと戦闘開始直後の数秒間、追加ダメージを与える。",
+      "image": "Kayn_Passive_Primary.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "飛影斬",
+      "description": "ダッシュしてから斬りつける。その両方でダメージを与える。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "40",
+      "image": "KaynQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "刃影襲",
+      "description": "直線上にいる敵にダメージとスロウ効果を与える。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "40/45/50/55/60",
+      "image": "KaynW.png"
+    },
+    {
+      "slot": "E",
+      "name": "影抜き",
+      "description": "ケインが地形を無視して歩くことができる。",
+      "cooldown": "21/19/17/15/13",
+      "cost": "90",
+      "image": "KaynE.png"
+    },
+    {
+      "slot": "R",
+      "name": "真影侵壊",
+      "description": "敵の体の中に侵入して、出てくる時に大ダメージを与える。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "KaynR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Jax",
+        "name": "ジャックス",
+        "reason": "勝率 56.08%（統計的に有利）"
+      },
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 55.07%（統計的に有利）"
+      },
+      {
+        "champion_id": "Karthus",
+        "name": "カーサス",
+        "reason": "勝率 54.24%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 44.89%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fiddlesticks",
+        "name": "フィドルスティックス",
+        "reason": "勝率 44.9%（統計的に不利）"
+      },
+      {
+        "champion_id": "Ambessa",
+        "name": "アンベッサ",
+        "reason": "勝率 45.48%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6699",
+        "name": "ボルテイク サイクロソード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8128",
+      "keystone_name": "魂の収穫",
+      "choices": [
+        "サドンインパクト",
+        "グリスリー メメント",
+        "貪欲な賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

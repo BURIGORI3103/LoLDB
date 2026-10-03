@@ -1,0 +1,186 @@
+{
+  "id": "Blitzcrank",
+  "key": "53",
+  "name": "ブリッツクランク",
+  "title": "偉大なるスチームゴーレム",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP",
+    "MID",
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 109,
+    "mp": 267,
+    "mpperlevel": 40,
+    "movespeed": 325,
+    "armor": 37,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 7.5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 8.5,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.13,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "マナバリア",
+      "description": "体力が低下すると、マナの量に応じたシールドを獲得する。",
+      "image": "Blitzcrank_ManaBarrier.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ロケットグラブ",
+      "description": "指定方向に右手を発射する。最初に触れた敵ユニットを掴んでダメージを与え、スタン効果を付与して自身のそばに引き寄せる。",
+      "cooldown": "20/19/18/17/16",
+      "cost": "100",
+      "image": "RocketGrab.png"
+    },
+    {
+      "slot": "W",
+      "name": "オーバードライブ",
+      "description": "エネルギーをスーパーチャージして、移動速度と攻撃速度を大幅に上げる。効果終了後、エネルギーが切れて一時的にスロウ状態になる。",
+      "cooldown": "15",
+      "cost": "75",
+      "image": "Overdrive.png"
+    },
+    {
+      "slot": "E",
+      "name": "パワーフィスト",
+      "description": "拳にエネルギーを充填して次の通常攻撃のダメージを2倍にし、対象をノックアップする。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "25",
+      "image": "PowerFist.png"
+    },
+    {
+      "slot": "R",
+      "name": "イナズマフィールド",
+      "description": "通常攻撃した敵にマークを付け、1秒後に電撃のダメージを与える。また、発動すると周囲の敵ユニットのシールドを消滅させ、ダメージを与えて短時間のサイレンス効果を与える。",
+      "cooldown": "60/40/20",
+      "cost": "100",
+      "image": "StaticField.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 60.4%（統計的に有利）"
+      },
+      {
+        "champion_id": "Shen",
+        "name": "シェン",
+        "reason": "勝率 57.5%（統計的に有利）"
+      },
+      {
+        "champion_id": "Camille",
+        "name": "カミール",
+        "reason": "勝率 56.88%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 41.18%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zoe",
+        "name": "ゾーイ",
+        "reason": "勝率 41.23%（統計的に不利）"
+      },
+      {
+        "champion_id": "Janna",
+        "name": "ジャンナ",
+        "reason": "勝率 44.17%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3116",
+        "name": "リーライ クリスタル セプター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3165",
+        "name": "モレロノミコン",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8992",
+      "keystone_name": "死神の残り火",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "冷静沈着",
+        "切り崩し"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

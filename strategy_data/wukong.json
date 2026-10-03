@@ -1,0 +1,117 @@
+{
+  "roles": [
+    "JUG",
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Jayce",
+        "name": "ジェイス",
+        "reason": "勝率 58.45%（統計的に有利）"
+      },
+      {
+        "champion_id": "Trundle",
+        "name": "トランドル",
+        "reason": "勝率 58.14%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rengar",
+        "name": "レンガー",
+        "reason": "勝率 57.17%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 45.77%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 46.05%（統計的に不利）"
+      },
+      {
+        "champion_id": "RekSai",
+        "name": "レク＝サイ",
+        "reason": "勝率 46.74%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "name": "ウーコン",
+  "slug": "wukong"
+}

@@ -1,0 +1,121 @@
+{
+  "name": "繧｢繧ｫ繝ｪ",
+  "slug": "akali",
+  "roles": [
+    "MID",
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 56.76%（統計的に有利）"
+      },
+      {
+        "champion_id": "Cassiopeia",
+        "name": "カシオペア",
+        "reason": "勝率 55.58%（統計的に有利）"
+      },
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 55.56%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Vex",
+        "name": "ヴェックス",
+        "reason": "勝率 43.2%（統計的に不利）"
+      },
+      {
+        "champion_id": "TwistedFate",
+        "name": "ツイステッド・フェイト",
+        "reason": "勝率 44.36%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 44.66%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3146",
+        "name": "ヘクステック ガンブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4645",
+        "name": "シャドウフレイム",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8112",
+      "keystone_name": "電撃",
+      "choices": [
+        "サドンインパクト",
+        "グリスリー メメント",
+        "至極の賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

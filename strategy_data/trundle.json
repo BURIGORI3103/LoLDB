@@ -1,0 +1,121 @@
+{
+  "name": "繝医Λ繝ｳ繝峨Ν",
+  "slug": "trundle",
+  "roles": [
+    "TOP",
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 60.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 58.93%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 53.85%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Cassiopeia",
+        "name": "カシオペア",
+        "reason": "勝率 28.13%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zac",
+        "name": "ザック",
+        "reason": "勝率 40.35%（統計的に不利）"
+      },
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 40.91%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3074",
+        "name": "ラヴァナス ハイドラ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3181",
+        "name": "ハルブレイカー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "打ちこわし",
+        "ボーンアーマー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

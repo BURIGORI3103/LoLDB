@@ -1,0 +1,121 @@
+{
+  "name": "繝ｴ繧ｧ繧､繝ｳ",
+  "slug": "vayne",
+  "roles": [
+    "ADC",
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 57.14%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 52.74%（統計的に有利）"
+      },
+      {
+        "champion_id": "Veigar",
+        "name": "ベイガー",
+        "reason": "勝率 51.82%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 40.1%（統計的に不利）"
+      },
+      {
+        "champion_id": "Vladimir",
+        "name": "ブラッドミア",
+        "reason": "勝率 40.65%（統計的に不利）"
+      },
+      {
+        "champion_id": "Seraphine",
+        "name": "セラフィーン",
+        "reason": "勝率 41.98%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3153",
+        "name": "ルインドキング ブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3124",
+        "name": "グインソー レイジブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3302",
+        "name": "テルミヌス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "心身調整",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

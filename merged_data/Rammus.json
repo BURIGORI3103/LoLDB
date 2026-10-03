@@ -1,0 +1,188 @@
+{
+  "id": "Rammus",
+  "key": "33",
+  "name": "ラムス",
+  "title": "アーマージロ",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 645,
+    "hpperlevel": 100,
+    "mp": 310,
+    "mpperlevel": 33,
+    "movespeed": 335,
+    "armor": 35,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 8,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7.85,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 65,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.215,
+    "attackspeed": 0.7
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "トゲトゲ",
+      "description": "自身の物理防御と魔法防御に応じて攻撃力が増加する。",
+      "image": "Armordillo_ScavengeArmor.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ころころ",
+      "description": "体を丸めて高速回転し、移動速度が増加する。衝突した敵に突進してダメージを与え、スロウ効果を付与する。",
+      "cooldown": "12/10.5/9/7.5/6",
+      "cost": "60",
+      "image": "PowerBall.png"
+    },
+    {
+      "slot": "W",
+      "name": "かたくなる",
+      "description": "防御体勢を取って物理防御と魔法防御を大幅に増加させ、通常攻撃を行ってきた相手にダメージを跳ね返す。",
+      "cooldown": "7",
+      "cost": "40",
+      "image": "DefensiveBallCurl.png"
+    },
+    {
+      "slot": "E",
+      "name": "ぴりぴり",
+      "description": "敵チャンピオンまたは中立モンスターをタウントし、固い甲羅に無謀な攻撃をさせる。",
+      "cooldown": "12",
+      "cost": "50",
+      "image": "PuncturingTaunt.png"
+    },
+    {
+      "slot": "R",
+      "name": "どーんどーん",
+      "description": "ジャンプしてから指定地点に勢いよく着地し、敵に魔法ダメージとスロウ効果を与える。「ころころ」発動中に使用した場合、範囲の中心付近にいる敵にはノックアップも与える。",
+      "cooldown": "120/105/90",
+      "cost": "100",
+      "image": "Tremors2.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 64.62%（統計的に有利）"
+      },
+      {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 63.24%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rengar",
+        "name": "レンガー",
+        "reason": "勝率 59.75%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 42.06%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 42.35%（統計的に不利）"
+      },
+      {
+        "champion_id": "Skarner",
+        "name": "スカーナー",
+        "reason": "勝率 44.55%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3075",
+        "name": "ソーンメイル",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3068",
+        "name": "サンファイア イージス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6665",
+        "name": "変幻自在のジャック＝ショー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "生命の泉",
+        "心身調整",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

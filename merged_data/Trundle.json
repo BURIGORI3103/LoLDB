@@ -1,0 +1,189 @@
+{
+  "id": "Trundle",
+  "key": "48",
+  "name": "トランドル",
+  "title": "トロールキング",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP",
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 650,
+    "hpperlevel": 110,
+    "mp": 340,
+    "mpperlevel": 45,
+    "movespeed": 350,
+    "armor": 37,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 6,
+    "hpregenperlevel": 0.75,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.9,
+    "attackspeed": 0.67
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "王への貢物",
+      "description": "近くにいる敵ユニットの体力がゼロになると、自身の体力が回復する。回復量は、倒れたユニットの最大体力に比例する。",
+      "image": "Trundle_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "咬み付き",
+      "description": "敵に咬み付いてダメージを与える。咬み付かれた対象は一瞬スロウ状態となり、攻撃力が低下する。この攻撃でトランドルの攻撃力が上昇し、対象の攻撃力をその半分低下させる。",
+      "cooldown": "3.5",
+      "cost": "20",
+      "image": "TrundleTrollSmash.png"
+    },
+    {
+      "slot": "W",
+      "name": "凍てつく大地",
+      "description": "指定範囲を自身の領土にする。範囲内にいる間はトランドルの攻撃速度と移動速度が増加し、あらゆる体力回復効果が増加する。",
+      "cooldown": "18/17/16/15/14",
+      "cost": "40",
+      "image": "trundledesecrate.png"
+    },
+    {
+      "slot": "E",
+      "name": "氷冷の柱",
+      "description": "指定地点に氷の柱を出現させて通行不能にし、近接する敵ユニット全員をスロウ効果を付与する。",
+      "cooldown": "21/19.5/18/16.5/15",
+      "cost": "75",
+      "image": "TrundleCircle.png"
+    },
+    {
+      "slot": "R",
+      "name": "暴虐なる搾取",
+      "description": "発動と同時に対象の体力、物理防御、魔法防御の一部を吸収する。<br>その後4秒かけて、さらに同量の体力、物理防御、魔法防御を吸収する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "TrundlePain.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 60.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 58.93%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 53.85%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Cassiopeia",
+        "name": "カシオペア",
+        "reason": "勝率 28.13%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zac",
+        "name": "ザック",
+        "reason": "勝率 40.35%（統計的に不利）"
+      },
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 40.91%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3074",
+        "name": "ラヴァナス ハイドラ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3181",
+        "name": "ハルブレイカー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "打ちこわし",
+        "ボーンアーマー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

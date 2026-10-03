@@ -1,0 +1,189 @@
+{
+  "id": "KogMaw",
+  "key": "96",
+  "name": "コグ＝マウ",
+  "title": "深淵のアギト",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC",
+    "MID"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 635,
+    "hpperlevel": 99,
+    "mp": 325,
+    "mpperlevel": 40,
+    "movespeed": 330,
+    "armor": 24,
+    "armorperlevel": 4.45,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 500,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8.75,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 61,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.65,
+    "attackspeed": 0.665
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "イカシアの自爆",
+      "description": "倒されてから4秒後、コグ＝マウは爆発して周囲の敵に確定ダメージを与える。",
+      "image": "KogMaw_IcathianSurprise.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "腐食粘液",
+      "description": "苛性の粘液を飛ばし、対象に魔法ダメージを与え、物理防御と魔法防御を短時間低下させる。さらにコグ＝マウの攻撃速度が増加する。",
+      "cooldown": "7",
+      "cost": "40",
+      "image": "KogMawQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "有機性魔力砲",
+      "description": "通常攻撃の射程距離が増加し、対象の最大体力に比例した魔法ダメージ%i:OnHit%<OnHit>通常攻撃時効果</OnHit>を与える。",
+      "cooldown": "17",
+      "cost": "40",
+      "image": "KogMawBioArcaneBarrage.png"
+    },
+    {
+      "slot": "E",
+      "name": "ヴォイド分泌液",
+      "description": "敵を貫通する謎の粘液を発射し、命中した敵ユニットにダメージを与える。粘液は通過したエリアにしばらく残り、踏んだ敵にスロウ効果を付与する。",
+      "cooldown": "12",
+      "cost": "40/55/70/85/100",
+      "image": "KogMawVoidOoze.png"
+    },
+    {
+      "slot": "R",
+      "name": "生体空撃砲",
+      "description": "射程の長い砲弾を発射して魔法ダメージ (体力が低い敵には大幅に増加) を与えるとともに、敵を可視状態にする。ただし、ステルス状態の敵の位置を把握することはできない。このスキルを短時間で連発すると、消費マナが増加する。",
+      "cooldown": "2/1.5/1",
+      "cost": "40",
+      "image": "KogMawLivingArtillery.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Varus",
+        "name": "ヴァルス",
+        "reason": "勝率 58.89%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 56.53%（統計的に有利）"
+      },
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 56.02%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Vladimir",
+        "name": "ブラッドミア",
+        "reason": "勝率 43.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "AurelionSol",
+        "name": "オレリオン・ソル",
+        "reason": "勝率 43.43%（統計的に不利）"
+      },
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 43.55%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3124",
+        "name": "グインソー レイジブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6675",
+        "name": "ナヴォリ フリッカーブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3302",
+        "name": "テルミヌス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: 血脈",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "心身調整",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "",
+    "teamfight": ""
+  }
+}

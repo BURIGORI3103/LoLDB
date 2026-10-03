@@ -1,0 +1,189 @@
+{
+  "id": "Volibear",
+  "key": "106",
+  "name": "ボリベア",
+  "title": "無慈悲の嵐",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP",
+    "JUG"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 650,
+    "hpperlevel": 104,
+    "mp": 350,
+    "mpperlevel": 70,
+    "movespeed": 340,
+    "armor": 35,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 9,
+    "hpregenperlevel": 0.75,
+    "mpregen": 6.25,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 65,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "無慈悲の嵐",
+      "description": "通常攻撃およびスキルの使用で攻撃速度が増加していき、最終的に通常攻撃が周囲の敵に追加魔法ダメージを与えるようになる。",
+      "image": "Volibear_Icon_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "稲妻の猛攻",
+      "description": "敵に向かう際の移動速度が増加し、発動後最初に通常攻撃を行った対象に<status>スタン効果</status>とダメージを与える。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "50",
+      "image": "VolibearQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "激昂の斬撃",
+      "description": "敵にダメージと通常攻撃時効果を与えてマークする。同じ対象にもう一度発動すると追加ダメージを与えて自身の体力を回復する。",
+      "cooldown": "5",
+      "cost": "20/25/30/35/40",
+      "image": "VolibearW.png"
+    },
+    {
+      "slot": "E",
+      "name": "天破の一撃",
+      "description": "指定地点に雷を落として周囲の敵にダメージとスロウ効果を与え、自身が範囲内にいた場合はシールドを獲得する。",
+      "cooldown": "16",
+      "cost": "50",
+      "image": "VolibearE.png"
+    },
+    {
+      "slot": "R",
+      "name": "嵐を起こす者",
+      "description": "指定地点に飛びかかって踏みつけた敵にスロウ効果とダメージを与え、自身は体力が増加する。着地地点の近くにある敵のタワーは一時的に無効化される。",
+      "cooldown": "160/135/110",
+      "cost": "100",
+      "image": "VolibearR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 56.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rumble",
+        "name": "ランブル",
+        "reason": "勝率 54.59%（統計的に有利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 54.01%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 38.79%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 43.02%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kennen",
+        "name": "ケネン",
+        "reason": "勝率 43.4%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2510",
+        "name": "黄昏と暁",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6675",
+        "name": "ナヴォリ フリッカーブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3065",
+        "name": "スピリット ビサージュ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "打ちこわし",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

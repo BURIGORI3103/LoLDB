@@ -1,0 +1,121 @@
+{
+  "name": "繧ｬ繝ｪ繧ｪ",
+  "slug": "galio",
+  "roles": [
+    "MID",
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ziggs",
+        "name": "ジグス",
+        "reason": "勝率 59.35%（統計的に有利）"
+      },
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 55.94%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 54.6%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 42.41%（統計的に不利）"
+      },
+      {
+        "champion_id": "Veigar",
+        "name": "ベイガー",
+        "reason": "勝率 44.61%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 45.33%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3152",
+        "name": "ヘクステック ロケットベルト",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4005",
+        "name": "帝国の指令",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8230",
+      "keystone_name": "嵐乗りの勇躍",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "気迫"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "name": "繝上う繝槭・繝・ぅ繝ｳ繧ｬ繝ｼ",
+  "slug": "heimerdinger",
+  "roles": [
+    "TOP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "TahmKench",
+        "name": "タム・ケンチ",
+        "reason": "勝率 63.46%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rumble",
+        "name": "ランブル",
+        "reason": "勝率 58.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 57.5%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "MonkeyKing",
+        "name": "ウーコン",
+        "reason": "勝率 40.3%（統計的に不利）"
+      },
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 40.43%（統計的に不利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 41.94%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2503",
+        "name": "黒炎のトーチ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: ヘイスト",
+        "切り崩し"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "英気集中",
+        "強まる嵐"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

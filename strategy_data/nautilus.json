@@ -1,0 +1,112 @@
+{
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 60.93%（統計的に有利）"
+      },
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 60.31%（統計的に有利）"
+      },
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 59.07%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 43.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taric",
+        "name": "タリック",
+        "reason": "勝率 43.45%（統計的に不利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 43.83%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3109",
+        "name": "騎士の誓い",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2524",
+        "name": "バンドルパイプ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "シールドバッシュ",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "name": "ノーチラス",
+  "slug": "nautilus"
+}

@@ -1,0 +1,188 @@
+{
+  "id": "Jhin",
+  "key": "202",
+  "name": "ジン",
+  "title": "孤高の芸術家",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 655,
+    "hpperlevel": 107,
+    "mp": 300,
+    "mpperlevel": 50,
+    "movespeed": 330,
+    "armor": 24,
+    "armorperlevel": 4.7,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.55,
+    "mpregen": 6,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 61,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 0,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "この銃の名は｢囁き｣",
+      "description": "ジンの「囁き」は極めて精密に作られた銃である。弾倉は4発、一定の速度でしか発射できないが、最後の弾丸に黒魔術による特殊な効果が生まれ、クリティカル及び減少体力に応じた追加ダメージが発生する。また、クリティカルが発生すると自身の移動速度が増加する。",
+      "image": "Jhin_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "｢爆ぜ狂う果実｣",
+      "description": "指定した敵ユニットに特殊なグレネードを放り投げる。グレネードは最大4体まで敵ユニットの上を跳ねながらダメージを与え、ユニットを倒すたびに与えるダメージが増加する。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "40/45/50/55/60",
+      "image": "JhinQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "｢死者への狂奏曲｣",
+      "description": "持っている杖から長射程の弾丸を1発発射する。この弾はミニオンおよびモンスターを貫通するが、敵チャンピオンは貫通しない。命中した対象がその前に味方チャンピオン、「女神の足跡」、またはジンからのダメージを受けていた場合、スネア効果を付与する。",
+      "cooldown": "12",
+      "cost": "50/55/60/65/70",
+      "image": "JhinW.png"
+    },
+    {
+      "slot": "E",
+      "name": "｢女神の抱擁｣",
+      "description": "指定地点に、敵ユニットが上を通過すると花開く「女神の足跡」を設置する。「女神の足跡」は発動すると範囲内の敵ユニットをスロウ状態にし、その後爆発して魔法ダメージを与える。<br><br><font color='#FFFFFF'>「死とは、かくも美しい…」 -</font> ジンが敵チャンピオンをキルすると、そのユニットの上で「女神の足跡」が発動し爆発する。",
+      "cooldown": "2",
+      "cost": "30",
+      "image": "JhinE.png"
+    },
+    {
+      "slot": "R",
+      "name": "｢終演 -フィナーレ-｣",
+      "description": "詠唱とともに「囁き」と手に持った杖を合体させ、長銃へと変形させる。発射される4発の特殊な弾丸は非常に長い射程距離を持ち、ミニオンおよび中立モンスターを貫通して発射する事ができるが、敵チャンピオンを貫通しない。命中した敵に減少体力に応じたダメージを与え、スロウ効果を付与する。最高の技術で大胆かつ繊細に作り上げられた4発目は、より大きな威力を秘めており確実にクリティカルが発生する。",
+      "cooldown": "120/105/90",
+      "cost": "100",
+      "image": "JhinR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 54.43%（統計的に有利）"
+      },
+      {
+        "champion_id": "Varus",
+        "name": "ヴァルス",
+        "reason": "勝率 52.96%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 52.63%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Katarina",
+        "name": "カタリナ",
+        "reason": "勝率 44.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 45.31%（統計的に不利）"
+      },
+      {
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 46.1%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6697",
+        "name": "ヒュブリス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6676",
+        "name": "コレクター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8021",
+      "keystone_name": "フリートフットワーク",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: 血脈",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "追い風",
+        "強まる嵐"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

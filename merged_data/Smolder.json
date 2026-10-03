@@ -1,0 +1,184 @@
+{
+  "id": "Smolder",
+  "key": "901",
+  "name": "スモルダー",
+  "title": "炎の幼龍",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 575,
+    "hpperlevel": 100,
+    "mp": 300,
+    "mpperlevel": 40,
+    "movespeed": 330,
+    "armor": 24,
+    "armorperlevel": 4,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.6,
+    "mpregen": 8.5,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 4,
+    "attackspeed": 0.638
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "駆けだしドラゴン",
+      "description": "スキルをチャンピオンに命中させる、または「スーパーこげこげブレス」で敵をキルすると、「駆けだしドラゴン」のスタックを1つ獲得する。スタック数に応じて通常スキルのダメージが増加する。",
+      "image": "Icons_Smolder_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "スーパーこげこげブレス",
+      "description": "敵1体に炎のブレスを吐きかける。スタックを獲得するほど、このスキルが強化されていく。",
+      "cooldown": "5.5/5/4.5/4/3.5",
+      "cost": "25",
+      "image": "SmolderQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "くしゅん！",
+      "description": "可愛らしいくしゃみと共に炎を吐く。この炎は敵チャンピオンに命中すると爆発する。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/55/60/65/70",
+      "image": "SmolderW.png"
+    },
+    {
+      "slot": "E",
+      "name": "パタパタパタ",
+      "description": "飛翔して地形を無視するようになり、最も体力が低い敵を空から攻撃する。",
+      "cooldown": "24/22/20/18/16",
+      "cost": "65",
+      "image": "SmolderE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ママーッ！！",
+      "description": "母ドラゴンを呼び寄せて、上空から炎を吐いてもらう。炎の中心部にいる敵には、追加ダメージとスロウ効果を与える。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "SmolderR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 67.16%（統計的に有利）"
+      },
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 59.57%（統計的に有利）"
+      },
+      {
+        "champion_id": "Neeko",
+        "name": "ニーコ",
+        "reason": "勝率 55.96%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 46.79%（統計的に不利）"
+      },
+      {
+        "champion_id": "Blitzcrank",
+        "name": "ブリッツクランク",
+        "reason": "勝率 47.64%（統計的に不利）"
+      },
+      {
+        "champion_id": "Senna",
+        "name": "セナ",
+        "reason": "勝率 48.48%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3070",
+        "name": "女神の涙",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6620",
+        "name": "ヘリアの残響",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2530",
+        "name": "旋律のダイアデム",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8214",
+      "keystone_name": "エアリー召喚",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "強まる嵐"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "心身調整",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

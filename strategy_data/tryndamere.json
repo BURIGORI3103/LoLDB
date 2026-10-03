@@ -1,0 +1,120 @@
+{
+  "name": "繝医Μ繝ｳ繝繝｡繧｢",
+  "slug": "tryndamere",
+  "roles": [
+    "MID"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 57.31%（統計的に有利）"
+      },
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 56.76%（統計的に有利）"
+      },
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 56.57%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "KogMaw",
+        "name": "コグ＝マウ",
+        "reason": "勝率 43.26%（統計的に不利）"
+      },
+      {
+        "champion_id": "Aurora",
+        "name": "オーロラ",
+        "reason": "勝率 47.19%（統計的に不利）"
+      },
+      {
+        "champion_id": "Diana",
+        "name": "ダイアナ",
+        "reason": "勝率 48.02%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6657",
+        "name": "ロッド オブ エイジス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3100",
+        "name": "リッチ ベイン",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3094",
+        "name": "ラピッド ファイアキャノン",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8229",
+      "keystone_name": "秘儀の彗星",
+      "choices": [
+        "マナフローバンド",
+        "追い風",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Move Speed",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

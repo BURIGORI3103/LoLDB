@@ -1,0 +1,184 @@
+{
+  "id": "Yuumi",
+  "key": "350",
+  "name": "ユーミ",
+  "title": "マジカルキャット",
+  "patch": "16.19.1",
+  "roles": [
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 500,
+    "hpperlevel": 69,
+    "mp": 440,
+    "mpperlevel": 45,
+    "movespeed": 330,
+    "armor": 25,
+    "armorperlevel": 4.2,
+    "spellblock": 25,
+    "spellblockperlevel": 1.1,
+    "attackrange": 425,
+    "hpregen": 5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 10,
+    "mpregenperlevel": 0.4,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 49,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ネコはトモダチ",
+      "description": "一定時間ごとに、通常攻撃またはスキルをチャンピオンに命中させると、自身および次にくっつく味方の体力が回復する。<br><br>くっついている間は、その味方との間に特別な絆が生まれる。絆が最も強い味方にくっついている間は、自身のスキルが強化される。",
+      "image": "YuumiP2.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "きまぐれミサイル",
+      "description": "ミサイルを発射し、最初に当たった対象にダメージとスロウ効果を与える。発射後1.35秒以上経過すると、与えるダメージとスロウ効果が強化される。「ベストフレンド」にくっついている間は、ミサイルのスロウ効果が常に強化され、味方は通常攻撃時効果で追加ダメージを与えるようになる。<br><br>くっついている間は少しの間だけミサイルをマウスカーソルで操作できる。",
+      "cooldown": "6.5",
+      "cost": "50/55/60/65/70/75",
+      "image": "YuumiQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ユー＆ミー！",
+      "description": "対象の味方までダッシュして、タワー以外のすべてから対象指定不可状態になる。「ベストフレンド」にくっついている間は自身の体力回復/シールド効果が増加し、味方は通常攻撃時効果で体力が回復する。",
+      "cooldown": "0",
+      "cost": "0",
+      "image": "YuumiW.png"
+    },
+    {
+      "slot": "E",
+      "name": "バビューン！",
+      "description": "シールドを獲得して、移動速度と攻撃速度が増加する。くっついている場合は、自身ではなく味方にこの効果を与える。<br>",
+      "cooldown": "10",
+      "cost": "80/90/100/110/120",
+      "image": "YuumiE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ファイナルチャプター",
+      "description": "詠唱してウェーブを5回発射する。ウェーブは対象が敵の場合はダメージを与えて、味方の場合は体力を回復する。詠唱中も移動と「バビューン！」の発動が可能で、味方にくっつくこともできる。「ベストフレンド」にくっついている間は、このスキルの発射方向をマウスで操作できる。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "YuumiR.png"
+    }
+  ],
+  "summoner_spells": [
+    "イグゾースト",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 61.51%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 56.99%（統計的に有利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 56.56%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Rell",
+        "name": "レル",
+        "reason": "勝率 40.75%（統計的に不利）"
+      },
+      {
+        "champion_id": "Rakan",
+        "name": "ラカン",
+        "reason": "勝率 41.14%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fiddlesticks",
+        "name": "フィドルスティックス",
+        "reason": "勝率 41.7%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3222",
+        "name": "ミカエルの祝福",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3504",
+        "name": "アーデント センサー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6617",
+        "name": "ムーンストーンの再生",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8214",
+      "keystone_name": "エアリー召喚",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "生命の泉",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "Ryze",
+  "key": "13",
+  "name": "ライズ",
+  "title": "ルーンの魔導師",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "TOP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 620,
+    "hpperlevel": 124,
+    "mp": 300,
+    "mpperlevel": 70,
+    "movespeed": 340,
+    "armor": 22,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 8,
+    "hpregenperlevel": 0.8,
+    "mpregen": 8,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.11,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "古代の呪術",
+      "description": "<mainText>ライズのスキルは増加したマナに応じて追加ダメージを与え、魔力に応じて最大マナが一定割合増加する。</mainText>",
+      "image": "Ryze_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "オーバーロード",
+      "description": "自動効果: 他の通常スキルを使うと「オーバーロード」のクールダウンがリセットされ、「ルーン」がチャージされる。「ルーン」が2つチャージされた状態で「オーバーロード」を使用すると、少しの間移動速度が増加する。<br><br>発動効果: 凝縮したエネルギー弾を直線上に発射して、最初に当たった敵にダメージを与える。すでに対象に「フラックス」が付与されていた場合、「オーバーロード」は追加ダメージを与え、周囲の敵に「フラックス」が波及する。",
+      "cooldown": "5",
+      "cost": "40/38/36/34/32",
+      "image": "RyzeQWrapper.png"
+    },
+    {
+      "slot": "W",
+      "name": "ルーンプリズン",
+      "description": "対象をルーンの檻に捕らえ、ダメージとスロウ効果を与える。対象に「フラックス」が付与されている場合は、スロウの代わりにスネア状態にする。",
+      "cooldown": "11/10.5/10/9.5/9",
+      "cost": "50/60/70/80/90",
+      "image": "RyzeW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スペルフラックス",
+      "description": "純粋な魔力を凝縮したオーブを発射して対象にダメージを与え、対象とその周囲のすべての敵にデバフを与える。ライズのスキルはデバフを受けた敵には追加効果を与える。",
+      "cooldown": "3.5/3.25/3/2.75/2.5",
+      "cost": "40/50/60/70/80",
+      "image": "RyzeE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ポータルワープ",
+      "description": "自動効果: 「フラックス」が付与された対象に「オーバーロード」で与える追加ダメージが増加する。<br><br>発動効果: 近くにポータルを発生させる。数秒後、指定した場所にポータルの範囲内の味方をテレポートさせる。",
+      "cooldown": "180/160/140",
+      "cost": "100",
+      "image": "RyzeR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ゴースト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 56.25%（統計的に有利）"
+      },
+      {
+        "champion_id": "Akali",
+        "name": "アカリ",
+        "reason": "勝率 51.52%（統計的に有利）"
+      },
+      {
+        "champion_id": "Akshan",
+        "name": "アクシャン",
+        "reason": "勝率 50.77%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 35.66%（統計的に不利）"
+      },
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 37.18%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kayle",
+        "name": "ケイル",
+        "reason": "勝率 37.82%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3070",
+        "name": "女神の涙",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6657",
+        "name": "ロッド オブ エイジス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3040",
+        "name": "セラフ エンブレイス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8992",
+      "keystone_name": "死神の残り火",
+      "choices": [
+        "マナフローバンド",
+        "追い風",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ボーンアーマー",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Move Speed",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

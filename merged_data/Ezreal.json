@@ -1,0 +1,178 @@
+{
+  "id": "Ezreal",
+  "key": "81",
+  "name": "エズリアル",
+  "title": "光の冒険心",
+  "patch": "16.19.1",
+  "roles": [
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 102,
+    "mp": 375,
+    "mpperlevel": 70,
+    "movespeed": 325,
+    "armor": 24,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 4,
+    "hpregenperlevel": 0.65,
+    "mpregen": 8.5,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ライジングスペルフォース",
+      "description": "スキルを連続で命中させるたびに攻撃速度が増加していく。最大5スタック。",
+      "image": "Ezreal_RisingSpellForce.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ミスティックショット",
+      "description": "エネルギービームを発射してダメージを与える。敵ユニットに命中すると、自身の全スキルのクールダウンが少しだけ短縮される。",
+      "cooldown": "5.5/5.25/5/4.75/4.5",
+      "cost": "28/31/34/37/40",
+      "image": "EzrealQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "エッセンスフラックス",
+      "description": "最初に命中したチャンピオンまたはオブジェクトに貼り付くオーブを発射する。オーブの付いた敵を攻撃すると、オーブが爆発してダメージを与える。",
+      "cooldown": "8",
+      "cost": "50",
+      "image": "EzrealW.png"
+    },
+    {
+      "slot": "E",
+      "name": "アーケインシフト",
+      "description": "近くの指定地点に瞬間移動してエネルギービームを発射する。このエネルギービームは最も近くにいる敵ユニットに向かって発射される。「エッセンスフラックス」のスタックを受けた敵を優先する。",
+      "cooldown": "26/23/20/17/14",
+      "cost": "70",
+      "image": "EzrealE.png"
+    },
+    {
+      "slot": "R",
+      "name": "トゥルーショットバラージ",
+      "description": "少しチャージしてから敵を貫通する強力なエネルギービームを発射して、命中した敵ユニットに大ダメージを与える(ミニオンとエピック以外のモンスターに対してはダメージが低下)。",
+      "cooldown": "120/105/90",
+      "cost": "100",
+      "image": "EzrealR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Varus",
+        "name": "ヴァルス",
+        "reason": "勝率 51.57%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Katarina",
+        "name": "カタリナ",
+        "reason": "勝率 39.49%（統計的に不利）"
+      },
+      {
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 40.69%（統計的に不利）"
+      },
+      {
+        "champion_id": "Lux",
+        "name": "ラックス",
+        "reason": "勝率 42.69%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3070",
+        "name": "女神の涙",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3042",
+        "name": "ムラマナ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "冷静沈着",
+        "レジェンド: 血脈",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "ビスケットデリバリー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

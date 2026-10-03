@@ -1,0 +1,121 @@
+{
+  "name": "繝､繧ｹ繧ｪ",
+  "slug": "yasuo",
+  "roles": [
+    "TOP",
+    "MID"
+  ],
+  "summoner_spells": [
+    "イグゾースト",
+    "フラッシュ"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 59.11%（統計的に有利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 58.31%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yorick",
+        "name": "ヨリック",
+        "reason": "勝率 57.02%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "MonkeyKing",
+        "name": "ウーコン",
+        "reason": "勝率 46.35%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kled",
+        "name": "クレッド",
+        "reason": "勝率 46.4%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fiora",
+        "name": "フィオラ",
+        "reason": "勝率 46.44%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3153",
+        "name": "ルインドキング ブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6673",
+        "name": "イモータル シールドボウ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "体力吸収",
+        "レジェンド: 迅速",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

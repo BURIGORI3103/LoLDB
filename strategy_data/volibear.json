@@ -1,0 +1,121 @@
+{
+  "name": "繝懊Μ繝吶い",
+  "slug": "volibear",
+  "roles": [
+    "TOP",
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 56.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rumble",
+        "name": "ランブル",
+        "reason": "勝率 54.59%（統計的に有利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 54.01%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 38.79%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 43.02%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kennen",
+        "name": "ケネン",
+        "reason": "勝率 43.4%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2510",
+        "name": "黄昏と暁",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6675",
+        "name": "ナヴォリ フリッカーブレード",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3065",
+        "name": "スピリット ビサージュ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "打ちこわし",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

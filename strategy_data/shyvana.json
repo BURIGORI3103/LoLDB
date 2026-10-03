@@ -1,0 +1,120 @@
+{
+  "name": "繧ｷ繝ｴ繧｡繝ｼ繝・",
+  "slug": "shyvana",
+  "roles": [
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 56.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Rengar",
+        "name": "レンガー",
+        "reason": "勝率 55.62%（統計的に有利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 55.61%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "reason": "勝率 42.59%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 42.66%（統計的に不利）"
+      },
+      {
+        "champion_id": "Ekko",
+        "name": "エコー",
+        "reason": "勝率 47.04%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3161",
+        "name": "ショウジンの矛",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8005",
+      "keystone_name": "プレスアタック",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

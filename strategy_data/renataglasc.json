@@ -1,0 +1,112 @@
+{
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 62.67%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "reason": "勝率 61.54%（統計的に有利）"
+      },
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 59.76%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 40.63%（統計的に不利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 41.67%（統計的に不利）"
+      },
+      {
+        "champion_id": "Elise",
+        "name": "エリス",
+        "reason": "勝率 43.27%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "2065",
+        "name": "シュレリアの戦歌",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3107",
+        "name": "リデンプション",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8465",
+      "keystone_name": "ガーディアン",
+      "choices": [
+        "シールドバッシュ",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "第六感",
+        "執拗な賞金首狩り"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "name": "レナータ・グラスク",
+  "slug": "renataglasc"
+}

@@ -1,0 +1,113 @@
+{
+  "roles": [
+    "SUP",
+    "ADC"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Fiddlesticks",
+        "name": "フィドルスティックス",
+        "reason": "勝率 57.89%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 57.84%（統計的に有利）"
+      },
+      {
+        "champion_id": "Shen",
+        "name": "シェン",
+        "reason": "勝率 56.66%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Sona",
+        "name": "ソナ",
+        "reason": "勝率 47.1%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taric",
+        "name": "タリック",
+        "reason": "勝率 47.18%（統計的に不利）"
+      },
+      {
+        "champion_id": "Senna",
+        "name": "セナ",
+        "reason": "勝率 47.83%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3070",
+        "name": "女神の涙",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6620",
+        "name": "ヘリアの残響",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2530",
+        "name": "旋律のダイアデム",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8214",
+      "keystone_name": "エアリー召喚",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "強まる嵐"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "生命の泉",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "name": "セラフィーン",
+  "slug": "seraphine"
+}

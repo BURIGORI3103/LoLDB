@@ -1,0 +1,122 @@
+{
+  "name": "繝悶Λ繝・ラ繝溘い",
+  "slug": "vladimir",
+  "roles": [
+    "MID",
+    "TOP",
+    "ADC"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ゴースト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Jayce",
+        "name": "ジェイス",
+        "reason": "勝率 57.35%（統計的に有利）"
+      },
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 56.27%（統計的に有利）"
+      },
+      {
+        "champion_id": "Tristana",
+        "name": "トリスターナ",
+        "reason": "勝率 56.19%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 45.57%（統計的に不利）"
+      },
+      {
+        "champion_id": "Aurora",
+        "name": "オーロラ",
+        "reason": "勝率 45.58%（統計的に不利）"
+      },
+      {
+        "champion_id": "Nasus",
+        "name": "ナサス",
+        "reason": "勝率 46.78%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "4646",
+        "name": "ストームサージ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3089",
+        "name": "ラバドン デスキャップ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4633",
+        "name": "リフトメーカー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8230",
+      "keystone_name": "嵐乗りの勇躍",
+      "choices": [
+        "ニンバスクローク",
+        "至高",
+        "強まる嵐"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "レジェンド: ヘイスト",
+        "背水の陣"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

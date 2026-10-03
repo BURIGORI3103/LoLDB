@@ -1,0 +1,189 @@
+{
+  "id": "AurelionSol",
+  "key": "136",
+  "name": "オレリオン・ソル",
+  "title": "星を創りし者",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 90,
+    "mp": 530,
+    "mpperlevel": 40,
+    "movespeed": 340,
+    "armor": 22,
+    "armorperlevel": 4,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8,
+    "mpregenperlevel": 0.75,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "宇宙の創造者",
+      "description": "攻撃スキルを敵に命中させると、<font color='#3458eb'>「星屑」</font>のスタックを獲得できる。このスタックは各スキルを恒久的に強化する。 ",
+      "image": "AurelionSolP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "星炎の息吹",
+      "description": "数秒間詠唱して炎を吹き出し、最初に命中した敵にダメージを与え、その周囲の敵にはそれよりも少ないダメージを与える。敵に直接炎を吹きかけている間は、毎秒追加ダメージを与える。このダメージは獲得した「星屑」の数に応じて増加する。このスキルの対象がチャンピオンだった場合、「星屑」を獲得できる。",
+      "cooldown": "3",
+      "cost": "30/35/40/45/50",
+      "image": "AurelionSolQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "天空への飛翔",
+      "description": "飛翔して、指定方向に地形を超えて移動する。飛翔している間も、他のスキルを発動できる。また、飛翔中は「星炎の呼吸」のクールダウンおよび最大詠唱時間がなくなり、与えるダメージが増加する。<br><br>自身がダメージを与えた敵チャンピオンがその直後に倒されるたびに、このスキルの残りクールダウンが短縮される。<br><br>獲得した「星屑」の数に応じて、このスキルの最大射程が増加する。",
+      "cooldown": "22/20/18/16/14",
+      "cost": "50/55/60/65/70",
+      "image": "AurelionSolW.png"
+    },
+    {
+      "slot": "E",
+      "name": "特異点",
+      "description": "ブラックホールを召喚して敵にダメージを与え、ゆっくりとその中心に向かって引き寄せる。敵がブラックホールの範囲内で倒されるたびに、「星屑」を獲得する。また、敵チャンピオンを範囲内に捕らえている間も、毎秒「星屑」を獲得できる。ブラックホールの中心部は、体力が最大体力の一定割合を下回っている敵に、とどめを刺すことができる。「星屑」の数に応じて「特異点」の効果範囲が増加し、とどめを刺せる体力割合の基準値が上昇する。",
+      "cooldown": "12",
+      "cost": "90",
+      "image": "AurelionSolE.png"
+    },
+    {
+      "slot": "R",
+      "name": "星の邂逅/崩れ落つ天穹",
+      "description": "星の邂逅: 地上に星を降らせ、その衝撃で敵に魔法ダメージを与えて、スタンさせる。また、命中した敵チャンピオン1体ごとに「星屑」を獲得する。「星屑」を一定数獲得すると、次に使用する「星の邂逅」が「崩れ落つ天穹」に変化する。<br><br>崩れ落つ天穹: 天空から巨大な星を引き寄せる。この星は落下時の効果範囲とダメージが増加しており、敵をスタンではなくノックアップさせる。また、落下時の効果範囲の端から衝撃波が広がり、命中した敵にダメージとスロウ効果を与える。獲得した「星屑」の数に応じて、「星の邂逅」と「崩れ落つ天穹」は落下時の効果範囲が増加する。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "AurelionSolR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 64.15%（統計的に有利）"
+      },
+      {
+        "champion_id": "Nasus",
+        "name": "ナサス",
+        "reason": "勝率 63.55%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 63.49%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Akshan",
+        "name": "アクシャン",
+        "reason": "勝率 38.68%（統計的に不利）"
+      },
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 41.91%（統計的に不利）"
+      },
+      {
+        "champion_id": "Yone",
+        "name": "ヨネ",
+        "reason": "勝率 42.95%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "2503",
+        "name": "黒炎のトーチ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3116",
+        "name": "リーライ クリスタル セプター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8992",
+      "keystone_name": "死神の残り火",
+      "choices": [
+        "マナフローバンド",
+        "英気集中",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ボーンアーマー",
+        "超成長"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

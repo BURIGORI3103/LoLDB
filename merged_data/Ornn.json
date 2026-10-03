@@ -1,0 +1,188 @@
+{
+  "id": "Ornn",
+  "key": "516",
+  "name": "オーン",
+  "title": "山の下の焔",
+  "patch": "16.19.1",
+  "roles": [
+    "TOP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 660,
+    "hpperlevel": 109,
+    "mp": 341,
+    "mpperlevel": 65,
+    "movespeed": 335,
+    "armor": 33,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 9,
+    "hpregenperlevel": 0.9,
+    "mpregen": 8,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 69,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "歩く鍛冶場",
+      "description": "オーンが獲得するあらゆる追加物理防御と追加魔法防御は、獲得量が増加する。<br><br>オーンはどこにいても、ゴールドを消費して消費アイテム以外のアイテムを作り出せる。<br><br>さらに、自身と味方のために名匠アイテムを作り出せる。",
+      "image": "OrnnP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "溶岩隆起",
+      "description": "地面を叩きつけて裂け目を発生させ、敵ユニットにダメージを与えて移動速度を低下させる。少ししてから、裂け目の終端に溶岩の柱が発生する。",
+      "cooldown": "9/8.5/8/7.5/7",
+      "cost": "45",
+      "image": "OrnnQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ふいごの息",
+      "description": "前進し、炎を吐き出す。炎の最後の塊が当たった敵は「脆弱」状態になる。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "45/50/55/60/65",
+      "image": "OrnnW.png"
+    },
+    {
+      "slot": "E",
+      "name": "灼熱の突撃",
+      "description": "ダッシュして当たった敵ユニットにダメージを与える。ダッシュ中に地形にぶつかると周囲に衝撃波が発生し、敵ユニットにダメージを与えてノックアップする。",
+      "cooldown": "14/13.5/13/12.5/12",
+      "cost": "35/40/45/50/55",
+      "image": "OrnnE.png"
+    },
+    {
+      "slot": "R",
+      "name": "鍛冶神の呼び声",
+      "description": "指定地点に巨大な精霊を呼び出す。精霊はどんどん速度を上げながらオーンがいる方向に進んでくる。精霊にぶつかった敵ユニットはダメージを受けて移動速度が低下し、「脆弱」状態になる。スキルを再使用するとオーンが精霊に向かって突撃し、彼がぶつかった方向に精霊の進行方向を変える。この精霊に当たった敵ユニットはノックアップされて、最初と同量のダメージを受け、再び「脆弱」が適用される。",
+      "cooldown": "140/120/100",
+      "cost": "100",
+      "image": "OrnnR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 67.54%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 59.09%（統計的に有利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 58.12%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "MonkeyKing",
+        "name": "ウーコン",
+        "reason": "勝率 45.83%（統計的に不利）"
+      },
+      {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 46.03%（統計的に不利）"
+      },
+      {
+        "champion_id": "Poppy",
+        "name": "ポッピー",
+        "reason": "勝率 46.1%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1054",
+        "name": "ドラン シールド"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3068",
+        "name": "サンファイア イージス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3075",
+        "name": "ソーンメイル",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6665",
+        "name": "変幻自在のジャック＝ショー",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8437",
+      "keystone_name": "不死者の握撃",
+      "choices": [
+        "打ちこわし",
+        "ボーンアーマー",
+        "超成長"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "魔法の靴",
+        "ビスケットデリバリー"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "name": "繝ｬ繝ｫ",
+  "slug": "rell",
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Zoe",
+        "name": "ゾーイ",
+        "reason": "勝率 62.24%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "reason": "勝率 61.95%（統計的に有利）"
+      },
+      {
+        "champion_id": "Galio",
+        "name": "ガリオ",
+        "reason": "勝率 61.4%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 43.83%（統計的に不利）"
+      },
+      {
+        "champion_id": "Poppy",
+        "name": "ポッピー",
+        "reason": "勝率 47.94%（統計的に不利）"
+      },
+      {
+        "champion_id": "Janna",
+        "name": "ジャンナ",
+        "reason": "勝率 48.06%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3050",
+        "name": "ジーク コンバージェンス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3190",
+        "name": "ソラリのロケット",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3109",
+        "name": "騎士の誓い",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
+      "choices": [
+        "シールドバッシュ",
+        "ボーンアーマー",
+        "気迫"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ヘクステックフラッシュネイター",
+        "宇宙の英知"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Health Scaling",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "Galio",
+  "key": "3",
+  "name": "ガリオ",
+  "title": "伝説の巨像",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "SUP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 126,
+    "mp": 410,
+    "mpperlevel": 40,
+    "movespeed": 340,
+    "armor": 24,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 8,
+    "hpregenperlevel": 0.8,
+    "mpregen": 9.5,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "巨像の一撃",
+      "description": "数秒毎に、通常攻撃が一定範囲に追加魔法ダメージを与える。",
+      "image": "Galio_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "戦の旋風",
+      "description": "2つの突風を巻き起こす。突風同士は重なり合い、継続ダメージを与える巨大な竜巻となる。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "60/65/70/75/80",
+      "image": "GalioQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "デュランドの守り",
+      "description": "防御の構えを取り移動速度が低下する。構えを解くと、周囲の敵ユニットにタウント効果とダメージを与える。",
+      "cooldown": "18/17/16/15/14",
+      "cost": "50",
+      "image": "GalioW.png"
+    },
+    {
+      "slot": "E",
+      "name": "正義の鉄拳",
+      "description": "少し下がってから前方に突進し、最初に当たった敵チャンピオンをノックアップする。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "50",
+      "image": "GalioE.png"
+    },
+    {
+      "slot": "R",
+      "name": "英雄降臨",
+      "description": "味方1体の位置を着地点として指定し、範囲内のすべての味方に魔法ダメージを防ぐシールドを付与する。少ししてから、着地点に向かって落下し、周囲の敵をノックアップする。",
+      "cooldown": "180/160/140",
+      "cost": "100",
+      "image": "GalioR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Ziggs",
+        "name": "ジグス",
+        "reason": "勝率 59.35%（統計的に有利）"
+      },
+      {
+        "champion_id": "Naafiri",
+        "name": "ナフィーリ",
+        "reason": "勝率 55.94%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 54.6%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 42.41%（統計的に不利）"
+      },
+      {
+        "champion_id": "Veigar",
+        "name": "ベイガー",
+        "reason": "勝率 44.61%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 45.33%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3152",
+        "name": "ヘクステック ロケットベルト",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4005",
+        "name": "帝国の指令",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8230",
+      "keystone_name": "嵐乗りの勇躍",
+      "choices": [
+        "マナフローバンド",
+        "至高",
+        "追火"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "息継ぎ",
+        "気迫"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

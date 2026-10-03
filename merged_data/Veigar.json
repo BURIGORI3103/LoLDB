@@ -1,0 +1,189 @@
+{
+  "id": "Veigar",
+  "key": "45",
+  "name": "ベイガー",
+  "title": "小さき大魔王",
+  "patch": "16.19.1",
+  "roles": [
+    "MID",
+    "ADC"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 580,
+    "hpperlevel": 108,
+    "mp": 490,
+    "mpperlevel": 26,
+    "movespeed": 340,
+    "armor": 18,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 6.5,
+    "hpregenperlevel": 0.6,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 52,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.24,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "偉大なる悪の力",
+      "description": "ルーンテラを脅かす強大な悪であるベイガー、その力はとどまるところを知らない！敵チャンピオンからキルまたはアシストを獲得したり、スキルを命中させると、ベイガーの魔力は永続的に増加してゆく。",
+      "image": "VeigarEntropy.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "イーヴィルストライク",
+      "description": "指定方向に闇のエネルギーを発射し、最初に命中した敵2体に魔法ダメージを与える。このスキルで敵ユニットにとどめを刺すと、ベイガーの魔力が永続的に増加する。",
+      "cooldown": "6/5.5/5/4.5/4",
+      "cost": "30/35/40/45/50",
+      "image": "VeigarBalefulStrike.png"
+    },
+    {
+      "slot": "W",
+      "name": "ダークマター",
+      "description": "指定地点に巨大な暗黒物質を降らせ、着地時に魔法ダメージを与える。「偉大なる悪の力」のスタックに応じて「ダークマター」のクールダウンが短縮される。",
+      "cooldown": "0",
+      "cost": "60/65/70/75/80",
+      "image": "VeigarDarkMatter.png"
+    },
+    {
+      "slot": "E",
+      "name": "イベントホライズン",
+      "description": "空間の境界をねじ曲げて檻を作り出す。檻を通過した敵はスタンする。",
+      "cooldown": "20/18.5/17/15.5/14",
+      "cost": "70/75/80/85/90",
+      "image": "VeigarEventHorizon.png"
+    },
+    {
+      "slot": "R",
+      "name": "メテオバースト",
+      "description": "敵チャンピオン1体に闇の大魔法を放ち、対象の減少体力に応じて増加する大量の魔法ダメージを与える。",
+      "cooldown": "120/90/60",
+      "cost": "100",
+      "image": "VeigarR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "テレポート"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 66.99%（統計的に有利）"
+      },
+      {
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 60.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sion",
+        "name": "サイオン",
+        "reason": "勝率 60.0%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 36.75%（統計的に不利）"
+      },
+      {
+        "champion_id": "Kayle",
+        "name": "ケイル",
+        "reason": "勝率 43.89%（統計的に不利）"
+      },
+      {
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 44.25%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3070",
+        "name": "女神の涙",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6657",
+        "name": "ロッド オブ エイジス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3040",
+        "name": "セラフ エンブレイス",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "天啓",
+      "keystone": "8369",
+      "keystone_name": "ファーストストライク",
+      "choices": [
+        "魔法の靴",
+        "ビスケットデリバリー",
+        "宇宙の英知"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "マナフローバンド",
+        "至高"
+      ]
+    },
+    "shards": [
+      "Ability Haste",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

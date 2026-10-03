@@ -450,13 +450,17 @@ def build():
     }}
     .matchup-item {{
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 0;
+      flex-direction: column;
+      gap: 6px;
+      padding: 10px 0;
       border-bottom: 1px solid #1e293b;
-      font-size: 12px;
     }}
     .matchup-item:last-child {{ border-bottom: none; }}
+    .matchup-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
     .matchup-champ-info {{
       display: flex;
       align-items: center;
@@ -472,11 +476,37 @@ def build():
       flex-shrink: 0;
     }}
     .matchup-champ-name {{
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 13px;
       color: #f1f5f9;
     }}
-    .badge-fav {{ color: var(--favorable); font-weight: 700; }}
-    .badge-unfav {{ color: var(--unfavorable); font-weight: 700; }}
+    .badge-fav {{
+      color: var(--favorable);
+      font-weight: 800;
+      font-size: 12px;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }}
+    .badge-unfav {{
+      color: var(--unfavorable);
+      font-weight: 800;
+      font-size: 12px;
+      background: rgba(244, 63, 94, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }}
+    .matchup-reason {{
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.45;
+      background: #0b0f19;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border-left: 3px solid #38bdf8;
+    }}
     /* ビルド */
     .build-group {{
       margin-bottom: 12px;
@@ -570,7 +600,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB 攻略マスター</span>
-          <span class="patch-badge" id="patchBadge">Patch 16.19 (v1.1.1 リッチ画像)</span>
+          <span class="patch-badge" id="patchBadge">Patch 16.19 (v1.2.0 対面戦術理由対応)</span>
         </div>
       </div>
       <div class="controls">
@@ -757,13 +787,19 @@ def build():
       if (c.matchups && c.matchups.favorable && c.matchups.favorable.length > 0) {{
         favHtml = c.matchups.favorable.map(m => {{
           const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{m.champion_id}}.png`;
+          const parts = (m.reason || "").split(" | ");
+          const winrate = parts[0] || "勝率 有利";
+          const reasonText = parts.length > 1 ? parts.slice(1).join(" | ") : "";
           return `
             <div class="matchup-item">
-              <div class="matchup-champ-info">
-                <img class="matchup-champ-img" src="${{oppImg}}" alt="${{m.name || m.champion_id}}" onerror="this.style.display='none';">
-                <span class="matchup-champ-name">${{m.name || m.champion_id}}</span>
+              <div class="matchup-header">
+                <div class="matchup-champ-info">
+                  <img class="matchup-champ-img" src="${{oppImg}}" alt="${{m.name || m.champion_id}}" onerror="this.style.display='none';">
+                  <span class="matchup-champ-name">${{m.name || m.champion_id}}</span>
+                </div>
+                <span class="badge-fav">${{winrate}}</span>
               </div>
-              <span class="badge-fav">${{m.reason}}</span>
+              ${{reasonText ? `<div class="matchup-reason">${{reasonText}}</div>` : ""}}
             </div>
           `;
         }}).join("");
@@ -775,13 +811,19 @@ def build():
       if (c.matchups && c.matchups.unfavorable && c.matchups.unfavorable.length > 0) {{
         unfavHtml = c.matchups.unfavorable.map(m => {{
           const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{m.champion_id}}.png`;
+          const parts = (m.reason || "").split(" | ");
+          const winrate = parts[0] || "勝率 不利";
+          const reasonText = parts.length > 1 ? parts.slice(1).join(" | ") : "";
           return `
             <div class="matchup-item">
-              <div class="matchup-champ-info">
-                <img class="matchup-champ-img" src="${{oppImg}}" alt="${{m.name || m.champion_id}}" onerror="this.style.display='none';">
-                <span class="matchup-champ-name">${{m.name || m.champion_id}}</span>
+              <div class="matchup-header">
+                <div class="matchup-champ-info">
+                  <img class="matchup-champ-img" src="${{oppImg}}" alt="${{m.name || m.champion_id}}" onerror="this.style.display='none';">
+                  <span class="matchup-champ-name">${{m.name || m.champion_id}}</span>
+                </div>
+                <span class="badge-unfav">${{winrate}}</span>
               </div>
-              <span class="badge-unfav">${{m.reason}}</span>
+              ${{reasonText ? `<div class="matchup-reason">${{reasonText}}</div>` : ""}}
             </div>
           `;
         }}).join("");
@@ -940,8 +982,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v2
-const CACHE_NAME = 'loldb-cache-v2';
+    sw_content = """// LoLDB Service Worker - Offline Cache v3
+const CACHE_NAME = 'loldb-cache-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

@@ -1,0 +1,189 @@
+{
+  "id": "Chogath",
+  "key": "31",
+  "name": "チョ＝ガス",
+  "title": "未知なる恐怖",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG",
+    "TOP"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 644,
+    "hpperlevel": 94,
+    "mp": 270,
+    "mpperlevel": 60,
+    "movespeed": 345,
+    "armor": 38,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 9,
+    "hpregenperlevel": 0.85,
+    "mpregen": 7.2,
+    "mpregenperlevel": 0.45,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 69,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.44,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "暴食",
+      "description": "敵ユニットを倒すたびに体力とマナが回復する。<br>この回復量はチョ＝ガスのレベルに応じて増加する。",
+      "image": "GreenTerror_TailSpike.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ラプチャー",
+      "description": "指定地点に下から突き出るようにトゲを発生させる。効果範囲内の敵ユニットをノックアップさせてダメージを与え、スロウ効果を付与する。",
+      "cooldown": "6",
+      "cost": "50",
+      "image": "Rupture.png"
+    },
+    {
+      "slot": "W",
+      "name": "スクリーム",
+      "description": "扇形の範囲内にいる敵に恐ろしい叫声を浴びせ、魔法ダメージと数秒間のサイレンス効果を与える。",
+      "cooldown": "11/10.5/10/9.5/9",
+      "cost": "70/75/80/85/90",
+      "image": "FeralScream.png"
+    },
+    {
+      "slot": "E",
+      "name": "ヴォーパルスパイク",
+      "description": "通常攻撃時に鋭いトゲを発射し、自身の前方にいる敵ユニットにダメージとスロウ効果を与える。",
+      "cooldown": "8/7/6/5/4",
+      "cost": "30",
+      "image": "VorpalSpikes.png"
+    },
+    {
+      "slot": "R",
+      "name": "捕食",
+      "description": "敵ユニットを「捕食」して高い確定ダメージを与える。このスキルで敵ユニットを倒すと自身は巨大化して、最大体力が増加する。",
+      "cooldown": "80/70/60",
+      "cost": "100",
+      "image": "Feast.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Darius",
+        "name": "ダリウス",
+        "reason": "勝率 59.88%（統計的に有利）"
+      },
+      {
+        "champion_id": "Hecarim",
+        "name": "ヘカリム",
+        "reason": "勝率 56.95%（統計的に有利）"
+      },
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 55.46%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Ivern",
+        "name": "アイバーン",
+        "reason": "勝率 44.96%（統計的に不利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 46.45%（統計的に不利）"
+      },
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "reason": "勝率 46.68%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1102",
+        "name": "ガストウォーカーの幼体"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3084",
+        "name": "心の鋼",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3742",
+        "name": "デッド マン プレート",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4401",
+        "name": "自然の力",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "9923",
+      "keystone_name": "ヘイルブレード",
+      "choices": [
+        "追い打ち",
+        "グリスリー メメント",
+        "至極の賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "アクシオム アルカニスト",
+        "追い風"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Move Speed",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

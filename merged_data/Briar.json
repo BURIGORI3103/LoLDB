@@ -1,0 +1,188 @@
+{
+  "id": "Briar",
+  "key": "233",
+  "name": "ブライアー",
+  "title": "枷と飢え",
+  "patch": "16.19.1",
+  "roles": [
+    "JUG"
+  ],
+  "resource": "フューリー",
+  "stats": {
+    "hp": 625,
+    "hpperlevel": 95,
+    "mp": 0,
+    "mpperlevel": 0,
+    "movespeed": 340,
+    "armor": 30,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 0,
+    "hpregenperlevel": 0,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.644
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "真紅の呪い",
+      "description": "通常攻撃とスキルが出血のスタックを付与し、与えたダメージの一定割合にあたる体力を回復する。絶えず飢えているブライアーは、減少体力に応じて回復量が増加するが、体力自動回復は備わっていない。",
+      "image": "BriarP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ヘッドラッシュ",
+      "description": "ユニットのもとに跳躍して、強烈なかかと落としで敵を攻撃し、対象をスタンさせて物理防御を低下させる。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "0",
+      "image": "BriarQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "血の狂乱/衝動噛み",
+      "description": "前方に跳躍して首枷を破壊し、「血の狂乱」状態になる。効果時間中は最も近くの敵(チャンピオンを優先)を執拗に追いかけて通常攻撃する。狂乱状態では攻撃速度と移動速度が増加し、通常攻撃が対象を中心に範囲ダメージを与えるようになる。<br><br>狂乱中にこのスキルを再発動すると、次の通常攻撃で対象に噛みつき、対象の減少体力に応じて追加ダメージを与える。さらに、与えたダメージに応じて自身の体力を回復する。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "0",
+      "image": "BriarW.png"
+    },
+    {
+      "slot": "E",
+      "name": "呪福の叫び",
+      "description": "精神を集中して「血の狂乱」状態を解除し、エネルギーを溜めて凄まじい叫び声を上げ、敵にダメージとスロウ効果を与える。チャージ中はダメージ軽減効果を獲得し、最大体力の一定割合にあたる体力を回復する。最大までチャージすると、叫び声が敵をノックバックさせる。対象が壁に当たった場合、追加ダメージを与えてスタンさせる。",
+      "cooldown": "16",
+      "cost": "0",
+      "image": "BriarE.png"
+    },
+    {
+      "slot": "R",
+      "name": "迫りくる死",
+      "description": "首枷に付けられた魔石ヘモリスを蹴り飛ばし、最初に命中したチャンピオンを獲物としてマークする。その後、獲物まで一直線に飛んでいき、到着時に周囲の他の敵にフィアー効果を与え、完全な渇血状態になる。この間は「血の狂乱」の効果を得て、物理防御、魔法防御、ライフスティール、移動速度が増加し、デスするまで獲物を追いかけ通常攻撃する。",
+      "cooldown": "120/100/80",
+      "cost": "0",
+      "image": "BriarR.png"
+    }
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "スマイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 59.28%（統計的に有利）"
+      },
+      {
+        "champion_id": "Qiyana",
+        "name": "キヤナ",
+        "reason": "勝率 54.6%（統計的に有利）"
+      },
+      {
+        "champion_id": "Volibear",
+        "name": "ボリベア",
+        "reason": "勝率 54.59%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 45.83%（統計的に不利）"
+      },
+      {
+        "champion_id": "MonkeyKing",
+        "name": "ウーコン",
+        "reason": "勝率 46.39%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 46.59%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1103",
+        "name": "モスストンパーの幼体"
+      },
+      {
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6676",
+        "name": "コレクター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3748",
+        "name": "タイタン ハイドラ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3036",
+        "name": "ドミニク リガード",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8005",
+      "keystone_name": "プレスアタック",
+      "choices": [
+        "凱旋",
+        "レジェンド: 迅速",
+        "最期の慈悲"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "サドンインパクト",
+        "貪欲な賞金首狩り"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}

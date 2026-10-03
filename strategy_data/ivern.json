@@ -1,0 +1,116 @@
+{
+  "name": "繧｢繧､繝舌・繝ｳ",
+  "slug": "ivern",
+  "roles": [
+    "SUP"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "ヒール"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 60.08%（統計的に有利）"
+      },
+      {
+        "champion_id": "Camille",
+        "name": "カミール",
+        "reason": "勝率 57.34%（統計的に有利）"
+      },
+      {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 56.73%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Thresh",
+        "name": "スレッシュ",
+        "reason": "勝率 48.07%（統計的に不利）"
+      },
+      {
+        "champion_id": "Amumu",
+        "name": "アムム",
+        "reason": "勝率 48.2%（統計的に不利）"
+      },
+      {
+        "champion_id": "Blitzcrank",
+        "name": "ブリッツクランク",
+        "reason": "勝率 48.52%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6617",
+        "name": "ムーンストーンの再生",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3107",
+        "name": "リデンプション",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "2065",
+        "name": "シュレリアの戦歌",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "魔道",
+      "keystone": "8214",
+      "keystone_name": "エアリー召喚",
+      "choices": [
+        "マナフローバンド",
+        "追い風",
+        "強まる嵐"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "生命の泉",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Move Speed",
+      "Health Scaling"
+    ]
+  },
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
+}
