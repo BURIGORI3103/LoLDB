@@ -1,0 +1,117 @@
+{
+  "roles": [
+    "MID",
+    "JUG"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 60.18%（統計的に有利）"
+      },
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 58.13%（統計的に有利）"
+      },
+      {
+        "champion_id": "Orianna",
+        "name": "オリアナ",
+        "reason": "勝率 56.79%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Talon",
+        "name": "タロン",
+        "reason": "勝率 46.22%（統計的に不利）"
+      },
+      {
+        "champion_id": "Ekko",
+        "name": "エコー",
+        "reason": "勝率 46.54%（統計的に不利）"
+      },
+      {
+        "champion_id": "Akali",
+        "name": "アカリ",
+        "reason": "勝率 46.76%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3100",
+        "name": "リッチ ベイン",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "4645",
+        "name": "シャドウフレイム",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3157",
+        "name": "ゾーニャの砂時計",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "覇道",
+      "keystone": "8112",
+      "keystone_name": "電撃",
+      "choices": [
+        "サドンインパクト",
+        "第六感",
+        "至極の賞金首狩り"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "ボーンアーマー",
+        "生気付与"
+      ]
+    },
+    "shards": [
+      "Adaptive Force",
+      "Adaptive Force",
+      "Health Scaling"
+    ]
+  },
+  "name": "ロック",
+  "slug": "locke"
+}

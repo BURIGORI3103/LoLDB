@@ -600,7 +600,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB 攻略マスター</span>
-          <span class="patch-badge" id="patchBadge">Patch 16.19 (v1.2.0 対面戦術理由対応)</span>
+          <span class="patch-badge" id="patchBadge">Patch 16.19 (v1.3.0 全データ完全同期版)</span>
         </div>
       </div>
       <div class="controls">
@@ -982,8 +982,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v3
-const CACHE_NAME = 'loldb-cache-v3';
+    sw_content = """// LoLDB Service Worker - Offline Cache v4
+const CACHE_NAME = 'loldb-cache-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

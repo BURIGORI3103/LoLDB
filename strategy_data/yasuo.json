@@ -1,47 +1,46 @@
 {
-  "name": "繝､繧ｹ繧ｪ",
-  "slug": "yasuo",
   "roles": [
+    "MID",
     "TOP",
-    "MID"
+    "ADC"
   ],
   "summoner_spells": [
-    "イグゾースト",
-    "フラッシュ"
+    "フラッシュ",
+    "イグナイト"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Malzahar",
-        "name": "マルザハール",
-        "reason": "勝率 59.11%（統計的に有利）"
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 62.77%（統計的に有利）"
       },
       {
-        "champion_id": "Swain",
-        "name": "スウェイン",
-        "reason": "勝率 58.31%（統計的に有利）"
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 60.08%（統計的に有利）"
       },
       {
-        "champion_id": "Yorick",
-        "name": "ヨリック",
-        "reason": "勝率 57.02%（統計的に有利）"
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 58.39%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "MonkeyKing",
-        "name": "ウーコン",
-        "reason": "勝率 46.35%（統計的に不利）"
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 44.66%（統計的に不利）"
       },
       {
-        "champion_id": "Kled",
-        "name": "クレッド",
-        "reason": "勝率 46.4%（統計的に不利）"
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 44.71%（統計的に不利）"
       },
       {
-        "champion_id": "Fiora",
-        "name": "フィオラ",
-        "reason": "勝率 46.44%（統計的に不利）"
+        "champion_id": "Kayle",
+        "name": "ケイル",
+        "reason": "勝率 45.82%（統計的に不利）"
       }
     ]
   },
@@ -63,28 +62,28 @@
         "condition": "推奨靴"
       },
       {
-        "item_id": "3047",
-        "name": "プレート スチールキャップ",
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3153",
-        "name": "ルインドキング ブレード",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6673",
         "name": "イモータル シールドボウ",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3031",
         "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
         "description": "推奨コア"
       }
     ],
@@ -114,8 +113,6 @@
       "Health Scaling"
     ]
   },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  "name": "ヤスオ",
+  "slug": "yasuo"
 }

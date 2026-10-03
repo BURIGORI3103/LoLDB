@@ -5,8 +5,8 @@
   "title": "暗黒の女王",
   "patch": "16.19.1",
   "roles": [
-    "SUP",
-    "TOP"
+    "MID",
+    "ADC"
   ],
   "resource": "マナ",
   "stats": {
@@ -75,46 +75,50 @@
   ],
   "summoner_spells": [
     "フラッシュ",
-    "イグナイト"
+    "テレポート"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 71.64%（統計的に有利）"
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 68.39%（統計的に有利）"
       },
       {
-        "champion_id": "Ashe",
-        "name": "アッシュ",
-        "reason": "勝率 65.22%（統計的に有利）"
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 57.17%（統計的に有利）"
       },
       {
-        "champion_id": "Fiddlesticks",
-        "name": "フィドルスティックス",
-        "reason": "勝率 59.49%（統計的に有利）"
+        "champion_id": "Azir",
+        "name": "アジール",
+        "reason": "勝率 57.1%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Hwei",
-        "name": "フェイ",
-        "reason": "勝率 42.47%（統計的に不利）"
+        "champion_id": "Katarina",
+        "name": "カタリナ",
+        "reason": "勝率 44.45%（統計的に不利）"
       },
       {
-        "champion_id": "Rakan",
-        "name": "ラカン",
-        "reason": "勝率 44.57%（統計的に不利）"
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 45.48%（統計的に不利）"
       },
       {
-        "champion_id": "Rell",
-        "name": "レル",
-        "reason": "勝率 44.86%（統計的に不利）"
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 45.73%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -122,33 +126,33 @@
     ],
     "boots": [
       {
-        "item_id": "3047",
-        "name": "プレート スチールキャップ",
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3111",
-        "name": "マーキュリー ブーツ",
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3084",
-        "name": "心の鋼",
+        "item_id": "6655",
+        "name": "ルーデン エコー",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3075",
-        "name": "ソーンメイル",
+        "item_id": "4645",
+        "name": "シャドウフレイム",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "3065",
-        "name": "スピリット ビサージュ",
+        "item_id": "3089",
+        "name": "ラバドン デスキャップ",
         "description": "推奨コア"
       }
     ],
@@ -156,30 +160,30 @@
   },
   "runes": {
     "primary": {
-      "path": "不滅",
-      "keystone": "8437",
-      "keystone_name": "不死者の握撃",
+      "path": "魔道",
+      "keystone": "8229",
+      "keystone_name": "秘儀の彗星",
       "choices": [
-        "シールドバッシュ",
-        "息継ぎ",
-        "気迫"
+        "マナフローバンド",
+        "至高",
+        "追火"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "凱旋",
-        "レジェンド: 迅速"
+        "トリプル トニック",
+        "宇宙の英知"
       ]
     },
     "shards": [
       "Attack Speed",
-      "Health Scaling",
-      "Health Scaling"
+      "Adaptive Force",
+      "Health"
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "",
+    "teamfight": ""
   }
 }

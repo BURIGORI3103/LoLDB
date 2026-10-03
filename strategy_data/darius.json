@@ -1,54 +1,53 @@
 {
-  "name": "繝繝ｪ繧ｦ繧ｹ",
-  "slug": "darius",
   "roles": [
-    "TOP"
+    "TOP",
+    "JUG"
   ],
   "summoner_spells": [
-    "ゴースト",
-    "テレポート"
+    "フラッシュ",
+    "ゴースト"
   ],
   "matchups": {
     "favorable": [
       {
+        "champion_id": "MasterYi",
+        "name": "マスター・イー",
+        "reason": "勝率 58.18%（統計的に有利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 54.72%（統計的に有利）"
+      },
+      {
         "champion_id": "Ryze",
         "name": "ライズ",
-        "reason": "勝率 61.86%（統計的に有利）"
-      },
-      {
-        "champion_id": "Varus",
-        "name": "ヴァルス",
-        "reason": "勝率 60.31%（統計的に有利）"
-      },
-      {
-        "champion_id": "Cassiopeia",
-        "name": "カシオペア",
-        "reason": "勝率 58.87%（統計的に有利）"
+        "reason": "勝率 54.64%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Warwick",
-        "name": "ワーウィック",
-        "reason": "勝率 40.98%（統計的に不利）"
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 43.19%（統計的に不利）"
       },
       {
-        "champion_id": "Tryndamere",
-        "name": "トリンダメア",
-        "reason": "勝率 41.23%（統計的に不利）"
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 44.27%（統計的に不利）"
       },
       {
-        "champion_id": "Gwen",
-        "name": "グウェン",
-        "reason": "勝率 41.52%（統計的に不利）"
+        "champion_id": "Urgot",
+        "name": "アーゴット",
+        "reason": "勝率 45.59%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
       {
-        "item_id": "1054",
-        "name": "ドラン シールド"
+        "item_id": "1055",
+        "name": "ドラン ブレード"
       },
       {
         "item_id": "2003",
@@ -57,33 +56,33 @@
     ],
     "boots": [
       {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3047",
-        "name": "プレート スチールキャップ",
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3083",
-        "name": "ワーモグ アーマー",
+        "item_id": "3142",
+        "name": "妖夢の霊剣",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3084",
-        "name": "心の鋼",
+        "item_id": "3742",
+        "name": "デッド マン プレート",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "3748",
-        "name": "タイタン ハイドラ",
+        "item_id": "6333",
+        "name": "デス ダンス",
         "description": "推奨コア"
       }
     ],
@@ -91,30 +90,28 @@
   },
   "runes": {
     "primary": {
-      "path": "不滅",
-      "keystone": "8437",
-      "keystone_name": "不死者の握撃",
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
       "choices": [
-        "打ちこわし",
-        "息継ぎ",
-        "超成長"
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "魔法の靴",
-        "疾駆"
+        "アクシオム アルカニスト",
+        "追い風"
       ]
     },
     "shards": [
       "Attack Speed",
-      "Health Scaling",
+      "Adaptive Force",
       "Health Scaling"
     ]
   },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  "name": "ダリウス",
+  "slug": "darius"
 }

@@ -1,57 +1,51 @@
 {
-  "name": "繝ｩ繝・け繧ｹ",
-  "slug": "lux",
   "roles": [
-    "TOP",
+    "SUP",
     "MID",
-    "JUG"
+    "ADC"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "テレポート"
+    "ヒール"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Vayne",
-        "name": "ヴェイン",
-        "reason": "勝率 61.66%（統計的に有利）"
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 55.53%（統計的に有利）"
       },
       {
-        "champion_id": "Jayce",
-        "name": "ジェイス",
-        "reason": "勝率 56.69%（統計的に有利）"
+        "champion_id": "Camille",
+        "name": "カミール",
+        "reason": "勝率 54.71%（統計的に有利）"
       },
       {
-        "champion_id": "Quinn",
-        "name": "クイン",
-        "reason": "勝率 55.77%（統計的に有利）"
+        "champion_id": "Zyra",
+        "name": "ザイラ",
+        "reason": "勝率 52.82%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Zac",
-        "name": "ザック",
-        "reason": "勝率 41.64%（統計的に不利）"
+        "champion_id": "Taric",
+        "name": "タリック",
+        "reason": "勝率 43.35%（統計的に不利）"
       },
       {
-        "champion_id": "Singed",
-        "name": "シンジド",
-        "reason": "勝率 43.97%（統計的に不利）"
+        "champion_id": "Blitzcrank",
+        "name": "ブリッツクランク",
+        "reason": "勝率 45.55%（統計的に不利）"
       },
       {
-        "champion_id": "Sion",
-        "name": "サイオン",
-        "reason": "勝率 45.53%（統計的に不利）"
+        "champion_id": "Janna",
+        "name": "ジャンナ",
+        "reason": "勝率 46.24%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
-      {
-        "item_id": "1056",
-        "name": "ドラン リング"
-      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -59,33 +53,33 @@
     ],
     "boots": [
       {
-        "item_id": "3047",
-        "name": "プレート スチールキャップ",
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3111",
-        "name": "マーキュリー ブーツ",
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3068",
-        "name": "サンファイア イージス",
+        "item_id": "6655",
+        "name": "ルーデン エコー",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3075",
-        "name": "ソーンメイル",
+        "item_id": "4646",
+        "name": "ストームサージ",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "3110",
-        "name": "フローズン ハート",
+        "item_id": "4645",
+        "name": "シャドウフレイム",
         "description": "推奨コア"
       }
     ],
@@ -105,18 +99,16 @@
     "secondary": {
       "path": "",
       "choices": [
-        "息継ぎ",
-        "超成長"
+        "追い打ち",
+        "至極の賞金首狩り"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Health Scaling",
+      "Adaptive Force",
+      "Adaptive Force",
       "Health Scaling"
     ]
   },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  "name": "ラックス",
+  "slug": "lux"
 }

@@ -5,8 +5,8 @@
   "title": "親愛なる秘密兵器",
   "patch": "16.19.1",
   "roles": [
-    "MID",
-    "JUG"
+    "JUG",
+    "TOP"
   ],
   "resource": "なし",
   "stats": {
@@ -75,53 +75,53 @@
   ],
   "summoner_spells": [
     "フラッシュ",
-    "イグナイト"
+    "スマイト"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Lucian",
-        "name": "ルシアン",
-        "reason": "勝率 65.92%（統計的に有利）"
+        "champion_id": "Jax",
+        "name": "ジャックス",
+        "reason": "勝率 58.39%（統計的に有利）"
       },
       {
-        "champion_id": "Ryze",
-        "name": "ライズ",
-        "reason": "勝率 59.32%（統計的に有利）"
-      },
-      {
-        "champion_id": "Tristana",
-        "name": "トリスターナ",
-        "reason": "勝率 57.22%（統計的に有利）"
-      }
-    ],
-    "unfavorable": [
-      {
-        "champion_id": "Malphite",
-        "name": "マルファイト",
-        "reason": "勝率 45.26%（統計的に不利）"
-      },
-      {
-        "champion_id": "Nasus",
-        "name": "ナサス",
-        "reason": "勝率 45.62%（統計的に不利）"
+        "champion_id": "Maokai",
+        "name": "マオカイ",
+        "reason": "勝率 58.33%（統計的に有利）"
       },
       {
         "champion_id": "Gwen",
         "name": "グウェン",
-        "reason": "勝率 46.77%（統計的に不利）"
+        "reason": "勝率 57.59%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Fizz",
+        "name": "フィズ",
+        "reason": "勝率 44.6%（統計的に不利）"
+      },
+      {
+        "champion_id": "Fiddlesticks",
+        "name": "フィドルスティックス",
+        "reason": "勝率 45.47%（統計的に不利）"
+      },
+      {
+        "champion_id": "Taliyah",
+        "name": "タリヤ",
+        "reason": "勝率 46.39%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
       {
-        "item_id": "1055",
-        "name": "ドラン ブレード"
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
       },
       {
-        "item_id": "2003",
-        "name": "体力ポーション"
+        "item_id": "1103",
+        "name": "モスストンパーの幼体"
       }
     ],
     "boots": [
@@ -139,20 +139,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "6699",
-        "name": "ボルテイク サイクロソード",
+        "item_id": "3152",
+        "name": "ヘクステック ロケットベルト",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "2520",
-        "name": "バスティオンブレイカー",
+        "item_id": "3068",
+        "name": "サンファイア イージス",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "6694",
-        "name": "セリルダの怨恨",
+        "item_id": "3065",
+        "name": "スピリット ビサージュ",
         "description": "推奨コア"
       }
     ],
@@ -160,30 +160,30 @@
   },
   "runes": {
     "primary": {
-      "path": "天啓",
-      "keystone": "8369",
-      "keystone_name": "ファーストストライク",
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
       "choices": [
-        "キャッシュバック",
-        "トリプル トニック",
-        "なんでも屋"
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "レジェンド: ヘイスト",
-        "切り崩し"
+        "魔法の靴",
+        "宇宙の英知"
       ]
     },
     "shards": [
-      "Adaptive Force",
+      "Ability Haste",
       "Adaptive Force",
       "Health Scaling"
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "",
+    "teamfight": ""
   }
 }

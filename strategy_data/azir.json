@@ -1,51 +1,53 @@
 {
-  "name": "繧｢繧ｸ繝ｼ繝ｫ",
-  "slug": "azir",
   "roles": [
-    "SUP"
+    "MID"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "イグナイト"
+    "テレポート"
   ],
   "matchups": {
     "favorable": [
       {
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 63.41%（統計的に有利）"
+      },
+      {
         "champion_id": "Mel",
         "name": "メル",
-        "reason": "勝率 55.71%（統計的に有利）"
+        "reason": "勝率 57.14%（統計的に有利）"
       },
       {
-        "champion_id": "Ashe",
-        "name": "アッシュ",
-        "reason": "勝率 54.15%（統計的に有利）"
-      },
-      {
-        "champion_id": "Swain",
-        "name": "スウェイン",
-        "reason": "勝率 54.13%（統計的に有利）"
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 54.76%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Taric",
-        "name": "タリック",
-        "reason": "勝率 43.32%（統計的に不利）"
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 40.57%（統計的に不利）"
       },
       {
-        "champion_id": "Galio",
-        "name": "ガリオ",
-        "reason": "勝率 44.49%（統計的に不利）"
+        "champion_id": "Leblanc",
+        "name": "ルブラン",
+        "reason": "勝率 40.76%（統計的に不利）"
       },
       {
-        "champion_id": "Amumu",
-        "name": "アムム",
-        "reason": "勝率 45.1%（統計的に不利）"
+        "champion_id": "Ziggs",
+        "name": "ジグス",
+        "reason": "勝率 41.98%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -53,8 +55,8 @@
     ],
     "boots": [
       {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
+        "item_id": "3020",
+        "name": "ソーサラー シューズ",
         "condition": "推奨靴"
       },
       {
@@ -66,20 +68,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "3742",
-        "name": "デッド マン プレート",
+        "item_id": "3115",
+        "name": "ナッシャー トゥース",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3190",
-        "name": "ソラリのロケット",
+        "item_id": "4645",
+        "name": "シャドウフレイム",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "2524",
-        "name": "バンドルパイプ",
+        "item_id": "3089",
+        "name": "ラバドン デスキャップ",
         "description": "推奨コア"
       }
     ],
@@ -87,30 +89,28 @@
   },
   "runes": {
     "primary": {
-      "path": "覇道",
-      "keystone": "8112",
-      "keystone_name": "電撃",
+      "path": "栄華",
+      "keystone": "8005",
+      "keystone_name": "プレスアタック",
       "choices": [
-        "追い打ち",
-        "ディープワード",
-        "貪欲な賞金首狩り"
+        "冷静沈着",
+        "レジェンド: 迅速",
+        "切り崩し"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "魔法の靴",
-        "なんでも屋"
+        "ボーンアーマー",
+        "超成長"
       ]
     },
     "shards": [
       "Attack Speed",
-      "Move Speed",
+      "Adaptive Force",
       "Health Scaling"
     ]
   },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  "name": "アジール",
+  "slug": "azir"
 }

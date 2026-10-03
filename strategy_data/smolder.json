@@ -1,51 +1,54 @@
 {
-  "name": "繧ｹ繝｢繝ｫ繝繝ｼ",
-  "slug": "smolder",
   "roles": [
-    "SUP"
+    "ADC",
+    "MID"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "ヒール"
+    "バリア"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 67.16%（統計的に有利）"
+        "champion_id": "Brand",
+        "name": "ブランド",
+        "reason": "勝率 55.63%（統計的に有利）"
       },
       {
-        "champion_id": "Teemo",
-        "name": "ティーモ",
-        "reason": "勝率 59.57%（統計的に有利）"
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 54.36%（統計的に有利）"
       },
       {
-        "champion_id": "Neeko",
-        "name": "ニーコ",
-        "reason": "勝率 55.96%（統計的に有利）"
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 53.63%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Galio",
-        "name": "ガリオ",
-        "reason": "勝率 46.79%（統計的に不利）"
+        "champion_id": "Lux",
+        "name": "ラックス",
+        "reason": "勝率 44.39%（統計的に不利）"
       },
       {
-        "champion_id": "Blitzcrank",
-        "name": "ブリッツクランク",
-        "reason": "勝率 47.64%（統計的に不利）"
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 44.4%（統計的に不利）"
       },
       {
-        "champion_id": "Senna",
-        "name": "セナ",
-        "reason": "勝率 48.48%（統計的に不利）"
+        "champion_id": "AurelionSol",
+        "name": "オレリオン・ソル",
+        "reason": "勝率 45.18%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -53,33 +56,33 @@
     ],
     "boots": [
       {
-        "item_id": "3158",
-        "name": "アイオニア ブーツ",
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3070",
-        "name": "女神の涙",
+        "item_id": "3508",
+        "name": "エッセンス リーバー",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "6620",
-        "name": "ヘリアの残響",
+        "item_id": "3071",
+        "name": "ブラック クリーバー",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "2530",
-        "name": "旋律のダイアデム",
+        "item_id": "3161",
+        "name": "ショウジンの矛",
         "description": "推奨コア"
       }
     ],
@@ -88,29 +91,27 @@
   "runes": {
     "primary": {
       "path": "魔道",
-      "keystone": "8214",
-      "keystone_name": "エアリー召喚",
+      "keystone": "8992",
+      "keystone_name": "死神の残り火",
       "choices": [
-        "マナフローバンド",
-        "至高",
+        "ニンバスクローク",
+        "追い風",
         "強まる嵐"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "心身調整",
-        "生気付与"
+        "魔法の靴",
+        "なんでも屋"
       ]
     },
     "shards": [
       "Adaptive Force",
-      "Adaptive Force",
+      "Move Speed",
       "Health Scaling"
     ]
   },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  "name": "スモルダー",
+  "slug": "smolder"
 }

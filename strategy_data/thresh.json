@@ -1,56 +1,49 @@
 {
-  "name": "繧ｹ繝ｬ繝・す繝･",
-  "slug": "thresh",
   "roles": [
-    "ADC",
-    "MID"
+    "SUP"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "バリア"
+    "イグナイト"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Ezreal",
-        "name": "エズリアル",
-        "reason": "勝率 54.79%（統計的に有利）"
+        "champion_id": "Mel",
+        "name": "メル",
+        "reason": "勝率 59.43%（統計的に有利）"
       },
       {
-        "champion_id": "Kalista",
-        "name": "カリスタ",
-        "reason": "勝率 54.25%（統計的に有利）"
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "reason": "勝率 58.41%（統計的に有利）"
       },
       {
-        "champion_id": "Vayne",
-        "name": "ヴェイン",
-        "reason": "勝率 54.07%（統計的に有利）"
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "reason": "勝率 56.65%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 47.42%（統計的に不利）"
+        "champion_id": "Zilean",
+        "name": "ジリアン",
+        "reason": "勝率 48.82%（統計的に不利）"
       },
       {
-        "champion_id": "Veigar",
-        "name": "ベイガー",
-        "reason": "勝率 47.86%（統計的に不利）"
+        "champion_id": "Rakan",
+        "name": "ラカン",
+        "reason": "勝率 49.45%（統計的に不利）"
       },
       {
-        "champion_id": "Swain",
-        "name": "スウェイン",
-        "reason": "勝率 49.36%（統計的に不利）"
+        "champion_id": "Braum",
+        "name": "ブラウム",
+        "reason": "勝率 49.73%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
-      {
-        "item_id": "1086",
-        "name": "ドラン ボウ"
-      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -58,33 +51,33 @@
     ],
     "boots": [
       {
-        "item_id": "3006",
-        "name": "バーサーカー ブーツ",
+        "item_id": "3009",
+        "name": "スイフトネス ブーツ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3008",
-        "name": "グラトナス ブーツ",
+        "item_id": "3158",
+        "name": "アイオニア ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3032",
-        "name": "ユン・タル ワイルドアロー",
+        "item_id": "3190",
+        "name": "ソラリのロケット",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3031",
-        "name": "インフィニティ エッジ",
+        "item_id": "3109",
+        "name": "騎士の誓い",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "6675",
-        "name": "ナヴォリ フリッカーブレード",
+        "item_id": "3050",
+        "name": "ジーク コンバージェンス",
         "description": "推奨コア"
       }
     ],
@@ -92,30 +85,28 @@
   },
   "runes": {
     "primary": {
-      "path": "栄華",
-      "keystone": "8008",
-      "keystone_name": "リーサルテンポ",
+      "path": "不滅",
+      "keystone": "8439",
+      "keystone_name": "アフターショック",
       "choices": [
-        "凱旋",
-        "レジェンド: 血脈",
-        "切り崩し"
+        "生命の泉",
+        "ボーンアーマー",
+        "気迫"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "キャッシュバック",
-        "トリプル トニック"
+        "ビスケットデリバリー",
+        "宇宙の英知"
       ]
     },
     "shards": [
-      "Attack Speed",
       "Adaptive Force",
-      "Health"
+      "Adaptive Force",
+      "Health Scaling"
     ]
   },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  "name": "スレッシュ",
+  "slug": "thresh"
 }

@@ -5,7 +5,7 @@
   "title": "鋼の魂奪者",
   "patch": "16.19.1",
   "roles": [
-    "SUP"
+    "TOP"
   ],
   "resource": "シールド",
   "stats": {
@@ -79,41 +79,45 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 60.28%（統計的に有利）"
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 55.56%（統計的に有利）"
       },
       {
-        "champion_id": "Zoe",
-        "name": "ゾーイ",
-        "reason": "勝率 54.9%（統計的に有利）"
+        "champion_id": "Rumble",
+        "name": "ランブル",
+        "reason": "勝率 54.5%（統計的に有利）"
       },
       {
-        "champion_id": "Ashe",
-        "name": "アッシュ",
-        "reason": "勝率 54.88%（統計的に有利）"
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 53.51%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Hwei",
-        "name": "フェイ",
-        "reason": "勝率 43.21%（統計的に不利）"
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 42.35%（統計的に不利）"
       },
       {
-        "champion_id": "Yuumi",
-        "name": "ユーミ",
-        "reason": "勝率 45.74%（統計的に不利）"
+        "champion_id": "Varus",
+        "name": "ヴァルス",
+        "reason": "勝率 43.72%（統計的に不利）"
       },
       {
-        "champion_id": "Taric",
-        "name": "タリック",
-        "reason": "勝率 45.83%（統計的に不利）"
+        "champion_id": "Cassiopeia",
+        "name": "カシオペア",
+        "reason": "勝率 43.89%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1056",
+        "name": "ドラン リング"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -121,33 +125,33 @@
     ],
     "boots": [
       {
-        "item_id": "3158",
-        "name": "アイオニア ブーツ",
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3020",
-        "name": "ソーサラー シューズ",
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "6653",
-        "name": "ライアンドリーの仮面",
+        "item_id": "3116",
+        "name": "リーライ クリスタル セプター",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3157",
-        "name": "ゾーニャの砂時計",
+        "item_id": "4633",
+        "name": "リフトメーカー",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "3116",
-        "name": "リーライ クリスタル セプター",
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
         "description": "推奨コア"
       }
     ],
@@ -155,30 +159,30 @@
   },
   "runes": {
     "primary": {
-      "path": "魔道",
-      "keystone": "8229",
-      "keystone_name": "秘儀の彗星",
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
       "choices": [
-        "マナフローバンド",
-        "至高",
-        "追火"
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "背水の陣"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "追い打ち",
-        "至極の賞金首狩り"
+        "ボーンアーマー",
+        "生気付与"
       ]
     },
     "shards": [
-      "Adaptive Force",
+      "Attack Speed",
       "Adaptive Force",
       "Health Scaling"
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "",
+    "teamfight": ""
   }
 }

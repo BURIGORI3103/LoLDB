@@ -5,7 +5,7 @@
   "title": "復讐の槍",
   "patch": "16.19.1",
   "roles": [
-    "SUP"
+    "ADC"
   ],
   "resource": "マナ",
   "stats": {
@@ -74,46 +74,50 @@
   ],
   "summoner_spells": [
     "フラッシュ",
-    "ヒール"
+    "バリア"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 59.85%（統計的に有利）"
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 57.14%（統計的に有利）"
       },
       {
-        "champion_id": "Hwei",
-        "name": "フェイ",
-        "reason": "勝率 55.82%（統計的に有利）"
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 56.86%（統計的に有利）"
       },
       {
-        "champion_id": "Camille",
-        "name": "カミール",
-        "reason": "勝率 55.73%（統計的に有利）"
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "reason": "勝率 56.52%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Galio",
-        "name": "ガリオ",
-        "reason": "勝率 44.19%（統計的に不利）"
+        "champion_id": "Brand",
+        "name": "ブランド",
+        "reason": "勝率 39.02%（統計的に不利）"
       },
       {
-        "champion_id": "Braum",
-        "name": "ブラウム",
-        "reason": "勝率 45.24%（統計的に不利）"
+        "champion_id": "Nilah",
+        "name": "ニーラ",
+        "reason": "勝率 42.4%（統計的に不利）"
       },
       {
-        "champion_id": "Maokai",
-        "name": "マオカイ",
-        "reason": "勝率 45.39%（統計的に不利）"
+        "champion_id": "Hwei",
+        "name": "フェイ",
+        "reason": "勝率 44.05%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -121,33 +125,33 @@
     ],
     "boots": [
       {
-        "item_id": "3158",
-        "name": "アイオニア ブーツ",
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
         "condition": "推奨靴"
       },
       {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "6620",
-        "name": "ヘリアの残響",
+        "item_id": "3087",
+        "name": "スタティック シヴ",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "6617",
-        "name": "ムーンストーンの再生",
+        "item_id": "3124",
+        "name": "グインソー レイジブレード",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "3107",
-        "name": "リデンプション",
+        "item_id": "3302",
+        "name": "テルミヌス",
         "description": "推奨コア"
       }
     ],
@@ -155,30 +159,30 @@
   },
   "runes": {
     "primary": {
-      "path": "魔道",
-      "keystone": "8214",
-      "keystone_name": "エアリー召喚",
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
       "choices": [
-        "マナフローバンド",
-        "至高",
-        "強まる嵐"
+        "凱旋",
+        "レジェンド: 迅速",
+        "背水の陣"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "生命の泉",
-        "生気付与"
+        "サドンインパクト",
+        "貪欲な賞金首狩り"
       ]
     },
     "shards": [
-      "Ability Haste",
+      "Attack Speed",
       "Adaptive Force",
       "Health"
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "",
+    "teamfight": ""
   }
 }

@@ -1,0 +1,116 @@
+{
+  "roles": [
+    "ADC"
+  ],
+  "summoner_spells": [
+    "フラッシュ",
+    "バリア"
+  ],
+  "matchups": {
+    "favorable": [
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 55.2%（統計的に有利）"
+      },
+      {
+        "champion_id": "Kaisa",
+        "name": "カイ＝サ",
+        "reason": "勝率 53.22%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ezreal",
+        "name": "エズリアル",
+        "reason": "勝率 53.0%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Brand",
+        "name": "ブランド",
+        "reason": "勝率 45.28%（統計的に不利）"
+      },
+      {
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "reason": "勝率 46.18%（統計的に不利）"
+      },
+      {
+        "champion_id": "Twitch",
+        "name": "トゥイッチ",
+        "reason": "勝率 47.2%（統計的に不利）"
+      }
+    ]
+  },
+  "build": {
+    "starter": [
+      {
+        "item_id": "1086",
+        "name": "ドラン ボウ"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3008",
+        "name": "グラトナス ブーツ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3006",
+        "name": "バーサーカー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "6672",
+        "name": "クラーケン スレイヤー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "3085",
+        "name": "ルナーン ハリケーン",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3031",
+        "name": "インフィニティ エッジ",
+        "description": "推奨コア"
+      }
+    ],
+    "situational": []
+  },
+  "runes": {
+    "primary": {
+      "path": "栄華",
+      "keystone": "8008",
+      "keystone_name": "リーサルテンポ",
+      "choices": [
+        "凱旋",
+        "レジェンド: 血脈",
+        "切り崩し"
+      ]
+    },
+    "secondary": {
+      "path": "",
+      "choices": [
+        "キャッシュバック",
+        "トリプル トニック"
+      ]
+    },
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health"
+    ]
+  },
+  "name": "ユナラ",
+  "slug": "yunara"
+}

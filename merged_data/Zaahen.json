@@ -4,7 +4,9 @@
   "name": "ザーヘン",
   "title": "沈まぬ者",
   "patch": "16.19.1",
-  "roles": [],
+  "roles": [
+    "TOP"
+  ],
   "resource": "マナ",
   "stats": {
     "hp": 640,
@@ -70,29 +72,114 @@
       "image": "ZaahenR.png"
     }
   ],
-  "summoner_spells": [],
+  "summoner_spells": [
+    "フラッシュ",
+    "イグナイト"
+  ],
   "matchups": {
-    "favorable": [],
-    "unfavorable": []
+    "favorable": [
+      {
+        "champion_id": "Trundle",
+        "name": "トランドル",
+        "reason": "勝率 56.11%（統計的に有利）"
+      },
+      {
+        "champion_id": "Yasuo",
+        "name": "ヤスオ",
+        "reason": "勝率 55.86%（統計的に有利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 55.78%（統計的に有利）"
+      }
+    ],
+    "unfavorable": [
+      {
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "reason": "勝率 42.66%（統計的に不利）"
+      },
+      {
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 42.86%（統計的に不利）"
+      },
+      {
+        "champion_id": "Jax",
+        "name": "ジャックス",
+        "reason": "勝率 43.6%（統計的に不利）"
+      }
+    ]
   },
   "build": {
-    "starter": [],
-    "boots": [],
-    "core": [],
+    "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
+      {
+        "item_id": "2003",
+        "name": "体力ポーション"
+      }
+    ],
+    "boots": [
+      {
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
+        "condition": "推奨靴"
+      },
+      {
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
+        "condition": "推奨靴"
+      }
+    ],
+    "core": [
+      {
+        "step": 1,
+        "item_id": "3078",
+        "name": "トリニティ フォース",
+        "description": "推奨コア"
+      },
+      {
+        "step": 2,
+        "item_id": "6631",
+        "name": "ストライドブレイカー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
+        "description": "推奨コア"
+      }
+    ],
     "situational": []
   },
   "runes": {
     "primary": {
-      "path": "",
-      "keystone": "",
-      "keystone_name": "",
-      "choices": []
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
+      "choices": [
+        "凱旋",
+        "レジェンド: ヘイスト",
+        "最期の慈悲"
+      ]
     },
     "secondary": {
       "path": "",
-      "choices": []
+      "choices": [
+        "ボーンアーマー",
+        "生気付与"
+      ]
     },
-    "shards": []
+    "shards": [
+      "Attack Speed",
+      "Adaptive Force",
+      "Health"
+    ]
   },
   "gameplay_notes": {
     "laning": "",
