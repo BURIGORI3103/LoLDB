@@ -641,6 +641,217 @@ def build():
       flex-shrink: 0;
       border: 1px solid #334155;
     }}
+    /* 複数ロール切り替えサブタブ */
+    .modal-role-tabs {{
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }}
+    .modal-role-btn {{
+      background: #101726;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }}
+    .modal-role-btn:hover {{
+      color: #fff;
+      border-color: var(--primary);
+    }}
+    .modal-role-btn.active {{
+      background: #0284c7;
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }}
+    /* サステイン & スキル上げ優先度バッジ */
+    .champ-highlight-badges {{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 10px;
+    }}
+    .badge-sustain {{
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.4);
+      color: #fb7185;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .badge-skill-order {{
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .sustain-reason-box {{
+      font-size: 11.5px;
+      color: #cbd5e1;
+      background: rgba(244, 63, 94, 0.08);
+      border-left: 3px solid #f43f5e;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }}
+    /* 特徴・強み・弱み */
+    .overview-text {{
+      font-size: 12.5px;
+      color: #e2e8f0;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }}
+    .pros-cons-grid {{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }}
+    @media (min-width: 600px) {{
+      .pros-cons-grid {{
+        grid-template-columns: 1fr 1fr;
+      }}
+    }}
+    .pros-box {{
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 8px;
+      padding: 10px;
+    }}
+    .cons-box {{
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 8px;
+      padding: 10px;
+    }}
+    .pros-cons-title {{
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .pros-title {{ color: var(--favorable); }}
+    .cons-title {{ color: var(--accent); }}
+    .pros-cons-ul {{
+      list-style: none;
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }}
+    .pros-cons-ul li {{
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 14px;
+    }}
+    .pros-box li::before {{
+      content: "✓";
+      color: var(--favorable);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }}
+    .cons-box li::before {{
+      content: "!";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }}
+    /* 実戦コンボ */
+    .combo-grid {{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }}
+    .combo-card {{
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+    }}
+    .combo-name {{
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }}
+    .combo-recipe {{
+      font-size: 12px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      margin-bottom: 6px;
+      word-break: break-all;
+    }}
+    .combo-desc {{
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }}
+    /* 複数アイテムビルドタブ */
+    .build-pat-tabs {{
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      margin-bottom: 10px;
+      padding-bottom: 2px;
+    }}
+    .build-pat-btn {{
+      background: #101726;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }}
+    .build-pat-btn:hover {{
+      color: #fff;
+      border-color: var(--primary);
+    }}
+    .build-pat-btn.active {{
+      background: #0284c7;
+      color: #fff;
+      border-color: var(--primary);
+    }}
+    .build-pat-desc {{
+      font-size: 12px;
+      color: #cbd5e1;
+      background: #0b0f19;
+      border-left: 3px solid var(--accent);
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }}
     /* アイテム図鑑スタイル */
     .item-controls {{
       display: flex;
@@ -869,7 +1080,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.5.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.6.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -944,6 +1155,21 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚡ v1.6.0</span>
+              <span class="changelog-date">2026-10-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【スキル上げ順】全173体の最大化優先度（例: Q > E > W）をバッジ明記</li>
+              <li>【サステイン＆重傷判定】強力な回復スキル所持者への「🩸 サステイン所持（対面時: 重傷推奨）」警告バッジと理由を新設</li>
+              <li>【キャラ概要】全チャンピオンの特徴・強み3選（Strengths）・弱み3選（Weaknesses）を完全網羅</li>
+              <li>【立ち回り＆スキル吐きどころ】定型文を一新し、レーン戦・集団戦・重要スキルの温存/吐きどころの極意を徹底解説</li>
+              <li>【実戦コンボ】基本ショートトレード・オールイン・Flash併用テクニック（Q3+FlashやEQベイブレード等）を体系化</li>
+              <li>【複数ビルドパターン】サイオン（対AD/対AP/脅威）をはじめとする状況別・対面別の複数アイテム構成切り替えに対応</li>
+              <li>【複数ロールタブ】複数レーン適応チャンピオンのレーン別タブ切り替え（推奨スペル・役割・ビルド）を新設</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">🛡️ v1.5.0</span>
@@ -1152,7 +1378,7 @@ def build():
       countStatusEl.textContent = `表示中: ${{matched}} 体 / 全 ${{Object.keys(CHAMPIONS).length}} 体`;
     }}
 
-    function openDetail(champId) {{
+    function openDetail(champId, activeRole = null) {{
       const c = CHAMPIONS[champId];
       if (!c) return;
 
@@ -1172,7 +1398,40 @@ def build():
         "クレンズ": "SummonerBoost.png"
       }};
 
-      const spellsBadge = (c.summoner_spells || []).map(s => {{
+      // 選択中ロール（未指定時は第1ロール）
+      const currentSelectedRole = activeRole || (c.roles && c.roles.length > 0 ? c.roles[0] : "TOP");
+      const roleSpecificData = (c.role_data && c.role_data[currentSelectedRole]) ? c.role_data[currentSelectedRole] : {{}};
+      const currentSpells = roleSpecificData.spells || c.summoner_spells || ["フラッシュ", "テレポート"];
+
+      // 複数ロール切り替えサブタブ
+      let roleTabsHtml = "";
+      if (c.roles && c.roles.length > 1) {{
+        roleTabsHtml = `
+          <div class="modal-role-tabs">
+            ${{c.roles.map(r => `
+              <button class="modal-role-btn ${{r === currentSelectedRole ? "active" : ""}}" data-modal-role="${{r}}">
+                <span class="mini-badge ${{getRoleBadgeClass(r)}}">${{r}}</span>
+                <span>${{r}} レーン</span>
+              </button>
+            `).join("")}}
+          </div>
+        `;
+      }}
+
+      // サステイン & スキル上げ優先度バッジ
+      const sustainInfo = c.sustain_info || {{}};
+      let sustainBadgeHtml = "";
+      let sustainReasonHtml = "";
+      if (sustainInfo.has_sustain) {{
+        sustainBadgeHtml = `<span class="badge-sustain">🩸 サステイン所持 (重傷推奨)</span>`;
+        sustainReasonHtml = `<div class="sustain-reason-box">⚠️ <strong>【対面注意・重傷推奨】</strong> ${{sustainInfo.reason}}</div>`;
+      }}
+
+      const skillOrder = roleSpecificData.skill_order || c.skill_order || "Q > E > W";
+      const skillOrderBadgeHtml = `<span class="badge-skill-order">⚡ スキル上げ順: ${{skillOrder}}</span>`;
+
+      // スペル一覧HTML
+      const spellsBadge = currentSpells.map(s => {{
         const sImg = SPELL_IMG_MAP[s] || "SummonerFlash.png";
         const sUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/spell/${{sImg}}`;
         return `
@@ -1183,42 +1442,112 @@ def build():
         `;
       }}).join("") || "<span style='color:var(--text-muted); font-size:12px;'>標準スペル</span>";
 
-      // スキル一覧
-      let skillsHtml = "";
-      if (c.abilities && c.abilities.length > 0) {{
-        c.abilities.forEach(a => {{
-          const pImg = a.image ? `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/passive/${{a.image}}` : "";
-          skillsHtml += `
-            <div class="skill-card">
-              <div class="skill-icon-wrap">
-                <img class="skill-img" src="${{pImg}}" alt="${{a.name}}" onerror="this.style.display='none';">
-                <span class="skill-slot-badge">P</span>
-              </div>
-              <div class="skill-content">
-                <div class="skill-name">${{a.name}}</div>
-                <div class="skill-desc">${{a.description || ""}}</div>
-              </div>
-            </div>
+      // 特徴・強み・弱み
+      const ov = c.overview || {{}};
+      const strengthsHtml = (ov.strengths || []).map(s => `<li>${{s}}</li>`).join("");
+      const weaknessesHtml = (ov.weaknesses || []).map(w => `<li>${{w}}</li>`).join("");
+
+      // 立ち回りメモ
+      const gn = c.gameplay_notes || {{}};
+      const roleNoteHtml = roleSpecificData.role_note ? `<div style="font-size:12px; margin-bottom:8px; color:#38bdf8; line-height:1.5;"><strong>【${{currentSelectedRole}}ロールの主務】</strong> ${{roleSpecificData.role_note}}</div>` : "";
+      const laningNote = gn.laning || "相手のスキルクールダウンやミニオンウェーブの位置を注視してトレードを行う。";
+      const tfNote = gn.teamfight || "集団戦では味方とフォーカスを合わせ、自身の役割を完遂する。";
+      const tipNote = gn.key_tips || "";
+
+      // 実戦コンボ
+      const combos = c.combos || [];
+      const combosHtml = combos.map(cb => `
+        <div class="combo-card">
+          <div class="combo-name">🥊 ${{cb.name}}</div>
+          <div class="combo-recipe">${{cb.recipe}}</div>
+          <div class="combo-desc">${{cb.desc}}</div>
+        </div>
+      `).join("");
+
+      // 複数ビルドパターン
+      const buildPatterns = roleSpecificData.build_patterns || c.build_patterns || [];
+      let buildTabsHtml = "";
+      let buildContentHtml = "";
+
+      function renderBuildPatternInner(bp) {{
+        const pCoreHtml = (bp.core_items || []).map((ci, sIdx) => {{
+          const cImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{ci.item_id}}.png`;
+          return `
+            <span class="item-pill clickable-item" data-item-id="${{ci.item_id}}" title="タップして詳細を表示">
+              <span class="item-step">${{sIdx + 1}}</span>
+              <img class="item-img" src="${{cImg}}" alt="${{ci.name}}" onerror="this.src='icon.png';">
+              <span>${{ci.name}}</span>
+            </span>
           `;
-        }});
+        }}).join("");
+
+        const pStarterHtml = (bp.starter || []).map(sName => {{
+          const sItem = Object.values(ITEMS).find(it => it.name === sName);
+          const sId = sItem ? sItem.id : "1055";
+          const sImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{sId}}.png`;
+          return `
+            <span class="item-pill clickable-item" data-item-id="${{sId}}" title="タップして詳細を表示">
+              <img class="item-img" src="${{sImg}}" alt="${{sName}}" onerror="this.src='icon.png';">
+              <span>${{sName}}</span>
+            </span>
+          `;
+        }}).join("");
+
+        const bootName = bp.boots || "プレート スチールキャップ";
+        const bootItem = Object.values(ITEMS).find(it => it.name === bootName);
+        const bootId = bootItem ? bootItem.id : "3047";
+        const bootImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{bootId}}.png`;
+        const pBootsHtml = `
+          <span class="item-pill clickable-item" data-item-id="${{bootId}}" title="タップして詳細を表示">
+            <img class="item-img" src="${{bootImg}}" alt="${{bootName}}" onerror="this.src='icon.png';">
+            <span>${{bootName}}</span>
+          </span>
+        `;
+
+        const pSitHtml = (bp.situational || []).map(sitName => {{
+          const sitItem = Object.values(ITEMS).find(it => it.name === sitName);
+          const sitId = sitItem ? sitItem.id : "1001";
+          const sitImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{sitId}}.png`;
+          return `
+            <span class="item-pill clickable-item" data-item-id="${{sitId}}" title="タップして詳細を表示">
+              <img class="item-img" src="${{sitImg}}" alt="${{sitName}}" onerror="this.src='icon.png';">
+              <span>${{sitName}}</span>
+            </span>
+          `;
+        }}).join("");
+
+        return `
+          <div class="build-pat-desc">💡 ${{bp.desc}}</div>
+          <div class="build-group">
+            <div class="build-group-title">スタートアイテム</div>
+            <div class="item-tags">${{pStarterHtml}}</div>
+          </div>
+          <div class="build-group">
+            <div class="build-group-title">推奨靴</div>
+            <div class="item-tags">${{pBootsHtml}}</div>
+          </div>
+          <div class="build-group">
+            <div class="build-group-title">推奨コアアイテム（進行順）</div>
+            <div class="item-tags">${{pCoreHtml}}</div>
+          </div>
+          ${{pSitHtml ? `
+            <div class="build-group">
+              <div class="build-group-title">状況別・後半選択アイテム</div>
+              <div class="item-tags">${{pSitHtml}}</div>
+            </div>
+          ` : ""}}
+        `;
       }}
-      if (c.spells && c.spells.length > 0) {{
-        c.spells.forEach(s => {{
-          const spImg = s.image ? `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/spell/${{s.image}}` : "";
-          skillsHtml += `
-            <div class="skill-card">
-              <div class="skill-icon-wrap">
-                <img class="skill-img" src="${{spImg}}" alt="${{s.name}}" onerror="this.style.display='none';">
-                <span class="skill-slot-badge">${{s.slot}}</span>
-              </div>
-              <div class="skill-content">
-                <div class="skill-name">${{s.name}}</div>
-                <div class="skill-meta">CD: ${{s.cooldown || "なし"}} | コスト: ${{s.cost || "0"}}</div>
-                <div class="skill-desc">${{s.description || ""}}</div>
-              </div>
-            </div>
-          `;
-        }});
+
+      if (buildPatterns.length > 0) {{
+        buildTabsHtml = `
+          <div class="build-pat-tabs">
+            ${{buildPatterns.map((bp, idx) => `
+              <button class="build-pat-btn ${{idx === 0 ? "active" : ""}}" data-build-idx="${{idx}}">${{bp.name}}</button>
+            `).join("")}}
+          </div>
+        `;
+        buildContentHtml = `<div id="buildPatternContent">${{renderBuildPatternInner(buildPatterns[0])}}</div>`;
       }}
 
       // 相性
@@ -1270,56 +1599,105 @@ def build():
         unfavHtml = "<div style='color:var(--text-muted); font-size:12px; padding:6px 0;'>統計データなし</div>";
       }}
 
-      // ビルド
-      let starterItems = (c.build?.starter || []).map(i => {{
-        const itemImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{i.item_id}}.png`;
-        return `
-          <span class="item-pill clickable-item" data-item-id="${{i.item_id}}" title="タップしてアイテム詳細を表示">
-            <img class="item-img" src="${{itemImg}}" alt="${{i.name}}" onerror="this.style.display='none';">
-            <span>${{i.name}}</span>
-          </span>
-        `;
-      }}).join("") || "データなし";
-
-      let bootsItems = (c.build?.boots || []).map(b => {{
-        const bImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{b.item_id}}.png`;
-        return `
-          <span class="item-pill clickable-item" data-item-id="${{b.item_id}}" title="タップしてアイテム詳細を表示">
-            <img class="item-img" src="${{bImg}}" alt="${{b.name}}" onerror="this.style.display='none';">
-            <span>${{b.name}}</span>
-          </span>
-        `;
-      }}).join("") || "データなし";
-
-      let coreItems = (c.build?.core || []).map(i => {{
-        const cImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{i.item_id}}.png`;
-        return `
-          <span class="item-pill clickable-item" data-item-id="${{i.item_id}}" title="タップしてアイテム詳細を表示">
-            <span class="item-step">${{i.step}}</span>
-            <img class="item-img" src="${{cImg}}" alt="${{i.name}}" onerror="this.style.display='none';">
-            <span>${{i.name}}</span>
-          </span>
-        `;
-      }}).join("") || "データなし";
-
       // ルーン
       const r = c.runes || {{}};
       const priChoices = (r.primary?.choices || []).join(" / ");
       const secChoices = (r.secondary?.choices || []).join(" / ");
       const shards = (r.shards || []).join(" / ");
 
-      // 立ち回りメモ
-      const laningNote = c.gameplay_notes?.laning || "相手のスキルクールダウンやミニオンウェーブの位置を注視してトレードを行う。";
-      const tfNote = c.gameplay_notes?.teamfight || "集団戦では味方とフォーカスを合わせ、自身の役割を完遂する。";
+      // スキル一覧
+      let skillsHtml = "";
+      if (c.abilities && c.abilities.length > 0) {{
+        c.abilities.forEach(a => {{
+          const pImg = a.image ? `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/passive/${{a.image}}` : "";
+          skillsHtml += `
+            <div class="skill-card">
+              <div class="skill-icon-wrap">
+                <img class="skill-img" src="${{pImg}}" alt="${{a.name}}" onerror="this.style.display='none';">
+                <span class="skill-slot-badge">P</span>
+              </div>
+              <div class="skill-content">
+                <div class="skill-name">${{a.name}}</div>
+                <div class="skill-desc">${{a.description || ""}}</div>
+              </div>
+            </div>
+          `;
+        }});
+      }}
+      if (c.spells && c.spells.length > 0) {{
+        c.spells.forEach(s => {{
+          const spImg = s.image ? `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/spell/${{s.image}}` : "";
+          skillsHtml += `
+            <div class="skill-card">
+              <div class="skill-icon-wrap">
+                <img class="skill-img" src="${{spImg}}" alt="${{s.name}}" onerror="this.style.display='none';">
+                <span class="skill-slot-badge">${{s.slot}}</span>
+              </div>
+              <div class="skill-content">
+                <div class="skill-name">${{s.name}}</div>
+                <div class="skill-meta">CD: ${{s.cooldown || "なし"}} | コスト: ${{s.cost || "0"}}</div>
+                <div class="skill-desc">${{s.description || ""}}</div>
+              </div>
+            </div>
+          `;
+        }});
+      }}
 
       modalBodyEl.innerHTML = `
-        <!-- 基本情報 & スペル -->
+        ${{roleTabsHtml}}
+
+        <!-- ハイライトバッジ群 -->
+        <div class="champ-highlight-badges">
+          ${{sustainBadgeHtml}}
+          ${{skillOrderBadgeHtml}}
+        </div>
+        ${{sustainReasonHtml}}
+
+        <!-- チャンピオン概要 (特徴・強み・弱み) -->
         <div class="detail-section">
-          <div class="detail-heading">⚔️ 推奨サモナースペル & 運用レーン</div>
+          <div class="detail-heading">📖 チャンピオン概要（特徴・強み・弱み）</div>
+          <div class="overview-text">${{ov.summary || ""}}</div>
+          <div class="pros-cons-grid">
+            <div class="pros-box">
+              <div class="pros-cons-title pros-title">💪 強み (Strengths)</div>
+              <ul class="pros-cons-ul">${{strengthsHtml}}</ul>
+            </div>
+            <div class="cons-box">
+              <div class="pros-cons-title cons-title">⚠️ 弱み (Weaknesses)</div>
+              <ul class="pros-cons-ul">${{weaknessesHtml}}</ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 立ち回りメモ & スキル吐きどころ -->
+        <div class="detail-section">
+          <div class="detail-heading">📝 立ち回り概要メモ & スキルの吐きどころ</div>
+          ${{roleNoteHtml}}
+          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【序盤・レーン戦】</strong> ${{laningNote}}</div>
+          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【中終盤・集団戦】</strong> ${{tfNote}}</div>
+          ${{tipNote ? `<div style="font-size:12px; color:#f59e0b; line-height:1.5;"><strong>【極意】</strong> ${{tipNote}}</div>` : ""}}
+        </div>
+
+        <!-- 実戦コンボ -->
+        <div class="detail-section">
+          <div class="detail-heading">🥊 実戦コンボ・スキル回し（Flash併用含む）</div>
+          <div class="combo-grid">${{combosHtml}}</div>
+        </div>
+
+        <!-- 推奨スペル -->
+        <div class="detail-section">
+          <div class="detail-heading">⚔️ 推奨サモナースペル（${{currentSelectedRole}}運用）</div>
           <div class="spells-badge-list">${{spellsBadge}}</div>
         </div>
 
-        <!-- 対面相性 (有利不利) -->
+        <!-- 推奨ビルド (複数パターン切り替え) -->
+        <div class="detail-section">
+          <div class="detail-heading">🛡️ 推奨ビルド構成（複数パターン対応）</div>
+          ${{buildTabsHtml}}
+          ${{buildContentHtml}}
+        </div>
+
+        <!-- 対面相性 -->
         <div class="detail-section">
           <div class="detail-heading">⚖️ 対面相性（OP.GG 統計勝率）</div>
           <div class="matchups-container">
@@ -1334,36 +1712,12 @@ def build():
           </div>
         </div>
 
-        <!-- 推奨ビルド -->
-        <div class="detail-section">
-          <div class="detail-heading">🛡️ 推奨ビルド構成</div>
-          <div class="build-group">
-            <div class="build-group-title">スタートアイテム</div>
-            <div class="item-tags">${{starterItems}}</div>
-          </div>
-          <div class="build-group">
-            <div class="build-group-title">推奨靴</div>
-            <div class="item-tags">${{bootsItems}}</div>
-          </div>
-          <div class="build-group">
-            <div class="build-group-title">推奨コアアイテム（進行順）</div>
-            <div class="item-tags">${{coreItems}}</div>
-          </div>
-        </div>
-
         <!-- ルーン構成 -->
         <div class="detail-section">
           <div class="detail-heading">🔮 推奨ルーン構成</div>
           <div class="rune-row"><span class="rune-title">メインパス [${{r.primary?.path || "精密"}}]:</span><strong>${{r.primary?.keystone_name || "征服者"}}</strong> (${{priChoices}})</div>
           <div class="rune-row"><span class="rune-title">サブパス [${{r.secondary?.path || "不撓"}}]:</span>${{secChoices}}</div>
           <div class="rune-row"><span class="rune-title">シャード:</span>${{shards}}</div>
-        </div>
-
-        <!-- 立ち回りメモ -->
-        <div class="detail-section">
-          <div class="detail-heading">📝 立ち回り概要メモ</div>
-          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【序盤・レーン戦】</strong> ${{laningNote}}</div>
-          <div style="font-size:12px; color:#e2e8f0; line-height:1.5;"><strong>【中終盤・集団戦】</strong> ${{tfNote}}</div>
         </div>
 
         <!-- 全スキル詳細 -->
@@ -1373,16 +1727,44 @@ def build():
         </div>
       `;
 
-      // アイテムクリックイベントの登録（アイテム詳細モーダルへジャンプ）
-      modalBodyEl.querySelectorAll(".clickable-item").forEach(el => {{
-        el.onclick = (e) => {{
+      // ロールサブタブのイベント登録
+      modalBodyEl.querySelectorAll(".modal-role-btn").forEach(btn => {{
+        btn.onclick = (e) => {{
           e.stopPropagation();
-          const itemId = el.getAttribute("data-item-id");
-          if (itemId && ITEMS[itemId]) {{
-            openItemDetail(itemId);
+          const targetRole = btn.getAttribute("data-modal-role");
+          openDetail(champId, targetRole);
+        }};
+      }});
+
+      // ビルドパターン切り替えタブのイベント登録
+      modalBodyEl.querySelectorAll(".build-pat-btn").forEach(btn => {{
+        btn.onclick = (e) => {{
+          e.stopPropagation();
+          modalBodyEl.querySelectorAll(".build-pat-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          const idx = parseInt(btn.getAttribute("data-build-idx"), 10);
+          const bp = buildPatterns[idx];
+          const contentBox = document.getElementById("buildPatternContent");
+          if (contentBox && bp) {{
+            contentBox.innerHTML = renderBuildPatternInner(bp);
+            bindClickableItems(contentBox);
           }}
         }};
       }});
+
+      // アイテムクリックイベントの登録関数
+      function bindClickableItems(parentEl) {{
+        parentEl.querySelectorAll(".clickable-item").forEach(el => {{
+          el.onclick = (e) => {{
+            e.stopPropagation();
+            const itemId = el.getAttribute("data-item-id");
+            if (itemId && ITEMS[itemId]) {{
+              openItemDetail(itemId);
+            }}
+          }};
+        }});
+      }}
+      bindClickableItems(modalBodyEl);
 
       modalEl.classList.add("open");
 
@@ -1840,8 +2222,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v6
-const CACHE_NAME = 'loldb-cache-v6';
+    sw_content = """// LoLDB Service Worker - Offline Cache v7
+const CACHE_NAME = 'loldb-cache-v7';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
