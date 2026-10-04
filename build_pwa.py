@@ -1182,6 +1182,38 @@ def build():
       align-items: center;
       gap: 4px;
     }}
+    .item-card-stats {{
+      font-size: 10px;
+      font-weight: 600;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 3px 6px;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 32px;
+      text-align: left;
+    }}
+    .stat-badge {{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #e0f2fe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }}
     /* アイテム詳細モーダル */
     .item-detail-header-wrap {{
       display: flex;
@@ -1284,7 +1316,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.1 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1435,6 +1467,17 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">🛡️ v1.7.1</span>
+              <span class="changelog-date">2026-10-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【アイテム基礎ステータス完全表示】アイテム図鑑の全アイテムに攻撃力・魔力・防御・体力・ヘイスト等のステータスおよび効果説明を表示</li>
+              <li>【アイテムカテゴリ絞り込み修正】AD/AP/タンク/靴/サポート/消耗品の絞り込み判定を大幅改修し、0件になる問題を完全解消</li>
+              <li>【アイテムカード改善】図鑑一覧カードに上昇ステータス要約バッジを表示し、一覧から一目で性能が分かるよう改良</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v1.7.0</span>
@@ -2200,35 +2243,53 @@ def build():
       `;
 
       // ステータス整形
-      const statsObj = item.stats || {{}};
-      const statEntries = Object.entries(statsObj);
-      if (statEntries.length > 0) {{
+      const statsList = item.stats_list || [];
+      if (statsList.length > 0) {{
         itemDetailStatsSec.style.display = "block";
-        const statsHtml = statEntries.map(([k, v]) => {{
-          let label = k;
-          let val = v;
-          if (k === "FlatPhysicalDamageMod") label = "⚔️ 攻撃力(AD)";
-          else if (k === "FlatMagicDamageMod") label = "🔮 魔力(AP)";
-          else if (k === "FlatHPPoolMod") label = "❤️ 体力(HP)";
-          else if (k === "FlatArmorMod") label = "🛡️ 物理防御(AR)";
-          else if (k === "FlatSpellBlockMod") label = "🌀 魔法防御(MR)";
-          else if (k === "PercentAttackSpeedMod") {{ label = "⚡ 攻撃速度"; val = `+${{Math.round(val * 100)}}%`; }}
-          else if (k === "FlatMovementSpeedMod") label = "👟 移動速度";
-          else if (k === "PercentMovementSpeedMod") {{ label = "👟 移動速度%"; val = `+${{Math.round(val * 100)}}%`; }}
-          else if (k === "FlatCritChanceMod") {{ label = "🎯 クリティカル率"; val = `+${{Math.round(val * 100)}}%`; }}
-          else if (k === "FlatMPPoolMod") label = "💧 マナ";
-          else if (k === "PercentLifeStealMod") {{ label = "🩸 ライフスティール"; val = `+${{Math.round(val * 100)}}%`; }}
-          else if (k === "PercentOmnivampMod") {{ label = "🩸 オムニヴァンプ"; val = `+${{Math.round(val * 100)}}%`; }}
-          else if (k === "PercentTenacityMod") {{ label = "⛓️ 行動妨害耐性"; val = `+${{Math.round(val * 100)}}%`; }}
-
-          if (typeof val === "number" && !val.toString().startsWith("+") && val > 0) {{
-            val = `+${{val}}`;
-          }}
-          return `<div style="display:inline-block; margin-right: 14px; margin-bottom: 4px;"><strong>${{label}}:</strong> ${{val}}</div>`;
+        itemDetailStatsText.innerHTML = statsList.map(st => {{
+          let icon = "⚡";
+          if (st.includes("攻撃力") || st.includes("物理") || st.includes("脅威")) icon = "⚔️";
+          else if (st.includes("魔力") || st.includes("魔法")) icon = "🔮";
+          else if (st.includes("体力") || st.includes("HP")) icon = "❤️";
+          else if (st.includes("防御") || st.includes("アーマー")) icon = "🛡️";
+          else if (st.includes("速度") || st.includes("ブーツ")) icon = "👟";
+          else if (st.includes("クリティカル")) icon = "🎯";
+          else if (st.includes("マナ")) icon = "💧";
+          else if (st.includes("ヘイスト")) icon = "⏱️";
+          else if (st.includes("ライフスティール") || st.includes("回復")) icon = "🩸";
+          return `<span class="stat-badge">${{icon}} ${{st}}</span>`;
         }}).join("");
-        itemDetailStatsText.innerHTML = statsHtml;
       }} else {{
-        itemDetailStatsSec.style.display = "none";
+        const statsObj = item.stats || {{}};
+        const statEntries = Object.entries(statsObj);
+        if (statEntries.length > 0) {{
+          itemDetailStatsSec.style.display = "block";
+          const statsHtml = statEntries.map(([k, v]) => {{
+            let label = k;
+            let val = v;
+            if (k === "FlatPhysicalDamageMod") label = "⚔️ 攻撃力(AD)";
+            else if (k === "FlatMagicDamageMod") label = "🔮 魔力(AP)";
+            else if (k === "FlatHPPoolMod") label = "❤️ 体力(HP)";
+            else if (k === "FlatArmorMod") label = "🛡️ 物理防御(AR)";
+            else if (k === "FlatSpellBlockMod") label = "🌀 魔法防御(MR)";
+            else if (k === "PercentAttackSpeedMod") {{ label = "⚡ 攻撃速度"; val = `+${{Math.round(val * 100)}}%`; }}
+            else if (k === "FlatMovementSpeedMod") label = "👟 移動速度";
+            else if (k === "PercentMovementSpeedMod") {{ label = "👟 移動速度%"; val = `+${{Math.round(val * 100)}}%`; }}
+            else if (k === "FlatCritChanceMod") {{ label = "🎯 クリティカル率"; val = `+${{Math.round(val * 100)}}%`; }}
+            else if (k === "FlatMPPoolMod") label = "💧 マナ";
+            else if (k === "PercentLifeStealMod") {{ label = "🩸 ライフスティール"; val = `+${{Math.round(val * 100)}}%`; }}
+            else if (k === "PercentOmnivampMod") {{ label = "🩸 オムニヴァンプ"; val = `+${{Math.round(val * 100)}}%`; }}
+            else if (k === "PercentTenacityMod") {{ label = "⛓️ 行動妨害耐性"; val = `+${{Math.round(val * 100)}}%`; }}
+
+            if (typeof val === "number" && !val.toString().startsWith("+") && val > 0) {{
+              val = `+${{val}}`;
+            }}
+            return `<span class="stat-badge">${{label}}: ${{val}}</span>`;
+          }}).join("");
+          itemDetailStatsText.innerHTML = statsHtml;
+        }} else {{
+          itemDetailStatsSec.style.display = "none";
+        }}
       }}
 
       // 説明文整形
@@ -2357,7 +2418,13 @@ def build():
       // カテゴリフィルター
       if (currentItemCat !== "ALL") {{
         itemsList = itemsList.filter(item => {{
-          return item.categories && item.categories.includes(currentItemCat);
+          if (Array.isArray(item.categories)) {{
+            return item.categories.includes(currentItemCat);
+          }}
+          if (typeof item.category === "string") {{
+            return item.category === currentItemCat;
+          }}
+          return false;
         }});
       }}
 
@@ -2367,7 +2434,9 @@ def build():
           const name = (item.name || "").toLowerCase();
           const colloq = (item.colloq || "").toLowerCase();
           const plain = (item.plaintext || "").toLowerCase();
-          return name.includes(query) || colloq.includes(query) || plain.includes(query);
+          const stats = (item.stats_summary || "").toLowerCase();
+          const desc = (item.description || "").toLowerCase();
+          return name.includes(query) || colloq.includes(query) || plain.includes(query) || stats.includes(query) || desc.includes(query);
         }});
       }}
 
@@ -2391,11 +2460,13 @@ def build():
         const patch = "16.19.1";
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
         const price = item.gold?.total ? `${{item.gold.total}} G` : "無料";
+        const statsSummary = item.stats_summary ? `<div class="item-card-stats" title="${{item.stats_summary}}">${{item.stats_summary}}</div>` : "";
 
         card.innerHTML = `
           <img class="item-card-icon" src="${{imgUrl}}" alt="${{item.name}}" loading="lazy" onerror="this.src='icon.png';">
           <div class="item-card-name" title="${{item.name}}">${{item.name}}</div>
           <div class="item-card-price">💰 ${{price}}</div>
+          ${{statsSummary}}
         `;
         itemsGridEl.appendChild(card);
       }});
@@ -2819,8 +2890,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v8
-const CACHE_NAME = 'loldb-cache-v8';
+    sw_content = """// LoLDB Service Worker - Offline Cache v9
+const CACHE_NAME = 'loldb-cache-v9';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
