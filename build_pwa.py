@@ -1316,7 +1316,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.2 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.3 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1467,6 +1467,16 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v1.7.3</span>
+              <span class="changelog-date">2026-10-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【スキル順・立ち回り・ルーン・相性の全同期】全78体の複数ロール持ちチャンピオンにおいて、ロールタブ切替時にスキル上げ順、序盤/集団戦の立ち回りメモ、推奨ルーン構成、レーン専用の対面相性（有利/不利）が完全同期されるよう全面改修</li>
+              <li>【ジャングル/サポート/ADC/MID/TOP完全個別化】JUGは巡回立ち回りと対面ジャングラー相性、SUPは視界支配立ち回りとサポート対面相性、MID/ADC/TOPも各レーン固有の攻略情報へと美しく切り替え可能</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v1.7.2</span>
@@ -1821,7 +1831,7 @@ def build():
       const weaknessesHtml = (ov.weaknesses || []).map(w => `<li>${{w}}</li>`).join("");
 
       // 立ち回りメモ
-      const gn = c.gameplay_notes || {{}};
+      const gn = roleSpecificData.gameplay_notes || c.gameplay_notes || {{}};
       const roleNoteHtml = roleSpecificData.role_note ? `<div style="font-size:12px; margin-bottom:8px; color:#38bdf8; line-height:1.5;"><strong>【${{currentSelectedRole}}ロールの主務】</strong> ${{roleSpecificData.role_note}}</div>` : "";
       const laningNote = gn.laning || "相手のスキルクールダウンやミニオンウェーブの位置を注視してトレードを行う。";
       const tfNote = gn.teamfight || "集団戦では味方とフォーカスを合わせ、自身の役割を完遂する。";
@@ -1924,9 +1934,10 @@ def build():
       }}
 
       // 相性
+      const curMatchups = roleSpecificData.matchups || c.matchups || {{}};
       let favHtml = "";
-      if (c.matchups && c.matchups.favorable && c.matchups.favorable.length > 0) {{
-        favHtml = c.matchups.favorable.map(m => {{
+      if (curMatchups.favorable && curMatchups.favorable.length > 0) {{
+        favHtml = curMatchups.favorable.map(m => {{
           const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{m.champion_id}}.png`;
           const parts = (m.reason || "").split(" | ");
           const winrate = parts[0] || "勝率 有利";
@@ -1949,8 +1960,8 @@ def build():
       }}
 
       let unfavHtml = "";
-      if (c.matchups && c.matchups.unfavorable && c.matchups.unfavorable.length > 0) {{
-        unfavHtml = c.matchups.unfavorable.map(m => {{
+      if (curMatchups.unfavorable && curMatchups.unfavorable.length > 0) {{
+        unfavHtml = curMatchups.unfavorable.map(m => {{
           const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{m.champion_id}}.png`;
           const parts = (m.reason || "").split(" | ");
           const winrate = parts[0] || "勝率 不利";
@@ -1973,7 +1984,7 @@ def build():
       }}
 
       // ルーン
-      const r = c.runes || {{}};
+      const r = roleSpecificData.runes || c.runes || {{}};
       const priChoices = (r.primary?.choices || []).join(" / ");
       const secChoices = (r.secondary?.choices || []).join(" / ");
       const shards = (r.shards || []).join(" / ");
@@ -2901,8 +2912,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v10
-const CACHE_NAME = 'loldb-cache-v10';
+    sw_content = """// LoLDB Service Worker - Offline Cache v11
+const CACHE_NAME = 'loldb-cache-v11';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
