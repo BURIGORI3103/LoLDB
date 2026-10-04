@@ -1316,7 +1316,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.1 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.2 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1467,6 +1467,17 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v1.7.2</span>
+              <span class="changelog-date">2026-10-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【ロール別アイテムビルド完全同期】エイトロックスのジャングル（JUG）をはじめ、全78体の複数ロール持ちチャンピオンの全レーンにおいて、スタートアイテム・靴・コアアイテム・スペルを各ロール専用に完全最適化</li>
+              <li>【ジャングル/サポート適正化】JUGロールはジャングルペット（モスストンパー/ガストウォーカー/スコーチクロウ＋スマイト）、SUPロールはサポートアイテム（ワールド アトラス/セレスティアル/ザズ＝ザク等）を全チャンプに正確同期</li>
+              <li>【レーン別立ち回り同期】TOP/MID/ADC/SUP/JUGのレーン特性とAP/AD属性に合わせた3パターンのビルド（標準・対面別・状況別）を完全同期</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">🛡️ v1.7.1</span>
@@ -2890,8 +2901,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v9
-const CACHE_NAME = 'loldb-cache-v9';
+    sw_content = """// LoLDB Service Worker - Offline Cache v10
+const CACHE_NAME = 'loldb-cache-v10';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

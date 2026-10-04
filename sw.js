@@ -1,5 +1,5 @@
-// LoLDB Service Worker - Offline Cache v9
-const CACHE_NAME = 'loldb-cache-v9';
+// LoLDB Service Worker - Offline Cache v10
+const CACHE_NAME = 'loldb-cache-v10';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
