@@ -84,8 +84,49 @@
       background: #1e293b;
       color: #38bdf8;
       border: 1px solid #334155;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .patch-badge:hover {
+      background: #0284c7;
+      color: #fff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+    .main-nav {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 8px;
+    }
+    .nav-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .nav-tab.active {
+      background: #1e293b;
+      color: var(--primary);
+      border-color: #334155;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     .controls {
       display: flex;
@@ -310,6 +351,47 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+    /* リリースノートスタイル */
+    .changelog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .changelog-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .changelog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 6px;
+    }
+    .changelog-ver {
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .changelog-date {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .changelog-ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
     }
     .detail-section {
       background: var(--bg-card);
@@ -568,11 +650,16 @@
       <div class="header-top">
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
-          <span class="app-title">LoLDB 攻略マスター</span>
-          <span class="patch-badge" id="patchBadge">Patch 16.19 (v1.3.0 全データ完全同期版)</span>
+          <span class="app-title">LoLDB</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.4.0 ℹ️</span>
         </div>
       </div>
-      <div class="controls">
+      <nav class="main-nav">
+        <button class="nav-tab active" data-tab="champions">👑 チャンピオン</button>
+        <button class="nav-tab" data-tab="items">🛡️ アイテム図鑑</button>
+        <button class="nav-tab" data-tab="simulator">⚔️ 対面シミュレーター</button>
+      </nav>
+      <div class="controls" id="champControls">
         <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名で検索..." autocomplete="off">
         <div class="role-tabs">
           <button class="role-btn active" data-role="ALL">ALL</button>
@@ -587,9 +674,102 @@
   </header>
 
   <main>
-    <div class="count-status" id="countStatus">表示中: 0 体</div>
-    <div class="grid-container" id="champGrid"></div>
+    <!-- チャンピオン一覧ビュー -->
+    <div id="viewChampions">
+      <div class="count-status" id="countStatus">表示中: 0 体</div>
+      <div class="grid-container" id="champGrid"></div>
+    </div>
+
+    <!-- アイテム図鑑ビュー (Phase 2で本格実装) -->
+    <div id="viewItems" style="display: none; padding: 40px 16px; text-align: center; color: var(--text-muted);">
+      <div style="font-size: 48px; margin-bottom: 12px;">🛡️</div>
+      <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">アイテムデータベース準備中</h3>
+      <p style="font-size: 13px; max-width: 450px; margin: 0 auto; line-height: 1.6;">
+        サモナーズリフト全アイテムのステータス、価格、派生ツリー、詳細効果を検索・ソートできる図鑑機能をPhase 2にて実装予定です！
+      </p>
+    </div>
+
+    <!-- 対面シミュレータービュー (Phase 4で本格実装) -->
+    <div id="viewSimulator" style="display: none; padding: 40px 16px; text-align: center; color: var(--text-muted);">
+      <div style="font-size: 48px; margin-bottom: 12px;">⚔️</div>
+      <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">対面対策シミュレーター準備中</h3>
+      <p style="font-size: 13px; max-width: 450px; margin: 0 auto; line-height: 1.6;">
+        自分と相手のチャンピオンを選択するだけで、レーン戦の注意点、警戒スキル、対策アイテムをリアルタイム表示する機能をPhase 4にて実装予定です！
+      </p>
+    </div>
   </main>
+
+  <!-- アップデート履歴（リリースノート）モーダル -->
+  <div class="modal-overlay" id="changelogModal">
+    <div class="modal-content" style="max-width: 650px;">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2 style="font-size: 17px; font-weight: 800; color: #fff;">📜 LoLDB アップデート履歴</h2>
+        </div>
+        <button class="modal-close-btn" id="changelogCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">🚀 v1.4.0</span>
+              <span class="changelog-date">2026-10-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>タイトルのシンプル化（「LoLDB」へ改名）とバージョンバッジの最適化</li>
+              <li>メインナビゲーション（チャンピオン／アイテム図鑑／対面シミュレーター）の設置</li>
+              <li>スマホのスワイプ戻るジェスチャーでアプリが終了せずトップに戻る History API 対応</li>
+              <li>チャンピオン詳細を開いた際、必ず最上部からスクロール開始するよう修正</li>
+              <li>本リリースノート（バージョン履歴）モーダル機能の新設</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">🛡️ v1.3.0</span>
+              <span class="changelog-date">2026-10-03</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>全173チャンピオンのOP.GG最新統計データを総ざらい再スクレイピング</li>
+              <li>モルデカイザー(TOP)、アジール(MID)、カリスタ(ADC)、スレッシュ(SUP)等のロール誤認（ハルシネーション）完全根絶</li>
+              <li>全件自動監査スクリプトによるロール整合性100%検証</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v1.2.0</span>
+              <span class="changelog-date">2026-10-03</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>全173チャンピオンの対面有利不利に「1行戦術理由（勝率％＋立ち回り）」を自動生成・付与</li>
+              <li>セラフィーンの担当ロール是正（SUP/ADC）およびサポート推奨ビルドへの更新</li>
+              <li>対面相性カードをスマホで読みやすい2段組デザインへUI刷新</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">🎨 v1.1.0</span>
+              <span class="changelog-date">2026-10-03</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>Riot公式Data Dragon CDN連携による全スキル・アイテム・スペルのアイコン画像表示対応</li>
+              <li>PWA Service Workerをオンライン時最新優先（Network-First）へ強化</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">✨ v1.0.0</span>
+              <span class="changelog-date">2026-10-03</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>LoLDB 初回正式リリース</li>
+              <li>公式Data Dragon基礎データ ＋ OP.GG攻略統計 ＋ 日本語wiki立ち回り統合PWA</li>
+              <li>完全オフライン動作対応（Service Worker + 単一HTML内包アーキテクチャ）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- 詳細モーダル -->
   <div class="modal-overlay" id="detailModal">
@@ -904,12 +1084,138 @@
       `;
 
       modalEl.classList.add("open");
+
+      // スクロール位置を必ず一番上（最上部）にリセット
+      const mContent = modalEl.querySelector(".modal-content");
+      if (mContent) mContent.scrollTop = 0;
+      modalBodyEl.scrollTop = 0;
+
+      // スマホの戻るスワイプ対応: History APIにモーダル状態を追加
+      if (!history.state || history.state.modal !== 'champion_detail') {
+        history.pushState({ modal: 'champion_detail', champId: champId }, '');
+      }
     }
 
-    modalCloseBtn.onclick = () => modalEl.classList.remove("open");
-    modalEl.onclick = (e) => {
-      if (e.target === modalEl) modalEl.classList.remove("open");
+    function closeDetailModal() {
+      modalEl.classList.remove("open");
+    }
+
+    modalCloseBtn.onclick = () => {
+      if (history.state && history.state.modal === 'champion_detail') {
+        history.back();
+      } else {
+        closeDetailModal();
+      }
     };
+
+    modalEl.onclick = (e) => {
+      if (e.target === modalEl) {
+        if (history.state && history.state.modal === 'champion_detail') {
+          history.back();
+        } else {
+          closeDetailModal();
+        }
+      }
+    };
+
+    // リリースノート（アプデ履歴）モーダル制御
+    const changelogModalEl = document.getElementById("changelogModal");
+    const changelogCloseBtn = document.getElementById("changelogCloseBtn");
+    const patchBadgeEl = document.getElementById("patchBadge");
+
+    function openChangelogModal() {
+      changelogModalEl.classList.add("open");
+      const cContent = changelogModalEl.querySelector(".modal-content");
+      if (cContent) cContent.scrollTop = 0;
+      if (!history.state || history.state.modal !== 'changelog') {
+        history.pushState({ modal: 'changelog' }, '');
+      }
+    }
+
+    function closeChangelogModal() {
+      changelogModalEl.classList.remove("open");
+    }
+
+    if (patchBadgeEl) {
+      patchBadgeEl.onclick = () => openChangelogModal();
+    }
+
+    if (changelogCloseBtn) {
+      changelogCloseBtn.onclick = () => {
+        if (history.state && history.state.modal === 'changelog') {
+          history.back();
+        } else {
+          closeChangelogModal();
+        }
+      };
+    }
+
+    if (changelogModalEl) {
+      changelogModalEl.onclick = (e) => {
+        if (e.target === changelogModalEl) {
+          if (history.state && history.state.modal === 'changelog') {
+            history.back();
+          } else {
+            closeChangelogModal();
+          }
+        }
+      };
+    }
+
+    // スマホのジェスチャースワイプ「戻る」イベント対応（アプリ終了防止）
+    window.addEventListener("popstate", (e) => {
+      if (modalEl && modalEl.classList.contains("open")) {
+        closeDetailModal();
+      }
+      if (changelogModalEl && changelogModalEl.classList.contains("open")) {
+        closeChangelogModal();
+      }
+    });
+
+    // ESCキー対応
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        if (modalEl && modalEl.classList.contains("open")) {
+          if (history.state && history.state.modal === 'champion_detail') history.back();
+          else closeDetailModal();
+        }
+        if (changelogModalEl && changelogModalEl.classList.contains("open")) {
+          if (history.state && history.state.modal === 'changelog') history.back();
+          else closeChangelogModal();
+        }
+      }
+    });
+
+    // メインナビゲーションタブ切り替え
+    const champControlsEl = document.getElementById("champControls");
+    const viewChampsEl = document.getElementById("viewChampions");
+    const viewItemsEl = document.getElementById("viewItems");
+    const viewSimEl = document.getElementById("viewSimulator");
+
+    document.querySelectorAll(".nav-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        const target = tab.getAttribute("data-tab");
+
+        if (target === "champions") {
+          viewChampsEl.style.display = "block";
+          viewItemsEl.style.display = "none";
+          viewSimEl.style.display = "none";
+          if (champControlsEl) champControlsEl.style.display = "flex";
+        } else if (target === "items") {
+          viewChampsEl.style.display = "none";
+          viewItemsEl.style.display = "block";
+          viewSimEl.style.display = "none";
+          if (champControlsEl) champControlsEl.style.display = "none";
+        } else if (target === "simulator") {
+          viewChampsEl.style.display = "none";
+          viewItemsEl.style.display = "none";
+          viewSimEl.style.display = "block";
+          if (champControlsEl) champControlsEl.style.display = "none";
+        }
+      });
+    });
 
     // 検索入力イベント
     searchInput.addEventListener("input", (e) => {
