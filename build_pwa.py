@@ -13,6 +13,7 @@ from pathlib import Path
 def build():
     base_dir = Path(__file__).resolve().parent
     master_file = base_dir / "merged_data" / "all_champions.json"
+    items_file = base_dir / "merged_data" / "all_items.json"
     dist_dir = base_dir / "dist"
     dist_dir.mkdir(parents=True, exist_ok=True)
 
@@ -24,17 +25,25 @@ def build():
     with open(master_file, "r", encoding="utf-8") as f:
         all_champs = json.load(f)
 
+    all_items = {}
+    if items_file.exists():
+        print("アイテムデータを読み込み中...")
+        with open(items_file, "r", encoding="utf-8") as f:
+            all_items = json.load(f)
+        print(f"合計 {len(all_items)} 件のアイテムデータを読み込みました。")
+
     print(f"合計 {len(all_champs)} 体のチャンピオンデータを読み込みました。")
 
     # JSONをコンパクトにシリアライズ
     json_str = json.dumps(all_champs, ensure_ascii=False)
+    items_json_str = json.dumps(all_items, ensure_ascii=False)
 
     html_content = f"""<!DOCTYPE html>
 <html lang="ja" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>LoLDB - League of Legends 攻略マスターデータベース</title>
+  <title>LoLDB</title>
   <meta name="theme-color" content="#0f172a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -615,6 +624,14 @@ def build():
       font-size: 12px;
       color: #e2e8f0;
       font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .item-pill:hover {{
+      border-color: var(--primary);
+      background: #1e293b;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
     }}
     .item-img {{
       width: 24px;
@@ -623,6 +640,176 @@ def build():
       object-fit: cover;
       flex-shrink: 0;
       border: 1px solid #334155;
+    }}
+    /* アイテム図鑑スタイル */
+    .item-controls {{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }}
+    .item-controls-row {{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }}
+    .item-search-input {{
+      flex: 1;
+      min-width: 180px;
+      background-color: #0b0f19;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }}
+    .item-search-input:focus {{
+      border-color: var(--primary);
+    }}
+    .item-sort-select {{
+      background: #151d30;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }}
+    .item-category-tabs {{
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }}
+    .item-cat-btn {{
+      background: #151d30;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }}
+    .item-cat-btn:hover {{
+      color: #fff;
+      border-color: var(--primary);
+    }}
+    .item-cat-btn.active {{
+      background: #0284c7;
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }}
+    .items-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+    }}
+    @media (min-width: 600px) {{
+      .items-grid {{
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }}
+    }}
+    .item-grid-card {{
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      text-align: center;
+    }}
+    .item-grid-card:hover {{
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }}
+    .item-card-icon {{
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #334155;
+      background: #0b0f19;
+    }}
+    .item-card-name {{
+      font-size: 12px;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 30px;
+    }}
+    .item-card-price {{
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--accent);
+      background: rgba(245, 158, 11, 0.12);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }}
+    /* アイテム詳細モーダル */
+    .item-detail-header-wrap {{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }}
+    .item-detail-big-icon {{
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      border: 2px solid var(--primary);
+      object-fit: cover;
+      background: #0b0f19;
+      flex-shrink: 0;
+    }}
+    .recipe-row {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }}
+    .recipe-item-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #101726;
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #f1f5f9;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .recipe-item-pill:hover {{
+      border-color: var(--primary);
+      background: #1e293b;
+    }}
+    .recipe-item-pill img {{
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
     }}
     .item-step {{
       background: #0284c7;
@@ -682,7 +869,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.4.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.5.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -711,13 +898,29 @@ def build():
       <div class="grid-container" id="champGrid"></div>
     </div>
 
-    <!-- アイテム図鑑ビュー (Phase 2で本格実装) -->
-    <div id="viewItems" style="display: none; padding: 40px 16px; text-align: center; color: var(--text-muted);">
-      <div style="font-size: 48px; margin-bottom: 12px;">🛡️</div>
-      <h3 style="font-size: 18px; color: #fff; margin-bottom: 8px;">アイテムデータベース準備中</h3>
-      <p style="font-size: 13px; max-width: 450px; margin: 0 auto; line-height: 1.6;">
-        サモナーズリフト全アイテムのステータス、価格、派生ツリー、詳細効果を検索・ソートできる図鑑機能をPhase 2にて実装予定です！
-      </p>
+    <!-- アイテム図鑑ビュー (Phase 2 実装) -->
+    <div id="viewItems" style="display: none;">
+      <div class="item-controls">
+        <div class="item-controls-row">
+          <input type="text" id="itemSearchInput" class="item-search-input" placeholder="アイテム名・通称（例: bc, 帽子, 時計）で検索..." autocomplete="off">
+          <select id="itemSortSelect" class="item-sort-select">
+            <option value="price_desc">価格が高い順</option>
+            <option value="price_asc">価格が安い順</option>
+            <option value="name_asc">名前順</option>
+          </select>
+        </div>
+        <div class="item-category-tabs">
+          <button class="item-cat-btn active" data-cat="ALL">ALL</button>
+          <button class="item-cat-btn" data-cat="AD">⚔️ 攻撃力(AD)</button>
+          <button class="item-cat-btn" data-cat="AP">🔮 魔力(AP)</button>
+          <button class="item-cat-btn" data-cat="TANK">🛡️ 防具・タンク</button>
+          <button class="item-cat-btn" data-cat="BOOTS">👟 靴</button>
+          <button class="item-cat-btn" data-cat="SUPPORT">💚 サポート</button>
+          <button class="item-cat-btn" data-cat="CONSUMABLE">🧪 消耗品/その他</button>
+        </div>
+      </div>
+      <div class="count-status" id="itemCountStatus">表示中: 0 個</div>
+      <div class="items-grid" id="itemsGrid"></div>
     </div>
 
     <!-- 対面シミュレータービュー (Phase 4で本格実装) -->
@@ -741,6 +944,19 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">🛡️ v1.5.0</span>
+              <span class="changelog-date">2026-10-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【アイテム図鑑】サモナーズリフト現役全254アイテムのマスターデータベースを新設</li>
+              <li>アイテム名・通称・効果検索、価格昇降順・名前順ソート、カテゴリ絞り込み（AD/AP/Tank/靴/サポート/消耗品）に対応</li>
+              <li>アイテム詳細モーダル新設（価格・売却額・基本ステータス・パッシブ/アクティブ効果・素材/派生先ツリー完備）</li>
+              <li>【アイテム詳細ジャンプ】チャンピオン詳細画面のアイテム（スタート・靴・コア）をタップすると、直接アイテム詳細へジャンプ可能に</li>
+              <li>アイテム詳細モーダル内での素材・派生先タップによるスムーズなアイテム間ジャンプに対応</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">🚀 v1.4.0</span>
@@ -816,9 +1032,52 @@ def build():
     </div>
   </div>
 
+  <!-- アイテム詳細モーダル -->
+  <div class="modal-overlay" id="itemDetailModal" style="z-index: 120;">
+    <div class="modal-content" style="max-width: 620px;">
+      <div class="modal-header">
+        <div class="item-detail-header-wrap">
+          <img id="itemDetailIcon" class="item-detail-big-icon" src="" alt="" onerror="this.style.display='none';">
+          <div>
+            <h2 id="itemDetailName" style="font-size: 17px; font-weight: 800; color: #fff;">アイテム名</h2>
+            <div id="itemDetailPrices" style="margin-top: 4px;"></div>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="itemDetailCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="itemDetailBody">
+        <!-- 基本ステータス -->
+        <div class="detail-section" id="itemDetailStatsSec">
+          <div class="detail-heading">📊 基本ステータス</div>
+          <div id="itemDetailStatsText" style="font-size: 13px; color: #e2e8f0; line-height: 1.6; font-weight: 600;"></div>
+        </div>
+        <!-- 効果説明 -->
+        <div class="detail-section" id="itemDetailDescSec">
+          <div class="detail-heading">✨ 特殊効果（パッシブ / アクティブ）</div>
+          <div id="itemDetailDescText" style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; white-space: pre-line;"></div>
+        </div>
+        <!-- レシピツリー -->
+        <div class="detail-section" id="itemDetailRecipeSec">
+          <div class="detail-heading">🔨 レシピ（素材 / 派生先）</div>
+          <div class="recipe-tree-wrap">
+            <div id="itemRecipeFromBox">
+              <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">素材アイテム (Builds From):</div>
+              <div id="itemRecipeFromList" class="recipe-row"></div>
+            </div>
+            <div id="itemRecipeIntoBox" style="margin-top: 8px;">
+              <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">派生先アイテム (Builds Into):</div>
+              <div id="itemRecipeIntoList" class="recipe-row"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // インライン内包されたマスターデータ
     const CHAMPIONS = {json_str};
+    const ITEMS = {items_json_str};
 
     let currentRole = "ALL";
     let searchKeyword = "";
@@ -1015,7 +1274,7 @@ def build():
       let starterItems = (c.build?.starter || []).map(i => {{
         const itemImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{i.item_id}}.png`;
         return `
-          <span class="item-pill">
+          <span class="item-pill clickable-item" data-item-id="${{i.item_id}}" title="タップしてアイテム詳細を表示">
             <img class="item-img" src="${{itemImg}}" alt="${{i.name}}" onerror="this.style.display='none';">
             <span>${{i.name}}</span>
           </span>
@@ -1025,7 +1284,7 @@ def build():
       let bootsItems = (c.build?.boots || []).map(b => {{
         const bImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{b.item_id}}.png`;
         return `
-          <span class="item-pill">
+          <span class="item-pill clickable-item" data-item-id="${{b.item_id}}" title="タップしてアイテム詳細を表示">
             <img class="item-img" src="${{bImg}}" alt="${{b.name}}" onerror="this.style.display='none';">
             <span>${{b.name}}</span>
           </span>
@@ -1035,7 +1294,7 @@ def build():
       let coreItems = (c.build?.core || []).map(i => {{
         const cImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{i.item_id}}.png`;
         return `
-          <span class="item-pill">
+          <span class="item-pill clickable-item" data-item-id="${{i.item_id}}" title="タップしてアイテム詳細を表示">
             <span class="item-step">${{i.step}}</span>
             <img class="item-img" src="${{cImg}}" alt="${{i.name}}" onerror="this.style.display='none';">
             <span>${{i.name}}</span>
@@ -1113,6 +1372,17 @@ def build():
           ${{skillsHtml}}
         </div>
       `;
+
+      // アイテムクリックイベントの登録（アイテム詳細モーダルへジャンプ）
+      modalBodyEl.querySelectorAll(".clickable-item").forEach(el => {{
+        el.onclick = (e) => {{
+          e.stopPropagation();
+          const itemId = el.getAttribute("data-item-id");
+          if (itemId && ITEMS[itemId]) {{
+            openItemDetail(itemId);
+          }}
+        }};
+      }});
 
       modalEl.classList.add("open");
 
@@ -1193,26 +1463,303 @@ def build():
       }};
     }}
 
-    // スマホのジェスチャースワイプ「戻る」イベント対応（アプリ終了防止）
+    // ==========================================
+    // アイテム詳細モーダル制御 (Phase 2)
+    // ==========================================
+    const itemDetailModalEl = document.getElementById("itemDetailModal");
+    const itemDetailCloseBtn = document.getElementById("itemDetailCloseBtn");
+    const itemDetailIcon = document.getElementById("itemDetailIcon");
+    const itemDetailName = document.getElementById("itemDetailName");
+    const itemDetailPrices = document.getElementById("itemDetailPrices");
+    const itemDetailStatsSec = document.getElementById("itemDetailStatsSec");
+    const itemDetailStatsText = document.getElementById("itemDetailStatsText");
+    const itemDetailDescSec = document.getElementById("itemDetailDescSec");
+    const itemDetailDescText = document.getElementById("itemDetailDescText");
+    const itemDetailRecipeSec = document.getElementById("itemDetailRecipeSec");
+    const itemRecipeFromBox = document.getElementById("itemRecipeFromBox");
+    const itemRecipeFromList = document.getElementById("itemRecipeFromList");
+    const itemRecipeIntoBox = document.getElementById("itemRecipeIntoBox");
+    const itemRecipeIntoList = document.getElementById("itemRecipeIntoList");
+
+    function openItemDetail(itemId) {{
+      const item = ITEMS[itemId];
+      if (!item) return;
+
+      const patch = "16.19.1";
+      itemDetailIcon.src = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
+      itemDetailIcon.style.display = "block";
+      itemDetailName.textContent = item.name;
+
+      // 価格
+      const totalGold = item.gold?.total || 0;
+      const sellGold = item.gold?.sell || 0;
+      itemDetailPrices.innerHTML = `
+        <span class="item-card-price">💰 価格: ${{totalGold}} G</span>
+        <span style="font-size: 11px; color: var(--text-muted); margin-left: 8px;">(売却: ${{sellGold}} G)</span>
+      `;
+
+      // ステータス整形
+      const statsObj = item.stats || {{}};
+      const statEntries = Object.entries(statsObj);
+      if (statEntries.length > 0) {{
+        itemDetailStatsSec.style.display = "block";
+        const statsHtml = statEntries.map(([k, v]) => {{
+          let label = k;
+          let val = v;
+          if (k === "FlatPhysicalDamageMod") label = "⚔️ 攻撃力(AD)";
+          else if (k === "FlatMagicDamageMod") label = "🔮 魔力(AP)";
+          else if (k === "FlatHPPoolMod") label = "❤️ 体力(HP)";
+          else if (k === "FlatArmorMod") label = "🛡️ 物理防御(AR)";
+          else if (k === "FlatSpellBlockMod") label = "🌀 魔法防御(MR)";
+          else if (k === "PercentAttackSpeedMod") {{ label = "⚡ 攻撃速度"; val = `+${{Math.round(val * 100)}}%`; }}
+          else if (k === "FlatMovementSpeedMod") label = "👟 移動速度";
+          else if (k === "PercentMovementSpeedMod") {{ label = "👟 移動速度%"; val = `+${{Math.round(val * 100)}}%`; }}
+          else if (k === "FlatCritChanceMod") {{ label = "🎯 クリティカル率"; val = `+${{Math.round(val * 100)}}%`; }}
+          else if (k === "FlatMPPoolMod") label = "💧 マナ";
+          else if (k === "PercentLifeStealMod") {{ label = "🩸 ライフスティール"; val = `+${{Math.round(val * 100)}}%`; }}
+          else if (k === "PercentOmnivampMod") {{ label = "🩸 オムニヴァンプ"; val = `+${{Math.round(val * 100)}}%`; }}
+          else if (k === "PercentTenacityMod") {{ label = "⛓️ 行動妨害耐性"; val = `+${{Math.round(val * 100)}}%`; }}
+
+          if (typeof val === "number" && !val.toString().startsWith("+") && val > 0) {{
+            val = `+${{val}}`;
+          }}
+          return `<div style="display:inline-block; margin-right: 14px; margin-bottom: 4px;"><strong>${{label}}:</strong> ${{val}}</div>`;
+        }}).join("");
+        itemDetailStatsText.innerHTML = statsHtml;
+      }} else {{
+        itemDetailStatsSec.style.display = "none";
+      }}
+
+      // 説明文整形
+      let cleanDesc = item.description || item.plaintext || "効果情報なし";
+      cleanDesc = cleanDesc.replace(/<br\\s*\\/?>/gi, "\\n")
+                           .replace(/<\\/p>/gi, "\\n")
+                           .replace(/<li>/gi, "• ")
+                           .replace(/<\\/li>/gi, "\\n")
+                           .replace(/<[^>]+>/g, "")
+                           .trim();
+      itemDetailDescText.textContent = cleanDesc;
+
+      // 素材ツリー (Builds from)
+      const fromIds = item.from || [];
+      if (fromIds.length > 0) {{
+        itemRecipeFromBox.style.display = "block";
+        itemRecipeFromList.innerHTML = fromIds.map(fid => {{
+          const fItem = ITEMS[fid];
+          const fName = fItem ? fItem.name : `ID:${{fid}}`;
+          const fPrice = fItem ? `${{fItem.gold?.total || 0}}G` : "";
+          const fImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{fid}}.png`;
+          return `
+            <span class="recipe-item-pill" data-recipe-id="${{fid}}" title="タップして詳細を表示">
+              <img src="${{fImg}}" alt="${{fName}}" onerror="this.src='icon.png';">
+              <span>${{fName}}</span>
+              <span style="color:var(--accent); font-size:11px;">${{fPrice}}</span>
+            </span>
+          `;
+        }}).join("");
+      }} else {{
+        itemRecipeFromBox.style.display = "none";
+      }}
+
+      // 派生先ツリー (Builds into)
+      const intoIds = item.into || [];
+      if (intoIds.length > 0) {{
+        itemRecipeIntoBox.style.display = "block";
+        itemRecipeIntoList.innerHTML = intoIds.map(iid => {{
+          const iItem = ITEMS[iid];
+          const iName = iItem ? iItem.name : `ID:${{iid}}`;
+          const iPrice = iItem ? `${{iItem.gold?.total || 0}}G` : "";
+          const iImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{iid}}.png`;
+          return `
+            <span class="recipe-item-pill" data-recipe-id="${{iid}}" title="タップして詳細を表示">
+              <img src="${{iImg}}" alt="${{iName}}" onerror="this.src='icon.png';">
+              <span>${{iName}}</span>
+              <span style="color:var(--accent); font-size:11px;">${{iPrice}}</span>
+            </span>
+          `;
+        }}).join("");
+      }} else {{
+        itemRecipeIntoBox.style.display = "none";
+      }}
+
+      if (fromIds.length === 0 && intoIds.length === 0) {{
+        itemDetailRecipeSec.style.display = "none";
+      }} else {{
+        itemDetailRecipeSec.style.display = "block";
+      }}
+
+      // レシピアイテムのクリックイベント（素材・派生先アイテム詳細へジャンプ）
+      itemDetailModalEl.querySelectorAll(".recipe-item-pill").forEach(pill => {{
+        pill.onclick = (e) => {{
+          e.stopPropagation();
+          const nextId = pill.getAttribute("data-recipe-id");
+          if (nextId) openItemDetail(nextId);
+        }};
+      }});
+
+      itemDetailModalEl.classList.add("open");
+      const iContent = itemDetailModalEl.querySelector(".modal-content");
+      if (iContent) iContent.scrollTop = 0;
+      const iBody = itemDetailModalEl.querySelector(".modal-body");
+      if (iBody) iBody.scrollTop = 0;
+
+      // History API
+      if (!history.state || history.state.modal !== 'item_detail') {{
+        history.pushState({{ modal: 'item_detail', itemId: itemId }}, '');
+      }}
+    }}
+
+    function closeItemDetailModal() {{
+      itemDetailModalEl.classList.remove("open");
+    }}
+
+    if (itemDetailCloseBtn) {{
+      itemDetailCloseBtn.onclick = () => {{
+        if (history.state && history.state.modal === 'item_detail') {{
+          history.back();
+        }} else {{
+          closeItemDetailModal();
+        }}
+      }};
+    }}
+
+    if (itemDetailModalEl) {{
+      itemDetailModalEl.onclick = (e) => {{
+        if (e.target === itemDetailModalEl) {{
+          if (history.state && history.state.modal === 'item_detail') {{
+            history.back();
+          }} else {{
+            closeItemDetailModal();
+          }}
+        }}
+      }};
+    }}
+
+    // ==========================================
+    // アイテム図鑑の制御・検索・ソート (Phase 2)
+    // ==========================================
+    const itemsGridEl = document.getElementById("itemsGrid");
+    const itemCountStatusEl = document.getElementById("itemCountStatus");
+    const itemSearchInput = document.getElementById("itemSearchInput");
+    const itemSortSelect = document.getElementById("itemSortSelect");
+    let currentItemCat = "ALL";
+    let itemSearchKeyword = "";
+    let currentItemSort = "price_desc";
+
+    function renderItemsList() {{
+      if (!itemsGridEl) return;
+      itemsGridEl.innerHTML = "";
+      const query = itemSearchKeyword.trim().toLowerCase();
+
+      let itemsList = Object.values(ITEMS);
+
+      // カテゴリフィルター
+      if (currentItemCat !== "ALL") {{
+        itemsList = itemsList.filter(item => {{
+          return item.categories && item.categories.includes(currentItemCat);
+        }});
+      }}
+
+      // 検索フィルター
+      if (query) {{
+        itemsList = itemsList.filter(item => {{
+          const name = (item.name || "").toLowerCase();
+          const colloq = (item.colloq || "").toLowerCase();
+          const plain = (item.plaintext || "").toLowerCase();
+          return name.includes(query) || colloq.includes(query) || plain.includes(query);
+        }});
+      }}
+
+      // ソート
+      itemsList.sort((a, b) => {{
+        if (currentItemSort === "price_desc") {{
+          return (b.gold?.total || 0) - (a.gold?.total || 0);
+        }} else if (currentItemSort === "price_asc") {{
+          return (a.gold?.total || 0) - (b.gold?.total || 0);
+        }} else if (currentItemSort === "name_asc") {{
+          return (a.name || "").localeCompare(b.name || "", "ja");
+        }}
+        return 0;
+      }});
+
+      itemsList.forEach(item => {{
+        const card = document.createElement("div");
+        card.className = "item-grid-card";
+        card.onclick = () => openItemDetail(item.id);
+
+        const patch = "16.19.1";
+        const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
+        const price = item.gold?.total ? `${{item.gold.total}} G` : "無料";
+
+        card.innerHTML = `
+          <img class="item-card-icon" src="${{imgUrl}}" alt="${{item.name}}" loading="lazy" onerror="this.src='icon.png';">
+          <div class="item-card-name" title="${{item.name}}">${{item.name}}</div>
+          <div class="item-card-price">💰 ${{price}}</div>
+        `;
+        itemsGridEl.appendChild(card);
+      }});
+
+      if (itemCountStatusEl) {{
+        itemCountStatusEl.textContent = `表示中: ${{itemsList.length}} 個 / 全 ${{Object.keys(ITEMS).length}} 個`;
+      }}
+    }}
+
+    if (itemSearchInput) {{
+      itemSearchInput.addEventListener("input", (e) => {{
+        itemSearchKeyword = e.target.value;
+        renderItemsList();
+      }});
+    }}
+
+    if (itemSortSelect) {{
+      itemSortSelect.addEventListener("change", (e) => {{
+        currentItemSort = e.target.value;
+        renderItemsList();
+      }});
+    }}
+
+    document.querySelectorAll(".item-cat-btn").forEach(btn => {{
+      btn.addEventListener("click", () => {{
+        document.querySelectorAll(".item-cat-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentItemCat = btn.getAttribute("data-cat");
+        renderItemsList();
+      }});
+    }});
+
+    // スマホのジェスチャースワイプ「戻る」イベント対応（アプリ終了防止・モーダル多重スタック制御）
     window.addEventListener("popstate", (e) => {{
+      if (itemDetailModalEl && itemDetailModalEl.classList.contains("open")) {{
+        closeItemDetailModal();
+        return;
+      }}
       if (modalEl && modalEl.classList.contains("open")) {{
         closeDetailModal();
+        return;
       }}
       if (changelogModalEl && changelogModalEl.classList.contains("open")) {{
         closeChangelogModal();
+        return;
       }}
     }});
 
-    // ESCキー対応
+    // ESCキー対応（モーダル多重スタック制御）
     window.addEventListener("keydown", (e) => {{
       if (e.key === "Escape") {{
+        if (itemDetailModalEl && itemDetailModalEl.classList.contains("open")) {{
+          if (history.state && history.state.modal === 'item_detail') history.back();
+          else closeItemDetailModal();
+          return;
+        }}
         if (modalEl && modalEl.classList.contains("open")) {{
           if (history.state && history.state.modal === 'champion_detail') history.back();
           else closeDetailModal();
+          return;
         }}
         if (changelogModalEl && changelogModalEl.classList.contains("open")) {{
           if (history.state && history.state.modal === 'changelog') history.back();
           else closeChangelogModal();
+          return;
         }}
       }}
     }});
@@ -1239,6 +1786,7 @@ def build():
           viewItemsEl.style.display = "block";
           viewSimEl.style.display = "none";
           if (champControlsEl) champControlsEl.style.display = "none";
+          renderItemsList();
         }} else if (target === "simulator") {{
           viewChampsEl.style.display = "none";
           viewItemsEl.style.display = "none";
@@ -1266,6 +1814,7 @@ def build():
 
     // 初期レンダリング
     renderList();
+    renderItemsList();
 
     // Service Worker 登録（更新チェック付き）
     if ('serviceWorker' in navigator) {{
@@ -1283,13 +1832,16 @@ def build():
 </html>"""
 
     index_path = dist_dir / "index.html"
-    print(f"単一HTML {index_path} を出力中...")
+    root_index_path = base_dir / "index.html"
+    print(f"単一HTML {index_path} および {root_index_path} を出力中...")
     with open(index_path, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    with open(root_index_path, "w", encoding="utf-8") as f:
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v5
-const CACHE_NAME = 'loldb-cache-v5';
+    sw_content = """// LoLDB Service Worker - Offline Cache v6
+const CACHE_NAME = 'loldb-cache-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -1363,13 +1915,16 @@ self.addEventListener('fetch', (event) => {
 });
 """
     sw_path = dist_dir / "sw.js"
+    root_sw_path = base_dir / "sw.js"
     print(f"Service Worker {sw_path} を出力中...")
     with open(sw_path, "w", encoding="utf-8") as f:
+        f.write(sw_content)
+    with open(root_sw_path, "w", encoding="utf-8") as f:
         f.write(sw_content)
 
     # PWA Manifest (manifest.json) の生成
     manifest_content = """{
-  "name": "LoLDB - League of Legends 攻略マスター",
+  "name": "LoLDB",
   "short_name": "LoLDB",
   "start_url": "./index.html",
   "display": "standalone",
@@ -1391,8 +1946,11 @@ self.addEventListener('fetch', (event) => {
 }
 """
     manifest_path = dist_dir / "manifest.json"
+    root_manifest_path = base_dir / "manifest.json"
     print(f"Manifest {manifest_path} を出力中...")
     with open(manifest_path, "w", encoding="utf-8") as f:
+        f.write(manifest_content)
+    with open(root_manifest_path, "w", encoding="utf-8") as f:
         f.write(manifest_content)
 
     html_size_kb = os.path.getsize(index_path) / 1024
