@@ -1056,6 +1056,74 @@ def build():
       text-overflow: ellipsis;
       width: 100%;
     }}
+    /* 対面シミュレーター 推奨アイテム複数グリッド表示 */
+    .sim-items-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }}
+    .sim-item-card {{
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .sim-item-card:hover {{
+      border-color: var(--primary);
+      background: #151e33;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }}
+    .sim-item-img {{
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      flex-shrink: 0;
+      object-fit: cover;
+    }}
+    .sim-item-info {{
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }}
+    .sim-item-top {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }}
+    .sim-item-tag {{
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      white-space: nowrap;
+    }}
+    .sim-item-name {{
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #f1f5f9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+    .sim-item-reason {{
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }}
     /* アイテム図鑑スタイル */
     .item-controls {{
       display: flex;
@@ -1214,6 +1282,70 @@ def build():
       margin-right: 6px;
       margin-bottom: 6px;
     }}
+    /* スペル2セット表示 */
+    .spells-sets-wrap {{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }}
+    .spell-set-card {{
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }}
+    .spell-set-title {{
+      font-size: 11px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    /* スキル取得順マトリクス表 */
+    .skill-matrix-container {{
+      margin-top: 10px;
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }}
+    .skill-matrix-scroll {{
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }}
+    .skill-matrix-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      text-align: center;
+      min-width: 520px;
+    }}
+    .skill-matrix-table th, .skill-matrix-table td {{
+      padding: 6px 3px;
+      border: 1px solid rgba(51, 65, 85, 0.4);
+    }}
+    .skill-matrix-table th {{
+      background: #101726;
+      color: var(--text-muted);
+      font-weight: 700;
+    }}
+    .skill-matrix-table .sticky-col {{
+      position: sticky;
+      left: 0;
+      background: #101726 !important;
+      font-weight: 800;
+      color: #fff !important;
+      z-index: 2;
+      width: 44px;
+    }}
+    .skill-point-active {{
+      background: #0284c7 !important;
+      color: #fff !important;
+      font-weight: 800;
+      border-radius: 4px;
+    }}
     /* アイテム詳細モーダル */
     .item-detail-header-wrap {{
       display: flex;
@@ -1316,7 +1448,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.7.3 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.8.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1441,7 +1573,7 @@ def build():
             <div class="sim-result-header">
               <span class="sim-result-title">🛡️ 積むべき対策おすすめアイテム（タップで詳細）</span>
             </div>
-            <div id="simItemList" class="item-tags" style="margin-top: 8px;"></div>
+            <div id="simItemList" class="sim-items-grid"></div>
           </div>
 
           <!-- 4. 狙い目コンボ ＆ 仕掛けどころ -->
@@ -1467,6 +1599,20 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v1.8.0</span>
+              <span class="changelog-date">2026-10-05</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【実戦コンボのQWER表記化・職人技網羅】全チャンピオンのコンボ表記をスキル名から「Q/W/E/R/AA/Flash」へと統一。ガレンのAA➜Q➜E➜W➜RやセトのW詠唱中Flash軸合わせ直撃など実戦的かつ高レート直伝のテクニックを網羅</li>
+              <li>【サモナースペル上位2セット表示】最高採用率の王道セット（TP+Flash等）と攻撃的・対面別セット（Ignite+Flash等）の上位2セットを並べて表示</li>
+              <li>【スキル取得順テーブル (Lv 1〜18)】各レベルでどのスキルを取得するかが一目で分かる横スクロール対応マトリクス表を新設</li>
+              <li>【レーン別立ち回り・スキルの吐きどころ刷新】レーン定型文を廃止し、チャンピオン固有スキル特性を活かした実戦的ガイドに全面刷新</li>
+              <li>【対面シミュレーターの推奨アイテム拡充】対面属性・サステイン対策、主戦力コア、生存保険アイテムを網羅した実戦的複数アイテム提示に進化</li>
+              <li>【オフライン閲覧時の画像表示根本修正】Service Workerの2層キャッシュ化（画像永続キャッシュ）とopaqueレスポンス対応、および全アイコン自動プリフェッチにより、オフラインでもガレンアイコンに化けず全画像が正常表示されるよう修正</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v1.7.3</span>
@@ -1813,17 +1959,64 @@ def build():
       const skillOrder = roleSpecificData.skill_order || c.skill_order || "Q > E > W";
       const skillOrderBadgeHtml = `<span class="badge-skill-order">⚡ スキル上げ順: ${{skillOrder}}</span>`;
 
-      // スペル一覧HTML
-      const spellsBadge = currentSpells.map(s => {{
-        const sImg = SPELL_IMG_MAP[s] || "SummonerFlash.png";
-        const sUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/spell/${{sImg}}`;
-        return `
-          <span class="spell-pill">
-            <img class="spell-img" src="${{sUrl}}" alt="${{s}}" onerror="this.style.display='none';">
-            <span>${{s}}</span>
-          </span>
-        `;
-      }}).join("") || "<span style='color:var(--text-muted); font-size:12px;'>標準スペル</span>";
+      // サモナースペル（採用率上位2セット）
+      const spellSets = roleSpecificData.spell_sets || c.spell_sets || [
+        {{ name: "第1採用セット（王道・最高採用率）", spells: currentSpells }}
+      ];
+      const spellsHtml = `
+        <div class="spells-sets-wrap">
+          ${{spellSets.map(ss => `
+            <div class="spell-set-card">
+              <div class="spell-set-title">⚡ ${{ss.name}}</div>
+              <div class="spells-badge-list">
+                ${{ss.spells.map(s => {{
+                  const sImg = SPELL_IMG_MAP[s] || "SummonerFlash.png";
+                  const sUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/spell/${{sImg}}`;
+                  return `
+                    <span class="spell-pill">
+                      <img class="spell-img" src="${{sUrl}}" alt="${{s}}" onerror="this.style.display='none';">
+                      <span>${{s}}</span>
+                    </span>
+                  `;
+                }}).join("")}}
+              </div>
+            </div>
+          `).join("")}}
+        </div>
+      `;
+
+      // スキル取得順マトリクス表 (Lv 1〜18)
+      const skillMatrix = roleSpecificData.skill_matrix || c.skill_matrix || {{
+        Q: [1, 4, 5, 7, 9], W: [3, 14, 15, 17, 18], E: [2, 8, 10, 12, 13], R: [6, 11, 16]
+      }};
+      const matrixSlots = ["Q", "W", "E", "R"];
+      let matrixTableRows = matrixSlots.map(slot => {{
+        const points = skillMatrix[slot] || [];
+        let cells = "";
+        for (let lv = 1; lv <= 18; lv++) {{
+          const isActive = points.includes(lv);
+          cells += `<td class="${{isActive ? "skill-point-active" : ""}}">${{isActive ? slot : ""}}</td>`;
+        }}
+        return `<tr><td class="sticky-col">${{slot}}</td>${{cells}}</tr>`;
+      }}).join("");
+
+      const skillMatrixHtml = `
+        <div class="skill-matrix-container">
+          <div class="skill-matrix-scroll">
+            <table class="skill-matrix-table">
+              <thead>
+                <tr>
+                  <th class="sticky-col">Lv</th>
+                  ${{Array.from({{length: 18}}, (_, i) => `<th>${{i+1}}</th>`).join("")}}
+                </tr>
+              </thead>
+              <tbody>
+                ${{matrixTableRows}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
 
       // 特徴・強み・弱み
       const ov = c.overview || {{}};
@@ -2070,8 +2263,8 @@ def build():
 
         <!-- 推奨スペル -->
         <div class="detail-section">
-          <div class="detail-heading">⚔️ 推奨サモナースペル（${{currentSelectedRole}}運用）</div>
-          <div class="spells-badge-list">${{spellsBadge}}</div>
+          <div class="detail-heading">⚔️ 推奨サモナースペル（${{currentSelectedRole}}運用・採用率上位）</div>
+          ${{spellsHtml}}
         </div>
 
         <!-- 推奨ビルド (複数パターン切り替え) -->
@@ -2106,7 +2299,10 @@ def build():
 
         <!-- 全スキル詳細 -->
         <div class="detail-section">
-          <div class="detail-heading">⚡ スキル詳細（Q・W・E・R・パッシブ）</div>
+          <div class="detail-heading">⚡ スキル詳細 & スキル取得順マトリクス</div>
+          <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:8px;">📊 レベル別取得テーブル (Lv 1〜18)</div>
+          ${{skillMatrixHtml}}
+          <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin:16px 0 8px 0;">🎯 各スキル性能解説</div>
           ${{skillsHtml}}
         </div>
       `;
@@ -2733,38 +2929,103 @@ def build():
         `;
       }}
 
-      // 3. 対策アイテムの自動選定
+      // 3. 積むべき対策 ＆ おすすめアイテムの選定 (複数アイテム)
       if (simItemList) {{
-        const counterItems = [];
+        const recommendedItems = [];
+        const seenIds = new Set();
+
+        function findItemId(name) {{
+          if (!name) return null;
+          for (const [id, it] of Object.entries(ITEMS)) {{
+            if (it.name === name) return id;
+          }}
+          return null;
+        }}
+
+        function addItem(id, name, tag, reason) {{
+          if (!id && name) {{
+            id = findItemId(name);
+          }}
+          if (id && !seenIds.has(id)) {{
+            seenIds.add(id);
+            recommendedItems.push({{ id, name: ITEMS[id]?.name || name, tag, reason }});
+          }}
+        }}
+
         const oppRoles = opp.roles || [];
         const oppResource = opp.resource || "";
+        const myRoles = me.roles || [];
 
+        // ① 対面属性・サステイン対策特化
         if (opp.sustain_info?.has_sustain) {{
-          counterItems.push({{ name: "ブランブル ベスト", id: "3076", reason: "対面回復阻害(AR)" }});
-          counterItems.push({{ name: "エクスキューショナー コーリング", id: "3123", reason: "対面回復阻害(AD)" }});
-          counterItems.push({{ name: "忘却のオーブ", id: "3916", reason: "対面回復阻害(AP)" }});
+          if (myRoles.includes("Mage") || (me.resource && me.resource.includes("マナ") && !myRoles.includes("Marksman"))) {{
+            addItem("3916", "忘却のオーブ", "対面重傷", "回復阻害(AP)");
+          }} else if (myRoles.includes("Tank")) {{
+            addItem("3076", "ブランブル ベスト", "対面重傷", "回復阻害(AR)");
+          }} else {{
+            addItem("3123", "エクスキューショナー コーリング", "対面重傷", "回復阻害(AD)");
+          }}
         }}
 
-        if (oppRoles.includes("Mage") || (oppResource.includes("マナ") && !oppRoles.includes("Marksman"))) {{
-          counterItems.push({{ name: "マーキュリー ブーツ", id: "3111", reason: "魔法耐性 ＆ 行動妨害低減" }});
-          counterItems.push({{ name: "ケイニック ルーコン", id: "6664", reason: "対AP最強シールド防具" }});
+        // 対面ダメージ属性対策（靴＋防具）
+        const isOppAP = oppRoles.includes("Mage") || (oppResource.includes("マナ") && !oppRoles.includes("Marksman") && !oppRoles.includes("Tank"));
+        if (isOppAP) {{
+          addItem("3111", "マーキュリー ブーツ", "対AP靴", "魔法耐性 ＆ 行動妨害低減");
+          if (myRoles.includes("Tank") || myRoles.includes("Fighter")) {{
+            addItem("6664", "ケイニック ルーコン", "対AP防具", "魔法シールド ＆ 高MR");
+          }} else if (myRoles.includes("Assassin") || myRoles.includes("Marksman")) {{
+            addItem("3156", "マルモティウスの胃袋", "対AP火力", "魔法シールド ＆ 攻撃力");
+          }}
         }} else {{
-          counterItems.push({{ name: "プレート スチールキャップ", id: "3047", reason: "通常攻撃被ダメージ低減" }});
+          addItem("3047", "プレート スチールキャップ", "対AD靴", "通常攻撃被ダメ12%低減");
+          if (myRoles.includes("Tank")) {{
+            addItem("3143", "ランデュイン オーメン", "対AD防具", "クリティカル＆通常攻撃耐性");
+          }} else if (myRoles.includes("Fighter")) {{
+            addItem("6333", "デス ダンス", "対AD耐久", "被ダメ遅延 ＆ キル時回復");
+          }}
         }}
 
-        if (oppRoles.includes("Tank") || ["Sion", "Malphite", "ChoGath", "Ornn", "DrMundo"].includes(opp.id)) {{
-          counterItems.push({{ name: "ブラック クリーバー", id: "3071", reason: "対タンク物理防御破壊" }});
-          counterItems.push({{ name: "ドミニク リガード", id: "3036", reason: "対タンク割合貫通" }});
+        // 相手が硬いタンクの場合の貫通アイテム
+        if (oppRoles.includes("Tank") || ["Sion", "Malphite", "ChoGath", "Ornn", "DrMundo", "Shen", "Rammus", "TahmKench"].includes(opp.id)) {{
+          if (myRoles.includes("Mage")) {{
+            addItem("3135", "ヴォイド スタッフ", "対タンク貫通", "40% 魔法防御貫通");
+          }} else {{
+            addItem("3071", "ブラック クリーバー", "対タンク破甲", "物理防御破壊 ＆ 加速");
+          }}
         }}
 
-        simItemList.innerHTML = counterItems.map(it => {{
+        // ② あなたの主戦力・中核コアアイテム (採用率・勝率重視)
+        const myCoreBuild = me.core_build || (me.build_patterns && me.build_patterns[0]?.core) || [];
+        myCoreBuild.forEach(itemName => {{
+          if (recommendedItems.length < 5) {{
+            addItem(null, itemName, "主戦力コア", "対面戦を制する中核コア");
+          }}
+        }});
+
+        // ③ 後半・交戦の保険・生存アイテム
+        if (recommendedItems.length < 6) {{
+          if (myRoles.includes("Fighter") || myRoles.includes("Tank")) {{
+            addItem("3053", "ステラックの篭手", "交戦生存", "瀕死時巨大シールド＆耐性");
+          }} else if (myRoles.includes("Mage")) {{
+            addItem("3157", "ゾーニャの砂時計", "緊急無敵", "2.5秒無敵でバースト回避");
+          }} else if (myRoles.includes("Marksman") || myRoles.includes("Assassin")) {{
+            addItem("3026", "ガーディアン エンジェル", "復活保険", "死亡時HP50%で復活");
+          }}
+        }}
+
+        simItemList.innerHTML = recommendedItems.slice(0, 6).map(it => {{
           const itemImg = `https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/${{it.id}}.png`;
           return `
-            <span class="item-pill clickable-item" data-item-id="${{it.id}}" title="タップして詳細を表示">
-              <img class="item-img" src="${{itemImg}}" alt="${{it.name}}" onerror="this.src='icon.png';">
-              <span>${{it.name}}</span>
-              <span style="font-size:10px; color:var(--accent); margin-left:2px;">(${{it.reason}})</span>
-            </span>
+            <div class="sim-item-card clickable-item" data-item-id="${{it.id}}" title="タップして性能詳細を表示">
+              <img class="sim-item-img" src="${{itemImg}}" alt="${{it.name}}" onerror="this.src='icon.png';">
+              <div class="sim-item-info">
+                <div class="sim-item-top">
+                  <span class="sim-item-tag">${{it.tag}}</span>
+                  <span class="sim-item-name">${{it.name}}</span>
+                </div>
+                <div class="sim-item-reason">${{it.reason}}</div>
+              </div>
+            </div>
           `;
         }}).join("");
 
@@ -2888,6 +3149,28 @@ def build():
     renderList();
     renderItemsList();
 
+    // チャンピオン画像バックグラウンド・プリフェッチ（完全オフライン化）
+    function prewarmChampionImages() {{
+      if (!('serviceWorker' in navigator) || !navigator.onLine) return;
+      const champList = Object.values(CHAMPIONS);
+      let idx = 0;
+      function fetchNextBatch() {{
+        if (idx >= champList.length) return;
+        const end = Math.min(idx + 10, champList.length);
+        for (let i = idx; i < end; i++) {{
+          const c = champList[i];
+          const patch = c.patch || "16.19.1";
+          const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{c.id}}.png`;
+          const img = new Image();
+          img.src = imgUrl;
+        }}
+        idx = end;
+        setTimeout(fetchNextBatch, 250);
+      }}
+      setTimeout(fetchNextBatch, 1200);
+    }}
+    prewarmChampionImages();
+
     // Service Worker 登録（更新チェック付き）
     if ('serviceWorker' in navigator) {{
       window.addEventListener('load', () => {{
@@ -2912,8 +3195,10 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Offline Cache v11
-const CACHE_NAME = 'loldb-cache-v11';
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v12
+const CORE_CACHE = 'loldb-core-v12';
+const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
+
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -2924,8 +3209,8 @@ const ASSETS_TO_CACHE = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching offline assets');
+    caches.open(CORE_CACHE).then((cache) => {
+      console.log('[SW] Pre-caching core offline assets');
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
@@ -2936,8 +3221,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
       return Promise.all(keyList.map((key) => {
-        if (key !== CACHE_NAME) {
-          console.log('[SW] Removing old cache', key);
+        // IMAGE_CACHE (loldb-images-v1) と 最新の CORE_CACHE 以外を破棄
+        if (key !== CORE_CACHE && key !== IMAGE_CACHE) {
+          console.log('[SW] Removing old core cache:', key);
           return caches.delete(key);
         }
       }));
@@ -2956,7 +3242,7 @@ self.addEventListener('fetch', (event) => {
         .then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200) {
             const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+            caches.open(CORE_CACHE).then((cache) => cache.put(event.request, responseToCache));
           }
           return networkResponse;
         })
@@ -2967,7 +3253,36 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // 2. その他の静的アセット（画像等）は Cache-First
+  // 2. 画像リクエスト（Data Dragon CDN および ローカル画像）は Cache-First (永続画像キャッシュ)
+  const isImage = event.request.destination === 'image' ||
+                  url.pathname.match(/\\.(png|jpg|jpeg|svg|webp|ico)$/i) ||
+                  url.hostname.includes('ddragon.leagueoflegends.com');
+
+  if (isImage) {
+    event.respondWith(
+      caches.open(IMAGE_CACHE).then((imageCache) => {
+        return imageCache.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          return fetch(event.request).then((networkResponse) => {
+            // クロスオリジン（no-cors）画像レスポンスは status が 0 (type: 'opaque') になるため、
+            // status === 200 に加えて type === 'opaque' も確実にキャッシュに保存する！
+            if (networkResponse && (networkResponse.status === 200 || networkResponse.type === 'opaque')) {
+              imageCache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          }).catch(() => {
+            // オフライン時のローカルアイコンフォールバック
+            return caches.match('./icon.png');
+          });
+        });
+      })
+    );
+    return;
+  }
+
+  // 3. その他の静的アセットは CORE_CACHE による Cache-First
   event.respondWith(
     caches.match(event.request).then((response) => {
       if (response) {
@@ -2976,7 +3291,7 @@ self.addEventListener('fetch', (event) => {
       return fetch(event.request).then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200 && event.request.method === 'GET') {
           const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
+          caches.open(CORE_CACHE).then((cache) => {
             cache.put(event.request, responseToCache);
           });
         }
