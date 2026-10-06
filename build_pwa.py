@@ -303,6 +303,101 @@ def build():
     .badge-adc {{ background-color: #eab308; color: #000; }}
     .badge-sup {{ background-color: #9333ea; }}
     .badge-default {{ background-color: #475569; }}
+    /* ダメージタイプバッジ (一覧カード右上 & 詳細モーダル用) */
+    .damage-badge-wrap {{
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 2;
+    }}
+    .damage-badge {{
+      font-size: 9.5px;
+      font-weight: 900;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      backdrop-filter: blur(2px);
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }}
+    .badge-ad {{
+      background: rgba(220, 38, 38, 0.9);
+      color: #fff;
+      border: 1px solid #ef4444;
+    }}
+    .badge-ap {{
+      background: rgba(147, 51, 234, 0.9);
+      color: #fff;
+      border: 1px solid #c084fc;
+    }}
+    .badge-hybrid {{
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.92) 0%, rgba(147, 51, 234, 0.92) 100%);
+      color: #fff;
+      border: 1px solid #fbbf24;
+    }}
+    .badge-tank {{
+      background: rgba(16, 185, 129, 0.9);
+      color: #fff;
+      border: 1px solid #34d399;
+    }}
+    /* 詳細モーダル用ダメージ属性・防具対策ガイド */
+    .modal-damage-header {{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }}
+    .modal-damage-title {{
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+    }}
+    .modal-damage-counter {{
+      font-size: 11.5px;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-left: auto;
+    }}
+    .dual-build-alert {{
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fde68a;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }}
+    /* 対面シミュレーター 詳細モーダルジャンプボタン */
+    .sim-view-detail-btn {{
+      background: #0284c7;
+      color: #fff;
+      border: 1px solid #38bdf8;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      margin-top: 4px;
+    }}
+    .sim-view-detail-btn:hover {{
+      background: #0369a1;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
+    }}
     .champ-info {{
       padding: 10px;
       display: flex;
@@ -1448,7 +1543,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.8.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.9.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1516,8 +1611,12 @@ def build():
                 <img id="simImgMe" class="sim-slot-img" src="" alt="" style="display: none;">
               </div>
               <div class="sim-slot-info">
-                <div class="sim-slot-name" id="simNameMe">チャンピオンを選択</div>
+                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                  <div class="sim-slot-name" id="simNameMe">チャンピオンを選択</div>
+                  <span id="simDamageBadgeMe" class="damage-badge" style="display: none;"></span>
+                </div>
                 <div class="sim-slot-sub" id="simRoleMe">タップして選択</div>
+                <button id="simDetailBtnMe" class="sim-view-detail-btn" style="display: none;" onclick="viewSimChampDetail(event, 'me')">🔍 スキル・詳細を見る</button>
               </div>
             </div>
           </div>
@@ -1535,8 +1634,12 @@ def build():
                 <img id="simImgOpp" class="sim-slot-img" src="" alt="" style="display: none;">
               </div>
               <div class="sim-slot-info">
-                <div class="sim-slot-name" id="simNameOpp">チャンピオンを選択</div>
+                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                  <div class="sim-slot-name" id="simNameOpp">チャンピオンを選択</div>
+                  <span id="simDamageBadgeOpp" class="damage-badge" style="display: none;"></span>
+                </div>
                 <div class="sim-slot-sub" id="simRoleOpp">タップして選択</div>
+                <button id="simDetailBtnOpp" class="sim-view-detail-btn" style="display: none;" onclick="viewSimChampDetail(event, 'opp')">🔍 スキル・詳細を見る</button>
               </div>
             </div>
           </div>
@@ -1599,6 +1702,18 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v1.9.0</span>
+              <span class="changelog-date">2026-10-06</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【AD/APダメージ属性の一目判別】全173体のチャンピオンカードおよび詳細画面に「AD (物理)」「AP (魔法)」「AD/AP (ハイブリッド)」「TANK」の属性バッジを明記</li>
+              <li>【AD/AP両型対応 ＆ ビルド別属性表記】カタリナ、ヴァルス、マルファイト、ケイル、トゥイッチ、ボリベア等の両型持ちに注意アラートを新設。推奨ビルド名に[AD][AP][TANK]を明記</li>
+              <li>【対面時の防具選択ガイド】「相手がADならAR（物理防御）」「相手がAPならMR（魔法耐性）」を積むべき明確な指針を詳細画面・シミュレーターに表示</li>
+              <li>【対面シミュレーターから詳細・スキル確認へ1タップジャンプ】シミュレーターでピックした自分・相手のカードに「🔍 スキル・詳細を見る」ボタンを新設。ワンタップでスキル仕様やコンボを確認可能</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v1.8.0</span>
@@ -1886,6 +2001,11 @@ def build():
           `<span class="mini-badge ${{getRoleBadgeClass(r)}}">${{r}}</span>`
         ).join("");
 
+        // ダメージ属性バッジ (AD / AP / HYBRID / TANK)
+        const dp = champ.damage_profile || {{}};
+        const dmgBadgeHtml = dp.badge_text ? 
+          `<div class="damage-badge-wrap"><span class="damage-badge ${{dp.badge_class || 'badge-ad'}}">${{dp.badge_text}}</span></div>` : "";
+
         // Data Dragon公式CDNまたはフォールバック
         const patch = champ.patch || "16.19.1";
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
@@ -1895,6 +2015,7 @@ def build():
             <img class="champ-card-img" src="${{imgUrl}}" alt="${{champ.name}}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="champ-card-img-placeholder" style="display:none;">${{champ.name.charAt(0)}}</div>
             <div class="role-badge-list">${{rolesHtml}}</div>
+            ${{dmgBadgeHtml}}
           </div>
           <div class="champ-info">
             <div class="champ-name">${{champ.name}}</div>
@@ -1943,6 +2064,27 @@ def build():
                 <span>${{r}} レーン</span>
               </button>
             `).join("")}}
+          </div>
+        `;
+      }}
+
+      // ダメージ属性 ＆ 両刀プロファイル
+      const dp = c.damage_profile || {{}};
+      let damageBadgeHtml = "";
+      let dualBuildAlertHtml = "";
+      if (dp.badge_text) {{
+        damageBadgeHtml = `
+          <div class="modal-damage-header">
+            <span class="modal-damage-title">⚡ 主ダメージ属性:</span>
+            <span class="damage-badge ${{dp.badge_class || "badge-ad"}}">${{dp.badge_text}} (${{dp.label || ""}})</span>
+            <span class="modal-damage-counter">🛡️ 対面時の推奨防具: <strong>${{dp.counter_defense || "AR/MR"}}</strong></span>
+          </div>
+        `;
+      }}
+      if (dp.has_dual_build) {{
+        dualBuildAlertHtml = `
+          <div class="dual-build-alert">
+            ⚡ <strong>【AD / AP 両型ビルド対応】</strong> ${{dp.dual_build_desc}}
           </div>
         `;
       }}
@@ -2222,6 +2364,10 @@ def build():
 
       modalBodyEl.innerHTML = `
         ${{roleTabsHtml}}
+
+        <!-- ダメージ属性 ＆ 防具対策ガイド -->
+        ${{damageBadgeHtml}}
+        ${{dualBuildAlertHtml}}
 
         <!-- ハイライトバッジ群 -->
         <div class="champ-highlight-badges">
@@ -2820,6 +2966,7 @@ def build():
       const c = CHAMPIONS[champId];
       if (!c) return;
       const patch = c.patch || "16.19.1";
+      const dp = c.damage_profile || {{}};
 
       if (simCurrentPickingTarget === 'me') {{
         simMyChampId = champId;
@@ -2835,6 +2982,15 @@ def build():
         }}
         if (simNameMe) simNameMe.textContent = c.name;
         if (simRoleMe) simRoleMe.textContent = c.roles ? c.roles.join(" / ") : "";
+
+        const dmgBadgeMe = document.getElementById("simDamageBadgeMe");
+        const detailBtnMe = document.getElementById("simDetailBtnMe");
+        if (dmgBadgeMe && dp.badge_text) {{
+          dmgBadgeMe.textContent = dp.badge_text;
+          dmgBadgeMe.className = `damage-badge ${{dp.badge_class || "badge-ad"}}`;
+          dmgBadgeMe.style.display = "inline-flex";
+        }}
+        if (detailBtnMe) detailBtnMe.style.display = "inline-flex";
       }} else {{
         simOppChampId = champId;
         if (simCardOpp) {{
@@ -2849,12 +3005,30 @@ def build():
         }}
         if (simNameOpp) simNameOpp.textContent = c.name;
         if (simRoleOpp) simRoleOpp.textContent = c.roles ? c.roles.join(" / ") : "";
+
+        const dmgBadgeOpp = document.getElementById("simDamageBadgeOpp");
+        const detailBtnOpp = document.getElementById("simDetailBtnOpp");
+        if (dmgBadgeOpp && dp.badge_text) {{
+          dmgBadgeOpp.textContent = dp.badge_text;
+          dmgBadgeOpp.className = `damage-badge ${{dp.badge_class || "badge-ad"}}`;
+          dmgBadgeOpp.style.display = "inline-flex";
+        }}
+        if (detailBtnOpp) detailBtnOpp.style.display = "inline-flex";
       }}
 
       if (history.state && history.state.modal === 'sim_picker') history.back();
       else closeSimPicker();
 
       updateSimAnalysis();
+    }}
+
+    // 対面シミュレーターから選んだチャンプの詳細ページへ飛ぶ関数 (濱田くんの重要指定！)
+    function viewSimChampDetail(e, who) {{
+      if (e) e.stopPropagation();
+      const cid = (who === 'me') ? simMyChampId : simOppChampId;
+      if (cid && CHAMPIONS[cid]) {{
+        openDetail(cid);
+      }}
     }}
 
     if (simSearchInput) {{
@@ -2920,11 +3094,18 @@ def build():
         }}
       }}
 
-      // レーン戦注意点
+      // レーン戦注意点 ＆ ダメージ属性対策
       if (simLaningTips) {{
         const oppWeaknesses = (opp.overview?.weaknesses || []).join("、");
+        const oppDp = opp.damage_profile || {{}};
+        let dualNote = "";
+        if (oppDp.has_dual_build) {{
+          dualNote = `<div style="margin-top:6px; padding:6px 10px; background:rgba(245, 158, 11, 0.12); border-left:3px solid #f59e0b; border-radius:4px; color:#fde68a;">⚠️ <strong>【対面注意・AD/AP両型あり】</strong> ${{oppDp.dual_build_desc}}</div>`;
+        }}
         simLaningTips.innerHTML = `
-          <div style="margin-bottom: 6px;"><strong>【相手の弱み・突くべき隙】</strong> ${{oppWeaknesses || "主要スキルのクールダウン中が最大の仕掛けどころです。"}}</div>
+          <div style="margin-bottom: 6px;"><strong>【相手の属性 ＆ 対策】</strong> 主ダメージ: <span class="damage-badge ${{oppDp.badge_class || 'badge-ad'}}">${{oppDp.badge_text || 'AD'}} (${{oppDp.label || ''}})</span> ➔ <strong>${{oppDp.counter_defense || '防御アイテムを選択'}}</strong></div>
+          ${{dualNote}}
+          <div style="margin-bottom: 6px; margin-top: 6px;"><strong>【相手の弱み・突くべき隙】</strong> ${{oppWeaknesses || "主要スキルのクールダウン中が最大の仕掛けどころです。"}}</div>
           <div><strong>【あなたの立ち回り指針】</strong> ${{me.gameplay_notes?.laning || "相手のスキルを躱してからトレードに入りましょう。"}}</div>
         `;
       }}
@@ -2955,6 +3136,9 @@ def build():
         const oppRoles = opp.roles || [];
         const oppResource = opp.resource || "";
         const myRoles = me.roles || [];
+        const oppDp = opp.damage_profile || {{}};
+        const isOppAP = oppDp.primary_type === "AP" || (oppDp.primary_type === "TANK" && !["DrMundo", "KSante", "Poppy", "Sion", "Skarner"].includes(opp.id));
+        const isOppDual = oppDp.has_dual_build;
 
         // ① 対面属性・サステイン対策特化
         if (opp.sustain_info?.has_sustain) {{
@@ -2968,8 +3152,14 @@ def build():
         }}
 
         // 対面ダメージ属性対策（靴＋防具）
-        const isOppAP = oppRoles.includes("Mage") || (oppResource.includes("マナ") && !oppRoles.includes("Marksman") && !oppRoles.includes("Tank"));
-        if (isOppAP) {{
+        if (isOppDual) {{
+          // 両型持ちの場合: 相手の型に合わせたAR/MR両方の選択肢を提示
+          addItem("3047", "プレート スチールキャップ", "対AD型", "相手がADビルド時の通常攻撃低減");
+          addItem("3111", "マーキュリー ブーツ", "対AP型", "相手がAPビルド時の魔法耐性&CC低減");
+          if (myRoles.includes("Tank") || myRoles.includes("Fighter")) {{
+            addItem("6664", "ケイニック ルーコン", "対AP防具", "相手がAPビルド時の魔法シールド");
+          }}
+        }} else if (isOppAP) {{
           addItem("3111", "マーキュリー ブーツ", "対AP靴", "魔法耐性 ＆ 行動妨害低減");
           if (myRoles.includes("Tank") || myRoles.includes("Fighter")) {{
             addItem("6664", "ケイニック ルーコン", "対AP防具", "魔法シールド ＆ 高MR");
@@ -3195,8 +3385,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v12
-const CORE_CACHE = 'loldb-core-v12';
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v13
+const CORE_CACHE = 'loldb-core-v13';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
 
 const ASSETS_TO_CACHE = [
