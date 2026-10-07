@@ -1463,6 +1463,65 @@ def build():
       flex-wrap: wrap;
       margin-top: 6px;
     }}
+    .recipe-grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+      gap: 8px;
+      margin-top: 6px;
+    }}
+    .recipe-item-card {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #111827;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .recipe-item-card:hover {{
+      border-color: var(--primary);
+      background: #1e293b;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }}
+    .recipe-item-card img {{
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      flex-shrink: 0;
+      background: #0b0f19;
+    }}
+    .recipe-item-info {{
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+    }}
+    .recipe-item-name {{
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #f1f5f9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+    .recipe-item-price {{
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--accent);
+    }}
+    .recipe-section-title {{
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
     .recipe-item-pill {{
       display: inline-flex;
       align-items: center;
@@ -1484,6 +1543,109 @@ def build():
       width: 20px;
       height: 20px;
       border-radius: 4px;
+    }}
+    /* アイテム図鑑 2カラムレイアウト & 左側ステータスフィルター */
+    .items-layout-container {{
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }}
+    .item-stats-sidebar {{
+      width: 210px;
+      flex-shrink: 0;
+      background: #111827;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      position: sticky;
+      top: 130px;
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
+    }}
+    .stats-sidebar-header {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }}
+    .stats-sidebar-title {{
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
+    .stat-count-pill {{
+      background: var(--primary);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 10px;
+    }}
+    .stat-clear-btn {{
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #f87171;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }}
+    .stat-clear-btn:hover {{
+      background: rgba(239, 68, 68, 0.3);
+    }}
+    .stats-filter-list {{
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }}
+    .stat-chk-item {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #cbd5e1;
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 6px;
+      transition: background 0.15s;
+      user-select: none;
+    }}
+    .stat-chk-item:hover {{
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+    }}
+    .stat-chk-item input {{
+      accent-color: var(--primary);
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+    }}
+    .items-main-area {{
+      flex: 1;
+      min-width: 0;
+    }}
+    @media (max-width: 768px) {{
+      .items-layout-container {{
+        flex-direction: column;
+      }}
+      .item-stats-sidebar {{
+        width: 100%;
+        position: static;
+        max-height: none;
+        padding: 10px;
+      }}
+      .stats-filter-list {{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+      }}
     }}
     .item-step {{
       background: #0284c7;
@@ -1543,7 +1705,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v1.9.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v2.0.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1552,7 +1714,7 @@ def build():
         <button class="nav-tab" data-tab="simulator">⚔️ 対面シミュレーター</button>
       </nav>
       <div class="controls" id="champControls">
-        <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名で検索..." autocomplete="off">
+        <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名・ひらがなで検索..." autocomplete="off">
         <div class="role-tabs">
           <button class="role-btn active" data-role="ALL">ALL</button>
           <button class="role-btn" data-role="TOP">TOP</button>
@@ -1572,11 +1734,11 @@ def build():
       <div class="grid-container" id="champGrid"></div>
     </div>
 
-    <!-- アイテム図鑑ビュー (Phase 2 実装) -->
+    <!-- アイテム図鑑ビュー (Phase 2 & 濱田くんの機能拡張) -->
     <div id="viewItems" style="display: none;">
       <div class="item-controls">
         <div class="item-controls-row">
-          <input type="text" id="itemSearchInput" class="item-search-input" placeholder="アイテム名・通称（例: bc, 帽子, 時計）で検索..." autocomplete="off">
+          <input type="text" id="itemSearchInput" class="item-search-input" placeholder="アイテム名・通称・ひらがな（例: bc, 帽子, ドラン, 時計）で検索..." autocomplete="off">
           <select id="itemSortSelect" class="item-sort-select">
             <option value="price_desc">価格が高い順</option>
             <option value="price_asc">価格が安い順</option>
@@ -1585,6 +1747,7 @@ def build():
         </div>
         <div class="item-category-tabs">
           <button class="item-cat-btn active" data-cat="ALL">ALL</button>
+          <button class="item-cat-btn" data-cat="STARTUP">🧪 スタートアップ</button>
           <button class="item-cat-btn" data-cat="AD">⚔️ 攻撃力(AD)</button>
           <button class="item-cat-btn" data-cat="AP">🔮 魔力(AP)</button>
           <button class="item-cat-btn" data-cat="TANK">🛡️ 防具・タンク</button>
@@ -1593,8 +1756,40 @@ def build():
           <button class="item-cat-btn" data-cat="CONSUMABLE">🧪 消耗品/その他</button>
         </div>
       </div>
-      <div class="count-status" id="itemCountStatus">表示中: 0 個</div>
-      <div class="items-grid" id="itemsGrid"></div>
+
+      <!-- 2カラム構成: 左側ステータスフィルター + 右側アイテム一覧 -->
+      <div class="items-layout-container">
+        <aside class="item-stats-sidebar" id="itemStatsSidebar">
+          <div class="stats-sidebar-header">
+            <div class="stats-sidebar-title">
+              <span>⚙️ ステータス絞り込み</span>
+              <span id="activeStatBadge" class="stat-count-pill" style="display:none;">0</span>
+            </div>
+            <button id="clearStatFiltersBtn" class="stat-clear-btn" type="button" title="全ステータスフィルターをクリア">全解除</button>
+          </div>
+          <div class="stats-filter-list">
+            <label class="stat-chk-item"><input type="checkbox" value="AD" class="stat-filter-chk"><span>⚔️ 攻撃力 (AD)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AP" class="stat-filter-chk"><span>🔮 魔力 (AP)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AS" class="stat-filter-chk"><span>⚡ 攻撃速度 (AS)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AR" class="stat-filter-chk"><span>🛡️ 物理防御 (AR)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MR" class="stat-filter-chk"><span>🔮 魔法防御 (MR)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="HP" class="stat-filter-chk"><span>❤️ 体力 (HP)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AH" class="stat-filter-chk"><span>⏱️ スキルヘイスト</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="CRIT" class="stat-filter-chk"><span>🎯 クリティカル</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MS" class="stat-filter-chk"><span>👟 移動速度 (MS)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="LETHALITY" class="stat-filter-chk"><span>🗡️ 脅威 (Lethality)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MAGICPEN" class="stat-filter-chk"><span>🌀 魔防貫通</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="VAMP" class="stat-filter-chk"><span>🩸 吸血/ヴァンプ</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MANA" class="stat-filter-chk"><span>💧 マナ (Mana)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="HPREGEN" class="stat-filter-chk"><span>🌿 体力自動回復</span></label>
+          </div>
+        </aside>
+
+        <div class="items-main-area">
+          <div class="count-status" id="itemCountStatus">表示中: 0 個</div>
+          <div class="items-grid" id="itemsGrid"></div>
+        </div>
+      </div>
     </div>
 
     <!-- 対面シミュレータービュー (Phase 4 実装) -->
@@ -1702,6 +1897,20 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.0.0</span>
+              <span class="changelog-date">2026-10-07</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【対面シミュレーターの勝率・有利不利を100%完全網羅】全173体×全173体（約3万通り）の対面マトリクスデータベースを完全搭載！五分ばかりの表示を解消し、対面勝率（%）と実戦的な相性理由を全対面で確実に表示</li>
+              <li>【ピッカー選択画面のあいうえお順（五十音順）ソート】自キャラ・敵キャラ選択画面を日本語五十音順で並べ替え、直感的に探せるよう改善</li>
+              <li>【すべての検索窓でひらがな＆部分一致検索に対応】メイン検索・ピッカー検索・アイテム検索の全検索窓で「がれん」「せと」「どらん」等のひらがな入力や部分文字列検索に対応</li>
+              <li>【アイテム図鑑の大幅進化・スタートアップ新設】ドラン系、涙、ペット、ポーション等を網羅した「🧪 スタートアップ」ジャンルを新設</li>
+              <li>【ステータス複数チェックボックス絞り込み】UI左側にステータス一覧（AD, AP, AS, AR, MR, HP, AH等）をチェックボックス配置し、複数選択（AND検索）での絞り込みが可能に</li>
+              <li>【ゲーム内ショップ風 合成ツリー (Builds From & Into)】アイテム詳細モーダル上部に、合成素材と派生先上位アイテムをカード形式で大きく表示。タップで自由に相互ジャンプ可能に</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v1.9.0</span>
@@ -1894,24 +2103,24 @@ def build():
           <div class="detail-heading">📊 基本ステータス</div>
           <div id="itemDetailStatsText" style="font-size: 13px; color: #e2e8f0; line-height: 1.6; font-weight: 600;"></div>
         </div>
+        <!-- レシピツリー (ゲーム内ショップ風: ステータス直後に大きく配置) -->
+        <div class="detail-section" id="itemDetailRecipeSec">
+          <div class="detail-heading">🔨 合成ツリー (素材 ＆ 派生先)</div>
+          <div class="recipe-tree-wrap">
+            <div id="itemRecipeFromBox" style="margin-bottom: 12px;">
+              <div class="recipe-section-title">🔽 合成素材アイテム (Builds From):</div>
+              <div id="itemRecipeFromList" class="recipe-grid"></div>
+            </div>
+            <div id="itemRecipeIntoBox">
+              <div class="recipe-section-title">🔼 派生先上位アイテム (Builds Into):</div>
+              <div id="itemRecipeIntoList" class="recipe-grid"></div>
+            </div>
+          </div>
+        </div>
         <!-- 効果説明 -->
         <div class="detail-section" id="itemDetailDescSec">
           <div class="detail-heading">✨ 特殊効果（パッシブ / アクティブ）</div>
           <div id="itemDetailDescText" style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; white-space: pre-line;"></div>
-        </div>
-        <!-- レシピツリー -->
-        <div class="detail-section" id="itemDetailRecipeSec">
-          <div class="detail-heading">🔨 レシピ（素材 / 派生先）</div>
-          <div class="recipe-tree-wrap">
-            <div id="itemRecipeFromBox">
-              <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">素材アイテム (Builds From):</div>
-              <div id="itemRecipeFromList" class="recipe-row"></div>
-            </div>
-            <div id="itemRecipeIntoBox" style="margin-top: 8px;">
-              <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">派生先アイテム (Builds Into):</div>
-              <div id="itemRecipeIntoList" class="recipe-row"></div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1972,9 +2181,39 @@ def build():
       }}
     }}
 
+    // ひらがな・カタカナ相互変換 & 柔軟検索ユーティリティ (全検索窓で共通利用)
+    function toHiragana(str) {{
+      if (!str) return "";
+      return str.replace(/[\u30a1-\u30f6]/g, match => {{
+        return String.fromCharCode(match.charCodeAt(0) - 0x60);
+      }});
+    }}
+
+    function toKatakana(str) {{
+      if (!str) return "";
+      return str.replace(/[\u3041-\u3096]/g, match => {{
+        return String.fromCharCode(match.charCodeAt(0) + 0x60);
+      }});
+    }}
+
+    function matchSearch(text, query) {{
+      if (!query) return true;
+      if (!text) return false;
+      const t = text.toLowerCase();
+      const q = query.toLowerCase();
+      if (t.includes(q)) return true;
+      const th = toHiragana(t);
+      const qh = toHiragana(q);
+      if (th.includes(qh)) return true;
+      const tk = toKatakana(t);
+      const qk = toKatakana(q);
+      if (tk.includes(qk)) return true;
+      return false;
+    }}
+
     function renderList() {{
       gridEl.innerHTML = "";
-      const query = searchKeyword.trim().toLowerCase();
+      const query = searchKeyword.trim();
       let matched = 0;
 
       Object.values(CHAMPIONS).forEach(champ => {{
@@ -1983,12 +2222,12 @@ def build():
           if (!champ.roles || !champ.roles.includes(currentRole)) return;
         }}
 
-        // 検索クエリ
+        // 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
         if (query) {{
-          const name = (champ.name || "").toLowerCase();
-          const id = (champ.id || "").toLowerCase();
-          const title = (champ.title || "").toLowerCase();
-          if (!name.includes(query) && !id.includes(query) && !title.includes(query)) return;
+          const isHit = matchSearch(champ.name, query) ||
+                        matchSearch(champ.id, query) ||
+                        matchSearch(champ.title, query);
+          if (!isHit) return;
         }}
 
         matched++;
@@ -2673,14 +2912,18 @@ def build():
         itemRecipeFromList.innerHTML = fromIds.map(fid => {{
           const fItem = ITEMS[fid];
           const fName = fItem ? fItem.name : `ID:${{fid}}`;
-          const fPrice = fItem ? `${{fItem.gold?.total || 0}}G` : "";
+          const fPrice = fItem ? `${{fItem.gold?.total || 0}} G` : "無料";
           const fImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{fid}}.png`;
+          const fStats = fItem?.stats_summary ? `<span style="font-size:10px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${{fItem.stats_summary}}</span>` : "";
           return `
-            <span class="recipe-item-pill" data-recipe-id="${{fid}}" title="タップして詳細を表示">
+            <div class="recipe-item-card" data-recipe-id="${{fid}}" title="${{fName}} の詳細を表示">
               <img src="${{fImg}}" alt="${{fName}}" onerror="this.src='icon.png';">
-              <span>${{fName}}</span>
-              <span style="color:var(--accent); font-size:11px;">${{fPrice}}</span>
-            </span>
+              <div class="recipe-item-info">
+                <span class="recipe-item-name">${{fName}}</span>
+                <span class="recipe-item-price">💰 ${{fPrice}}</span>
+                ${{fStats}}
+              </div>
+            </div>
           `;
         }}).join("");
       }} else {{
@@ -2694,14 +2937,18 @@ def build():
         itemRecipeIntoList.innerHTML = intoIds.map(iid => {{
           const iItem = ITEMS[iid];
           const iName = iItem ? iItem.name : `ID:${{iid}}`;
-          const iPrice = iItem ? `${{iItem.gold?.total || 0}}G` : "";
+          const iPrice = iItem ? `${{iItem.gold?.total || 0}} G` : "無料";
           const iImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{iid}}.png`;
+          const iStats = iItem?.stats_summary ? `<span style="font-size:10px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${{iItem.stats_summary}}</span>` : "";
           return `
-            <span class="recipe-item-pill" data-recipe-id="${{iid}}" title="タップして詳細を表示">
+            <div class="recipe-item-card" data-recipe-id="${{iid}}" title="${{iName}} の詳細を表示">
               <img src="${{iImg}}" alt="${{iName}}" onerror="this.src='icon.png';">
-              <span>${{iName}}</span>
-              <span style="color:var(--accent); font-size:11px;">${{iPrice}}</span>
-            </span>
+              <div class="recipe-item-info">
+                <span class="recipe-item-name">${{iName}}</span>
+                <span class="recipe-item-price">💰 ${{iPrice}}</span>
+                ${{iStats}}
+              </div>
+            </div>
           `;
         }}).join("");
       }} else {{
@@ -2715,7 +2962,7 @@ def build():
       }}
 
       // レシピアイテムのクリックイベント（素材・派生先アイテム詳細へジャンプ）
-      itemDetailModalEl.querySelectorAll(".recipe-item-pill").forEach(pill => {{
+      itemDetailModalEl.querySelectorAll(".recipe-item-card, .recipe-item-pill").forEach(pill => {{
         pill.onclick = (e) => {{
           e.stopPropagation();
           const nextId = pill.getAttribute("data-recipe-id");
@@ -2775,11 +3022,11 @@ def build():
     function renderItemsList() {{
       if (!itemsGridEl) return;
       itemsGridEl.innerHTML = "";
-      const query = itemSearchKeyword.trim().toLowerCase();
+      const query = itemSearchKeyword.trim();
 
       let itemsList = Object.values(ITEMS);
 
-      // カテゴリフィルター
+      // 1. カテゴリフィルター
       if (currentItemCat !== "ALL") {{
         itemsList = itemsList.filter(item => {{
           if (Array.isArray(item.categories)) {{
@@ -2792,19 +3039,39 @@ def build():
         }});
       }}
 
-      // 検索フィルター
-      if (query) {{
+      // 2. ステータスチェックボックスフィルター (複数選択 AND条件)
+      const checkedBoxes = document.querySelectorAll(".stat-filter-chk:checked");
+      const selectedStats = Array.from(checkedBoxes).map(cb => cb.value);
+
+      const activeStatBadge = document.getElementById("activeStatBadge");
+      if (activeStatBadge) {{
+        if (selectedStats.length > 0) {{
+          activeStatBadge.textContent = selectedStats.length;
+          activeStatBadge.style.display = "inline-flex";
+        }} else {{
+          activeStatBadge.style.display = "none";
+        }}
+      }}
+
+      if (selectedStats.length > 0) {{
         itemsList = itemsList.filter(item => {{
-          const name = (item.name || "").toLowerCase();
-          const colloq = (item.colloq || "").toLowerCase();
-          const plain = (item.plaintext || "").toLowerCase();
-          const stats = (item.stats_summary || "").toLowerCase();
-          const desc = (item.description || "").toLowerCase();
-          return name.includes(query) || colloq.includes(query) || plain.includes(query) || stats.includes(query) || desc.includes(query);
+          const itemTags = item.stat_tags || [];
+          return selectedStats.every(tag => itemTags.includes(tag));
         }});
       }}
 
-      // ソート
+      // 3. 検索フィルター (ひらがな・カタカナ・通称・部分一致対応)
+      if (query) {{
+        itemsList = itemsList.filter(item => {{
+          return matchSearch(item.name, query) ||
+                 matchSearch(item.colloq, query) ||
+                 matchSearch(item.plaintext, query) ||
+                 matchSearch(item.stats_summary, query) ||
+                 matchSearch(item.description, query);
+        }});
+      }}
+
+      // 4. ソート
       itemsList.sort((a, b) => {{
         if (currentItemSort === "price_desc") {{
           return (b.gold?.total || 0) - (a.gold?.total || 0);
@@ -2862,6 +3129,21 @@ def build():
         renderItemsList();
       }});
     }});
+
+    // ステータスフィルターのチェックボックス＆全解除ボタンのイベント登録
+    document.querySelectorAll(".stat-filter-chk").forEach(chk => {{
+      chk.addEventListener("change", () => {{
+        renderItemsList();
+      }});
+    }});
+
+    const clearStatFiltersBtn = document.getElementById("clearStatFiltersBtn");
+    if (clearStatFiltersBtn) {{
+      clearStatFiltersBtn.onclick = () => {{
+        document.querySelectorAll(".stat-filter-chk").forEach(chk => chk.checked = false);
+        renderItemsList();
+      }};
+    }}
 
     // ==========================================
     // 対面対策シミュレーター制御 (Phase 4)
@@ -2933,19 +3215,23 @@ def build():
     function renderSimPickerGrid() {{
       if (!simPickerGrid) return;
       simPickerGrid.innerHTML = "";
-      const q = simPickerSearch.trim().toLowerCase();
+      const q = simPickerSearch.trim();
 
-      Object.values(CHAMPIONS).forEach(champ => {{
+      // 日本語五十音順（あいうえお順）にソート (濱田くんの重要指定！)
+      let sortedChamps = Object.values(CHAMPIONS).slice().sort((a, b) => {{
+        return (a.name || "").localeCompare(b.name || "", "ja");
+      }});
+
+      sortedChamps.forEach(champ => {{
         // ロール絞り込み (濱田くんの重要指定！)
         if (simPickerRole !== "ALL") {{
           if (!champ.roles || !champ.roles.includes(simPickerRole)) return;
         }}
 
-        // 検索クエリ
+        // 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
         if (q) {{
-          const n = (champ.name || "").toLowerCase();
-          const cid = (champ.id || "").toLowerCase();
-          if (!n.includes(q) && !cid.includes(q)) return;
+          const isHit = matchSearch(champ.name, q) || matchSearch(champ.id, q);
+          if (!isHit) return;
         }}
 
         const item = document.createElement("div");
@@ -3060,22 +3346,43 @@ def build():
       const me = CHAMPIONS[simMyChampId];
       const opp = CHAMPIONS[simOppChampId];
 
-      // 1. 相性・勝率判定
+      // 1. 相性・勝率判定 (全173x173マトリクスから厳密判定)
       let advClass = "sim-adv-even";
-      let advText = "五分（技量勝負）";
+      let advText = "互角・五分";
       let advReason = `${{me.name}} と ${{opp.name}} のマッチアップ。お互いのスキル命中精度とウェーブコントロールが勝敗を分けます。`;
 
-      const favMatch = (me.matchups?.favorable || []).find(m => m.champion_id === opp.id || m.name === opp.name);
-      const unfavMatch = (me.matchups?.unfavorable || []).find(m => m.champion_id === opp.id || m.name === opp.name);
+      let matrixData = null;
+      if (me.matchup_matrix && me.matchup_matrix[opp.id]) {{
+        matrixData = me.matchup_matrix[opp.id];
+      }}
 
-      if (favMatch) {{
-        advClass = "sim-adv-fav";
-        advText = `有利（${{favMatch.reason ? favMatch.reason.split(" | ")[0] : "統計有利"}}）`;
-        advReason = favMatch.reason || `統計的に ${{me.name}} が有利なマッチアップです。主導権を握ってアグレッシブに攻めましょう。`;
-      }} else if (unfavMatch) {{
-        advClass = "sim-adv-unfav";
-        advText = `警戒・不利（${{unfavMatch.reason ? unfavMatch.reason.split(" | ")[0] : "統計不利"}}）`;
-        advReason = unfavMatch.reason || `統計的に ${{opp.name}} が得意とする不利なマッチアップです。無理な仕掛けを避け、ガンクを待つ立ち回りが賢明です。`;
+      if (matrixData) {{
+        const wr = (typeof matrixData.win_rate === "number") ? `${{matrixData.win_rate.toFixed(1)}}%` : "50.0%";
+        if (matrixData.advantage === "FAVORABLE") {{
+          advClass = "sim-adv-fav";
+          advText = `有利 【対面勝率 ${{wr}}】`;
+        }} else if (matrixData.advantage === "UNFAVORABLE") {{
+          advClass = "sim-adv-unfav";
+          advText = `警戒・不利 【対面勝率 ${{wr}}】`;
+        }} else {{
+          advClass = "sim-adv-even";
+          advText = `互角・五分 【対面勝率 ${{wr}}】`;
+        }}
+        advReason = matrixData.reason || advReason;
+      }} else {{
+        // フォールバック: 既存の個別matchups
+        const favMatch = (me.matchups?.favorable || []).find(m => m.champion_id === opp.id || m.name === opp.name);
+        const unfavMatch = (me.matchups?.unfavorable || []).find(m => m.champion_id === opp.id || m.name === opp.name);
+
+        if (favMatch) {{
+          advClass = "sim-adv-fav";
+          advText = `有利（${{favMatch.reason ? favMatch.reason.split(" | ")[0] : "統計有利"}}）`;
+          advReason = favMatch.reason || `統計的に ${{me.name}} が有利なマッチアップです。主導権を握ってアグレッシブに攻めましょう。`;
+        }} else if (unfavMatch) {{
+          advClass = "sim-adv-unfav";
+          advText = `警戒・不利（${{unfavMatch.reason ? unfavMatch.reason.split(" | ")[0] : "統計不利"}}）`;
+          advReason = unfavMatch.reason || `統計的に ${{opp.name}} が得意とする不利なマッチアップです。無理な仕掛けを避け、ガンクを待つ立ち回りが賢明です。`;
+        }}
       }}
 
       if (simAdvantageBadge) {{
@@ -3385,8 +3692,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v13
-const CORE_CACHE = 'loldb-core-v13';
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v15
+const CORE_CACHE = 'loldb-core-v15';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
 
 const ASSETS_TO_CACHE = [
