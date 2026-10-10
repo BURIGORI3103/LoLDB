@@ -1,0 +1,76 @@
+{
+  "id": "Lillia",
+  "key": "876",
+  "name": "リリア",
+  "title": "はにかみ屋の花",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 605,
+    "hpperlevel": 105,
+    "mp": 410,
+    "mpperlevel": 50,
+    "movespeed": 330,
+    "armor": 24,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 1.55,
+    "attackrange": 325,
+    "hpregen": 2.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.95,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 61,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.7,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "夢を集める大枝",
+      "description": "スキルでチャンピオンかモンスターを攻撃すると、最大体力に応じた追加ダメージを継続的に与える。",
+      "image": "Lillia_Icon_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "花開く風",
+      "description": "自動効果で、スキルが敵に命中するたびに増加移動速度のスタックを獲得する。発動効果で周囲の敵に魔法ダメージを与え、端にいる対象には追加確定ダメージを与える。",
+      "cooldown": "6/5.5/5/4.5/4",
+      "cost": "65",
+      "image": "LilliaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ひゃっ、あぶない！",
+      "description": "周囲の敵にダメージを与える。中央にいた敵には、より大きなダメージを与える。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50",
+      "image": "LilliaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "コロコロの種",
+      "description": "落下時に当たった敵にダメージとスロウ効果を与える種を投げる。何にも当たらなかった場合は、壁か対象に当たるまで転がり続ける。",
+      "cooldown": "12",
+      "cost": "70",
+      "image": "LilliaE.png"
+    },
+    {
+      "slot": "R",
+      "name": "夢見の子守唄",
+      "description": "「夢のかけら」を受けているすべての敵に眠気を付与してから眠らせる。眠った敵は、強制的に目覚めさせられた際に追加ダメージを受ける。",
+      "cooldown": "150/130/110",
+      "cost": "50",
+      "image": "LilliaR.png"
+    }
+  ]
+}

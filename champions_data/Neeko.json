@@ -1,0 +1,76 @@
+{
+  "id": "Neeko",
+  "key": "518",
+  "name": "ニーコ",
+  "title": "不思議のカメレオン",
+  "patch": "16.20.1",
+  "roles": [
+    "Mage",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 610,
+    "hpperlevel": 104,
+    "mp": 450,
+    "mpperlevel": 30,
+    "movespeed": 340,
+    "armor": 21,
+    "armorperlevel": 5.2,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 7.5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 7,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 48,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "駆け巡る色彩",
+      "description": "味方チャンピオンまたはマップ上の他のユニットの姿に化けることができる。行動妨害効果を受けるか、ダメージスキルを詠唱するか、チャンピオン以外のユニットに擬態した状態で敵タワーにダメージを与えるか、擬態したユニットの体力バーと同量のダメージを受けると擬態が解除される。",
+      "image": "Neeko_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "弾ける花弁",
+      "description": "魔法ダメージを与える種を投げる。種はチャンピオンに当たるか敵ユニットをキルすると再度爆発する。",
+      "cooldown": "9/8.5/8/7.5/7",
+      "cost": "50/60/70/80/90",
+      "image": "NeekoQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "シェイプスプリッター",
+      "description": "自動効果により通常攻撃3回ごとに追加魔法ダメージを与え、少しの間、移動速度が増加する。発動すると指定方向にクローンを送り出し、再発動するとクローンの進行方向を変えられる。",
+      "cooldown": "16/15/14/13/12",
+      "cost": "0",
+      "image": "NeekoW.png"
+    },
+    {
+      "slot": "E",
+      "name": "からまれ！",
+      "description": "輪を飛ばして当たった敵すべてにダメージとスネア効果を与える。輪は敵をキルするかチャンピオンに触れると大きくなり、速度とスネア効果時間が増加する。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "60/65/70/75/80",
+      "image": "NeekoE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ポップブロッサム",
+      "description": "少しの間準備してから宙に舞い上がり、周囲のすべての敵をノックアップさせる。さらに着地時に周囲の敵にダメージを与えてスタンさせる。擬態中は密かに準備を行える。",
+      "cooldown": "120/105/90",
+      "cost": "100",
+      "image": "NeekoR.png"
+    }
+  ]
+}

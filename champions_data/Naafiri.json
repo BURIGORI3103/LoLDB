@@ -1,0 +1,76 @@
+{
+  "id": "Naafiri",
+  "key": "950",
+  "name": "ナフィーリ",
+  "title": "百刃の猟犬",
+  "patch": "16.20.1",
+  "roles": [
+    "Assassin",
+    "Fighter"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 610,
+    "hpperlevel": 105,
+    "mp": 400,
+    "mpperlevel": 55,
+    "movespeed": 340,
+    "armor": 28,
+    "armorperlevel": 4.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 6.25,
+    "hpregenperlevel": 0.6,
+    "mpregen": 7.5,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.1,
+    "attackspeed": 0.663
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "我らは一つ",
+      "description": "「群れの同胞」を出現させる。「群れの同胞」はナフィーリの通常攻撃およびスキルの対象を攻撃する。",
+      "image": "Icons_Naafiri_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ダーキンダガー",
+      "description": "最大2本の短剣を放つ。短剣はそれぞれ出血を付与し、対象がすでに出血中の場合は、それぞれ追加ダメージを与える。<br><br>「群れの同胞」はこのスキルが最初に命中したチャンピオンまたはモンスターに飛びかかって攻撃する。<br>",
+      "cooldown": "9/8.5/8/7.5/7",
+      "cost": "50/60/70/80/90",
+      "image": "NaafiriQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "群れの呼び声",
+      "description": "対象指定不可状態になって群れを強化し、追加の群れの同胞を出現させて、移動速度と攻撃力が増加する。<br>",
+      "cooldown": "26/24/22/20/18",
+      "cost": "60",
+      "image": "NaafiriR.png"
+    },
+    {
+      "slot": "E",
+      "name": "獰猛なる刃",
+      "description": "ダッシュして、自身の周囲にいる敵にダメージを与える。その際、「群れの同胞」を呼び寄せて、体力を全回復させる。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "40",
+      "image": "NaafiriE.png"
+    },
+    {
+      "slot": "R",
+      "name": "猟犬の追跡",
+      "description": "ナフィーリと「群れの同胞」がチャンピオンに向かってダッシュしてダメージを与える。キルまたはアシストを獲得すると自身の周囲の敵が可視化され、このスキルを再発動可能になる。2回目の使用時はシールドを獲得する。",
+      "cooldown": "110/95/80",
+      "cost": "100",
+      "image": "NaafiriW.png"
+    }
+  ]
+}

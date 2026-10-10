@@ -1,0 +1,76 @@
+{
+  "id": "TahmKench",
+  "key": "223",
+  "name": "タム・ケンチ",
+  "title": "川の王様",
+  "patch": "16.20.1",
+  "roles": [
+    "Tank",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 640,
+    "hpperlevel": 103,
+    "mp": 325,
+    "mpperlevel": 50,
+    "movespeed": 335,
+    "armor": 39,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 6.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 56,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "舌慣らし",
+      "description": "巨大な体躯から繰り出す通常攻撃に、自身の合計体力に応じた追加ダメージを付与する。ダメージを受けた敵チャンピオンには<spellName>「舌慣らし」</spellName>がスタックされ、3スタックたまった敵チャンピオンに対しては<spellName>「丸呑み」</spellName>を使えるようになる。",
+      "image": "TahmKenchP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "味見",
+      "description": "舌をムチを打つように放つ。最初に命中したユニットにダメージを与え、スロウ効果を付与する。対象が敵チャンピオンだった場合は自分の体力を回復する。<br><br>敵チャンピオンに<spellName>「舌慣らし」</spellName>のスタックを付与する。<spellName>「舌慣らし」</spellName>を3スタック付与しているチャンピオンにこのスキルを使用すると、スタックを消費して対象をスタンさせる。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "50/46/42/38/34",
+      "image": "TahmKenchQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "川潜り",
+      "description": "水中に潜ってから指定地点に現れ、範囲内のすべての敵にダメージを与えてノックアップさせる。",
+      "cooldown": "21/20/19/18/17",
+      "cost": "60/75/90/105/120",
+      "image": "TahmKenchW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ゆるゆる皮膜",
+      "description": "<passive>自動効果:</passive> 受けたダメージの一定割合を蓄え、非戦闘時にそれに応じて体力を回復する。<br><br><active>発動効果:</active> 蓄えていた全ダメージを一時的なシールドに変換する。",
+      "cooldown": "3",
+      "cost": "0",
+      "image": "TahmKenchE.png"
+    },
+    {
+      "slot": "R",
+      "name": "丸呑み",
+      "description": "数秒間チャンピオンを丸呑みし、敵には魔法ダメージを与え、味方にはシールドを付与する。",
+      "cooldown": "0",
+      "cost": "100",
+      "image": "TahmKenchRWrapper.png"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "Qiyana",
+  "key": "246",
+  "name": "キヤナ",
+  "title": "エレメントの女帝",
+  "patch": "16.20.1",
+  "roles": [
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 590,
+    "hpperlevel": 115,
+    "mp": 375,
+    "mpperlevel": 60,
+    "movespeed": 335,
+    "armor": 31,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 8,
+    "hpregenperlevel": 0.9,
+    "mpregen": 8,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 64,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.1,
+    "attackspeed": 0.688
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "女帝の威風",
+      "description": "それぞれの敵に対する最初の通常攻撃またはスキルに追加ダメージが付与される。",
+      "image": "Qiyana_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "エレメントの怒り/イシュタルの切先",
+      "description": "武器を振り、保持しているエレメントに応じた追加効果の付いたダメージを与える。",
+      "cooldown": "7",
+      "cost": "35",
+      "image": "QiyanaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "大地の力",
+      "description": "目標地点までダッシュし、武器にエレメントの力を付与する。武器にエレメントの力がついている間は、通常攻撃とスキルに追加ダメージが付与される。",
+      "cooldown": "7",
+      "cost": "25/30/35/40/45",
+      "image": "QiyanaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "俊烈",
+      "description": "敵に向かってダッシュし、ダメージを与える。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "40/45/50/55/60",
+      "image": "QiyanaE.png"
+    },
+    {
+      "slot": "R",
+      "name": "天賦絢爛",
+      "description": "エレメントに命中すると爆発する衝撃波を放ち、周囲の敵をスタンさせながらダメージを与える。",
+      "cooldown": "120",
+      "cost": "100",
+      "image": "QiyanaR.png"
+    }
+  ]
+}

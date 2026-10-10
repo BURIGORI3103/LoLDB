@@ -1,0 +1,76 @@
+{
+  "id": "Mel",
+  "key": "800",
+  "name": "メル",
+  "title": "魂の反照",
+  "patch": "16.20.1",
+  "roles": [
+    "Mage",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 630,
+    "hpperlevel": 99,
+    "mp": 480,
+    "mpperlevel": 28,
+    "movespeed": 330,
+    "armor": 21,
+    "armorperlevel": 5.2,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 6,
+    "hpregenperlevel": 0.55,
+    "mpregen": 9,
+    "mpregenperlevel": 0.9,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 54,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "灼熱の輝き",
+      "description": "スキルを使用するたび、次の通常攻撃で追加の飛翔物を3発発射する(最大9発までスタック可能)。<br><br>スキルまたは通常攻撃でダメージを与えると、敵に「圧倒」のスタックを付与する。これは無限にスタックする。敵に蓄積した「圧倒」スタックが一定のダメージ量に達すると、スタックを消費して敵にとどめを刺す。",
+      "image": "Mel_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "輝きの連撃",
+      "description": "指定地点に向かって複数の飛翔物を連続で発射する。飛翔物は爆発して範囲内の敵に繰り返しダメージを与える。",
+      "cooldown": "10/9/8/7/6",
+      "cost": "70/75/80/85/90",
+      "image": "MelQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "反駁",
+      "description": "自身の周囲にバリアを形成する。このバリアは敵の発射物をその敵に向けて反射し、自身が受けるダメージを防ぎ、自身の移動速度を増加させる。",
+      "cooldown": "38/35/33/29/26",
+      "cost": "80/60/40/20/0",
+      "image": "MelW.png"
+    },
+    {
+      "slot": "E",
+      "name": "陽光の枷",
+      "description": "前方に輝くオーブを発射し、中心にいた敵にはスネア効果を与え、周囲にいた敵にはスロウ効果と継続ダメージを与える。",
+      "cooldown": "11/10.5/10/9.5/9",
+      "cost": "50/60/70/80/90",
+      "image": "MelE.png"
+    },
+    {
+      "slot": "R",
+      "name": "黄金蝕",
+      "description": "距離に関係なく、「圧倒」を付与しているすべての敵を攻撃し、「圧倒」のスタック数に応じて追加ダメージを与える。<br><br>「黄金蝕」のスキルレベルが上がると、「圧倒」のダメージが増加する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "MelR.png"
+    }
+  ]
+}

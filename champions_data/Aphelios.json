@@ -1,0 +1,75 @@
+{
+  "id": "Aphelios",
+  "key": "523",
+  "name": "アフェリオス",
+  "title": "信ずる者の武器",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 102,
+    "mp": 348,
+    "mpperlevel": 42,
+    "movespeed": 325,
+    "armor": 26,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 3.25,
+    "hpregenperlevel": 0.55,
+    "mpregen": 6.5,
+    "mpregenperlevel": 0.4,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.1,
+    "attackspeed": 0.665
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "殺す者と導く者",
+      "description": "アフェリオスは妹のアルーンが作った5種類のルナリ武器を使って戦う。一度に2種類の武器を保持でき、1つはメインハンド、もう1つはオフハンドに装備する。各武器にはそれぞれ独自の通常攻撃とスキルがある。通常攻撃とスキルは各武器の弾薬を消費する。弾薬が切れるとアフェリオスはその武器を捨て、5種類あるうちの次の武器をアルーンが召喚する。 ",
+      "image": "ApheliosP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "武器ごとのスキル",
+      "description": "アフェリオスには、メインハンド武器に応じて変化する5種類の発動スキルがある:<br><br>キャリブラム(ライフル): 長射程攻撃で対象をマークして再度長射程から攻撃する。<br>セヴェラム(鎌型ピストル): 素早く走りながら近くの敵を両方の武器で攻撃する。<br>グラヴィタム(キャノン): この武器のスロウ効果を受けているすべての敵にスネア効果を付与する。<br>インファーナム(火炎放射器): 扇状範囲内の敵に炎を浴びせ、対象をオフハンド武器で攻撃する。<br>クレッシェンダム(チャクラム): オフハンド武器を搭載したセントリーを設置する。<br>",
+      "cooldown": "9",
+      "cost": "60",
+      "image": "ApheliosQ_ClientTooltipWrapper.png"
+    },
+    {
+      "slot": "W",
+      "name": "フェーズ",
+      "description": "メインハンド武器とオフハンド武器を切り替え、通常攻撃および発動スキルを変化させる。",
+      "cooldown": "0.8",
+      "cost": "0",
+      "image": "ApheliosW.png"
+    },
+    {
+      "slot": "E",
+      "name": "武器キューシステム",
+      "description": "アフェリオスには3つ目のスキルがない。このスロットにはアルーンから次に渡される武器が表示される。武器の登場順は固定だが、試合を進める過程で順番を入れ替えることはできる。弾が切れた武器は順番の最後に回される。",
+      "cooldown": "0",
+      "cost": "0",
+      "image": "ApheliosE_ClientTooltipWrapper.png"
+    },
+    {
+      "slot": "R",
+      "name": "月光の祈り",
+      "description": "凝縮された月光のエネルギーを発射する。月光は敵チャンピオンに命中すると爆発する。メインハンド武器に応じて異なる効果を適用する。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "ApheliosR.png"
+    }
+  ]
+}

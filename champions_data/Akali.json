@@ -1,0 +1,75 @@
+{
+  "id": "Akali",
+  "key": "84",
+  "name": "アカリ",
+  "title": "主なき暗殺者",
+  "patch": "16.20.1",
+  "roles": [
+    "Assassin"
+  ],
+  "resource": "気",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 119,
+    "mp": 200,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 23,
+    "armorperlevel": 4.7,
+    "spellblock": 37,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 9,
+    "hpregenperlevel": 0.9,
+    "mpregen": 50,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "刺客の刻印",
+      "description": "チャンピオンにスキルでダメージを与えると対象の周囲に気の輪が形成される。輪の外に出るとアカリの次の通常攻撃の射程とダメージが増加する。",
+      "image": "Akali_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "五連苦無",
+      "description": "5本のクナイを投げて自身の増加攻撃力と魔力に応じたダメージを与えてスロウ効果を与える。",
+      "cooldown": "1.5",
+      "cost": "110/100/90/80/70",
+      "image": "AkaliQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "黄昏の帳",
+      "description": "姿を隠すための煙幕を張り、少しの間だけ移動速度が増加する。「帳」の中ではインビジブル状態になり、敵のスキルや通常攻撃で対象指定されなくなる。通常攻撃を行うかスキルを使用すると一時的に可視化される。",
+      "cooldown": "20/19/18/17/16",
+      "cost": "0",
+      "image": "AkaliW.png"
+    },
+    {
+      "slot": "E",
+      "name": "翻身手裏剣",
+      "description": "後方に宙返りして前方に手裏剣を投げ、魔法ダメージを与える。最初に当たった敵または煙幕はマークされる。再発動するとマークされた対象までダッシュして追加でダメージを与える。",
+      "cooldown": "16/14.5/13/11.5/10",
+      "cost": "30",
+      "image": "AkaliE.png"
+    },
+    {
+      "slot": "R",
+      "name": "完遂",
+      "description": "指定方向に跳躍して攻撃した敵にダメージを与える。<br><br>再発動: 指定方向にダッシュして、攻撃したすべての敵に対象の減少体力に応じたダメージを与える。",
+      "cooldown": "120/90/60",
+      "cost": "0",
+      "image": "AkaliR.png"
+    }
+  ]
+}

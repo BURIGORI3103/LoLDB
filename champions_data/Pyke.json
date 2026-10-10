@@ -1,0 +1,76 @@
+{
+  "id": "Pyke",
+  "key": "555",
+  "name": "パイク",
+  "title": "ブラッドハーバーの殺戮鬼",
+  "patch": "16.20.1",
+  "roles": [
+    "Support",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 670,
+    "hpperlevel": 110,
+    "mp": 415,
+    "mpperlevel": 50,
+    "movespeed": 330,
+    "armor": 37,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 7,
+    "hpregenperlevel": 0.5,
+    "mpregen": 8,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.667
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "沈みし者の力",
+      "description": "敵の視界外にいると、直前にチャンピオンからの攻撃で失った体力を回復する。また、パイクはいずれのソースからも増加最大体力を得ることはできず、代わりに増加攻撃力を得る。",
+      "image": "PykePassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ボーンスキューア",
+      "description": "前方にいる1体の敵を突き刺すか、1体の敵を引き寄せる。",
+      "cooldown": "10/9.5/9/8.5/8",
+      "cost": "70/75/80/85/90",
+      "image": "PykeQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ゴーストウォーター",
+      "description": "カモフラージュ状態になり、移動速度が大きく増加する。移動速度は徐々に元に戻る。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "65",
+      "image": "PykeW.png"
+    },
+    {
+      "slot": "E",
+      "name": "亡者の引き波",
+      "description": "亡霊を残してダッシュする。亡霊はパイクのところまで戻ってきて触れた敵チャンピオンをスタンさせる。",
+      "cooldown": "15/14/13/12/11",
+      "cost": "40",
+      "image": "PykeE.png"
+    },
+    {
+      "slot": "R",
+      "name": "水底の急襲",
+      "description": "ブリンクして体力の低下した敵にとどめを刺す。とどめを刺すと再度使用可能になり、アシストした味方1人に追加ゴールドを付与する。",
+      "cooldown": "100/85/70",
+      "cost": "100",
+      "image": "PykeR.png"
+    }
+  ]
+}

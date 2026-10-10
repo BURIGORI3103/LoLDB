@@ -1,0 +1,76 @@
+{
+  "id": "RekSai",
+  "key": "421",
+  "name": "レク＝サイ",
+  "title": "地底の恐怖",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Tank"
+  ],
+  "resource": "怒り",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 99,
+    "mp": 100,
+    "mpperlevel": 0,
+    "movespeed": 340,
+    "armor": 35,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 2.5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.667
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ゼル＝サイの怒り",
+      "description": "通常攻撃または通常スキルを当てると「フューリー」がたまる。地中潜伏中に「フューリー」を消費して自身の体力を回復する。",
+      "image": "RekSai_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "女王の怒り/獲物定め",
+      "description": "次の3回の通常攻撃が近接する周囲の敵に追加物理ダメージを与える。<br><br>「潜伏」を発動すると、ヴォイドのエネルギーを帯びた大地を打ち上げ、敵にダメージを与えて命中した敵を可視化する。",
+      "cooldown": "4/3.5/3/2.5/2",
+      "cost": "0",
+      "image": "RekSaiQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "潜伏/襲撃",
+      "description": "地中に潜伏して地中専用のスキルを使用できるようになり、移動速度が増加する。視界範囲は狭まり、通常攻撃を行えなくなる。<br><br>「潜伏」発動中は、「襲撃」を発動して近接する敵をノックアップさせてダメージを与えることができる。",
+      "cooldown": "4",
+      "cost": "0",
+      "image": "RekSaiW.png"
+    },
+    {
+      "slot": "E",
+      "name": "激情の牙/掘削",
+      "description": "対象に噛み付いて物理ダメージを与え、「フューリー」が最大の場合は、2倍の確定ダメージを与える。<br><br>「潜伏」を発動すると、長時間持続し、何度も使用することができるトンネルを作る。敵は、このトンネルの開口部の上に立つことで、これを崩壊させることができる。",
+      "cooldown": "6",
+      "cost": "0",
+      "image": "RekSaiE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ヴォイドラッシュ",
+      "description": "ダメージを与えた対象を自動的にマークする。このスキルを発動させると、少しの間対象指定不可になり、マークした対象に突進して、相手の最大体力に応じた大ダメージを与える。",
+      "cooldown": "120/100/80",
+      "cost": "0",
+      "image": "RekSaiR.png"
+    }
+  ]
+}

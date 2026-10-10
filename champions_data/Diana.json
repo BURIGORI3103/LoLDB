@@ -1,0 +1,76 @@
+{
+  "id": "Diana",
+  "key": "131",
+  "name": "ダイアナ",
+  "title": "嘲りの月",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 640,
+    "hpperlevel": 109,
+    "mp": 375,
+    "mpperlevel": 25,
+    "movespeed": 345,
+    "armor": 31,
+    "armorperlevel": 4.3,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 6.5,
+    "hpregenperlevel": 0.85,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 57,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "繊月の刃",
+      "description": "通常攻撃3回ごとに周囲の敵に追加魔法ダメージを与える。スキル使用後、5秒間、攻撃速度が増加する。",
+      "image": "Diana_Passive_LunarBlade.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "月影",
+      "description": "弧を描くように月の力を放ち、命中した敵ユニットに魔法ダメージを与える。<br><br>命中した敵には「月光」を付与し、ステルス状態の敵をのぞいて3秒間可視状態にする。",
+      "cooldown": "8/7.5/7/6.5/6",
+      "cost": "50",
+      "image": "DianaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "朧月の羽衣",
+      "description": "体の周囲を3つの月光の玉が旋回し、敵と接触すると爆発して有効範囲内の敵ユニットにダメージを与える。さらに発動と同時に、ダイアナを守るシールドが発生する。3つ目の光の玉が爆発すると、シールドを再び展開する。",
+      "cooldown": "15/13.5/12/10.5/9",
+      "cost": "40/45/50/55/60",
+      "image": "DianaOrbs.png"
+    },
+    {
+      "slot": "E",
+      "name": "月下美刃",
+      "description": "復讐心に燃える月の化身となり、敵のところまでダッシュして魔法ダメージを与える。<br><br>「月光」が付与された敵に使用した場合、クールダウンがリセットされると同時に、全ての敵ユニットの「月光」が解除される。",
+      "cooldown": "22/20/18/16/14",
+      "cost": "40/45/50/55/60",
+      "image": "DianaTeleport.png"
+    },
+    {
+      "slot": "R",
+      "name": "崩月",
+      "description": "周囲のすべての敵を可視化して自身の方向に引き寄せ、スロウ効果を与える。<br><br>1体以上の敵チャンピオンを引き寄せると、少ししてから自身の上に月光が降り注ぎ、周囲の範囲内の敵に魔法ダメージを与える。このダメージは2体目以降に引き寄せた対象が1体増えるごとに増加する。",
+      "cooldown": "100/90/80",
+      "cost": "100",
+      "image": "DianaR.png"
+    }
+  ]
+}

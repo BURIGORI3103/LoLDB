@@ -1,0 +1,76 @@
+{
+  "id": "Kayn",
+  "key": "141",
+  "name": "ケイン",
+  "title": "無情の影",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 655,
+    "hpperlevel": 103,
+    "mp": 410,
+    "mpperlevel": 50,
+    "movespeed": 340,
+    "armor": 38,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 8,
+    "hpregenperlevel": 0.75,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.95,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.7,
+    "attackspeed": 0.669
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "緋眼の大鎌",
+      "description": "ケインは自我を持つダーキンの古代武器ラーストを用いており、両者は常に互いの支配権をかけて争っている。この戦いは<font color='#fe5c50'>ダーキン</font>がケインを取り込むか、ケインがラーストを使いこなし<font color='#8484fb'>影の暗殺者</font>となるまで続く。<br><br><font color='#fe5c50'>ダーキン:</font> 敵チャンピオンにスキルで与えたダメージの一定割合にあたる体力を回復する。<br><br><font color='#8484fb'>影の暗殺者:</font> 敵チャンピオンと戦闘開始直後の数秒間、追加ダメージを与える。",
+      "image": "Kayn_Passive_Primary.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "飛影斬",
+      "description": "ダッシュしてから斬りつける。その両方でダメージを与える。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "40",
+      "image": "KaynQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "刃影襲",
+      "description": "直線上にいる敵にダメージとスロウ効果を与える。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "40/45/50/55/60",
+      "image": "KaynW.png"
+    },
+    {
+      "slot": "E",
+      "name": "影抜き",
+      "description": "ケインが地形を無視して歩くことができる。",
+      "cooldown": "21/19/17/15/13",
+      "cost": "90",
+      "image": "KaynE.png"
+    },
+    {
+      "slot": "R",
+      "name": "真影侵壊",
+      "description": "敵の体の中に侵入して、出てくる時に大ダメージを与える。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "KaynR.png"
+    }
+  ]
+}

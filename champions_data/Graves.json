@@ -1,0 +1,75 @@
+{
+  "id": "Graves",
+  "key": "104",
+  "name": "グレイブス",
+  "title": "無法者",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 625,
+    "hpperlevel": 106,
+    "mp": 325,
+    "mpperlevel": 40,
+    "movespeed": 340,
+    "armor": 33,
+    "armorperlevel": 4.6,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 425,
+    "hpregen": 8,
+    "hpregenperlevel": 0.7,
+    "mpregen": 8,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 66,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.475
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ニュー・デスティニー",
+      "description": "ショットガンには独特の特性がある。弾を撃ち尽くしたらリロードが必要となる。通常攻撃は弾丸を4発発射する。弾丸はユニットを貫通しない。チャンピオン以外のユニットは、複数の弾丸が命中するとノックバックする。",
+      "image": "GravesTrueGrit.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "エンドライン",
+      "description": "爆薬の詰まった弾を発射する。弾は発射してから1秒後、あるいは地形に当たると爆発する。",
+      "cooldown": "13/11.25/9.5/7.75/6",
+      "cost": "80",
+      "image": "GravesQLineSpell.png"
+    },
+    {
+      "slot": "W",
+      "name": "スモークスクリーン",
+      "description": "指定地点に発煙弾を発射し、煙幕を発生させて範囲内の敵の視界を低下させる。着弾時の爆発に巻き込まれた敵は魔法ダメージを受け、一時的に移動速度が低下する。",
+      "cooldown": "26/24/22/20/18",
+      "cost": "70/75/80/85/90",
+      "image": "GravesSmokeGrenade.png"
+    },
+    {
+      "slot": "E",
+      "name": "クイックドロー",
+      "description": "グレイブスが前方にダッシュして物理防御と魔法防御が数秒間増加する。敵チャンピオンに向かってダッシュすると、代わりに「確固たる信念」を2スタック獲得する。敵ユニットに通常攻撃を行うと、このスキルのクールダウンが短縮され、防御力増加時間が更新される。",
+      "cooldown": "16/15/14/13/12",
+      "cost": "40",
+      "image": "GravesMove.png"
+    },
+    {
+      "slot": "R",
+      "name": "コラテラルダメージ",
+      "description": "強力な炸裂弾を発射して、最初に命中した敵チャンピオンに大ダメージを与える。弾は敵チャンピオンに命中するか、最大射程に達すると炸裂し、扇状の範囲内にいる敵にダメージを与える。",
+      "cooldown": "100/80/60",
+      "cost": "100",
+      "image": "GravesChargeShot.png"
+    }
+  ]
+}

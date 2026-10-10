@@ -1,0 +1,76 @@
+{
+  "id": "Tryndamere",
+  "key": "23",
+  "name": "トリンダメア",
+  "title": "孤高の蛮王",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Assassin"
+  ],
+  "resource": "フューリー",
+  "stats": {
+    "hp": 696,
+    "hpperlevel": 108,
+    "mp": 100,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 33,
+    "armorperlevel": 4.8,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.9,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 66,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.4,
+    "attackspeed": 0.67
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "戦場の咆哮",
+      "description": "通常攻撃やクリティカル発生、敵にとどめを刺した際に「フューリー」がたまっていく。<br><br>自動効果: たまった「フューリー」の量に応じてクリティカル率が増加する。<br><br>たまった「フューリー」を消費して「血の欲望」を強化して発動できる。",
+      "image": "Tryndamere_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "血の欲望",
+      "description": "戦闘で負傷するほど攻撃力が増加する。発動させるとたまっている「フューリー」を消費し、体力を回復する。",
+      "cooldown": "12",
+      "cost": "0",
+      "image": "TryndamereQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "嘲りの叫び",
+      "description": "敵を嘲る言葉を叫び、周囲にいる敵チャンピオンの攻撃力を低下させる。トリンダメアに背を向けている敵は、移動速度も低下する。",
+      "cooldown": "14",
+      "cost": "0",
+      "image": "TryndamereW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スピンスラッシュ",
+      "description": "指定地点へ回転しながら移動し、移動中に当たった敵ユニットにダメージを与える。",
+      "cooldown": "12/11/10/9/8",
+      "cost": "0",
+      "image": "TryndamereE.png"
+    },
+    {
+      "slot": "R",
+      "name": "不死の憤激",
+      "description": "戦い続けたいという強い欲望に取りつかれ、一定時間はどれだけダメージを受けても体力がゼロにならない。",
+      "cooldown": "120/100/80",
+      "cost": "0",
+      "image": "UndyingRage.png"
+    }
+  ]
+}

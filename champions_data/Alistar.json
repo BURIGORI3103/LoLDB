@@ -1,0 +1,76 @@
+{
+  "id": "Alistar",
+  "key": "12",
+  "name": "アリスター",
+  "title": "ミノタウロスの戦士",
+  "patch": "16.20.1",
+  "roles": [
+    "Tank",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 685,
+    "hpperlevel": 120,
+    "mp": 350,
+    "mpperlevel": 40,
+    "movespeed": 335,
+    "armor": 40,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.85,
+    "mpregen": 8.5,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.125,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "戦士の咆哮",
+      "description": "敵チャンピオンをスタンさせるか弾き飛ばした時、または周囲で敵ユニットが倒されると「咆哮」をチャージする。最大までチャージされると自身および近くにいるすべての味方チャンピオンの体力を回復する。",
+      "image": "Alistar_E.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "圧砕",
+      "description": "地面をたたきつけ、周囲にいる敵ユニットにダメージを与えてノックアップする。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/55/60/65/70",
+      "image": "Pulverize.png"
+    },
+    {
+      "slot": "W",
+      "name": "頭突き",
+      "description": "対象に「頭突き」を食らわせてダメージを与え、ノックバックさせる。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "50/55/60/65/70",
+      "image": "Headbutt.png"
+    },
+    {
+      "slot": "E",
+      "name": "踏破",
+      "description": "周囲の敵を踏みつけてユニットをすり抜けるようになる。これでチャンピオンにダメージを与えた場合、スタックを1つ獲得。スタックが最大になるとチャンピオンに対する次の通常攻撃に追加魔法ダメージとスタン効果を付与する。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "50/55/60/65/70",
+      "image": "AlistarE.png"
+    },
+    {
+      "slot": "R",
+      "name": "不屈の意志",
+      "description": "荒々しい雄叫びをあげ、自身に付与された行動妨害効果をすべて解除する。効果時間中は自身が受ける物理ダメージと魔法ダメージを軽減する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "FerociousHowl.png"
+    }
+  ]
+}

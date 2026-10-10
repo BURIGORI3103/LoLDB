@@ -1,0 +1,76 @@
+{
+  "id": "Corki",
+  "key": "42",
+  "name": "コーキ",
+  "title": "豪気の爆撃手",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 610,
+    "hpperlevel": 100,
+    "mp": 350,
+    "mpperlevel": 40,
+    "movespeed": 325,
+    "armor": 27,
+    "armorperlevel": 4.5,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7.4,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 52,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.8,
+    "attackspeed": 0.644
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ヘクステック榴散弾",
+      "description": "通常攻撃ダメージの一定割合を追加<trueDamage>確定ダメージ</trueDamage>として与える。",
+      "image": "Corki_RapidReload.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "閃光弾",
+      "description": "爆弾を発射し、範囲内の敵に魔法ダメージを与える。<br>範囲内の敵は一定時間可視状態になる。",
+      "cooldown": "9/8.5/8/7.5/7",
+      "cost": "60/65/70/75/80",
+      "image": "PhosphorusBomb.png"
+    },
+    {
+      "slot": "W",
+      "name": "ワルキューレ機行",
+      "description": "爆弾を落しながら短距離を飛行する。通過したエリアには一定時間火炎が残り、エリア内にいる敵にダメージを与える。",
+      "cooldown": "20/18/16/14/12",
+      "cost": "80/85/90/95/100",
+      "image": "CarpetBomb.png"
+    },
+    {
+      "slot": "E",
+      "name": "ガトリングガン",
+      "description": "ガトリングガンを高速連射し、前方の扇形範囲内にいる敵にダメージを与え、物理防御と魔法防御を低下させる。",
+      "cooldown": "12",
+      "cost": "50/55/60/65/70",
+      "image": "GGun.png"
+    },
+    {
+      "slot": "R",
+      "name": "連発ミサイル",
+      "description": "指定方向にミサイルを発射する。ミサイルは敵ユニットに命中すると爆発し、範囲内の敵ユニットにダメージを与える。ミサイルのストックは最大に達するまで一定時間ごとにチャージされる。<br>3発ごとに「ドデカミサイル」が発射され、通常より大きいダメージを与える。",
+      "cooldown": "2",
+      "cost": "35",
+      "image": "MissileBarrage.png"
+    }
+  ]
+}

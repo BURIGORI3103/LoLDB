@@ -1,0 +1,76 @@
+{
+  "id": "Yorick",
+  "key": "83",
+  "name": "ヨリック",
+  "title": "魂の導き手",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Tank"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 650,
+    "hpperlevel": 114,
+    "mp": 300,
+    "mpperlevel": 60,
+    "movespeed": 340,
+    "armor": 36,
+    "armorperlevel": 4.5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 8,
+    "hpregenperlevel": 0.8,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.75,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "魂の導き手",
+      "description": "<font color='#FF9900'>呪われし一群:</font> 周囲の敵に襲いかかり攻撃する「ミストウォーカー」を召喚する。",
+      "image": "Yorick_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "葬送",
+      "description": "次に行う通常攻撃が追加ダメージを与えて自身を回復する。対象がチャンピオンか大型モンスターだった場合、または対象が倒された場合は墓が掘られる。",
+      "cooldown": "6/5.5/5/4.5/4",
+      "cost": "20",
+      "image": "YorickQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "屍の列",
+      "description": "指定した地点に破壊可能な壁を召喚し、敵ユニットの動きを阻止する。",
+      "cooldown": "20/18/16/14/12",
+      "cost": "70",
+      "image": "YorickW.png"
+    },
+    {
+      "slot": "E",
+      "name": "悲嘆の霧",
+      "description": "「黒き霧」の塊を投げつけて物理防御を低下させ、ダメージとスロウ効果を与え、対象をマークする。召喚したユニットはマークされた対象に向かう際は移動速度が増加する。 ",
+      "cooldown": "12/11/10/9/8",
+      "cost": "50/55/60/65/70",
+      "image": "YorickE.png"
+    },
+    {
+      "slot": "R",
+      "name": "嘆きの墓標",
+      "description": "ヨリックが「霧の乙女」を召喚する。「霧の乙女」が攻撃している対象を自身が攻撃すると追加ダメージを与える。「霧の乙女」は倒された敵から自動的に「ミストウォーカー」を召喚する。",
+      "cooldown": "160/130/100",
+      "cost": "100",
+      "image": "YorickR.png"
+    }
+  ]
+}

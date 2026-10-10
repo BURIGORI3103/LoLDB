@@ -1,0 +1,75 @@
+{
+  "id": "Aatrox",
+  "key": "266",
+  "name": "エイトロックス",
+  "title": "ダーキンの暴剣",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter"
+  ],
+  "resource": "ブラッドウェル",
+  "stats": {
+    "hp": 650,
+    "hpperlevel": 114,
+    "mp": 0,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 38,
+    "armorperlevel": 4.8,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 3,
+    "hpregenperlevel": 0.5,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.651
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "死兆の構え",
+      "description": "一定時間ごとに、次の通常攻撃が対象の最大体力に応じた追加<magicDamage>魔法ダメージ</magicDamage>を与え、同量の体力を回復する。 ",
+      "image": "Aatrox_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ダーキンブレード",
+      "description": "大剣を叩きつけて物理ダメージを与える。剣を3回振ることが可能で、振るごとに効果範囲が変化する。",
+      "cooldown": "14/12/10/8/6",
+      "cost": "0",
+      "image": "AatroxQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "炎獄の鎖",
+      "description": "地面を叩きつけて、最初に命中した敵にダメージを与える。チャンピオンと大型モンスターは数秒以内に攻撃範囲から出なければ、中央に引き寄せられて再度ダメージを受ける。",
+      "cooldown": "18/16.5/15/13.5/12",
+      "cost": "0",
+      "image": "AatroxW.png"
+    },
+    {
+      "slot": "E",
+      "name": "影進撃",
+      "description": "自動効果として、敵チャンピオンにダメージを与えると体力が回復する。発動すると、指定方向に向かってダッシュする。",
+      "cooldown": "9/8/7/6/5",
+      "cost": "0",
+      "image": "AatroxE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ワールドエンダー",
+      "description": "悪魔形態を解放して周囲の敵ミニオンにフィアー効果を与え、攻撃力、回復量、移動速度が増加する。キルまたはアシストを獲得した場合、この効果が延長される。",
+      "cooldown": "120/100/80",
+      "cost": "0",
+      "image": "AatroxR.png"
+    }
+  ]
+}

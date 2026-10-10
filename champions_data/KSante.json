@@ -1,0 +1,76 @@
+{
+  "id": "KSante",
+  "key": "897",
+  "name": "カ・サンテ",
+  "title": "ナズーマの誇り",
+  "patch": "16.20.1",
+  "roles": [
+    "Tank",
+    "Fighter"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 625,
+    "hpperlevel": 120,
+    "mp": 320,
+    "mpperlevel": 60,
+    "movespeed": 330,
+    "armor": 36,
+    "armorperlevel": 5.2,
+    "spellblock": 30,
+    "spellblockperlevel": 2.1,
+    "attackrange": 150,
+    "hpregen": 9.5,
+    "hpregenperlevel": 1,
+    "mpregen": 7,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 64,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.688
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "不屈の本能",
+      "description": "スキルが対象をマークする。マークされた対象への次の通常攻撃は、与えるダメージが増加する。<br><br>「オールアウト」中はあらゆる通常攻撃とスキルが与えるダメージが増加する。",
+      "image": "Icons_KSante_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "破撃のエントーフォ",
+      "description": "武器を叩きつけ、短い直線上にいた敵にダメージとスロウ効果を与える。<br><br>命中時に「破撃のエントーフォ」のスタックを獲得する。2スタックになると衝撃波を放って、敵を自身の方向に引き寄せる。<br><br>「オールアウト」中はクールダウンが短縮される。",
+      "cooldown": "3.5",
+      "cost": "20",
+      "image": "KSanteQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "切り開く猛進",
+      "description": "被ダメージを軽減させながらチャージし、その後ダッシュして敵をノックバックしてスタンさせる。<br><br>「オールアウト」中は与ダメージが増加するが、ノックバックとスタンを与えなくなる。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "45/50/55/60/65",
+      "image": "KSanteW.png"
+    },
+    {
+      "slot": "E",
+      "name": "辰砂の足取り",
+      "description": "ダッシュしてシールドを獲得する。味方を対象にした場合は距離が増加し、自身と味方の両方がシールドを獲得する。<br><br>「オールアウト」中はクールダウンが短縮され、速度が増加する。",
+      "cooldown": "10/9.5/9/8.5/8",
+      "cost": "45/50/55/60/65",
+      "image": "KSanteE.png"
+    },
+    {
+      "slot": "R",
+      "name": "オールアウト",
+      "description": "敵をノックバックし、敵は通り道のあらゆる壁を通り抜けて弾き飛ばされる。その後、自身は「オールアウト」状態になり、その敵をダッシュして追いかけ、防御力が低下する代わりにダメージと体力回復量が大幅に増加し、スキルが変化する。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "KSanteR.png"
+    }
+  ]
+}

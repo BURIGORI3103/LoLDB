@@ -1,0 +1,75 @@
+{
+  "id": "Kalista",
+  "key": "429",
+  "name": "カリスタ",
+  "title": "復讐の槍",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 560,
+    "hpperlevel": 114,
+    "mp": 300,
+    "mpperlevel": 45,
+    "movespeed": 330,
+    "armor": 24,
+    "armorperlevel": 5.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 525,
+    "hpregen": 4,
+    "hpregenperlevel": 0.75,
+    "mpregen": 6.3,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 57,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 4.5,
+    "attackspeed": 0.694
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "戦の所作",
+      "description": "通常攻撃または「貫魂の一投」の準備アクション中に移動指示を出すと、攻撃時にその方向へ跳躍して移動する。",
+      "image": "Kalista_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "貫魂の一投",
+      "description": "高速で飛ぶ槍を投げる。命中した敵の体力がゼロになると、槍がその敵を貫通する。",
+      "cooldown": "9",
+      "cost": "60/65/70/75/80",
+      "image": "KalistaMysticShot.png"
+    },
+    {
+      "slot": "W",
+      "name": "執念の霊魂",
+      "description": "カリスタと「魂盟の同志」が同じ対象を攻撃すると追加ダメージを与える。<br><br>スキルを発動すると霊魂を飛ばして周辺を偵察させ、霊魂の前方エリアを可視状態にする。",
+      "cooldown": "30",
+      "cost": "0",
+      "image": "KalistaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "引き裂く遺恨",
+      "description": "通常攻撃するたびに、対象に槍の幻影が残る。発動すると槍の幻影が炸裂し、対象に刺さった槍の本数に比例するダメージを与え、スロウ効果を付与する。",
+      "cooldown": "0",
+      "cost": "30",
+      "image": "KalistaExpungeWrapper.png"
+    },
+    {
+      "slot": "R",
+      "name": "宿命の呼び声",
+      "description": "「魂盟の同志」を強制的に自身の近くに吸い寄せる。カリスタの元に吸い寄せられた「魂盟の同志」は自分で指定した地点に突撃でき、範囲内にいる敵ユニットをわずかにノックバックさせる。",
+      "cooldown": "160/140/120",
+      "cost": "100",
+      "image": "KalistaRx.png"
+    }
+  ]
+}

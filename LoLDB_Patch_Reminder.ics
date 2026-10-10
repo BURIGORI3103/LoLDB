@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//LoLDB//Patch Update Reminder//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:loldb-patch-reminder-2026@burigori.local
+DTSTAMP:20261003T060000Z
+DTSTART;TZID=Asia/Tokyo:20261016T200000
+DTEND;TZID=Asia/Tokyo:20261016T203000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=FR
+SUMMARY:⚔️ 【LoLDB】最新パッチデータ自動更新（OP.GG統計反映）
+DESCRIPTION:最新パッチの統計が出揃ったため、プロジェクト「LoLDB」の全データを最新環境に更新してください。\n\n手順：\n1. docs/LoL_URL_list.md 内のすべての「- [x]」を「- [ ]」へ一括置換して未完了状態に戻す。\n2. fetch_champions.py を実行して最新パッチの公式基礎データを再取得する。\n3. process_url_list.py を実行して新パッチのOP.GG統計・wiki情報を再取得し、docs/LoL_URL_list.md のチェックを更新する。\n4. merge_data.py を実行して merged_data/all_champions.json を再生成する。\n5. scratch/generate_matchup_reasons.py を実行して、全チャンピオンの対面1行戦術理由を再計算・同期する。\n6. build_pwa.py を実行して dist/index.html と Service Worker を再ビルドし、オフラインアプリを最新パッチ状態にする。\n7. python c:\\Project\\add_update.py を実行して作業完了ログをXOシステム経由でObsidianへ記録する。
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:⚔️ LoLDB 最新パッチデータ更新の時間です（OP.GG統計出揃い）
+END:VALARM
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:⚔️ LoLDB 最新パッチデータ更新の時間です
+END:VALARM
+END:VEVENT
+END:VCALENDAR

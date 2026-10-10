@@ -1,0 +1,76 @@
+{
+  "id": "Evelynn",
+  "key": "28",
+  "name": "イブリン",
+  "title": "苦悶の抱擁",
+  "patch": "16.20.1",
+  "roles": [
+    "Assassin",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 642,
+    "hpperlevel": 98,
+    "mp": 315,
+    "mpperlevel": 42,
+    "movespeed": 335,
+    "armor": 37,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 8.11,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 61,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.1,
+    "attackspeed": 0.667
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "妖魔の影",
+      "description": "戦闘中以外は「妖魔の影」に包まれ、体力が低下している場合は体力が回復する。レベル6以降は「妖魔の影」でカモフラージュも獲得する。",
+      "image": "Evelynn_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ヘイトスパイク",
+      "description": "鞭を振って最初に当たった敵ユニットにダメージを与える。その後、地面から一直線に貫通するトゲを近くの敵に数回放つことができる。",
+      "cooldown": "4",
+      "cost": "40/45/50/55/60",
+      "image": "EvelynnQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "アリュール",
+      "description": "対象に呪いをかける。少ししてから次に行う通常攻撃またはスキルがその敵にチャーム効果を与え、魔法防御を低下させる。",
+      "cooldown": "15/14/13/12/11",
+      "cost": "60/70/80/90/100",
+      "image": "EvelynnW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ウィップラッシュ",
+      "description": "対象を鞭で打ってダメージを与え、その後少しの間だけ移動速度が増加する。",
+      "cooldown": "8",
+      "cost": "40/45/50/55/60",
+      "image": "EvelynnE.png"
+    },
+    {
+      "slot": "R",
+      "name": "ラストカレス",
+      "description": "少しの間だけ対象指定不可になり、自身の正面の範囲内にいる敵に大ダメージを与えてから後方に大きくワープする。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "EvelynnR.png"
+    }
+  ]
+}

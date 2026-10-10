@@ -1,0 +1,75 @@
+{
+  "id": "Gwen",
+  "key": "887",
+  "name": "グウェン",
+  "title": "聖なるお針子",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 620,
+    "hpperlevel": 115,
+    "mp": 330,
+    "mpperlevel": 40,
+    "movespeed": 340,
+    "armor": 39,
+    "armorperlevel": 4.9,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 9,
+    "hpregenperlevel": 0.9,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 63,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.25,
+    "attackspeed": 0.69
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "裁断",
+      "description": "通常攻撃が対象の体力に応じて追加魔法ダメージを与える。この効果でチャンピオンに与えたダメージの一定割合を体力として回復する。 ",
+      "image": "Gwen_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "チョキチョキッ！",
+      "description": "ハサミで扇状の範囲を最大6回切りつけて魔法ダメージを与える。範囲の中心にいるユニットには確定ダメージを与え、切るたびに固有スキルの効果を適用する。",
+      "cooldown": "6.5/5.75/5/4.25/3.5",
+      "cost": "40",
+      "image": "GwenQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "聖なる霧",
+      "description": "霧を召喚して、霧の外にいる敵から身を守る。霧の中にいる敵からしか対象指定されない。",
+      "cooldown": "22/21/20/19/18",
+      "cost": "60",
+      "image": "GwenW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スキップスラッシュ",
+      "description": "短い距離をダッシュして数秒間、攻撃速度と射程が増加し、<OnHit>通常攻撃時効果</OnHit>で魔法ダメージを与える。効果時間中に通常攻撃を命中させた場合、このスキルのクールダウンが一定割合解消される。 ",
+      "cooldown": "13/12.5/12/11.5/11",
+      "cost": "35",
+      "image": "GwenE.png"
+    },
+    {
+      "slot": "R",
+      "name": "針仕事",
+      "description": "針を投げ、命中した敵にスロウ効果と魔法ダメージを与えて、チャンピオンに命中した場合は「裁断」を適用する。<br><br>このスキルは最大2回まで再発動可能で、再発動するたびに投げる針の本数とダメージが増加する。 ",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "GwenR.png"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "Warwick",
+  "key": "19",
+  "name": "ワーウィック",
+  "title": "解き放たれたゾウンの激憤",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Tank"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 620,
+    "hpperlevel": 99,
+    "mp": 280,
+    "mpperlevel": 35,
+    "movespeed": 335,
+    "armor": 33,
+    "armorperlevel": 4.4,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 4,
+    "hpregenperlevel": 0.75,
+    "mpregen": 7.45,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 65,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.638
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "永遠の渇き",
+      "description": "通常攻撃が追加魔法ダメージを与える。自身の体力が50%未満の場合、追加魔法ダメージと同量の体力を回復する。自身の体力が25%未満の場合、この回復効果は3倍になる。",
+      "image": "WarwickP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "野獣の牙",
+      "description": "前方にダッシュして対象に噛みつき、対象の最大体力に応じたダメージを与え、与えたダメージに応じて自身の体力を回復する。",
+      "cooldown": "8/7.5/7/6.5/6",
+      "cost": "80/85/90/95/100",
+      "image": "WarwickQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "血の追跡",
+      "description": "体力が50%未満の敵ユニットを感知して、その敵ユニットに向かう際に移動速度と攻撃速度が増加する。その敵ユニットの体力が25%未満に低下した場合は、ワーウィックが狂乱状態になってこれらの効果が3倍になる。",
+      "cooldown": "80/70/60/50/40",
+      "cost": "55",
+      "image": "WarwickW.png"
+    },
+    {
+      "slot": "E",
+      "name": "怒りの咆哮",
+      "description": "2.5秒間、受けるダメージが減少する。効果の終了時、またはスキルを再発動すると、咆哮をあげて周囲の敵ユニットを1秒間逃走させる。",
+      "cooldown": "15/14/13/12/11",
+      "cost": "40",
+      "image": "WarwickE.png"
+    },
+    {
+      "slot": "R",
+      "name": "絶狼牙連撃",
+      "description": "指定方向にジャンプして、最初に接触した敵チャンピオンに1.5秒間サプレッション効果を与える(増加した移動速度に応じて射程が拡大)。",
+      "cooldown": "110/90/70",
+      "cost": "100",
+      "image": "WarwickR.png"
+    }
+  ]
+}

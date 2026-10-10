@@ -1,0 +1,76 @@
+{
+  "id": "Zac",
+  "key": "154",
+  "name": "ザック",
+  "title": "親愛なる秘密兵器",
+  "patch": "16.20.1",
+  "roles": [
+    "Tank",
+    "Fighter"
+  ],
+  "resource": "なし",
+  "stats": {
+    "hp": 685,
+    "hpperlevel": 109,
+    "mp": 0,
+    "mpperlevel": 0,
+    "movespeed": 340,
+    "armor": 33,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.6,
+    "attackspeed": 0.736
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "はぐれスライム",
+      "description": "スキルによる攻撃を命中させるたびスライムが飛び散り、回収すると体力が回復する。致命的なダメージを受けた場合、ザックは4体のスライムに分裂する。その後数秒かけて再融合し、この時に生き残っていたスライムの体力に応じた体力で復活する。各スライムはザックの最大体力、物理防御、魔法防御の数パーセントに相当するステータスを持つ。ザックは一度分裂すると、ふたたび分裂するために5分間のクールダウンが必要になる。",
+      "image": "ZacPassive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "スライムパンチ",
+      "description": "片手を伸ばして敵ユニットを掴む。別の敵ユニットを攻撃すると両者を互いにぶつけ合わせる。",
+      "cooldown": "14/12.5/11/9.5/8",
+      "cost": "0",
+      "image": "ZacQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "スライムクラッシュ",
+      "description": "体を爆発させることで近くの敵に向かって突進し、最大体力の一定割合を魔法ダメージとして与える。",
+      "cooldown": "5",
+      "cost": "0",
+      "image": "ZacW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ブッ飛びスライム",
+      "description": "ザックが両手をついて反発力を溜め込み、対象に勢いよく飛びかかる。",
+      "cooldown": "21/18/15/12/9",
+      "cost": "0",
+      "image": "ZacE.png"
+    },
+    {
+      "slot": "R",
+      "name": "レッツバウンス！",
+      "description": "4回バウンドし、命中した敵をノックアップさせてスロウ状態にする。",
+      "cooldown": "120/105/90",
+      "cost": "0",
+      "image": "ZacR.png"
+    }
+  ]
+}

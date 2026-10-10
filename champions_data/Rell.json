@@ -1,0 +1,76 @@
+{
+  "id": "Rell",
+  "key": "526",
+  "name": "レル",
+  "title": "鋼鉄の乙女",
+  "patch": "16.20.1",
+  "roles": [
+    "Tank",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 620,
+    "hpperlevel": 104,
+    "mp": 320,
+    "mpperlevel": 40,
+    "movespeed": 315,
+    "armor": 30,
+    "armorperlevel": 4,
+    "spellblock": 28,
+    "spellblockperlevel": 1.8,
+    "attackrange": 175,
+    "hpregen": 7.5,
+    "hpregenperlevel": 0.85,
+    "mpregen": 7,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "革新の鬨",
+      "description": "通常攻撃またはスキルを命中させると追加で魔法ダメージを与え、対象から物理防御と魔法防御を奪う。",
+      "image": "RellP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "破鋼撃",
+      "description": "直線上のユニットに魔法ダメージを与え、対象のシールドを破壊してスタンさせる。 ",
+      "cooldown": "11/10.5/10/9.5/9",
+      "cost": "50",
+      "image": "RellQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "フェロマンシー: 装着",
+      "description": "騎馬形態: 「騎馬解除」をして、鎧をまとって突撃し、敵をノックアップさせて大量のシールドを獲得する。騎馬解除中は物理防御、魔法防御、攻撃速度、射程距離が増加するが、移動速度が低下する。<br><br>騎馬解除中: 鋼鉄の馬を形成して「騎馬形態」となり、瞬間的に移動速度が増加して、次に通常攻撃を行った敵をノックアップさせる。<br><br>",
+      "cooldown": "10",
+      "cost": "40",
+      "image": "RellW_Dismount.png"
+    },
+    {
+      "slot": "E",
+      "name": "重槍突貫",
+      "description": "自動効果: 非戦闘時の移動速度が増加する。<br><br>発動効果: 自身と味方1体の移動速度が徐々に増加する。敵またはお互いの方向に移動する場合、この増加量は2倍になる。次の通常攻撃で爆発を引き起こし、魔法ダメージを与える。<br>",
+      "cooldown": "14/13/12/11/10",
+      "cost": "40",
+      "image": "RellE.png"
+    },
+    {
+      "slot": "R",
+      "name": "磁気嵐流",
+      "description": "猛烈な磁場を発生させ、周囲の敵を自身の方向に引き寄せる。その後も少しの間、継続的に周囲の敵を自身の方向に引き付け、効果時間をかけて魔法ダメージを与える。",
+      "cooldown": "120/100/80",
+      "cost": "100",
+      "image": "RellR.png"
+    }
+  ]
+}

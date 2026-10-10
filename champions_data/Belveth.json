@@ -1,0 +1,75 @@
+{
+  "id": "Belveth",
+  "key": "200",
+  "name": "ベル＝ヴェス",
+  "title": "ヴォイドの女帝",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter"
+  ],
+  "resource": "",
+  "stats": {
+    "hp": 580,
+    "hpperlevel": 105,
+    "mp": 45,
+    "mpperlevel": 0,
+    "movespeed": 340,
+    "armor": 28,
+    "armorperlevel": 5,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 6,
+    "hpregenperlevel": 0.6,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 0,
+    "attackspeed": 0.67
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "死のラベンダー",
+      "description": "大型ミニオン、大型モンスター、チャンピオンからキルまたはアシストを獲得すると、攻撃速度のスタックを恒久的に獲得する。また、スキル使用後に一時的に攻撃速度が増加する。",
+      "image": "Belveth_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ヴォイドサージ",
+      "description": "選択した方向にダッシュして、接触したすべての敵にダメージを与える。",
+      "cooldown": "4/3.25/2.5/1.75/1",
+      "cost": "0",
+      "image": "BelvethQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "天と地",
+      "description": "尻尾を地面に叩きつけ、敵にダメージを与えてノックアップさせ、スロウ効果を付与する。",
+      "cooldown": "12/11/10/9/8",
+      "cost": "0",
+      "image": "BelvethW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ロイヤルストーム",
+      "description": "その場で動きを止めて自身の周囲に強烈な嵐を召喚し、最も体力の低い敵を切り裂いて、ライフスティールとダメージ軽減効果を獲得する。",
+      "cooldown": "24/21/18/15/12",
+      "cost": "0",
+      "image": "BelvethE.png"
+    },
+    {
+      "slot": "R",
+      "name": "終わりなき晩餐",
+      "description": "ヴォイドコーラルの残片を吸収し、真の姿に変身して最大体力、射程距離、攻撃速度が増加する。ヴォイド出身のエピックモンスターが残したヴォイドコーラルの残片を吸収すると、ヴォイドレモラを召喚できるようになる。",
+      "cooldown": "1",
+      "cost": "0",
+      "image": "BelvethR.png"
+    }
+  ]
+}

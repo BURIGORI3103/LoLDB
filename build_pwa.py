@@ -1705,7 +1705,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.19 / v2.0.1 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.1.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1897,6 +1897,17 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.1.0</span>
+              <span class="changelog-date">2026-10-10</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【公式パッチ 16.20.1（26.20）完全対応】全173体のチャンピオン基礎ステータス・スキル詳細および全283個のアイテムデータを最新パッチ16.20.1に完全アップデート</li>
+              <li>【Worldsバランシング反映】アンベッサのパッシブ調整、アッシュの基本AD低下、ダイアナのWシールド強化、ケネンのE攻撃速度Buff、キンドレッドのW/E強化等を完全網羅</li>
+              <li>【アイテムデータ最新化】ロケットベルトのNerfを含むサモナーズリフト全アイテムの最新ステータス・価格・合成ツリーを同期</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.0.1</span>
@@ -2257,7 +2268,7 @@ def build():
           `<div class="damage-badge-wrap"><span class="damage-badge ${{dp.badge_class || 'badge-ad'}}">${{dp.badge_text}}</span></div>` : "";
 
         // Data Dragon公式CDNまたはフォールバック
-        const patch = champ.patch || "16.19.1";
+        const patch = champ.patch || "16.20.1";
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
 
         card.innerHTML = `
@@ -2282,7 +2293,7 @@ def build():
       const c = CHAMPIONS[champId];
       if (!c) return;
 
-      const patch = c.patch || "16.19.1";
+      const patch = c.patch || "16.20.1";
       modalNameEl.textContent = c.name;
       modalTitleEl.textContent = `${{c.id}} - ${{c.title || ""}} (Patch ${{patch}})`;
 
@@ -2843,7 +2854,7 @@ def build():
       const item = ITEMS[itemId];
       if (!item) return;
 
-      const patch = "16.19.1";
+      const patch = "16.20.1";
       itemDetailIcon.src = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
       itemDetailIcon.style.display = "block";
       itemDetailName.textContent = item.name;
@@ -3087,7 +3098,7 @@ def build():
         card.className = "item-grid-card";
         card.onclick = () => openItemDetail(item.id);
 
-        const patch = "16.19.1";
+        const patch = "16.20.1";
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
         const price = item.gold?.total ? `${{item.gold.total}} G` : "無料";
         const statsSummary = item.stats_summary ? `<div class="item-card-stats" title="${{item.stats_summary}}">${{item.stats_summary}}</div>` : "";
@@ -3235,7 +3246,7 @@ def build():
 
         const item = document.createElement("div");
         item.className = "sim-picker-item";
-        const patch = champ.patch || "16.19.1";
+        const patch = champ.patch || "16.20.1";
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
 
         item.innerHTML = `
@@ -3250,7 +3261,7 @@ def build():
     function selectSimChamp(champId) {{
       const c = CHAMPIONS[champId];
       if (!c) return;
-      const patch = c.patch || "16.19.1";
+      const patch = c.patch || "16.20.1";
       const dp = c.damage_profile || {{}};
 
       if (simCurrentPickingTarget === 'me') {{
@@ -3515,7 +3526,7 @@ def build():
         }}
 
         simItemList.innerHTML = recommendedItems.slice(0, 6).map(it => {{
-          const itemImg = `https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/${{it.id}}.png`;
+          const itemImg = `https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/${{it.id}}.png`;
           return `
             <div class="sim-item-card clickable-item" data-item-id="${{it.id}}" title="タップして性能詳細を表示">
               <img class="sim-item-img" src="${{itemImg}}" alt="${{it.name}}" onerror="this.src='icon.png';">
@@ -3660,7 +3671,7 @@ def build():
         const end = Math.min(idx + 10, champList.length);
         for (let i = idx; i < end; i++) {{
           const c = champList[i];
-          const patch = c.patch || "16.19.1";
+          const patch = c.patch || "16.20.1";
           const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{c.id}}.png`;
           const img = new Image();
           img.src = imgUrl;
@@ -3696,8 +3707,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v16
-const CORE_CACHE = 'loldb-core-v16';
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v17
+const CORE_CACHE = 'loldb-core-v17';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
 
 const ASSETS_TO_CACHE = [

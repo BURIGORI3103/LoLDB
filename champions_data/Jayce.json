@@ -1,0 +1,76 @@
+{
+  "id": "Jayce",
+  "key": "126",
+  "name": "ジェイス",
+  "title": "未来への希望",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Marksman"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 590,
+    "hpperlevel": 109,
+    "mp": 375,
+    "mpperlevel": 45,
+    "movespeed": 335,
+    "armor": 22,
+    "armorperlevel": 5,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 125,
+    "hpregen": 6,
+    "hpregenperlevel": 0.6,
+    "mpregen": 6,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ヘクステック・コンデンサー",
+      "description": "武器を切り替えると少しの間移動速度が増加する。",
+      "image": "Jayce_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "スカイバスター/ショックブラスト",
+      "description": "ハンマーモード: 敵に飛びかかって物理ダメージとスロウ効果を与える。<br><br>キャノンモード: 電流の玉を発射し、敵に命中するか最大射程に達すると爆発して、範囲内の敵ユニットに物理ダメージを与える。",
+      "cooldown": "16/14/12/10/8/6",
+      "cost": "40",
+      "image": "JayceToTheSkies.png"
+    },
+    {
+      "slot": "W",
+      "name": "ライトニング/ハイパーチャージ",
+      "description": "ハンマーモード: <br>自動効果: 攻撃のたびにマナが回復する。<br>発動効果: 雷のフィールドを発生させ、周囲の敵に数秒間ダメージを与える。<br><br>キャノンモード: 爆発的なエネルギーを得て、次の数回の攻撃速度が最大まで増加する。",
+      "cooldown": "10",
+      "cost": "40",
+      "image": "JayceStaticField.png"
+    },
+    {
+      "slot": "E",
+      "name": "サンダーブロー/アクセルゲート",
+      "description": "ハンマーモード: 敵に魔法ダメージを与え、わずかに突き飛ばす。<br><br>キャノンモード: そこを通過したすべての味方チャンピオンの移動速度が増加する「アクセルゲート」を配備する。「ショックブラスト」が「アクセルゲート」を通過すると、弾速、射程、ダメージが増加する。",
+      "cooldown": "20/18/16/14/12/10",
+      "cost": "55",
+      "image": "JayceThunderingBlow.png"
+    },
+    {
+      "slot": "R",
+      "name": "マーキュリーキャノン/マーキュリーハンマー",
+      "description": "ハンマーモード: 「マーキュリーハンマー」が「マーキュリーキャノン」に切り替わり、スキルが変化すると同時に射程距離が広がる。モード変更後の最初の一撃には、対象の物理防御と魔法防御を低下させる効果がつく。<br><br>キャノンモード: 「マーキュリーキャノン」が「マーキュリーハンマー」に切り替わり、変化と同時に物理防御と魔法防御が増加する。モード変更後の最初の一撃には魔法ダメージが追加される。",
+      "cooldown": "6",
+      "cost": "0",
+      "image": "JayceStanceHtG.png"
+    }
+  ]
+}

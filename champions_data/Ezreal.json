@@ -1,0 +1,76 @@
+{
+  "id": "Ezreal",
+  "key": "81",
+  "name": "エズリアル",
+  "title": "光の冒険心",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 102,
+    "mp": 375,
+    "mpperlevel": 70,
+    "movespeed": 325,
+    "armor": 24,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 4,
+    "hpregenperlevel": 0.65,
+    "mpregen": 8.5,
+    "mpregenperlevel": 1,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ライジングスペルフォース",
+      "description": "スキルを連続で命中させるたびに攻撃速度が増加していく。最大5スタック。",
+      "image": "Ezreal_RisingSpellForce.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ミスティックショット",
+      "description": "エネルギービームを発射してダメージを与える。敵ユニットに命中すると、自身の全スキルのクールダウンが少しだけ短縮される。",
+      "cooldown": "5.5/5.25/5/4.75/4.5",
+      "cost": "28/31/34/37/40",
+      "image": "EzrealQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "エッセンスフラックス",
+      "description": "最初に命中したチャンピオンまたはオブジェクトに貼り付くオーブを発射する。オーブの付いた敵を攻撃すると、オーブが爆発してダメージを与える。",
+      "cooldown": "8",
+      "cost": "50",
+      "image": "EzrealW.png"
+    },
+    {
+      "slot": "E",
+      "name": "アーケインシフト",
+      "description": "近くの指定地点に瞬間移動してエネルギービームを発射する。このエネルギービームは最も近くにいる敵ユニットに向かって発射される。「エッセンスフラックス」のスタックを受けた敵を優先する。",
+      "cooldown": "26/23/20/17/14",
+      "cost": "70",
+      "image": "EzrealE.png"
+    },
+    {
+      "slot": "R",
+      "name": "トゥルーショットバラージ",
+      "description": "少しチャージしてから敵を貫通する強力なエネルギービームを発射して、命中した敵ユニットに大ダメージを与える(ミニオンとエピック以外のモンスターに対してはダメージが低下)。",
+      "cooldown": "120/105/90",
+      "cost": "100",
+      "image": "EzrealR.png"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "Karma",
+  "key": "43",
+  "name": "カルマ",
+  "title": "目覚めし者",
+  "patch": "16.20.1",
+  "roles": [
+    "Mage",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 630,
+    "hpperlevel": 109,
+    "mp": 374,
+    "mpperlevel": 40,
+    "movespeed": 335,
+    "armor": 28,
+    "armorperlevel": 5,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 525,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 13,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 49,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.3,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "寄せ火",
+      "description": "自身の攻撃スキルが「マントラ」のクールダウンを短縮する。",
+      "image": "Karma_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "心炎",
+      "description": "精神の炎を解き放ち、敵に命中すると爆発してダメージを与える。<br><br>マントラボーナス: 爆発の威力が増し、さらに対象の足下に力場を発生させて範囲内に時間差でダメージを与える。",
+      "cooldown": "9/8/7/6/5",
+      "cost": "40/50/60/70/80",
+      "image": "KarmaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "魂縛",
+      "description": "自身と標的を鎖でつなぎダメージを与え、ステルス状態を見破る。効果終了時まで鎖が破壊されなければ、敵はその場でスネア状態となり再びダメージを受ける。<br><br>マントラボーナス: 鎖が強化され自身の体力を回復し、敵に与えるスネア状態の効果時間が延長される。",
+      "cooldown": "12",
+      "cost": "50/55/60/65/70",
+      "image": "KarmaSpiritBind.png"
+    },
+    {
+      "slot": "E",
+      "name": "激励",
+      "description": "指定した味方ユニットにシールドを付与し、ダメージから守ると同時に移動速度を増加させる。<br><br>マントラボーナス: 対象からエネルギーが放射され、初期シールドを強化し、周囲にいる味方チャンピオンにも「激励」の効果を付与する。",
+      "cooldown": "10/9.5/9/8.5/8",
+      "cost": "60/65/70/75/80",
+      "image": "KarmaSolKimShield.png"
+    },
+    {
+      "slot": "R",
+      "name": "マントラ",
+      "description": "カルマが次に使用するスキルを強化し追加効果を付与する。<br>「マントラ」はレベル1から使用でき、スキルポイントを必要としない。",
+      "cooldown": "40/38/36/34",
+      "cost": "0",
+      "image": "KarmaMantra.png"
+    }
+  ]
+}

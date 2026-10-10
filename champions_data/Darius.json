@@ -1,0 +1,76 @@
+{
+  "id": "Darius",
+  "key": "122",
+  "name": "ダリウス",
+  "title": "ノクサスの戦斧",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Tank"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 652,
+    "hpperlevel": 114,
+    "mp": 263,
+    "mpperlevel": 58,
+    "movespeed": 340,
+    "armor": 37,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 10,
+    "hpregenperlevel": 0.95,
+    "mpregen": 6.6,
+    "mpregenperlevel": 0.35,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 64,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "大出血",
+      "description": "通常攻撃または攻撃スキルが命中した敵を出血させ、5秒間物理ダメージを与える。最大5回まで効果をスタックさせることができる。対象のスタックが最大になると、ダリウスが激怒して攻撃力が大幅に増加する。",
+      "image": "Darius_Icon_Hemorrhage.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "皆殺しの斧",
+      "description": "斧を構えて振り抜き、周囲の敵を攻撃する。刃に当たった敵は、内側の柄に当たった敵より大きなダメージを受ける。刃に当たった敵チャンピオンと大型モンスターの数に応じて自身を回復する。",
+      "cooldown": "9/8/7/6/5",
+      "cost": "25/30/35/40/45",
+      "image": "DariusCleave.png"
+    },
+    {
+      "slot": "W",
+      "name": "脚削ぎ",
+      "description": "次の通常攻撃で敵の動脈を狙い、出血させることでスロウ効果を付与する。",
+      "cooldown": "5",
+      "cost": "40",
+      "image": "DariusNoxianTacticsONH.png"
+    },
+    {
+      "slot": "E",
+      "name": "捕縛",
+      "description": "斧を研ぎ澄まし、対象の物理防御を一部無視して物理ダメージを与えるようになる。スキルを使用すると、刃で敵を引っかけてそばに引き寄せる。",
+      "cooldown": "26/23.5/21/18.5/16",
+      "cost": "70/60/50/40/30",
+      "image": "DariusAxeGrabCone.png"
+    },
+    {
+      "slot": "R",
+      "name": "ノクサスギロチン",
+      "description": "敵チャンピオンに飛びかかり、斧を振り下ろして確定ダメージを与える。対象の「大出血」のスタック数に応じてダメージが増加する。「ノクサスギロチン」で敵にとどめを刺すと、少しの間クールダウンが解消される。",
+      "cooldown": "120/100/80",
+      "cost": "100/100/0",
+      "image": "DariusExecute.png"
+    }
+  ]
+}

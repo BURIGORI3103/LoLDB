@@ -1,0 +1,75 @@
+{
+  "id": "Sejuani",
+  "key": "113",
+  "name": "セジュアニ",
+  "title": "極北の激憤",
+  "patch": "16.20.1",
+  "roles": [
+    "Tank"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 630,
+    "hpperlevel": 114,
+    "mp": 400,
+    "mpperlevel": 40,
+    "movespeed": 340,
+    "armor": 34,
+    "armorperlevel": 5.45,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 150,
+    "hpregen": 8.5,
+    "hpregenperlevel": 1,
+    "mpregen": 7,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 66,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.688
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "極北の激憤",
+      "description": "非戦闘状態が続くと、「氷結の鎧」を獲得して物理防御と魔法防御が増加し、スロウ効果を受けなくなる。「氷結の鎧」はダメージを受けたあとも少しの間だけ継続する。自身がスタンさせた敵を攻撃すると、その氷が砕けて大きな魔法ダメージを与える。",
+      "image": "Sejuani_passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "猪突凍進",
+      "description": "敵に突進してノックアップする。敵チャンピオンをノックアップすると、そこで突進が止まる。﻿",
+      "cooldown": "18/16.5/15/13.5/12",
+      "cost": "60/65/70/75/80",
+      "image": "SejuaniQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "氷河の怒り",
+      "description": "メイスを2回振り、ダメージとスロウ効果を与えて「凍傷」のスタックを付与する。",
+      "cooldown": "9/8/7/6/5",
+      "cost": "60",
+      "image": "SejuaniW.png"
+    },
+    {
+      "slot": "E",
+      "name": "永久凍土",
+      "description": "「凍傷」のスタックが最大になった敵チャンピオンを凍らせてスタンさせる。",
+      "cooldown": "1.5",
+      "cost": "20",
+      "image": "SejuaniE.png"
+    },
+    {
+      "slot": "R",
+      "name": "グレイシャルプリズン",
+      "description": "ボーラを投げて、最初に当たった敵チャンピオンを凍らせてスタンさせる。さらに氷の嵐を巻き起こして、他の敵ユニットにスロウ効果を与える。",
+      "cooldown": "120/105/90",
+      "cost": "100",
+      "image": "SejuaniR.png"
+    }
+  ]
+}

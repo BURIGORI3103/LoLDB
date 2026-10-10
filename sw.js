@@ -1,5 +1,5 @@
-// LoLDB Service Worker - Dual Cache Architecture v16
-const CORE_CACHE = 'loldb-core-v16';
+// LoLDB Service Worker - Dual Cache Architecture v17
+const CORE_CACHE = 'loldb-core-v17';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
 
 const ASSETS_TO_CACHE = [

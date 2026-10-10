@@ -1,0 +1,76 @@
+{
+  "id": "XinZhao",
+  "key": "5",
+  "name": "シン・ジャオ",
+  "title": "デマーシアの家令長",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Tank"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 620,
+    "hpperlevel": 106,
+    "mp": 274,
+    "mpperlevel": 55,
+    "movespeed": 345,
+    "armor": 35,
+    "armorperlevel": 4.4,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 175,
+    "hpregen": 8,
+    "hpregenperlevel": 0.7,
+    "mpregen": 7.25,
+    "mpregenperlevel": 0.45,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 63,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.645
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "不退転",
+      "description": "通常攻撃が3回毎に追加ダメージを与えて自身を回復する。",
+      "image": "XinZhaoReworkP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "三槍撃",
+      "description": "通常攻撃が3回分強化され、3回目で敵をノックアップさせる。",
+      "cooldown": "7/6.5/6/5.5/5",
+      "cost": "30",
+      "image": "XinZhaoQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "風成雷鳴",
+      "description": "前方を槍で薙ぎ払い、次に槍を突いて敵ユニットにスロウを与え、挑戦対象としてマークする。",
+      "cooldown": "12/11/10/9/8",
+      "cost": "60",
+      "image": "XinZhaoW.png"
+    },
+    {
+      "slot": "E",
+      "name": "兵貴神速",
+      "description": "敵に突進して攻撃速度が増加し、範囲内にいるすべての敵にダメージと短時間のスロウ効果を与える。挑戦対象に対しては、このスキルの射程が増加する。",
+      "cooldown": "11",
+      "cost": "60",
+      "image": "XinZhaoE.png"
+    },
+    {
+      "slot": "R",
+      "name": "三日月槍守",
+      "description": "自動効果で、直前にダメージを与えた敵が挑戦対象になる。発動すると、周囲にいる敵に対象の現在体力に応じたダメージを与え、挑戦対象以外をノックバックさせる。発生した円の外にいる敵チャンピオンからはダメージを受けなくなる。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "XinZhaoR.png"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "Lucian",
+  "key": "236",
+  "name": "ルシアン",
+  "title": "不浄殲滅者",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 641,
+    "hpperlevel": 100,
+    "mp": 320,
+    "mpperlevel": 43,
+    "movespeed": 335,
+    "armor": 28,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 500,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.65,
+    "mpregen": 7,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 60,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.5,
+    "attackspeed": 0.638
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "二挺拳銃",
+      "description": "スキルを使用するたびに、次の通常攻撃が2連射になる。味方から体力回復効果またはシールドを付与されるか、自身の周囲で敵チャンピオンが移動不能効果を受けると、次の2回の通常攻撃が追加魔法ダメージを与える。",
+      "image": "Lucian_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ピアシングライト",
+      "description": "指定した敵ユニットへ光線を発射する。光線はその軌道上にいるすべての敵ユニットにダメージを与える。",
+      "cooldown": "9/8/7/6/5",
+      "cost": "48/56/64/72/80",
+      "image": "LucianQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "アーデントブレイズ",
+      "description": "指定方向に星形に爆発するエネルギーを発射する。命中した敵ユニットには印が付与され、一時的に可視状態になる。印が付いた敵を攻撃するとルシアンの移動速度が増加する。",
+      "cooldown": "14/13/12/11/10",
+      "cost": "60",
+      "image": "LucianW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スライド",
+      "description": "短距離を素早く移動する。「二挺拳銃」の通常攻撃が敵に命中するたびに、このスキルのクールダウンが短縮される。",
+      "cooldown": "16/15.5/15/14.5/14",
+      "cost": "32/24/16/8/0",
+      "image": "LucianE.png"
+    },
+    {
+      "slot": "R",
+      "name": "二挺掃射",
+      "description": "二挺拳銃を構えて弾丸を高速で連射する。",
+      "cooldown": "110/100/90",
+      "cost": "100",
+      "image": "LucianR.png"
+    }
+  ]
+}

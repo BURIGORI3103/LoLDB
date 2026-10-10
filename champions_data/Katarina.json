@@ -1,0 +1,76 @@
+{
+  "id": "Katarina",
+  "key": "55",
+  "name": "カタリナ",
+  "title": "凶兆の刃",
+  "patch": "16.20.1",
+  "roles": [
+    "Assassin",
+    "Mage"
+  ],
+  "resource": "なし",
+  "stats": {
+    "hp": 672,
+    "hpperlevel": 108,
+    "mp": 0,
+    "mpperlevel": 0,
+    "movespeed": 335,
+    "armor": 32,
+    "armorperlevel": 4.7,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 7.5,
+    "hpregenperlevel": 0.7,
+    "mpregen": 0,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.74,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "貪欲なる暗殺者",
+      "description": "自身がダメージを与えた敵チャンピオンがその直後にキルされると、自身の全スキルのクールダウンが大幅に短縮する。<br><br>自身が<font color='#FFF673'>「短剣」</font>を拾うと、周囲の敵を斬りつけて魔法ダメージを与える。",
+      "image": "Katarina_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "バウンドナイフ",
+      "description": "カタリナが対象に向けて敵から敵へと飛び跳ねる<font color='#FFF673'>「短剣」</font>を投げる。<font color='#FFF673'>「短剣」</font>は最後に地面に落ちる。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "0",
+      "image": "KatarinaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "プリペレーション",
+      "description": "少しの間だけカタリナの移動速度が大幅に増加し、<font color='#FFF673'>「短剣」</font>を頭上に放り投げる。",
+      "cooldown": "15/14/13/12/11",
+      "cost": "0",
+      "image": "KatarinaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "瞬歩",
+      "description": "対象の地点へブリンクする。対象が敵ユニットなら攻撃し、そうでない場合はもっとも近くにいる敵ユニットを攻撃する。",
+      "cooldown": "12/11/10/9/8",
+      "cost": "0",
+      "image": "KatarinaEWrapper.png"
+    },
+    {
+      "slot": "R",
+      "name": "デスロータス",
+      "description": "刃の嵐と化し、周囲の敵チャンピオン(最大3人)に目にもとまらぬ速さで短剣を投げて強大な魔法ダメージを与える。",
+      "cooldown": "75/60/45",
+      "cost": "0",
+      "image": "KatarinaR.png"
+    }
+  ]
+}

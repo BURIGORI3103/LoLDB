@@ -1,0 +1,76 @@
+{
+  "id": "Olaf",
+  "key": "2",
+  "name": "オラフ",
+  "title": "狂戦士",
+  "patch": "16.20.1",
+  "roles": [
+    "Fighter",
+    "Tank"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 645,
+    "hpperlevel": 119,
+    "mp": 316,
+    "mpperlevel": 50,
+    "movespeed": 350,
+    "armor": 35,
+    "armorperlevel": 4.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.05,
+    "attackrange": 125,
+    "hpregen": 6.5,
+    "hpregenperlevel": 0.6,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.7,
+    "attackspeed": 0.72
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "狂戦士の怒り",
+      "description": "減少体力に応じて攻撃速度とライフスティールが増加する。",
+      "image": "Olaf_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "斧投げ",
+      "description": "指定地点の地面をめがけて斧を投げ、命中した敵にダメージを与えて、物理防御と移動速度を低下させる。斧を拾うと、このスキルのクールダウンがリセットされる。",
+      "cooldown": "9",
+      "cost": "50/55/60/65/70",
+      "image": "OlafAxeThrowCast.png"
+    },
+    {
+      "slot": "W",
+      "name": "根性比べ",
+      "description": "攻撃速度が増加し、シールドを獲得する。",
+      "cooldown": "16/15/14/13/12",
+      "cost": "50",
+      "image": "OlafFrenziedStrikes.png"
+    },
+    {
+      "slot": "E",
+      "name": "捨て身切り",
+      "description": "体力を消費して強烈な攻撃を繰り出し、対象に確定ダメージを与える。対象を倒した場合は消費した体力が回復する。",
+      "cooldown": "11/10/9/8/7",
+      "cost": "0",
+      "image": "OlafRecklessStrike.png"
+    },
+    {
+      "slot": "R",
+      "name": "ラグナロク",
+      "description": "自動効果で物理防御と魔法防御が増加する。このスキルを発動すると、通常攻撃を続けている限りは行動妨害効果を受けなくなる。",
+      "cooldown": "100/90/80",
+      "cost": "100",
+      "image": "OlafRagnarok.png"
+    }
+  ]
+}

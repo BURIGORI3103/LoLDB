@@ -1,0 +1,76 @@
+{
+  "id": "Samira",
+  "key": "360",
+  "name": "サミーラ",
+  "title": "砂漠の薔薇",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 630,
+    "hpperlevel": 108,
+    "mp": 349,
+    "mpperlevel": 38,
+    "movespeed": 335,
+    "armor": 26,
+    "armorperlevel": 4.7,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 500,
+    "hpregen": 3.25,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8.2,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 57,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.3,
+    "attackspeed": 0.658
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "デアデビルインパルス",
+      "description": "直前に命中したものとは異なる通常攻撃またはスキルを命中させることでコンボが増加していく。近接攻撃射程の通常攻撃は追加魔法ダメージを与える。<status>移動不能効果</status>を受けた敵に通常攻撃を行うと、自身の射程内までダッシュする。敵が<status>ノックアップ</status>していた場合は、少しの間だけ<status>ノックアップ</status>させたままにする。",
+      "image": "SamiraP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "フレア",
+      "description": "銃を発砲するか、剣を振ってダメージを与える。「ワイルドラッシュ」中に使用した場合は、ダッシュ後に通り道にいたすべての敵を攻撃する。",
+      "cooldown": "6/5/4/3/2",
+      "cost": "30",
+      "image": "SamiraQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ブレードワール",
+      "description": "周囲を斬りつけて敵にダメージを与え、敵の飛翔物を破壊する。",
+      "cooldown": "30/28/26/24/22",
+      "cost": "60",
+      "image": "SamiraW.png"
+    },
+    {
+      "slot": "E",
+      "name": "ワイルドラッシュ",
+      "description": "敵(建造物を含む)を通り抜けるようにダッシュし、接触した敵を斬りつけて、攻撃速度が増加する。敵チャンピオンをキルすると、このスキルのクールダウンが解消される。",
+      "cooldown": "20/18/16/14/12",
+      "cost": "40",
+      "image": "SamiraE.png"
+    },
+    {
+      "slot": "R",
+      "name": "インフェルノトリガー",
+      "description": "銃から弾丸を高速で連射し、周囲のすべての敵に攻撃を行う。",
+      "cooldown": "5",
+      "cost": "0",
+      "image": "SamiraR.png"
+    }
+  ]
+}

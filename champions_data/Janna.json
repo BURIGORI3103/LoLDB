@@ -1,0 +1,76 @@
+{
+  "id": "Janna",
+  "key": "40",
+  "name": "ジャンナ",
+  "title": "嵐の怒り",
+  "patch": "16.20.1",
+  "roles": [
+    "Support",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 570,
+    "hpperlevel": 90,
+    "mp": 360,
+    "mpperlevel": 50,
+    "movespeed": 325,
+    "armor": 28,
+    "armorperlevel": 4.5,
+    "spellblock": 30,
+    "spellblockperlevel": 1.3,
+    "attackrange": 550,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.4,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 47,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "テイルウィンド",
+      "description": "ジャンナに向かって移動する際、味方チャンピオンは移動速度が増加する。<br><br>通常攻撃時効果および「ゼファー」で、増加移動速度の一定割合にあたる追加魔法ダメージを与える。",
+      "image": "JannaP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ハウリングゲイル",
+      "description": "大気を操り、小さな竜巻を生み出す。竜巻は時間とともに成長し、時間がたつか再度このスキルを使うことで指定方向へ直進して、進路上の敵ユニットにダメージとノックアップを与える。",
+      "cooldown": "14",
+      "cost": "90/95/100/105/110",
+      "image": "HowlingGale.png"
+    },
+    {
+      "slot": "W",
+      "name": "ゼファー",
+      "description": "風の精霊を召喚し、自動効果として移動速度が増加すると同時に、ユニットをすり抜けるようになる。発動すると対象に風の精霊を飛ばして、ダメージとスロウ効果を与える。",
+      "cooldown": "8/7.5/7/6.5/6",
+      "cost": "50/55/60/65/70",
+      "image": "SowTheWind.png"
+    },
+    {
+      "slot": "E",
+      "name": "ストームブレス",
+      "description": "対象に魔法の風を呼び寄せる。風はシールドとなって味方チャンピオンやタワーをダメージから守ると同時に、攻撃力を増加させる。",
+      "cooldown": "16/15/14/13/12",
+      "cost": "70/75/80/85/90",
+      "image": "EyeOfTheStorm.png"
+    },
+    {
+      "slot": "R",
+      "name": "モンスーン",
+      "description": "魔法の嵐に包まれ、周囲の敵を吹き飛ばす。その後詠唱を続け、癒しの風によって範囲内の味方の体力を回復する。",
+      "cooldown": "130/115/100",
+      "cost": "100",
+      "image": "ReapTheWhirlwind.png"
+    }
+  ]
+}

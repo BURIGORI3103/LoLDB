@@ -1,0 +1,76 @@
+{
+  "id": "Quinn",
+  "key": "133",
+  "name": "クイン",
+  "title": "デマーシアの両翼",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 565,
+    "hpperlevel": 107,
+    "mp": 269,
+    "mpperlevel": 35,
+    "movespeed": 330,
+    "armor": 28,
+    "armorperlevel": 4.7,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 525,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7,
+    "mpregenperlevel": 0.4,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.1,
+    "attackspeed": 0.668
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "鷲匠",
+      "description": "相棒であるデマーシアの鷲、ヴァロールが定期的に周囲の敵を<keywordMajor>「鷲匠」</keywordMajor>でマークする。<keywordMajor>「鷲匠」</keywordMajor>のマークが付与された敵に対して、クインの次の通常攻撃が追加物理ダメージを与える。",
+      "image": "Quinn_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "暗闇の強襲",
+      "description": "ヴァロールを呼び、敵にマークをつけさせた後、その場の対象にダメージを与えるとともに、視界を奪う。",
+      "cooldown": "11/10.5/10/9.5/9",
+      "cost": "50/55/60/65/70",
+      "image": "QuinnQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "鷲の眼",
+      "description": "自動効果により<keywordMajor>「鷲匠」</keywordMajor>のマークが付与された敵を攻撃すると、クインの攻撃速度と移動速度が増加する。発動すると、ヴァロールが周囲の広範囲を可視化する。",
+      "cooldown": "50/45/40/35/30",
+      "cost": "0",
+      "image": "QuinnW.png"
+    },
+    {
+      "slot": "E",
+      "name": "飛翔撃",
+      "description": "敵に飛びかかり、対象に物理ダメージを与え、移動速度を低下させる。クインは対象に接触すると同時に、一瞬ノックバックさせて飛び離れ、自身の最大射程距離付近に着地する。",
+      "cooldown": "12/11/10/9/8",
+      "cost": "50",
+      "image": "QuinnE.png"
+    },
+    {
+      "slot": "R",
+      "name": "相棒",
+      "description": "クインとヴァロールが連携し、高速で飛行する。スキルが終了すると「スカイストライク」が発動して周囲の敵にダメージを与え、敵チャンピオンには「鷲匠」のマークを付与する。",
+      "cooldown": "3",
+      "cost": "50/25/0",
+      "image": "QuinnR.png"
+    }
+  ]
+}

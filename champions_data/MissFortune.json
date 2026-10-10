@@ -1,0 +1,76 @@
+{
+  "id": "MissFortune",
+  "key": "21",
+  "name": "ミス・フォーチュン",
+  "title": "美貌の賞金稼ぎ",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 625,
+    "hpperlevel": 100,
+    "mp": 300,
+    "mpperlevel": 40,
+    "movespeed": 325,
+    "armor": 25,
+    "armorperlevel": 4,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.65,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.656
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ラブタップ",
+      "description": "新しい対象に通常攻撃するたびに追加物理ダメージを与える。",
+      "image": "MissFortune_W.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "ダブルアップ",
+      "description": "指定した敵に発砲しダメージを与える。対象の背後に敵がいた場合、跳弾して後ろの敵にもダメージを与える。弾丸はどちらも「ラブタップ」の効果が適用される。",
+      "cooldown": "7/6/5/4/3",
+      "cost": "40",
+      "image": "MissFortuneRicochetShot.png"
+    },
+    {
+      "slot": "W",
+      "name": "ストラット",
+      "description": "攻撃を受けずにいると、自動効果により移動速度が増加するようになる。発動すると、短時間攻撃速度が増加する。クールダウン中は、「ラブタップ」によってクールダウンが短縮される。",
+      "cooldown": "12",
+      "cost": "45",
+      "image": "MissFortuneViciousStrikes.png"
+    },
+    {
+      "slot": "E",
+      "name": "レイニングバレット",
+      "description": "一定範囲内に弾丸の雨を降らせて視界を確保するとともに、範囲内の敵に継続ダメージを与えてスロウ効果を付与する。",
+      "cooldown": "18/17/16/15/14",
+      "cost": "80",
+      "image": "MissFortuneScattershot.png"
+    },
+    {
+      "slot": "R",
+      "name": "バレットタイム",
+      "description": "前方の扇状範囲に大量の銃弾を放ち、範囲内にいる敵に大量のダメージを与える。波状に発射される弾丸の各ウェーブ毎にクリティカル判定を持つ。",
+      "cooldown": "120/110/100",
+      "cost": "100",
+      "image": "MissFortuneBulletTime.png"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "Kaisa",
+  "key": "145",
+  "name": "カイ＝サ",
+  "title": "虚無を知る娘",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Mage"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 640,
+    "hpperlevel": 102,
+    "mp": 345,
+    "mpperlevel": 40,
+    "movespeed": 335,
+    "armor": 25,
+    "armorperlevel": 4.2,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 525,
+    "hpregen": 4,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8.2,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 1.8,
+    "attackspeed": 0.644
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ヴォイドスキン",
+      "description": "カイ＝サの通常攻撃はプラズマスタックを付与し、スタック数に応じて与える追加魔法ダメージが増加していく。味方の移動不能効果もプラズマスタックを付与する。さらに、アイテム購入によってアルティメット以外のスキルがアップグレードされる。",
+      "image": "Kaisa_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "イカシアの雨",
+      "description": "多数のミサイルを乱射する。ミサイルは周囲の敵を追尾する。<br><br>共生兵器: 「イカシアの雨」がアップグレードされて、ミサイル数が増加する。",
+      "cooldown": "10/9/8/7/6",
+      "cost": "55",
+      "image": "KaisaQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "ヴォイドシーカー",
+      "description": "遠距離ミサイルを発射して、命中した敵にプラズマスタックを付与する。<br><br>共生兵器: 「ヴォイドシーカー」がアップグレードされて、付与するスタック数が増加し、チャンピオンに当たるとクールダウンが短縮されるようになる。",
+      "cooldown": "20/18.5/17/15.5/14",
+      "cost": "55/60/65/70/75",
+      "image": "KaisaW.png"
+    },
+    {
+      "slot": "E",
+      "name": "スーパーチャージ",
+      "description": "一時的に移動速度が増加し、その後攻撃速度が増加する。<br><br>共生兵器: 「スーパーチャージ」がアップグレードされて、一時的にインビジブル状態を獲得できるようになる。",
+      "cooldown": "16/14.5/13/11.5/10",
+      "cost": "30",
+      "image": "KaisaE.png"
+    },
+    {
+      "slot": "R",
+      "name": "キラーヴォイド",
+      "description": "敵チャンピオンの近くまでダッシュする。",
+      "cooldown": "130/100/70",
+      "cost": "100",
+      "image": "KaisaR.png"
+    }
+  ]
+}

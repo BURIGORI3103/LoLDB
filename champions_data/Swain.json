@@ -1,0 +1,76 @@
+{
+  "id": "Swain",
+  "key": "50",
+  "name": "スウェイン",
+  "title": "ノクサス帝国元帥",
+  "patch": "16.20.1",
+  "roles": [
+    "Mage",
+    "Support"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 595,
+    "hpperlevel": 99,
+    "mp": 400,
+    "mpperlevel": 29,
+    "movespeed": 330,
+    "armor": 23,
+    "armorperlevel": 4.7,
+    "spellblock": 34,
+    "spellblockperlevel": 1.55,
+    "attackrange": 525,
+    "hpregen": 3,
+    "hpregenperlevel": 0.5,
+    "mpregen": 10,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 2.11,
+    "attackspeed": 0.625
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "恐襲の魔鴉",
+      "description": "鴉たちが「魂のかけら」を回収し、スウェインの体力を回復して、最大体力を恒久的に上昇させる。",
+      "image": "Swain_P.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "死の手",
+      "description": "この世ならざる力の稲妻を複数放ち、敵を貫通する。当たった稲妻の数に応じて与えるダメージが増加する。",
+      "cooldown": "7/6/5/4/3",
+      "cost": "40/45/50/55/60",
+      "image": "SwainQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "帝国の眼",
+      "description": "指定地点に悪魔の眼を開いて視界を得て、敵ユニットにダメージとスロウ効果を与える。その後の爆発が当たった敵チャンピオンは可視状態になり、「魂のかけら」を獲得する。",
+      "cooldown": "20/19/18/17/16",
+      "cost": "60/65/70/75/80",
+      "image": "SwainW.png"
+    },
+    {
+      "slot": "E",
+      "name": "束縛の爪",
+      "description": "悪魔のエネルギー波を前方に発射する。その後エネルギー波を呼び戻し、命中した敵にスネア効果を与える。スネア効果を与えたすべてのチャンピオンは、任意で引き寄せることができる。「魔帝戴冠」を発動中は、このスキルのクールダウンが短縮される。",
+      "cooldown": "12/11.5/11/10.5/10",
+      "cost": "50/55/60/65/70",
+      "image": "SwainE.png"
+    },
+    {
+      "slot": "R",
+      "name": "魔帝戴冠",
+      "description": "悪魔に変身して周囲の敵チャンピオン、ミニオン、また中立モンスターから体力を吸収する。その後、「悪魔の紅炎」が発動可能になり、周囲の敵ユニットに魂の炎の爆発を浴びせて、スロウ効果を与える。この形態は敵チャンピオンから体力を吸収している間は無限に持続する。",
+      "cooldown": "120",
+      "cost": "100",
+      "image": "SwainR.png"
+    }
+  ]
+}

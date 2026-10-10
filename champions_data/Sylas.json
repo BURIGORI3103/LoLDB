@@ -1,0 +1,76 @@
+{
+  "id": "Sylas",
+  "key": "517",
+  "name": "サイラス",
+  "title": "解き放たれし者",
+  "patch": "16.20.1",
+  "roles": [
+    "Mage",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 122,
+    "mp": 400,
+    "mpperlevel": 70,
+    "movespeed": 340,
+    "armor": 29,
+    "armorperlevel": 5.2,
+    "spellblock": 32,
+    "spellblockperlevel": 2.55,
+    "attackrange": 175,
+    "hpregen": 9,
+    "hpregenperlevel": 0.9,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 61,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3.5,
+    "attackspeed": 0.645
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "ペトリサイトバースト",
+      "description": "スキル使用後、「ペトリサイトバースト」がチャージされる。通常攻撃でチャージを解放し、魔力のこもった鎖を旋回させて当たった敵に追加魔法ダメージを与える。「ペトリサイトバースト」のチャージを保持している間は攻撃速度が増加する。 ",
+      "image": "SylasP.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "鎖の鞭",
+      "description": "指定地点で交わるように2本の鎖を叩きつけ、敵にダメージとスロウ効果を与える。<br><br>少ししてから交差地点で魔法エネルギーが爆発し、ダメージを与える。",
+      "cooldown": "10/9/8/7/6",
+      "cost": "55",
+      "image": "SylasQ.png"
+    },
+    {
+      "slot": "W",
+      "name": "王殺し",
+      "description": "魔法エネルギーを纏って敵に突進し、ダメージを与える。対象がチャンピオンの場合は自身の体力を回復する。",
+      "cooldown": "12/10.5/9/7.5/6",
+      "cost": "50/60/70/80/90",
+      "image": "SylasW.png"
+    },
+    {
+      "slot": "E",
+      "name": "逃亡/拉致",
+      "description": "指定地点にダッシュする。再発動で鎖を投げつけて命中した敵に向かって自身を引き寄せる。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "65",
+      "image": "SylasE.png"
+    },
+    {
+      "slot": "R",
+      "name": "乗っ取り",
+      "description": "敵のアルティメットスキルを奪い、自由に発動できる。",
+      "cooldown": "80/55/30",
+      "cost": "75",
+      "image": "SylasR.png"
+    }
+  ]
+}

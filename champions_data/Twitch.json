@@ -1,0 +1,76 @@
+{
+  "id": "Twitch",
+  "key": "29",
+  "name": "トゥイッチ",
+  "title": "黒死のドブネズミ",
+  "patch": "16.20.1",
+  "roles": [
+    "Marksman",
+    "Assassin"
+  ],
+  "resource": "マナ",
+  "stats": {
+    "hp": 630,
+    "hpperlevel": 98,
+    "mp": 300,
+    "mpperlevel": 40,
+    "movespeed": 330,
+    "armor": 27,
+    "armorperlevel": 4,
+    "spellblock": 33,
+    "spellblockperlevel": 1.1,
+    "attackrange": 550,
+    "hpregen": 3.75,
+    "hpregenperlevel": 0.6,
+    "mpregen": 7.25,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 0,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.679
+  },
+  "abilities": [
+    {
+      "slot": "Passive",
+      "name": "スゴイ毒ダ！",
+      "description": "通常攻撃で対象を毒%i:OnHit%<OnHit>通常攻撃時効果</OnHit>に侵し、毎秒確定ダメージを与える。",
+      "image": "Twitch_Passive.png"
+    }
+  ],
+  "spells": [
+    {
+      "slot": "Q",
+      "name": "オイラだヨ！",
+      "description": "数秒間カモフラージュ状態になり、その間移動速度が増加する。カモフラージュの解除時に短時間攻撃速度が増加する。<br><br>「スゴイ毒ダ！」でチャンピオンを倒すと、「オイラだヨ！」のクールダウンがリセットされる。",
+      "cooldown": "16",
+      "cost": "40",
+      "image": "TwitchHideInShadows.png"
+    },
+    {
+      "slot": "W",
+      "name": "コイツを食らエ！",
+      "description": "毒物が入った容器を投げて破裂させ、効果範囲内の敵ユニットをスロウ状態にし、猛毒効果をかける。",
+      "cooldown": "13/12/11/10/9",
+      "cost": "70",
+      "image": "TwitchVenomCask.png"
+    },
+    {
+      "slot": "E",
+      "name": "ボーン！",
+      "description": "猛毒状態にした敵を病原菌に侵し、さらにダメージを与える。",
+      "cooldown": "12/11/10/9/8",
+      "cost": "50/60/70/80/90",
+      "image": "TwitchExpunge.png"
+    },
+    {
+      "slot": "R",
+      "name": "ヒャッハー！",
+      "description": "クロスボウの最大威力を引き出し、射程距離を大幅に拡大する。発射した矢は命中した敵ユニットを貫通してダメージを与える。",
+      "cooldown": "90",
+      "cost": "100",
+      "image": "TwitchFullAutomatic.png"
+    }
+  ]
+}
