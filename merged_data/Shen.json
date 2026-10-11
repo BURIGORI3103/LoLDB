@@ -82,34 +82,34 @@
       {
         "champion_id": "MasterYi",
         "name": "マスター・イー",
-        "reason": "勝率 64.89%（統計的に有利）"
+        "reason": "勝率 64.89% | 相手の瞬間ワンコンボを高耐久で耐えきり、スキルが尽きた相手をCCで拘束して削れるため有利"
       },
       {
         "champion_id": "Ryze",
         "name": "ライズ",
-        "reason": "勝率 60.9%（統計的に有利）"
+        "reason": "勝率 60.9% | 一度間合いを詰めれば近接殴り合いの火力差で相手を瞬時に圧倒・粉砕可能"
       },
       {
         "champion_id": "Jax",
         "name": "ジャックス",
-        "reason": "勝率 56.12%（統計的に有利）"
+        "reason": "勝率 56.12% | スキルの噛み合わせと集団戦での影響力で勝り、有利にゲームを展開可能"
       }
     ],
     "unfavorable": [
       {
         "champion_id": "Aurora",
         "name": "オーロラ",
-        "reason": "勝率 43.75%（統計的に不利）"
+        "reason": "勝率 43.75% | 相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒"
       },
       {
         "champion_id": "Varus",
         "name": "ヴァルス",
-        "reason": "勝率 46.04%（統計的に不利）"
+        "reason": "勝率 46.04% | 相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒"
       },
       {
         "champion_id": "Yasuo",
         "name": "ヤスオ",
-        "reason": "勝率 46.36%（統計的に不利）"
+        "reason": "勝率 46.36% | 相手の割合ダメージや高いサステインにより殴り合いでジリ貧になり、レーンを維持しにくいため警戒"
       }
     ]
   },
@@ -183,7 +183,1712 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "",
-    "teamfight": ""
+    "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+    "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+    "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+  },
+  "role_data": {
+    "TOP": {
+      "role": "TOP",
+      "spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "skill_order": "Q > E > W",
+      "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
+      "gameplay_notes": {
+        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8437",
+          "keystone_name": "不死者の握撃",
+          "choices": [
+            "シールドバッシュ",
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ビスケットデリバリー",
+            "疾駆"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "MasterYi",
+            "name": "マスター・イー",
+            "reason": "勝率 64.89%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ryze",
+            "name": "ライズ",
+            "reason": "勝率 60.9%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "reason": "勝率 56.12%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "reason": "勝率 43.75%（統計的に不利）"
+          },
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "reason": "勝率 46.04%（統計的に不利）"
+          },
+          {
+            "champion_id": "Yasuo",
+            "name": "ヤスオ",
+            "reason": "勝率 46.36%（統計的に不利）"
+          }
+        ]
+      },
+      "build_patterns": [
+        {
+          "name": "【標準】サンファイア・耐久タンク型",
+          "desc": "近接殴り合いとウェーブクリアを強化し、無限の耐久力で集団戦の前線を支える構成。",
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "core": [
+            "サンファイア イージス",
+            "心の鋼",
+            "終わりなき絶望"
+          ],
+          "situational": [
+            "ジャック=ショー",
+            "ソーンメイル",
+            "超巨大ハイドラ"
+          ],
+          "core_items": [
+            {
+              "name": "サンファイア イージス",
+              "item_id": "3068"
+            },
+            {
+              "name": "心の鋼",
+              "item_id": "3084"
+            },
+            {
+              "name": "終わりなき絶望",
+              "item_id": "2502"
+            }
+          ]
+        },
+        {
+          "name": "【対AP・魔法対策】ホロウレディアンス型",
+          "desc": "相手レーナーや敵構成がAP主体の際に、鉄壁の魔法防御とシールドを確保するビルド。",
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "マーキュリー ブーツ",
+          "core": [
+            "ホロウ レディアンス",
+            "ケイニック ルーコン",
+            "終わりなき絶望"
+          ],
+          "situational": [
+            "ジャック=ショー",
+            "アビサル マスク",
+            "心の鋼"
+          ],
+          "core_items": [
+            {
+              "name": "ホロウ レディアンス",
+              "item_id": "6664"
+            },
+            {
+              "name": "ケイニック ルーコン",
+              "item_id": "1001"
+            },
+            {
+              "name": "終わりなき絶望",
+              "item_id": "2502"
+            }
+          ]
+        },
+        {
+          "name": "【集団戦特化】防衛＆CCイニシエート型",
+          "desc": "敵の主要キャリーを足止めし、味方の火力を叩き込むための重装甲ビルド。",
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "core": [
+            "終わりなき絶望",
+            "ジャック=ショー",
+            "ソーンメイル"
+          ],
+          "situational": [
+            "心の鋼",
+            "スピリット ビサージュ",
+            "アナセマ チェイン"
+          ],
+          "core_items": [
+            {
+              "name": "終わりなき絶望",
+              "item_id": "2502"
+            },
+            {
+              "name": "ジャック=ショー",
+              "item_id": "1001"
+            },
+            {
+              "name": "ソーンメイル",
+              "item_id": "323075"
+            }
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "基本ショートトレード",
+          "recipe": "Q ➔ AA ➔ E ➔ W (被ダメ軽減・離脱)",
+          "desc": "相手のラストヒットモーションに合わせてQで牽制し、AAを挟んでからEとWでダメージトレードを優位に終える基本形。"
+        },
+        {
+          "name": "オールイン・キルコンボ",
+          "recipe": "R ➔ Q ➔ E ➔ W ➔ 全力AA",
+          "desc": "アルティメット（R）で戦闘能力を最大化し、QとEで間合いを詰めて全スキルを順番に叩き込みキルを狙う。"
+        },
+        {
+          "name": "必殺 Flash 併用コンボ",
+          "recipe": "Q 詠唱中 ➔ Flash ➔ R ➔ E",
+          "desc": "Qの詠唱モーション中にFlashで距離を一瞬で詰め、相手の反応猶予を奪って確定で大ダメージやCCを決める。"
+        }
+      ],
+      "skill_matrix": {
+        "Q": [
+          1,
+          4,
+          5,
+          7,
+          9
+        ],
+        "W": [
+          3,
+          14,
+          15,
+          17,
+          18
+        ],
+        "E": [
+          2,
+          8,
+          10,
+          12,
+          13
+        ],
+        "R": [
+          6,
+          11,
+          16
+        ]
+      },
+      "spell_sets": [
+        {
+          "name": "第1採用セット（王道・最高採用率）",
+          "spells": [
+            "フラッシュ",
+            "テレポート"
+          ]
+        },
+        {
+          "name": "第2採用セット（攻撃的・対面別）",
+          "spells": [
+            "フラッシュ",
+            "イグナイト"
+          ]
+        }
+      ]
+    },
+    "SUP": {
+      "role": "SUP",
+      "spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "skill_order": "E > Q > W",
+      "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
+      "gameplay_notes": {
+        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+      },
+      "runes": {
+        "primary": {
+          "path": "不撓",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "天啓",
+          "choices": [
+            "ヘクステックフラッシュ",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "スキルヘイスト",
+          "物理防御",
+          "体力"
+        ]
+      },
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Nautilus",
+            "name": "ノーチラス",
+            "reason": "勝率 53.2% | 仕掛けのタイミングを読みやすく、反撃のポークやカウンターピールで主導権を掌握可能。"
+          },
+          {
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "reason": "勝率 52.6% | ミニオンの遮蔽物を維持しつつハラスを徹底。Qを空振りさせた後のクールダウン中に大打撃を与える。"
+          },
+          {
+            "champion_id": "Leona",
+            "name": "レオナ",
+            "reason": "勝率 52.1% | 突進に対して距離を保ち、不用意な飛び込みをフォーカスして返り討ちにできる。"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Lulu",
+            "name": "ルル",
+            "reason": "勝率 46.2% | ポリモーフによる行動不能とシールドで仕掛けを完全に無力化され、ペースを崩されやすい。"
+          },
+          {
+            "champion_id": "Janna",
+            "name": "ジャンナ",
+            "reason": "勝率 46.8% | 竜巻とRによる徹底したディスエンゲージで、接近やオールインを悉く弾かれる。"
+          },
+          {
+            "champion_id": "Pyke",
+            "name": "パイク",
+            "reason": "勝率 47.5% | ステルスからの急襲フックとRの確定キルが脅威。体力を高く維持し、視界外からの接近を警戒。"
+          }
+        ]
+      },
+      "build_patterns": [
+        {
+          "name": "【標準】ピール＆エンゲージ・タンク型",
+          "desc": "セレスティアルオポジションで被ダメを大幅カットし、騎士の誓いでADCを守り抜く王道構成。",
+          "starter": [
+            "ワールド アトラス",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "core": [
+            "セレスティアル オポジション",
+            "ソラリのロケット",
+            "騎士の誓い"
+          ],
+          "situational": [
+            "ジーク コンバージェンス",
+            "ソーンメイル",
+            "アビサル マスク"
+          ],
+          "core_items": [
+            {
+              "name": "セレスティアル オポジション",
+              "item_id": "3869"
+            },
+            {
+              "name": "ソラリのロケット",
+              "item_id": "323190"
+            },
+            {
+              "name": "騎士の誓い",
+              "item_id": "323109"
+            }
+          ]
+        },
+        {
+          "name": "【集団戦防御】チームシールド特化型",
+          "desc": "ソラリのロケットとジークコンバージェンスで集団戦の味方全体を強烈にバックアップ。",
+          "starter": [
+            "ワールド アトラス",
+            "体力ポーション"
+          ],
+          "boots": "マーキュリー ブーツ",
+          "core": [
+            "ソラリのロケット",
+            "ジーク コンバージェンス",
+            "アナセマ チェイン"
+          ],
+          "situational": [
+            "騎士の誓い",
+            "心の鋼",
+            "終わりなき絶望"
+          ],
+          "core_items": [
+            {
+              "name": "ソラリのロケット",
+              "item_id": "323190"
+            },
+            {
+              "name": "ジーク コンバージェンス",
+              "item_id": "323050"
+            },
+            {
+              "name": "アナセマ チェイン",
+              "item_id": "8001"
+            }
+          ]
+        },
+        {
+          "name": "【アグレッシブ】至点のソリ・奇襲型",
+          "desc": "至点のソリの回復・加速で他レーンへの高速ロームとガンクを連発する攻撃型。",
+          "starter": [
+            "ワールド アトラス",
+            "体力ポーション"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "core": [
+            "至点のソリ",
+            "デッドマン プレート",
+            "アビサル マスク"
+          ],
+          "situational": [
+            "騎士の誓い",
+            "ガーディアン エンジェル",
+            "ソーンメイル"
+          ],
+          "core_items": [
+            {
+              "name": "至点のソリ",
+              "item_id": "3876"
+            },
+            {
+              "name": "デッドマン プレート",
+              "item_id": "3742"
+            },
+            {
+              "name": "アビサル マスク",
+              "item_id": "8020"
+            }
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "基本ショートトレード",
+          "recipe": "Q ➔ AA ➔ E ➔ W (被ダメ軽減・離脱)",
+          "desc": "相手のラストヒットモーションに合わせてQで牽制し、AAを挟んでからEとWでダメージトレードを優位に終える基本形。"
+        },
+        {
+          "name": "オールイン・キルコンボ",
+          "recipe": "R ➔ Q ➔ E ➔ W ➔ 全力AA",
+          "desc": "アルティメット（R）で戦闘能力を最大化し、QとEで間合いを詰めて全スキルを順番に叩き込みキルを狙う。"
+        },
+        {
+          "name": "必殺 Flash 併用コンボ",
+          "recipe": "Q 詠唱中 ➔ Flash ➔ R ➔ E",
+          "desc": "Qの詠唱モーション中にFlashで距離を一瞬で詰め、相手の反応猶予を奪って確定で大ダメージやCCを決める。"
+        }
+      ],
+      "skill_matrix": {
+        "Q": [
+          2,
+          8,
+          10,
+          12,
+          13
+        ],
+        "W": [
+          3,
+          14,
+          15,
+          17,
+          18
+        ],
+        "E": [
+          1,
+          4,
+          5,
+          7,
+          9
+        ],
+        "R": [
+          6,
+          11,
+          16
+        ]
+      },
+      "spell_sets": [
+        {
+          "name": "第1採用セット（王道・最高採用率）",
+          "spells": [
+            "フラッシュ",
+            "イグナイト"
+          ]
+        },
+        {
+          "name": "第2採用セット（攻撃的・対面別）",
+          "spells": [
+            "フラッシュ",
+            "イグゾースト"
+          ]
+        }
+      ]
+    }
+  },
+  "build_patterns": [
+    {
+      "name": "[TANK] 【標準】サンファイア・耐久タンク型",
+      "desc": "近接殴り合いとウェーブクリアを強化し、無限の耐久力で集団戦の前線を支える構成。",
+      "starter": [
+        "ドラン シールド",
+        "体力ポーション"
+      ],
+      "boots": "プレート スチールキャップ",
+      "core": [
+        "サンファイア イージス",
+        "心の鋼",
+        "終わりなき絶望"
+      ],
+      "situational": [
+        "ジャック=ショー",
+        "ソーンメイル",
+        "超巨大ハイドラ"
+      ],
+      "core_items": [
+        {
+          "name": "サンファイア イージス",
+          "item_id": "3068"
+        },
+        {
+          "name": "心の鋼",
+          "item_id": "3084"
+        },
+        {
+          "name": "終わりなき絶望",
+          "item_id": "2502"
+        }
+      ]
+    },
+    {
+      "name": "[AP] 【対AP・魔法対策】ホロウレディアンス型",
+      "desc": "相手レーナーや敵構成がAP主体の際に、鉄壁の魔法防御とシールドを確保するビルド。",
+      "starter": [
+        "ドラン シールド",
+        "体力ポーション"
+      ],
+      "boots": "マーキュリー ブーツ",
+      "core": [
+        "ホロウ レディアンス",
+        "ケイニック ルーコン",
+        "終わりなき絶望"
+      ],
+      "situational": [
+        "ジャック=ショー",
+        "アビサル マスク",
+        "心の鋼"
+      ],
+      "core_items": [
+        {
+          "name": "ホロウ レディアンス",
+          "item_id": "6664"
+        },
+        {
+          "name": "ケイニック ルーコン",
+          "item_id": "1001"
+        },
+        {
+          "name": "終わりなき絶望",
+          "item_id": "2502"
+        }
+      ]
+    },
+    {
+      "name": "[TANK] 【集団戦特化】防衛＆CCイニシエート型",
+      "desc": "敵の主要キャリーを足止めし、味方の火力を叩き込むための重装甲ビルド。",
+      "starter": [
+        "ドラン シールド",
+        "体力ポーション"
+      ],
+      "boots": "プレート スチールキャップ",
+      "core": [
+        "終わりなき絶望",
+        "ジャック=ショー",
+        "ソーンメイル"
+      ],
+      "situational": [
+        "心の鋼",
+        "スピリット ビサージュ",
+        "アナセマ チェイン"
+      ],
+      "core_items": [
+        {
+          "name": "終わりなき絶望",
+          "item_id": "2502"
+        },
+        {
+          "name": "ジャック=ショー",
+          "item_id": "1001"
+        },
+        {
+          "name": "ソーンメイル",
+          "item_id": "323075"
+        }
+      ]
+    }
+  ],
+  "skill_order": "Q > E > W",
+  "combos": [
+    {
+      "name": "基本ショートトレード",
+      "recipe": "Q ➔ AA ➔ E ➔ W (被ダメ軽減・離脱)",
+      "desc": "相手のラストヒットモーションに合わせてQで牽制し、AAを挟んでからEとWでダメージトレードを優位に終える基本形。"
+    },
+    {
+      "name": "オールイン・キルコンボ",
+      "recipe": "R ➔ Q ➔ E ➔ W ➔ 全力AA",
+      "desc": "アルティメット（R）で戦闘能力を最大化し、QとEで間合いを詰めて全スキルを順番に叩き込みキルを狙う。"
+    },
+    {
+      "name": "必殺 Flash 併用コンボ",
+      "recipe": "Q 詠唱中 ➔ Flash ➔ R ➔ E",
+      "desc": "Qの詠唱モーション中にFlashで距離を一瞬で詰め、相手の反応猶予を奪って確定で大ダメージやCCを決める。"
+    }
+  ],
+  "skill_matrix": {
+    "Q": [
+      1,
+      4,
+      5,
+      7,
+      9
+    ],
+    "W": [
+      3,
+      14,
+      15,
+      17,
+      18
+    ],
+    "E": [
+      2,
+      8,
+      10,
+      12,
+      13
+    ],
+    "R": [
+      6,
+      11,
+      16
+    ]
+  },
+  "spell_sets": [
+    {
+      "name": "第1採用セット（王道・最高採用率）",
+      "spells": [
+        "フラッシュ",
+        "テレポート"
+      ]
+    },
+    {
+      "name": "第2採用セット（攻撃的・対面別）",
+      "spells": [
+        "フラッシュ",
+        "イグナイト"
+      ]
+    }
+  ],
+  "damage_profile": {
+    "primary_type": "TANK",
+    "label": "タンク (主魔法ダメージ)",
+    "badge_text": "TANK",
+    "badge_class": "badge-tank",
+    "counter_defense": "MR (魔法耐性) ＆ 割合ダメージ/貫通",
+    "has_dual_build": false,
+    "dual_build_desc": ""
+  },
+  "matchup_matrix": {
+    "Aatrox": {
+      "winrate": "勝率 51.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Ahri": {
+      "winrate": "勝率 47.1%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.1%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Akali": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Akshan": {
+      "winrate": "勝率 47.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Alistar": {
+      "winrate": "勝率 49.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Ambessa": {
+      "winrate": "勝率 49.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Amumu": {
+      "winrate": "勝率 51.6%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.6%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Anivia": {
+      "winrate": "勝率 47.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.9%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Annie": {
+      "winrate": "勝率 48.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Aphelios": {
+      "winrate": "勝率 46.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.9%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Ashe": {
+      "winrate": "勝率 46.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.9%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "AurelionSol": {
+      "winrate": "勝率 48.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Aurora": {
+      "winrate": "勝率 43.75%（統計的に不利）",
+      "advantage": "unfav",
+      "advantage_label": "不利（勝率 43.75%（統計的に不利））",
+      "reason": "統計的に警戒すべき不利なマッチアップです。"
+    },
+    "Azir": {
+      "winrate": "勝率 47.2%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.2%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Bard": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Belveth": {
+      "winrate": "勝率 49.8%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.8%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Blitzcrank": {
+      "winrate": "勝率 51.4%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.4%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Brand": {
+      "winrate": "勝率 46.1%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.1%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Braum": {
+      "winrate": "勝率 49.2%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.2%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Briar": {
+      "winrate": "勝率 49.2%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.2%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Caitlyn": {
+      "winrate": "勝率 46.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.9%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Camille": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Cassiopeia": {
+      "winrate": "勝率 49.2%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.2%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Chogath": {
+      "winrate": "勝率 50.4%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.4%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Corki": {
+      "winrate": "勝率 47.0%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.0%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Darius": {
+      "winrate": "勝率 50.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Diana": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "DrMundo": {
+      "winrate": "勝率 51.6%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.6%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Draven": {
+      "winrate": "勝率 47.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.3%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Ekko": {
+      "winrate": "勝率 48.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.5%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Elise": {
+      "winrate": "勝率 47.0%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.0%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Evelynn": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Ezreal": {
+      "winrate": "勝率 46.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.4%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Fiddlesticks": {
+      "winrate": "勝率 49.5%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.5%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Fiora": {
+      "winrate": "勝率 45.2%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 45.2%）",
+      "reason": "相手の割合ダメージ・確定ダメージにより、防具を積んでも耐久が持ちません"
+    },
+    "Fizz": {
+      "winrate": "勝率 48.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Galio": {
+      "winrate": "勝率 51.7%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.7%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Gangplank": {
+      "winrate": "勝率 50.5%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.5%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Garen": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Gnar": {
+      "winrate": "勝率 49.8%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.8%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Gragas": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Graves": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Gwen": {
+      "winrate": "勝率 43.7%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 43.7%）",
+      "reason": "相手の割合ダメージ・確定ダメージにより、防具を積んでも耐久が持ちません"
+    },
+    "Hecarim": {
+      "winrate": "勝率 48.8%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.8%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Heimerdinger": {
+      "winrate": "勝率 46.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Hwei": {
+      "winrate": "勝率 47.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Illaoi": {
+      "winrate": "勝率 50.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Irelia": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Ivern": {
+      "winrate": "勝率 50.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Janna": {
+      "winrate": "勝率 47.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "JarvanIV": {
+      "winrate": "勝率 50.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Jax": {
+      "winrate": "勝率 56.12%（統計的に有利）",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 56.12%（統計的に有利））",
+      "reason": "統計的に有利なマッチアップです。"
+    },
+    "Jayce": {
+      "winrate": "勝率 51.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Jhin": {
+      "winrate": "勝率 46.7%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.7%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Jinx": {
+      "winrate": "勝率 46.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.4%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "KSante": {
+      "winrate": "勝率 51.8%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.8%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Kaisa": {
+      "winrate": "勝率 47.6%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.6%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Kalista": {
+      "winrate": "勝率 46.1%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.1%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Karma": {
+      "winrate": "勝率 46.7%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.7%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Karthus": {
+      "winrate": "勝率 50.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Kassadin": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Katarina": {
+      "winrate": "勝率 49.9%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.9%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Kayle": {
+      "winrate": "勝率 50.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Kayn": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Kennen": {
+      "winrate": "勝率 48.8%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.8%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Khazix": {
+      "winrate": "勝率 50.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Kindred": {
+      "winrate": "勝率 46.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.3%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Kled": {
+      "winrate": "勝率 51.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "KogMaw": {
+      "winrate": "勝率 41.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 41.5%）",
+      "reason": "相手の割合ダメージ・確定ダメージにより、防具を積んでも耐久が持ちません ＆ 相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Leblanc": {
+      "winrate": "勝率 47.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "LeeSin": {
+      "winrate": "勝率 51.7%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.7%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Leona": {
+      "winrate": "勝率 48.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.3%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Lillia": {
+      "winrate": "勝率 49.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Lissandra": {
+      "winrate": "勝率 45.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 45.9%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Locke": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Lucian": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Lulu": {
+      "winrate": "勝率 47.0%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.0%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Lux": {
+      "winrate": "勝率 47.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Malphite": {
+      "winrate": "勝率 49.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Malzahar": {
+      "winrate": "勝率 46.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Maokai": {
+      "winrate": "勝率 48.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "MasterYi": {
+      "winrate": "勝率 64.89%（統計的に有利）",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 64.89%（統計的に有利））",
+      "reason": "統計的に有利なマッチアップです。"
+    },
+    "Mel": {
+      "winrate": "勝率 48.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.3%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Milio": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "MissFortune": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "MonkeyKing": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Mordekaiser": {
+      "winrate": "勝率 48.9%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.9%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Morgana": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Naafiri": {
+      "winrate": "勝率 51.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Nami": {
+      "winrate": "勝率 46.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.9%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Nasus": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Nautilus": {
+      "winrate": "勝率 50.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Neeko": {
+      "winrate": "勝率 48.9%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.9%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Nidalee": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Nilah": {
+      "winrate": "勝率 48.2%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.2%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Nocturne": {
+      "winrate": "勝率 48.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Nunu": {
+      "winrate": "勝率 50.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Olaf": {
+      "winrate": "勝率 48.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Orianna": {
+      "winrate": "勝率 48.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Ornn": {
+      "winrate": "勝率 50.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Pantheon": {
+      "winrate": "勝率 51.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Poppy": {
+      "winrate": "勝率 51.2%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.2%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Pyke": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Qiyana": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Quinn": {
+      "winrate": "勝率 46.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.4%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Rakan": {
+      "winrate": "勝率 50.8%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.8%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Rammus": {
+      "winrate": "勝率 49.5%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.5%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "RekSai": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Rell": {
+      "winrate": "勝率 48.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Renata": {
+      "winrate": "勝率 47.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Renekton": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Rengar": {
+      "winrate": "勝率 50.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Riven": {
+      "winrate": "勝率 48.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.3%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Rumble": {
+      "winrate": "勝率 51.8%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.8%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Ryze": {
+      "winrate": "勝率 60.9%（統計的に有利）",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 60.9%（統計的に有利））",
+      "reason": "統計的に有利なマッチアップです。"
+    },
+    "Samira": {
+      "winrate": "勝率 46.7%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.7%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Sejuani": {
+      "winrate": "勝率 50.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Senna": {
+      "winrate": "勝率 47.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Seraphine": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Sett": {
+      "winrate": "勝率 50.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Shaco": {
+      "winrate": "勝率 49.9%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.9%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Shen": {
+      "winrate": "50.0%",
+      "advantage": "even",
+      "advantage_label": "五分（ミラーマッチ）",
+      "reason": "同チャンピオン対決です。ルーン選択、スキルの命中率、ウェーブコントロール等の技量勝負になります。"
+    },
+    "Shyvana": {
+      "winrate": "勝率 50.5%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.5%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Singed": {
+      "winrate": "勝率 51.8%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.8%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Sion": {
+      "winrate": "勝率 51.2%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.2%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Sivir": {
+      "winrate": "勝率 46.0%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.0%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Skarner": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Smolder": {
+      "winrate": "勝率 47.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.3%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Sona": {
+      "winrate": "勝率 46.0%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.0%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Soraka": {
+      "winrate": "勝率 48.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Swain": {
+      "winrate": "勝率 45.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 45.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Sylas": {
+      "winrate": "勝率 48.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.3%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Syndra": {
+      "winrate": "勝率 48.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "TahmKench": {
+      "winrate": "勝率 51.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Taliyah": {
+      "winrate": "勝率 46.1%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.1%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Talon": {
+      "winrate": "勝率 50.5%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.5%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Taric": {
+      "winrate": "勝率 48.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.4%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Teemo": {
+      "winrate": "勝率 47.7%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.7%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Thresh": {
+      "winrate": "勝率 49.2%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.2%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Tristana": {
+      "winrate": "勝率 48.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Trundle": {
+      "winrate": "勝率 50.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Tryndamere": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "TwistedFate": {
+      "winrate": "勝率 49.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Twitch": {
+      "winrate": "勝率 47.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Udyr": {
+      "winrate": "勝率 51.8%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.8%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Urgot": {
+      "winrate": "勝率 48.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Varus": {
+      "winrate": "勝率 46.04%（統計的に不利）",
+      "advantage": "unfav",
+      "advantage_label": "不利（勝率 46.04%（統計的に不利））",
+      "reason": "統計的に警戒すべき不利なマッチアップです。"
+    },
+    "Vayne": {
+      "winrate": "勝率 44.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 44.5%）",
+      "reason": "相手の割合ダメージ・確定ダメージにより、防具を積んでも耐久が持ちません ＆ 相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Veigar": {
+      "winrate": "勝率 47.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.5%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Velkoz": {
+      "winrate": "勝率 45.7%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 45.7%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Vex": {
+      "winrate": "勝率 48.3%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.3%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Vi": {
+      "winrate": "勝率 49.4%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.4%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Viego": {
+      "winrate": "勝率 49.9%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.9%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Viktor": {
+      "winrate": "勝率 48.2%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.2%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Vladimir": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Volibear": {
+      "winrate": "勝率 49.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Warwick": {
+      "winrate": "勝率 49.3%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.3%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Xayah": {
+      "winrate": "勝率 48.1%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.1%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Xerath": {
+      "winrate": "勝率 46.6%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.6%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "XinZhao": {
+      "winrate": "勝率 50.5%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.5%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Yasuo": {
+      "winrate": "勝率 46.36%（統計的に不利）",
+      "advantage": "unfav",
+      "advantage_label": "不利（勝率 46.36%（統計的に不利））",
+      "reason": "統計的に警戒すべき不利なマッチアップです。"
+    },
+    "Yone": {
+      "winrate": "勝率 51.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 51.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Yorick": {
+      "winrate": "勝率 48.5%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 48.5%）",
+      "reason": "相手のスキルセットや交戦距離が厳しく、無理なトレードを避けるべき不利対面です。"
+    },
+    "Yunara": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Yuumi": {
+      "winrate": "勝率 50.0%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.0%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Zaahen": {
+      "winrate": "勝率 51.5%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 51.5%）",
+      "reason": "スキル構成とダメージ交換のテンポで主導権を握りやすい有利対面です。"
+    },
+    "Zac": {
+      "winrate": "勝率 50.9%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 50.9%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Zed": {
+      "winrate": "勝率 49.7%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.7%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Zeri": {
+      "winrate": "勝率 47.4%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 47.4%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Ziggs": {
+      "winrate": "勝率 48.6%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 48.6%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    },
+    "Zilean": {
+      "winrate": "勝率 45.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 45.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Zoe": {
+      "winrate": "勝率 46.8%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 46.8%）",
+      "reason": "相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります"
+    },
+    "Zyra": {
+      "winrate": "勝率 49.1%",
+      "advantage": "even",
+      "advantage_label": "五分（勝率 49.1%）",
+      "reason": "お互いのスキル命中精度とウェーブ管理が勝敗を分ける純粋な技量勝負です。"
+    }
+  },
+  "overview": {
+    "summary": "黄昏の瞳として名高いTOP/SUPチャンピオン。護刃招来と瞬身護法を軸としたプレイスタイルで、レーン戦から集団戦まで高い影響力を発揮する。",
+    "strengths": [
+      "護刃招来や殺気駆けを起点とした強力なダメージトレード能力",
+      "瞬身護法による高い集団戦インパクトとゲーム決定力",
+      "現在のメタ（Patch 16.19.1）において安定したピック適性"
+    ],
+    "weaknesses": [
+      "主要スキル（特に防人の帳や殺気駆け）のクールダウン中の隙が大きい",
+      "敵のハードCCや集中フォーカスを受けると脆さを露呈しやすい",
+      "レーンでのウェーブ管理やポジショニングのミスが命取りになりやすい"
+    ]
+  },
+  "sustain_info": {
+    "has_sustain": false,
+    "grievous_wounds_recommended": false,
+    "badge": "標準",
+    "reason": "特別な高回復スキルは持たないため、重傷アイテムの優先度は通常の相手に比べて低め。"
   }
 }
