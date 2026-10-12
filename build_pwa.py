@@ -3795,7 +3795,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
   // 1. メインHTML（ナビゲーション）は Network-First（オンライン時は最新、オフライン時はキャッシュ）
-  if (event.request.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname === '/') {
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname === '/' || url.pathname.endsWith('/')) {
     event.respondWith(
       fetch(event.request)
         .then((networkResponse) => {
@@ -3806,7 +3806,7 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          return caches.match('./index.html') || caches.match('./');
+          return caches.match('./index.html') || caches.match('./') || caches.match('index.html');
         })
     );
     return;
@@ -3898,6 +3898,10 @@ self.addEventListener('fetch', (event) => {
         f.write(manifest_content)
     with open(root_manifest_path, "w", encoding="utf-8") as f:
         f.write(manifest_content)
+
+    # GitHub Pages用 .nojekyll の配置
+    (dist_dir / ".nojekyll").touch(exist_ok=True)
+    (base_dir / ".nojekyll").touch(exist_ok=True)
 
     html_size_kb = os.path.getsize(index_path) / 1024
     print("[SUCCESS] PWA build completed successfully!")
