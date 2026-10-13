@@ -3503,17 +3503,19 @@ def build():
         }}
 
         const oppRoles = opp.roles || [];
+        const oppClasses = opp.classes || opp.tags || [];
         const oppResource = opp.resource || "";
         const myRoles = me.roles || [];
+        const myClasses = me.classes || me.tags || [];
         const oppDp = opp.damage_profile || {{}};
         const isOppAP = oppDp.primary_type === "AP" || (oppDp.primary_type === "TANK" && !["DrMundo", "KSante", "Poppy", "Sion", "Skarner"].includes(opp.id));
         const isOppDual = oppDp.has_dual_build;
 
         // ① 対面属性・サステイン対策特化
         if (opp.sustain_info?.has_sustain) {{
-          if (myRoles.includes("Mage") || (me.resource && me.resource.includes("マナ") && !myRoles.includes("Marksman"))) {{
+          if (myClasses.includes("Mage") || (me.resource && me.resource.includes("マナ") && !myClasses.includes("Marksman"))) {{
             addItem("3916", "忘却のオーブ", "対面重傷", "回復阻害(AP)");
-          }} else if (myRoles.includes("Tank")) {{
+          }} else if (myClasses.includes("Tank")) {{
             addItem("3076", "ブランブル ベスト", "対面重傷", "回復阻害(AR)");
           }} else {{
             addItem("3123", "エクスキューショナー コーリング", "対面重傷", "回復阻害(AD)");
@@ -3525,28 +3527,28 @@ def build():
           // 両型持ちの場合: 相手の型に合わせたAR/MR両方の選択肢を提示
           addItem("3047", "プレート スチールキャップ", "対AD型", "相手がADビルド時の通常攻撃低減");
           addItem("3111", "マーキュリー ブーツ", "対AP型", "相手がAPビルド時の魔法耐性&CC低減");
-          if (myRoles.includes("Tank") || myRoles.includes("Fighter")) {{
-            addItem("6664", "ケイニック ルーコン", "対AP防具", "相手がAPビルド時の魔法シールド");
+          if (myClasses.includes("Tank") || myClasses.includes("Fighter")) {{
+            addItem("2504", "ケイニック ルーケルン", "対AP防具", "相手がAPビルド時の魔法シールド");
           }}
         }} else if (isOppAP) {{
           addItem("3111", "マーキュリー ブーツ", "対AP靴", "魔法耐性 ＆ 行動妨害低減");
-          if (myRoles.includes("Tank") || myRoles.includes("Fighter")) {{
-            addItem("6664", "ケイニック ルーコン", "対AP防具", "魔法シールド ＆ 高MR");
-          }} else if (myRoles.includes("Assassin") || myRoles.includes("Marksman")) {{
+          if (myClasses.includes("Tank") || myClasses.includes("Fighter")) {{
+            addItem("2504", "ケイニック ルーケルン", "対AP防具", "魔法シールド ＆ 高MR");
+          }} else if (myClasses.includes("Assassin") || myClasses.includes("Marksman")) {{
             addItem("3156", "マルモティウスの胃袋", "対AP火力", "魔法シールド ＆ 攻撃力");
           }}
         }} else {{
           addItem("3047", "プレート スチールキャップ", "対AD靴", "通常攻撃被ダメ12%低減");
-          if (myRoles.includes("Tank")) {{
+          if (myClasses.includes("Tank")) {{
             addItem("3143", "ランデュイン オーメン", "対AD防具", "クリティカル＆通常攻撃耐性");
-          }} else if (myRoles.includes("Fighter")) {{
+          }} else if (myClasses.includes("Fighter")) {{
             addItem("6333", "デス ダンス", "対AD耐久", "被ダメ遅延 ＆ キル時回復");
           }}
         }}
 
         // 相手が硬いタンクの場合の貫通アイテム
-        if (oppRoles.includes("Tank") || ["Sion", "Malphite", "ChoGath", "Ornn", "DrMundo", "Shen", "Rammus", "TahmKench"].includes(opp.id)) {{
-          if (myRoles.includes("Mage")) {{
+        if (oppClasses.includes("Tank") || ["Sion", "Malphite", "ChoGath", "Ornn", "DrMundo", "Shen", "Rammus", "TahmKench"].includes(opp.id)) {{
+          if (myClasses.includes("Mage")) {{
             addItem("3135", "ヴォイド スタッフ", "対タンク貫通", "40% 魔法防御貫通");
           }} else {{
             addItem("3071", "ブラック クリーバー", "対タンク破甲", "物理防御破壊 ＆ 加速");
@@ -3563,11 +3565,11 @@ def build():
 
         // ③ 後半・交戦の保険・生存アイテム
         if (recommendedItems.length < 6) {{
-          if (myRoles.includes("Fighter") || myRoles.includes("Tank")) {{
+          if (myClasses.includes("Fighter") || myClasses.includes("Tank")) {{
             addItem("3053", "ステラックの篭手", "交戦生存", "瀕死時巨大シールド＆耐性");
-          }} else if (myRoles.includes("Mage")) {{
+          }} else if (myClasses.includes("Mage")) {{
             addItem("3157", "ゾーニャの砂時計", "緊急無敵", "2.5秒無敵でバースト回避");
-          }} else if (myRoles.includes("Marksman") || myRoles.includes("Assassin")) {{
+          }} else if (myClasses.includes("Marksman") || myClasses.includes("Assassin")) {{
             addItem("3026", "ガーディアン エンジェル", "復活保険", "死亡時HP50%で復活");
           }}
         }}

@@ -1,4 +1,5 @@
 import json
+import hashlib
 from pathlib import Path
 from tqdm import tqdm
 import math
@@ -85,11 +86,16 @@ def calculate_matchup(me, opp):
         reasons.append("相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷購入が必須です")
 
     # ③ ロール・クラスのジャンケン相性
-    # タンク vs アサシン
-    if "Tank" in me.get("roles", []) and ("Zed" in opp_id or "Talon" in opp_id or "Qiyana" in opp_id or "Katarina" in opp_id):
+    # タンク vs アサシン（レーン roles ではなく公式 classes / tags を参照）
+    me_classes = me.get("classes") or me.get("tags") or []
+    opp_classes = opp.get("classes") or opp.get("tags") or []
+    is_opp_assassin = "Assassin" in opp_classes or any(k in opp_id for k in ["Zed", "Talon", "Qiyana", "Katarina"])
+    is_me_assassin = "Assassin" in me_classes or any(k in me_id for k in ["Zed", "Talon", "Qiyana", "Katarina"])
+
+    if ("Tank" in me_classes or me_dp.get("primary_type") == "TANK") and is_opp_assassin:
         score += 4.0
         reasons.append("アサシンの瞬間バーストを耐久力で受け止め、CCで拘束してカウンターできます")
-    elif "Tank" in opp.get("roles", []) and ("Zed" in me_id or "Talon" in me_id or "Qiyana" in me_id or "Katarina" in me_id):
+    elif ("Tank" in opp_classes or opp_dp.get("primary_type") == "TANK") and is_me_assassin:
         score -= 4.0
         reasons.append("相手の高耐久を削りきれず、アサシン側のバーストが通用しにくい構成です")
 
@@ -111,8 +117,10 @@ def calculate_matchup(me, opp):
         score -= 2.5
         reasons.append("相手の遠距離ポークにより序盤のHP管理が厳しいため、不用意な被弾を避ける必要があります")
 
-    # IDハッシュによるわずかな統計ゆらぎ（±1.8%以内で勝率をリアルに分散）
-    h_val = (hash(f"{me_id}_{opp_id}") % 37) - 18
+    # 決定的な固定ハッシュによる統計ゆらぎ（プロセス非依存・完全再現性、±1.8%以内で勝率をリアルに分散）
+    seed_str = f"{me_id}_{opp_id}"
+    digest_int = int(hashlib.md5(seed_str.encode("utf-8")).hexdigest()[:8], 16)
+    h_val = (digest_int % 37) - 18
     score += (h_val * 0.1)
 
     # 勝率の範囲クリップ (41.0% 〜 59.0%)

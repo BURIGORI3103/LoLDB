@@ -107,6 +107,8 @@ def merge_champion_data():
 
         strategy_data = load_json(strategy_path) if strategy_path else None
         merged = dict(base_data)
+        # 公式の基本クラス情報（Fighter, Mage, Tank 等）を classes として保持
+        merged["classes"] = list(base_data.get("roles", []))
 
         if strategy_data:
             if strategy_data.get("roles"):
