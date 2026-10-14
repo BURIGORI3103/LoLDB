@@ -15,7 +15,10 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 1. fetch_champions.py が Data Dragon から基礎データを取得します。
 2. process_url_list.py が docs/LoL_URL_list.md を参照し、攻略情報を収集します。
-3. merge_data.py などの補助スクリプトが収集データを統合・補完します。
+3. merge_data.py / migrate_matchups.py / build_comprehensive_matchups.py が収集データを統合・正規化・補完します。
+   - マッチアップは正規スキーマ（champion_id, name, winrate, winrate_display, reason, role, patch, source, is_estimated）で管理。
+   - 実測データ（opgg_stats）と推定相性（synergy_estimate）を厳格に分離し、ハッシュ値による疑似勝率生成は廃止。
+   - role_data とトップレベルの詳細理由を同期管理し、理由がない場合は定型文を乱発せず「理由データなし」と明記。
 4. build_pwa.py が単一 HTML、マニフェスト、Service Worker を生成します。
 
 詳細なデータスキーマは docs/LoL_Database_Specification.md、攻略情報の参照先は docs/LoL_URL_list.md を確認してください。収集元の構造や記載内容は変わるため、スクレイピング結果を検証せずに正しい最新情報とみなしません。
@@ -23,8 +26,8 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 ## 生成物と運用上の制約
 
 - index.html と dist/index.html は生成物です。UI の変更は可能な限り生成元の build_pwa.py に反映し、ビルド後に出力を確認します。
-- champions_data、strategy_data、merged_data、dist には生成データまたは配布物があります。再生成で手作業の変更が失われないか確認します。
-- Service Worker のキャッシュ名・ルートパス・GitHub Pages の /LoLDB/ サブパスを変更すると、オフライン更新に影響します。sw.js と build_pwa.py を併せて確認します。
+- build_pwa.py の再ビルド時は、merged_data/all_champions.json および個別JSONが正本として同一同期されていることを保証します。
+- Service Worker のキャッシュ名・ルートパス・GitHub Pages の /LoLDB/ サブパスを変更すると、オフライン更新に影響します。sw.js と build_pwa.py を併せて確認します（現行: loldb-core-v19）。
 - GitHub Pages への反映はリポジトリへのプッシュ後です。公開操作とローカル編集を区別します。
 
 ## 主な参照ファイル

@@ -2187,6 +2187,17 @@ def build():
   </div>
 
   <script>
+    // 安全なテキスト描画用HTMLエスケープ
+    function escapeHtml(str) {{
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }}
+
     // インライン内包されたマスターデータ
     const CHAMPIONS = {json_str};
     const ITEMS = {items_json_str};
@@ -2550,78 +2561,82 @@ def build():
         buildContentHtml = `<div id="buildPatternContent">${{renderBuildPatternInner(buildPatterns[0])}}</div>`;
       }}
 
-      // 相性 (理由テキストを100%確実に表示)
+      // 相性 (勝率と戦術理由を厳格分離、安全な描画、ロール固有対面データ完全対応)
       const curMatchups = roleSpecificData.matchups || c.matchups || {{}};
+
+      function renderMatchupCard(m, isFav) {{
+        const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{escapeHtml(m.champion_id)}}.png`;
+        const oppName = escapeHtml(m.name || m.champion_id);
+
+        // 1. 勝率バッジの抽出
+        let winrateText = isFav ? "有利" : "不利";
+        if (m.winrate_display) {{
+          winrateText = m.winrate_display;
+        }} else if (m.winrate) {{
+          winrateText = `勝率 ${{m.winrate}}`;
+        }} else if (m.reason && typeof m.reason === "string") {{
+          const wrMatch = m.reason.match(/(\\d+(?:\\.\\d+)?%)/);
+          if (wrMatch) {{
+            winrateText = `勝率 ${{wrMatch[1]}}`;
+          }}
+        }}
+
+        // 2. 戦術的理由の抽出
+        let reasonText = "";
+        if (m.reason && typeof m.reason === "string") {{
+          let raw = m.reason.trim();
+          if (raw.includes(" | ")) {{
+            const parts = raw.split(" | ");
+            raw = parts.slice(1).join(" | ").trim();
+          }}
+          // "勝率 XX%（統計的に有利/不利）" などの純粋な統計文を除外
+          const isStatsOnly = /勝率\\s*\\d+(?:\\.\\d+)?%/.test(raw) || /統計的に(?:有利|不利)/.test(raw);
+          if (!isStatsOnly && raw.length > 5) {{
+            reasonText = raw;
+          }}
+        }}
+
+        // 3. フォールバック (matchup_matrix から具体的理由を取得)
+        if (!reasonText && c.matchup_matrix && c.matchup_matrix[m.champion_id]?.reason) {{
+          const matR = c.matchup_matrix[m.champion_id].reason;
+          if (matR && !matR.includes("統計的に有利") && !matR.includes("統計的に不利")) {{
+            reasonText = matR;
+          }}
+        }}
+
+        // 4. それでも理由がない場合：根拠のない定型文を乱発せず明確に「理由データなし」
+        if (!reasonText) {{
+          reasonText = "理由データなし";
+        }}
+
+        const badgeClass = isFav ? "badge-fav" : "badge-unfav";
+        const isNoReason = reasonText === "理由データなし";
+        const reasonStyle = isNoReason ? "color:var(--text-muted); font-size:12px; font-style:italic;" : "";
+
+        return `
+          <div class="matchup-item">
+            <div class="matchup-header">
+              <div class="matchup-champ-info">
+                <img class="matchup-champ-img" src="${{oppImg}}" alt="${{oppName}}" onerror="this.style.display='none';">
+                <span class="matchup-champ-name">${{oppName}}</span>
+              </div>
+              <span class="${{badgeClass}}">${{escapeHtml(winrateText)}}</span>
+            </div>
+            <div class="matchup-reason" style="${{reasonStyle}}">${{escapeHtml(reasonText)}}</div>
+          </div>
+        `;
+      }}
+
       let favHtml = "";
       if (curMatchups.favorable && curMatchups.favorable.length > 0) {{
-        favHtml = curMatchups.favorable.map(m => {{
-          const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{m.champion_id}}.png`;
-          let winrate = "有利";
-          let reasonText = "";
-          if ((m.reason || "").includes(" | ")) {{
-            const parts = m.reason.split(" | ");
-            winrate = parts[0];
-            reasonText = parts.slice(1).join(" | ");
-          }} else if (m.reason) {{
-            winrate = m.reason.includes("勝率") ? m.reason : "有利";
-            reasonText = m.reason;
-          }}
-          if (!reasonText && c.matchup_matrix && c.matchup_matrix[m.champion_id]?.reason) {{
-            reasonText = c.matchup_matrix[m.champion_id].reason;
-          }}
-          if (!reasonText) {{
-            reasonText = "スキル構成と主導権の取りやすさにより有利なマッチアップです。";
-          }}
-          return `
-            <div class="matchup-item">
-              <div class="matchup-header">
-                <div class="matchup-champ-info">
-                  <img class="matchup-champ-img" src="${{oppImg}}" alt="${{m.name || m.champion_id}}" onerror="this.style.display='none';">
-                  <span class="matchup-champ-name">${{m.name || m.champion_id}}</span>
-                </div>
-                <span class="badge-fav">${{winrate}}</span>
-              </div>
-              <div class="matchup-reason">${{reasonText}}</div>
-            </div>
-          `;
-        }}).join("");
+        favHtml = curMatchups.favorable.map(m => renderMatchupCard(m, true)).join("");
       }} else {{
         favHtml = "<div style='color:var(--text-muted); font-size:12px; padding:6px 0;'>統計データなし</div>";
       }}
 
       let unfavHtml = "";
       if (curMatchups.unfavorable && curMatchups.unfavorable.length > 0) {{
-        unfavHtml = curMatchups.unfavorable.map(m => {{
-          const oppImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{m.champion_id}}.png`;
-          let winrate = "不利";
-          let reasonText = "";
-          if ((m.reason || "").includes(" | ")) {{
-            const parts = m.reason.split(" | ");
-            winrate = parts[0];
-            reasonText = parts.slice(1).join(" | ");
-          }} else if (m.reason) {{
-            winrate = m.reason.includes("勝率") ? m.reason : "不利";
-            reasonText = m.reason;
-          }}
-          if (!reasonText && c.matchup_matrix && c.matchup_matrix[m.champion_id]?.reason) {{
-            reasonText = c.matchup_matrix[m.champion_id].reason;
-          }}
-          if (!reasonText) {{
-            reasonText = "相手の交戦距離やバーストが厳しいため、慎重な立ち回りが求められる不利なマッチアップです。";
-          }}
-          return `
-            <div class="matchup-item">
-              <div class="matchup-header">
-                <div class="matchup-champ-info">
-                  <img class="matchup-champ-img" src="${{oppImg}}" alt="${{m.name || m.champion_id}}" onerror="this.style.display='none';">
-                  <span class="matchup-champ-name">${{m.name || m.champion_id}}</span>
-                </div>
-                <span class="badge-unfav">${{winrate}}</span>
-              </div>
-              <div class="matchup-reason">${{reasonText}}</div>
-            </div>
-          `;
-        }}).join("");
+        unfavHtml = curMatchups.unfavorable.map(m => renderMatchupCard(m, false)).join("");
       }} else {{
         unfavHtml = "<div style='color:var(--text-muted); font-size:12px; padding:6px 0;'>統計データなし</div>";
       }}
@@ -3419,25 +3434,30 @@ def build():
 
       if (favMatch) {{
         advClass = "sim-adv-fav";
-        advText = "有利";
+        const wr = favMatch.winrate_display || (favMatch.winrate ? `勝率 ${{favMatch.winrate}}` : "");
+        advText = wr ? `有利 (${{wr}})` : "有利";
         const rParts = (favMatch.reason || "").split(" | ");
-        advReason = (rParts.length > 1 ? rParts[1] : favMatch.reason) || `統計的に ${{me.name}} が有利なマッチアップです。主導権を握ってアグレッシブに攻めましょう。`;
+        const rText = (rParts.length > 1 ? rParts[1] : favMatch.reason) || "";
+        advReason = (rText && !rText.includes("統計的に有利")) ? rText : `統計的に ${{escapeHtml(me.name)}} が主導権を握りやすい有利なマッチアップです。`;
       }} else if (unfavMatch) {{
         advClass = "sim-adv-unfav";
-        advText = "警戒・不利";
+        const wr = unfavMatch.winrate_display || (unfavMatch.winrate ? `勝率 ${{unfavMatch.winrate}}` : "");
+        advText = wr ? `警戒・不利 (${{wr}})` : "警戒・不利";
         const rParts = (unfavMatch.reason || "").split(" | ");
-        advReason = (rParts.length > 1 ? rParts[1] : unfavMatch.reason) || `統計的に ${{opp.name}} が得意とする不利なマッチアップです。無理な仕掛けを避け、ガンクを待つ立ち回りが賢明です。`;
+        const rText = (rParts.length > 1 ? rParts[1] : unfavMatch.reason) || "";
+        advReason = (rText && !rText.includes("統計的に不利")) ? rText : `統計的に ${{escapeHtml(opp.name)}} が得意とする不利なマッチアップです。無理な仕掛けを避けましょう。`;
       }} else if (matrixData) {{
+        const isEst = matrixData.is_estimated !== false && matrixData.source === "synergy_estimate";
         const advCode = (matrixData.advantage || "").toLowerCase();
         if (advCode === "fav" || advCode === "favorable") {{
           advClass = "sim-adv-fav";
-          advText = "有利";
+          advText = isEst ? "推定有利" : (matrixData.winrate_display ? `有利 (${{matrixData.winrate_display}})` : "有利");
         }} else if (advCode === "unfav" || advCode === "unfavorable") {{
           advClass = "sim-adv-unfav";
-          advText = "警戒・不利";
+          advText = isEst ? "推定警戒・不利" : (matrixData.winrate_display ? `警戒・不利 (${{matrixData.winrate_display}})` : "警戒・不利");
         }} else {{
           advClass = "sim-adv-even";
-          advText = "互角・五分";
+          advText = isEst ? "推定五分" : "五分";
         }}
         let mReason = matrixData.reason || advReason;
         if (mReason.includes(" | ")) {{
@@ -3756,8 +3776,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v18
-const CORE_CACHE = 'loldb-core-v18';
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v19
+const CORE_CACHE = 'loldb-core-v19';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
 
 const ASSETS_TO_CACHE = [
