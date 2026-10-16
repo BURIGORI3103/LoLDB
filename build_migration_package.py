@@ -237,9 +237,8 @@ self.addEventListener('activate', event => {{
 
     print(f"移転パッケージファイル配置完了: {len(list(MIGRATION_DIR.glob('*')))} ファイル")
 
-    # 4. ZIPアーカイブの作成 (プロジェクト直下 & デスクトップ)
+    # 4. ZIPアーカイブの作成 (プロジェクト直下のみ)
     zip_proj = BASE_DIR / "LoLDB_old_url_migration.zip"
-    zip_desktop = DESKTOP_DIR / "LoLDB_old_url_migration.zip"
 
     files_to_zip = list(MIGRATION_DIR.glob("**/*"))
     print("ZIP圧縮中...")
@@ -249,15 +248,9 @@ self.addEventListener('activate', event => {{
             if f.is_file():
                 zf.write(f, arcname=f.relative_to(MIGRATION_DIR))
 
-    with zipfile.ZipFile(zip_desktop, "w", zipfile.ZIP_DEFLATED) as zf:
-        for f in tqdm(files_to_zip, desc="Desktop ZIP"):
-            if f.is_file():
-                zf.write(f, arcname=f.relative_to(MIGRATION_DIR))
-
     print(f"[SUCCESS] 旧URL用移転配布パッケージ完成:")
     print(f"  - フォルダ: {MIGRATION_DIR}")
-    print(f"  - ZIP (プロジェクト): {zip_proj}")
-    print(f"  - ZIP (デスクトップ): {zip_desktop}")
+    print(f"  - ZIP (プロジェクト直下): {zip_proj}")
 
 if __name__ == "__main__":
     build_migration_package()
