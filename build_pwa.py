@@ -1705,7 +1705,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.1.1 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.3.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1897,6 +1897,28 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.3.0</span>
+              <span class="changelog-date">2026-10-14</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【マッチアップ正規スキーマ移行・勝率と戦術理由の厳格分離】チャンピオン詳細モーダルにおいて、勝率バッジと「何のスキル・特性でどう立ち回るか」の具体的戦術理由を完全に独立した表示へ分離</li>
+              <li>【ロール別マッチアップの同期・正確性向上】ロール切り替え（TOP/JUG/MID/ADC/SUP）時に、選択中ロール固有の対面データを正確に表示するよう同期・改善</li>
+              <li>【ハッシュ疑似勝率の完全撤廃】対面シミュレーターにおいて、実測データがない場合の疑似勝率算出を廃止し、「推定有利」「推定警戒・不利」「推定五分」と明記して実測統計と明確に区別</li>
+              <li>【安全なテキスト描画】HTMLエスケープ処理を導入し、チャンピオン名や戦術理由テキストを安全かつ確実にレンダリング</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.2.0</span>
+              <span class="changelog-date">2026-10-12</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【GitHub Pages公開＆クラウド完全移行】本番公開先をGitHub Pages（https://burigori3103.github.io/LoLDB/）へ完全移行。サブパスでのPWA動作およびService Workerキャッシュを最適化</li>
+              <li>【.nojekyll自動配備＆README新設】GitHub Pages用の静的配信構成を整え、オフラインPWAとしての自動更新と安定性を強化</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.1.1</span>
