@@ -1,7 +1,9 @@
 {
+  "name": "繝代Φ繝・が繝ｳ",
+  "slug": "pantheon",
   "roles": [
-    "SUP",
     "TOP",
+    "SUP",
     "MID",
     "JUG"
   ],
@@ -12,41 +14,45 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 58.26%（統計的に有利）"
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "reason": "勝率 60.47%（統計的に有利）"
       },
       {
-        "champion_id": "Teemo",
-        "name": "ティーモ",
-        "reason": "勝率 57.0%（統計的に有利）"
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "reason": "勝率 59.05%（統計的に有利）"
       },
       {
-        "champion_id": "Ashe",
-        "name": "アッシュ",
-        "reason": "勝率 56.94%（統計的に有利）"
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "reason": "勝率 58.43%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Renata",
-        "name": "レナータ・グラスク",
-        "reason": "勝率 42.78%（統計的に不利）"
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "reason": "勝率 44.12%（統計的に不利）"
       },
       {
-        "champion_id": "Braum",
-        "name": "ブラウム",
-        "reason": "勝率 43.08%（統計的に不利）"
+        "champion_id": "Anivia",
+        "name": "アニビア",
+        "reason": "勝率 44.9%（統計的に不利）"
       },
       {
-        "champion_id": "Taric",
-        "name": "タリック",
-        "reason": "勝率 43.21%（統計的に不利）"
+        "champion_id": "Yorick",
+        "name": "ヨリック",
+        "reason": "勝率 45.42%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -59,28 +65,28 @@
         "condition": "推奨靴"
       },
       {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3179",
-        "name": "アンブラル グレイブ",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6692",
         "name": "赤月の刃",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3071",
         "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
         "description": "推奨コア"
       }
     ],
@@ -89,19 +95,19 @@
   "runes": {
     "primary": {
       "path": "栄華",
-      "keystone": "8005",
-      "keystone_name": "プレスアタック",
+      "keystone": "8010",
+      "keystone_name": "征服者",
       "choices": [
-        "凱旋",
+        "冷静沈着",
         "レジェンド: ヘイスト",
-        "最期の慈悲"
+        "背水の陣"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "追い打ち",
-        "執拗な賞金首狩り"
+        "至高",
+        "追火"
       ]
     },
     "shards": [
@@ -110,6 +116,8 @@
       "Health Scaling"
     ]
   },
-  "name": "パンテオン",
-  "slug": "pantheon"
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
 }

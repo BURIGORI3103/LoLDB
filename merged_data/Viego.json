@@ -72,6 +72,10 @@
       "image": "ViegoR.png"
     }
   ],
+  "classes": [
+    "Fighter",
+    "Assassin"
+  ],
   "summoner_spells": [
     "フラッシュ",
     "スマイト"
@@ -79,36 +83,36 @@
   "matchups": {
     "favorable": [
       {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "winrate": "56.55%",
+        "winrate_num": 56.55,
+        "winrate_display": "勝率 56.55%",
+        "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
+        "role": "JUG",
+        "patch": "16.20.1",
+        "source": "opgg_stats",
+        "is_estimated": false
+      },
+      {
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "winrate": "53.73%",
+        "winrate_num": 53.73,
+        "winrate_display": "勝率 53.73%",
+        "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
+        "role": "JUG",
+        "patch": "16.20.1",
+        "source": "opgg_stats",
+        "is_estimated": false
+      },
+      {
         "champion_id": "Locke",
         "name": "ロック",
-        "winrate": "55.99%",
-        "winrate_num": 55.99,
-        "winrate_display": "勝率 55.99%",
-        "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-        "role": "JUG",
-        "patch": "16.20.1",
-        "source": "opgg_stats",
-        "is_estimated": false
-      },
-      {
-        "champion_id": "JarvanIV",
-        "name": "ジャーヴァンⅣ",
-        "winrate": "53.67%",
-        "winrate_num": 53.67,
-        "winrate_display": "勝率 53.67%",
-        "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
-        "role": "JUG",
-        "patch": "16.20.1",
-        "source": "opgg_stats",
-        "is_estimated": false
-      },
-      {
-        "champion_id": "Kindred",
-        "name": "キンドレッド",
-        "winrate": "52.94%",
-        "winrate_num": 52.94,
-        "winrate_display": "勝率 52.94%",
-        "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
+        "winrate": "53.4%",
+        "winrate_num": 53.4,
+        "winrate_display": "勝率 53.4%",
+        "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
         "role": "JUG",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -119,34 +123,34 @@
       {
         "champion_id": "Rammus",
         "name": "ラムス",
-        "winrate": "43.74%",
-        "winrate_num": 43.74,
-        "winrate_display": "勝率 43.74%",
-        "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+        "winrate": "44.34%",
+        "winrate_num": 44.34,
+        "winrate_display": "勝率 44.34%",
+        "reason": "ラムスの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
         "role": "JUG",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Amumu",
-        "name": "アムム",
-        "winrate": "44.33%",
-        "winrate_num": 44.33,
-        "winrate_display": "勝率 44.33%",
-        "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+        "champion_id": "Aatrox",
+        "name": "エイトロックス",
+        "winrate": "44.67%",
+        "winrate_num": 44.67,
+        "winrate_display": "勝率 44.67%",
+        "reason": "エイトロックスの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
         "role": "JUG",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Trundle",
-        "name": "トランドル",
-        "winrate": "45.7%",
-        "winrate_num": 45.7,
-        "winrate_display": "勝率 45.7%",
-        "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+        "champion_id": "RekSai",
+        "name": "レク＝サイ",
+        "winrate": "44.95%",
+        "winrate_num": 44.95,
+        "winrate_display": "勝率 44.95%",
+        "reason": "レク＝サイの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
         "role": "JUG",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -228,6 +232,15 @@
     "teamfight": "【中終盤・オブジェクト管理＆集団戦】スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
     "key_tips": "【スキルの吐きどころ】ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
   },
+  "damage_profile": {
+    "primary_type": "AD",
+    "label": "物理 (AD)",
+    "badge_text": "AD",
+    "badge_class": "badge-ad",
+    "counter_defense": "AR (物理防御) を積む",
+    "has_dual_build": false,
+    "dual_build_desc": ""
+  },
   "role_data": {
     "JUG": {
       "role": "JUG",
@@ -269,36 +282,36 @@
       "matchups": {
         "favorable": [
           {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "56.55%",
+            "winrate_num": 56.55,
+            "winrate_display": "勝率 56.55%",
+            "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
+            "role": "JUG",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "53.73%",
+            "winrate_num": 53.73,
+            "winrate_display": "勝率 53.73%",
+            "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
+            "role": "JUG",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
             "champion_id": "Locke",
             "name": "ロック",
-            "winrate": "55.99%",
-            "winrate_num": 55.99,
-            "winrate_display": "勝率 55.99%",
-            "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-            "role": "JUG",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "JarvanIV",
-            "name": "ジャーヴァンⅣ",
-            "winrate": "53.67%",
-            "winrate_num": 53.67,
-            "winrate_display": "勝率 53.67%",
-            "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
-            "role": "JUG",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "Kindred",
-            "name": "キンドレッド",
-            "winrate": "52.94%",
-            "winrate_num": 52.94,
-            "winrate_display": "勝率 52.94%",
-            "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
+            "winrate": "53.4%",
+            "winrate_num": 53.4,
+            "winrate_display": "勝率 53.4%",
+            "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
             "role": "JUG",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -309,34 +322,34 @@
           {
             "champion_id": "Rammus",
             "name": "ラムス",
-            "winrate": "43.74%",
-            "winrate_num": 43.74,
-            "winrate_display": "勝率 43.74%",
-            "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+            "winrate": "44.34%",
+            "winrate_num": 44.34,
+            "winrate_display": "勝率 44.34%",
+            "reason": "ラムスの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
             "role": "JUG",
             "patch": "16.20.1",
             "source": "opgg_stats",
             "is_estimated": false
           },
           {
-            "champion_id": "Amumu",
-            "name": "アムム",
-            "winrate": "44.33%",
-            "winrate_num": 44.33,
-            "winrate_display": "勝率 44.33%",
-            "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+            "champion_id": "Aatrox",
+            "name": "エイトロックス",
+            "winrate": "44.67%",
+            "winrate_num": 44.67,
+            "winrate_display": "勝率 44.67%",
+            "reason": "エイトロックスの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
             "role": "JUG",
             "patch": "16.20.1",
             "source": "opgg_stats",
             "is_estimated": false
           },
           {
-            "champion_id": "Trundle",
-            "name": "トランドル",
-            "winrate": "45.7%",
-            "winrate_num": 45.7,
-            "winrate_display": "勝率 45.7%",
-            "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+            "champion_id": "RekSai",
+            "name": "レク＝サイ",
+            "winrate": "44.95%",
+            "winrate_num": 44.95,
+            "winrate_display": "勝率 44.95%",
+            "reason": "レク＝サイの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
             "role": "JUG",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -510,7 +523,7 @@
   },
   "build_patterns": [
     {
-      "name": "[AD] 【標準・最高勝率】ジャングル巡回コア",
+      "name": "【標準・最高勝率】ジャングル巡回コア",
       "desc": "OP.GG統計に基づく最高勝率構成。高速なファームと安定したガンクを両立。",
       "starter": [
         "ガストウォーカーの幼体",
@@ -543,7 +556,7 @@
       ]
     },
     {
-      "name": "[AD] 【デュエル重視】1v1・カウンターJG型",
+      "name": "【デュエル重視】1v1・カウンターJG型",
       "desc": "敵ジャングラーとの遭遇戦やドラゴン前の小規模戦で確実に勝利するための単体キル特化ビルド。",
       "starter": [
         "ガストウォーカーの幼体",
@@ -576,7 +589,7 @@
       ]
     },
     {
-      "name": "[TANK] 【集団戦・オブジェクト重視】耐久フロントライン型",
+      "name": "【集団戦・オブジェクト重視】耐久フロントライン型",
       "desc": "重要オブジェクト戦で味方の盾となり、CCを確実に決める堅実な構成。",
       "starter": [
         "ガストウォーカーの幼体",
@@ -671,26 +684,18 @@
       ]
     }
   ],
-  "damage_profile": {
-    "primary_type": "AD",
-    "label": "物理 (AD)",
-    "badge_text": "AD",
-    "badge_class": "badge-ad",
-    "counter_defense": "AR (物理防御) を積む",
-    "has_dual_build": false,
-    "dual_build_desc": ""
-  },
   "matchup_matrix": {
     "Aatrox": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "44.67%",
+      "winrate_num": 44.67,
+      "winrate_display": "勝率 44.67%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 44.67%）",
+      "reason": "エイトロックスの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "JUG"
     },
     "Ahri": {
       "winrate": null,
@@ -698,7 +703,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -709,7 +714,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -720,7 +725,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -729,9 +734,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -742,22 +747,21 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Amumu": {
-      "winrate": "44.33%",
-      "winrate_num": 44.33,
-      "winrate_display": "勝率 44.33%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 44.33%）",
-      "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "JUG"
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Anivia": {
       "winrate": null,
@@ -765,7 +769,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -776,7 +780,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -787,7 +791,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -798,7 +802,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -809,7 +813,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -820,7 +824,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -831,7 +835,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -842,7 +846,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -853,7 +857,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -862,9 +866,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -875,7 +879,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -884,9 +888,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -908,7 +912,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -919,7 +923,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -930,7 +934,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -939,9 +943,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -952,7 +956,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -961,9 +965,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -974,7 +978,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -996,7 +1000,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1007,7 +1011,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1018,7 +1022,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1029,7 +1033,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1040,7 +1044,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1062,7 +1066,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1073,7 +1077,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1082,9 +1086,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1095,7 +1099,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1104,9 +1108,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1115,9 +1119,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1128,7 +1132,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1139,29 +1143,30 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
-    },
-    "Gwen": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
       "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
+    "Gwen": {
+      "winrate": "53.73%",
+      "winrate_num": 53.73,
+      "winrate_display": "勝率 53.73%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 53.73%）",
+      "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "JUG"
+    },
     "Hecarim": {
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1172,7 +1177,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1183,7 +1188,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1216,7 +1221,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1227,22 +1232,21 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "JarvanIV": {
-      "winrate": "53.67%",
-      "winrate_num": 53.67,
-      "winrate_display": "勝率 53.67%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 53.67%）",
-      "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "JUG"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Jax": {
       "winrate": null,
@@ -1250,7 +1254,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1261,7 +1265,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1272,7 +1276,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1283,7 +1287,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1292,9 +1296,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1305,7 +1309,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1316,7 +1320,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1327,7 +1331,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1338,7 +1342,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1349,7 +1353,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1360,7 +1364,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1371,7 +1375,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1393,7 +1397,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1404,22 +1408,21 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Kindred": {
-      "winrate": "52.94%",
-      "winrate_num": 52.94,
-      "winrate_display": "勝率 52.94%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 52.94%）",
-      "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "JUG"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Kled": {
       "winrate": null,
@@ -1427,7 +1430,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1438,7 +1441,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1449,7 +1452,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1460,7 +1463,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1469,9 +1472,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1482,7 +1485,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1493,18 +1496,18 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Locke": {
-      "winrate": "55.99%",
-      "winrate_num": 55.99,
-      "winrate_display": "勝率 55.99%",
+      "winrate": "53.4%",
+      "winrate_num": 53.4,
+      "winrate_display": "勝率 53.4%",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 55.99%）",
-      "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
+      "advantage_label": "有利（勝率 53.4%）",
+      "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -1516,7 +1519,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1527,7 +1530,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1538,7 +1541,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1549,7 +1552,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手の高い物理防御と通常攻撃反射により、ADダメージが通りにくい対面です ＆ 高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高い物理防御と通常攻撃反射により、ADダメージが通りにくい対面です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1560,7 +1563,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1569,9 +1572,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1593,7 +1596,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1604,7 +1607,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1615,7 +1618,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1624,9 +1627,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1637,7 +1640,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1648,7 +1651,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1659,7 +1662,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1690,9 +1693,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1703,7 +1706,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1714,7 +1717,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1736,7 +1739,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1745,9 +1748,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1769,7 +1772,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1778,31 +1781,32 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Pantheon": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "56.55%",
+      "winrate_num": 56.55,
+      "winrate_display": "勝率 56.55%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 56.55%）",
+      "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "JUG"
     },
     "Poppy": {
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1813,7 +1817,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1824,7 +1828,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1835,7 +1839,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1844,43 +1848,44 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Rammus": {
-      "winrate": "43.74%",
-      "winrate_num": 43.74,
-      "winrate_display": "勝率 43.74%",
+      "winrate": "44.34%",
+      "winrate_num": 44.34,
+      "winrate_display": "勝率 44.34%",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 43.74%）",
-      "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
+      "advantage_label": "警戒・不利（勝率 44.34%）",
+      "reason": "ラムスの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
       "role": "JUG"
     },
     "RekSai": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "44.95%",
+      "winrate_num": 44.95,
+      "winrate_display": "勝率 44.95%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 44.95%）",
+      "reason": "レク＝サイの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "JUG"
     },
     "Rell": {
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1891,7 +1896,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1900,9 +1905,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1924,7 +1929,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1935,7 +1940,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1946,7 +1951,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1966,9 +1971,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1979,7 +1984,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1990,7 +1995,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1999,9 +2004,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2012,7 +2017,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2021,9 +2026,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2032,9 +2037,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2043,9 +2048,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2054,9 +2059,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2067,7 +2072,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2076,9 +2081,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2089,7 +2094,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2144,7 +2149,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2153,9 +2158,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2166,7 +2171,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2177,7 +2182,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2199,7 +2204,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2208,9 +2213,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2221,22 +2226,21 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Trundle": {
-      "winrate": "45.7%",
-      "winrate_num": 45.7,
-      "winrate_display": "勝率 45.7%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 45.7%）",
-      "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "JUG"
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Tryndamere": {
       "winrate": null,
@@ -2244,7 +2248,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2255,7 +2259,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2266,7 +2270,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2275,9 +2279,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2286,9 +2290,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2299,7 +2303,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2310,7 +2314,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2321,7 +2325,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2332,7 +2336,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2343,7 +2347,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2354,7 +2358,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2376,7 +2380,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2420,7 +2424,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2431,7 +2435,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2440,9 +2444,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2453,7 +2457,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2473,9 +2477,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2486,7 +2490,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2508,7 +2512,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2530,7 +2534,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2541,7 +2545,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2552,7 +2556,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2563,7 +2567,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2574,7 +2578,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2585,33 +2589,10 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     }
-  },
-  "overview": {
-    "summary": "滅びの王として名高いJUGチャンピオン。滅びの王剣とハートブレイカーを軸としたプレイスタイルで、レーン戦から集団戦まで高い影響力を発揮する。",
-    "strengths": [
-      "滅びの王剣や彷徨える苦悶を起点とした強力なダメージトレード能力",
-      "ハートブレイカーによる高い集団戦インパクトとゲーム決定力",
-      "現在のメタ（Patch 16.19.1）において安定したピック適性"
-    ],
-    "weaknesses": [
-      "主要スキル（特に亡霊の嘆きや彷徨える苦悶）のクールダウン中の隙が大きい",
-      "敵のハードCCや集中フォーカスを受けると脆さを露呈しやすい",
-      "レーンでのウェーブ管理やポジショニングのミスが命取りになりやすい"
-    ]
-  },
-  "sustain_info": {
-    "has_sustain": true,
-    "grievous_wounds_recommended": true,
-    "badge": "🩸 サステイン所持 (重傷推奨)",
-    "reason": "パッシブによる憑依時の割合回復とQのパッシブ吸血。リセット集団戦を止めるために重傷が有効。"
-  },
-  "classes": [
-    "Fighter",
-    "Assassin"
-  ]
+  }
 }

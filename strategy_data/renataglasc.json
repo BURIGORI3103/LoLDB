@@ -1,112 +1,33 @@
 {
-  "roles": [
-    "SUP"
-  ],
-  "summoner_spells": [
-    "フラッシュ",
-    "ヒール"
-  ],
+  "name": "繝ｬ繝翫・繧ｿ繝ｻ繧ｰ繝ｩ繧ｹ繧ｯ",
+  "slug": "renataglasc",
+  "roles": [],
+  "summoner_spells": [],
   "matchups": {
-    "favorable": [
-      {
-        "champion_id": "Ashe",
-        "name": "アッシュ",
-        "reason": "勝率 62.67%（統計的に有利）"
-      },
-      {
-        "champion_id": "Sylas",
-        "name": "サイラス",
-        "reason": "勝率 61.54%（統計的に有利）"
-      },
-      {
-        "champion_id": "Galio",
-        "name": "ガリオ",
-        "reason": "勝率 59.76%（統計的に有利）"
-      }
-    ],
-    "unfavorable": [
-      {
-        "champion_id": "Hwei",
-        "name": "フェイ",
-        "reason": "勝率 40.63%（統計的に不利）"
-      },
-      {
-        "champion_id": "Amumu",
-        "name": "アムム",
-        "reason": "勝率 41.67%（統計的に不利）"
-      },
-      {
-        "champion_id": "Elise",
-        "name": "エリス",
-        "reason": "勝率 43.27%（統計的に不利）"
-      }
-    ]
+    "favorable": [],
+    "unfavorable": []
   },
   "build": {
-    "starter": [
-      {
-        "item_id": "2003",
-        "name": "体力ポーション"
-      }
-    ],
-    "boots": [
-      {
-        "item_id": "3158",
-        "name": "アイオニア ブーツ",
-        "condition": "推奨靴"
-      },
-      {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
-        "condition": "推奨靴"
-      }
-    ],
-    "core": [
-      {
-        "step": 1,
-        "item_id": "3190",
-        "name": "ソラリのロケット",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
-        "item_id": "2065",
-        "name": "シュレリアの戦歌",
-        "description": "推奨コア"
-      },
-      {
-        "step": 3,
-        "item_id": "3107",
-        "name": "リデンプション",
-        "description": "推奨コア"
-      }
-    ],
+    "starter": [],
+    "boots": [],
+    "core": [],
     "situational": []
   },
   "runes": {
     "primary": {
-      "path": "不滅",
-      "keystone": "8465",
-      "keystone_name": "ガーディアン",
-      "choices": [
-        "シールドバッシュ",
-        "ボーンアーマー",
-        "気迫"
-      ]
+      "path": "",
+      "keystone": "",
+      "keystone_name": "",
+      "choices": []
     },
     "secondary": {
       "path": "",
-      "choices": [
-        "第六感",
-        "執拗な賞金首狩り"
-      ]
+      "choices": []
     },
-    "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
-    ]
+    "shards": []
   },
-  "name": "レナータ・グラスク",
-  "slug": "renataglasc"
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。レーンでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
 }

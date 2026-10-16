@@ -72,6 +72,9 @@
       "image": "ZaahenR.png"
     }
   ],
+  "classes": [
+    "Fighter"
+  ],
   "summoner_spells": [
     "フラッシュ",
     "イグナイト"
@@ -84,7 +87,7 @@
         "winrate": "56.11%",
         "winrate_num": 56.11,
         "winrate_display": "勝率 56.11%",
-        "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
+        "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -96,7 +99,7 @@
         "winrate": "55.86%",
         "winrate_num": 55.86,
         "winrate_display": "勝率 55.86%",
-        "reason": "スキルの噛み合わせと集団戦での影響力で勝り、有利にゲームを展開可能",
+        "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -108,7 +111,7 @@
         "winrate": "55.78%",
         "winrate_num": 55.78,
         "winrate_display": "勝率 55.78%",
-        "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
+        "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -122,7 +125,7 @@
         "winrate": "42.66%",
         "winrate_num": 42.66,
         "winrate_display": "勝率 42.66%",
-        "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
+        "reason": "ティーモの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -134,7 +137,7 @@
         "winrate": "42.86%",
         "winrate_num": 42.86,
         "winrate_display": "勝率 42.86%",
-        "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
+        "reason": "クインの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -146,7 +149,7 @@
         "winrate": "43.6%",
         "winrate_num": 43.6,
         "winrate_display": "勝率 43.6%",
-        "reason": "スキルの相性と主導権争いで後手に回りやすいため、無理な仕掛けを避け味方の援護を待つのが無難",
+        "reason": "ジャックスの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -228,6 +231,15 @@
     "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
     "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
   },
+  "damage_profile": {
+    "primary_type": "HYBRID",
+    "label": "ハイブリッド (AD/AP両型あり)",
+    "badge_text": "AD / AP",
+    "badge_class": "badge-hybrid",
+    "counter_defense": "相手の初手アイテムでARかMRを判断",
+    "has_dual_build": true,
+    "dual_build_desc": "AD/AP両方のアイテム適性を持つハイブリッドファイター。"
+  },
   "role_data": {
     "TOP": {
       "role": "TOP",
@@ -274,7 +286,7 @@
             "winrate": "56.11%",
             "winrate_num": 56.11,
             "winrate_display": "勝率 56.11%",
-            "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
+            "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -286,7 +298,7 @@
             "winrate": "55.86%",
             "winrate_num": 55.86,
             "winrate_display": "勝率 55.86%",
-            "reason": "スキルの噛み合わせと集団戦での影響力で勝り、有利にゲームを展開可能",
+            "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -298,7 +310,7 @@
             "winrate": "55.78%",
             "winrate_num": 55.78,
             "winrate_display": "勝率 55.78%",
-            "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
+            "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -312,7 +324,7 @@
             "winrate": "42.66%",
             "winrate_num": 42.66,
             "winrate_display": "勝率 42.66%",
-            "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
+            "reason": "ティーモの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -324,7 +336,7 @@
             "winrate": "42.86%",
             "winrate_num": 42.86,
             "winrate_display": "勝率 42.86%",
-            "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
+            "reason": "クインの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -336,7 +348,7 @@
             "winrate": "43.6%",
             "winrate_num": 43.6,
             "winrate_display": "勝率 43.6%",
-            "reason": "スキルの相性と主導権争いで後手に回りやすいため、無理な仕掛けを避け味方の援護を待つのが無難",
+            "reason": "ジャックスの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -510,7 +522,7 @@
   },
   "build_patterns": [
     {
-      "name": "[AD] 【標準・最高勝率】王道ファイター・サステイン型",
+      "name": "【標準・最高勝率】王道ファイター・サステイン型",
       "desc": "OP.GGで最も勝率の高い構成。レーン戦の殴り合いから集団戦の粘り強さまで最高峰。",
       "starter": [
         "ドラン ブレード",
@@ -543,7 +555,7 @@
       ]
     },
     {
-      "name": "[TANK] 【対タンク・耐久破壊】割合貫通＆防具削り型",
+      "name": "【対タンク・耐久破壊】割合貫通＆防具削り型",
       "desc": "相手前衛が硬いタンク主体の際に、ブラッククリーバーのアーマー破壊で削り勝つ構成。",
       "starter": [
         "ドラン ブレード",
@@ -576,7 +588,7 @@
       ]
     },
     {
-      "name": "[AP] 【対AP・魔法対策】高魔法耐性・ワンコン耐え型",
+      "name": "【対AP・魔法対策】高魔法耐性・ワンコン耐え型",
       "desc": "相手のAPバーストが高い場合に、マルモティウスの胃袋やケイニック・ルーコンで耐性を確保。",
       "starter": [
         "ドラン ブレード",
@@ -671,15 +683,6 @@
       ]
     }
   ],
-  "damage_profile": {
-    "primary_type": "HYBRID",
-    "label": "ハイブリッド (AD/AP両型あり)",
-    "badge_text": "AD / AP",
-    "badge_class": "badge-hybrid",
-    "counter_defense": "相手の初手アイテムでARかMRを判断",
-    "has_dual_build": true,
-    "dual_build_desc": "AD/AP両方のアイテム適性を持つハイブリッドファイター。"
-  },
   "matchup_matrix": {
     "Aatrox": {
       "winrate": null,
@@ -687,7 +690,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -896,7 +899,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -984,7 +987,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1050,7 +1053,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1149,7 +1152,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1193,7 +1196,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1204,7 +1207,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1248,7 +1251,7 @@
       "winrate_display": "勝率 43.6%",
       "advantage": "unfav",
       "advantage_label": "警戒・不利（勝率 43.6%）",
-      "reason": "スキルの相性と主導権争いで後手に回りやすいため、無理な仕掛けを避け味方の援護を待つのが無難",
+      "reason": "ジャックスの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -1381,7 +1384,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1579,7 +1582,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1665,9 +1668,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1678,7 +1681,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1722,7 +1725,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1755,7 +1758,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1832,7 +1835,7 @@
       "winrate_display": "勝率 42.86%",
       "advantage": "unfav",
       "advantage_label": "警戒・不利（勝率 42.86%）",
-      "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
+      "reason": "クインの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -1910,7 +1913,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1952,9 +1955,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2095,9 +2098,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2106,9 +2109,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2117,9 +2120,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2130,7 +2133,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2185,7 +2188,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2196,7 +2199,7 @@
       "winrate_display": "勝率 42.66%",
       "advantage": "unfav",
       "advantage_label": "警戒・不利（勝率 42.66%）",
-      "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
+      "reason": "ティーモの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2230,7 +2233,7 @@
       "winrate_display": "勝率 56.11%",
       "advantage": "fav",
       "advantage_label": "有利（勝率 56.11%）",
-      "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
+      "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2275,7 +2278,7 @@
       "winrate_display": "勝率 55.78%",
       "advantage": "fav",
       "advantage_label": "有利（勝率 55.78%）",
-      "reason": "高い持続DPSとサステインでタンクの防御を削り崩し、長期戦・消耗戦で圧倒できるため有利",
+      "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2364,7 +2367,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2386,7 +2389,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2397,7 +2400,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2408,7 +2411,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2452,7 +2455,7 @@
       "winrate_display": "勝率 55.86%",
       "advantage": "fav",
       "advantage_label": "有利（勝率 55.86%）",
-      "reason": "スキルの噛み合わせと集団戦での影響力で勝り、有利にゲームを展開可能",
+      "reason": "スキル構成とトレードの噛み合わせが良く、主導権を握ってレーン戦を有利に進められるため有利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2464,7 +2467,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2497,7 +2500,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2519,7 +2522,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2590,27 +2593,5 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
-  },
-  "overview": {
-    "summary": "沈まぬ者として名高いTOPチャンピオン。ダーキングレイヴと無慈悲なる裁きを軸としたプレイスタイルで、レーン戦から集団戦まで高い影響力を発揮する。",
-    "strengths": [
-      "ダーキングレイヴや絢爛たる進撃を起点とした強力なダメージトレード能力",
-      "無慈悲なる裁きによる高い集団戦インパクトとゲーム決定力",
-      "現在のメタ（Patch 16.19.1）において安定したピック適性"
-    ],
-    "weaknesses": [
-      "主要スキル（特に戦慄の再臨や絢爛たる進撃）のクールダウン中の隙が大きい",
-      "敵のハードCCや集中フォーカスを受けると脆さを露呈しやすい",
-      "レーンでのウェーブ管理やポジショニングのミスが命取りになりやすい"
-    ]
-  },
-  "sustain_info": {
-    "has_sustain": false,
-    "grievous_wounds_recommended": false,
-    "badge": "標準",
-    "reason": "特別な高回復スキルは持たないため、重傷アイテムの優先度は通常の相手に比べて低め。"
-  },
-  "classes": [
-    "Fighter"
-  ]
+  }
 }

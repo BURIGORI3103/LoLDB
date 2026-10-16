@@ -72,6 +72,10 @@
       "image": "HeimerdingerR.png"
     }
   ],
+  "classes": [
+    "Mage",
+    "Support"
+  ],
   "summoner_spells": [
     "フラッシュ",
     "イグナイト"
@@ -79,36 +83,36 @@
   "matchups": {
     "favorable": [
       {
+        "champion_id": "Zaahen",
+        "name": "ザーヘン",
+        "winrate": "63.69%",
+        "winrate_num": 63.69,
+        "winrate_display": "勝率 63.69%",
+        "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、ザーヘンのCS獲得を阻害して主導権を握れるため有利",
+        "role": "TOP",
+        "patch": "16.20.1",
+        "source": "opgg_stats",
+        "is_estimated": false
+      },
+      {
         "champion_id": "TahmKench",
         "name": "タム・ケンチ",
-        "winrate": "63.46%",
-        "winrate_num": 63.46,
-        "winrate_display": "勝率 63.46%",
-        "reason": "長射程スキルと引き撃ちで相手の接近を拒絶し、安全圏から一方的に体力を削り切れるため有利",
+        "winrate": "62.73%",
+        "winrate_num": 62.73,
+        "winrate_display": "勝率 62.73%",
+        "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、タム・ケンチのCS獲得を阻害して主導権を握れるため有利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Rumble",
-        "name": "ランブル",
-        "winrate": "58.0%",
-        "winrate_num": 58.0,
-        "winrate_display": "勝率 58.0%",
-        "reason": "長射程スキルと引き撃ちで相手の接近を拒絶し、安全圏から一方的に体力を削り切れるため有利",
-        "role": "TOP",
-        "patch": "16.20.1",
-        "source": "opgg_stats",
-        "is_estimated": false
-      },
-      {
-        "champion_id": "Vayne",
-        "name": "ヴェイン",
-        "winrate": "57.5%",
-        "winrate_num": 57.5,
-        "winrate_display": "勝率 57.5%",
-        "reason": "CCによる拘束やハラスで相手キャリーのCSを制限し、レーンの主導権を握りやすいため有利",
+        "champion_id": "Sylas",
+        "name": "サイラス",
+        "winrate": "61.11%",
+        "winrate_num": 61.11,
+        "winrate_display": "勝率 61.11%",
+        "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、サイラスのCS獲得を阻害して主導権を握れるため有利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -117,24 +121,24 @@
     ],
     "unfavorable": [
       {
-        "champion_id": "MonkeyKing",
-        "name": "ウーコン",
-        "winrate": "40.3%",
-        "winrate_num": 40.3,
-        "winrate_display": "勝率 40.3%",
-        "reason": "相手の強引な突撃エンゲージや確定CCで捕まると即座にキルされる危険があるため距離を維持",
+        "champion_id": "Kayle",
+        "name": "ケイル",
+        "winrate": "38.57%",
+        "winrate_num": 38.57,
+        "winrate_display": "勝率 38.57%",
+        "reason": "ケイルの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Malzahar",
-        "name": "マルザハール",
-        "winrate": "40.43%",
-        "winrate_num": 40.43,
-        "winrate_display": "勝率 40.43%",
-        "reason": "スキルの相性と主導権争いで後手に回りやすいため、無理な仕掛けを避け味方の援護を待つのが無難",
+        "champion_id": "Gangplank",
+        "name": "ガングプランク",
+        "winrate": "39.77%",
+        "winrate_num": 39.77,
+        "winrate_display": "勝率 39.77%",
+        "reason": "ガングプランクの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -143,10 +147,10 @@
       {
         "champion_id": "MasterYi",
         "name": "マスター・イー",
-        "winrate": "41.94%",
-        "winrate_num": 41.94,
-        "winrate_display": "勝率 41.94%",
-        "reason": "相手のブリンク奇襲と瞬間バーストを受けきれず、一撃で落とされるリスクが高いため警戒",
+        "winrate": "42.42%",
+        "winrate_num": 42.42,
+        "winrate_display": "勝率 42.42%",
+        "reason": "マスター・イーの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
         "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
@@ -228,6 +232,15 @@
     "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
     "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
   },
+  "damage_profile": {
+    "primary_type": "AP",
+    "label": "魔法 (AP)",
+    "badge_text": "AP",
+    "badge_class": "badge-ap",
+    "counter_defense": "MR (魔法耐性) を積む",
+    "has_dual_build": false,
+    "dual_build_desc": ""
+  },
   "role_data": {
     "TOP": {
       "role": "TOP",
@@ -269,36 +282,36 @@
       "matchups": {
         "favorable": [
           {
+            "champion_id": "Zaahen",
+            "name": "ザーヘン",
+            "winrate": "63.69%",
+            "winrate_num": 63.69,
+            "winrate_display": "勝率 63.69%",
+            "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、ザーヘンのCS獲得を阻害して主導権を握れるため有利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
             "champion_id": "TahmKench",
             "name": "タム・ケンチ",
-            "winrate": "63.46%",
-            "winrate_num": 63.46,
-            "winrate_display": "勝率 63.46%",
-            "reason": "長射程スキルと引き撃ちで相手の接近を拒絶し、安全圏から一方的に体力を削り切れるため有利",
+            "winrate": "62.73%",
+            "winrate_num": 62.73,
+            "winrate_display": "勝率 62.73%",
+            "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、タム・ケンチのCS獲得を阻害して主導権を握れるため有利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
             "is_estimated": false
           },
           {
-            "champion_id": "Rumble",
-            "name": "ランブル",
-            "winrate": "58.0%",
-            "winrate_num": 58.0,
-            "winrate_display": "勝率 58.0%",
-            "reason": "長射程スキルと引き撃ちで相手の接近を拒絶し、安全圏から一方的に体力を削り切れるため有利",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "Vayne",
-            "name": "ヴェイン",
-            "winrate": "57.5%",
-            "winrate_num": 57.5,
-            "winrate_display": "勝率 57.5%",
-            "reason": "CCによる拘束やハラスで相手キャリーのCSを制限し、レーンの主導権を握りやすいため有利",
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "61.11%",
+            "winrate_num": 61.11,
+            "winrate_display": "勝率 61.11%",
+            "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、サイラスのCS獲得を阻害して主導権を握れるため有利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -307,24 +320,24 @@
         ],
         "unfavorable": [
           {
-            "champion_id": "MonkeyKing",
-            "name": "ウーコン",
-            "winrate": "40.3%",
-            "winrate_num": 40.3,
-            "winrate_display": "勝率 40.3%",
-            "reason": "相手の強引な突撃エンゲージや確定CCで捕まると即座にキルされる危険があるため距離を維持",
+            "champion_id": "Kayle",
+            "name": "ケイル",
+            "winrate": "38.57%",
+            "winrate_num": 38.57,
+            "winrate_display": "勝率 38.57%",
+            "reason": "ケイルの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
             "is_estimated": false
           },
           {
-            "champion_id": "Malzahar",
-            "name": "マルザハール",
-            "winrate": "40.43%",
-            "winrate_num": 40.43,
-            "winrate_display": "勝率 40.43%",
-            "reason": "スキルの相性と主導権争いで後手に回りやすいため、無理な仕掛けを避け味方の援護を待つのが無難",
+            "champion_id": "Gangplank",
+            "name": "ガングプランク",
+            "winrate": "39.77%",
+            "winrate_num": 39.77,
+            "winrate_display": "勝率 39.77%",
+            "reason": "ガングプランクの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -333,10 +346,10 @@
           {
             "champion_id": "MasterYi",
             "name": "マスター・イー",
-            "winrate": "41.94%",
-            "winrate_num": 41.94,
-            "winrate_display": "勝率 41.94%",
-            "reason": "相手のブリンク奇襲と瞬間バーストを受けきれず、一撃で落とされるリスクが高いため警戒",
+            "winrate": "42.42%",
+            "winrate_num": 42.42,
+            "winrate_display": "勝率 42.42%",
+            "reason": "マスター・イーの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
             "role": "TOP",
             "patch": "16.20.1",
             "source": "opgg_stats",
@@ -510,7 +523,7 @@
   },
   "build_patterns": [
     {
-      "name": "[AP] 【標準】APブルーザー・サステイン殴り合い型",
+      "name": "【標準】APブルーザー・サステイン殴り合い型",
       "desc": "リフトメーカーとライアンドリーで長期トレードと集団戦火力を両立するトップAP構成。",
       "starter": [
         "ドラン リング",
@@ -543,7 +556,7 @@
       ]
     },
     {
-      "name": "[AP] 【対タンク】割合ダメージ＆耐久削り型",
+      "name": "【対タンク】割合ダメージ＆耐久削り型",
       "desc": "硬い相手前衛に対して割合炎上と魔力貫通で確実に削り勝つ構成。",
       "starter": [
         "ドラン リング",
@@ -576,7 +589,7 @@
       ]
     },
     {
-      "name": "[AP] 【自衛・防衛重視】高耐久AP型",
+      "name": "【自衛・防衛重視】高耐久AP型",
       "desc": "相手のオールインを耐え、カウンターでキルを狙う安定重視ビルド。",
       "starter": [
         "ドラン リング",
@@ -671,15 +684,6 @@
       ]
     }
   ],
-  "damage_profile": {
-    "primary_type": "AP",
-    "label": "魔法 (AP)",
-    "badge_text": "AP",
-    "badge_class": "badge-ap",
-    "counter_defense": "MR (魔法耐性) を積む",
-    "has_dual_build": false,
-    "dual_build_desc": ""
-  },
   "matchup_matrix": {
     "Aatrox": {
       "winrate": null,
@@ -687,7 +691,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -896,7 +900,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -984,7 +988,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1050,7 +1054,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1089,15 +1093,16 @@
       "patch": "16.20.1"
     },
     "Gangplank": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "39.77%",
+      "winrate_num": 39.77,
+      "winrate_display": "勝率 39.77%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 39.77%）",
+      "reason": "ガングプランクの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Garen": {
       "winrate": null,
@@ -1149,7 +1154,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1193,7 +1198,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1204,7 +1209,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1364,15 +1369,16 @@
       "patch": "16.20.1"
     },
     "Kayle": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "38.57%",
+      "winrate_num": 38.57,
+      "winrate_display": "勝率 38.57%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 38.57%）",
+      "reason": "ケイルの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Kayn": {
       "winrate": null,
@@ -1380,7 +1386,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1551,16 +1557,15 @@
       "patch": "16.20.1"
     },
     "Malzahar": {
-      "winrate": "40.43%",
-      "winrate_num": 40.43,
-      "winrate_display": "勝率 40.43%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 40.43%）",
-      "reason": "スキルの相性と主導権争いで後手に回りやすいため、無理な仕掛けを避け味方の援護を待つのが無難",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Maokai": {
       "winrate": null,
@@ -1574,12 +1579,12 @@
       "patch": "16.20.1"
     },
     "MasterYi": {
-      "winrate": "41.94%",
-      "winrate_num": 41.94,
-      "winrate_display": "勝率 41.94%",
+      "winrate": "42.42%",
+      "winrate_num": 42.42,
+      "winrate_display": "勝率 42.42%",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 41.94%）",
-      "reason": "相手のブリンク奇襲と瞬間バーストを受けきれず、一撃で落とされるリスクが高いため警戒",
+      "advantage_label": "警戒・不利（勝率 42.42%）",
+      "reason": "マスター・イーの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -1619,16 +1624,15 @@
       "patch": "16.20.1"
     },
     "MonkeyKing": {
-      "winrate": "40.3%",
-      "winrate_num": 40.3,
-      "winrate_display": "勝率 40.3%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 40.3%）",
-      "reason": "相手の強引な突撃エンゲージや確定CCで捕まると即座にキルされる危険があるため距離を維持",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Mordekaiser": {
       "winrate": null,
@@ -1669,7 +1673,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1680,7 +1684,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1724,7 +1728,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1757,7 +1761,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1911,7 +1915,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1928,16 +1932,15 @@
       "patch": "16.20.1"
     },
     "Rumble": {
-      "winrate": "58.0%",
-      "winrate_num": 58.0,
-      "winrate_display": "勝率 58.0%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 58.0%）",
-      "reason": "長射程スキルと引き撃ちで相手の接近を拒絶し、安全圏から一方的に体力を削り切れるため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Ryze": {
       "winrate": null,
@@ -1956,7 +1959,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2099,7 +2102,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2110,7 +2113,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2121,21 +2124,22 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Sylas": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "61.11%",
+      "winrate_num": 61.11,
+      "winrate_display": "勝率 61.11%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 61.11%）",
+      "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、サイラスのCS獲得を阻害して主導権を握れるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Syndra": {
       "winrate": null,
@@ -2149,12 +2153,12 @@
       "patch": "16.20.1"
     },
     "TahmKench": {
-      "winrate": "63.46%",
-      "winrate_num": 63.46,
-      "winrate_display": "勝率 63.46%",
+      "winrate": "62.73%",
+      "winrate_num": 62.73,
+      "winrate_display": "勝率 62.73%",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 63.46%）",
-      "reason": "長射程スキルと引き撃ちで相手の接近を拒絶し、安全圏から一方的に体力を削り切れるため有利",
+      "advantage_label": "有利（勝率 62.73%）",
+      "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、タム・ケンチのCS獲得を阻害して主導権を握れるため有利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2188,7 +2192,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2232,7 +2236,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2304,16 +2308,15 @@
       "patch": "16.20.1"
     },
     "Vayne": {
-      "winrate": "57.5%",
-      "winrate_num": 57.5,
-      "winrate_display": "勝率 57.5%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 57.5%）",
-      "reason": "CCによる拘束やハラスで相手キャリーのCSを制限し、レーンの主導権を握りやすいため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Veigar": {
       "winrate": null,
@@ -2365,7 +2368,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2387,7 +2390,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2398,7 +2401,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2409,7 +2412,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2464,7 +2467,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2497,21 +2500,22 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Zaahen": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "63.69%",
+      "winrate_num": 63.69,
+      "winrate_display": "勝率 63.69%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 63.69%）",
+      "reason": "通常攻撃とスキルの射程差を活かしたアウトレンジハラスにより、ザーヘンのCS獲得を阻害して主導権を握れるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Zac": {
       "winrate": null,
@@ -2519,7 +2523,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "射程差を活かしたアウトレンジポークで安全にハラスできます",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2590,28 +2594,5 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
-  },
-  "overview": {
-    "summary": "誉れ高き発明王として名高いTOPチャンピオン。H-28G革新砲とアップグレード！！！を軸としたプレイスタイルで、レーン戦から集団戦まで高い影響力を発揮する。",
-    "strengths": [
-      "H-28G革新砲やCH-2超電磁グレネードを起点とした強力なダメージトレード能力",
-      "アップグレード！！！による高い集団戦インパクトとゲーム決定力",
-      "現在のメタ（Patch 16.19.1）において安定したピック適性"
-    ],
-    "weaknesses": [
-      "主要スキル（特にヘクステック小型ロケットやCH-2超電磁グレネード）のクールダウン中の隙が大きい",
-      "敵のハードCCや集中フォーカスを受けると脆さを露呈しやすい",
-      "レーンでのウェーブ管理やポジショニングのミスが命取りになりやすい"
-    ]
-  },
-  "sustain_info": {
-    "has_sustain": false,
-    "grievous_wounds_recommended": false,
-    "badge": "標準",
-    "reason": "特別な高回復スキルは持たないため、重傷アイテムの優先度は通常の相手に比べて低め。"
-  },
-  "classes": [
-    "Mage",
-    "Support"
-  ]
+  }
 }

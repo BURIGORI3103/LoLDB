@@ -1,4 +1,6 @@
 {
+  "name": "繧｢繝ｼ繧ｴ繝・ヨ",
+  "slug": "urgot",
   "roles": [
     "TOP"
   ],
@@ -9,36 +11,36 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Swain",
-        "name": "スウェイン",
-        "reason": "勝率 64.46%（統計的に有利）"
+        "champion_id": "Quinn",
+        "name": "クイン",
+        "reason": "勝率 64.86%（統計的に有利）"
+      },
+      {
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "reason": "勝率 61.46%（統計的に有利）"
       },
       {
         "champion_id": "Poppy",
         "name": "ポッピー",
-        "reason": "勝率 59.38%（統計的に有利）"
-      },
-      {
-        "champion_id": "MasterYi",
-        "name": "マスター・イー",
-        "reason": "勝率 59.3%（統計的に有利）"
+        "reason": "勝率 58.21%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 45.36%（統計的に不利）"
+      },
+      {
+        "champion_id": "Swain",
+        "name": "スウェイン",
+        "reason": "勝率 45.45%（統計的に不利）"
+      },
+      {
         "champion_id": "Sion",
         "name": "サイオン",
-        "reason": "勝率 44.6%（統計的に不利）"
-      },
-      {
-        "champion_id": "Lissandra",
-        "name": "リサンドラ",
-        "reason": "勝率 45.05%（統計的に不利）"
-      },
-      {
-        "champion_id": "Gwen",
-        "name": "グウェン",
-        "reason": "勝率 45.28%（統計的に不利）"
+        "reason": "勝率 45.51%（統計的に不利）"
       }
     ]
   },
@@ -111,6 +113,8 @@
       "Health Scaling"
     ]
   },
-  "name": "アーゴット",
-  "slug": "urgot"
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
 }

@@ -1,53 +1,55 @@
 {
+  "name": "繝繧､繧｢繝・",
+  "slug": "diana",
   "roles": [
-    "MID",
-    "JUG"
+    "JUG",
+    "MID"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "イグナイト"
+    "スマイト"
   ],
   "matchups": {
     "favorable": [
       {
+        "champion_id": "Locke",
+        "name": "ロック",
+        "reason": "勝率 59.01%（統計的に有利）"
+      },
+      {
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "reason": "勝率 58.99%（統計的に有利）"
+      },
+      {
         "champion_id": "Naafiri",
         "name": "ナフィーリ",
-        "reason": "勝率 62.72%（統計的に有利）"
-      },
-      {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 57.82%（統計的に有利）"
-      },
-      {
-        "champion_id": "Lucian",
-        "name": "ルシアン",
-        "reason": "勝率 56.9%（統計的に有利）"
+        "reason": "勝率 58.56%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Taliyah",
-        "name": "タリヤ",
-        "reason": "勝率 44.26%（統計的に不利）"
+        "champion_id": "XinZhao",
+        "name": "シン・ジャオ",
+        "reason": "勝率 43.34%（統計的に不利）"
       },
       {
-        "champion_id": "Yasuo",
-        "name": "ヤスオ",
-        "reason": "勝率 45.21%（統計的に不利）"
+        "champion_id": "Aatrox",
+        "name": "エイトロックス",
+        "reason": "勝率 44.62%（統計的に不利）"
       },
       {
-        "champion_id": "Garen",
-        "name": "ガレン",
-        "reason": "勝率 45.95%（統計的に不利）"
+        "champion_id": "Warwick",
+        "name": "ワーウィック",
+        "reason": "勝率 44.94%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
       {
-        "item_id": "1056",
-        "name": "ドラン リング"
+        "item_id": "1101",
+        "name": "スコーチクロウの幼体"
       },
       {
         "item_id": "2003",
@@ -61,22 +63,22 @@
         "condition": "推奨靴"
       },
       {
-        "item_id": "3111",
-        "name": "マーキュリー ブーツ",
+        "item_id": "3047",
+        "name": "プレート スチールキャップ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "4646",
-        "name": "ストームサージ",
+        "item_id": "2510",
+        "name": "黄昏と暁",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "4645",
-        "name": "シャドウフレイム",
+        "item_id": "4633",
+        "name": "リフトメーカー",
         "description": "推奨コア"
       },
       {
@@ -90,28 +92,30 @@
   },
   "runes": {
     "primary": {
-      "path": "覇道",
-      "keystone": "8112",
-      "keystone_name": "電撃",
+      "path": "栄華",
+      "keystone": "8010",
+      "keystone_name": "征服者",
       "choices": [
-        "サドンインパクト",
-        "グリスリー メメント",
-        "貪欲な賞金首狩り"
+        "凱旋",
+        "レジェンド: 迅速",
+        "最期の慈悲"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "シールドバッシュ",
-        "ボーンアーマー"
+        "魔法の靴",
+        "宇宙の英知"
       ]
     },
     "shards": [
-      "Adaptive Force",
+      "Attack Speed",
       "Adaptive Force",
       "Health Scaling"
     ]
   },
-  "name": "ダイアナ",
-  "slug": "diana"
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
 }

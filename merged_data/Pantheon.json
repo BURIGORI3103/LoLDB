@@ -5,8 +5,8 @@
   "title": "砕けぬ槍",
   "patch": "16.20.1",
   "roles": [
-    "SUP",
     "TOP",
+    "SUP",
     "MID",
     "JUG"
   ],
@@ -75,6 +75,10 @@
       "image": "PantheonR.png"
     }
   ],
+  "classes": [
+    "Fighter",
+    "Assassin"
+  ],
   "summoner_spells": [
     "フラッシュ",
     "イグナイト"
@@ -82,37 +86,37 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "winrate": "58.26%",
-        "winrate_num": 58.26,
-        "winrate_display": "勝率 58.26%",
-        "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-        "role": "SUP",
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "winrate": "60.47%",
+        "winrate_num": 60.47,
+        "winrate_display": "勝率 60.47%",
+        "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+        "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Teemo",
-        "name": "ティーモ",
-        "winrate": "57.0%",
-        "winrate_num": 57.0,
-        "winrate_display": "勝率 57.0%",
-        "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-        "role": "SUP",
+        "champion_id": "Ryze",
+        "name": "ライズ",
+        "winrate": "59.05%",
+        "winrate_num": 59.05,
+        "winrate_display": "勝率 59.05%",
+        "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+        "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Ashe",
-        "name": "アッシュ",
-        "winrate": "56.94%",
-        "winrate_num": 56.94,
-        "winrate_display": "勝率 56.94%",
-        "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-        "role": "SUP",
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "winrate": "58.43%",
+        "winrate_num": 58.43,
+        "winrate_display": "勝率 58.43%",
+        "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+        "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
@@ -120,37 +124,37 @@
     ],
     "unfavorable": [
       {
-        "champion_id": "Renata",
-        "name": "レナータ・グラスク",
-        "winrate": "42.78%",
-        "winrate_num": 42.78,
-        "winrate_display": "勝率 42.78%",
-        "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
-        "role": "SUP",
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "winrate": "44.12%",
+        "winrate_num": 44.12,
+        "winrate_display": "勝率 44.12%",
+        "reason": "マルファイトの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
+        "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Braum",
-        "name": "ブラウム",
-        "winrate": "43.08%",
-        "winrate_num": 43.08,
-        "winrate_display": "勝率 43.08%",
-        "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-        "role": "SUP",
+        "champion_id": "Anivia",
+        "name": "アニビア",
+        "winrate": "44.9%",
+        "winrate_num": 44.9,
+        "winrate_display": "勝率 44.9%",
+        "reason": "アニビアの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
+        "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
       },
       {
-        "champion_id": "Taric",
-        "name": "タリック",
-        "winrate": "43.21%",
-        "winrate_num": 43.21,
-        "winrate_display": "勝率 43.21%",
-        "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-        "role": "SUP",
+        "champion_id": "Yorick",
+        "name": "ヨリック",
+        "winrate": "45.42%",
+        "winrate_num": 45.42,
+        "winrate_display": "勝率 45.42%",
+        "reason": "ヨリックの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
+        "role": "TOP",
         "patch": "16.20.1",
         "source": "opgg_stats",
         "is_estimated": false
@@ -159,6 +163,10 @@
   },
   "build": {
     "starter": [
+      {
+        "item_id": "1055",
+        "name": "ドラン ブレード"
+      },
       {
         "item_id": "2003",
         "name": "体力ポーション"
@@ -171,28 +179,28 @@
         "condition": "推奨靴"
       },
       {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "3179",
-        "name": "アンブラル グレイブ",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6692",
         "name": "赤月の刃",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3071",
         "name": "ブラック クリーバー",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6333",
+        "name": "デス ダンス",
         "description": "推奨コア"
       }
     ],
@@ -201,19 +209,19 @@
   "runes": {
     "primary": {
       "path": "栄華",
-      "keystone": "8005",
-      "keystone_name": "プレスアタック",
+      "keystone": "8010",
+      "keystone_name": "征服者",
       "choices": [
-        "凱旋",
+        "冷静沈着",
         "レジェンド: ヘイスト",
-        "最期の慈悲"
+        "背水の陣"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "追い打ち",
-        "執拗な賞金首狩り"
+        "至高",
+        "追火"
       ]
     },
     "shards": [
@@ -223,11 +231,298 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-    "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-    "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+    "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+    "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+    "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+  },
+  "damage_profile": {
+    "primary_type": "AD",
+    "label": "物理 (AD)",
+    "badge_text": "AD",
+    "badge_class": "badge-ad",
+    "counter_defense": "AR (物理防御) を積む",
+    "has_dual_build": false,
+    "dual_build_desc": ""
   },
   "role_data": {
+    "TOP": {
+      "role": "TOP",
+      "spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "skill_order": "Q > E > W",
+      "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
+      "gameplay_notes": {
+        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "冷静沈着",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "至高",
+            "追火"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Vayne",
+            "name": "ヴェイン",
+            "winrate": "60.47%",
+            "winrate_num": 60.47,
+            "winrate_display": "勝率 60.47%",
+            "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
+            "champion_id": "Ryze",
+            "name": "ライズ",
+            "winrate": "59.05%",
+            "winrate_num": 59.05,
+            "winrate_display": "勝率 59.05%",
+            "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "58.43%",
+            "winrate_num": 58.43,
+            "winrate_display": "勝率 58.43%",
+            "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "44.12%",
+            "winrate_num": 44.12,
+            "winrate_display": "勝率 44.12%",
+            "reason": "マルファイトの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
+            "champion_id": "Anivia",
+            "name": "アニビア",
+            "winrate": "44.9%",
+            "winrate_num": 44.9,
+            "winrate_display": "勝率 44.9%",
+            "reason": "アニビアの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          },
+          {
+            "champion_id": "Yorick",
+            "name": "ヨリック",
+            "winrate": "45.42%",
+            "winrate_num": 45.42,
+            "winrate_display": "勝率 45.42%",
+            "reason": "ヨリックの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
+            "role": "TOP",
+            "patch": "16.20.1",
+            "source": "opgg_stats",
+            "is_estimated": false
+          }
+        ]
+      },
+      "build_patterns": [
+        {
+          "name": "【標準・最高勝率】王道ファイター・サステイン型",
+          "desc": "OP.GGで最も勝率の高い構成。レーン戦の殴り合いから集団戦の粘り強さまで最高峰。",
+          "starter": [
+            "ドラン ブレード",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "core": [
+            "赤月の刃",
+            "ブラック クリーバー",
+            "デス ダンス"
+          ],
+          "situational": [
+            "ステラックの篭手",
+            "マルモティウスの胃袋",
+            "ガーディアン エンジェル"
+          ],
+          "core_items": [
+            {
+              "name": "赤月の刃",
+              "item_id": "6692"
+            },
+            {
+              "name": "ブラック クリーバー",
+              "item_id": "3071"
+            },
+            {
+              "name": "デス ダンス",
+              "item_id": "6333"
+            }
+          ]
+        },
+        {
+          "name": "【対タンク・耐久破壊】割合貫通＆防具削り型",
+          "desc": "相手前衛が硬いタンク主体の際に、ブラッククリーバーのアーマー破壊で削り勝つ構成。",
+          "starter": [
+            "ドラン ブレード",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "core": [
+            "ブラック クリーバー",
+            "ショウジンの矛",
+            "ステラックの篭手"
+          ],
+          "situational": [
+            "ケミパンク チェーンソード",
+            "デス ダンス",
+            "超巨大ハイドラ"
+          ],
+          "core_items": [
+            {
+              "name": "ブラック クリーバー",
+              "item_id": "3071"
+            },
+            {
+              "name": "ショウジンの矛",
+              "item_id": "3161"
+            },
+            {
+              "name": "ステラックの篭手",
+              "item_id": "3053"
+            }
+          ]
+        },
+        {
+          "name": "【対AP・魔法対策】高魔法耐性・ワンコン耐え型",
+          "desc": "相手のAPバーストが高い場合に、マルモティウスの胃袋やケイニック・ルーコンで耐性を確保。",
+          "starter": [
+            "ドラン ブレード",
+            "体力ポーション"
+          ],
+          "boots": "マーキュリー ブーツ",
+          "core": [
+            "マルモティウスの胃袋",
+            "ケイニック ルーコン",
+            "スピリット ビサージュ"
+          ],
+          "situational": [
+            "サンダード スカイ",
+            "デス ダンス",
+            "ガーディアン エンジェル"
+          ],
+          "core_items": [
+            {
+              "name": "マルモティウスの胃袋",
+              "item_id": "3156"
+            },
+            {
+              "name": "ケイニック ルーコン",
+              "item_id": "1001"
+            },
+            {
+              "name": "スピリット ビサージュ",
+              "item_id": "3065"
+            }
+          ]
+        }
+      ],
+      "combos": [
+        {
+          "name": "基本ショートトレード",
+          "recipe": "Q ➔ AA ➔ E ➔ W (被ダメ軽減・離脱)",
+          "desc": "相手のラストヒットモーションに合わせてQで牽制し、AAを挟んでからEとWでダメージトレードを優位に終える基本形。"
+        },
+        {
+          "name": "オールイン・キルコンボ",
+          "recipe": "R ➔ Q ➔ E ➔ W ➔ 全力AA",
+          "desc": "アルティメット（R）で戦闘能力を最大化し、QとEで間合いを詰めて全スキルを順番に叩き込みキルを狙う。"
+        },
+        {
+          "name": "必殺 Flash 併用コンボ",
+          "recipe": "Q 詠唱中 ➔ Flash ➔ R ➔ E",
+          "desc": "Qの詠唱モーション中にFlashで距離を一瞬で詰め、相手の反応猶予を奪って確定で大ダメージやCCを決める。"
+        }
+      ],
+      "skill_matrix": {
+        "Q": [
+          1,
+          4,
+          5,
+          7,
+          9
+        ],
+        "W": [
+          3,
+          14,
+          15,
+          17,
+          18
+        ],
+        "E": [
+          2,
+          8,
+          10,
+          12,
+          13
+        ],
+        "R": [
+          6,
+          11,
+          16
+        ]
+      },
+      "spell_sets": [
+        {
+          "name": "第1採用セット（王道・最高採用率）",
+          "spells": [
+            "フラッシュ",
+            "テレポート"
+          ]
+        },
+        {
+          "name": "第2採用セット（攻撃的・対面別）",
+          "spells": [
+            "フラッシュ",
+            "イグナイト"
+          ]
+        }
+      ]
+    },
     "SUP": {
       "role": "SUP",
       "spells": [
@@ -243,103 +538,84 @@
       },
       "runes": {
         "primary": {
-          "path": "栄華",
-          "keystone": "8005",
-          "keystone_name": "プレスアタック",
+          "path": "覇道",
+          "keystone_name": "ヘイルブレード",
           "choices": [
-            "凱旋",
-            "レジェンド: ヘイスト",
-            "最期の慈悲"
-          ]
-        },
-        "secondary": {
-          "path": "",
-          "choices": [
-            "追い打ち",
+            "血の味わい",
+            "ゾンビワード",
             "執拗な賞金首狩り"
           ]
         },
+        "secondary": {
+          "path": "天啓",
+          "choices": [
+            "魔法の靴",
+            "ビスケットデリバリー"
+          ]
+        },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブ",
+          "体力"
         ]
       },
       "matchups": {
         "favorable": [
           {
-            "champion_id": "Mel",
-            "name": "メル",
-            "winrate": "58.26%",
-            "winrate_num": 58.26,
-            "winrate_display": "勝率 58.26%",
-            "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-            "role": "SUP",
-            "patch": "16.20.1",
+            "champion_id": "Nautilus",
+            "name": "ノーチラス",
+            "reason": "勝率 53.2% | 仕掛けのタイミングを読みやすく、反撃のポークやカウンターピールで主導権を掌握可能。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "SUP"
           },
           {
-            "champion_id": "Teemo",
-            "name": "ティーモ",
-            "winrate": "57.0%",
-            "winrate_num": 57.0,
-            "winrate_display": "勝率 57.0%",
-            "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-            "role": "SUP",
-            "patch": "16.20.1",
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "reason": "勝率 52.6% | ミニオンの遮蔽物を維持しつつハラスを徹底。Qを空振りさせた後のクールダウン中に大打撃を与える。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "SUP"
           },
           {
-            "champion_id": "Ashe",
-            "name": "アッシュ",
-            "winrate": "56.94%",
-            "winrate_num": 56.94,
-            "winrate_display": "勝率 56.94%",
-            "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-            "role": "SUP",
-            "patch": "16.20.1",
+            "champion_id": "Leona",
+            "name": "レオナ",
+            "reason": "勝率 52.1% | 突進に対して距離を保ち、不用意な飛び込みをフォーカスして返り討ちにできる。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "SUP"
           }
         ],
         "unfavorable": [
           {
-            "champion_id": "Renata",
-            "name": "レナータ・グラスク",
-            "winrate": "42.78%",
-            "winrate_num": 42.78,
-            "winrate_display": "勝率 42.78%",
-            "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
-            "role": "SUP",
-            "patch": "16.20.1",
+            "champion_id": "Lulu",
+            "name": "ルル",
+            "reason": "勝率 46.2% | ポリモーフによる行動不能とシールドで仕掛けを完全に無力化され、ペースを崩されやすい。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "SUP"
           },
           {
-            "champion_id": "Braum",
-            "name": "ブラウム",
-            "winrate": "43.08%",
-            "winrate_num": 43.08,
-            "winrate_display": "勝率 43.08%",
-            "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-            "role": "SUP",
-            "patch": "16.20.1",
+            "champion_id": "Janna",
+            "name": "ジャンナ",
+            "reason": "勝率 46.8% | 竜巻とRによる徹底したディスエンゲージで、接近やオールインを悉く弾かれる。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "SUP"
           },
           {
-            "champion_id": "Taric",
-            "name": "タリック",
-            "winrate": "43.21%",
-            "winrate_num": 43.21,
-            "winrate_display": "勝率 43.21%",
-            "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-            "role": "SUP",
-            "patch": "16.20.1",
+            "champion_id": "Pyke",
+            "name": "パイク",
+            "reason": "勝率 47.5% | ステルスからの急襲フックとRの確定キルが脅威。体力を高く維持し、視界外からの接近を警戒。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "SUP"
           }
         ]
       },
@@ -506,283 +782,6 @@
         }
       ]
     },
-    "TOP": {
-      "role": "TOP",
-      "spells": [
-        "フラッシュ",
-        "テレポート"
-      ],
-      "skill_order": "Q > E > W",
-      "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
-      "gameplay_notes": {
-        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
-        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
-        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
-      },
-      "runes": {
-        "primary": {
-          "path": "精密",
-          "keystone_name": "征服者",
-          "choices": [
-            "凱旋",
-            "迅速",
-            "背水の陣"
-          ]
-        },
-        "secondary": {
-          "path": "不撓",
-          "choices": [
-            "ボーンアーマー",
-            "超成長"
-          ]
-        },
-        "shards": [
-          "アダプティブ",
-          "アダプティブ",
-          "体力"
-        ]
-      },
-      "matchups": {
-        "favorable": [
-          {
-            "champion_id": "Sion",
-            "name": "サイオン",
-            "winrate": "54.1%",
-            "winrate_num": 54.1,
-            "winrate_display": "勝率 54.1%",
-            "reason": "相手のQ詠唱を妨害しつつ、割合ダメージやサステインでレーン戦を完封可能。",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "Garen",
-            "name": "ガレン",
-            "winrate": "53.2%",
-            "winrate_num": 53.2,
-            "winrate_display": "勝率 53.2%",
-            "reason": "パッシブ回復を阻害しつつ、接近に対してCCや引き撃ちで完封。",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "Malphite",
-            "name": "マルファイト",
-            "winrate": "52.5%",
-            "winrate_num": 52.5,
-            "winrate_display": "勝率 52.5%",
-            "reason": "序盤のシールドを定期的に削り、マナ切れを誘ってウェーブ主導権を奪取。",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          }
-        ],
-        "unfavorable": [
-          {
-            "champion_id": "Fiora",
-            "name": "フィオラ",
-            "winrate": "45.8%",
-            "winrate_num": 45.8,
-            "winrate_display": "勝率 45.8%",
-            "reason": "急所突きの確定ダメージとWのパリィで主力を弾かれやすく、1v1のサイドスプリットで不利。",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "Darius",
-            "name": "ダリウス",
-            "winrate": "46.4%",
-            "winrate_num": 46.4,
-            "winrate_display": "勝率 46.4%",
-            "reason": "出血スタックを5溜められると殴り負けるため、短期トレードを徹底し長時間の交戦を避ける。",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          },
-          {
-            "champion_id": "Jax",
-            "name": "ジャックス",
-            "winrate": "47.0%",
-            "winrate_num": 47.0,
-            "winrate_display": "勝率 47.0%",
-            "reason": "Eのカウンターストライクで通常攻撃を無効化され、スタンからのバーストで押し切られやすい。",
-            "role": "TOP",
-            "patch": "16.20.1",
-            "source": "opgg_stats",
-            "is_estimated": false
-          }
-        ]
-      },
-      "build_patterns": [
-        {
-          "name": "【標準・最高勝率】王道ファイター・サステイン型",
-          "desc": "OP.GGで最も勝率の高い構成。レーン戦の殴り合いから集団戦の粘り強さまで最高峰。",
-          "starter": [
-            "ドラン ブレード",
-            "体力ポーション"
-          ],
-          "boots": "プレート スチールキャップ",
-          "core": [
-            "赤月の刃",
-            "サンダード スカイ",
-            "デス ダンス"
-          ],
-          "situational": [
-            "ステラックの篭手",
-            "マルモティウスの胃袋",
-            "ガーディアン エンジェル"
-          ],
-          "core_items": [
-            {
-              "name": "赤月の刃",
-              "item_id": "6692"
-            },
-            {
-              "name": "サンダード スカイ",
-              "item_id": "6610"
-            },
-            {
-              "name": "デス ダンス",
-              "item_id": "6333"
-            }
-          ]
-        },
-        {
-          "name": "【対タンク・耐久破壊】割合貫通＆防具削り型",
-          "desc": "相手前衛が硬いタンク主体の際に、ブラッククリーバーのアーマー破壊で削り勝つ構成。",
-          "starter": [
-            "ドラン ブレード",
-            "体力ポーション"
-          ],
-          "boots": "プレート スチールキャップ",
-          "core": [
-            "ブラック クリーバー",
-            "ショウジンの矛",
-            "ステラックの篭手"
-          ],
-          "situational": [
-            "ケミパンク チェーンソード",
-            "デス ダンス",
-            "超巨大ハイドラ"
-          ],
-          "core_items": [
-            {
-              "name": "ブラック クリーバー",
-              "item_id": "3071"
-            },
-            {
-              "name": "ショウジンの矛",
-              "item_id": "3161"
-            },
-            {
-              "name": "ステラックの篭手",
-              "item_id": "3053"
-            }
-          ]
-        },
-        {
-          "name": "【対AP・魔法対策】高魔法耐性・ワンコン耐え型",
-          "desc": "相手のAPバーストが高い場合に、マルモティウスの胃袋やケイニック・ルーコンで耐性を確保。",
-          "starter": [
-            "ドラン ブレード",
-            "体力ポーション"
-          ],
-          "boots": "マーキュリー ブーツ",
-          "core": [
-            "マルモティウスの胃袋",
-            "ケイニック ルーコン",
-            "スピリット ビサージュ"
-          ],
-          "situational": [
-            "サンダード スカイ",
-            "デス ダンス",
-            "ガーディアン エンジェル"
-          ],
-          "core_items": [
-            {
-              "name": "マルモティウスの胃袋",
-              "item_id": "3156"
-            },
-            {
-              "name": "ケイニック ルーコン",
-              "item_id": "1001"
-            },
-            {
-              "name": "スピリット ビサージュ",
-              "item_id": "3065"
-            }
-          ]
-        }
-      ],
-      "combos": [
-        {
-          "name": "基本ショートトレード",
-          "recipe": "Q ➔ AA ➔ E ➔ W (被ダメ軽減・離脱)",
-          "desc": "相手のラストヒットモーションに合わせてQで牽制し、AAを挟んでからEとWでダメージトレードを優位に終える基本形。"
-        },
-        {
-          "name": "オールイン・キルコンボ",
-          "recipe": "R ➔ Q ➔ E ➔ W ➔ 全力AA",
-          "desc": "アルティメット（R）で戦闘能力を最大化し、QとEで間合いを詰めて全スキルを順番に叩き込みキルを狙う。"
-        },
-        {
-          "name": "必殺 Flash 併用コンボ",
-          "recipe": "Q 詠唱中 ➔ Flash ➔ R ➔ E",
-          "desc": "Qの詠唱モーション中にFlashで距離を一瞬で詰め、相手の反応猶予を奪って確定で大ダメージやCCを決める。"
-        }
-      ],
-      "skill_matrix": {
-        "Q": [
-          1,
-          4,
-          5,
-          7,
-          9
-        ],
-        "W": [
-          3,
-          14,
-          15,
-          17,
-          18
-        ],
-        "E": [
-          2,
-          8,
-          10,
-          12,
-          13
-        ],
-        "R": [
-          6,
-          11,
-          16
-        ]
-      },
-      "spell_sets": [
-        {
-          "name": "第1採用セット（王道・最高採用率）",
-          "spells": [
-            "フラッシュ",
-            "テレポート"
-          ]
-        },
-        {
-          "name": "第2採用セット（攻撃的・対面別）",
-          "spells": [
-            "フラッシュ",
-            "イグナイト"
-          ]
-        }
-      ]
-    },
     "MID": {
       "role": "MID",
       "spells": [
@@ -824,76 +823,58 @@
           {
             "champion_id": "Yasuo",
             "name": "ヤスオ",
-            "winrate": "53.4%",
-            "winrate_num": 53.4,
-            "winrate_display": "勝率 53.4%",
-            "reason": "シールドを剥がしてからの安定したハラスで有利。風殺の壁のCDを見逃さずスキルを叩き込む。",
-            "role": "MID",
-            "patch": "16.20.1",
+            "reason": "勝率 53.4% | シールドを剥がしてからの安定したハラスで有利。風殺の壁のCDを見逃さずスキルを叩き込む。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "MID"
           },
           {
             "champion_id": "Sylas",
             "name": "サイラス",
-            "winrate": "52.7%",
-            "winrate_num": 52.7,
-            "winrate_display": "勝率 52.7%",
-            "reason": "接近戦を避けてレンジから体力を削り、Eの突進を回避することで反撃の隙を与えない。",
-            "role": "MID",
-            "patch": "16.20.1",
+            "reason": "勝率 52.7% | 接近戦を避けてレンジから体力を削り、Eの突進を回避することで反撃の隙を与えない。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "MID"
           },
           {
             "champion_id": "Zed",
             "name": "ゼド",
-            "winrate": "52.1%",
-            "winrate_num": 52.1,
-            "winrate_display": "勝率 52.1%",
-            "reason": "Wの影を使った後の隙に反撃。ストップウォッチや防御アイテムでRのバーストを無効化。",
-            "role": "MID",
-            "patch": "16.20.1",
+            "reason": "勝率 52.1% | Wの影を使った後の隙に反撃。ストップウォッチや防御アイテムでRのバーストを無効化。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "MID"
           }
         ],
         "unfavorable": [
           {
             "champion_id": "Syndra",
             "name": "シンドラ",
-            "winrate": "46.3%",
-            "winrate_num": 46.3,
-            "winrate_display": "勝率 46.3%",
-            "reason": "長射程のQEスタンとRの確定バーストでキルラインに入りやすい。距離感を保つことが最重要。",
-            "role": "MID",
-            "patch": "16.20.1",
+            "reason": "勝率 46.3% | 長射程のQEスタンとRの確定バーストでキルラインに入りやすい。距離感を保つことが最重要。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "MID"
           },
           {
             "champion_id": "Orianna",
             "name": "オリアナ",
-            "winrate": "46.9%",
-            "winrate_num": 46.9,
-            "winrate_display": "勝率 46.9%",
-            "reason": "ボールの射程管理とショックウェーブの集団戦圧力に押され、レーン・集団戦ともに苦戦。",
-            "role": "MID",
-            "patch": "16.20.1",
+            "reason": "勝率 46.9% | ボールの射程管理とショックウェーブの集団戦圧力に押され、レーン・集団戦ともに苦戦。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "MID"
           },
           {
             "champion_id": "Hwei",
             "name": "フェイ",
-            "winrate": "47.6%",
-            "winrate_num": 47.6,
-            "winrate_display": "勝率 47.6%",
-            "reason": "多彩な長射程スキルで一方的に削られるため、強引な接近かジャングラーの介入が必要。",
-            "role": "MID",
-            "patch": "16.20.1",
+            "reason": "勝率 47.6% | 多彩な長射程スキルで一方的に削られるため、強引な接近かジャングラーの介入が必要。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "MID"
           }
         ]
       },
@@ -1101,76 +1082,58 @@
           {
             "champion_id": "Amumu",
             "name": "アムム",
-            "winrate": "53.8%",
-            "winrate_num": 53.8,
-            "winrate_display": "勝率 53.8%",
-            "reason": "序盤の1v1デュエルで圧倒。相手の初動ジャングルにプレッシャーをかけてファーム差を拡大可能。",
-            "role": "JUG",
-            "patch": "16.20.1",
+            "reason": "勝率 53.8% | 序盤の1v1デュエルで圧倒。相手の初動ジャングルにプレッシャーをかけてファーム差を拡大可能。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "JUG"
           },
           {
             "champion_id": "Zac",
             "name": "ザック",
-            "winrate": "52.9%",
-            "winrate_num": 52.9,
-            "winrate_display": "勝率 52.9%",
-            "reason": "相手の仕掛けに対するカウンターガンク性能で勝る。オブジェクト前の睨み合いで有利。",
-            "role": "JUG",
-            "patch": "16.20.1",
+            "reason": "勝率 52.9% | 相手の仕掛けに対するカウンターガンク性能で勝る。オブジェクト前の睨み合いで有利。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "JUG"
           },
           {
             "champion_id": "Sejuani",
             "name": "セジュアニ",
-            "winrate": "52.4%",
-            "winrate_num": 52.4,
-            "winrate_display": "勝率 52.4%",
-            "reason": "単体火力とガンク成功率で先行し、相手のフロントライン形成前に試合を畳みかけられる。",
-            "role": "JUG",
-            "patch": "16.20.1",
+            "reason": "勝率 52.4% | 単体火力とガンク成功率で先行し、相手のフロントライン形成前に試合を畳みかけられる。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "JUG"
           }
         ],
         "unfavorable": [
           {
             "champion_id": "LeeSin",
             "name": "リー・シン",
-            "winrate": "46.5%",
-            "winrate_num": 46.5,
-            "winrate_display": "勝率 46.5%",
-            "reason": "序盤の奇襲性と機動力で後れを取りやすい。視界を確保して不用意な遭遇戦を避ける必要あり。",
-            "role": "JUG",
-            "patch": "16.20.1",
+            "reason": "勝率 46.5% | 序盤の奇襲性と機動力で後れを取りやすい。視界を確保して不用意な遭遇戦を避ける必要あり。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "JUG"
           },
           {
             "champion_id": "Khazix",
             "name": "カ＝ジックス",
-            "winrate": "47.1%",
-            "winrate_num": 47.1,
-            "winrate_display": "勝率 47.1%",
-            "reason": "孤立ダメージによるワンコンボ暗殺に警戒。味方と同行して単独でジャングルに入らないことが重要。",
-            "role": "JUG",
-            "patch": "16.20.1",
+            "reason": "勝率 47.1% | 孤立ダメージによるワンコンボ暗殺に警戒。味方と同行して単独でジャングルに入らないことが重要。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "JUG"
           },
           {
             "champion_id": "Viego",
             "name": "ヴィエゴ",
-            "winrate": "47.8%",
-            "winrate_num": 47.8,
-            "winrate_display": "勝率 47.8%",
-            "reason": "集団戦でのリセットキル性能が高く、先に味方が落とされると一気に崩壊させられる。",
-            "role": "JUG",
-            "patch": "16.20.1",
+            "reason": "勝率 47.8% | 集団戦でのリセットキル性能が高く、先に味方が落とされると一気に崩壊させられる。",
+            "is_estimated": false,
             "source": "opgg_stats",
-            "is_estimated": false
+            "patch": "16.20.1",
+            "role": "JUG"
           }
         ]
       },
@@ -1340,106 +1303,106 @@
   },
   "build_patterns": [
     {
-      "name": "[AD] 【標準】視界支配＆キルプレッシャー型",
-      "desc": "ブラッドソングとアンブラルグレイブで敵のワードを瞬時に消滅させつつ、高火力でキルを狙う構成。",
+      "name": "【標準・最高勝率】王道ファイター・サステイン型",
+      "desc": "OP.GGで最も勝率の高い構成。レーン戦の殴り合いから集団戦の粘り強さまで最高峰。",
       "starter": [
-        "ワールド アトラス",
+        "ドラン ブレード",
         "体力ポーション"
       ],
-      "boots": "スイフトネス ブーツ",
+      "boots": "プレート スチールキャップ",
       "core": [
-        "ブラッドソング",
-        "アンブラル グレイブ",
-        "妖夢の霊剣"
+        "赤月の刃",
+        "ブラック クリーバー",
+        "デス ダンス"
       ],
       "situational": [
-        "ボルテイク サイクロソード",
-        "セリルダの怨恨",
+        "ステラックの篭手",
+        "マルモティウスの胃袋",
         "ガーディアン エンジェル"
       ],
       "core_items": [
         {
-          "name": "ブラッドソング",
-          "item_id": "3877"
+          "name": "赤月の刃",
+          "item_id": "6692"
         },
         {
-          "name": "アンブラル グレイブ",
-          "item_id": "3179"
+          "name": "ブラック クリーバー",
+          "item_id": "3071"
         },
         {
-          "name": "妖夢の霊剣",
-          "item_id": "3142"
+          "name": "デス ダンス",
+          "item_id": "6333"
         }
       ]
     },
     {
-      "name": "[AD] 【DPSサポート】マークスマン型",
-      "desc": "サポートでありながらADCに匹敵する後半火力を叩き出すスケール重視構成。",
+      "name": "【対タンク・耐久破壊】割合貫通＆防具削り型",
+      "desc": "相手前衛が硬いタンク主体の際に、ブラッククリーバーのアーマー破壊で削り勝つ構成。",
       "starter": [
-        "ワールド アトラス",
+        "ドラン ブレード",
         "体力ポーション"
       ],
-      "boots": "バーサーカー ブーツ",
+      "boots": "プレート スチールキャップ",
       "core": [
-        "ブラッドソング",
-        "ラピッド ファイアキャノン",
-        "インフィニティ エッジ"
+        "ブラック クリーバー",
+        "ショウジンの矛",
+        "ステラックの篭手"
       ],
       "situational": [
-        "モータル リマインダー",
-        "ドミニク リガード",
-        "ブラッドサースター"
-      ],
-      "core_items": [
-        {
-          "name": "ブラッドソング",
-          "item_id": "3877"
-        },
-        {
-          "name": "ラピッド ファイアキャノン",
-          "item_id": "3094"
-        },
-        {
-          "name": "インフィニティ エッジ",
-          "item_id": "3031"
-        }
-      ]
-    },
-    {
-      "name": "[AD] 【支援妨害】スロウ＆ユーティリティ型",
-      "desc": "敵の足止めとクールダウン短縮を最優先にし、スキル回転で味方を勝利に導く構成。",
-      "starter": [
-        "ワールド アトラス",
-        "体力ポーション"
-      ],
-      "boots": "アイオニア ブーツ",
-      "core": [
-        "至点のソリ",
-        "帝国の指令",
-        "ヘクスプレート"
-      ],
-      "situational": [
-        "アンブラル グレイブ",
         "ケミパンク チェーンソード",
-        "ナイト エッジ"
+        "デス ダンス",
+        "超巨大ハイドラ"
       ],
       "core_items": [
         {
-          "name": "至点のソリ",
-          "item_id": "3876"
+          "name": "ブラック クリーバー",
+          "item_id": "3071"
         },
         {
-          "name": "帝国の指令",
-          "item_id": "4005"
+          "name": "ショウジンの矛",
+          "item_id": "3161"
         },
         {
-          "name": "ヘクスプレート",
-          "item_id": "3073"
+          "name": "ステラックの篭手",
+          "item_id": "3053"
+        }
+      ]
+    },
+    {
+      "name": "【対AP・魔法対策】高魔法耐性・ワンコン耐え型",
+      "desc": "相手のAPバーストが高い場合に、マルモティウスの胃袋やケイニック・ルーコンで耐性を確保。",
+      "starter": [
+        "ドラン ブレード",
+        "体力ポーション"
+      ],
+      "boots": "マーキュリー ブーツ",
+      "core": [
+        "マルモティウスの胃袋",
+        "ケイニック ルーコン",
+        "スピリット ビサージュ"
+      ],
+      "situational": [
+        "サンダード スカイ",
+        "デス ダンス",
+        "ガーディアン エンジェル"
+      ],
+      "core_items": [
+        {
+          "name": "マルモティウスの胃袋",
+          "item_id": "3156"
+        },
+        {
+          "name": "ケイニック ルーコン",
+          "item_id": "1001"
+        },
+        {
+          "name": "スピリット ビサージュ",
+          "item_id": "3065"
         }
       ]
     }
   ],
-  "skill_order": "W > Q > E",
+  "skill_order": "Q > E > W",
   "combos": [
     {
       "name": "基本ショートトレード",
@@ -1459,25 +1422,25 @@
   ],
   "skill_matrix": {
     "Q": [
-      2,
-      8,
-      10,
-      12,
-      13
-    ],
-    "W": [
       1,
       4,
       5,
       7,
       9
     ],
-    "E": [
+    "W": [
       3,
       14,
       15,
       17,
       18
+    ],
+    "E": [
+      2,
+      8,
+      10,
+      12,
+      13
     ],
     "R": [
       6,
@@ -1490,26 +1453,17 @@
       "name": "第1採用セット（王道・最高採用率）",
       "spells": [
         "フラッシュ",
-        "イグナイト"
+        "テレポート"
       ]
     },
     {
       "name": "第2採用セット（攻撃的・対面別）",
       "spells": [
         "フラッシュ",
-        "イグゾースト"
+        "イグナイト"
       ]
     }
   ],
-  "damage_profile": {
-    "primary_type": "AD",
-    "label": "物理 (AD)",
-    "badge_text": "AD",
-    "badge_class": "badge-ad",
-    "counter_defense": "AR (物理防御) を積む",
-    "has_dual_build": false,
-    "dual_build_desc": ""
-  },
   "matchup_matrix": {
     "Aatrox": {
       "winrate": null,
@@ -1517,7 +1471,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1578,27 +1532,28 @@
       "patch": "16.20.1"
     },
     "Amumu": {
-      "winrate": "53.8%",
-      "winrate_num": 53.8,
-      "winrate_display": "勝率 53.8%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "有利",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 53.8%）",
-      "reason": "序盤の1v1デュエルで圧倒。相手の初動ジャングルにプレッシャーをかけてファーム差を拡大可能。",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 53.8% | 序盤の1v1デュエルで圧倒。相手の初動ジャングルにプレッシャーをかけてファーム差を拡大可能。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
       "role": "JUG"
     },
     "Anivia": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "44.9%",
+      "winrate_num": 44.9,
+      "winrate_display": "勝率 44.9%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 44.9%）",
+      "reason": "アニビアの長射程ポークにより不用意な被弾がかさみやすく、接近する前にヘルスを削られやすいため不利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Annie": {
       "winrate": null,
@@ -1623,16 +1578,15 @@
       "patch": "16.20.1"
     },
     "Ashe": {
-      "winrate": "56.94%",
-      "winrate_num": 56.94,
-      "winrate_display": "勝率 56.94%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 56.94%）",
-      "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "SUP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "AurelionSol": {
       "winrate": null,
@@ -1692,13 +1646,14 @@
     "Blitzcrank": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate_display": "有利",
+      "advantage": "fav",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 52.6% | ミニオンの遮蔽物を維持しつつハラスを徹底。Qを空振りさせた後のクールダウン中に大打撃を与える。",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "SUP"
     },
     "Brand": {
       "winrate": null,
@@ -1712,16 +1667,15 @@
       "patch": "16.20.1"
     },
     "Braum": {
-      "winrate": "43.08%",
-      "winrate_num": 43.08,
-      "winrate_display": "勝率 43.08%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 43.08%）",
-      "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "SUP"
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Briar": {
       "winrate": null,
@@ -1729,7 +1683,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1790,16 +1744,15 @@
       "patch": "16.20.1"
     },
     "Darius": {
-      "winrate": "46.4%",
-      "winrate_num": 46.4,
-      "winrate_display": "勝率 46.4%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 46.4%）",
-      "reason": "出血スタックを5溜められると殴り負けるため、短期トレードを徹底し長時間の交戦を避ける。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Diana": {
       "winrate": null,
@@ -1818,7 +1771,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -1884,22 +1837,21 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Fiora": {
-      "winrate": "45.8%",
-      "winrate_num": 45.8,
-      "winrate_display": "勝率 45.8%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 45.8%）",
-      "reason": "急所突きの確定ダメージとWのパリィで主力を弾かれやすく、1v1のサイドスプリットで不利。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Fizz": {
       "winrate": null,
@@ -1935,16 +1887,15 @@
       "patch": "16.20.1"
     },
     "Garen": {
-      "winrate": "53.2%",
-      "winrate_num": 53.2,
-      "winrate_display": "勝率 53.2%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 53.2%）",
-      "reason": "パッシブ回復を阻害しつつ、接近に対してCCや引き撃ちで完封。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Gnar": {
       "winrate": null,
@@ -1985,7 +1936,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2013,12 +1964,12 @@
       "patch": "16.20.1"
     },
     "Hwei": {
-      "winrate": "47.6%",
-      "winrate_num": 47.6,
-      "winrate_display": "勝率 47.6%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "不利",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 47.6%）",
-      "reason": "多彩な長射程スキルで一方的に削られるため、強引な接近かジャングラーの介入が必要。",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 47.6% | 多彩な長射程スキルで一方的に削られるため、強引な接近かジャングラーの介入が必要。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2030,7 +1981,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2041,7 +1992,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2060,13 +2011,14 @@
     "Janna": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate_display": "不利",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 46.8% | 竜巻とRによる徹底したディスエンゲージで、接近やオールインを悉く弾かれる。",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "SUP"
     },
     "JarvanIV": {
       "winrate": null,
@@ -2080,16 +2032,15 @@
       "patch": "16.20.1"
     },
     "Jax": {
-      "winrate": "47.0%",
-      "winrate_num": 47.0,
-      "winrate_display": "勝率 47.0%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 47.0%）",
-      "reason": "Eのカウンターストライクで通常攻撃を無効化され、スタンからのバーストで押し切られやすい。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Jayce": {
       "winrate": null,
@@ -2218,7 +2169,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2235,12 +2186,12 @@
       "patch": "16.20.1"
     },
     "Khazix": {
-      "winrate": "47.1%",
-      "winrate_num": 47.1,
-      "winrate_display": "勝率 47.1%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "不利",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 47.1%）",
-      "reason": "孤立ダメージによるワンコンボ暗殺に警戒。味方と同行して単独でジャングルに入らないことが重要。",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 47.1% | 孤立ダメージによるワンコンボ暗殺に警戒。味方と同行して単独でジャングルに入らないことが重要。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2291,12 +2242,12 @@
       "patch": "16.20.1"
     },
     "LeeSin": {
-      "winrate": "46.5%",
-      "winrate_num": 46.5,
-      "winrate_display": "勝率 46.5%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "不利",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 46.5%）",
-      "reason": "序盤の奇襲性と機動力で後れを取りやすい。視界を確保して不用意な遭遇戦を避ける必要あり。",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 46.5% | 序盤の奇襲性と機動力で後れを取りやすい。視界を確保して不用意な遭遇戦を避ける必要あり。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2305,13 +2256,14 @@
     "Leona": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate_display": "有利",
+      "advantage": "fav",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 52.1% | 突進に対して距離を保ち、不用意な飛び込みをフォーカスして返り討ちにできる。",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "SUP"
     },
     "Lillia": {
       "winrate": null,
@@ -2360,13 +2312,14 @@
     "Lulu": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate_display": "不利",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 46.2% | ポリモーフによる行動不能とシールドで仕掛けを完全に無力化され、ペースを崩されやすい。",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "SUP"
     },
     "Lux": {
       "winrate": null,
@@ -2380,27 +2333,28 @@
       "patch": "16.20.1"
     },
     "Malphite": {
-      "winrate": "52.5%",
-      "winrate_num": 52.5,
-      "winrate_display": "勝率 52.5%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 52.5%）",
-      "reason": "序盤のシールドを定期的に削り、マナ切れを誘ってウェーブ主導権を奪取。",
+      "winrate": "44.12%",
+      "winrate_num": 44.12,
+      "winrate_display": "勝率 44.12%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 44.12%）",
+      "reason": "マルファイトの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
       "role": "TOP"
     },
     "Malzahar": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "58.43%",
+      "winrate_num": 58.43,
+      "winrate_display": "勝率 58.43%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 58.43%）",
+      "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Maokai": {
       "winrate": null,
@@ -2419,22 +2373,21 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Mel": {
-      "winrate": "58.26%",
-      "winrate_num": 58.26,
-      "winrate_display": "勝率 58.26%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 58.26%）",
-      "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "SUP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Milio": {
       "winrate": null,
@@ -2506,9 +2459,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2519,7 +2472,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2527,13 +2480,14 @@
     "Nautilus": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate_display": "有利",
+      "advantage": "fav",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 53.2% | 仕掛けのタイミングを読みやすく、反撃のポークやカウンターピールで主導権を掌握可能。",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "SUP"
     },
     "Neeko": {
       "winrate": null,
@@ -2563,7 +2517,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2596,18 +2550,18 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Orianna": {
-      "winrate": "46.9%",
-      "winrate_num": 46.9,
-      "winrate_display": "勝率 46.9%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "不利",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 46.9%）",
-      "reason": "ボールの射程管理とショックウェーブの集団戦圧力に押され、レーン・集団戦ともに苦戦。",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 46.9% | ボールの射程管理とショックウェーブの集団戦圧力に押され、レーン・集団戦ともに苦戦。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2649,13 +2603,14 @@
     "Pyke": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate_display": "不利",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 47.5% | ステルスからの急襲フックとRの確定キルが脅威。体力を高く維持し、視界外からの接近を警戒。",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "SUP"
     },
     "Qiyana": {
       "winrate": null,
@@ -2724,16 +2679,15 @@
       "patch": "16.20.1"
     },
     "Renata": {
-      "winrate": "42.78%",
-      "winrate_num": 42.78,
-      "winrate_display": "勝率 42.78%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 42.78%）",
-      "reason": "相手の長射程ハラスと引き撃ち（カイト）で削られやすく、接近手段が限られるため序盤は土下座警戒",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "SUP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Renekton": {
       "winrate": null,
@@ -2752,7 +2706,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2780,6 +2734,18 @@
       "patch": "16.20.1"
     },
     "Ryze": {
+      "winrate": "59.05%",
+      "winrate_num": 59.05,
+      "winrate_display": "勝率 59.05%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 59.05%）",
+      "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
+    },
+    "Samira": {
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
@@ -2790,24 +2756,13 @@
       "is_estimated": true,
       "patch": "16.20.1"
     },
-    "Samira": {
+    "Sejuani": {
       "winrate": null,
       "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
-    },
-    "Sejuani": {
-      "winrate": "52.4%",
-      "winrate_num": 52.4,
-      "winrate_display": "勝率 52.4%",
+      "winrate_display": "有利",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 52.4%）",
-      "reason": "単体火力とガンク成功率で先行し、相手のフロントライン形成前に試合を畳みかけられる。",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 52.4% | 単体火力とガンク成功率で先行し、相手のフロントライン形成前に試合を畳みかけられる。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -2891,16 +2846,15 @@
       "patch": "16.20.1"
     },
     "Sion": {
-      "winrate": "54.1%",
-      "winrate_num": 54.1,
-      "winrate_display": "勝率 54.1%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 54.1%）",
-      "reason": "相手のQ詠唱を妨害しつつ、割合ダメージやサステインでレーン戦を完封可能。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "TOP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "unfav",
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Sivir": {
       "winrate": null,
@@ -2939,9 +2893,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2950,9 +2904,9 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -2961,32 +2915,32 @@
       "winrate": null,
       "winrate_num": null,
       "winrate_display": null,
-      "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Sylas": {
-      "winrate": "52.7%",
-      "winrate_num": 52.7,
-      "winrate_display": "勝率 52.7%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "有利",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 52.7%）",
-      "reason": "接近戦を避けてレンジから体力を削り、Eの突進を回避することで反撃の隙を与えない。",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 52.7% | 接近戦を避けてレンジから体力を削り、Eの突進を回避することで反撃の隙を与えない。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
       "role": "MID"
     },
     "Syndra": {
-      "winrate": "46.3%",
-      "winrate_num": 46.3,
-      "winrate_display": "勝率 46.3%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "不利",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 46.3%）",
-      "reason": "長射程のQEスタンとRの確定バーストでキルラインに入りやすい。距離感を保つことが最重要。",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 46.3% | 長射程のQEスタンとRの確定バーストでキルラインに入りやすい。距離感を保つことが最重要。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -3026,28 +2980,26 @@
       "patch": "16.20.1"
     },
     "Taric": {
-      "winrate": "43.21%",
-      "winrate_num": 43.21,
-      "winrate_display": "勝率 43.21%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 43.21%）",
-      "reason": "相手のガンク合わせや頑丈なシールドで決定打を欠き、カウンターを受けやすいため注意",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "SUP"
+      "advantage_label": "推定警戒・不利",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Teemo": {
-      "winrate": "57.0%",
-      "winrate_num": 57.0,
-      "winrate_display": "勝率 57.0%",
-      "advantage": "fav",
-      "advantage_label": "有利（勝率 57.0%）",
-      "reason": "相手の低い基礎耐久力を突き、瞬時の急接近から即死級バーストコンボで圧倒できるため有利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "patch": "16.20.1",
-      "role": "SUP"
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": null,
+      "advantage": "even",
+      "advantage_label": "推定五分",
+      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
+      "source": "synergy_estimate",
+      "is_estimated": true,
+      "patch": "16.20.1"
     },
     "Thresh": {
       "winrate": null,
@@ -3077,7 +3029,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -3149,15 +3101,16 @@
       "patch": "16.20.1"
     },
     "Vayne": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
-      "advantage": "even",
-      "advantage_label": "推定五分",
-      "reason": "相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "winrate": "60.47%",
+      "winrate_num": 60.47,
+      "winrate_display": "勝率 60.47%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 60.47%）",
+      "reason": "ブリンクや間合いを詰めるスキルで距離を一気に詰め、近接インファイトの瞬間火力で圧倒できるため有利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Veigar": {
       "winrate": null,
@@ -3204,12 +3157,12 @@
       "patch": "16.20.1"
     },
     "Viego": {
-      "winrate": "47.8%",
-      "winrate_num": 47.8,
-      "winrate_display": "勝率 47.8%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "不利",
       "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 47.8%）",
-      "reason": "集団戦でのリセットキル性能が高く、先に味方が落とされると一気に崩壊させられる。",
+      "advantage_label": "警戒・不利（実測統計）",
+      "reason": "勝率 47.8% | 集団戦でのリセットキル性能が高く、先に味方が落とされると一気に崩壊させられる。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -3232,7 +3185,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -3243,7 +3196,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -3254,7 +3207,7 @@
       "winrate_display": null,
       "advantage": "unfav",
       "advantage_label": "推定警戒・不利",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です ＆ 相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
+      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -3293,12 +3246,12 @@
       "patch": "16.20.1"
     },
     "Yasuo": {
-      "winrate": "53.4%",
-      "winrate_num": 53.4,
-      "winrate_display": "勝率 53.4%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "有利",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 53.4%）",
-      "reason": "シールドを剥がしてからの安定したハラスで有利。風殺の壁のCDを見逃さずスキルを叩き込む。",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 53.4% | シールドを剥がしてからの安定したハラスで有利。風殺の壁のCDを見逃さずスキルを叩き込む。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -3310,21 +3263,22 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
     },
     "Yorick": {
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": null,
+      "winrate": "45.42%",
+      "winrate_num": 45.42,
+      "winrate_display": "勝率 45.42%",
       "advantage": "unfav",
-      "advantage_label": "推定警戒・不利",
-      "reason": "相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です",
-      "source": "synergy_estimate",
-      "is_estimated": true,
-      "patch": "16.20.1"
+      "advantage_label": "警戒・不利（勝率 45.42%）",
+      "reason": "ヨリックの高い防御力と耐久をバーストで削りきれず、反撃のCC拘束で仕留められやすいため不利",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "patch": "16.20.1",
+      "role": "TOP"
     },
     "Yunara": {
       "winrate": null,
@@ -3343,7 +3297,7 @@
       "winrate_display": null,
       "advantage": "even",
       "advantage_label": "推定五分",
-      "reason": "相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です",
+      "reason": "明確な相性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。",
       "source": "synergy_estimate",
       "is_estimated": true,
       "patch": "16.20.1"
@@ -3360,24 +3314,24 @@
       "patch": "16.20.1"
     },
     "Zac": {
-      "winrate": "52.9%",
-      "winrate_num": 52.9,
-      "winrate_display": "勝率 52.9%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "有利",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 52.9%）",
-      "reason": "相手の仕掛けに対するカウンターガンク性能で勝る。オブジェクト前の睨み合いで有利。",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 52.9% | 相手の仕掛けに対するカウンターガンク性能で勝る。オブジェクト前の睨み合いで有利。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
       "role": "JUG"
     },
     "Zed": {
-      "winrate": "52.1%",
-      "winrate_num": 52.1,
-      "winrate_display": "勝率 52.1%",
+      "winrate": null,
+      "winrate_num": null,
+      "winrate_display": "有利",
       "advantage": "fav",
-      "advantage_label": "有利（勝率 52.1%）",
-      "reason": "Wの影を使った後の隙に反撃。ストップウォッチや防御アイテムでRのバーストを無効化。",
+      "advantage_label": "有利（実測統計）",
+      "reason": "勝率 52.1% | Wの影を使った後の隙に反撃。ストップウォッチや防御アイテムでRのバーストを無効化。",
       "source": "opgg_stats",
       "is_estimated": false,
       "patch": "16.20.1",
@@ -3438,28 +3392,5 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
-  },
-  "overview": {
-    "summary": "砕けぬ槍として名高いSUP/TOP/MID/JUGチャンピオン。彗星の槍と偉大なる星路を軸としたプレイスタイルで、レーン戦から集団戦まで高い影響力を発揮する。",
-    "strengths": [
-      "彗星の槍やイージスの猛攻を起点とした強力なダメージトレード能力",
-      "偉大なる星路による高い集団戦インパクトとゲーム決定力",
-      "現在のメタ（Patch 16.19.1）において安定したピック適性"
-    ],
-    "weaknesses": [
-      "主要スキル（特に跳撃の盾やイージスの猛攻）のクールダウン中の隙が大きい",
-      "敵のハードCCや集中フォーカスを受けると脆さを露呈しやすい",
-      "レーンでのウェーブ管理やポジショニングのミスが命取りになりやすい"
-    ]
-  },
-  "sustain_info": {
-    "has_sustain": false,
-    "grievous_wounds_recommended": false,
-    "badge": "標準",
-    "reason": "特別な高回復スキルは持たないため、重傷アイテムの優先度は通常の相手に比べて低め。"
-  },
-  "classes": [
-    "Fighter",
-    "Assassin"
-  ]
+  }
 }

@@ -1,54 +1,57 @@
 {
+  "name": "繧ｵ繧､繝ｩ繧ｹ",
+  "slug": "sylas",
   "roles": [
-    "JUG",
     "MID",
-    "SUP"
+    "JUG",
+    "SUP",
+    "TOP"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "スマイト"
+    "イグナイト"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Locke",
-        "name": "ロック",
-        "reason": "勝率 59.58%（統計的に有利）"
+        "champion_id": "Lucian",
+        "name": "ルシアン",
+        "reason": "勝率 59.79%（統計的に有利）"
       },
       {
         "champion_id": "Malphite",
         "name": "マルファイト",
-        "reason": "勝率 59.33%（統計的に有利）"
+        "reason": "勝率 56.33%（統計的に有利）"
       },
       {
-        "champion_id": "Shyvana",
-        "name": "シヴァーナ",
-        "reason": "勝率 57.41%（統計的に有利）"
+        "champion_id": "Brand",
+        "name": "ブランド",
+        "reason": "勝率 54.22%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Taliyah",
-        "name": "タリヤ",
-        "reason": "勝率 43.41%（統計的に不利）"
-      },
-      {
         "champion_id": "Gwen",
         "name": "グウェン",
-        "reason": "勝率 44.64%（統計的に不利）"
+        "reason": "勝率 35.92%（統計的に不利）"
       },
       {
-        "champion_id": "Shaco",
-        "name": "シャコ",
-        "reason": "勝率 46.18%（統計的に不利）"
+        "champion_id": "Vex",
+        "name": "ヴェックス",
+        "reason": "勝率 42.69%（統計的に不利）"
+      },
+      {
+        "champion_id": "KogMaw",
+        "name": "コグ＝マウ",
+        "reason": "勝率 43.39%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
       {
-        "item_id": "1101",
-        "name": "スコーチクロウの幼体"
+        "item_id": "1056",
+        "name": "ドラン リング"
       },
       {
         "item_id": "2003",
@@ -95,7 +98,7 @@
       "keystone": "8010",
       "keystone_name": "征服者",
       "choices": [
-        "凱旋",
+        "冷静沈着",
         "レジェンド: ヘイスト",
         "背水の陣"
       ]
@@ -103,8 +106,8 @@
     "secondary": {
       "path": "",
       "choices": [
-        "魔法の靴",
-        "宇宙の英知"
+        "息継ぎ",
+        "気迫"
       ]
     },
     "shards": [
@@ -113,6 +116,8 @@
       "Health Scaling"
     ]
   },
-  "name": "サイラス",
-  "slug": "sylas"
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
 }

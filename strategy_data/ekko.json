@@ -1,53 +1,55 @@
 {
+  "name": "繧ｨ繧ｳ繝ｼ",
+  "slug": "ekko",
   "roles": [
-    "JUG",
-    "MID"
+    "MID",
+    "JUG"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "スマイト"
+    "イグナイト"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Karthus",
-        "name": "カーサス",
-        "reason": "勝率 57.73%（統計的に有利）"
+        "champion_id": "Orianna",
+        "name": "オリアナ",
+        "reason": "勝率 59.2%（統計的に有利）"
       },
       {
-        "champion_id": "Volibear",
-        "name": "ボリベア",
-        "reason": "勝率 57.3%（統計的に有利）"
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "reason": "勝率 58.78%（統計的に有利）"
       },
       {
-        "champion_id": "Locke",
-        "name": "ロック",
-        "reason": "勝率 56.83%（統計的に有利）"
+        "champion_id": "Azir",
+        "name": "アジール",
+        "reason": "勝率 58.38%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Rammus",
-        "name": "ラムス",
-        "reason": "勝率 44.47%（統計的に不利）"
+        "champion_id": "Gragas",
+        "name": "グラガス",
+        "reason": "勝率 42.51%（統計的に不利）"
       },
       {
-        "champion_id": "Kindred",
-        "name": "キンドレッド",
-        "reason": "勝率 46.98%（統計的に不利）"
+        "champion_id": "Kayle",
+        "name": "ケイル",
+        "reason": "勝率 48.04%（統計的に不利）"
       },
       {
-        "champion_id": "Ambessa",
-        "name": "アンベッサ",
-        "reason": "勝率 47.56%（統計的に不利）"
+        "champion_id": "Lissandra",
+        "name": "リサンドラ",
+        "reason": "勝率 48.58%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
       {
-        "item_id": "1101",
-        "name": "スコーチクロウの幼体"
+        "item_id": "1056",
+        "name": "ドラン リング"
       },
       {
         "item_id": "2003",
@@ -69,20 +71,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "2510",
-        "name": "黄昏と暁",
+        "item_id": "1082",
+        "name": "ダーク シール",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "4645",
-        "name": "シャドウフレイム",
+        "item_id": "4646",
+        "name": "ストームサージ",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "3089",
-        "name": "ラバドン デスキャップ",
+        "item_id": "2510",
+        "name": "黄昏と暁",
         "description": "推奨コア"
       }
     ],
@@ -91,27 +93,29 @@
   "runes": {
     "primary": {
       "path": "覇道",
-      "keystone": "8128",
-      "keystone_name": "魂の収穫",
+      "keystone": "9923",
+      "keystone_name": "ヘイルブレード",
       "choices": [
         "サドンインパクト",
         "グリスリー メメント",
-        "貪欲な賞金首狩り"
+        "執拗な賞金首狩り"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "魔法の靴",
-        "宇宙の英知"
+        "レジェンド: ヘイスト",
+        "切り崩し"
       ]
     },
     "shards": [
-      "Attack Speed",
       "Adaptive Force",
-      "Health Scaling"
+      "Adaptive Force",
+      "Health"
     ]
   },
-  "name": "エコー",
-  "slug": "ekko"
+  "gameplay_notes": {
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
+    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+  }
 }
