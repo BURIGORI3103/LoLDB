@@ -1852,7 +1852,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.5.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.5.2 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -2066,6 +2066,16 @@ def build():
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.5.2</span>
+              <span class="changelog-date">2026-10-20</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【サステイン絞り込み機能の修正＆公式スキル解析】全173体のスキル・パッシブ説明文から体力回復（吸血・リジェネ強化）・自己シールド能力を厳密解析しDBへ格納。サステイン絞り込みでヒット数0になっていた不具合を解消（全99体が正常ヒット）</li>
+              <li>【詳細モーダルへのサステイン情報反映】チャンピオン詳細画面に対象スキルの名称や回復・シールド特性、重傷推奨ガイダンスを正確に表示</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.5.0</span>
@@ -2678,8 +2688,15 @@ def build():
       let sustainBadgeHtml = "";
       let sustainReasonHtml = "";
       if (sustainInfo.has_sustain) {{
-        sustainBadgeHtml = `<span class="badge-sustain">🩸 サステイン所持 (重傷推奨)</span>`;
-        sustainReasonHtml = `<div class="sustain-reason-box">⚠️ <strong>【対面注意・重傷推奨】</strong> ${{sustainInfo.reason}}</div>`;
+        let badgeLabel = "🩸 サステイン所持 (重傷推奨)";
+        if (sustainInfo.type === "BOTH") {{
+          badgeLabel = "🩸 回復＆シールド所持";
+        }} else if (sustainInfo.type === "SHIELD") {{
+          badgeLabel = "🛡️ シールド所持";
+        }}
+        const susReason = sustainInfo.summary || sustainInfo.reason || "固有の体力回復またはシールド能力を持ちます。";
+        sustainBadgeHtml = `<span class="badge-sustain">${{badgeLabel}}</span>`;
+        sustainReasonHtml = `<div class="sustain-reason-box">⚠️ <strong>【対面注意・維持能力】</strong> ${{escapeHtml(susReason)}}</div>`;
       }}
 
       const skillOrder = roleSpecificData.skill_order || c.skill_order || "Q > E > W";
@@ -4192,8 +4209,8 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v20
-const CORE_CACHE = 'loldb-core-v20';
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v21
+const CORE_CACHE = 'loldb-core-v21';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
 
 const ASSETS_TO_CACHE = [

@@ -104,23 +104,27 @@ def main():
 
     # 1. 各スクリプトの順次実行
     from update_champion_damage_types import main as update_damage_types
-    print("\n[ステップ 1/6] ダメージ属性・防具ガイドを更新中...")
+    print("\n[ステップ 1/7] ダメージ属性・防具ガイドを更新中...")
     update_damage_types()
 
     from update_champion_attack_types import main as update_attack_types
-    print("\n[ステップ 2/6] AA通常攻撃タイプ（メレー/レンジ）を更新中...")
+    print("\n[ステップ 2/7] AA通常攻撃タイプ（メレー/レンジ）を更新中...")
     update_attack_types()
 
+    from update_champion_sustain import main as update_sustain
+    print("\n[ステップ 3/7] サステイン能力（体力回復・シールド）を解析・同期中...")
+    update_sustain()
+
     from sync_all_roles_complete import main as sync_roles
-    print("\n[ステップ 3/6] 全ロール別データを補完・構築中...")
+    print("\n[ステップ 4/7] 全ロール別データを補完・構築中...")
     sync_roles()
 
     from build_advanced_champion_data import main as sync_adv
-    print("\n[ステップ 4/6] 実践コンボ・スキル表・立ち回りメモを同期中...")
+    print("\n[ステップ 5/7] 実践コンボ・スキル表・立ち回りメモを同期中...")
     sync_adv()
 
     # 2. 全対面理由の補完＆正規スキーマ化
-    print("\n[ステップ 5/6] マッチアップの1行戦術理由を補完・正規化中...")
+    print("\n[ステップ 6/7] マッチアップの1行戦術理由を補完・正規化中...")
     with open(MERGED_JSON, "r", encoding="utf-8") as f:
         champions = json.load(f)
 
@@ -177,7 +181,7 @@ def main():
         json.dump(champions, f, ensure_ascii=False, indent=2)
 
     # 3. マッチアップマトリクス（全対面組み合わせ）の再計算
-    print("\n[ステップ 6/6] 全対面マトリクス（実測と推定の厳格分離）を再計算中...")
+    print("\n[ステップ 7/7] 全対面マトリクス（実測と推定の厳格分離）を再計算中...")
     from build_comprehensive_matchups import main as build_matrix
     build_matrix()
 
