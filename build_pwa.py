@@ -343,6 +343,153 @@ def build():
       color: #fff;
       border: 1px solid #34d399;
     }}
+    /* カード右上バッジコンテナ (ダメージ属性 & AAタイプ) */
+    .card-top-badges {{
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 3px;
+    }}
+    /* AA攻撃タイプバッジ (近接 / 遠隔 / 両用) */
+    .attack-type-badge {{
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 5px;
+      border-radius: 4px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      backdrop-filter: blur(2px);
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      color: #fff;
+    }}
+    .badge-melee {{
+      background: rgba(180, 83, 9, 0.92);
+      border: 1px solid #f59e0b;
+      color: #fef3c7;
+    }}
+    .badge-ranged {{
+      background: rgba(2, 132, 199, 0.92);
+      border: 1px solid #38bdf8;
+      color: #e0f2fe;
+    }}
+    .badge-att-hybrid {{
+      background: rgba(124, 58, 237, 0.92);
+      border: 1px solid #a855f7;
+      color: #f3e8ff;
+    }}
+
+    /* 多機能フィルターチップスバー (メイン一覧用 & シミュレーターピッカー用) */
+    .filter-chips-bar {{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+    }}
+    .filter-group {{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding-right: 8px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }}
+    .filter-group:last-of-type {{
+      border-right: none;
+    }}
+    .filter-label {{
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+      margin-right: 2px;
+      white-space: nowrap;
+    }}
+    .chip-btn {{
+      padding: 3px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }}
+    .chip-btn:hover {{
+      background: #334155;
+      color: #f8fafc;
+      border-color: #475569;
+    }}
+    .chip-btn.active {{
+      background: var(--primary);
+      color: #0b0f19;
+      border-color: var(--primary-light);
+      font-weight: 900;
+      box-shadow: 0 0 8px rgba(200, 155, 60, 0.4);
+    }}
+    .chip-btn.toggle-chip.active {{
+      background: #0284c7;
+      color: #fff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+    }}
+    .chip-reset-btn {{
+      margin-left: auto;
+      padding: 3px 8px;
+      font-size: 10.5px;
+      font-weight: 700;
+      background: transparent;
+      border: 1px dashed #475569;
+      color: #94a3b8;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }}
+    .chip-reset-btn:hover {{
+      border-color: #ef4444;
+      color: #f87171;
+    }}
+    
+    /* モーダル内AA表示 */
+    .modal-attack-type-wrap {{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }}
+    .modal-attack-type-desc {{
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }}
+    .sim-picker-mini-badge {{
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      font-size: 10px;
+      padding: 1px 3px;
+      border-radius: 3px;
+      background: rgba(0, 0, 0, 0.75);
+      line-height: 1;
+    }}
     /* 詳細モーダル用ダメージ属性・防具対策ガイド */
     .modal-damage-header {{
       display: flex;
@@ -1723,6 +1870,28 @@ def build():
           <button class="role-btn" data-role="ADC">ADC</button>
           <button class="role-btn" data-role="SUP">SUP</button>
         </div>
+        <!-- 複合絞り込みフィルターバー (AA近接/遠隔・AD/AP/タンク・特性) -->
+        <div class="filter-chips-bar" id="champFilterBar">
+          <div class="filter-group">
+            <span class="filter-label">通常攻撃:</span>
+            <button class="chip-btn active" data-filter="attack" data-val="ALL">すべて</button>
+            <button class="chip-btn" data-filter="attack" data-val="MELEE">🗡️ 近接</button>
+            <button class="chip-btn" data-filter="attack" data-val="RANGED">🏹 遠隔</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">属性:</span>
+            <button class="chip-btn active" data-filter="damage" data-val="ALL">すべて</button>
+            <button class="chip-btn" data-filter="damage" data-val="AD">⚔️ AD</button>
+            <button class="chip-btn" data-filter="damage" data-val="AP">🔮 AP</button>
+            <button class="chip-btn" data-filter="damage" data-val="TANK">🛡️ タンク</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">特性:</span>
+            <button class="chip-btn toggle-chip" data-filter="trait" data-val="SUSTAIN" title="高サステイン・回復持ち">🩸 サステイン</button>
+            <button class="chip-btn toggle-chip" data-filter="trait" data-val="DUAL" title="AD/AP両型対応ビルド">⚡ 両型あり</button>
+          </div>
+          <button class="chip-reset-btn" id="chipResetBtn" title="追加フィルターをリセット">リセット</button>
+        </div>
       </div>
     </div>
   </header>
@@ -2202,6 +2371,22 @@ def build():
             <button class="sim-role-btn" data-sim-role="ADC">ADC</button>
             <button class="sim-role-btn" data-sim-role="SUP">SUP</button>
           </div>
+          <!-- ピッカー用AAタイプ＆属性絞り込み -->
+          <div class="filter-chips-bar" style="margin-top: 6px; padding: 4px 8px;">
+            <div class="filter-group">
+              <span class="filter-label">AA:</span>
+              <button class="chip-btn sim-chip-btn active" data-sim-filter="attack" data-val="ALL">すべて</button>
+              <button class="chip-btn sim-chip-btn" data-sim-filter="attack" data-val="MELEE">🗡️ 近接</button>
+              <button class="chip-btn sim-chip-btn" data-sim-filter="attack" data-val="RANGED">🏹 遠隔</button>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label">属性:</span>
+              <button class="chip-btn sim-chip-btn active" data-sim-filter="damage" data-val="ALL">すべて</button>
+              <button class="chip-btn sim-chip-btn" data-sim-filter="damage" data-val="AD">⚔️ AD</button>
+              <button class="chip-btn sim-chip-btn" data-sim-filter="damage" data-val="AP">🔮 AP</button>
+              <button class="chip-btn sim-chip-btn" data-sim-filter="damage" data-val="TANK">🛡️ タンク</button>
+            </div>
+          </div>
         </div>
         <div class="sim-picker-grid" id="simPickerGrid"></div>
       </div>
@@ -2226,6 +2411,9 @@ def build():
 
     let currentRole = "ALL";
     let searchKeyword = "";
+    let currentAttackFilter = "ALL";
+    let currentDamageFilter = "ALL";
+    const currentTraitFilters = new Set();
 
     const gridEl = document.getElementById("champGrid");
     const countStatusEl = document.getElementById("countStatus");
@@ -2283,12 +2471,42 @@ def build():
       let matched = 0;
 
       Object.values(CHAMPIONS).forEach(champ => {{
-        // ロールフィルター
+        // 1. ロールフィルター
         if (currentRole !== "ALL") {{
           if (!champ.roles || !champ.roles.includes(currentRole)) return;
         }}
 
-        // 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
+        // 2. AA攻撃タイプフィルター (近接 / 遠隔)
+        if (currentAttackFilter !== "ALL") {{
+          const attType = champ.attack_type?.type || (champ.stats?.attackrange <= 250 ? "MELEE" : "RANGED");
+          if (currentAttackFilter === "MELEE") {{
+            if (attType !== "MELEE" && attType !== "HYBRID") return;
+          }} else if (currentAttackFilter === "RANGED") {{
+            if (attType !== "RANGED" && attType !== "HYBRID") return;
+          }}
+        }}
+
+        // 3. ダメージ属性フィルター (AD / AP / TANK)
+        if (currentDamageFilter !== "ALL") {{
+          const pType = champ.damage_profile?.primary_type || "AD";
+          if (currentDamageFilter === "AD") {{
+            if (pType !== "AD" && pType !== "HYBRID") return;
+          }} else if (currentDamageFilter === "AP") {{
+            if (pType !== "AP" && pType !== "HYBRID") return;
+          }} else if (currentDamageFilter === "TANK") {{
+            if (pType !== "TANK") return;
+          }}
+        }}
+
+        // 4. 特性フィルター (サステイン / 両型あり)
+        if (currentTraitFilters.has("SUSTAIN")) {{
+          if (!champ.sustain_info?.has_sustain) return;
+        }}
+        if (currentTraitFilters.has("DUAL")) {{
+          if (!champ.damage_profile?.has_dual_build) return;
+        }}
+
+        // 5. 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
         if (query) {{
           const isHit = matchSearch(champ.name, query) ||
                         matchSearch(champ.id, query) ||
@@ -2309,7 +2527,22 @@ def build():
         // ダメージ属性バッジ (AD / AP / HYBRID / TANK)
         const dp = champ.damage_profile || {{}};
         const dmgBadgeHtml = dp.badge_text ? 
-          `<div class="damage-badge-wrap"><span class="damage-badge ${{dp.badge_class || 'badge-ad'}}">${{dp.badge_text}}</span></div>` : "";
+          `<span class="damage-badge ${{dp.badge_class || 'badge-ad'}}">${{dp.badge_text}}</span>` : "";
+
+        // AA攻撃タイプバッジ (近接 / 遠隔 / 両用)
+        const att = champ.attack_type || {{}};
+        const attRange = champ.stats?.attackrange || 175;
+        let attClass = "badge-melee";
+        let attIcon = "🗡️";
+        let attBadge = att.badge || (attRange <= 250 ? "近接" : "遠隔");
+        if (att.type === "RANGED" || (!att.type && attRange > 250)) {{
+          attClass = "badge-ranged";
+          attIcon = "🏹";
+        }} else if (att.type === "HYBRID") {{
+          attClass = "badge-att-hybrid";
+          attIcon = "🔄";
+        }}
+        const attBadgeHtml = `<span class="attack-type-badge ${{attClass}}" title="${{escapeHtml(att.label || `${{attBadge}} [射程 ${{attRange}}]`)}}">${{attIcon}} ${{attBadge}}</span>`;
 
         // Data Dragon公式CDNまたはフォールバック
         const patch = champ.patch || "16.20.1";
@@ -2320,7 +2553,10 @@ def build():
             <img class="champ-card-img" src="${{imgUrl}}" alt="${{champ.name}}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="champ-card-img-placeholder" style="display:none;">${{champ.name.charAt(0)}}</div>
             <div class="role-badge-list">${{rolesHtml}}</div>
-            ${{dmgBadgeHtml}}
+            <div class="card-top-badges">
+              ${{dmgBadgeHtml}}
+              ${{attBadgeHtml}}
+            </div>
           </div>
           <div class="champ-info">
             <div class="champ-name">${{champ.name}}</div>
@@ -2372,6 +2608,27 @@ def build():
           </div>
         `;
       }}
+
+      // 通常攻撃 (AA) 射程タイプ (メレー / レンジ / 両用)
+      const att = c.attack_type || {{}};
+      const attRange = c.stats?.attackrange || 175;
+      let attBadgeClass = "badge-melee";
+      let attIcon = "🗡️";
+      let attBadge = att.badge || (attRange <= 250 ? "近接" : "遠隔");
+      if (att.type === "RANGED" || (!att.type && attRange > 250)) {{
+        attBadgeClass = "badge-ranged";
+        attIcon = "🏹";
+      }} else if (att.type === "HYBRID") {{
+        attBadgeClass = "badge-att-hybrid";
+        attIcon = "🔄";
+      }}
+      const attackTypeHeaderHtml = `
+        <div class="modal-attack-type-wrap">
+          <span class="modal-damage-title">🎯 通常攻撃 (AA):</span>
+          <span class="attack-type-badge ${{attBadgeClass}}">${{attIcon}} ${{escapeHtml(att.label || `${{attBadge}} [射程 ${{attRange}}]`)}}</span>
+          ${{att.desc ? `<span class="modal-attack-type-desc">${{escapeHtml(att.desc)}}</span>` : ""}}
+        </div>
+      `;
 
       // ダメージ属性 ＆ 両刀プロファイル
       const dp = c.damage_profile || {{}};
@@ -2709,6 +2966,9 @@ def build():
 
       modalBodyEl.innerHTML = `
         ${{roleTabsHtml}}
+
+        <!-- 通常攻撃 (AA) 射程タイプ -->
+        ${{attackTypeHeaderHtml}}
 
         <!-- ダメージ属性 ＆ 防具対策ガイド -->
         ${{damageBadgeHtml}}
@@ -3246,6 +3506,8 @@ def build():
     let simOppChampId = null;
     let simCurrentPickingTarget = null; // 'me' or 'opp'
     let simPickerRole = "ALL";
+    let simPickerAttack = "ALL";
+    let simPickerDamage = "ALL";
     let simPickerSearch = "";
 
     const simCardMe = document.getElementById("simCardMe");
@@ -3317,12 +3579,34 @@ def build():
       }});
 
       sortedChamps.forEach(champ => {{
-        // ロール絞り込み (濱田くんの重要指定！)
+        // 1. ロール絞り込み
         if (simPickerRole !== "ALL") {{
           if (!champ.roles || !champ.roles.includes(simPickerRole)) return;
         }}
 
-        // 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
+        // 2. AA攻撃タイプ絞り込み (近接 / 遠隔)
+        if (simPickerAttack !== "ALL") {{
+          const attType = champ.attack_type?.type || (champ.stats?.attackrange <= 250 ? "MELEE" : "RANGED");
+          if (simPickerAttack === "MELEE") {{
+            if (attType !== "MELEE" && attType !== "HYBRID") return;
+          }} else if (simPickerAttack === "RANGED") {{
+            if (attType !== "RANGED" && attType !== "HYBRID") return;
+          }}
+        }}
+
+        // 3. ダメージ属性絞り込み (AD / AP / TANK)
+        if (simPickerDamage !== "ALL") {{
+          const pType = champ.damage_profile?.primary_type || "AD";
+          if (simPickerDamage === "AD") {{
+            if (pType !== "AD" && pType !== "HYBRID") return;
+          }} else if (simPickerDamage === "AP") {{
+            if (pType !== "AP" && pType !== "HYBRID") return;
+          }} else if (simPickerDamage === "TANK") {{
+            if (pType !== "TANK") return;
+          }}
+        }}
+
+        // 4. 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
         if (q) {{
           const isHit = matchSearch(champ.name, q) || matchSearch(champ.id, q);
           if (!isHit) return;
@@ -3333,9 +3617,26 @@ def build():
         const patch = champ.patch || "16.20.1";
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
 
+        // AAタイプ＆属性ミニアイコン
+        const att = champ.attack_type || {{}};
+        const attRange = champ.stats?.attackrange || 175;
+        let attIcon = "🗡️";
+        if (att.type === "RANGED" || (!att.type && attRange > 250)) {{
+          attIcon = "🏹";
+        }} else if (att.type === "HYBRID") {{
+          attIcon = "🔄";
+        }}
+
+        const dp = champ.damage_profile || {{}};
+        const dpText = dp.badge_text || "";
+
         item.innerHTML = `
-          <img class="sim-picker-img" src="${{imgUrl}}" alt="${{champ.name}}" loading="lazy" onerror="this.src='icon.png';">
+          <div style="position:relative; width:48px; height:48px; margin:0 auto 4px;">
+            <img class="sim-picker-img" src="${{imgUrl}}" alt="${{champ.name}}" loading="lazy" onerror="this.src='icon.png';" style="margin:0;">
+            <span class="sim-picker-mini-badge" title="${{escapeHtml(att.label || '')}}">${{attIcon}}</span>
+          </div>
           <div class="sim-picker-name">${{champ.name}}</div>
+          ${{dpText ? `<div style="font-size:9px; color:var(--text-muted); line-height:1;">[${{dpText}}]</div>` : ""}}
         `;
         item.onclick = () => selectSimChamp(champ.id);
         simPickerGrid.appendChild(item);
@@ -3423,6 +3724,26 @@ def build():
         document.querySelectorAll(".sim-role-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         simPickerRole = btn.getAttribute("data-sim-role");
+        renderSimPickerGrid();
+      }});
+    }});
+
+    // ピッカー用AAタイプ＆属性絞り込みボタンイベント
+    document.querySelectorAll(".sim-chip-btn").forEach(btn => {{
+      btn.addEventListener("click", () => {{
+        const filterType = btn.getAttribute("data-sim-filter");
+        const val = btn.getAttribute("data-val");
+        const parentGroup = btn.closest(".filter-group");
+        if (parentGroup) {{
+          parentGroup.querySelectorAll(".sim-chip-btn").forEach(b => b.classList.remove("active"));
+        }}
+        btn.classList.add("active");
+
+        if (filterType === "attack") {{
+          simPickerAttack = val;
+        }} else if (filterType === "damage") {{
+          simPickerDamage = val;
+        }}
         renderSimPickerGrid();
       }});
     }});
@@ -3747,6 +4068,57 @@ def build():
         renderList();
       }});
     }});
+
+    // 複合フィルターチップス (AAタイプ / ダメージ属性 / 特性)
+    document.querySelectorAll("#champFilterBar .chip-btn").forEach(btn => {{
+      btn.addEventListener("click", () => {{
+        const filterType = btn.getAttribute("data-filter");
+        const val = btn.getAttribute("data-val");
+
+        if (btn.classList.contains("toggle-chip")) {{
+          // トグルボタン (複数選択可能)
+          if (btn.classList.contains("active")) {{
+            btn.classList.remove("active");
+            currentTraitFilters.delete(val);
+          }} else {{
+            btn.classList.add("active");
+            currentTraitFilters.add(val);
+          }}
+        }} else {{
+          // 単一選択ボタングループ
+          const parentGroup = btn.closest(".filter-group");
+          if (parentGroup) {{
+            parentGroup.querySelectorAll(".chip-btn").forEach(b => b.classList.remove("active"));
+          }}
+          btn.classList.add("active");
+
+          if (filterType === "attack") {{
+            currentAttackFilter = val;
+          }} else if (filterType === "damage") {{
+            currentDamageFilter = val;
+          }}
+        }}
+        renderList();
+      }});
+    }});
+
+    // フィルターリセットボタン
+    const chipResetBtn = document.getElementById("chipResetBtn");
+    if (chipResetBtn) {{
+      chipResetBtn.addEventListener("click", () => {{
+        currentAttackFilter = "ALL";
+        currentDamageFilter = "ALL";
+        currentTraitFilters.clear();
+        document.querySelectorAll("#champFilterBar .chip-btn").forEach(btn => {{
+          if (btn.getAttribute("data-val") === "ALL") {{
+            btn.classList.add("active");
+          }} else {{
+            btn.classList.remove("active");
+          }}
+        }});
+        renderList();
+      }});
+    }}
 
     // 初期レンダリング
     renderList();

@@ -1,7 +1,7 @@
 ---
 project: LoLDB
 status: active
-last_reviewed: 2026-10-13
+last_reviewed: 2026-10-20
 summary: LoL のチャンピオン・アイテム・対面情報を集約し、スマートフォンでも使えるオフライン対応 PWA を生成するプロジェクト。
 ---
 
@@ -15,7 +15,9 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 1. fetch_champions.py が Data Dragon から基礎データを取得します。
 2. process_url_list.py が docs/LoL_URL_list.md を参照し、攻略情報を収集します。
-3. merge_data.py / migrate_matchups.py / build_comprehensive_matchups.py が収集データを統合・正規化・補完します。
+3. merge_data.py / update_champion_damage_types.py / update_champion_attack_types.py / sync_all_roles_complete.py / build_advanced_champion_data.py / scratch/generate_matchup_reasons.py / build_comprehensive_matchups.py が収集データを統合・正規化・補完します。
+   - AA通常攻撃タイプは公式の `stats.attackrange` に基づき、近接（Melee: <=250）、遠隔（Ranged: >250）、および特殊可変形態（Jayce, Nidalee, Elise, Gnar, Kayle: HYBRID）を厳密に判定して保持。
+   - ダメージ属性（AD/AP/タンク/両型）およびサステイン特性を付与し、UI上の一覧・シミュレーター双方で複合絞り込み（AND条件）をサポート。
    - マッチアップは正規スキーマ（champion_id, name, winrate, winrate_display, reason, role, patch, source, is_estimated）で管理。
    - 実測データ（opgg_stats）と推定相性（synergy_estimate）を厳格に分離し、ハッシュ値による疑似勝率生成は廃止。
    - role_data とトップレベルの詳細理由を同期管理し、理由がない場合は定型文を乱発せず「理由データなし」と明記。

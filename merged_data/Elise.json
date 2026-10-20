@@ -519,7 +519,16 @@
             "ゴースト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "HYBRID",
+        "label": "遠隔/近接 (フォーム切替)",
+        "badge": "両用",
+        "base_range": 550,
+        "alt_range": 125,
+        "desc": "人間形態（遠隔 550）と蜘蛛形態（近接 125）を随時切り替えて戦闘可能。",
+        "range": 550
+      }
     },
     "SUP": {
       "role": "SUP",
@@ -778,7 +787,16 @@
             "イグゾースト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "HYBRID",
+        "label": "遠隔/近接 (フォーム切替)",
+        "badge": "両用",
+        "base_range": 550,
+        "alt_range": 125,
+        "desc": "人間形態（遠隔 550）と蜘蛛形態（近接 125）を随時切り替えて戦闘可能。",
+        "range": 550
+      }
     }
   },
   "build_patterns": [
@@ -2860,5 +2878,14 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
+  },
+  "attack_type": {
+    "type": "HYBRID",
+    "label": "遠隔/近接 (フォーム切替)",
+    "badge": "両用",
+    "base_range": 550,
+    "alt_range": 125,
+    "desc": "人間形態（遠隔 550）と蜘蛛形態（近接 125）を随時切り替えて戦闘可能。",
+    "range": 550
   }
 }

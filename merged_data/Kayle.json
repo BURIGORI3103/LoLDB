@@ -519,7 +519,16 @@
             "イグナイト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "HYBRID",
+        "label": "近接 ➔ 遠隔 (Lv6~進化)",
+        "badge": "可変",
+        "base_range": 175,
+        "alt_range": 525,
+        "desc": "序盤（Lv1〜5）は近接（175）だが、Lv6以降は遠隔（525 / Lv16で625）に進化。",
+        "range": 175
+      }
     },
     "MID": {
       "role": "MID",
@@ -778,7 +787,16 @@
             "イグナイト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "HYBRID",
+        "label": "近接 ➔ 遠隔 (Lv6~進化)",
+        "badge": "可変",
+        "base_range": 175,
+        "alt_range": 525,
+        "desc": "序盤（Lv1〜5）は近接（175）だが、Lv6以降は遠隔（525 / Lv16で625）に進化。",
+        "range": 175
+      }
     }
   },
   "build_patterns": [
@@ -2860,5 +2878,14 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
+  },
+  "attack_type": {
+    "type": "HYBRID",
+    "label": "近接 ➔ 遠隔 (Lv6~進化)",
+    "badge": "可変",
+    "base_range": 175,
+    "alt_range": 525,
+    "desc": "序盤（Lv1〜5）は近接（175）だが、Lv6以降は遠隔（525 / Lv16で625）に進化。",
+    "range": 175
   }
 }

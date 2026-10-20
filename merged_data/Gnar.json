@@ -518,7 +518,16 @@
             "イグナイト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "HYBRID",
+        "label": "遠隔/近接 (変身可変)",
+        "badge": "両用",
+        "base_range": 175,
+        "alt_range": 175,
+        "desc": "ミニナー形態（遠隔 175〜Lv比例400）とメガナー形態（近接 175）に変身。",
+        "range": 175
+      }
     }
   },
   "build_patterns": [
@@ -2594,5 +2603,14 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
+  },
+  "attack_type": {
+    "type": "HYBRID",
+    "label": "遠隔/近接 (変身可変)",
+    "badge": "両用",
+    "base_range": 175,
+    "alt_range": 175,
+    "desc": "ミニナー形態（遠隔 175〜Lv比例400）とメガナー形態（近接 175）に変身。",
+    "range": 175
   }
 }

@@ -519,7 +519,14 @@
             "テレポート"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "RANGED",
+        "label": "遠隔 (レンジ) [射程 525]",
+        "badge": "遠隔",
+        "range": 525,
+        "desc": "通常攻撃射程 525 の遠隔攻撃チャンピオンです。"
+      }
     },
     "SUP": {
       "role": "SUP",
@@ -778,7 +785,14 @@
             "イグゾースト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "RANGED",
+        "label": "遠隔 (レンジ) [射程 525]",
+        "badge": "遠隔",
+        "range": 525,
+        "desc": "通常攻撃射程 525 の遠隔攻撃チャンピオンです。"
+      }
     }
   },
   "build_patterns": [
@@ -2860,5 +2874,12 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
+  },
+  "attack_type": {
+    "type": "RANGED",
+    "label": "遠隔 (レンジ) [射程 525]",
+    "badge": "遠隔",
+    "range": 525,
+    "desc": "通常攻撃射程 525 の遠隔攻撃チャンピオンです。"
   }
 }

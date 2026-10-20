@@ -517,7 +517,14 @@
             "ヒール"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "RANGED",
+        "label": "遠隔 (レンジ) [射程 575]",
+        "badge": "遠隔",
+        "range": 575,
+        "desc": "通常攻撃射程 575 の遠隔攻撃チャンピオンです。"
+      }
     }
   },
   "build_patterns": [
@@ -2593,5 +2600,12 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
+  },
+  "attack_type": {
+    "type": "RANGED",
+    "label": "遠隔 (レンジ) [射程 575]",
+    "badge": "遠隔",
+    "range": 575,
+    "desc": "通常攻撃射程 575 の遠隔攻撃チャンピオンです。"
   }
 }

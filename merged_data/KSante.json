@@ -518,7 +518,14 @@
             "イグナイト"
           ]
         }
-      ]
+      ],
+      "attack_type": {
+        "type": "MELEE",
+        "label": "近接 (メレー) [射程 150]",
+        "badge": "近接",
+        "range": 150,
+        "desc": "通常攻撃射程 150 の近接攻撃チャンピオンです。"
+      }
     }
   },
   "build_patterns": [
@@ -2594,5 +2601,12 @@
       "is_estimated": true,
       "patch": "16.20.1"
     }
+  },
+  "attack_type": {
+    "type": "MELEE",
+    "label": "近接 (メレー) [射程 150]",
+    "badge": "近接",
+    "range": 150,
+    "desc": "通常攻撃射程 150 の近接攻撃チャンピオンです。"
   }
 }
