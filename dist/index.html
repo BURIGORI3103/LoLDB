@@ -1812,7 +1812,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.3.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.5.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -2026,6 +2026,28 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.5.0</span>
+              <span class="changelog-date">2026-10-20</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【AA通常攻撃タイプ判定・バッジ表示】外部推測・ハルシネーションを排除し、公式ステータス（stats.attackrange）のみに基づいて全173体を厳密判定。カード画像右上に属性バッジ（[AD]等）と並び、AAタイプバッジ（[🗡️ 近接] / [🏹 遠隔] / [🔄 両用]）を常時表示</li>
+              <li>【詳細画面へのAA射程情報追加】チャンピオン詳細モーダル上部にも「🎯 通常攻撃 (AA): 近接 (メレー) [射程 175]」のように射程・特性の詳細を明記</li>
+              <li>【多機能複合絞り込みフィルター新設】チャンピオン一覧および対面シミュレーターピッカーに、通常攻撃（近接/遠隔/両用）、ダメージ属性（AD/AP/TANK）、特性（サステイン所持/両型あり）をワンタップで絞り込めるチップスバーを追加。ロールや検索クエリとのAND複合検索に対応</li>
+              <li>【シミュレーターピッカーへのミニアイコン表示】ピッカー内のチャンピオンにもAAタイプ（🗡️/🏹/🔄）と属性を表示し、五十音順（あいうえお順）ソートを維持したまま直感的に選べるよう改善</li>
+              <li>【パイプライン恒久統合】データ更新スクリプトにAAタイプ判定を組み込み、今後のパッチ更新時にも自動付与を保証</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.4.1</span>
+              <span class="changelog-date">2026-10-16</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【配布用ZIP出力先のプロジェクト直下集約】配布用ZIP（LoLDB_dist.zip等）の生成・管理をプロジェクト直下（c:\Project\LoLDB\）に統一し、デスクトップへの自動出力を廃止</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.3.0</span>
