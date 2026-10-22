@@ -1812,7 +1812,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.6.0 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.6.1 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -2040,12 +2040,47 @@
         <div class="changelog-list">
           <div class="changelog-item">
             <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.6.1</span>
+              <span class="changelog-date">2026-10-22</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【アプデ履歴＆バージョンバッジの完全自動生成化】build_pwa.py内のハードコードされた履歴HTMLを撤廃し、UPDATE.mdおよびObsidianのUpdate_History.mdを動的パースしてヘッダーバッジ(#patchBadge)とアプデ履歴モーダル(#changelogModal)を100%自動生成する仕組みを実装</li>
+              <li>【v2.6.0および全過去履歴の完全反映】漏れていたv2.6.0（レーン別相性分離・OP.GG検証強化・XSS/SW保護・PWA約60%軽量化）を含む全履歴をモーダルへ完全同期</li>
+              <li>【add_update.py自動リビルド連携】add_update.py実行時にbuild_pwa.pyを自動呼び出しするフックを追加し、アップデート記帳と同時にPWA成果物・配布ZIPが確実に最新バージョンへ書き換わる設計を実現</li>
+              <li>【Service Workerキャッシュ名のバージョン＋ハッシュ自動連動】CORE_CACHE名を loldb-core-{version}-{hash} としてビルド時に自動算出し、更新時のブラウザキャッシュ残留を防止</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.6.0</span>
+              <span class="changelog-date">2026-10-22</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【レーン別相性マトリクスの完全分離】相性データを `(自分, 相手, レーン, パッチ)` 単位の `matchup_matrix_by_role` に厳格分離し、対面シミュレーターにレーン選択UI（自動/TOP/JUG/MID/ADC/SUP）と実測/推定メタデータ表示を追加</li>
+              <li>【OP.GGデータ検証＆通信安全性強化】OP.GG RSCパーサーのエスケープ引用符対応と必須データ検証、`fetch_champions.py` のタイムアウト設定を追加</li>
+              <li>【XSS対策＆SWスコープ保護】インラインJSONの `&lt;script&gt;` エスケープ、DOM XSS対策、Service Workerキャッシュ削除スコープの `loldb-` 限定保護を実装</li>
+              <li>【PWA HTML約60%軽量化】分割JSON出力と重複データ整理により、単一HTMLサイズを約14MBから約5.65MBへ大幅軽量化</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.5.2</span>
               <span class="changelog-date">2026-10-20</span>
             </div>
             <ul class="changelog-ul">
               <li>【サステイン絞り込み機能の修正＆公式スキル解析】全173体のスキル・パッシブ説明文から体力回復（吸血・リジェネ強化）・自己シールド能力を厳密解析しDBへ格納。サステイン絞り込みでヒット数0になっていた不具合を解消（全99体が正常ヒット）</li>
               <li>【詳細モーダルへのサステイン情報反映】チャンピオン詳細画面に対象スキルの名称や回復・シールド特性、重傷推奨ガイダンスを正確に表示</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.5.1</span>
+              <span class="changelog-date">2026-10-20</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>ページ上部のバージョンバッジ（#patchBadge）を Patch 16.20 / v2.5.0 へ更新。</li>
+              <li>バッジタップで開く「アップデート履歴（#changelogModal）」内に、本日10月20日の v2.5.0（AA通常攻撃タイプ判定、バッジ表示、複合絞り込みフィルター）および10月16日の v2.4.1 の更新内容を完全同期・追記。</li>
+              <li>Service Worker（sw.js）の CORE_CACHE を loldb-core-v20 に更新し、最新の履歴が確実に即時反映されるようキャッシュを更新。</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2068,6 +2103,25 @@
             </div>
             <ul class="changelog-ul">
               <li>【配布用ZIP出力先のプロジェクト直下集約】配布用ZIP（LoLDB_dist.zip等）の生成・管理をプロジェクト直下（c:\Project\LoLDB\）に統一し、デスクトップへの自動出力を廃止</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.4.0</span>
+              <span class="changelog-date">2026-10-16</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【全173体最新パッチ環境データ完全更新】最新パッチ統計出揃いに伴い、Data Dragon基礎データ再取得、OP.GG統計および日本語wiki攻略データの再収集・統合を完遂</li>
+              <li>【全対面1行戦術理由の自動生成・同期】全チャンピオンの対面戦術理由およびオフラインPWAを最新パッチ環境へ再ビルド</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.3.1</span>
+              <span class="changelog-date">2026-10-16</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【旧URL向け移転案内パッケージ新設】旧ホスティング（Netlify等）専用の移転案内UI・自動リダイレクト・旧SWキャッシュ一括クリアを備えた配布パッケージ（dist_old_url_migration）を新設</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2098,9 +2152,10 @@
               <span class="changelog-date">2026-10-11</span>
             </div>
             <ul class="changelog-ul">
-              <li>【キャラの強み・弱み項目の完全復元】パッチ16.20更新時にマージ不備で欠落していた全173体の特徴・要約・強み（Strengths 3項目）・弱み（Weaknesses 3項目）を完全復元・再搭載</li>
-              <li>【対面相性の詳細理由の完全復元】パッチ更新で消失していた対面相性の実戦的解説文（「なぜ有利なのか」「なぜ不利なのか」の理由テキスト）を全173体・1036件すべて復元</li>
-              <li>【表示耐性・フォールバック強化】相性理由の分割処理を改修し、理由テキストが絶対に抜け落ちないよう堅牢化。強み・弱み項目も多重防御で恒久保証</li>
+              <li>【キャラの強み・弱み項目の完全復元】公式パッチ16.20更新時（v2.1.0）にデータ再マージ処理の不備により欠落していた、全173体の「概要（summary）」「強み（Strengths 3項目）」「弱み（Weaknesses 3項目）」を完全復元・再搭載。</li>
+              <li>【対面相性の詳細理由（なぜ有利・不利か）の完全復元】パッチ更新スクリプトにより単なる勝率文字列に上書きされていた対面相性（favorable / unfavorable）について、全173体・合計1,036件すべての実戦的解説文（「高DPSとサステインでタンクの防御・回復を圧倒できるため有利」等）を100%完全復元。</li>
+              <li>【画面表示ロジックの多重防御・フォールバック強化】相性理由テキストの分割処理（`split(&quot; | &quot;)`）において、理由文が空文字になって枠が消失しないよう堅牢化。さらに万が一データが欠けても `matchup_matrix` 等から自動補完する多重防御を実装し、今後パッチ更新を行っても絶対に項目が抜け落ちないよう恒久対策を完了。</li>
+              <li>【デプロイ用ZIP更新】プロジェクトルートおよびデスクトップ上の `LoLDB_dist.zip` を最新ビルド（v2.1.1 / loldb-core-v18）で更新。</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2109,9 +2164,11 @@
               <span class="changelog-date">2026-10-10</span>
             </div>
             <ul class="changelog-ul">
-              <li>【公式パッチ 16.20.1（26.20）完全対応】全173体のチャンピオン基礎ステータス・スキル詳細および全283個のアイテムデータを最新パッチ16.20.1に完全アップデート</li>
-              <li>【Worldsバランシング反映】アンベッサのパッシブ調整、アッシュの基本AD低下、ダイアナのWシールド強化、ケネンのE攻撃速度Buff、キンドレッドのW/E強化等を完全網羅</li>
-              <li>【アイテムデータ最新化】ロケットベルトのNerfを含むサモナーズリフト全アイテムの最新ステータス・価格・合成ツリーを同期</li>
+              <li>【公式Data Dragonパッチ 16.20.1（26.20）完全対応】全173体のチャンピオン公式基礎ステータス、スキル詳細（Passive, Q, W, E, R）、画像アセットおよび全283個のアイテムデータを最新パッチ16.20.1に完全アップデート。</li>
+              <li>【Worlds向けバランス調整の完全反映】アンベッサのパッシブ弱体化、アッシュのレベル毎AD低下、カシオペアの初期耐久・マナ調整、ダイアナのWシールド強化、ケネンのE攻撃速度Buff、キンドレッドのW/E強化等を網羅。</li>
+              <li>【最新アイテムデータ＆合成ツリー同期】ロケットベルトのNerfを含むサモナーズリフト全アイテムの最新ステータス、価格、派生ツリー情報を完全同期。</li>
+              <li>【Service Worker キャッシュ更新（v17）】Service Workerのコアキャッシュ（`loldb-core-v17`）を更新し、既存キャッシュからの確実な新パッチ反映を保証。</li>
+              <li>【デプロイ用ZIP更新】プロジェクトルートおよびデスクトップ上の `LoLDB_dist.zip` を最新ビルドで更新。</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2120,9 +2177,10 @@
               <span class="changelog-date">2026-10-09</span>
             </div>
             <ul class="changelog-ul">
-              <li>【対面シミュレーターの有利・不利判定の修正】大文字小文字の照合不一致を修正し、個別収集データ（ウディア vs エイトロックス等）を最優先反映。「有利」「警戒・不利」「互角・五分」をシンプルかつ確実に判定・表示するよう改善</li>
-              <li>【勝率％数値の非表示化】パーセンテージ数値を排し、実戦的で分かりやすい3分類（有利 / 警戒・不利 / 互角・五分）と具体的な相性理由に特化</li>
-              <li>【アイテム図鑑のステータスアイコン・絵文字の完全撤廃】カテゴリタブ、サイドバー絞り込み、詳細モーダル内のステータス一覧からすべての絵文字やアイコンを削除し、見やすくクリーンなテキスト表示へ変更</li>
+              <li>【対面シミュレーターの有利・不利判定修正（大文字小文字バグ解消 ＆ 個別相性最優先反映）】ウディア vs エイトロックスなどの収集済み対面相性が正しく反映されず「文章は有利なのにオレンジ色の五分と表示される」不具合の原因を特定（データ側の小文字 &#x27;fav&#x27;/&#x27;unfav&#x27; と判定コードの大文字 &#x27;FAVORABLE&#x27; の比較不一致）。大文字小文字を完全に吸収し、OP.GG収集データを最優先照合することで、緑色の「有利」、赤色の「警戒・不利」、オレンジ色の「互角・五分」が確実に表示されるよう修正。</li>
+              <li>【勝率％数値の非表示化】「勝率50%」「勝率60.78%」等のパーセンテージ表記を完全に非表示化し、実戦的で分かりやすい「有利」「警戒・不利」「互角・五分」の3分類判定と具体的な相性理由に特化。</li>
+              <li>【アイテム図鑑のステータスアイコン・絵文字の完全撤廃】カテゴリタブ、左側ステータスサイドバー、詳細モーダル内のステータス一覧からすべての絵文字やアイコン（⚔️, 🔮, ⚡, 🛡️, ❤️, ⏱️, 🎯, 👟, 🗡️, 🌀, 🩸, 💧, 🌿等）を完全削除し、見やすくクリーンなテキスト表示へ変更。</li>
+              <li>【デプロイ用ZIP更新】プロジェクトルートおよびデスクトップ上の `LoLDB_dist.zip` を最新ビルドで更新。</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2131,12 +2189,13 @@
               <span class="changelog-date">2026-10-07</span>
             </div>
             <ul class="changelog-ul">
-              <li>【対面シミュレーターの勝率・有利不利を100%完全網羅】全173体×全173体（約3万通り）の対面マトリクスデータベースを完全搭載！五分ばかりの表示を解消し、対面勝率（%）と実戦的な相性理由を全対面で確実に表示</li>
-              <li>【ピッカー選択画面のあいうえお順（五十音順）ソート】自キャラ・敵キャラ選択画面を日本語五十音順で並べ替え、直感的に探せるよう改善</li>
-              <li>【すべての検索窓でひらがな＆部分一致検索に対応】メイン検索・ピッカー検索・アイテム検索の全検索窓で「がれん」「せと」「どらん」等のひらがな入力や部分文字列検索に対応</li>
-              <li>【アイテム図鑑の大幅進化・スタートアップ新設】ドラン系、涙、ペット、ポーション等を網羅した「🧪 スタートアップ」ジャンルを新設</li>
-              <li>【ステータス複数チェックボックス絞り込み】UI左側にステータス一覧（AD, AP, AS, AR, MR, HP, AH等）をチェックボックス配置し、複数選択（AND検索）での絞り込みが可能に</li>
-              <li>【ゲーム内ショップ風 合成ツリー (Builds From & Into)】アイテム詳細モーダル上部に、合成素材と派生先上位アイテムをカード形式で大きく表示。タップで自由に相互ジャンプ可能に</li>
+              <li>【対面シミュレーターの勝率・有利不利を100%完全網羅（「五分」ばかりの問題を完全解消）】全173体×全173体（約3万通り）の対面マトリクスデータベース（`matchup_matrix`）を生成・格納。従来の6体限定照合から全対面厳密判定へ進化し、全対面で対面勝率（%）と実戦的な相性理由を100%確実に表示。</li>
+              <li>【ピッカー選択画面のあいうえお順（五十音順）ソート】自キャラ・敵キャラ選択画面の並び順を従来の英語アルファベット順から日本語五十音順（`localeCompare(&#x27;ja&#x27;)`）へ変更し、直感的で迅速なピックを実現。</li>
+              <li>【全検索窓での「ひらがな」および3〜4文字部分一致検索対応】メイン検索、シミュレーターピッカー検索、アイテム図鑑検索の全検索窓で「がれん」「せと」「どらん」「てぃあまと」等のひらがな入力や部分文字列検索に完全対応。</li>
+              <li>【アイテム図鑑の大幅進化・「🧪 スタートアップ」ジャンル新設】ドラン系、女神の涙、ジャングルペット、ワールドアトラス、ポーション等を網羅したスタートアップジャンルを新設。</li>
+              <li>【UI左側にステータス複数チェックボックス絞り込み（AND検索）新設】画面左側に14種類のステータス（AD, AP, AS, AR, MR, HP, AH, CRIT, MS, LETHALITY, MAGICPEN, VAMP, MANA, HPREGEN）のチェックボックス群を配置し、複数選択での絞り込みが可能に（全解除ボタン・アクティブバッジ付き）。</li>
+              <li>【ゲーム内ショップ風 合成ツリー (Builds From &amp; Builds Into)】アイテム詳細モーダル上部に、合成素材（Builds From）と派生先上位アイテム（Builds Into）をゲーム内ショップ風のカード形式で大きく配置。タップで自由に相互ジャンプ可能に。</li>
+              <li>【デプロイ用ZIP更新】プロジェクトルートおよびデスクトップ上の `LoLDB_dist.zip` を最新ビルドで更新。</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2215,7 +2274,7 @@
               <span class="changelog-date">2026-10-04</span>
             </div>
             <ul class="changelog-ul">
-              <li>【スキル上げ順】全173体の最大化優先度（例: Q > E > W）をバッジ明記</li>
+              <li>【スキル上げ順】全173体の最大化優先度（例: Q &gt; E &gt; W）をバッジ明記</li>
               <li>【サステイン＆重傷判定】強力な回復スキル所持者への「🩸 サステイン所持（対面時: 重傷推奨）」警告バッジと理由を新設</li>
               <li>【キャラ概要】全チャンピオンの特徴・強み3選（Strengths）・弱み3選（Weaknesses）を完全網羅</li>
               <li>【立ち回り＆スキル吐きどころ】定型文を一新し、レーン戦・集団戦・重要スキルの温存/吐きどころの極意を徹底解説</li>
@@ -2274,12 +2333,22 @@
           </div>
           <div class="changelog-item">
             <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v1.1.1</span>
+              <span class="changelog-date">2026-10-03</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【スキル・アイテム画像UIの強化とService Workerキャッシュ更新対応】PWAのService Workerキャッシュ戦略をNetwork-Firstに刷新し、Netlify更新が即座に反映されるように改良。Data Dragon CDNから全スキル・アイテムの公式アイコン画像を確実に表示するリッチUIを完全生成。</li>
+            </ul>
+          </div>
+          <div class="changelog-item">
+            <div class="changelog-header">
               <span class="changelog-ver">🎨 v1.1.0</span>
               <span class="changelog-date">2026-10-03</span>
             </div>
             <ul class="changelog-ul">
-              <li>Riot公式Data Dragon CDN連携による全スキル・アイテム・スペルのアイコン画像表示対応</li>
-              <li>PWA Service Workerをオンライン時最新優先（Network-First）へ強化</li>
+              <li>【画像UI大幅強化】スキル（QWER・パッシブ）、推奨ビルド（スタート、靴、コア）、サモナースペル、対面相性チャンピオンの公式アイコン画像レンダリングを実装。</li>
+              <li>【Service Worker連動】読み込まれた画像アセットはService Workerにより自動キャッシュされ、オフライン時でも視覚的でリッチなUI表示を実現。</li>
+              <li>【PWA再ビルド】dist/index.html (745KB), dist/sw.js, dist/manifest.json を最新化。</li>
             </ul>
           </div>
           <div class="changelog-item">
@@ -2288,9 +2357,10 @@
               <span class="changelog-date">2026-10-03</span>
             </div>
             <ul class="changelog-ul">
-              <li>LoLDB 初回正式リリース</li>
-              <li>公式Data Dragon基礎データ ＋ OP.GG攻略統計 ＋ 日本語wiki立ち回り統合PWA</li>
-              <li>完全オフライン動作対応（Service Worker + 単一HTML内包アーキテクチャ）</li>
+              <li>【成果物】dist/index.html (740KB), dist/sw.js, dist/manifest.json, merged_data/all_champions.json (988KB)</li>
+              <li>【全フェーズ達成】公式データ取得(173体) -&gt; RSC対応OP.GGスクレイピング(169体100%完了) -&gt; マスターデータ統合 -&gt; PWAビルド完遂。</li>
+              <li>【オフライン確認】外部ネットワーク通信なしで全チャンピオンのQWERスキル、サモナースペル、ビルド、ルーン、有利不利相性が閲覧可能であることを検証済み。</li>
+              <li>【スマホ導入手順】ローカルWebサーバーまたはGitHub Pages等からスマホブラウザで開き「ホーム画面に追加」を実行することで、ネイティブアプリ感覚で完全オフライン閲覧可能。</li>
             </ul>
           </div>
         </div>

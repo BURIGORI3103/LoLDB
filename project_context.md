@@ -1,7 +1,7 @@
 ---
 project: LoLDB
 status: active
-last_reviewed: 2026-10-20
+last_reviewed: 2026-10-22
 summary: LoL のチャンピオン・アイテム・対面情報を集約し、スマートフォンでも使えるオフライン対応 PWA を生成するプロジェクト。
 ---
 
@@ -30,7 +30,8 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 - index.html と dist/index.html は生成物です。UI の変更は可能な限り生成元の build_pwa.py に反映し、ビルド後に出力を確認します。
 - build_pwa.py の再ビルド時は、merged_data/all_champions.json および個別JSONが正本として同一同期されていることを保証します。
-- Service Worker のキャッシュ名・ルートパス・GitHub Pages の /LoLDB/ サブパスを変更すると、オフライン更新に影響します。sw.js と build_pwa.py を併せて確認します（現行: loldb-core-v21）。
+- アプリ上部のバージョンバッジ（`#patchBadge`）およびアップデート履歴モーダル（`#changelogModal`）は、`build_pwa.py` 実行時に `UPDATE.md` および `graviXObsidian/Topics/LoLDB/Update_History.md`（ならびに `data/changelog_history.json`）を動的パースして100%自動生成されます。さらに `c:\Project\add_update.py` 実行時に `build_pwa.py` が自動呼び出しされ、アップデート記帳と同時にPWA成果物が最新バージョンへ再ビルドされます。
+- Service Worker のキャッシュ名（`CORE_CACHE`）は `loldb-core-{latest_version}-{html_hash}` としてビルド時に自動算出され、更新時のキャッシュ残留を防止します。
 - 旧URL（Netlify等）からの移転案内用パッケージとして dist_old_url_migration/ および LoLDB_old_url_migration.zip を管理し、旧URLアクセス者を新URLへ自動誘導します。
 - 配布用ZIP（LoLDB_dist.zip 等）はプロジェクト直下（c:\Project\LoLDB\）のみで生成・管理し、デスクトップへの自動出力は行いません。
 - GitHub Pages への反映はリポジトリへのプッシュ後です。公開操作とローカル編集を区別します。

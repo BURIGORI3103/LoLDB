@@ -90,6 +90,22 @@ class TestLoLDBQuality(unittest.TestCase):
         self.assertTrue(res_unknown["is_estimated"])
         self.assertIsNone(res_unknown["winrate"])
 
+    def test_changelog_auto_sync_in_pwa(self):
+        from build_pwa import _parse_markdown_update_block, load_and_render_changelog
+
+        update_md_text = (BASE_DIR / "UPDATE.md").read_text(encoding="utf-8")
+        parsed_latest = _parse_markdown_update_block(update_md_text)
+        self.assertIsNotNone(parsed_latest)
+        expected_ver = parsed_latest["version"]
+
+        latest_ver, rendered_html = load_and_render_changelog(BASE_DIR, BASE_DIR / "dist")
+        self.assertEqual(latest_ver, expected_ver)
+        self.assertIn(expected_ver, rendered_html)
+
+        dist_html = (BASE_DIR / "dist" / "index.html").read_text(encoding="utf-8")
+        self.assertIn(f"/ {expected_ver} ℹ️", dist_html)
+        self.assertIn(f'<span class="changelog-ver">⚔️ {expected_ver}</span>', dist_html)
+
 
 if __name__ == "__main__":
     unittest.main()
