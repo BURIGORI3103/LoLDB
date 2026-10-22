@@ -34,9 +34,34 @@ def build():
 
     print(f"合計 {len(all_champs)} 体のチャンピオンデータを読み込みました。")
 
-    # JSONをコンパクトにシリアライズ
-    json_str = json.dumps(all_champs, ensure_ascii=False)
-    items_json_str = json.dumps(all_items, ensure_ascii=False)
+    # パッチ番号をマスターデータから一元抽出
+    first_champ = next(iter(all_champs.values()), {})
+    build_patch = first_champ.get("patch", "16.20.1")
+    short_patch = ".".join(build_patch.split(".")[:2])
+
+    # 分割JSONファイルとしても data/ に出力
+    for d_base in (dist_dir / "data", base_dir / "data"):
+        d_base.mkdir(parents=True, exist_ok=True)
+        (d_base / "champions.json").write_text(
+            json.dumps(all_champs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+        )
+        (d_base / "items.json").write_text(
+            json.dumps(all_items, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+        )
+
+    def safe_json_for_script(obj) -> str:
+        raw = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+        return (
+            raw.replace("<", "\\u003c")
+            .replace(">", "\\u003e")
+            .replace("&", "\\u0026")
+            .replace("\u2028", "\\u2028")
+            .replace("\u2029", "\\u2029")
+        )
+
+    # HTML <script> 内への安全なシリアライズ (</script> 等の混入を完全防止)
+    json_str = safe_json_for_script(all_champs)
+    items_json_str = safe_json_for_script(all_items)
 
     html_content = f"""<!DOCTYPE html>
 <html lang="ja" class="dark">
@@ -47,7 +72,7 @@ def build():
   <meta name="theme-color" content="#0f172a">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="全チャンピオンのスキル、推奨ビルド、ルーン、対面相性を完全網羅したオフライン対応攻略アプリ">
+  <meta name="description" content="全チャンピオンのスキル、推奨ビルド、ルーン、レーン別対面相性を網羅した攻略PWA（コアデータ即時オフライン・画像オンデマンド＆段階キャッシュ対応）">
   <link rel="icon" type="image/png" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="manifest" href="manifest.json">
@@ -1852,7 +1877,7 @@ def build():
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.20 / v2.5.2 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch {short_patch} / v2.6.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -2017,13 +2042,25 @@ def build():
         </div>
 
         <div id="simResultArea" style="display: none;">
-          <!-- 1. 相性・勝率メーター -->
+          <!-- 1. 相性・勝率メーター (レーン別厳格分離 ＆ 実測/推定メタ情報明示) -->
           <div class="sim-result-card" id="simAdvantageCard">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
+              <span class="sim-result-title">⚖️ レーン別 対面相性判定</span>
+              <div class="role-tabs" id="simMatchupLaneTabs" style="margin:0;">
+                <button class="chip-btn sim-lane-tab active" data-lane="AUTO">自動(主ロール)</button>
+                <button class="chip-btn sim-lane-tab" data-lane="TOP">TOP</button>
+                <button class="chip-btn sim-lane-tab" data-lane="JUG">JUG</button>
+                <button class="chip-btn sim-lane-tab" data-lane="MID">MID</button>
+                <button class="chip-btn sim-lane-tab" data-lane="ADC">ADC</button>
+                <button class="chip-btn sim-lane-tab" data-lane="SUP">SUP</button>
+              </div>
+            </div>
             <div class="sim-result-header">
-              <span class="sim-result-title">⚖️ 対面相性 ＆ 推定勝率</span>
+              <span id="simMatchupSourceTag" style="font-size:11px; color:var(--text-muted); font-weight:600;">判定区分: -</span>
               <span id="simAdvantageBadge" class="sim-adv-badge">判定中</span>
             </div>
             <div id="simAdvantageDesc" style="font-size: 13px; color: #e2e8f0; line-height: 1.5; margin-top: 6px;"></div>
+            <div id="simAdvantageMeta" style="font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--border);"></div>
           </div>
 
           <!-- 2. レーン戦の注意点 ＆ 相手の警戒スキル -->
@@ -2437,9 +2474,135 @@ def build():
         .replace(/'/g, "&#039;");
     }}
 
-    // インライン内包されたマスターデータ
+    // ビルド時一元管理パッチ番号
+    const DEFAULT_PATCH = "{build_patch}";
+
+    // インライン内包されたマスターデータ (<script>安全エスケープ済)
     const CHAMPIONS = {json_str};
     const ITEMS = {items_json_str};
+
+    // クライアントサイド・ヒューリスティック特性推定エンジン (実測データがないペア・レーン用)
+    function computeHeuristicMatchup(me, opp, role) {{
+      const patch = me.patch || DEFAULT_PATCH;
+      if (me.id === opp.id) {{
+        return {{
+          winrate: null,
+          winrate_display: null,
+          advantage: "even",
+          advantage_label: "五分（ミラーマッチ）",
+          reason: "同チャンピオン対決です。ルーン選択、スキルの命中率、ウェーブコントロール等の技量勝負になります。",
+          source: "mirror",
+          is_estimated: false,
+          role: role || "ALL",
+          patch: patch,
+          estimation_factors: [],
+          estimation_limitation: ""
+        }};
+      }}
+      let score = 0;
+      const meDp = me.damage_profile || {{}};
+      const oppDp = opp.damage_profile || {{}};
+      const meSustain = !!(me.sustain_info && me.sustain_info.has_sustain);
+      const oppSustain = !!(opp.sustain_info && opp.sustain_info.has_sustain);
+      const reasons = [];
+      const factors = [];
+
+      if (["Malphite", "Rammus"].includes(me.id) && oppDp.primary_type === "AD") {{
+        score += 3;
+        factors.push("対AD物理防御特化 (+3)");
+        reasons.push("物理防御(AR)スケールにより、相手のAD物理ダメージを大幅に軽減できます");
+      }} else if (["Malphite", "Rammus"].includes(opp.id) && meDp.primary_type === "AD") {{
+        score -= 3;
+        factors.push("相手の対AD物理防御特化 (-3)");
+        reasons.push("相手の高い物理防御と通常攻撃反射により、ADダメージが通りにくい対面です");
+      }}
+
+      if (["Galio", "Kassadin"].includes(me.id) && oppDp.primary_type === "AP") {{
+        score += 3;
+        factors.push("対AP魔法耐性特化 (+3)");
+        reasons.push("魔法耐性パッシブと魔法シールドにより、相手のAPバーストを容易に耐えきれます");
+      }} else if (["Galio", "Kassadin"].includes(opp.id) && meDp.primary_type === "AP") {{
+        score -= 3;
+        factors.push("相手の対AP魔法耐性特化 (-3)");
+        reasons.push("相手の対AP防御性能とシールドにより、こちらの魔法バーストが軽減されます");
+      }}
+
+      if (meSustain && !oppSustain) {{
+        score += 1;
+        factors.push("サステイン優位 (+1)");
+        reasons.push("高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます");
+      }} else if (!meSustain && oppSustain) {{
+        score -= 1;
+        factors.push("相手サステイン優位 (-1)");
+        reasons.push("相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です");
+      }}
+
+      const meClasses = me.classes || me.tags || [];
+      const oppClasses = opp.classes || opp.tags || [];
+      const isOppAssassin = oppClasses.includes("Assassin") || ["Zed", "Talon", "Qiyana", "Katarina"].some(k => opp.id.includes(k));
+      const isMeAssassin = meClasses.includes("Assassin") || ["Zed", "Talon", "Qiyana", "Katarina"].some(k => me.id.includes(k));
+
+      if ((meClasses.includes("Tank") || meDp.primary_type === "TANK") && isOppAssassin) {{
+        score += 2;
+        factors.push("タンク対アサシン耐久優位 (+2)");
+        reasons.push("アサシンの瞬間バーストを耐久力で受け止め、CCで拘束して反撃できます");
+      }} else if ((oppClasses.includes("Tank") || oppDp.primary_type === "TANK") && isMeAssassin) {{
+        score -= 2;
+        factors.push("アサシン対タンク突破難 (-2)");
+        reasons.push("相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です");
+      }}
+
+      if (["Vayne", "Fiora", "Gwen", "KogMaw"].includes(me.id) && oppDp.primary_type === "TANK") {{
+        score += 2;
+        factors.push("対タンク割合・確定ダメージ (+2)");
+        reasons.push("最大体力割合ダメージと確定ダメージにより、相手の防具を無視して削れます");
+      }} else if (["Vayne", "Fiora", "Gwen", "KogMaw"].includes(opp.id) && meDp.primary_type === "TANK") {{
+        score -= 2;
+        factors.push("相手の対タンク割合・確定ダメージ (-2)");
+        reasons.push("相手の割合ダメージ・確定ダメージにより、防具を積んでも耐えきれないリスクがあります");
+      }}
+
+      const meRange = me.stats?.attackrange || 175;
+      const oppRange = opp.stats?.attackrange || 175;
+      if (meRange >= 500 && oppRange <= 200) {{
+        score += 1;
+        factors.push(`通常攻撃射程優位 (${{meRange}} vs ${{oppRange}}, +1)`);
+        reasons.push("射程差を活かしたアウトレンジポークで安全にハラスできます");
+      }} else if (oppRange >= 500 && meRange <= 200) {{
+        score -= 1;
+        factors.push(`相手射程優位 (${{meRange}} vs ${{oppRange}}, -1)`);
+        reasons.push("相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります");
+      }}
+
+      if (factors.length === 0) factors.push("標準ステータス均衡 (0)");
+
+      let adv = "even";
+      let advLabel = "特性推定: 五分 (実測統計なし)";
+      let reasonText = reasons[0] || "明確な特性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。";
+      if (score >= 2) {{
+        adv = "fav";
+        advLabel = "特性推定: 有利傾向 (実測統計なし)";
+        reasonText = reasons.join(" ＆ ");
+      }} else if (score <= -2) {{
+        adv = "unfav";
+        advLabel = "特性推定: 警戒傾向 (実測統計なし)";
+        reasonText = reasons.join(" ＆ ");
+      }}
+
+      return {{
+        winrate: null,
+        winrate_display: null,
+        advantage: adv,
+        advantage_label: advLabel,
+        reason: reasonText,
+        source: "synergy_estimate",
+        is_estimated: true,
+        role: role || "ESTIMATED",
+        patch: patch,
+        estimation_factors: factors,
+        estimation_limitation: "基礎ステータス（射程・ダメージ属性・サステイン・クラス特性）に基づくヒューリスティック推定であり、OP.GGの実戦統計勝率ではありません。"
+      }};
+    }}
 
     let currentRole = "ALL";
     let searchKeyword = "";
@@ -2577,7 +2740,7 @@ def build():
         const attBadgeHtml = `<span class="attack-type-badge ${{attClass}}" title="${{escapeHtml(att.label || `${{attBadge}} [射程 ${{attRange}}]`)}}">${{attIcon}} ${{attBadge}}</span>`;
 
         // Data Dragon公式CDNまたはフォールバック
-        const patch = champ.patch || "16.20.1";
+        const patch = champ.patch || DEFAULT_PATCH;
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
 
         card.innerHTML = `
@@ -2605,7 +2768,7 @@ def build():
       const c = CHAMPIONS[champId];
       if (!c) return;
 
-      const patch = c.patch || "16.20.1";
+      const patch = c.patch || DEFAULT_PATCH;
       modalNameEl.textContent = c.name;
       modalTitleEl.textContent = `${{c.id}} - ${{c.title || ""}} (Patch ${{patch}})`;
 
@@ -3237,7 +3400,7 @@ def build():
       const item = ITEMS[itemId];
       if (!item) return;
 
-      const patch = "16.20.1";
+      const patch = DEFAULT_PATCH;
       itemDetailIcon.src = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
       itemDetailIcon.style.display = "block";
       itemDetailName.textContent = item.name;
@@ -3481,7 +3644,7 @@ def build():
         card.className = "item-grid-card";
         card.onclick = () => openItemDetail(item.id);
 
-        const patch = "16.20.1";
+        const patch = DEFAULT_PATCH;
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
         const price = item.gold?.total ? `${{item.gold.total}} G` : "無料";
         const statsSummary = item.stats_summary ? `<div class="item-card-stats" title="${{item.stats_summary}}">${{item.stats_summary}}</div>` : "";
@@ -3653,7 +3816,7 @@ def build():
 
         const item = document.createElement("div");
         item.className = "sim-picker-item";
-        const patch = champ.patch || "16.20.1";
+        const patch = champ.patch || DEFAULT_PATCH;
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
 
         // AAタイプ＆属性ミニアイコン
@@ -3685,7 +3848,7 @@ def build():
     function selectSimChamp(champId) {{
       const c = CHAMPIONS[champId];
       if (!c) return;
-      const patch = c.patch || "16.20.1";
+      const patch = c.patch || DEFAULT_PATCH;
       const dp = c.damage_profile || {{}};
 
       if (simCurrentPickingTarget === 'me') {{
@@ -3787,6 +3950,16 @@ def build():
       }});
     }});
 
+    let simSelectedLane = "AUTO";
+    document.querySelectorAll(".sim-lane-tab").forEach(btn => {{
+      btn.addEventListener("click", () => {{
+        document.querySelectorAll(".sim-lane-tab").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        simSelectedLane = btn.getAttribute("data-lane") || "AUTO";
+        updateSimAnalysis();
+      }});
+    }});
+
     function updateSimAnalysis() {{
       if (!simMyChampId || !simOppChampId) {{
         if (simEmptyPrompt) simEmptyPrompt.style.display = "block";
@@ -3800,53 +3973,56 @@ def build():
       const me = CHAMPIONS[simMyChampId];
       const opp = CHAMPIONS[simOppChampId];
 
-      // 1. 相性判定 (有利 / 警戒・不利 / 互角・五分) - ％表記なしで確実判定
-      let advClass = "sim-adv-even";
-      let advText = "互角・五分";
-      let advReason = `${{me.name}} と ${{opp.name}} のマッチアップ。お互いのスキル命中精度とウェーブコントロールが勝敗を分けます。`;
-
-      // ① OP.GG個別収集データを最優先チェック (ウディア vs エイトロックス等)
-      const favMatch = (me.matchups?.favorable || []).find(m => m.champion_id === opp.id || m.name === opp.name);
-      const unfavMatch = (me.matchups?.unfavorable || []).find(m => m.champion_id === opp.id || m.name === opp.name);
-
-      let matrixData = null;
-      if (me.matchup_matrix && me.matchup_matrix[opp.id]) {{
-        matrixData = me.matchup_matrix[opp.id];
+      // 対象レーンの決定: AUTO時は自分と相手の共通ロール優先、なければ自分の第1ロール
+      let targetLane = simSelectedLane;
+      if (targetLane === "AUTO") {{
+        const meRoles = me.roles || ["TOP"];
+        const oppRoles = opp.roles || [];
+        const commonRole = meRoles.find(r => oppRoles.includes(r));
+        targetLane = commonRole || meRoles[0] || "TOP";
       }}
 
-      if (favMatch) {{
-        advClass = "sim-adv-fav";
-        const wr = favMatch.winrate_display || (favMatch.winrate ? `勝率 ${{favMatch.winrate}}` : "");
-        advText = wr ? `有利 (${{wr}})` : "有利";
-        const rParts = (favMatch.reason || "").split(" | ");
-        const rText = (rParts.length > 1 ? rParts[1] : favMatch.reason) || "";
-        advReason = (rText && !rText.includes("統計的に有利")) ? rText : `統計的に ${{escapeHtml(me.name)}} が主導権を握りやすい有利なマッチアップです。`;
-      }} else if (unfavMatch) {{
-        advClass = "sim-adv-unfav";
-        const wr = unfavMatch.winrate_display || (unfavMatch.winrate ? `勝率 ${{unfavMatch.winrate}}` : "");
-        advText = wr ? `警戒・不利 (${{wr}})` : "警戒・不利";
-        const rParts = (unfavMatch.reason || "").split(" | ");
-        const rText = (rParts.length > 1 ? rParts[1] : unfavMatch.reason) || "";
-        advReason = (rText && !rText.includes("統計的に不利")) ? rText : `統計的に ${{escapeHtml(opp.name)}} が得意とする不利なマッチアップです。無理な仕掛けを避けましょう。`;
-      }} else if (matrixData) {{
-        const isEst = matrixData.is_estimated !== false && matrixData.source === "synergy_estimate";
-        const advCode = (matrixData.advantage || "").toLowerCase();
-        if (advCode === "fav" || advCode === "favorable") {{
-          advClass = "sim-adv-fav";
-          advText = isEst ? "推定有利" : (matrixData.winrate_display ? `有利 (${{matrixData.winrate_display}})` : "有利");
-        }} else if (advCode === "unfav" || advCode === "unfavorable") {{
-          advClass = "sim-adv-unfav";
-          advText = isEst ? "推定警戒・不利" : (matrixData.winrate_display ? `警戒・不利 (${{matrixData.winrate_display}})` : "警戒・不利");
+      // (自分, 相手, レーン, パッチ) に一致する実測データのみを検索（別レーン統計は混同しない）
+      let measuredData = null;
+      if (me.matchup_matrix_by_role && me.matchup_matrix_by_role[targetLane] && me.matchup_matrix_by_role[targetLane][opp.id]) {{
+        const candidate = me.matchup_matrix_by_role[targetLane][opp.id];
+        if (candidate.is_estimated === false && candidate.role === targetLane) {{
+          measuredData = candidate;
+        }}
+      }}
+      if (!measuredData && me.role_data && me.role_data[targetLane] && me.role_data[targetLane].matchups) {{
+        const rm = me.role_data[targetLane].matchups;
+        const favHit = (rm.favorable || []).find(m => (m.champion_id === opp.id || m.name === opp.name) && (!m.role || m.role === targetLane));
+        const unfavHit = (rm.unfavorable || []).find(m => (m.champion_id === opp.id || m.name === opp.name) && (!m.role || m.role === targetLane));
+        if (favHit) measuredData = Object.assign({{ advantage: "fav", is_estimated: false, role: targetLane }}, favHit);
+        else if (unfavHit) measuredData = Object.assign({{ advantage: "unfav", is_estimated: false, role: targetLane }}, unfavHit);
+      }}
+
+      const evalData = measuredData || computeHeuristicMatchup(me, opp, targetLane);
+      const isEst = evalData.is_estimated !== false;
+
+      let advClass = "sim-adv-even";
+      const advCode = (evalData.advantage || "").toLowerCase();
+      if (advCode === "fav" || advCode === "favorable") advClass = "sim-adv-fav";
+      else if (advCode === "unfav" || advCode === "unfavorable") advClass = "sim-adv-unfav";
+
+      const advText = evalData.advantage_label || (isEst ? "特性推定" : "実測統計");
+      let advReason = evalData.reason || `${{me.name}} と ${{opp.name}} のマッチアップ。`;
+      if (advReason.includes(" | ")) {{
+        advReason = advReason.split(" | ").slice(1).join(" | ");
+      }}
+
+      const simMatchupSourceTag = document.getElementById("simMatchupSourceTag");
+      const simAdvantageMeta = document.getElementById("simAdvantageMeta");
+
+      if (simMatchupSourceTag) {{
+        if (evalData.source === "mirror") {{
+          simMatchupSourceTag.textContent = `📊 判定区分: ミラーマッチ (${{targetLane}})`;
+        }} else if (!isEst) {{
+          simMatchupSourceTag.textContent = `📊 判定区分: 実測統計データ (${{targetLane}}レーン専用)`;
         }} else {{
-          advClass = "sim-adv-even";
-          advText = isEst ? "推定五分" : "五分";
+          simMatchupSourceTag.textContent = `🔍 判定区分: ヒューリスティック特性推定 (${{targetLane}}レーン実測統計なし)`;
         }}
-        let mReason = matrixData.reason || advReason;
-        if (mReason.includes(" | ")) {{
-          const parts = mReason.split(" | ");
-          mReason = parts.slice(1).join(" | ");
-        }}
-        advReason = mReason;
       }}
 
       if (simAdvantageBadge) {{
@@ -3855,29 +4031,46 @@ def build():
       }}
       if (simAdvantageDesc) simAdvantageDesc.textContent = advReason;
 
-      // 2. 相手のサステイン警告
+      if (simAdvantageMeta) {{
+        if (evalData.source === "mirror") {{
+          simAdvantageMeta.textContent = `対象レーン: ${{targetLane}} | パッチ: ${{evalData.patch || DEFAULT_PATCH}}`;
+        }} else if (!isEst) {{
+          simAdvantageMeta.textContent =
+            `【実測データ情報】参照元: ${{evalData.source || "opgg_stats"}} | レーン: ${{evalData.role || targetLane}} | ` +
+            `地域: ${{evalData.region || "Global"}} | ランク帯: ${{evalData.tier || "Emerald+"}} | ` +
+            `パッチ: ${{evalData.patch || DEFAULT_PATCH}} | 取得時期: ${{evalData.fetched_at || "2026-10"}} | ` +
+            `区分: ${{evalData.sample_note || "OP.GG ロール別カウンター統計"}}`;
+        }} else {{
+          const factorsStr = (evalData.estimation_factors || []).join(" / ") || "基礎ステータス均衡";
+          simAdvantageMeta.textContent =
+            `【推定の要因】${{factorsStr}} ｜ 【推定の限界】${{evalData.estimation_limitation || "基礎特性からの推定であり実戦統計勝率ではありません。"}}`;
+        }}
+      }}
+
+      // 2. 相手のサステイン警告 (escapeHtml による安全なレンダリング)
       if (simSustainWarning) {{
         if (opp.sustain_info && opp.sustain_info.has_sustain) {{
           simSustainWarning.style.display = "block";
-          simSustainWarning.innerHTML = `🩸 <strong>【相手は高回復・サステイン持ち！】</strong> ${{opp.name}} は強力な回復能力を誇ります。${{opp.sustain_info.reason}} 早期リコール時に必ず「重傷アイテム（回復阻害）」を購入してください。`;
+          simSustainWarning.innerHTML = `🩸 <strong>【相手は高回復・サステイン持ち！】</strong> ${{escapeHtml(opp.name)}} は強力な回復能力を誇ります。${{escapeHtml(opp.sustain_info.reason || "")}} 早期リコール時に必ず「重傷アイテム（回復阻害）」を購入してください。`;
         }} else {{
           simSustainWarning.style.display = "none";
         }}
       }}
 
-      // レーン戦注意点 ＆ ダメージ属性対策
+      // レーン戦注意点 ＆ ダメージ属性対策 (escapeHtml 徹底)
       if (simLaningTips) {{
-        const oppWeaknesses = (opp.overview?.weaknesses || []).join("、");
+        const oppWeaknesses = escapeHtml((opp.overview?.weaknesses || []).join("、") || "主要スキルのクールダウン中が最大の仕掛けどころです。");
         const oppDp = opp.damage_profile || {{}};
         let dualNote = "";
         if (oppDp.has_dual_build) {{
-          dualNote = `<div style="margin-top:6px; padding:6px 10px; background:rgba(245, 158, 11, 0.12); border-left:3px solid #f59e0b; border-radius:4px; color:#fde68a;">⚠️ <strong>【対面注意・AD/AP両型あり】</strong> ${{oppDp.dual_build_desc}}</div>`;
+          dualNote = `<div style="margin-top:6px; padding:6px 10px; background:rgba(245, 158, 11, 0.12); border-left:3px solid #f59e0b; border-radius:4px; color:#fde68a;">⚠️ <strong>【対面注意・AD/AP両型あり】</strong> ${{escapeHtml(oppDp.dual_build_desc || "")}}</div>`;
         }}
+        const roleLaning = me.role_data?.[targetLane]?.gameplay_notes?.laning || me.gameplay_notes?.laning || "相手のスキルを躱してからトレードに入りましょう。";
         simLaningTips.innerHTML = `
-          <div style="margin-bottom: 6px;"><strong>【相手の属性 ＆ 対策】</strong> 主ダメージ: <span class="damage-badge ${{oppDp.badge_class || 'badge-ad'}}">${{oppDp.badge_text || 'AD'}} (${{oppDp.label || ''}})</span> ➔ <strong>${{oppDp.counter_defense || '防御アイテムを選択'}}</strong></div>
+          <div style="margin-bottom: 6px;"><strong>【相手の属性 ＆ 対策】</strong> 主ダメージ: <span class="damage-badge ${{escapeHtml(oppDp.badge_class || 'badge-ad')}}">${{escapeHtml(oppDp.badge_text || 'AD')}} (${{escapeHtml(oppDp.label || '')}})</span> ➔ <strong>${{escapeHtml(oppDp.counter_defense || '防御アイテムを選択')}}</strong></div>
           ${{dualNote}}
-          <div style="margin-bottom: 6px; margin-top: 6px;"><strong>【相手の弱み・突くべき隙】</strong> ${{oppWeaknesses || "主要スキルのクールダウン中が最大の仕掛けどころです。"}}</div>
-          <div><strong>【あなたの立ち回り指針】</strong> ${{me.gameplay_notes?.laning || "相手のスキルを躱してからトレードに入りましょう。"}}</div>
+          <div style="margin-bottom: 6px; margin-top: 6px;"><strong>【相手の弱み・突くべき隙】</strong> ${{oppWeaknesses}}</div>
+          <div><strong>【あなたの立ち回り指針 (${{escapeHtml(targetLane)}})】</strong> ${{escapeHtml(roleLaning)}}</div>
         `;
       }}
 
@@ -3977,16 +4170,16 @@ def build():
         }}
 
         simItemList.innerHTML = recommendedItems.slice(0, 6).map(it => {{
-          const itemImg = `https://ddragon.leagueoflegends.com/cdn/16.20.1/img/item/${{it.id}}.png`;
+          const itemImg = `https://ddragon.leagueoflegends.com/cdn/${{DEFAULT_PATCH}}/img/item/${{escapeHtml(it.id)}}.png`;
           return `
-            <div class="sim-item-card clickable-item" data-item-id="${{it.id}}" title="タップして性能詳細を表示">
-              <img class="sim-item-img" src="${{itemImg}}" alt="${{it.name}}" onerror="this.src='icon.png';">
+            <div class="sim-item-card clickable-item" data-item-id="${{escapeHtml(it.id)}}" title="タップして性能詳細を表示">
+              <img class="sim-item-img" src="${{itemImg}}" alt="${{escapeHtml(it.name)}}" onerror="this.src='icon.png';">
               <div class="sim-item-info">
                 <div class="sim-item-top">
-                  <span class="sim-item-tag">${{it.tag}}</span>
-                  <span class="sim-item-name">${{it.name}}</span>
+                  <span class="sim-item-tag">${{escapeHtml(it.tag)}}</span>
+                  <span class="sim-item-name">${{escapeHtml(it.name)}}</span>
                 </div>
-                <div class="sim-item-reason">${{it.reason}}</div>
+                <div class="sim-item-reason">${{escapeHtml(it.reason)}}</div>
               </div>
             </div>
           `;
@@ -4006,9 +4199,9 @@ def build():
         const combos = me.combos || [];
         simCombosArea.innerHTML = combos.map(cb => `
           <div class="combo-card">
-            <div class="combo-name">🥊 ${{cb.name}}</div>
-            <div class="combo-recipe">${{cb.recipe}}</div>
-            <div class="combo-desc">${{cb.desc}}</div>
+            <div class="combo-name">🥊 ${{escapeHtml(cb.name)}}</div>
+            <div class="combo-recipe">${{escapeHtml(cb.recipe)}}</div>
+            <div class="combo-desc">${{escapeHtml(cb.desc)}}</div>
           </div>
         `).join("");
       }}
@@ -4173,7 +4366,7 @@ def build():
         const end = Math.min(idx + 10, champList.length);
         for (let i = idx; i < end; i++) {{
           const c = champList[i];
-          const patch = c.patch || "16.20.1";
+          const patch = c.patch || DEFAULT_PATCH;
           const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{c.id}}.png`;
           const img = new Image();
           img.src = imgUrl;
@@ -4209,9 +4402,10 @@ def build():
         f.write(html_content)
 
     # Service Worker (sw.js) の生成
-    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v21
-const CORE_CACHE = 'loldb-core-v21';
-const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
+    sw_content = """// LoLDB Service Worker - Dual Cache Architecture v22 (Scoped Cache Cleanup)
+const CACHE_PREFIX = 'loldb-';
+const CORE_CACHE = 'loldb-core-v22';
+const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像オンデマンド＆段階プリフェッチキャッシュ
 
 const ASSETS_TO_CACHE = [
   './',
@@ -4235,9 +4429,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
       return Promise.all(keyList.map((key) => {
-        // IMAGE_CACHE (loldb-images-v1) と 最新の CORE_CACHE 以外を破棄
-        if (key !== CORE_CACHE && key !== IMAGE_CACHE) {
-          console.log('[SW] Removing old core cache:', key);
+        // 同一オリジン上の別アプリのキャッシュを消さないよう、'loldb-' で始まるキャッシュのみを管理・削除する
+        if (key.startsWith(CACHE_PREFIX) && key !== CORE_CACHE && key !== IMAGE_CACHE) {
+          console.log('[SW] Removing old LoLDB cache:', key);
           return caches.delete(key);
         }
       }));

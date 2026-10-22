@@ -1,6 +1,7 @@
-// LoLDB Service Worker - Dual Cache Architecture v21
-const CORE_CACHE = 'loldb-core-v21';
-const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像永続キャッシュ
+// LoLDB Service Worker - Dual Cache Architecture v22 (Scoped Cache Cleanup)
+const CACHE_PREFIX = 'loldb-';
+const CORE_CACHE = 'loldb-core-v22';
+const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像オンデマンド＆段階プリフェッチキャッシュ
 
 const ASSETS_TO_CACHE = [
   './',
@@ -24,9 +25,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
       return Promise.all(keyList.map((key) => {
-        // IMAGE_CACHE (loldb-images-v1) と 最新の CORE_CACHE 以外を破棄
-        if (key !== CORE_CACHE && key !== IMAGE_CACHE) {
-          console.log('[SW] Removing old core cache:', key);
+        // 同一オリジン上の別アプリのキャッシュを消さないよう、'loldb-' で始まるキャッシュのみを管理・削除する
+        if (key.startsWith(CACHE_PREFIX) && key !== CORE_CACHE && key !== IMAGE_CACHE) {
+          console.log('[SW] Removing old LoLDB cache:', key);
           return caches.delete(key);
         }
       }));
