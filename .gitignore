@@ -1,4 +1,59 @@
+# Python仮想環境およびキャッシュ
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+ENV/
+python_env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# スクラッチ一時作業（ただし正本スクリプト generate_matchup_reasons.py は維持）
 scratch/
 !scratch/generate_matchup_reasons.py
+
+# 環境変数・APIキー・認証情報（機密情報）
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+credentials/
+secrets/
+*.pem
+*.key
+
+# 音声・動画等の大容量メディアデータおよび一時出力・ログファイル
+*.mp3
+*.wav
+*.m4a
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.flac
+*.ogg
+*.aac
+*.webm
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.bak*
+tmp/
+temp/
+
+# Antigravity / IDE / OS固有の一時キャッシュデータ（※project_context.mdやdocs/等の仕様書は除外しない）
+.antigravity/
+.gemini/
+.codex_cache/
+*.novabackup
+.vscode/
+.idea/
+desktop.ini
+Thumbs.db
+.DS_Store
