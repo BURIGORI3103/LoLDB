@@ -222,24 +222,29 @@ def calculate_matchup(me: dict, opp: dict, target_role: str | None = None) -> di
     role_fav = []
     role_unfav = []
 
+    def is_current_measurement(entry):
+        return (not entry.get("is_estimated", False)
+                and entry.get("source", "opgg_stats") == "opgg_stats"
+                and (not entry.get("patch") or entry["patch"] == patch))
+
     role_info = me.get("role_data", {}).get(target_role, {})
     if role_info:
         for m in role_info.get("matchups", {}).get("favorable", []):
-            if m.get("role", target_role) == target_role:
+            if m.get("role", target_role) == target_role and is_current_measurement(m):
                 role_fav.append(m)
         for m in role_info.get("matchups", {}).get("unfavorable", []):
-            if m.get("role", target_role) == target_role:
+            if m.get("role", target_role) == target_role and is_current_measurement(m):
                 role_unfav.append(m)
 
     # トップレベル matchups も role が target_role と明示一致するものだけ許可
     primary_role = (me.get("roles") or ["TOP"])[0]
     for m in me.get("matchups", {}).get("favorable", []):
         m_role = m.get("role") or primary_role
-        if m_role == target_role:
+        if m_role == target_role and is_current_measurement(m):
             role_fav.append(m)
     for m in me.get("matchups", {}).get("unfavorable", []):
         m_role = m.get("role") or primary_role
-        if m_role == target_role:
+        if m_role == target_role and is_current_measurement(m):
             role_unfav.append(m)
 
     # 同一レーン内で有利・不利の両方に登録されている異常データがないか勝率数値で客観判定

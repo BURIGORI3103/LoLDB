@@ -4570,7 +4570,7 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         })
         .catch(() => {
-          return caches.match('./index.html') || caches.match('./') || caches.match('index.html');
+          return caches.match('./index.html').then(response => response || caches.match('./')).then(response => response || caches.match('index.html'));
         })
     );
     return;

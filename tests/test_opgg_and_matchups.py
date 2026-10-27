@@ -4,6 +4,8 @@ LoLDB - OP.GG RSC Fixture パーサー検証 ＆ レーン別相性分離テス�
 import unittest
 from pathlib import Path
 import sys
+import tempfile
+import shutil
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
@@ -98,7 +100,14 @@ class TestLoLDBQuality(unittest.TestCase):
         self.assertIsNotNone(parsed_latest)
         expected_ver = parsed_latest["version"]
 
-        latest_ver, rendered_html = load_and_render_changelog(BASE_DIR, BASE_DIR / "dist")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_base = Path(temp_dir)
+            shutil.copy2(BASE_DIR / "UPDATE.md", temp_base / "UPDATE.md")
+            (temp_base / "data").mkdir()
+            history = BASE_DIR / "data" / "changelog_history.json"
+            if history.exists():
+                shutil.copy2(history, temp_base / "data" / history.name)
+            latest_ver, rendered_html = load_and_render_changelog(temp_base, temp_base / "dist")
         self.assertEqual(latest_ver, expected_ver)
         self.assertIn(expected_ver, rendered_html)
 
