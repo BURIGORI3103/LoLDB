@@ -1,6 +1,6 @@
-// LoLDB Service Worker - Dual Cache Architecture v2.7.0-300147a7 (Scoped Cache Cleanup)
+// LoLDB Service Worker - Dual Cache Architecture v2.7.1-201f9f5a (Scoped Cache Cleanup)
 const CACHE_PREFIX = 'loldb-';
-const CORE_CACHE = 'loldb-core-v2.7.0-300147a7';
+const CORE_CACHE = 'loldb-core-v2.7.1-201f9f5a';
 const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像オンデマンド＆段階プリフェッチキャッシュ
 
 const ASSETS_TO_CACHE = [
