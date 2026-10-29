@@ -569,6 +569,10 @@ def build():
     .pick-list {{ display: grid; gap: 8px; }}
     .pick-row {{ background: #172235; border: 1px solid #334155; border-radius: 10px; padding: 12px; }}
     .pick-row strong {{ color: #7dd3fc; }}
+    .pick-choice-garen {{ color: #fcd34d; }}
+    .pick-choice-mordekaiser {{ color: #d8b4fe; }}
+    .pick-choice-malphite {{ color: #86efac; }}
+    .pick-choice-olaf {{ color: #fda4af; }}
     .pick-row p {{ margin: 5px 0 0; }}
     .controls {{
       display: flex;
@@ -2261,7 +2265,7 @@ def build():
         <button class="nav-tab active" data-tab="champions">👑 チャンピオン</button>
         <button class="nav-tab" data-tab="items">🛡️ アイテム図鑑</button>
         <button class="nav-tab" data-tab="simulator">⚔️ 対面シミュレーター</button>
-        <button class="nav-tab" data-tab="picks">📋 TOP選出早見表</button>
+        <button class="nav-tab" data-tab="picks">📋 チャンプピック早見表</button>
       </nav>
       <div class="controls" id="champControls">
         <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名・ひらがなで検索..." autocomplete="off">
@@ -2366,7 +2370,7 @@ def build():
 
     <div id="viewPicks" style="display: none;">
       <section class="pick-guide">
-        <h2>TOP選出早見表</h2>
+        <h2>チャンプピック早見表</h2>
         <p>ガレンの習熟度を優先。相性が僅差ならガレン、APが必要ならモルデカイザーも検討。オラフは習得後に選択。</p>
         <p>パッチ26.21を基準にした実戦用の暫定判断です。勝率を検証した統計表ではありません。相手チームにAPが多い場合はマルファイトを再検討してください。</p>
         <input id="pickSearch" class="search-input" type="search" placeholder="相手チャンピオン名で検索" aria-label="相手チャンピオン名で検索">
@@ -4419,7 +4423,11 @@ def build():
       if (!rows.length) {{ list.textContent = "該当する対面はありません。未掲載の対面はガレンを基準に検討してください。"; return; }}
       rows.forEach(row => {{
         const card = document.createElement("div"); card.className = "pick-row";
-        const title = document.createElement("strong"); title.textContent = row[0] + " → " + row[1];
+        const title = document.createElement("strong"); title.textContent = row[0] + " → ";
+        const choice = document.createElement("span");
+        const choiceClasses = {{ "ガレン": "garen", "モルデカイザー": "mordekaiser", "マルファイト": "malphite", "オラフ": "olaf" }};
+        choice.className = "pick-choice-" + choiceClasses[row[1]]; choice.textContent = row[1];
+        title.append(choice);
         const reason = document.createElement("p"); reason.textContent = row[2];
         card.append(title, reason); list.append(card);
       }});
