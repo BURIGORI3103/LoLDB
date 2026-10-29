@@ -28,6 +28,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 ## 生成物と運用上の制約
 
+- TOP選出早見表は、ガレンを優先する4体の手動登録候補を検索・絞り込みできる。パッチ26.21を基準にした暫定判断であり、全対面を網羅した統計や勝率の保証ではない。追加候補は対面の特性とチーム構成、プレイヤーの習熟度を踏まえて検討する。
 - index.html と dist/index.html は生成物です。UI の変更は可能な限り生成元の build_pwa.py に反映し、ビルド後に出力を確認します。
 - build_pwa.py の再ビルド時は、merged_data/all_champions.json および個別JSONが正本として同一同期されていることを保証します。
 - アプリ上部のバージョンバッジ（`#patchBadge`）およびアップデート履歴モーダル（`#changelogModal`）は、`build_pwa.py` 実行時に `UPDATE.md` および `graviXObsidian/Topics/LoLDB/Update_History.md`（ならびに `data/changelog_history.json`）を動的パースして100%自動生成されます。さらに `c:\Project\add_update.py` 実行時に `build_pwa.py` が自動呼び出しされ、アップデート記帳と同時にPWA成果物が最新バージョンへ再ビルドされます。

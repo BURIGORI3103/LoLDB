@@ -532,6 +532,7 @@ def build():
     }}
     .main-nav {{
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
       border-bottom: 1px solid #1e293b;
       padding-bottom: 8px;
@@ -560,6 +561,15 @@ def build():
       border-color: #334155;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }}
+    .pick-guide {{ max-width: 1000px; margin: 20px auto; padding: 0 12px; }}
+    .pick-guide p {{ color: #cbd5e1; line-height: 1.6; }}
+    .pick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }}
+    .pick-filters button {{ background: #1e293b; color: #e2e8f0; border: 1px solid #475569; border-radius: 8px; padding: 8px 12px; cursor: pointer; }}
+    .pick-filters button.active {{ border-color: #38bdf8; color: #38bdf8; }}
+    .pick-list {{ display: grid; gap: 8px; }}
+    .pick-row {{ background: #172235; border: 1px solid #334155; border-radius: 10px; padding: 12px; }}
+    .pick-row strong {{ color: #7dd3fc; }}
+    .pick-row p {{ margin: 5px 0 0; }}
     .controls {{
       display: flex;
       flex-wrap: wrap;
@@ -2251,6 +2261,7 @@ def build():
         <button class="nav-tab active" data-tab="champions">👑 チャンピオン</button>
         <button class="nav-tab" data-tab="items">🛡️ アイテム図鑑</button>
         <button class="nav-tab" data-tab="simulator">⚔️ 対面シミュレーター</button>
+        <button class="nav-tab" data-tab="picks">📋 TOP選出早見表</button>
       </nav>
       <div class="controls" id="champControls">
         <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名・ひらがなで検索..." autocomplete="off">
@@ -2353,6 +2364,21 @@ def build():
       </div>
     </div>
 
+    <div id="viewPicks" style="display: none;">
+      <section class="pick-guide">
+        <h2>TOP選出早見表</h2>
+        <p>ガレンの習熟度を優先。相性が僅差ならガレン、APが必要ならモルデカイザーも検討。オラフは習得後に選択。</p>
+        <p>パッチ26.21を基準にした実戦用の暫定判断です。勝率を検証した統計表ではありません。相手チームにAPが多い場合はマルファイトを再検討してください。</p>
+        <input id="pickSearch" class="search-input" type="search" placeholder="相手チャンピオン名で検索" aria-label="相手チャンピオン名で検索">
+        <div class="pick-filters" aria-label="推奨チャンピオンで絞り込み">
+          <button type="button" class="active" data-pick="すべて" aria-pressed="true">すべて</button><button type="button" data-pick="ガレン" aria-pressed="false">ガレン</button><button type="button" data-pick="モルデカイザー" aria-pressed="false">モルデカイザー</button><button type="button" data-pick="マルファイト" aria-pressed="false">マルファイト</button><button type="button" data-pick="オラフ" aria-pressed="false">オラフ</button>
+        </div>
+        <p id="pickCount" aria-live="polite"></p><div id="pickList" class="pick-list"></div>
+        <h3>先出し・BANの目安</h3>
+        <p>先出しはガレン。味方がAD過多ならモルデカイザーも候補。ガレンのBANはダリウスかカミール、モルデカイザーのBANはオラフかグウェンを検討。</p>
+        <p>相手がモルデカイザーなら、習得後のオラフを検討。マルファイトは避けたい対面です。未習得のチャンピオンより、使い慣れたガレンを優先して構いません。</p>
+      </section>
+    </div>
     <!-- 対面シミュレータービュー (Phase 4 実装) -->
     <div id="viewSimulator" style="display: none;">
       <div class="sim-container">
@@ -4371,12 +4397,44 @@ def build():
     const viewChampsEl = document.getElementById("viewChampions");
     const viewItemsEl = document.getElementById("viewItems");
     const viewSimEl = document.getElementById("viewSimulator");
+    const viewPicksEl = document.getElementById("viewPicks");
+
+    // ユーザー提供のガレン対面表と、暫定の補足候補。勝率統計ではない。
+    const pickRows = [
+      ["アカリ","ガレン","耐えて短期トレード"],["アトロックス","ガレン","Qの外側を避ける"],["アンベッサ","ガレン","ダッシュ後を狙う"],["イラオイ","ガレン","Eを避けて短期戦"],["ウラジミール","ガレン","序盤に圧力"],["オラフ","ガレン","R中の長期戦を避ける"],["カシオペア","ガレン","接近が難しいので慎重に"],["ガリオ","ガレン","AP耐久型に物理ダメージ"],["ガングプランク","ガレン","樽の処理が重要"],["クレッド","ガレン","乗馬中の長期戦を避ける"],["グウェン","ガレン","Q中央を回避"],["グラガス","ガレン","回復と妨害に注意"],["ケイル","ガレン","序盤に主導権"],["ケネン","ガレン","無理な接近を避ける"],["コグ＝マウ","ガレン","珍しいTOP、序盤に圧力"],["ザーヘン","ガレン","長期戦を避ける"],["シンジド","ガレン","追いかけすぎない"],["スウェイン","ガレン","長期戦を避ける"],["ダリウス","ガレン","不利ならBANを検討"],["トランドル","ガレン","長い殴り合いを避ける"],["ニーコ","ガレン","分身とEに注意"],["ヘイマーディンガー","ガレン","タレットに無理に突っ込まない"],["ボリベア","ガレン","2回目のWを受けない"],["ランブル","ガレン","長い炎上トレードを避ける"],["リヴェン","ガレン","短期トレードで対応"],["リサンドラ","ガレン","無理なダイブをしない"],["リリア","ガレン","移動速度と継続ダメージに注意"],["ワーウィック","ガレン","低HP時の回復に注意"],
+      ["マルファイト","モルデカイザー","AP枠として検討。孤立Qを狙う"],["オーン","モルデカイザー","AP枠として検討。鍛冶神の呼び声に注意"],["サイオン","モルデカイザー","AP枠として検討。Qの範囲から出る"],["チョ＝ガス","モルデカイザー","AP枠として検討。Qを避け、Rの確定ダメージに注意"],["タム・ケンチ","モルデカイザー","AP枠として検討。長期戦と回復に注意"],
+      ["トリンダメア","マルファイト","通常攻撃主体への候補。R中の殴り合いを避ける"],["ヤスオ","マルファイト","通常攻撃主体への候補。Eの攻撃速度低下を活用"],["ヨネ","マルファイト","通常攻撃主体への候補。Eの戻り位置に注意"],["クイン","マルファイト","AD通常攻撃主体への候補。序盤は無理に追わない"],["ヴェイン","マルファイト","AD通常攻撃主体への候補。Wの確定ダメージに注意"],["ジェイス","マルファイト","AD主体への候補。遠隔攻撃を受けすぎない"],
+      ["モルデカイザー","オラフ","習得後の候補。RでモルデカイザーのRを防げるが、長期戦は体力と装備を確認"]
+    ];
+    let pickFilter = "すべて";
+    function renderPickGuide() {{
+      const query = document.getElementById("pickSearch").value.trim().toLocaleLowerCase();
+      const rows = pickRows.filter(row => (pickFilter === "すべて" || row[1] === pickFilter) && row[0].toLocaleLowerCase().includes(query)).sort((a,b) => a[0].localeCompare(b[0], "ja"));
+      document.getElementById("pickCount").textContent = rows.length + "対面を表示";
+      const list = document.getElementById("pickList");
+      list.replaceChildren();
+      if (!rows.length) {{ list.textContent = "該当する対面はありません。未掲載の対面はガレンを基準に検討してください。"; return; }}
+      rows.forEach(row => {{
+        const card = document.createElement("div"); card.className = "pick-row";
+        const title = document.createElement("strong"); title.textContent = row[0] + " → " + row[1];
+        const reason = document.createElement("p"); reason.textContent = row[2];
+        card.append(title, reason); list.append(card);
+      }});
+    }}
+    document.getElementById("pickSearch").addEventListener("input", renderPickGuide);
+    document.querySelectorAll("[data-pick]").forEach(button => button.addEventListener("click", () => {{
+      pickFilter = button.dataset.pick;
+      document.querySelectorAll("[data-pick]").forEach(b => {{ b.classList.toggle("active", b === button); b.setAttribute("aria-pressed", String(b === button)); }});
+      renderPickGuide();
+    }}));
+    renderPickGuide();
 
     document.querySelectorAll(".nav-tab").forEach(tab => {{
       tab.addEventListener("click", () => {{
         document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
         tab.classList.add("active");
         const target = tab.getAttribute("data-tab");
+        viewPicksEl.style.display = target === "picks" ? "block" : "none";
 
         if (target === "champions") {{
           viewChampsEl.style.display = "block";
@@ -4389,10 +4447,10 @@ def build():
           viewSimEl.style.display = "none";
           if (champControlsEl) champControlsEl.style.display = "none";
           renderItemsList();
-        }} else if (target === "simulator") {{
+        }} else if (target === "simulator" || target === "picks") {{
           viewChampsEl.style.display = "none";
           viewItemsEl.style.display = "none";
-          viewSimEl.style.display = "block";
+          viewSimEl.style.display = target === "simulator" ? "block" : "none";
           if (champControlsEl) champControlsEl.style.display = "none";
         }}
       }});
