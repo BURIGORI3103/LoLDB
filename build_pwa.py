@@ -2720,8 +2720,8 @@ def build():
       if (factors.length === 0) factors.push("標準ステータス均衡 (0)");
 
       let adv = "even";
-      let advLabel = "特性推定: 五分 (実測統計なし)";
-      let reasonText = reasons[0] || "明確な特性差がなく、スキルの命中精度や立ち回り次第で五分に戦える対面です。";
+      let advLabel = "判定材料不足（実測統計なし）";
+      let reasonText = reasons.length ? reasons.join(" ＆ ") + "。これだけでは有利・不利を判定できません。" : "このレーンの実測統計がなく、基礎特性だけでは有利・不利を判定できません。";
       if (score >= 2) {{
         adv = "fav";
         advLabel = "特性推定: 有利傾向 (実測統計なし)";
@@ -3228,9 +3228,15 @@ def build():
           }}
         }}
 
-        // 4. それでも理由がない場合：根拠のない定型文を乱発せず明確に「理由データなし」
-        if (!reasonText) {{
-          reasonText = "理由データなし";
+        // 4. 因果関係が未検証の場合は、確認できる基礎特性を参考情報として示す。
+        if (!reasonText || reasonText === "理由データなし") {{
+          const opponent = CHAMPIONS[m.champion_id];
+          const myRange = c.stats?.attackrange;
+          const oppRange = opponent?.stats?.attackrange;
+          const facts = [];
+          if (Number.isFinite(myRange) && Number.isFinite(oppRange)) facts.push(`通常攻撃射程は${{c.name}} ${{myRange}}、${{opponent.name}} ${{oppRange}}`);
+          if (opponent?.sustain_info?.has_sustain) facts.push(`${{opponent.name}}は回復または自己シールドを持つ`);
+          reasonText = facts.length ? `参考特性：${{facts.join("。")}}。勝率の原因は未検証。` : "勝率の原因は未検証。";
         }}
 
         const badgeClass = isFav ? "badge-fav" : "badge-unfav";
