@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "アイオニアの伝統剣術ウージュー流を操る剣士。ウーコンの師匠 Qのワープ&無敵とUltの加速により追撃を得意とし、AA主体の高いDPSで敵を切り刻む生粋のスカーミッシャー 遠距離攻撃手段を持たず、自身は脆いので先陣を切るのは苦手だが、ぶつかっ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/masteryi/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:52+09:00"
+  },
   "wiki_info": {
     "champion_id": "MasterYi",
     "name": "マスター・イー",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/即時発動のCC・逃走手段が無いジャングラー QのドッジとWの回復＋ダメージ低減により相手のバーストをかわす手段が豊富。 アサシンやそれに類するジャングラーはこれらを防ぐ手段が無いため"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "61.29%",
+            "winrate_num": 61.29,
+            "winrate_display": "勝率 61.29%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.29%（統計的に有利）"
+          },
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "59.08%",
+            "winrate_num": 59.08,
+            "winrate_display": "勝率 59.08%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.08%（統計的に有利）"
+          },
+          {
+            "champion_id": "Karthus",
+            "name": "カーサス",
+            "winrate": "58.97%",
+            "winrate_num": 58.97,
+            "winrate_display": "勝率 58.97%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.97%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "RekSai",
+            "name": "レク＝サイ",
+            "winrate": "45.19%",
+            "winrate_num": 45.19,
+            "winrate_display": "勝率 45.19%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.19%（統計的に不利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "45.71%",
+            "winrate_num": 45.71,
+            "winrate_display": "勝率 45.71%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.71%（統計的に不利）"
+          },
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "45.95%",
+            "winrate_num": 45.95,
+            "winrate_display": "勝率 45.95%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.95%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6672",
+            "name": "クラーケン スレイヤー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6676",
+            "name": "コレクター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/masteryi/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:53+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Rumble",
+            "name": "ランブル",
+            "winrate": "63.16%",
+            "winrate_num": 63.16,
+            "winrate_display": "勝率 63.16%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.16%（統計的に有利）"
+          },
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "56.67%",
+            "winrate_num": 56.67,
+            "winrate_display": "勝率 56.67%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.67%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "56.62%",
+            "winrate_num": 56.62,
+            "winrate_display": "勝率 56.62%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.62%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Warwick",
+            "name": "ワーウィック",
+            "winrate": "35.59%",
+            "winrate_num": 35.59,
+            "winrate_display": "勝率 35.59%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.59%（統計的に不利）"
+          },
+          {
+            "champion_id": "Illaoi",
+            "name": "イラオイ",
+            "winrate": "39.39%",
+            "winrate_num": 39.39,
+            "winrate_display": "勝率 39.39%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.39%（統計的に不利）"
+          },
+          {
+            "champion_id": "Shen",
+            "name": "シェン",
+            "winrate": "39.47%",
+            "winrate_num": 39.47,
+            "winrate_display": "勝率 39.47%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.47%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3153",
+            "name": "ルインドキング ブレード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6676",
+            "name": "コレクター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/masteryi/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:53+09:00"
+      }
+    }
   }
 }

@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "和平によるフレヨルド統一を目指す部族、アヴァローサンの戦母。セジュアニとは幼馴染だが現在は敵同士 トリンダメアは政略結婚で迎え入れた夫(この設定は一度消えたが復活した)。 豊富なスロウ・視界確保・長距離エンゲージと、ユーティリティに優れたマ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/ashe/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:45+09:00"
+  },
   "wiki_info": {
     "champion_id": "Ashe",
     "name": "アッシュ",
@@ -192,5 +198,371 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /接近手段の乏しいジャガーノート パッシブによりAAだけでスローを付与し続けられるのでKiteが得意。接近手段が乏しい相手は一方的に殴り続けられる。 いざとなればUltも有効で、Qが発動でき"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "バリア"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Sivir",
+            "name": "シヴィア",
+            "winrate": "52.36%",
+            "winrate_num": 52.36,
+            "winrate_display": "勝率 52.36%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.36%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nilah",
+            "name": "ニーラ",
+            "winrate": "52.31%",
+            "winrate_num": 52.31,
+            "winrate_display": "勝率 52.31%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.31%（統計的に有利）"
+          },
+          {
+            "champion_id": "Aphelios",
+            "name": "アフェリオス",
+            "winrate": "52.26%",
+            "winrate_num": 52.26,
+            "winrate_display": "勝率 52.26%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.26%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Seraphine",
+            "name": "セラフィーン",
+            "winrate": "38.18%",
+            "winrate_num": 38.18,
+            "winrate_display": "勝率 38.18%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.18%（統計的に不利）"
+          },
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "42.57%",
+            "winrate_num": 42.57,
+            "winrate_display": "勝率 42.57%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.57%（統計的に不利）"
+          },
+          {
+            "champion_id": "AurelionSol",
+            "name": "オレリオン・ソル",
+            "winrate": "42.78%",
+            "winrate_num": 42.78,
+            "winrate_display": "勝率 42.78%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.78%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2523",
+            "name": "ヘクスオプティックC44",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3046",
+            "name": "ファントム ダンサー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8008",
+          "keystone_name": "リーサルテンポ",
+          "choices": [
+            "冷静沈着",
+            "レジェンド: 迅速",
+            "切り崩し"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ビスケットデリバリー",
+            "疾駆"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ashe/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:26:25+09:00"
+      }
+    },
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "57.5%",
+            "winrate_num": 57.5,
+            "winrate_display": "勝率 57.5%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.5%（統計的に有利）"
+          },
+          {
+            "champion_id": "Maokai",
+            "name": "マオカイ",
+            "winrate": "54.69%",
+            "winrate_num": 54.69,
+            "winrate_display": "勝率 54.69%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.69%（統計的に有利）"
+          },
+          {
+            "champion_id": "Camille",
+            "name": "カミール",
+            "winrate": "53.57%",
+            "winrate_num": 53.57,
+            "winrate_display": "勝率 53.57%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.57%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "30.36%",
+            "winrate_num": 30.36,
+            "winrate_display": "勝率 30.36%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 30.36%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rell",
+            "name": "レル",
+            "winrate": "37.74%",
+            "winrate_num": 37.74,
+            "winrate_display": "勝率 37.74%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.74%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "38.64%",
+            "winrate_num": 38.64,
+            "winrate_display": "勝率 38.64%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.64%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3118",
+            "name": "マリグナンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4005",
+            "name": "帝国の指令",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6696",
+            "name": "アクシオム アーク",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8229",
+          "keystone_name": "秘儀の彗星",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ashe/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:26+09:00"
+      }
+    }
   }
 }

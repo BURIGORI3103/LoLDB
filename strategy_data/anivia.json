@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "フレヨルドの凍てつく氷と激しい風の中から生まれた、オーンとボリベアの妹にあたる不死鳥の半神。 Ultで生み出すスロー&ダメージのフィールドとQのスタンとWの壁が特徴となるゾーンコントロールメイジ UltのDPSに加えEのバーストも併せ持ち火",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/anivia/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:42+09:00"
+  },
   "wiki_info": {
     "champion_id": "Anivia",
     "name": "アニビア",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/短射程 有効射程が短い対面。Ultを覚える前もAA射程は長く、直線的な仕掛けはQで防げる。 Ultを覚えた後はPush性能がアニビアの方が圧倒的に高いため、相手の得意なロームを許さな"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "58.33%",
+            "winrate_num": 58.33,
+            "winrate_display": "勝率 58.33%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.33%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vladimir",
+            "name": "ブラッドミア",
+            "winrate": "55.31%",
+            "winrate_num": 55.31,
+            "winrate_display": "勝率 55.31%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.31%（統計的に有利）"
+          },
+          {
+            "champion_id": "Akshan",
+            "name": "アクシャン",
+            "winrate": "54.87%",
+            "winrate_num": 54.87,
+            "winrate_display": "勝率 54.87%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.87%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "42.86%",
+            "winrate_num": 42.86,
+            "winrate_display": "勝率 42.86%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.86%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sion",
+            "name": "サイオン",
+            "winrate": "43.42%",
+            "winrate_num": 43.42,
+            "winrate_display": "勝率 43.42%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.42%（統計的に不利）"
+          },
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "43.54%",
+            "winrate_num": 43.54,
+            "winrate_display": "勝率 43.54%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.54%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3118",
+            "name": "マリグナンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "追い打ち",
+            "グリスリー メメント",
+            "執拗な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "冷静沈着",
+            "最期の慈悲"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/anivia/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:24+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "winrate": "73.17%",
+            "winrate_num": 73.17,
+            "winrate_display": "勝率 73.17%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 73.17%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "61.0%",
+            "winrate_num": 61.0,
+            "winrate_display": "勝率 61.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "57.58%",
+            "winrate_num": 57.58,
+            "winrate_display": "勝率 57.58%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.58%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "35.06%",
+            "winrate_num": 35.06,
+            "winrate_display": "勝率 35.06%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.06%（統計的に不利）"
+          },
+          {
+            "champion_id": "Olaf",
+            "name": "オラフ",
+            "winrate": "40.94%",
+            "winrate_num": 40.94,
+            "winrate_display": "勝率 40.94%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.94%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "43.06%",
+            "winrate_num": 43.06,
+            "winrate_display": "勝率 43.06%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.06%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3040",
+            "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8992",
+          "keystone_name": "死神の残り火",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "冷静沈着",
+            "切り崩し"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/anivia/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:25+09:00"
+      }
+    }
   }
 }

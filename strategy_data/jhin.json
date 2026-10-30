@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "殺戮を芸術と称する殺人鬼。均衡の守人に捕らえられたが、アイオニア評議会お抱えの暗殺者として活動を続ける フェイの元学友 特殊なAA仕様を持つマークスマンで、ASが伸びず4発撃つとリロードが必要だが、ADの伸びが凄まじく4発目の弾丸は減少体力",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/jhin/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:22+09:00"
+  },
   "wiki_info": {
     "champion_id": "Jhin",
     "name": "ジン",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /アンチAS AA関連の特殊な仕様の都合、AA回数に対するカウンター要素に強い。 またクリティカルで加速、スイフトネスブーツも積みやすいのでCCを食らっても即座に逃げて効果の終了を待てる。 "
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "バリア"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ezreal",
+            "name": "エズリアル",
+            "winrate": "53.64%",
+            "winrate_num": 53.64,
+            "winrate_display": "勝率 53.64%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.64%（統計的に有利）"
+          },
+          {
+            "champion_id": "Viktor",
+            "name": "ビクター",
+            "winrate": "53.14%",
+            "winrate_num": 53.14,
+            "winrate_display": "勝率 53.14%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.14%（統計的に有利）"
+          },
+          {
+            "champion_id": "Caitlyn",
+            "name": "ケイトリン",
+            "winrate": "52.54%",
+            "winrate_num": 52.54,
+            "winrate_display": "勝率 52.54%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.54%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Karthus",
+            "name": "カーサス",
+            "winrate": "45.84%",
+            "winrate_num": 45.84,
+            "winrate_display": "勝率 45.84%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.84%（統計的に不利）"
+          },
+          {
+            "champion_id": "Yasuo",
+            "name": "ヤスオ",
+            "winrate": "45.91%",
+            "winrate_num": 45.91,
+            "winrate_display": "勝率 45.91%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.91%（統計的に不利）"
+          },
+          {
+            "champion_id": "Lux",
+            "name": "ラックス",
+            "winrate": "46.65%",
+            "winrate_num": 46.65,
+            "winrate_display": "勝率 46.65%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.65%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1120",
+            "name": "ドラン ヘルム"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6697",
+            "name": "ヒュブリス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3046",
+            "name": "ファントム ダンサー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8021",
+          "keystone_name": "フリートフットワーク",
+          "choices": [
+            "冷静沈着",
+            "レジェンド: 血脈",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い風",
+            "強まる嵐"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/jhin/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:26:43+09:00"
+      }
+    }
   }
 }

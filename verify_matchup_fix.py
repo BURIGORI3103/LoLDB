@@ -1,4 +1,5 @@
 import json
+import hashlib
 import re
 from pathlib import Path
 
@@ -73,10 +74,13 @@ def verify_all():
 
     # Service Worker
     sw_file = (BASE_DIR / "dist" / "sw.js").read_text(encoding="utf-8")
-    if "loldb-core-v19" not in sw_file:
-        errors.append("sw.js does not contain loldb-core-v19")
+    from build_pwa import _parse_markdown_update_block
+    version = _parse_markdown_update_block((BASE_DIR / "UPDATE.md").read_text(encoding="utf-8"))["version"]
+    expected_cache = f"loldb-core-{version}-{hashlib.sha256(root_html.encode('utf-8')).hexdigest()[:8]}"
+    if expected_cache not in sw_file:
+        errors.append(f"Service Workerのキャッシュ名が生成HTMLと不一致: {expected_cache}")
     else:
-        print("[OK] sw.js has updated cache version loldb-core-v19.")
+        print(f"[OK] キャッシュ名と生成HTMLが一致: {expected_cache}")
 
     if errors:
         print(f"\n[FAIL] Found {len(errors)} errors:")

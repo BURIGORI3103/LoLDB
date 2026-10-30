@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "腕っぷしに秀でた同族のなかで並外れた知性を以て部族を率いるトロールの王。氷の魔女と同盟を結び、フレヨルド支配の機会を虎視眈々と伺っている その戦い方は非常に荒々しく、強力なバフとデバフで殴り合いを制するAA主体のジャガーノート Ultで敵の",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/trundle/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:43+09:00"
+  },
   "wiki_info": {
     "champion_id": "Trundle",
     "name": "トランドル",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "有利(Strong Against) ・JG運用 /ステータス型のタンク 相手のAR/MRを割合で吸収する性質上、AR/MRの高さでタンク性能を確保している相手に強い。 タイマンで負けることはまず無いのでオブジェクトの確保やカウンターといっ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "58.06%",
+            "winrate_num": 58.06,
+            "winrate_display": "勝率 58.06%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.06%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "57.14%",
+            "winrate_num": 57.14,
+            "winrate_display": "勝率 57.14%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.14%（統計的に有利）"
+          },
+          {
+            "champion_id": "Chogath",
+            "name": "チョ＝ガス",
+            "winrate": "56.91%",
+            "winrate_num": 56.91,
+            "winrate_display": "勝率 56.91%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.91%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "35.0%",
+            "winrate_num": 35.0,
+            "winrate_display": "勝率 35.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "40.0%",
+            "winrate_num": 40.0,
+            "winrate_display": "勝率 40.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Heimerdinger",
+            "name": "ハイマーディンガー",
+            "winrate": "41.67%",
+            "winrate_num": 41.67,
+            "winrate_display": "勝率 41.67%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.67%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3074",
+            "name": "ラヴァナス ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3181",
+            "name": "ハルブレイカー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8008",
+          "keystone_name": "リーサルテンポ",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "打ちこわし",
+            "ボーンアーマー"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/trundle/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:15+09:00"
+      }
+    },
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "61.76%",
+            "winrate_num": 61.76,
+            "winrate_display": "勝率 61.76%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.76%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vi",
+            "name": "ヴァイ",
+            "winrate": "58.58%",
+            "winrate_num": 58.58,
+            "winrate_display": "勝率 58.58%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.58%（統計的に有利）"
+          },
+          {
+            "champion_id": "XinZhao",
+            "name": "シン・ジャオ",
+            "winrate": "57.72%",
+            "winrate_num": 57.72,
+            "winrate_display": "勝率 57.72%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.72%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Darius",
+            "name": "ダリウス",
+            "winrate": "32.2%",
+            "winrate_num": 32.2,
+            "winrate_display": "勝率 32.2%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 32.2%（統計的に不利）"
+          },
+          {
+            "champion_id": "Nidalee",
+            "name": "ニダリー",
+            "winrate": "32.31%",
+            "winrate_num": 32.31,
+            "winrate_display": "勝率 32.31%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 32.31%（統計的に不利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "35.44%",
+            "winrate_num": 35.44,
+            "winrate_display": "勝率 35.44%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.44%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8005",
+          "keystone_name": "プレスアタック",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "疾駆"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/trundle/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:16+09:00"
+      }
+    }
   }
 }

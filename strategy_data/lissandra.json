@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "凍れるウォッチャーたちから人々を守るため戦いに殉じたフレヨルド太古の英雄、三姉妹の末妹 密かに生き延び、フレヨルド全土からウォッチャーの痕跡を抹消するためフロストガードの長と邪悪な氷の魔女の顔を使い分け暗躍する 自身の周りに発生させるAoE",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/lissandra/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:42+09:00"
+  },
   "wiki_info": {
     "champion_id": "Lissandra",
     "name": "リサンドラ",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "Strong Against etc/大半のスレイヤー・ダイバー Wは短射程だが周囲即時発動スネア、Ultは短射程だが敵に使えば対象指定即時発動スタン、自分に使えば即時発動無敵+回復+反撃。 いずれも接近してからバーストを叩き込む必要のある"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "60.38%",
+            "winrate_num": 60.38,
+            "winrate_display": "勝率 60.38%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.38%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "60.32%",
+            "winrate_num": 60.32,
+            "winrate_display": "勝率 60.32%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.32%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "59.49%",
+            "winrate_num": 59.49,
+            "winrate_display": "勝率 59.49%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.49%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "43.48%",
+            "winrate_num": 43.48,
+            "winrate_display": "勝率 43.48%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.48%（統計的に不利）"
+          },
+          {
+            "champion_id": "Ziggs",
+            "name": "ジグス",
+            "winrate": "43.58%",
+            "winrate_num": 43.58,
+            "winrate_display": "勝率 43.58%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.58%（統計的に不利）"
+          },
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "45.32%",
+            "winrate_num": 45.32,
+            "winrate_display": "勝率 45.32%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.32%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3118",
+            "name": "マリグナンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "追い打ち",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "マナフローバンド",
+            "至高"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/lissandra/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:49+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Volibear",
+            "name": "ボリベア",
+            "winrate": "66.67%",
+            "winrate_num": 66.67,
+            "winrate_display": "勝率 66.67%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 66.67%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vayne",
+            "name": "ヴェイン",
+            "winrate": "63.89%",
+            "winrate_num": 63.89,
+            "winrate_display": "勝率 63.89%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.89%（統計的に有利）"
+          },
+          {
+            "champion_id": "Tryndamere",
+            "name": "トリンダメア",
+            "winrate": "62.07%",
+            "winrate_num": 62.07,
+            "winrate_display": "勝率 62.07%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.07%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "41.18%",
+            "winrate_num": 41.18,
+            "winrate_display": "勝率 41.18%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.18%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gangplank",
+            "name": "ガングプランク",
+            "winrate": "41.35%",
+            "winrate_num": 41.35,
+            "winrate_display": "勝率 41.35%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.35%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sion",
+            "name": "サイオン",
+            "winrate": "42.14%",
+            "winrate_num": 42.14,
+            "winrate_display": "勝率 42.14%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.14%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3118",
+            "name": "マリグナンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "追い打ち",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "マナフローバンド",
+            "至高"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/lissandra/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:49+09:00"
+      }
+    }
   }
 }

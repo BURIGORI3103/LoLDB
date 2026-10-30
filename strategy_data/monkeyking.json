@@ -1,4 +1,7 @@
 {
+  "name": "ウーコン",
+  "slug": "monkeyking",
+  "patch": "16.21.1",
   "roles": [
     "JUG",
     "TOP"
@@ -12,34 +15,94 @@
       {
         "champion_id": "Jayce",
         "name": "ジェイス",
-        "reason": "勝率 58.45%（統計的に有利）"
+        "winrate": "57.24%",
+        "winrate_num": 57.24,
+        "winrate_display": "勝率 57.24%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 57.24%（統計的に有利）"
       },
       {
-        "champion_id": "Trundle",
-        "name": "トランドル",
-        "reason": "勝率 58.14%（統計的に有利）"
+        "champion_id": "Qiyana",
+        "name": "キヤナ",
+        "winrate": "57.09%",
+        "winrate_num": 57.09,
+        "winrate_display": "勝率 57.09%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 57.09%（統計的に有利）"
       },
       {
-        "champion_id": "Rengar",
-        "name": "レンガー",
-        "reason": "勝率 57.17%（統計的に有利）"
+        "champion_id": "Zed",
+        "name": "ゼド",
+        "winrate": "56.5%",
+        "winrate_num": 56.5,
+        "winrate_display": "勝率 56.5%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 56.5%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Malphite",
-        "name": "マルファイト",
-        "reason": "勝率 45.77%（統計的に不利）"
-      },
-      {
         "champion_id": "Taliyah",
         "name": "タリヤ",
-        "reason": "勝率 46.05%（統計的に不利）"
+        "winrate": "45.84%",
+        "winrate_num": 45.84,
+        "winrate_display": "勝率 45.84%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 45.84%（統計的に不利）"
       },
       {
-        "champion_id": "RekSai",
-        "name": "レク＝サイ",
-        "reason": "勝率 46.74%（統計的に不利）"
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "winrate": "46.32%",
+        "winrate_num": 46.32,
+        "winrate_display": "勝率 46.32%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 46.32%（統計的に不利）"
+      },
+      {
+        "champion_id": "Zyra",
+        "name": "ザイラ",
+        "winrate": "47.08%",
+        "winrate_num": 47.08,
+        "winrate_display": "勝率 47.08%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 47.08%（統計的に不利）"
       }
     ]
   },
@@ -112,8 +175,17 @@
       "Health Scaling"
     ]
   },
-  "name": "ウーコン",
-  "slug": "wukong",
+  "gameplay_notes": {
+    "laning": "マスター・イーの一番弟子にして同じくウージュー流を操る猿のヴァスタヤ、シモン族の若き戦士 複数のリープで分身と共に敵陣に飛び込み、UltのAoEノックアップで戦場をかき乱すダイバー 高回転で使えるAR低下つきのAA強化であるQと、パッシブの",
+    "teamfight": ""
+  },
+  "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/monkeyking/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:56+09:00"
+  },
   "wiki_info": {
     "champion_id": "MonkeyKing",
     "name": "ウーコン",
@@ -125,5 +197,375 @@
       "相性・対策 (カウンター)": "Strong Against ●TOP運用: /ADファイター全般 パッシブによりARが増加。ADファイター相手は基本的に有利がつく。 特にWはブリンク＋ステルス＋チャンピオン扱いの壁ということで、非貫通のスキルショットや対象指定に強い。 "
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "57.24%",
+            "winrate_num": 57.24,
+            "winrate_display": "勝率 57.24%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.24%（統計的に有利）"
+          },
+          {
+            "champion_id": "Qiyana",
+            "name": "キヤナ",
+            "winrate": "57.09%",
+            "winrate_num": 57.09,
+            "winrate_display": "勝率 57.09%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.09%（統計的に有利）"
+          },
+          {
+            "champion_id": "Zed",
+            "name": "ゼド",
+            "winrate": "56.5%",
+            "winrate_num": 56.5,
+            "winrate_display": "勝率 56.5%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.5%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Taliyah",
+            "name": "タリヤ",
+            "winrate": "45.84%",
+            "winrate_num": 45.84,
+            "winrate_display": "勝率 45.84%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.84%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "46.32%",
+            "winrate_num": 46.32,
+            "winrate_display": "勝率 46.32%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.32%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zyra",
+            "name": "ザイラ",
+            "winrate": "47.08%",
+            "winrate_num": 47.08,
+            "winrate_display": "勝率 47.08%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.08%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/monkeyking/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:54+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "63.89%",
+            "winrate_num": 63.89,
+            "winrate_display": "勝率 63.89%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.89%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vayne",
+            "name": "ヴェイン",
+            "winrate": "58.49%",
+            "winrate_num": 58.49,
+            "winrate_display": "勝率 58.49%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.49%（統計的に有利）"
+          },
+          {
+            "champion_id": "Olaf",
+            "name": "オラフ",
+            "winrate": "57.48%",
+            "winrate_num": 57.48,
+            "winrate_display": "勝率 57.48%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.48%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "30.0%",
+            "winrate_num": 30.0,
+            "winrate_display": "勝率 30.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 30.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Heimerdinger",
+            "name": "ハイマーディンガー",
+            "winrate": "33.96%",
+            "winrate_num": 33.96,
+            "winrate_display": "勝率 33.96%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 33.96%（統計的に不利）"
+          },
+          {
+            "champion_id": "Mordekaiser",
+            "name": "モルデカイザー",
+            "winrate": "40.26%",
+            "winrate_num": 40.26,
+            "winrate_display": "勝率 40.26%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.26%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/monkeyking/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:55+09:00"
+      }
+    }
   }
 }

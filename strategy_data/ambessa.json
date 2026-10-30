@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ノクサスの名門貴族・メダルダ家の当主にして、帝国の武威を体現するノクサスの将軍 非情にして勇猛、積極果断な性格で目的のためならば無慈悲な行いも厭わないが、子供たちを愛する母親らしい側面も持つ 全てのスキルにダッシュが付属するパッシブにより、",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/ambessa/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:41+09:00"
+  },
   "wiki_info": {
     "champion_id": "Ambessa",
     "name": "アンベッサ",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against) etc/ジャガーノート 機動力の低いジャガーノート全般。スキルに付属するブリンクで追撃も逃走も自由自在。 CCが薄いか発生の遅い相手にはやや間のあるブリンクでも十分にスキルドッジを狙えるので"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "56.32%",
+            "winrate_num": 56.32,
+            "winrate_display": "勝率 56.32%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.32%（統計的に有利）"
+          },
+          {
+            "champion_id": "KSante",
+            "name": "カ・サンテ",
+            "winrate": "53.43%",
+            "winrate_num": 53.43,
+            "winrate_display": "勝率 53.43%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.43%（統計的に有利）"
+          },
+          {
+            "champion_id": "Aatrox",
+            "name": "エイトロックス",
+            "winrate": "52.7%",
+            "winrate_num": 52.7,
+            "winrate_display": "勝率 52.7%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.7%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Warwick",
+            "name": "ワーウィック",
+            "winrate": "40.66%",
+            "winrate_num": 40.66,
+            "winrate_display": "勝率 40.66%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.66%（統計的に不利）"
+          },
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "winrate": "42.18%",
+            "winrate_num": 42.18,
+            "winrate_display": "勝率 42.18%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.18%（統計的に不利）"
+          },
+          {
+            "champion_id": "Anivia",
+            "name": "アニビア",
+            "winrate": "43.14%",
+            "winrate_num": 43.14,
+            "winrate_display": "勝率 43.14%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.14%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6692",
+            "name": "赤月の刃",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3161",
+            "name": "ショウジンの矛",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ambessa/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:23+09:00"
+      }
+    },
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "58.21%",
+            "winrate_num": 58.21,
+            "winrate_display": "勝率 58.21%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.21%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ivern",
+            "name": "アイバーン",
+            "winrate": "57.5%",
+            "winrate_num": 57.5,
+            "winrate_display": "勝率 57.5%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.5%（統計的に有利）"
+          },
+          {
+            "champion_id": "XinZhao",
+            "name": "シン・ジャオ",
+            "winrate": "54.89%",
+            "winrate_num": 54.89,
+            "winrate_display": "勝率 54.89%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.89%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Zyra",
+            "name": "ザイラ",
+            "winrate": "37.08%",
+            "winrate_num": 37.08,
+            "winrate_display": "勝率 37.08%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.08%（統計的に不利）"
+          },
+          {
+            "champion_id": "MasterYi",
+            "name": "マスター・イー",
+            "winrate": "38.71%",
+            "winrate_num": 38.71,
+            "winrate_display": "勝率 38.71%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.71%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "38.89%",
+            "winrate_num": 38.89,
+            "winrate_display": "勝率 38.89%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.89%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6698",
+            "name": "プロフェイン ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6699",
+            "name": "ボルテイク サイクロソード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ambessa/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:23+09:00"
+      }
+    }
   }
 }

@@ -172,10 +172,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "人々の魂の歌が聴こえる特異体質に生まれ、両都市の調和を願って歌うゾウンとピルトーヴァーの歌姫 エンチャンター寄りのメイジで、全スキルがAOEで味方の数に比例して強くなるので、集団戦がとても得意 スキルの発生が遅めだが、命中させた時のリターン",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/seraphine/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:25+09:00"
+  },
   "wiki_info": {
     "champion_id": "Seraphine",
     "name": "セラフィーン",
@@ -186,5 +192,371 @@
       "考察": "人々の魂の歌が聴こえる特異体質に生まれ、両都市の調和を願って歌うゾウンとピルトーヴァーの歌姫 エンチャンター寄りのメイジで、全スキルがAOEで味方の数に比例して強くなるので、集団戦がとても得意 スキルの発生が遅めだが、命中させた時のリターン"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "57.54%",
+            "winrate_num": 57.54,
+            "winrate_display": "勝率 57.54%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.54%（統計的に有利）"
+          },
+          {
+            "champion_id": "Shen",
+            "name": "シェン",
+            "winrate": "56.6%",
+            "winrate_num": 56.6,
+            "winrate_display": "勝率 56.6%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.6%（統計的に有利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "55.83%",
+            "winrate_num": 55.83,
+            "winrate_display": "勝率 55.83%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.83%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Maokai",
+            "name": "マオカイ",
+            "winrate": "45.86%",
+            "winrate_num": 45.86,
+            "winrate_display": "勝率 45.86%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.86%（統計的に不利）"
+          },
+          {
+            "champion_id": "Galio",
+            "name": "ガリオ",
+            "winrate": "46.26%",
+            "winrate_num": 46.26,
+            "winrate_display": "勝率 46.26%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.26%（統計的に不利）"
+          },
+          {
+            "champion_id": "Leblanc",
+            "name": "ルブラン",
+            "winrate": "46.58%",
+            "winrate_num": 46.58,
+            "winrate_display": "勝率 46.58%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.58%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6620",
+            "name": "ヘリアの残響",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2530",
+            "name": "旋律のダイアデム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8214",
+          "keystone_name": "エアリー召喚",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "生命の泉",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/seraphine/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:05+09:00"
+      }
+    },
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "61.82%",
+            "winrate_num": 61.82,
+            "winrate_display": "勝率 61.82%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.82%（統計的に有利）"
+          },
+          {
+            "champion_id": "Xerath",
+            "name": "ゼラス",
+            "winrate": "60.61%",
+            "winrate_num": 60.61,
+            "winrate_display": "勝率 60.61%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.61%（統計的に有利）"
+          },
+          {
+            "champion_id": "Caitlyn",
+            "name": "ケイトリン",
+            "winrate": "58.02%",
+            "winrate_num": 58.02,
+            "winrate_display": "勝率 58.02%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.02%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Karthus",
+            "name": "カーサス",
+            "winrate": "31.82%",
+            "winrate_num": 31.82,
+            "winrate_display": "勝率 31.82%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 31.82%（統計的に不利）"
+          },
+          {
+            "champion_id": "Lux",
+            "name": "ラックス",
+            "winrate": "40.54%",
+            "winrate_num": 40.54,
+            "winrate_display": "勝率 40.54%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.54%（統計的に不利）"
+          },
+          {
+            "champion_id": "Yasuo",
+            "name": "ヤスオ",
+            "winrate": "42.39%",
+            "winrate_num": 42.39,
+            "winrate_display": "勝率 42.39%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.39%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "2503",
+            "name": "黒炎のトーチ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3040",
+            "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8229",
+          "keystone_name": "秘儀の彗星",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "レジェンド: ヘイスト",
+            "切り崩し"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/seraphine/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:27:05+09:00"
+      }
+    }
   }
 }

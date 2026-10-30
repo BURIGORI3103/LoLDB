@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "癒しの力を持つ不思議な炎を操る、イシュタル出身の少年チャンピオン 若年男性チャンピオンでは初となる純エンチャンターで、味方のAA射程を伸ばすWと味方の受けているCCを解除するUltが特徴的 さらにノックバックのQと加速のEで、味方のKite",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/milio/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:53+09:00"
+  },
   "wiki_info": {
     "champion_id": "Milio",
     "name": "ミリオ",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "対面との相性 有利（Strong Against） /強力なCC UltのAoE CC解除により、CCにチャンピオンパワーが偏っている相手に強い。 相手のハラスも単発であればW、Eで凌げるので有利を作りやすく、対面での勝率も高い。 スタンに"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "63.81%",
+            "winrate_num": 63.81,
+            "winrate_display": "勝率 63.81%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.81%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "61.27%",
+            "winrate_num": 61.27,
+            "winrate_display": "勝率 61.27%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.27%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "56.29%",
+            "winrate_num": 56.29,
+            "winrate_display": "勝率 56.29%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.29%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Taric",
+            "name": "タリック",
+            "winrate": "45.38%",
+            "winrate_num": 45.38,
+            "winrate_display": "勝率 45.38%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.38%（統計的に不利）"
+          },
+          {
+            "champion_id": "Braum",
+            "name": "ブラウム",
+            "winrate": "46.13%",
+            "winrate_num": 46.13,
+            "winrate_display": "勝率 46.13%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.13%（統計的に不利）"
+          },
+          {
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "winrate": "46.67%",
+            "winrate_num": 46.67,
+            "winrate_display": "勝率 46.67%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.67%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6620",
+            "name": "ヘリアの残響",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6617",
+            "name": "ムーンストーンの再生",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3504",
+            "name": "アーデント センサー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8214",
+          "keystone_name": "エアリー召喚",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/milio/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:55+09:00"
+      }
+    }
   }
 }

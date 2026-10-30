@@ -173,10 +173,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ガレンの妹で光を操るメイジ、デマーシアの名家の娘なので魔法が使えるのはナイショ 射程が長い上にバーストも高く、アーティラリーメイジとバーストメイジの両方に分類される CCによるキルメイク能力が優秀で、AoEシールドも備え、Eで視界まで取れる",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/lux/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:47+09:00"
+  },
   "wiki_info": {
     "champion_id": "Lux",
     "name": "ラックス",
@@ -188,5 +194,558 @@
       "相性・対策 (カウンター)": "Strong Against サポート運用 /機動力が低めのキャリー Qを当てればE、Ultを絡めたコンボも決めやすく、味方のCC次第では一気にフルヘルスを削りきれる場合も。 スキルショットを当てやすいべた足系の相手に基本的に有利で、射程が"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "MID",
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "57.99%",
+            "winrate_num": 57.99,
+            "winrate_display": "勝率 57.99%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.99%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "57.83%",
+            "winrate_num": 57.83,
+            "winrate_display": "勝率 57.83%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.83%（統計的に有利）"
+          },
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "53.48%",
+            "winrate_num": 53.48,
+            "winrate_display": "勝率 53.48%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.48%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Rell",
+            "name": "レル",
+            "winrate": "45.66%",
+            "winrate_num": 45.66,
+            "winrate_display": "勝率 45.66%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.66%（統計的に不利）"
+          },
+          {
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "winrate": "45.86%",
+            "winrate_num": 45.86,
+            "winrate_display": "勝率 45.86%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.86%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "45.95%",
+            "winrate_num": 45.95,
+            "winrate_display": "勝率 45.95%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.95%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6655",
+            "name": "ルーデン エコー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4646",
+            "name": "ストームサージ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8229",
+          "keystone_name": "秘儀の彗星",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/lux/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:51+09:00"
+      }
+    },
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "MID",
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "61.11%",
+            "winrate_num": 61.11,
+            "winrate_display": "勝率 61.11%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.11%（統計的に有利）"
+          },
+          {
+            "champion_id": "Smolder",
+            "name": "スモルダー",
+            "winrate": "61.04%",
+            "winrate_num": 61.04,
+            "winrate_display": "勝率 61.04%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.04%（統計的に有利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "58.82%",
+            "winrate_num": 58.82,
+            "winrate_display": "勝率 58.82%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.82%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "34.51%",
+            "winrate_num": 34.51,
+            "winrate_display": "勝率 34.51%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 34.51%（統計的に不利）"
+          },
+          {
+            "champion_id": "Garen",
+            "name": "ガレン",
+            "winrate": "43.75%",
+            "winrate_num": 43.75,
+            "winrate_display": "勝率 43.75%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.75%（統計的に不利）"
+          },
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "44.31%",
+            "winrate_num": 44.31,
+            "winrate_display": "勝率 44.31%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.31%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6655",
+            "name": "ルーデン エコー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4646",
+            "name": "ストームサージ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8229",
+          "keystone_name": "秘儀の彗星",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/lux/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:51+09:00"
+      }
+    },
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "MID",
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "62.0%",
+            "winrate_num": 62.0,
+            "winrate_display": "勝率 62.0%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Seraphine",
+            "name": "セラフィーン",
+            "winrate": "59.46%",
+            "winrate_num": 59.46,
+            "winrate_display": "勝率 59.46%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.46%（統計的に有利）"
+          },
+          {
+            "champion_id": "Caitlyn",
+            "name": "ケイトリン",
+            "winrate": "58.64%",
+            "winrate_num": 58.64,
+            "winrate_display": "勝率 58.64%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.64%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Kalista",
+            "name": "カリスタ",
+            "winrate": "39.15%",
+            "winrate_num": 39.15,
+            "winrate_display": "勝率 39.15%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.15%（統計的に不利）"
+          },
+          {
+            "champion_id": "Xerath",
+            "name": "ゼラス",
+            "winrate": "42.25%",
+            "winrate_num": 42.25,
+            "winrate_display": "勝率 42.25%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.25%（統計的に不利）"
+          },
+          {
+            "champion_id": "AurelionSol",
+            "name": "オレリオン・ソル",
+            "winrate": "42.86%",
+            "winrate_num": 42.86,
+            "winrate_display": "勝率 42.86%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.86%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3118",
+            "name": "マリグナンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4646",
+            "name": "ストームサージ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8229",
+          "keystone_name": "秘儀の彗星",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/lux/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:26:51+09:00"
+      }
+    }
   }
 }

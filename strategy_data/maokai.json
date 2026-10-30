@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "黒き霧の呪いを受けながらも、美しいブレスドアイルを取り戻すために亡霊と戦う樹木の精霊 豊富なハードCCとパッシブの回復によりしぶとく相手に張り付き続けるタンク 弾速や射程の問題でエンゲージはやや不得手ながら、視界を確保しつつ接近した相手にダ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/maokai/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:50+09:00"
+  },
   "wiki_info": {
     "champion_id": "Maokai",
     "name": "マオカイ",
@@ -185,5 +191,186 @@
       "考察": "黒き霧の呪いを受けながらも、美しいブレスドアイルを取り戻すために亡霊と戦う樹木の精霊 豊富なハードCCとパッシブの回復によりしぶとく相手に張り付き続けるタンク 弾速や射程の問題でエンゲージはやや不得手ながら、視界を確保しつつ接近した相手にダ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Camille",
+            "name": "カミール",
+            "winrate": "60.71%",
+            "winrate_num": 60.71,
+            "winrate_display": "勝率 60.71%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.71%（統計的に有利）"
+          },
+          {
+            "champion_id": "Yuumi",
+            "name": "ユーミ",
+            "winrate": "58.8%",
+            "winrate_num": 58.8,
+            "winrate_display": "勝率 58.8%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.8%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "56.68%",
+            "winrate_num": 56.68,
+            "winrate_display": "勝率 56.68%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.68%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Braum",
+            "name": "ブラウム",
+            "winrate": "43.15%",
+            "winrate_num": 43.15,
+            "winrate_display": "勝率 43.15%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.15%（統計的に不利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "45.31%",
+            "winrate_num": 45.31,
+            "winrate_display": "勝率 45.31%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.31%（統計的に不利）"
+          },
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "45.33%",
+            "winrate_num": 45.33,
+            "winrate_display": "勝率 45.33%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.33%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "2524",
+            "name": "バンドルパイプ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3075",
+            "name": "ソーンメイル",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ビスケットデリバリー",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/maokai/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:53+09:00"
+      }
+    }
   }
 }

@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "視力と引き換えに己の内に眠る龍の魂を解放し、盟友ウディアと共にアイオニアをノクサスから守った盲目の修行僧 2種類のブリンクによる屈指の機動力とバースト、シールドとサステイン、さらにUltの対象指定ノックバックまで持ち合わせた高機能なダイバー",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/leesin/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:40+09:00"
+  },
   "wiki_info": {
     "champion_id": "LeeSin",
     "name": "リー・シン",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "Strong Against(有利) 中盤の優位が重要なアサシン/キャリー系JG 逃げ性能が悪く序盤に荒らされると苦しいタンクJG Qの真の視界が刺さるステルス持ち 普段ロームでJGをキルしているアサシンmid Rのディスエンゲージが刺さる"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Zed",
+            "name": "ゼド",
+            "winrate": "52.07%",
+            "winrate_num": 52.07,
+            "winrate_display": "勝率 52.07%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.07%（統計的に有利）"
+          },
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "51.87%",
+            "winrate_num": 51.87,
+            "winrate_display": "勝率 51.87%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 51.87%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "51.26%",
+            "winrate_num": 51.26,
+            "winrate_display": "勝率 51.26%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 51.26%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "44.36%",
+            "winrate_num": 44.36,
+            "winrate_display": "勝率 44.36%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.36%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "44.54%",
+            "winrate_num": 44.54,
+            "winrate_display": "勝率 44.54%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.54%（統計的に不利）"
+          },
+          {
+            "champion_id": "Elise",
+            "name": "エリス",
+            "winrate": "44.6%",
+            "winrate_num": 44.6,
+            "winrate_display": "勝率 44.6%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.6%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6692",
+            "name": "赤月の刃",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/leesin/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:48+09:00"
+      }
+    }
   }
 }

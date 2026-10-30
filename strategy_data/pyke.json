@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "自身を見捨てた仲間に復讐すべく、深海から蘇ったビルジウォーターの銛撃ち アサシンでありながらキャッチャーとしての性能も高く、サポート運用が基本という変わり種 高い機動力からQのフックで敵を捕まえ、Ultでキルして賞金を味方に分け与える ゴー",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/pyke/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:11+09:00"
+  },
   "wiki_info": {
     "champion_id": "Pyke",
     "name": "パイク",
@@ -186,5 +192,186 @@
       "相性・対策 (カウンター)": "有利(Strong Against) /脆く逃げ性能が低い 耐久が低く、逃げ性能の低いサポート対面。ADCとどちらにフックをしてもキルまで繋げられる。 相手のハラスは基本的に散発のためパッシブの回復で誤魔化し、レーン段階からスノーボールを狙"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "57.92%",
+            "winrate_num": 57.92,
+            "winrate_display": "勝率 57.92%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.92%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "54.61%",
+            "winrate_num": 54.61,
+            "winrate_display": "勝率 54.61%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.61%（統計的に有利）"
+          },
+          {
+            "champion_id": "Xerath",
+            "name": "ゼラス",
+            "winrate": "54.37%",
+            "winrate_num": 54.37,
+            "winrate_display": "勝率 54.37%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.37%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Rell",
+            "name": "レル",
+            "winrate": "44.98%",
+            "winrate_num": 44.98,
+            "winrate_display": "勝率 44.98%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.98%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rakan",
+            "name": "ラカン",
+            "winrate": "45.04%",
+            "winrate_num": 45.04,
+            "winrate_display": "勝率 45.04%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.04%（統計的に不利）"
+          },
+          {
+            "champion_id": "Thresh",
+            "name": "スレッシュ",
+            "winrate": "46.53%",
+            "winrate_num": 46.53,
+            "winrate_display": "勝率 46.53%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.53%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3179",
+            "name": "アンブラル グレイブ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3142",
+            "name": "妖夢の霊剣",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3814",
+            "name": "ナイト エッジ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "追い打ち",
+            "第六感",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/pyke/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:01+09:00"
+      }
+    }
   }
 }

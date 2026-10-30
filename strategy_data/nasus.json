@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "超越者レネクトンの兄にして、古代シュリーマを繁栄に導いた戦略家 祖国と弟を喪い隠遁していたが、太陽の円盤の復活に応じ、現世に帰還を果たした 主力スキルのQはミニオンのLHを取ると無限に火力がスケールしていくもので、スケールは良いがその分序盤",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/nasus/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:01+09:00"
+  },
   "wiki_info": {
     "champion_id": "Nasus",
     "name": "ナサス",
@@ -192,5 +198,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) etc/AS依存度の高いRanged AAに依存するRanged。Q上げでは一方的なハラスでボコボコにされるがE上げなら話が変わる。 耐久が低いので範囲の広いハラスが効果的で、相手のオールイ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "MID"
+      ],
+      "summoner_spells": [
+        "ゴースト",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Vayne",
+            "name": "ヴェイン",
+            "winrate": "57.53%",
+            "winrate_num": 57.53,
+            "winrate_display": "勝率 57.53%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.53%（統計的に有利）"
+          },
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "56.88%",
+            "winrate_num": 56.88,
+            "winrate_display": "勝率 56.88%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.88%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vladimir",
+            "name": "ブラッドミア",
+            "winrate": "56.19%",
+            "winrate_num": 56.19,
+            "winrate_display": "勝率 56.19%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.19%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Anivia",
+            "name": "アニビア",
+            "winrate": "39.8%",
+            "winrate_num": 39.8,
+            "winrate_display": "勝率 39.8%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "MasterYi",
+            "name": "マスター・イー",
+            "winrate": "43.31%",
+            "winrate_num": 43.31,
+            "winrate_display": "勝率 43.31%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.31%（統計的に不利）"
+          },
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "44.15%",
+            "winrate_num": 44.15,
+            "winrate_display": "勝率 44.15%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.15%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3110",
+            "name": "フローズン ハート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8021",
+          "keystone_name": "フリートフットワーク",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "気迫"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/nasus/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:57+09:00"
+      }
+    },
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ゴースト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Taliyah",
+            "name": "タリヤ",
+            "winrate": "62.07%",
+            "winrate_num": 62.07,
+            "winrate_display": "勝率 62.07%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.07%（統計的に有利）"
+          },
+          {
+            "champion_id": "KogMaw",
+            "name": "コグ＝マウ",
+            "winrate": "58.97%",
+            "winrate_num": 58.97,
+            "winrate_display": "勝率 58.97%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.97%（統計的に有利）"
+          },
+          {
+            "champion_id": "Talon",
+            "name": "タロン",
+            "winrate": "57.78%",
+            "winrate_num": 57.78,
+            "winrate_display": "勝率 57.78%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.78%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "AurelionSol",
+            "name": "オレリオン・ソル",
+            "winrate": "37.5%",
+            "winrate_num": 37.5,
+            "winrate_display": "勝率 37.5%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.5%（統計的に不利）"
+          },
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "39.68%",
+            "winrate_num": 39.68,
+            "winrate_display": "勝率 39.68%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.68%（統計的に不利）"
+          },
+          {
+            "champion_id": "Ryze",
+            "name": "ライズ",
+            "winrate": "41.0%",
+            "winrate_num": 41.0,
+            "winrate_display": "勝率 41.0%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.0%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3110",
+            "name": "フローズン ハート",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8021",
+          "keystone_name": "フリートフットワーク",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "気迫"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/nasus/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:57+09:00"
+      }
+    }
   }
 }

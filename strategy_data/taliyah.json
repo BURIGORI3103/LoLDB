@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "大地に呼びかけ石や岩を思いのままに操る力を持つ、シュリーマの遊牧民出身の少女 未熟な力を制御する術を求めて故郷を旅立ち、その過程でヤスオと出会い、彼に教えを乞う 敷いておくだけで敵のブリンクを遮断しスタンさせれるEと、UltによるGank性",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/taliyah/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:38+09:00"
+  },
   "wiki_info": {
     "champion_id": "Taliyah",
     "name": "タリヤ",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "有利（Strong Against） ・MID運用 /短射程かつダッシュ・リープに依存 Eは相手のダッシュスキルに合わせることで大ダメージ＋スタンを決められる。 必然、ダッシュに接近手段を依存するスカーミッシャーやダイバー系列に有利。 一度"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Tristana",
+            "name": "トリスターナ",
+            "winrate": "62.82%",
+            "winrate_num": 62.82,
+            "winrate_display": "勝率 62.82%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.82%（統計的に有利）"
+          },
+          {
+            "champion_id": "Cassiopeia",
+            "name": "カシオペア",
+            "winrate": "57.81%",
+            "winrate_num": 57.81,
+            "winrate_display": "勝率 57.81%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.81%（統計的に有利）"
+          },
+          {
+            "champion_id": "Garen",
+            "name": "ガレン",
+            "winrate": "57.41%",
+            "winrate_num": 57.41,
+            "winrate_display": "勝率 57.41%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.41%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "35.09%",
+            "winrate_num": 35.09,
+            "winrate_display": "勝率 35.09%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.09%（統計的に不利）"
+          },
+          {
+            "champion_id": "Smolder",
+            "name": "スモルダー",
+            "winrate": "36.11%",
+            "winrate_num": 36.11,
+            "winrate_display": "勝率 36.11%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 36.11%（統計的に不利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "37.93%",
+            "winrate_num": 37.93,
+            "winrate_display": "勝率 37.93%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.93%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2503",
+            "name": "黒炎のトーチ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3116",
+            "name": "リーライ クリスタル セプター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "冷静沈着",
+            "レジェンド: ヘイスト"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/taliyah/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:27:13+09:00"
+      }
+    },
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "59.6%",
+            "winrate_num": 59.6,
+            "winrate_display": "勝率 59.6%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.6%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "56.77%",
+            "winrate_num": 56.77,
+            "winrate_display": "勝率 56.77%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.77%（統計的に有利）"
+          },
+          {
+            "champion_id": "Belveth",
+            "name": "ベル＝ヴェス",
+            "winrate": "56.69%",
+            "winrate_num": 56.69,
+            "winrate_display": "勝率 56.69%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.69%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "40.0%",
+            "winrate_num": 40.0,
+            "winrate_display": "勝率 40.0%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "41.3%",
+            "winrate_num": 41.3,
+            "winrate_display": "勝率 41.3%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.3%（統計的に不利）"
+          },
+          {
+            "champion_id": "Teemo",
+            "name": "ティーモ",
+            "winrate": "42.59%",
+            "winrate_num": 42.59,
+            "winrate_display": "勝率 42.59%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.59%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2503",
+            "name": "黒炎のトーチ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8128",
+          "keystone_name": "魂の収穫",
+          "choices": [
+            "追い打ち",
+            "第六感",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "レジェンド: ヘイスト",
+            "最期の慈悲"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/taliyah/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:13+09:00"
+      }
+    }
   }
 }

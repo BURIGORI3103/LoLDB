@@ -9,6 +9,7 @@ HTTP 200 だけでなく、必須項目・件数・対象チャンピオン識�
 """
 
 import json
+import argparse
 import os
 import re
 import time
@@ -310,6 +311,10 @@ def generate_fallback_notes(name, roles):
 
 
 def run():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--refresh", action="store_true", help="チェック済みも再取得")
+    parser.add_argument("--reuse-wiki", action="store_true", help="取得済みのwiki情報を再利用")
+    args = parser.parse_args()
     base_dir = Path(__file__).resolve().parent
     doc_paths = [
         base_dir / "docs" / "LoL_URL_list.md",
@@ -361,7 +366,7 @@ def run():
         entries.append(current_entry)
 
     total = len(entries)
-    pending_entries = [e for e in entries if not e["checked"]]
+    pending_entries = [e for e in entries if args.refresh or not e["checked"]]
     print(f"全 {total} 件中、未処理 {len(pending_entries)} 件を検出しました。")
 
     if not pending_entries:
@@ -406,8 +411,12 @@ def run():
                     html, item_dict, rune_dict, path_dict, champ_dict, latest_version=latest_version
                 )
                 is_valid, reason_msg = validate_parsed_opgg_data(parsed, html, champ_slug)
+                short_patch = ".".join(latest_version.split(".")[:2])
+                if not re.search(r'Patch\s+' + re.escape(short_patch) + r'\b', html, re.I):
+                    is_valid, reason_msg = False, "ページの対象パッチを確認できません"
                 if is_valid:
                     strategy_json.update(parsed)
+                    strategy_json["opgg_source"] = {"url": entry["opgg_url"], "patch": short_patch, "patch_verified": True, "fetched_at": datetime.now(JST).isoformat(timespec="seconds")}
                     opgg_success = True
                 else:
                     error_logs.append(f"{champ_name} ({champ_slug}) 検証失敗(再取得対象として維持): {reason_msg}")
@@ -416,7 +425,10 @@ def run():
                 error_logs.append(err_msg)
 
         # 日本語wiki立ち回り抽出
-        if entry["wiki_url"]:
+        if args.reuse_wiki and file_path.exists() and (cached := json.loads(file_path.read_text(encoding="utf-8"))).get("wiki_info", {}).get("status") == "success":
+            strategy_json["wiki_info"] = cached["wiki_info"]
+            strategy_json["gameplay_notes"] = {"laning": next(iter(cached["wiki_info"]["sections"].values())), "teamfight": ""}
+        elif entry["wiki_url"]:
             wiki_notes = extract_wiki_notes_safe(entry["wiki_url"])
             strategy_json["wiki_info"] = wiki_notes.pop("wiki_info")
             if wiki_notes.get("laning"):
@@ -437,6 +449,8 @@ def run():
                 f.writelines(lines)
         else:
             fail_count += 1
+            lines[entry["line_idx"]] = re.sub(r"^- \[x\]", "- [ ]", lines[entry["line_idx"]])
+            md_path.write_text("".join(lines), encoding="utf-8")
 
         time.sleep(0.15)
 
@@ -446,6 +460,8 @@ def run():
         print(f"エラーログ（計 {len(error_logs)} 件）:")
         for log in error_logs[:10]:
             print(f" - {log}")
+    if fail_count:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,7 @@
 {
+  "name": "ユナラ",
+  "slug": "yunara",
+  "patch": "16.21.1",
   "roles": [
     "ADC"
   ],
@@ -9,36 +12,96 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Vayne",
-        "name": "ヴェイン",
-        "reason": "勝率 55.2%（統計的に有利）"
-      },
-      {
-        "champion_id": "Kaisa",
-        "name": "カイ＝サ",
-        "reason": "勝率 53.22%（統計的に有利）"
-      },
-      {
         "champion_id": "Ezreal",
         "name": "エズリアル",
-        "reason": "勝率 53.0%（統計的に有利）"
+        "winrate": "52.72%",
+        "winrate_num": 52.72,
+        "winrate_display": "勝率 52.72%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 52.72%（統計的に有利）"
+      },
+      {
+        "champion_id": "Kalista",
+        "name": "カリスタ",
+        "winrate": "52.62%",
+        "winrate_num": 52.62,
+        "winrate_display": "勝率 52.62%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 52.62%（統計的に有利）"
+      },
+      {
+        "champion_id": "Sivir",
+        "name": "シヴィア",
+        "winrate": "52.4%",
+        "winrate_num": 52.4,
+        "winrate_display": "勝率 52.4%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 52.4%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Brand",
-        "name": "ブランド",
-        "reason": "勝率 45.28%（統計的に不利）"
+        "champion_id": "Syndra",
+        "name": "シンドラ",
+        "winrate": "42.67%",
+        "winrate_num": 42.67,
+        "winrate_display": "勝率 42.67%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 42.67%（統計的に不利）"
       },
       {
         "champion_id": "Velkoz",
         "name": "ヴェル＝コズ",
-        "reason": "勝率 46.18%（統計的に不利）"
+        "winrate": "42.78%",
+        "winrate_num": 42.78,
+        "winrate_display": "勝率 42.78%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 42.78%（統計的に不利）"
       },
       {
-        "champion_id": "Twitch",
-        "name": "トゥイッチ",
-        "reason": "勝率 47.2%（統計的に不利）"
+        "champion_id": "Veigar",
+        "name": "ベイガー",
+        "winrate": "42.8%",
+        "winrate_num": 42.8,
+        "winrate_display": "勝率 42.8%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 42.8%（統計的に不利）"
       }
     ]
   },
@@ -68,8 +131,8 @@
     "core": [
       {
         "step": 1,
-        "item_id": "6672",
-        "name": "クラーケン スレイヤー",
+        "item_id": "3032",
+        "name": "ユン・タル ワイルドアロー",
         "description": "推奨コア"
       },
       {
@@ -94,15 +157,15 @@
       "keystone_name": "リーサルテンポ",
       "choices": [
         "凱旋",
-        "レジェンド: 血脈",
+        "レジェンド: 迅速",
         "切り崩し"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "キャッシュバック",
-        "トリプル トニック"
+        "魔法の靴",
+        "ビスケットデリバリー"
       ]
     },
     "shards": [
@@ -111,8 +174,17 @@
       "Health"
     ]
   },
-  "name": "ユナラ",
-  "slug": "yunara",
+  "gameplay_notes": {
+    "laning": "遥か昔、偉大なる精霊と共にアイオニアに攻め入るダーキンを打ち払った巫女 長らく精霊界に身を置いていたが、再び故郷へと迫る邪悪な気配を察知し現世に帰還を果たした マークスマンでありながら全ダメージスキルが魔法ダメージで、ハイブリッドなダメージ",
+    "teamfight": ""
+  },
+  "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/yunara/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:26:05+09:00"
+  },
   "wiki_info": {
     "champion_id": "Yunara",
     "name": "ユナラ",
@@ -123,5 +195,190 @@
       "考察": "遥か昔、偉大なる精霊と共にアイオニアに攻め入るダーキンを打ち払った巫女 長らく精霊界に身を置いていたが、再び故郷へと迫る邪悪な気配を察知し現世に帰還を果たした マークスマンでありながら全ダメージスキルが魔法ダメージで、ハイブリッドなダメージ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "バリア"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ezreal",
+            "name": "エズリアル",
+            "winrate": "52.72%",
+            "winrate_num": 52.72,
+            "winrate_display": "勝率 52.72%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.72%（統計的に有利）"
+          },
+          {
+            "champion_id": "Kalista",
+            "name": "カリスタ",
+            "winrate": "52.62%",
+            "winrate_num": 52.62,
+            "winrate_display": "勝率 52.62%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.62%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sivir",
+            "name": "シヴィア",
+            "winrate": "52.4%",
+            "winrate_num": 52.4,
+            "winrate_display": "勝率 52.4%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.4%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Syndra",
+            "name": "シンドラ",
+            "winrate": "42.67%",
+            "winrate_num": 42.67,
+            "winrate_display": "勝率 42.67%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.67%（統計的に不利）"
+          },
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "42.78%",
+            "winrate_num": 42.78,
+            "winrate_display": "勝率 42.78%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.78%（統計的に不利）"
+          },
+          {
+            "champion_id": "Veigar",
+            "name": "ベイガー",
+            "winrate": "42.8%",
+            "winrate_num": 42.8,
+            "winrate_display": "勝率 42.8%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.8%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3008",
+            "name": "グラトナス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3032",
+            "name": "ユン・タル ワイルドアロー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3085",
+            "name": "ルナーン ハリケーン",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8008",
+          "keystone_name": "リーサルテンポ",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "切り崩し"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "ビスケットデリバリー"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/yunara/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:27:25+09:00"
+      }
+    }
   }
 }

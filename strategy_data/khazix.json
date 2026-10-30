@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "喰らった獲物の特性を得て進化を続けるヴォイドボーン。レンガーとの死闘の末にその片目を奪った Ultのレベルが上がるとスキルを強化することが可能で、強化後のスキルも含め孤立した相手を仕留めるのが得意なADアサシン 育つと瞬時に相手を仕留める強",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/khazix/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:33+09:00"
+  },
   "wiki_info": {
     "champion_id": "Khazix",
     "name": "カ＝ジックス",
@@ -189,5 +195,190 @@
       "考察": "喰らった獲物の特性を得て進化を続けるヴォイドボーン。レンガーとの死闘の末にその片目を奪った Ultのレベルが上がるとスキルを強化することが可能で、強化後のスキルも含め孤立した相手を仕留めるのが得意なADアサシン 育つと瞬時に相手を仕留める強"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "56.39%",
+            "winrate_num": 56.39,
+            "winrate_display": "勝率 56.39%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.39%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "winrate": "55.41%",
+            "winrate_num": 55.41,
+            "winrate_display": "勝率 55.41%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.41%（統計的に有利）"
+          },
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "54.43%",
+            "winrate_num": 54.43,
+            "winrate_display": "勝率 54.43%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.43%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Skarner",
+            "name": "スカーナー",
+            "winrate": "44.2%",
+            "winrate_num": 44.2,
+            "winrate_display": "勝率 44.2%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.2%（統計的に不利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "44.9%",
+            "winrate_num": 44.9,
+            "winrate_display": "勝率 44.9%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.9%（統計的に不利）"
+          },
+          {
+            "champion_id": "Ivern",
+            "name": "アイバーン",
+            "winrate": "45.05%",
+            "winrate_num": 45.05,
+            "winrate_display": "勝率 45.05%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.05%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3179",
+            "name": "アンブラル グレイブ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6699",
+            "name": "ボルテイク サイクロソード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2520",
+            "name": "バスティオンブレイカー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "天啓",
+          "keystone": "8369",
+          "keystone_name": "ファーストストライク",
+          "choices": [
+            "キャッシュバック",
+            "トリプル トニック",
+            "宇宙の英知"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "サドンインパクト",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/khazix/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:46+09:00"
+      }
+    }
   }
 }

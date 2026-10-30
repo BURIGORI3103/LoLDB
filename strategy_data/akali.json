@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "均衡の教えに疑問を抱き、組織を抜けた女忍者。シェンとケネンは朋輩でありかつての師 見た目通りのアサシンで、高い瞬間火力と機動力、そして強力な煙幕で相手を翻弄する アサシンとしては珍しくゾーニング・疑似的なタンク性能も高いが、無敵になる訳では",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/akali/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:36+09:00"
+  },
   "wiki_info": {
     "champion_id": "Akali",
     "name": "アカリ",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /CCの発生が遅いメイジ 機動力が非常に高く、Wの煙幕も込みで相手の地点・方向指定スキルをかわしやすい。 これらは逃げ手段を発生の遅いCCに依存するため、1発スキルをかわすだけで接敵に成功で"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "56.59%",
+            "winrate_num": 56.59,
+            "winrate_display": "勝率 56.59%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.59%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "56.1%",
+            "winrate_num": 56.1,
+            "winrate_display": "勝率 56.1%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.1%（統計的に有利）"
+          },
+          {
+            "champion_id": "Irelia",
+            "name": "イレリア",
+            "winrate": "54.27%",
+            "winrate_num": 54.27,
+            "winrate_display": "勝率 54.27%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.27%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "42.73%",
+            "winrate_num": 42.73,
+            "winrate_display": "勝率 42.73%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.73%（統計的に不利）"
+          },
+          {
+            "champion_id": "TwistedFate",
+            "name": "ツイステッド・フェイト",
+            "winrate": "43.65%",
+            "winrate_num": 43.65,
+            "winrate_display": "勝率 43.65%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.65%（統計的に不利）"
+          },
+          {
+            "champion_id": "Taliyah",
+            "name": "タリヤ",
+            "winrate": "43.71%",
+            "winrate_num": 43.71,
+            "winrate_display": "勝率 43.71%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.71%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3146",
+            "name": "ヘクステック ガンブレード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/akali/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:23+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "59.03%",
+            "winrate_num": 59.03,
+            "winrate_display": "勝率 59.03%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.03%（統計的に有利）"
+          },
+          {
+            "champion_id": "MasterYi",
+            "name": "マスター・イー",
+            "winrate": "55.0%",
+            "winrate_num": 55.0,
+            "winrate_display": "勝率 55.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "54.85%",
+            "winrate_num": 54.85,
+            "winrate_display": "勝率 54.85%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.85%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "40.66%",
+            "winrate_num": 40.66,
+            "winrate_display": "勝率 40.66%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.66%（統計的に不利）"
+          },
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "43.11%",
+            "winrate_num": 43.11,
+            "winrate_display": "勝率 43.11%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.11%（統計的に不利）"
+          },
+          {
+            "champion_id": "Illaoi",
+            "name": "イラオイ",
+            "winrate": "44.16%",
+            "winrate_num": 44.16,
+            "winrate_display": "勝率 44.16%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.16%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3146",
+            "name": "ヘクステック ガンブレード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/akali/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:22+09:00"
+      }
+    }
   }
 }

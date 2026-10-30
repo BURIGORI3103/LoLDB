@@ -177,10 +177,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "酒場の喧騒と上等な酒をこよなく愛する醸造家兼喧嘩屋。究極の酒の材料を求めて極寒のフレヨルドを裸一貫で旅している 豊富なAoEとCCにタンクスキルも併せ持つMeleeメイジ兼タンク Ultは射程1000のAoEノックバックで敵の陣形を容易に破",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/gragas/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:10+09:00"
+  },
   "wiki_info": {
     "champion_id": "Gragas",
     "name": "グラガス",
@@ -192,5 +198,562 @@
       "相性・対策 (カウンター)": "Strong Against TOP運用: /AA依存度が高い 長射程スキルを持たず、AA依存度の高いに対面。 相手はCSをAAで取るのでそこにQを置いておくことで簡単かつ確実にハラスができ、仕掛けてきたらEで即時拒否。 安定して有利なレー"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "60.71%",
+            "winrate_num": 60.71,
+            "winrate_display": "勝率 60.71%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.71%（統計的に有利）"
+          },
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "59.21%",
+            "winrate_num": 59.21,
+            "winrate_display": "勝率 59.21%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.21%（統計的に有利）"
+          },
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "winrate": "56.1%",
+            "winrate_num": 56.1,
+            "winrate_display": "勝率 56.1%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.1%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "40.68%",
+            "winrate_num": 40.68,
+            "winrate_display": "勝率 40.68%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.68%（統計的に不利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "41.0%",
+            "winrate_num": 41.0,
+            "winrate_display": "勝率 41.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "43.76%",
+            "winrate_num": 43.76,
+            "winrate_display": "勝率 43.76%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.76%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3121",
+            "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ビスケットデリバリー",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/gragas/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:38+09:00"
+      }
+    },
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "66.67%",
+            "winrate_num": 66.67,
+            "winrate_display": "勝率 66.67%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 66.67%（統計的に有利）"
+          },
+          {
+            "champion_id": "Fizz",
+            "name": "フィズ",
+            "winrate": "64.71%",
+            "winrate_num": 64.71,
+            "winrate_display": "勝率 64.71%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 64.71%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "62.16%",
+            "winrate_num": 62.16,
+            "winrate_display": "勝率 62.16%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.16%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Ivern",
+            "name": "アイバーン",
+            "winrate": "36.84%",
+            "winrate_num": 36.84,
+            "winrate_display": "勝率 36.84%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 36.84%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sejuani",
+            "name": "セジュアニ",
+            "winrate": "41.56%",
+            "winrate_num": 41.56,
+            "winrate_display": "勝率 41.56%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.56%（統計的に不利）"
+          },
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "42.03%",
+            "winrate_num": 42.03,
+            "winrate_display": "勝率 42.03%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.03%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3100",
+            "name": "リッチ ベイン",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8128",
+          "keystone_name": "魂の収穫",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "至高",
+            "水走り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/gragas/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:38+09:00"
+      }
+    },
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ryze",
+            "name": "ライズ",
+            "winrate": "63.79%",
+            "winrate_num": 63.79,
+            "winrate_display": "勝率 63.79%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.79%（統計的に有利）"
+          },
+          {
+            "champion_id": "Cassiopeia",
+            "name": "カシオペア",
+            "winrate": "63.16%",
+            "winrate_num": 63.16,
+            "winrate_display": "勝率 63.16%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.16%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "60.98%",
+            "winrate_num": 60.98,
+            "winrate_display": "勝率 60.98%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.98%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "KogMaw",
+            "name": "コグ＝マウ",
+            "winrate": "32.35%",
+            "winrate_num": 32.35,
+            "winrate_display": "勝率 32.35%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 32.35%（統計的に不利）"
+          },
+          {
+            "champion_id": "Veigar",
+            "name": "ベイガー",
+            "winrate": "40.71%",
+            "winrate_num": 40.71,
+            "winrate_display": "勝率 40.71%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.71%（統計的に不利）"
+          },
+          {
+            "champion_id": "Azir",
+            "name": "アジール",
+            "winrate": "45.45%",
+            "winrate_num": 45.45,
+            "winrate_display": "勝率 45.45%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.45%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3100",
+            "name": "リッチ ベイン",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3089",
+            "name": "ラバドン デスキャップ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "マナフローバンド",
+            "追火"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/gragas/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:38+09:00"
+      }
+    }
   }
 }

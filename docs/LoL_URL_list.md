@@ -223,7 +223,7 @@ wiki取得成功はOP.GGのチェックとは別にdocs/wiki_refresh_report.json
 - [x] リサンドラ (lissandra)
   OP.GG: https://www.op.gg/champions/lissandra/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Lissandra
-- [ ] ロック (locke)
+- [x] ロック (locke)
   OP.GG: https://www.op.gg/champions/locke/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Locke
 - [x] ルシアン (lucian)
@@ -247,7 +247,7 @@ wiki取得成功はOP.GGのチェックとは別にdocs/wiki_refresh_report.json
 - [x] マスター・イー (masteryi)
   OP.GG: https://www.op.gg/champions/masteryi/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Master%20Yi
-- [ ] メル (mel)
+- [x] メル (mel)
   OP.GG: https://www.op.gg/champions/mel/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Mel
 - [x] ミリオ (milio)
@@ -256,8 +256,8 @@ wiki取得成功はOP.GGのチェックとは別にdocs/wiki_refresh_report.json
 - [x] ミス・フォーチュン (missfortune)
   OP.GG: https://www.op.gg/champions/missfortune/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Miss%20Fortune
-- [ ] ウーコン (wukong)
-  OP.GG: https://www.op.gg/champions/wukong/build
+- [x] ウーコン (monkeyking)
+  OP.GG: https://www.op.gg/champions/monkeyking/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Wukong
 - [x] モルデカイザー (mordekaiser)
   OP.GG: https://www.op.gg/champions/mordekaiser/build
@@ -328,7 +328,7 @@ wiki取得成功はOP.GGのチェックとは別にdocs/wiki_refresh_report.json
 - [x] レル (rell)
   OP.GG: https://www.op.gg/champions/rell/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Rell
-- [ ] レナータ・グラスク (renata)
+- [x] レナータ・グラスク (renata)
   OP.GG: https://www.op.gg/champions/renata/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Renata%20Glasc
 - [x] レネクトン (renekton)
@@ -490,13 +490,13 @@ wiki取得成功はOP.GGのチェックとは別にdocs/wiki_refresh_report.json
 - [x] ヨリック (yorick)
   OP.GG: https://www.op.gg/champions/yorick/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Yorick
-- [ ] ユナラ (yunara)
+- [x] ユナラ (yunara)
   OP.GG: https://www.op.gg/champions/yunara/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Yunara
 - [x] ユーミ (yuumi)
   OP.GG: https://www.op.gg/champions/yuumi/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Yuumi
-- [ ] ザーヘン (zaahen)
+- [x] ザーヘン (zaahen)
   OP.GG: https://www.op.gg/champions/zaahen/build
   wiki: https://www.loljp-wiki.jp/wiki/?Champion/Zaahen
 - [x] ザック (zac)

@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "狼と子羊、二人でひとつの死を告げる狩人。ルーンテラにおける死神、或いは死そのものを司ると伝えられている ジャングラーとして設計されたマークスマンで、短CDのリープ・スロー・バースト・無敵と単体性能が高い 狼の予告するカウンターJGと子羊の予",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/kindred/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:35+09:00"
+  },
   "wiki_info": {
     "champion_id": "Kindred",
     "name": "キンドレッド",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "Strong Against ()/メイジ系 /遭遇戦の弱いタンク ()/ジャガーノート系 カウンターJGのリターンが大きいため、タイマンで勝てる敵JG相手に勝率が高くなる。 例を挙げると上記のチャンピオンが対面の際勝率が高い。 ほぼ全てに"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "61.0%",
+            "winrate_num": 61.0,
+            "winrate_display": "勝率 61.0%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "58.7%",
+            "winrate_num": 58.7,
+            "winrate_display": "勝率 58.7%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.7%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "56.82%",
+            "winrate_num": 56.82,
+            "winrate_display": "勝率 56.82%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.82%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Elise",
+            "name": "エリス",
+            "winrate": "44.29%",
+            "winrate_num": 44.29,
+            "winrate_display": "勝率 44.29%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.29%（統計的に不利）"
+          },
+          {
+            "champion_id": "Briar",
+            "name": "ブライアー",
+            "winrate": "44.39%",
+            "winrate_num": 44.39,
+            "winrate_display": "勝率 44.39%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.39%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rammus",
+            "name": "ラムス",
+            "winrate": "45.79%",
+            "winrate_num": 45.79,
+            "winrate_display": "勝率 45.79%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.79%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6672",
+            "name": "クラーケン スレイヤー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6676",
+            "name": "コレクター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8005",
+          "keystone_name": "プレスアタック",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "サドンインパクト",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/kindred/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:46+09:00"
+      }
+    }
   }
 }

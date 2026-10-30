@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "古代シュリーマの遺跡で目覚めた子どものミイラ。触れた相手の命を奪う呪いのために、常に孤独に苛まれる 高い張り付き性能とDPSを両立しており、タンクながら一定のダメージも出せるヴァンガード 広範囲AoEスタンのUltにより集団戦も得意だが、単",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/amumu/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:41+09:00"
+  },
   "wiki_info": {
     "champion_id": "Amumu",
     "name": "アムム",
@@ -192,5 +198,371 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /AS型のスカーミッシャー タンクなのでCCが有効に刺さりやすい相手に強いが、特にAS型のスカーミッシャーに有利。 Eのパッシブにより物理ダメージを受けるごとに軽減を行うため、攻撃回数に依存"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Zed",
+            "name": "ゼド",
+            "winrate": "58.84%",
+            "winrate_num": 58.84,
+            "winrate_display": "勝率 58.84%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.84%（統計的に有利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "57.97%",
+            "winrate_num": 57.97,
+            "winrate_display": "勝率 57.97%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.97%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nidalee",
+            "name": "ニダリー",
+            "winrate": "57.84%",
+            "winrate_num": 57.84,
+            "winrate_display": "勝率 57.84%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.84%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Shyvana",
+            "name": "シヴァーナ",
+            "winrate": "44.49%",
+            "winrate_num": 44.49,
+            "winrate_display": "勝率 44.49%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.49%（統計的に不利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "45.0%",
+            "winrate_num": 45.0,
+            "winrate_display": "勝率 45.0%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "45.21%",
+            "winrate_num": 45.21,
+            "winrate_display": "勝率 45.21%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.21%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1103",
+            "name": "モスストンパーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3068",
+            "name": "サンファイア イージス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "8020",
+            "name": "アビサル マスク",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/amumu/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:24+09:00"
+      }
+    },
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "68.42%",
+            "winrate_num": 68.42,
+            "winrate_display": "勝率 68.42%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 68.42%（統計的に有利）"
+          },
+          {
+            "champion_id": "Shen",
+            "name": "シェン",
+            "winrate": "63.41%",
+            "winrate_num": 63.41,
+            "winrate_display": "勝率 63.41%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.41%（統計的に有利）"
+          },
+          {
+            "champion_id": "Neeko",
+            "name": "ニーコ",
+            "winrate": "63.38%",
+            "winrate_num": 63.38,
+            "winrate_display": "勝率 63.38%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.38%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Shaco",
+            "name": "シャコ",
+            "winrate": "39.13%",
+            "winrate_num": 39.13,
+            "winrate_display": "勝率 39.13%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.13%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rell",
+            "name": "レル",
+            "winrate": "41.32%",
+            "winrate_num": 41.32,
+            "winrate_display": "勝率 41.32%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.32%（統計的に不利）"
+          },
+          {
+            "champion_id": "Galio",
+            "name": "ガリオ",
+            "winrate": "42.86%",
+            "winrate_num": 42.86,
+            "winrate_display": "勝率 42.86%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.86%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3050",
+            "name": "ジーク コンバージェンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3075",
+            "name": "ソーンメイル",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/amumu/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:24+09:00"
+      }
+    }
   }
 }

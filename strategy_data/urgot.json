@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "スウェインの策で事実上の死刑宣告を受けたが、苦痛を受け入れ新たに機械の肉体を得たノクサスの元・処刑人 適者生存の理念を掲げ、ゾウンの最下層を中心に一大勢力を形成している Rangedにしてジャガーノートという異色のチャンピオンで高いDPSと",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/urgot/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:48+09:00"
+  },
   "wiki_info": {
     "champion_id": "Urgot",
     "name": "アーゴット",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/ジャガーノート Eを拒否する手段が無い、或いは薄いジャガーノート。 相手の射程が短いのでEを当てやすく、当てさえすれば殴り合いは全チャンピオンでもトップクラス。 更にUltを覚えた後"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "61.43%",
+            "winrate_num": 61.43,
+            "winrate_display": "勝率 61.43%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.43%（統計的に有利）"
+          },
+          {
+            "champion_id": "Rumble",
+            "name": "ランブル",
+            "winrate": "61.3%",
+            "winrate_num": 61.3,
+            "winrate_display": "勝率 61.3%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.3%（統計的に有利）"
+          },
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "59.55%",
+            "winrate_num": 59.55,
+            "winrate_display": "勝率 59.55%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.55%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "44.21%",
+            "winrate_num": 44.21,
+            "winrate_display": "勝率 44.21%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.21%（統計的に不利）"
+          },
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "44.44%",
+            "winrate_num": 44.44,
+            "winrate_display": "勝率 44.44%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.44%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sion",
+            "name": "サイオン",
+            "winrate": "45.25%",
+            "winrate_num": 45.25,
+            "winrate_display": "勝率 45.25%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.25%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3053",
+            "name": "ステラックの篭手",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6665",
+            "name": "変幻自在のジャック＝ショー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8005",
+          "keystone_name": "プレスアタック",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/urgot/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:17+09:00"
+      }
+    }
   }
 }

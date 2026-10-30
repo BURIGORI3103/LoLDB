@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "デマーシアにて、姉と共に有翼の守護者と讃えられた正義の神髄の娘 赦しと救いを求める者を見捨てない慈悲の心を持ち、それ故に絶対的な正義を掲げる姉と袂を別った 射程や弾速に難はあるが強力なCCと、あらゆるCCを無効化するスペルシールドを用いるサ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/morgana/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:58+09:00"
+  },
   "wiki_info": {
     "champion_id": "Morgana",
     "name": "モルガナ",
@@ -186,5 +192,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/CCに依存 CCチェインを軸にしたオールインを得意とする相手。高性能なスペルシールドでCCを防げる。 特にサポート相手はオールインを安定して拒否できるのでレーン段階から有利がつく。 "
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "57.21%",
+            "winrate_num": 57.21,
+            "winrate_display": "勝率 57.21%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.21%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "55.95%",
+            "winrate_num": 55.95,
+            "winrate_display": "勝率 55.95%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.95%（統計的に有利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "55.88%",
+            "winrate_num": 55.88,
+            "winrate_display": "勝率 55.88%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.88%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Leblanc",
+            "name": "ルブラン",
+            "winrate": "42.01%",
+            "winrate_num": 42.01,
+            "winrate_display": "勝率 42.01%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.01%（統計的に不利）"
+          },
+          {
+            "champion_id": "Senna",
+            "name": "セナ",
+            "winrate": "45.18%",
+            "winrate_num": 45.18,
+            "winrate_display": "勝率 45.18%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.18%（統計的に不利）"
+          },
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "45.72%",
+            "winrate_num": 45.72,
+            "winrate_display": "勝率 45.72%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.72%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3116",
+            "name": "リーライ クリスタル セプター",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8229",
+          "keystone_name": "秘儀の彗星",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "追い打ち",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/morgana/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:55+09:00"
+      }
+    }
   }
 }

@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "始まりの地と云われるアイオニアの伝統舞踊を守る一族、ザン家出身の踊り手 ノクサスによる侵略戦争で家族を失うが、残された者たちと故郷を守るために民を率い彼らの指導者となる OHEと回復とブリンクを兼ねるQはCD解消条件が多く、華麗に舞えれば(",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/irelia/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:16+09:00"
+  },
   "wiki_info": {
     "champion_id": "Irelia",
     "name": "イレリア",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/拒否の弱いRanged スキルの命中精度にも依存するが、最大で3連続で対象に追撃を行うQが優秀。 Ranged相手は多少の拒否は物ともせずに接近し、殴り合いを挑むことが出来る。 Me"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "58.67%",
+            "winrate_num": 58.67,
+            "winrate_display": "勝率 58.67%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.67%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ryze",
+            "name": "ライズ",
+            "winrate": "58.6%",
+            "winrate_num": 58.6,
+            "winrate_display": "勝率 58.6%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.6%（統計的に有利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "57.54%",
+            "winrate_num": 57.54,
+            "winrate_display": "勝率 57.54%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.54%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Warwick",
+            "name": "ワーウィック",
+            "winrate": "41.54%",
+            "winrate_num": 41.54,
+            "winrate_display": "勝率 41.54%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.54%（統計的に不利）"
+          },
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "43.31%",
+            "winrate_num": 43.31,
+            "winrate_display": "勝率 43.31%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.31%（統計的に不利）"
+          },
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "44.0%",
+            "winrate_num": 44.0,
+            "winrate_display": "勝率 44.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.0%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3153",
+            "name": "ルインドキング ブレード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3181",
+            "name": "ハルブレイカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3091",
+            "name": "ウィッツ エンド",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "トリプル トニック",
+            "なんでも屋"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/irelia/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:41+09:00"
+      }
+    },
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Smolder",
+            "name": "スモルダー",
+            "winrate": "75.47%",
+            "winrate_num": 75.47,
+            "winrate_display": "勝率 75.47%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 75.47%（統計的に有利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "60.19%",
+            "winrate_num": 60.19,
+            "winrate_display": "勝率 60.19%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.19%（統計的に有利）"
+          },
+          {
+            "champion_id": "Kayle",
+            "name": "ケイル",
+            "winrate": "54.76%",
+            "winrate_num": 54.76,
+            "winrate_display": "勝率 54.76%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.76%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Sion",
+            "name": "サイオン",
+            "winrate": "38.27%",
+            "winrate_num": 38.27,
+            "winrate_display": "勝率 38.27%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.27%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "39.8%",
+            "winrate_num": 39.8,
+            "winrate_display": "勝率 39.8%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "40.89%",
+            "winrate_num": 40.89,
+            "winrate_display": "勝率 40.89%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.89%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3153",
+            "name": "ルインドキング ブレード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6672",
+            "name": "クラーケン スレイヤー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "トリプル トニック",
+            "なんでも屋"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/irelia/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:41+09:00"
+      }
+    }
   }
 }

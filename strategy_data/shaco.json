@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "闇の魔法により殺戮を楽しむようになってしまった道化師の人形 ワープ付きの高性能なインビジブルを用いた神出鬼没の奇襲で序盤から高いプレッシャーを発揮するアサシン AD・APの双方でスケールするのでビルド幅も比較的広く、時折レーンにまで出没する",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/shaco/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:27+09:00"
+  },
   "wiki_info": {
     "champion_id": "Shaco",
     "name": "シャコ",
@@ -191,5 +197,371 @@
       "相性・対策 (カウンター)": "Strong Against /AAに依存するダイバー・スカーミッシャー QのステルスでAAやスキルをかわし、強化の効果時間が切れたタイミングで奇襲に移れる。 キンドレッド以外は遠距離攻撃手段に乏しく、Wに引きつけやすいのも強み。 基本的に"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "スマイト",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "57.91%",
+            "winrate_num": 57.91,
+            "winrate_display": "勝率 57.91%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.91%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "winrate": "57.65%",
+            "winrate_num": 57.65,
+            "winrate_display": "勝率 57.65%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.65%（統計的に有利）"
+          },
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "55.89%",
+            "winrate_num": 55.89,
+            "winrate_display": "勝率 55.89%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.89%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Nunu",
+            "name": "ヌヌ＆ウィルンプ",
+            "winrate": "46.7%",
+            "winrate_num": 46.7,
+            "winrate_display": "勝率 46.7%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.7%（統計的に不利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "46.84%",
+            "winrate_num": 46.84,
+            "winrate_display": "勝率 46.84%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.84%（統計的に不利）"
+          },
+          {
+            "champion_id": "Shyvana",
+            "name": "シヴァーナ",
+            "winrate": "47.42%",
+            "winrate_num": 47.42,
+            "winrate_display": "勝率 47.42%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.42%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2503",
+            "name": "黒炎のトーチ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4005",
+            "name": "帝国の指令",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "執拗な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/shaco/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:06+09:00"
+      }
+    },
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "60.87%",
+            "winrate_num": 60.87,
+            "winrate_display": "勝率 60.87%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.87%（統計的に有利）"
+          },
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "58.06%",
+            "winrate_num": 58.06,
+            "winrate_display": "勝率 58.06%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.06%（統計的に有利）"
+          },
+          {
+            "champion_id": "Galio",
+            "name": "ガリオ",
+            "winrate": "57.58%",
+            "winrate_num": 57.58,
+            "winrate_display": "勝率 57.58%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.58%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "38.89%",
+            "winrate_num": 38.89,
+            "winrate_display": "勝率 38.89%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.89%（統計的に不利）"
+          },
+          {
+            "champion_id": "Taric",
+            "name": "タリック",
+            "winrate": "39.74%",
+            "winrate_num": 39.74,
+            "winrate_display": "勝率 39.74%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.74%（統計的に不利）"
+          },
+          {
+            "champion_id": "Xerath",
+            "name": "ゼラス",
+            "winrate": "40.69%",
+            "winrate_num": 40.69,
+            "winrate_display": "勝率 40.69%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.69%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2503",
+            "name": "黒炎のトーチ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4005",
+            "name": "帝国の指令",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "執拗な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/shaco/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:06+09:00"
+      }
+    }
   }
 }

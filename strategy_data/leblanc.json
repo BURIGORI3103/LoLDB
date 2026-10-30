@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ノクサスの秘密結社・黒薔薇団の首領として、何世紀にも渡り暗躍している謎深き魔女 敵を惑わすような機動力から高い単体バーストで、相手を手品のように消滅させるアサシン Rangedだが火力を出すには接近が必要で、CCが乏しいので反撃に注意が必要",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/leblanc/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:39+09:00"
+  },
   "wiki_info": {
     "champion_id": "Leblanc",
     "name": "ルブラン",
@@ -192,5 +198,371 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /遠距離攻撃手段に乏しい 優秀なブリンクとEのスネアにより間合いを管理するのが得意なため、大半のMeleeは一方的に殴れる。 特に追撃手段や有効な反撃を持たない相手には返り討ちのリスクも減ら"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Garen",
+            "name": "ガレン",
+            "winrate": "62.71%",
+            "winrate_num": 62.71,
+            "winrate_display": "勝率 62.71%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.71%（統計的に有利）"
+          },
+          {
+            "champion_id": "Kayle",
+            "name": "ケイル",
+            "winrate": "61.81%",
+            "winrate_num": 61.81,
+            "winrate_display": "勝率 61.81%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.81%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "58.64%",
+            "winrate_num": 58.64,
+            "winrate_display": "勝率 58.64%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.64%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "43.54%",
+            "winrate_num": 43.54,
+            "winrate_display": "勝率 43.54%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.54%（統計的に不利）"
+          },
+          {
+            "champion_id": "Vex",
+            "name": "ヴェックス",
+            "winrate": "45.78%",
+            "winrate_num": 45.78,
+            "winrate_display": "勝率 45.78%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.78%（統計的に不利）"
+          },
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "46.51%",
+            "winrate_num": 46.51,
+            "winrate_display": "勝率 46.51%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.51%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6655",
+            "name": "ルーデン エコー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "執拗な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/leblanc/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:48+09:00"
+      }
+    },
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "61.36%",
+            "winrate_num": 61.36,
+            "winrate_display": "勝率 61.36%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.36%（統計的に有利）"
+          },
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "58.82%",
+            "winrate_num": 58.82,
+            "winrate_display": "勝率 58.82%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.82%（統計的に有利）"
+          },
+          {
+            "champion_id": "Morgana",
+            "name": "モルガナ",
+            "winrate": "57.99%",
+            "winrate_num": 57.99,
+            "winrate_display": "勝率 57.99%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.99%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Rakan",
+            "name": "ラカン",
+            "winrate": "42.69%",
+            "winrate_num": 42.69,
+            "winrate_display": "勝率 42.69%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.69%（統計的に不利）"
+          },
+          {
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "winrate": "44.09%",
+            "winrate_num": 44.09,
+            "winrate_display": "勝率 44.09%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.09%（統計的に不利）"
+          },
+          {
+            "champion_id": "Leona",
+            "name": "レオナ",
+            "winrate": "44.5%",
+            "winrate_num": 44.5,
+            "winrate_display": "勝率 44.5%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.5%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6655",
+            "name": "ルーデン エコー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4646",
+            "name": "ストームサージ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "執拗な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/leblanc/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:48+09:00"
+      }
+    }
   }
 }

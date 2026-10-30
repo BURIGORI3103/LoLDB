@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "エイトロックスに部族を皆殺しにされ、憤怒の激情に囚われたフレヨルドの戦士。一族再起のためにアッシュと政略結婚するも次第に惹かれあい、第一の盟父(めいふ)として彼女を支える パッシブでcrit率が上がるAA主体のスカーミッシャーで、Ultは5",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/tryndamere/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:44+09:00"
+  },
   "wiki_info": {
     "champion_id": "Tryndamere",
     "name": "トリンダメア",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/離脱が弱い 離脱手段が乏しく、射程も短めなダイバー・スカーミッシャー。 これらは入った後、倒される前にキルから徒歩で離脱が基本のためUltが刺さる。 逃げ方向のブリンクを持つ相手も距"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "66.43%",
+            "winrate_num": 66.43,
+            "winrate_display": "勝率 66.43%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 66.43%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "56.47%",
+            "winrate_num": 56.47,
+            "winrate_display": "勝率 56.47%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.47%（統計的に有利）"
+          },
+          {
+            "champion_id": "DrMundo",
+            "name": "ドクター・ムンド",
+            "winrate": "55.13%",
+            "winrate_num": 55.13,
+            "winrate_display": "勝率 55.13%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.13%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "35.8%",
+            "winrate_num": 35.8,
+            "winrate_display": "勝率 35.8%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "37.93%",
+            "winrate_num": 37.93,
+            "winrate_display": "勝率 37.93%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.93%（統計的に不利）"
+          },
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "winrate": "40.86%",
+            "winrate_num": 40.86,
+            "winrate_display": "勝率 40.86%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.86%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3074",
+            "name": "ラヴァナス ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3046",
+            "name": "ファントム ダンサー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/tryndamere/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:16+09:00"
+      }
+    }
   }
 }

@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ヴォイドより現れた、あらゆる生命を捕食して成長してゆく怪物。見た目に反して知能は高め 強力なCCチェインにより相手を拘束、強烈なTrueダメージのUltで捕食し、自身のHealthとサイズをスケールさせる CCは当たれば強烈ながら発動から発",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/chogath/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:55+09:00"
+  },
   "wiki_info": {
     "champion_id": "Chogath",
     "name": "チョ＝ガス",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "Strong Against /AR特化 APタンクということで、こういったARにスペックを割いたチャンピオンに対しては有利かつ安定性の高いレーニングができる。 近づいたところをWでサイレンス、逃げスキルをはけない間にQで止めてトレードとい"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "winrate": "59.7%",
+            "winrate_num": 59.7,
+            "winrate_display": "勝率 59.7%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.7%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "59.4%",
+            "winrate_num": 59.4,
+            "winrate_display": "勝率 59.4%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.4%（統計的に有利）"
+          },
+          {
+            "champion_id": "Qiyana",
+            "name": "キヤナ",
+            "winrate": "55.66%",
+            "winrate_num": 55.66,
+            "winrate_display": "勝率 55.66%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.66%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "43.28%",
+            "winrate_num": 43.28,
+            "winrate_display": "勝率 43.28%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.28%（統計的に不利）"
+          },
+          {
+            "champion_id": "Lillia",
+            "name": "リリア",
+            "winrate": "45.7%",
+            "winrate_num": 45.7,
+            "winrate_display": "勝率 45.7%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.7%（統計的に不利）"
+          },
+          {
+            "champion_id": "Taliyah",
+            "name": "タリヤ",
+            "winrate": "46.75%",
+            "winrate_num": 46.75,
+            "winrate_display": "勝率 46.75%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.75%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3084",
+            "name": "心の鋼",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4401",
+            "name": "自然の力",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "追い打ち",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "アクシオム アルカニスト",
+            "追い風"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Move Speed",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/chogath/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:30+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "56.6%",
+            "winrate_num": 56.6,
+            "winrate_display": "勝率 56.6%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.6%（統計的に有利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "55.82%",
+            "winrate_num": 55.82,
+            "winrate_display": "勝率 55.82%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.82%（統計的に有利）"
+          },
+          {
+            "champion_id": "Kennen",
+            "name": "ケネン",
+            "winrate": "55.49%",
+            "winrate_num": 55.49,
+            "winrate_display": "勝率 55.49%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.49%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "35.92%",
+            "winrate_num": 35.92,
+            "winrate_display": "勝率 35.92%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.92%（統計的に不利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "42.9%",
+            "winrate_num": 42.9,
+            "winrate_display": "勝率 42.9%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.9%（統計的に不利）"
+          },
+          {
+            "champion_id": "Kled",
+            "name": "クレッド",
+            "winrate": "44.05%",
+            "winrate_num": 44.05,
+            "winrate_display": "勝率 44.05%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.05%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3152",
+            "name": "ヘクステック ロケットベルト",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4633",
+            "name": "リフトメーカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "追い打ち",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "アクシオム アルカニスト",
+            "追い風"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Move Speed",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/chogath/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:31+09:00"
+      }
+    }
   }
 }

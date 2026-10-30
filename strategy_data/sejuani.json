@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "愛猪ブリストルとコンビを組んで戦う、フレヨルドの攻撃的な部族ウィンタークロウの戦母。アッシュとは幼馴染だが現在は敵同士 豊富なCCにより相手を氷漬けにするヴァンガードで、パッシブによりエンゲージ直後のタンク性能が非常に高い 追い逃げ双方に優",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/sejuani/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:23+09:00"
+  },
   "wiki_info": {
     "champion_id": "Sejuani",
     "name": "セジュアニ",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /アサシン 集団戦が苦手なバースト系のアサシン全般。遭遇戦に強いセジュアニならば対面しても有利に戦える。 多少Gankで育ったとしても、パッシブのお陰で奇襲に強いので視界確保の先陣を切れる。"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "61.29%",
+            "winrate_num": 61.29,
+            "winrate_display": "勝率 61.29%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.29%（統計的に有利）"
+          },
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "58.76%",
+            "winrate_num": 58.76,
+            "winrate_display": "勝率 58.76%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.76%（統計的に有利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "58.44%",
+            "winrate_num": 58.44,
+            "winrate_display": "勝率 58.44%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.44%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Ivern",
+            "name": "アイバーン",
+            "winrate": "42.34%",
+            "winrate_num": 42.34,
+            "winrate_display": "勝率 42.34%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.34%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "43.1%",
+            "winrate_num": 43.1,
+            "winrate_display": "勝率 43.1%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.1%（統計的に不利）"
+          },
+          {
+            "champion_id": "RekSai",
+            "name": "レク＝サイ",
+            "winrate": "44.81%",
+            "winrate_num": 44.81,
+            "winrate_display": "勝率 44.81%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.81%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1103",
+            "name": "モスストンパーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3084",
+            "name": "心の鋼",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "2502",
+            "name": "終わりなき絶望",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3075",
+            "name": "ソーンメイル",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "心身調整",
+            "超成長"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/sejuani/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:05+09:00"
+      }
+    }
   }
 }

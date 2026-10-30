@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ヨードルでありながらピルトーヴァーの大学で教鞭を執る発明王。戦闘においても発明品を用いる 自動で攻撃を行うタレットを主力とし、その射程内でのみ高いPush力とDPSを発揮するゾーンコントロールメイジ 仕掛けてきた相手に強烈なカウンターをお見",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/heimerdinger/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:14+09:00"
+  },
   "wiki_info": {
     "champion_id": "Heimerdinger",
     "name": "ハイマーディンガー",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "Strong Against /接近手段が徒歩 タレットの範囲外からハイマーを殴りきる射程も、瞬時に接近するブリンクも持たない相手。 タレットの範囲に入ったらEを当ててカウンターという基本の流れを決めやすい。 Gank合わせにもタレットの範"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "66.04%",
+            "winrate_num": 66.04,
+            "winrate_display": "勝率 66.04%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 66.04%（統計的に有利）"
+          },
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "winrate": "65.38%",
+            "winrate_num": 65.38,
+            "winrate_display": "勝率 65.38%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 65.38%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "58.33%",
+            "winrate_num": 58.33,
+            "winrate_display": "勝率 58.33%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.33%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Yasuo",
+            "name": "ヤスオ",
+            "winrate": "39.28%",
+            "winrate_num": 39.28,
+            "winrate_display": "勝率 39.28%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.28%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "41.94%",
+            "winrate_num": 41.94,
+            "winrate_display": "勝率 41.94%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.94%（統計的に不利）"
+          },
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "43.24%",
+            "winrate_num": 43.24,
+            "winrate_display": "勝率 43.24%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.24%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2503",
+            "name": "黒炎のトーチ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "冷静沈着",
+            "レジェンド: ヘイスト",
+            "切り崩し"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "英気集中",
+            "強まる嵐"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/heimerdinger/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:39+09:00"
+      }
+    }
   }
 }

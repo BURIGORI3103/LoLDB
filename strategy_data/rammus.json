@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "神の遣いとも超越者ともただの強靭な獣とも言われている謎に包まれた寡黙な生物。シュリーマの民からは守護獣として崇められている ころころ転がって体当たりでエンゲージし、タウントをかけて反射ダメージで敵を削るヴァンガード タンクスキルのWは割合で",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/rammus/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:15+09:00"
+  },
   "wiki_info": {
     "champion_id": "Rammus",
     "name": "ラムス",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "Strong Against etc/AA主体のMeleeジャングラー Wの効果時間中はAAに対して自動で反撃を行えるため、AA依存度の高いMeleeに有利。 序盤に殴り合いになっても戦える相手が多く、序盤型の相手も追撃スキルを見るまで耐え"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "61.33%",
+            "winrate_num": 61.33,
+            "winrate_display": "勝率 61.33%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.33%（統計的に有利）"
+          },
+          {
+            "champion_id": "Zed",
+            "name": "ゼド",
+            "winrate": "59.84%",
+            "winrate_num": 59.84,
+            "winrate_display": "勝率 59.84%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.84%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "59.76%",
+            "winrate_num": 59.76,
+            "winrate_display": "勝率 59.76%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.76%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Skarner",
+            "name": "スカーナー",
+            "winrate": "37.0%",
+            "winrate_num": 37.0,
+            "winrate_display": "勝率 37.0%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Chogath",
+            "name": "チョ＝ガス",
+            "winrate": "44.5%",
+            "winrate_num": 44.5,
+            "winrate_display": "勝率 44.5%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.5%（統計的に不利）"
+          },
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "45.11%",
+            "winrate_num": 45.11,
+            "winrate_display": "勝率 45.11%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.11%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3075",
+            "name": "ソーンメイル",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3068",
+            "name": "サンファイア イージス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6665",
+            "name": "変幻自在のジャック＝ショー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "心身調整",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/rammus/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:02+09:00"
+      }
+    }
   }
 }

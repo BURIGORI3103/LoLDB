@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "太陽信仰を是とするソラリの民に迫害されてきた、月を崇める異教派ルナリの静謐なる暗殺者 双子の妹アルーンと共に創り上げた月光の魔力を湛える5つの武器でルナリに仇なす者たちを音もなく始末する 手に持つ2つの武器の組み合わせでAAやスキルの性質が",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/aphelios/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:44+09:00"
+  },
   "wiki_info": {
     "champion_id": "Aphelios",
     "name": "アフェリオス",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /序盤のハラスが弱い ハラス性能が低いマークスマン全般。武器の順序が整っておらず、装備も乏しい序盤に仕掛けられづらい。 序盤さえ凌げば後半にはこれらの脆い相手は瞬時に溶かすことも可能となり、"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "バリア"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "AurelionSol",
+            "name": "オレリオン・ソル",
+            "winrate": "56.34%",
+            "winrate_num": 56.34,
+            "winrate_display": "勝率 56.34%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.34%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ezreal",
+            "name": "エズリアル",
+            "winrate": "53.57%",
+            "winrate_num": 53.57,
+            "winrate_display": "勝率 53.57%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.57%（統計的に有利）"
+          },
+          {
+            "champion_id": "Smolder",
+            "name": "スモルダー",
+            "winrate": "52.58%",
+            "winrate_num": 52.58,
+            "winrate_display": "勝率 52.58%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.58%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "43.3%",
+            "winrate_num": 43.3,
+            "winrate_display": "勝率 43.3%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.3%（統計的に不利）"
+          },
+          {
+            "champion_id": "KogMaw",
+            "name": "コグ＝マウ",
+            "winrate": "43.4%",
+            "winrate_num": 43.4,
+            "winrate_display": "勝率 43.4%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.4%（統計的に不利）"
+          },
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "43.81%",
+            "winrate_num": 43.81,
+            "winrate_display": "勝率 43.81%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.81%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3008",
+            "name": "グラトナス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6676",
+            "name": "コレクター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8005",
+          "keystone_name": "プレスアタック",
+          "choices": [
+            "凱旋",
+            "レジェンド: 血脈",
+            "切り崩し"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "キャッシュバック",
+            "トリプル トニック"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/aphelios/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:26:25+09:00"
+      }
+    }
   }
 }

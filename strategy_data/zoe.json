@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "その無邪気な精神から超常の神髄に選ばれたルナリの少女。ペット(？)の宇宙ワンちゃんと仲良し 高い火力と射程を両立したバーストメイジで、そのコンボは決まると脆いチャンピオンは文字通り一瞬で消し炭となる威力 スキルの発生や操作に癖があり、また非",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/zoe/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:26:12+09:00"
+  },
   "wiki_info": {
     "champion_id": "Zoe",
     "name": "ゾーイ",
@@ -191,5 +197,371 @@
       "相性・対策 (カウンター)": "Strong Against (mid)/Eを当てやすい・防御スキルの効果時間が短い 基本はEを当て、長距離を移動させたQでワンコンバーストを叩き出す。 ゼドはUltを使用した時にEを合わせやすく、追撃を防ぎながら反撃でワンコンを狙える。 "
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Cassiopeia",
+            "name": "カシオペア",
+            "winrate": "59.89%",
+            "winrate_num": 59.89,
+            "winrate_display": "勝率 59.89%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.89%（統計的に有利）"
+          },
+          {
+            "champion_id": "Azir",
+            "name": "アジール",
+            "winrate": "58.36%",
+            "winrate_num": 58.36,
+            "winrate_display": "勝率 58.36%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.36%（統計的に有利）"
+          },
+          {
+            "champion_id": "Garen",
+            "name": "ガレン",
+            "winrate": "58.06%",
+            "winrate_num": 58.06,
+            "winrate_display": "勝率 58.06%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.06%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "36.19%",
+            "winrate_num": 36.19,
+            "winrate_display": "勝率 36.19%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 36.19%（統計的に不利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "43.59%",
+            "winrate_num": 43.59,
+            "winrate_display": "勝率 43.59%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.59%（統計的に不利）"
+          },
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "44.88%",
+            "winrate_num": 44.88,
+            "winrate_display": "勝率 44.88%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.88%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6655",
+            "name": "ルーデン エコー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3100",
+            "name": "リッチ ベイン",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "執拗な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ニンバスクローク",
+            "至高"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/zoe/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:27:28+09:00"
+      }
+    },
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "61.76%",
+            "winrate_num": 61.76,
+            "winrate_display": "勝率 61.76%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.76%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "61.36%",
+            "winrate_num": 61.36,
+            "winrate_display": "勝率 61.36%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.36%（統計的に有利）"
+          },
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "60.98%",
+            "winrate_num": 60.98,
+            "winrate_display": "勝率 60.98%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.98%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "31.58%",
+            "winrate_num": 31.58,
+            "winrate_display": "勝率 31.58%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 31.58%（統計的に不利）"
+          },
+          {
+            "champion_id": "Shen",
+            "name": "シェン",
+            "winrate": "36.0%",
+            "winrate_num": 36.0,
+            "winrate_display": "勝率 36.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 36.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Alistar",
+            "name": "アリスター",
+            "winrate": "41.69%",
+            "winrate_num": 41.69,
+            "winrate_display": "勝率 41.69%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.69%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "4005",
+            "name": "帝国の指令",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4628",
+            "name": "ホライゾン フォーカス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2065",
+            "name": "シュレリアの戦歌",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "血の味わい",
+            "グリスリー メメント",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "マナフローバンド",
+            "追火"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/zoe/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:28+09:00"
+      }
+    }
   }
 }

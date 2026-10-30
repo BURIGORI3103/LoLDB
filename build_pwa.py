@@ -3353,6 +3353,14 @@ def build():
 
         <!-- 実戦コンボ -->
         <div class="detail-section">
+          <div class="detail-heading">📖 wikiの考察・対策</div>
+          ${{Object.entries(c.wiki_info?.sections || {{}}).map(([heading, text]) => `<div style="font-size:12px; margin-bottom:8px;">${{escapeHtml(heading)}}：${{escapeHtml(text)}}</div>`).join("")}}
+          <div style="font-size:11px; color:var(--text-muted);">取得日：${{escapeHtml((c.wiki_info?.fetched_at || "").slice(0, 10))}}・パッチ対応未検証</div>
+          ${{c.wiki_info?.source_url?.startsWith("https://www.loljp-wiki.jp/") ? `<a href="${{escapeHtml(c.wiki_info.source_url)}}" target="_blank" rel="noopener noreferrer">出典：LoLJPWiki</a>` : ""}}
+        </div>
+
+        <!-- 実戦コンボ -->
+        <div class="detail-section">
           <div class="detail-heading">🥊 実戦コンボ・スキル回し（Flash併用含む）</div>
           <div class="combo-grid">${{combosHtml}}</div>
         </div>

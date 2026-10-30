@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "カタリナの父に教えを仰ぎ、路地裏の浮浪児から将軍の懐刀にまで上り詰めたノクサスの若き暗殺者 いかにもな見た目通り瞬間火力と機動力に優れたお手本のようなADアサシン 強力な地形踏破能力により、あらゆる場所から奇襲をかけることが可能 トップクラ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/talon/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:39+09:00"
+  },
   "wiki_info": {
     "champion_id": "Talon",
     "name": "タロン",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "Strong Against 共通: タロンはMID運用・JG運用いずれの際も敵の森に入り敵JGのキルを狙う動きが得意。 その際相手がこういった耐久が低く逃げ性能の低い相手だと狩りやすい。 MID運用: タロンはV8.4で、top運用を減ら"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Teemo",
+            "name": "ティーモ",
+            "winrate": "55.03%",
+            "winrate_num": 55.03,
+            "winrate_display": "勝率 55.03%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.03%（統計的に有利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "54.93%",
+            "winrate_num": 54.93,
+            "winrate_display": "勝率 54.93%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.93%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "54.38%",
+            "winrate_num": 54.38,
+            "winrate_display": "勝率 54.38%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.38%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "42.28%",
+            "winrate_num": 42.28,
+            "winrate_display": "勝率 42.28%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.28%（統計的に不利）"
+          },
+          {
+            "champion_id": "Fiddlesticks",
+            "name": "フィドルスティックス",
+            "winrate": "43.37%",
+            "winrate_num": 43.37,
+            "winrate_display": "勝率 43.37%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.37%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rammus",
+            "name": "ラムス",
+            "winrate": "44.53%",
+            "winrate_num": 44.53,
+            "winrate_display": "勝率 44.53%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.53%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3179",
+            "name": "アンブラル グレイブ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "2520",
+            "name": "バスティオンブレイカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6699",
+            "name": "ボルテイク サイクロソード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8021",
+          "keystone_name": "フリートフットワーク",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/talon/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:13+09:00"
+      }
+    },
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Tristana",
+            "name": "トリスターナ",
+            "winrate": "63.27%",
+            "winrate_num": 63.27,
+            "winrate_display": "勝率 63.27%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.27%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ziggs",
+            "name": "ジグス",
+            "winrate": "58.82%",
+            "winrate_num": 58.82,
+            "winrate_display": "勝率 58.82%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.82%（統計的に有利）"
+          },
+          {
+            "champion_id": "Viktor",
+            "name": "ビクター",
+            "winrate": "58.66%",
+            "winrate_num": 58.66,
+            "winrate_display": "勝率 58.66%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.66%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "34.88%",
+            "winrate_num": 34.88,
+            "winrate_display": "勝率 34.88%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 34.88%（統計的に不利）"
+          },
+          {
+            "champion_id": "Naafiri",
+            "name": "ナフィーリ",
+            "winrate": "40.26%",
+            "winrate_num": 40.26,
+            "winrate_display": "勝率 40.26%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.26%（統計的に不利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "42.22%",
+            "winrate_num": 42.22,
+            "winrate_display": "勝率 42.22%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.22%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6692",
+            "name": "赤月の刃",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "サドンインパクト",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/talon/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:27:13+09:00"
+      }
+    }
   }
 }

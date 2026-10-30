@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "敵との相性 有利（Strong Against） /Peelが単体 レーン段階のハラス圧が低く、Peelが単体までのエンチャンター。 基礎ステータスの低さとサステインがない点を突かれづらく、安定したレーニングを狙いやすい。 基本的にPeel",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/thresh/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:42+09:00"
+  },
   "wiki_info": {
     "champion_id": "Thresh",
     "name": "スレッシュ",
@@ -185,5 +191,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /Peelが単体 レーン段階のハラス圧が低く、Peelが単体までのエンチャンター。 基礎ステータスの低さとサステインがない点を突かれづらく、安定したレーニングを狙いやすい。 基本的にPeel"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "60.97%",
+            "winrate_num": 60.97,
+            "winrate_display": "勝率 60.97%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.97%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "59.63%",
+            "winrate_num": 59.63,
+            "winrate_display": "勝率 59.63%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.63%（統計的に有利）"
+          },
+          {
+            "champion_id": "Yuumi",
+            "name": "ユーミ",
+            "winrate": "57.39%",
+            "winrate_num": 57.39,
+            "winrate_display": "勝率 57.39%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.39%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "48.09%",
+            "winrate_num": 48.09,
+            "winrate_display": "勝率 48.09%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 48.09%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rakan",
+            "name": "ラカン",
+            "winrate": "48.32%",
+            "winrate_num": 48.32,
+            "winrate_display": "勝率 48.32%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 48.32%（統計的に不利）"
+          },
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "48.49%",
+            "winrate_num": 48.49,
+            "winrate_display": "勝率 48.49%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 48.49%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3109",
+            "name": "騎士の誓い",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3050",
+            "name": "ジーク コンバージェンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ビスケットデリバリー",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/thresh/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:15+09:00"
+      }
+    }
   }
 }

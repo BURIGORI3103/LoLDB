@@ -14,7 +14,7 @@ from tqdm import tqdm
 
 BASE = Path(__file__).resolve().parent
 JST = timezone(timedelta(hours=9))
-ALIASES = {"MonkeyKing": "wukong", "Renata": "renata"}
+ALIASES = {"MonkeyKing": "monkeyking", "Renata": "renata"}
 
 
 def wiki_url_map():
@@ -119,7 +119,7 @@ def run():
         cid = champ["id"]
         slug = ALIASES.get(cid, cid.lower())
         prior_slug = "renataglasc" if cid == "Renata" else slug
-        mark = "x" if prior_slug in checked else " "
+        mark = "x" if slug in checked or prior_slug in checked else " "
         wiki_key = {"MonkeyKing": "wukong", "Renata": "renataglasc", "Nunu": "nunuwillump"}.get(cid, cid.lower())
         wiki = wiki_urls.get(wiki_key)
         if not wiki:

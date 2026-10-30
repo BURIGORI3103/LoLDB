@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "狩猟のスリルと栄誉を何より重んじる獅子のヴァスタヤ、キィラッシュの部族出身のハンター 自身の片目を奪った宿敵カ＝ジックスの首を付け狙い、ゲーム中でも対戦すると特殊なイベントが発生する ブッシュに潜むとAAが対象に飛びかかるリープになるため、",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/rengar/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:19+09:00"
+  },
   "wiki_info": {
     "champion_id": "Rengar",
     "name": "レンガー",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "Strong Against /ステルスアサシン バーストを受けてもWで持ちこたえられるので、基本的にアサシン同士のタイマンは有利。 特にステルスを活用する相手にはUltの視界確保も刺さり、先手も取りやすい。 茂みが多い森の中では機動力も上"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Qiyana",
+            "name": "キヤナ",
+            "winrate": "57.14%",
+            "winrate_num": 57.14,
+            "winrate_display": "勝率 57.14%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.14%（統計的に有利）"
+          },
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "55.51%",
+            "winrate_num": 55.51,
+            "winrate_display": "勝率 55.51%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.51%（統計的に有利）"
+          },
+          {
+            "champion_id": "Teemo",
+            "name": "ティーモ",
+            "winrate": "55.37%",
+            "winrate_num": 55.37,
+            "winrate_display": "勝率 55.37%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.37%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "MasterYi",
+            "name": "マスター・イー",
+            "winrate": "42.25%",
+            "winrate_num": 42.25,
+            "winrate_display": "勝率 42.25%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.25%（統計的に不利）"
+          },
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "43.81%",
+            "winrate_num": 43.81,
+            "winrate_display": "勝率 43.81%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.81%（統計的に不利）"
+          },
+          {
+            "champion_id": "Fizz",
+            "name": "フィズ",
+            "winrate": "44.59%",
+            "winrate_num": 44.59,
+            "winrate_display": "勝率 44.59%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.59%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3179",
+            "name": "アンブラル グレイブ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6698",
+            "name": "プロフェイン ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8021",
+          "keystone_name": "フリートフットワーク",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "切り崩し"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "サドンインパクト",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/rengar/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:03+09:00"
+      }
+    }
   }
 }

@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "創造主であるウォッチャーに逆らい、万物を自らの意のままの姿に作り替えるためにルーンテラを食らいつくそうと企む新たなるヴォイドの指導者 凄まじいASと、方向が限定されるが4連続で使えるダッシュによる機動力で敵を捕食するAA主体のスカーミッシャ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/belveth/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:49+09:00"
+  },
   "wiki_info": {
     "champion_id": "Belveth",
     "name": "ベル＝ヴェス",
@@ -189,5 +195,190 @@
       "考察": "創造主であるウォッチャーに逆らい、万物を自らの意のままの姿に作り替えるためにルーンテラを食らいつくそうと企む新たなるヴォイドの指導者 凄まじいASと、方向が限定されるが4連続で使えるダッシュによる機動力で敵を捕食するAA主体のスカーミッシャ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "61.39%",
+            "winrate_num": 61.39,
+            "winrate_display": "勝率 61.39%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.39%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "59.38%",
+            "winrate_num": 59.38,
+            "winrate_display": "勝率 59.38%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.38%（統計的に有利）"
+          },
+          {
+            "champion_id": "Karthus",
+            "name": "カーサス",
+            "winrate": "58.26%",
+            "winrate_num": 58.26,
+            "winrate_display": "勝率 58.26%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.26%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Taliyah",
+            "name": "タリヤ",
+            "winrate": "43.31%",
+            "winrate_num": 43.31,
+            "winrate_display": "勝率 43.31%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.31%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "44.74%",
+            "winrate_num": 44.74,
+            "winrate_display": "勝率 44.74%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.74%（統計的に不利）"
+          },
+          {
+            "champion_id": "Darius",
+            "name": "ダリウス",
+            "winrate": "44.8%",
+            "winrate_num": 44.8,
+            "winrate_display": "勝率 44.8%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.8%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6672",
+            "name": "クラーケン スレイヤー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3153",
+            "name": "ルインドキング ブレード",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8008",
+          "keystone_name": "リーサルテンポ",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "キャッシュバック",
+            "トリプル トニック"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/belveth/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:28+09:00"
+      }
+    }
   }
 }

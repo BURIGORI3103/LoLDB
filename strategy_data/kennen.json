@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "シェンとアカリ(現在は脱退)たちと共にアイオニアの平穏を守る「均衡の守り人」の指導者のひとり。メンバーでも珍しいヨードル 忍装束に身を包んでいるものの、生来のヨードルの気質ゆえか騒がしいのが玉に瑕 持ち前のスピードでちょこまかと動き回り、ス",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/kennen/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:32+09:00"
+  },
   "wiki_info": {
     "champion_id": "Kennen",
     "name": "ケネン",
@@ -189,5 +195,190 @@
       "考察": "シェンとアカリ(現在は脱退)たちと共にアイオニアの平穏を守る「均衡の守り人」の指導者のひとり。メンバーでも珍しいヨードル 忍装束に身を包んでいるものの、生来のヨードルの気質ゆえか騒がしいのが玉に瑕 持ち前のスピードでちょこまかと動き回り、ス"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Vayne",
+            "name": "ヴェイン",
+            "winrate": "58.12%",
+            "winrate_num": 58.12,
+            "winrate_display": "勝率 58.12%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.12%（統計的に有利）"
+          },
+          {
+            "champion_id": "Warwick",
+            "name": "ワーウィック",
+            "winrate": "57.62%",
+            "winrate_num": 57.62,
+            "winrate_display": "勝率 57.62%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.62%（統計的に有利）"
+          },
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "56.86%",
+            "winrate_num": 56.86,
+            "winrate_display": "勝率 56.86%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.86%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "37.88%",
+            "winrate_num": 37.88,
+            "winrate_display": "勝率 37.88%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.88%（統計的に不利）"
+          },
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "41.89%",
+            "winrate_num": 41.89,
+            "winrate_display": "勝率 41.89%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.89%（統計的に不利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "42.24%",
+            "winrate_num": 42.24,
+            "winrate_display": "勝率 42.24%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.24%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3152",
+            "name": "ヘクステック ロケットベルト",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "4645",
+            "name": "シャドウフレイム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3157",
+            "name": "ゾーニャの砂時計",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "血の味わい",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "英気集中",
+            "追火"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/kennen/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:46+09:00"
+      }
+    }
   }
 }

@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "マルザハールに妻と娘を奪われ、元凶のヴォイドを滅ぼすことを誓った元シュリーマ砂漠の案内人 超高性能なワープを連発できるUltにより捕らえづらく、スケールも高いレイト志向のAPアサシン 序盤は機動力もバーストも処理能力も低く、Ultを覚えるま",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/kassadin/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:29+09:00"
+  },
   "wiki_info": {
     "champion_id": "Kassadin",
     "name": "カサディン",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "有利(Strong Against) /APアサシン 魔法ダメージを軽減するパッシブ、QのシールドでAP相手に強い。 特に射程の差を押しつけることも出来ないMeleeに有利。機動力もUltの習得後は追いつけるように。 カタリナ相手はUltを"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "59.26%",
+            "winrate_num": 59.26,
+            "winrate_display": "勝率 59.26%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.26%（統計的に有利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "58.37%",
+            "winrate_num": 58.37,
+            "winrate_display": "勝率 58.37%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.37%（統計的に有利）"
+          },
+          {
+            "champion_id": "Viktor",
+            "name": "ビクター",
+            "winrate": "57.82%",
+            "winrate_num": 57.82,
+            "winrate_display": "勝率 57.82%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.82%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Zed",
+            "name": "ゼド",
+            "winrate": "42.29%",
+            "winrate_num": 42.29,
+            "winrate_display": "勝率 42.29%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.29%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "43.18%",
+            "winrate_num": 43.18,
+            "winrate_display": "勝率 43.18%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.18%（統計的に不利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "43.32%",
+            "winrate_num": 43.32,
+            "winrate_display": "勝率 43.32%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.32%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1082",
+            "name": "ダーク シール"
+          },
+          {
+            "item_id": "2031",
+            "name": "詰め替えポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3040",
+            "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "天啓",
+          "keystone": "8369",
+          "keystone_name": "ファーストストライク",
+          "choices": [
+            "キャッシュバック",
+            "トリプル トニック",
+            "宇宙の英知"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "サドンインパクト",
+            "至極の賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/kassadin/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:45+09:00"
+      }
+    }
   }
 }

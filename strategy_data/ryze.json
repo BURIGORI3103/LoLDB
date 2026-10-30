@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "手にした者に絶大な魔力と抗いがたい堕落を齎すワールドルーンの回収を使命とする放浪の魔導士。昔のLoLでは主人公的扱いを受けていた。 射程は短いがスキルコンボで高いDPSを発揮できるバトルメイジ AP以外に、マナでもスキルがスケールされるとい",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/ryze/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:22+09:00"
+  },
   "wiki_info": {
     "champion_id": "Ryze",
     "name": "ライズ",
@@ -192,5 +198,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /Pushが遅く、有効射程が短め 対象指定CCのWにより有効射程の短い相手には有利がつく。 特にPushが遅い相手はE＋Qにより一気に処理してロームを狙いやすく勝率が高く出る。 比較的タンキ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ゴースト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "59.26%",
+            "winrate_num": 59.26,
+            "winrate_display": "勝率 59.26%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.26%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nasus",
+            "name": "ナサス",
+            "winrate": "59.0%",
+            "winrate_num": 59.0,
+            "winrate_display": "勝率 59.0%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "58.7%",
+            "winrate_num": 58.7,
+            "winrate_display": "勝率 58.7%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.7%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Brand",
+            "name": "ブランド",
+            "winrate": "34.09%",
+            "winrate_num": 34.09,
+            "winrate_display": "勝率 34.09%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 34.09%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sion",
+            "name": "サイオン",
+            "winrate": "35.14%",
+            "winrate_num": 35.14,
+            "winrate_display": "勝率 35.14%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.14%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "36.21%",
+            "winrate_num": 36.21,
+            "winrate_display": "勝率 36.21%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 36.21%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3040",
+            "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8992",
+          "keystone_name": "死神の残り火",
+          "choices": [
+            "マナフローバンド",
+            "追い風",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Move Speed",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ryze/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:27:04+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Renekton",
+            "name": "レネクトン",
+            "winrate": "57.69%",
+            "winrate_num": 57.69,
+            "winrate_display": "勝率 57.69%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.69%（統計的に有利）"
+          },
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "57.14%",
+            "winrate_num": 57.14,
+            "winrate_display": "勝率 57.14%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.14%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vayne",
+            "name": "ヴェイン",
+            "winrate": "56.76%",
+            "winrate_num": 56.76,
+            "winrate_display": "勝率 56.76%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.76%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Kled",
+            "name": "クレッド",
+            "winrate": "31.91%",
+            "winrate_num": 31.91,
+            "winrate_display": "勝率 31.91%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 31.91%（統計的に不利）"
+          },
+          {
+            "champion_id": "Warwick",
+            "name": "ワーウィック",
+            "winrate": "39.02%",
+            "winrate_num": 39.02,
+            "winrate_display": "勝率 39.02%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.02%（統計的に不利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "40.0%",
+            "winrate_num": 40.0,
+            "winrate_display": "勝率 40.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.0%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3040",
+            "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ryze/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:04+09:00"
+      }
+    }
   }
 }

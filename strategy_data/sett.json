@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ノクサス人の父とヴァスタヤの母を持つ半獣人にして、アイオニア裏社会における闘技場のボス 被弾で貯まる「闘魂」に比例して巨大なシールドを張りつつ大ダメージを返すW、敵を掴んで放り投げつつ自身も飛び込むUltと個性的なスキルが揃っている シンプ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/sett/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:26+09:00"
+  },
   "wiki_info": {
     "champion_id": "Sett",
     "name": "セト",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/拒否が弱いMelee CDは長めながら、WのシールドとQのAA強化＋キャンセルにパッシブの存在もあって長期戦が強い。 接近手段は加速のみだが、いざ近づければEのキャッチでロングトレー"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "MasterYi",
+            "name": "マスター・イー",
+            "winrate": "59.88%",
+            "winrate_num": 59.88,
+            "winrate_display": "勝率 59.88%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.88%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "58.45%",
+            "winrate_num": 58.45,
+            "winrate_display": "勝率 58.45%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.45%（統計的に有利）"
+          },
+          {
+            "champion_id": "Vladimir",
+            "name": "ブラッドミア",
+            "winrate": "55.49%",
+            "winrate_num": 55.49,
+            "winrate_display": "勝率 55.49%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.49%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "43.8%",
+            "winrate_num": 43.8,
+            "winrate_display": "勝率 43.8%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "Heimerdinger",
+            "name": "ハイマーディンガー",
+            "winrate": "45.5%",
+            "winrate_num": 45.5,
+            "winrate_display": "勝率 45.5%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.5%（統計的に不利）"
+          },
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "46.08%",
+            "winrate_num": 46.08,
+            "winrate_display": "勝率 46.08%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.08%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6631",
+            "name": "ストライドブレイカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2501",
+            "name": "覇王のブラッドメイル",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "気迫"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/sett/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:06+09:00"
+      }
+    }
   }
 }

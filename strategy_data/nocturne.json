@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ルーン戦争の末期に魔術師によって生み出されたとされる、悪夢の具現化のような存在 クラスはダイバーで高いDPSとスペルシールドによりタイマンも強いが、最大の特徴は高性能なグローバルUlt 敵全体に視界縮小をかけ連携を絶った上で超長距離リープを",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/nocturne/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:05+09:00"
+  },
   "wiki_info": {
     "champion_id": "Nocturne",
     "name": "ノクターン",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /UltによるGank ジャングラーの中でも、出足が遅くUltを習得するまで積極的なGankが難しい相手。 互いにUltを覚えてからが本番だが、ノクターンのUltはこれらよりも確実性が高く超"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Darius",
+            "name": "ダリウス",
+            "winrate": "56.57%",
+            "winrate_num": 56.57,
+            "winrate_display": "勝率 56.57%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.57%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jayce",
+            "name": "ジェイス",
+            "winrate": "54.83%",
+            "winrate_num": 54.83,
+            "winrate_display": "勝率 54.83%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.83%（統計的に有利）"
+          },
+          {
+            "champion_id": "Karthus",
+            "name": "カーサス",
+            "winrate": "54.25%",
+            "winrate_num": 54.25,
+            "winrate_display": "勝率 54.25%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.25%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "42.47%",
+            "winrate_num": 42.47,
+            "winrate_display": "勝率 42.47%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.47%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "42.57%",
+            "winrate_num": 42.57,
+            "winrate_display": "勝率 42.57%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.57%（統計的に不利）"
+          },
+          {
+            "champion_id": "Belveth",
+            "name": "ベル＝ヴェス",
+            "winrate": "44.25%",
+            "winrate_num": 44.25,
+            "winrate_display": "勝率 44.25%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.25%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6698",
+            "name": "プロフェイン ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6696",
+            "name": "アクシオム アーク",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6699",
+            "name": "ボルテイク サイクロソード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "グリスリー メメント",
+            "至極の賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/nocturne/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:58+09:00"
+      }
+    }
   }
 }

@@ -172,10 +172,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "友に託されたハンマーを勇者へ渡すべく旅を続ける勇敢なヨードル ダッシュやリープを阻止するW、対象指定ノックバックのE、豪快に敵を吹っ飛ばすUltによるPeelが得意なワーデン スキルセットはタンクだが数値は増加ADレシオしか持たない変わり種",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/poppy/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:11+09:00"
+  },
   "wiki_info": {
     "champion_id": "Poppy",
     "name": "ポッピー",
@@ -187,5 +193,371 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) etc/ブリンクを多用するスレイヤー・ダイバー レーンを問わず、ブリンクを多用する相手はWで撃ち落として実質スキルを1つ減らせる。 ポッピーを溶かす火力も、ポッピーと殴り合える耐久力も無いス"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Camille",
+            "name": "カミール",
+            "winrate": "60.49%",
+            "winrate_num": 60.49,
+            "winrate_display": "勝率 60.49%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.49%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "57.59%",
+            "winrate_num": 57.59,
+            "winrate_display": "勝率 57.59%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.59%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "56.98%",
+            "winrate_num": 56.98,
+            "winrate_display": "勝率 56.98%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.98%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Braum",
+            "name": "ブラウム",
+            "winrate": "41.68%",
+            "winrate_num": 41.68,
+            "winrate_display": "勝率 41.68%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.68%（統計的に不利）"
+          },
+          {
+            "champion_id": "Taric",
+            "name": "タリック",
+            "winrate": "41.8%",
+            "winrate_num": 41.8,
+            "winrate_display": "勝率 41.8%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "44.26%",
+            "winrate_num": 44.26,
+            "winrate_display": "勝率 44.26%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.26%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2524",
+            "name": "バンドルパイプ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ヘクステックフラッシュネイター",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/poppy/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:00+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "61.76%",
+            "winrate_num": 61.76,
+            "winrate_display": "勝率 61.76%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.76%（統計的に有利）"
+          },
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "61.11%",
+            "winrate_num": 61.11,
+            "winrate_display": "勝率 61.11%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.11%（統計的に有利）"
+          },
+          {
+            "champion_id": "Singed",
+            "name": "シンジド",
+            "winrate": "60.92%",
+            "winrate_num": 60.92,
+            "winrate_display": "勝率 60.92%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.92%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Shen",
+            "name": "シェン",
+            "winrate": "40.56%",
+            "winrate_num": 40.56,
+            "winrate_display": "勝率 40.56%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.56%（統計的に不利）"
+          },
+          {
+            "champion_id": "Yorick",
+            "name": "ヨリック",
+            "winrate": "42.25%",
+            "winrate_num": 42.25,
+            "winrate_display": "勝率 42.25%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.25%（統計的に不利）"
+          },
+          {
+            "champion_id": "Anivia",
+            "name": "アニビア",
+            "winrate": "42.42%",
+            "winrate_num": 42.42,
+            "winrate_display": "勝率 42.42%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.42%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6610",
+            "name": "サンダード スカイ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3121",
+            "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8437",
+          "keystone_name": "不死者の握撃",
+          "choices": [
+            "シールドバッシュ",
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "冷静沈着",
+            "背水の陣"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/poppy/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:00+09:00"
+      }
+    }
   }
 }

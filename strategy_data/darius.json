@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "侵略を受けた小国の出身でありながら、実力主義のノクサスで頭角を現した大戦士 処刑人・ドレイヴンは実の弟で、性格はかなり違うが兄弟仲は割と良好な模様 ストーリー上は割と知略にも長ずる面を見せるが、戦闘においては荒々しい斧術によるロングトレード",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/darius/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:57+09:00"
+  },
   "wiki_info": {
     "champion_id": "Darius",
     "name": "ダリウス",
@@ -192,5 +198,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /遠距離攻撃を持たないMelee 遠距離からのファーム手段を持たないMeleeの中でも特にこれら。 CSを取ろうとする度にキャッチのチャンスで、序盤のダリウス相手にロングトレードで勝つのも不"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ゴースト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Udyr",
+            "name": "ウディア",
+            "winrate": "56.79%",
+            "winrate_num": 56.79,
+            "winrate_display": "勝率 56.79%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.79%（統計的に有利）"
+          },
+          {
+            "champion_id": "KSante",
+            "name": "カ・サンテ",
+            "winrate": "55.52%",
+            "winrate_num": 55.52,
+            "winrate_display": "勝率 55.52%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.52%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "55.39%",
+            "winrate_num": 55.39,
+            "winrate_display": "勝率 55.39%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.39%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "45.23%",
+            "winrate_num": 45.23,
+            "winrate_display": "勝率 45.23%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.23%（統計的に不利）"
+          },
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "45.69%",
+            "winrate_num": 45.69,
+            "winrate_display": "勝率 45.69%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.69%（統計的に不利）"
+          },
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "47.13%",
+            "winrate_num": 47.13,
+            "winrate_display": "勝率 47.13%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.13%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3142",
+            "name": "妖夢の霊剣",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "アクシオム アルカニスト",
+            "追い風"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/darius/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:31+09:00"
+      }
+    },
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "67.8%",
+            "winrate_num": 67.8,
+            "winrate_display": "勝率 67.8%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 67.8%（統計的に有利）"
+          },
+          {
+            "champion_id": "Aatrox",
+            "name": "エイトロックス",
+            "winrate": "62.79%",
+            "winrate_num": 62.79,
+            "winrate_display": "勝率 62.79%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.79%（統計的に有利）"
+          },
+          {
+            "champion_id": "Fiddlesticks",
+            "name": "フィドルスティックス",
+            "winrate": "57.51%",
+            "winrate_num": 57.51,
+            "winrate_display": "勝率 57.51%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.51%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Volibear",
+            "name": "ボリベア",
+            "winrate": "39.81%",
+            "winrate_num": 39.81,
+            "winrate_display": "勝率 39.81%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.81%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "42.11%",
+            "winrate_num": 42.11,
+            "winrate_display": "勝率 42.11%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.11%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rammus",
+            "name": "ラムス",
+            "winrate": "42.37%",
+            "winrate_num": 42.37,
+            "winrate_display": "勝率 42.37%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.37%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3142",
+            "name": "妖夢の霊剣",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "ニンバスクローク",
+            "追い風",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/darius/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:32+09:00"
+      }
+    }
   }
 }

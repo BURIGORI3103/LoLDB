@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "デマーシア貴族に評判の、弦楽器エトワールの奏者。アイオニアの孤児出身で、生まれつきの障害のために話すことができない 自身の周囲にシールド・回復・加速をもたらすオーラを張って味方を支援するエンチャンター 優秀なデバフとAoE MSバフによりエ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/sona/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:33+09:00"
+  },
   "wiki_info": {
     "champion_id": "Sona",
     "name": "ソナ",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) etc/メイジサポート 回復・シールドにより、ハラスでレーニングするメイジsup相手は耐えやすい。 適宜Qでハラスを返しつつアッチェレランドを貯め、味方のGankが来ればUltで合わせるとい"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Shen",
+            "name": "シェン",
+            "winrate": "64.52%",
+            "winrate_num": 64.52,
+            "winrate_display": "勝率 64.52%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 64.52%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "59.57%",
+            "winrate_num": 59.57,
+            "winrate_display": "勝率 59.57%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.57%（統計的に有利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "59.57%",
+            "winrate_num": 59.57,
+            "winrate_display": "勝率 59.57%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.57%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Maokai",
+            "name": "マオカイ",
+            "winrate": "44.57%",
+            "winrate_num": 44.57,
+            "winrate_display": "勝率 44.57%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.57%（統計的に不利）"
+          },
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "45.8%",
+            "winrate_num": 45.8,
+            "winrate_display": "勝率 45.8%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "winrate": "47.16%",
+            "winrate_num": 47.16,
+            "winrate_display": "勝率 47.16%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.16%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6620",
+            "name": "ヘリアの残響",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2530",
+            "name": "旋律のダイアデム",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8214",
+          "keystone_name": "エアリー召喚",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "心身調整",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/sona/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:10+09:00"
+      }
+    }
   }
 }

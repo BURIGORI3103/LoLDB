@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ケイトリンとコンビを組んでピルトーヴァーの平和を守る不良警官、ジンクスとは何やら因縁がある模様 リープ+ノックアップを2つ持ってキャッチ・追撃性能が高く、シールドとAR低下も持ち合わせタイマン性能も様々な相手に高いダイバー 一方でAoECC",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/vi/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:53+09:00"
+  },
   "wiki_info": {
     "champion_id": "Vi",
     "name": "ヴァイ",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /スカーミッシャーに類するキャリー スカーミッシャーに類するジャングラー。Ultの確実性が高いGankにより、相手が育つ前に差をつけやすい。 相手を殴れている限りは耐久性能もある程度高くなる"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "58.24%",
+            "winrate_num": 58.24,
+            "winrate_display": "勝率 58.24%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.24%（統計的に有利）"
+          },
+          {
+            "champion_id": "Fizz",
+            "name": "フィズ",
+            "winrate": "54.6%",
+            "winrate_num": 54.6,
+            "winrate_display": "勝率 54.6%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.6%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "winrate": "54.35%",
+            "winrate_num": 54.35,
+            "winrate_display": "勝率 54.35%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.35%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "41.42%",
+            "winrate_num": 41.42,
+            "winrate_display": "勝率 41.42%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.42%（統計的に不利）"
+          },
+          {
+            "champion_id": "Skarner",
+            "name": "スカーナー",
+            "winrate": "44.61%",
+            "winrate_num": 44.61,
+            "winrate_display": "勝率 44.61%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.61%（統計的に不利）"
+          },
+          {
+            "champion_id": "Ivern",
+            "name": "アイバーン",
+            "winrate": "44.61%",
+            "winrate_num": 44.61,
+            "winrate_display": "勝率 44.61%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.61%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3071",
+            "name": "ブラック クリーバー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/vi/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:20+09:00"
+      }
+    }
   }
 }

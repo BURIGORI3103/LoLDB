@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "父親であるジャーヴァンⅢ世がメイジの一団に殺されたことにより王位継承が目されているデマーシアの王子 シン・ジャオは先代からの忠臣で、ガレンとは少年期からの親友 クラスはダイバーで、飛び込んで敵を壁で囲い込むUltによるエンゲージがブリンクを",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/nunu/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:06+09:00"
+  },
   "wiki_info": {
     "champion_id": "Nunu",
     "name": "ヌヌ＆ウィルンプ",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "Strong Against () 出足の遅いJG全般。 J4は相手が動けない序盤にGankを繰り返して大きな差をつけるのが得意で、エンゲージ役としては失速しないのでそのまま試合を畳むのも得意なので有利がつく。 特にJ4が中盤以降タイマン弱"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "65.22%",
+            "winrate_num": 65.22,
+            "winrate_display": "勝率 65.22%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 65.22%（統計的に有利）"
+          },
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "57.29%",
+            "winrate_num": 57.29,
+            "winrate_display": "勝率 57.29%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.29%（統計的に有利）"
+          },
+          {
+            "champion_id": "Teemo",
+            "name": "ティーモ",
+            "winrate": "56.94%",
+            "winrate_num": 56.94,
+            "winrate_display": "勝率 56.94%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.94%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Fiddlesticks",
+            "name": "フィドルスティックス",
+            "winrate": "43.89%",
+            "winrate_num": 43.89,
+            "winrate_display": "勝率 43.89%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.89%（統計的に不利）"
+          },
+          {
+            "champion_id": "Briar",
+            "name": "ブライアー",
+            "winrate": "44.51%",
+            "winrate_num": 44.51,
+            "winrate_display": "勝率 44.51%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.51%（統計的に不利）"
+          },
+          {
+            "champion_id": "Aatrox",
+            "name": "エイトロックス",
+            "winrate": "44.76%",
+            "winrate_num": 44.76,
+            "winrate_display": "勝率 44.76%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.76%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "ニンバスクローク",
+            "追い風",
+            "水走り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/nunu/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:58+09:00"
+      }
+    }
   }
 }

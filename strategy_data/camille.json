@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "全身をヘクステックで改造したフェロス家の主席スパイ。ピルトーヴァーとゾウンのバランスを保つために暗躍している Eの長距離ブリンクで接近してUltで敵単体を閉じ込め、単体バーストで倒し切る性能に優れたダイバー 割合・確定ダメージを交えたバース",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/camille/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:53+09:00"
+  },
   "wiki_info": {
     "champion_id": "Camille",
     "name": "カミール",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "有利(Strong Against) /DPS型のジャガーノート 機動力に欠けるジャガーノートはカミールのヒット&アウェイを咎めることが出来ない。 ショートトレードはシールドと確定ダメージで得意なため、タンク寄りのジャガーノートは全体的に有"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "56.91%",
+            "winrate_num": 56.91,
+            "winrate_display": "勝率 56.91%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.91%（統計的に有利）"
+          },
+          {
+            "champion_id": "Varus",
+            "name": "ヴァルス",
+            "winrate": "56.0%",
+            "winrate_num": 56.0,
+            "winrate_display": "勝率 56.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "55.97%",
+            "winrate_num": 55.97,
+            "winrate_display": "勝率 55.97%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.97%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Lissandra",
+            "name": "リサンドラ",
+            "winrate": "45.0%",
+            "winrate_num": 45.0,
+            "winrate_display": "勝率 45.0%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "45.37%",
+            "winrate_num": 45.37,
+            "winrate_display": "勝率 45.37%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.37%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zac",
+            "name": "ザック",
+            "winrate": "46.3%",
+            "winrate_num": 46.3,
+            "winrate_display": "勝率 46.3%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.3%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1055",
+            "name": "ドラン ブレード"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3074",
+            "name": "ラヴァナス ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8437",
+          "keystone_name": "不死者の握撃",
+          "choices": [
+            "シールドバッシュ",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "ビスケットデリバリー"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/camille/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:30+09:00"
+      }
+    },
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "53.8%",
+            "winrate_num": 53.8,
+            "winrate_display": "勝率 53.8%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.8%（統計的に有利）"
+          },
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "53.74%",
+            "winrate_num": 53.74,
+            "winrate_display": "勝率 53.74%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.74%（統計的に有利）"
+          },
+          {
+            "champion_id": "Shaco",
+            "name": "シャコ",
+            "winrate": "52.78%",
+            "winrate_num": 52.78,
+            "winrate_display": "勝率 52.78%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 52.78%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Rakan",
+            "name": "ラカン",
+            "winrate": "39.19%",
+            "winrate_num": 39.19,
+            "winrate_display": "勝率 39.19%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.19%（統計的に不利）"
+          },
+          {
+            "champion_id": "Maokai",
+            "name": "マオカイ",
+            "winrate": "39.29%",
+            "winrate_num": 39.29,
+            "winrate_display": "勝率 39.29%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.29%（統計的に不利）"
+          },
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "39.51%",
+            "winrate_num": 39.51,
+            "winrate_display": "勝率 39.51%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.51%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          },
+          {
+            "item_id": "1036",
+            "name": "ロング ソード"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6692",
+            "name": "赤月の刃",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6610",
+            "name": "サンダード スカイ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3053",
+            "name": "ステラックの篭手",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "9923",
+          "keystone_name": "ヘイルブレード",
+          "choices": [
+            "サドンインパクト",
+            "ディープワード",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "シールドバッシュ",
+            "ボーンアーマー"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/camille/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:30+09:00"
+      }
+    }
   }
 }

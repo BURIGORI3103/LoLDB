@@ -3,7 +3,7 @@
   "key": "81",
   "name": "エズリアル",
   "title": "光の冒険心",
-  "patch": "16.20.1",
+  "patch": "16.21.1",
   "roles": [
     "ADC"
   ],
@@ -81,60 +81,79 @@
     "バリア"
   ],
   "matchups": {
-    "favorable": [],
+    "favorable": [
+      {
+        "champion_id": "Mel",
+        "name": "メル",
+        "winrate": "54.91%",
+        "winrate_num": 54.91,
+        "winrate_display": "勝率 54.91%",
+        "advantage": "fav",
+        "advantage_label": "有利（勝率 54.91% / ADC実測）",
+        "reason": "理由データなし",
+        "source": "opgg_stats",
+        "is_estimated": false,
+        "role": "ADC",
+        "patch": "16.21.1",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "sample_note": "OP.GG ロール別カウンター統計"
+      }
+    ],
     "unfavorable": [
       {
-        "champion_id": "Yasuo",
-        "name": "ヤスオ",
-        "winrate": "39.74%",
-        "winrate_num": 39.74,
-        "winrate_display": "勝率 39.74%",
+        "champion_id": "AurelionSol",
+        "name": "オレリオン・ソル",
+        "winrate": "41.13%",
+        "winrate_num": 41.13,
+        "winrate_display": "勝率 41.13%",
         "advantage": "unfav",
-        "advantage_label": "警戒・不利（勝率 39.74% / ADC実測）",
-        "reason": "ヤスオの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+        "advantage_label": "警戒・不利（勝率 41.13% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       },
       {
-        "champion_id": "Hwei",
-        "name": "フェイ",
-        "winrate": "39.97%",
-        "winrate_num": 39.97,
-        "winrate_display": "勝率 39.97%",
+        "champion_id": "Katarina",
+        "name": "カタリナ",
+        "winrate": "42.27%",
+        "winrate_num": 42.27,
+        "winrate_display": "勝率 42.27%",
         "advantage": "unfav",
-        "advantage_label": "警戒・不利（勝率 39.97% / ADC実測）",
-        "reason": "フェイの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+        "advantage_label": "警戒・不利（勝率 42.27% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       },
       {
-        "champion_id": "Brand",
-        "name": "ブランド",
-        "winrate": "41.33%",
-        "winrate_num": 41.33,
-        "winrate_display": "勝率 41.33%",
+        "champion_id": "Nilah",
+        "name": "ニーラ",
+        "winrate": "42.51%",
+        "winrate_num": 42.51,
+        "winrate_display": "勝率 42.51%",
         "advantage": "unfav",
-        "advantage_label": "警戒・不利（勝率 41.33% / ADC実測）",
-        "reason": "ブランドの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+        "advantage_label": "警戒・不利（勝率 42.51% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       }
     ]
@@ -227,7 +246,7 @@
       "role": "ADC",
       "spells": [
         "フラッシュ",
-        "ヒール"
+        "バリア"
       ],
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
@@ -263,216 +282,118 @@
       "matchups": {
         "favorable": [
           {
-            "champion_id": "Vayne",
-            "name": "ヴェイン",
-            "winrate": null,
-            "winrate_num": null,
-            "winrate_display": "有利",
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "54.91%",
+            "winrate_num": 54.91,
+            "winrate_display": "勝率 54.91%",
             "advantage": "fav",
-            "advantage_label": "有利（ADC実測統計）",
-            "reason": "勝率 53.6% | 射程差を活かして序盤のレーン戦で圧倒。CSを取る隙にハラスを重ねてリコールを強要可能。",
+            "advantage_label": "有利（勝率 54.91% / ADC実測）",
+            "reason": "理由データなし",
             "source": "opgg_stats",
             "is_estimated": false,
             "role": "ADC",
-            "patch": "16.20.1",
+            "patch": "16.21.1",
             "region": "Global",
             "tier": "Emerald+",
-            "fetched_at": "2026-10",
-            "sample_note": "OP.GG ロール別カウンター統計"
-          },
-          {
-            "champion_id": "Kaisa",
-            "name": "カイ＝サ",
-            "winrate": null,
-            "winrate_num": null,
-            "winrate_display": "有利",
-            "advantage": "fav",
-            "advantage_label": "有利（ADC実測統計）",
-            "reason": "勝率 52.8% | 序盤のショートトレードで主導権を握り、相手がパワースパイクを迎える前にタワーを破壊。",
-            "source": "opgg_stats",
-            "is_estimated": false,
-            "role": "ADC",
-            "patch": "16.20.1",
-            "region": "Global",
-            "tier": "Emerald+",
-            "fetched_at": "2026-10",
-            "sample_note": "OP.GG ロール別カウンター統計"
-          },
-          {
-            "champion_id": "Samira",
-            "name": "サミラ",
-            "winrate": null,
-            "winrate_num": null,
-            "winrate_display": "有利",
-            "advantage": "fav",
-            "advantage_label": "有利（ADC実測統計）",
-            "reason": "勝率 52.2% | 接近戦を許さず長射程からポーク。相手のオールインラインを見極めて安全にダメージを蓄積。",
-            "source": "opgg_stats",
-            "is_estimated": false,
-            "role": "ADC",
-            "patch": "16.20.1",
-            "region": "Global",
-            "tier": "Emerald+",
-            "fetched_at": "2026-10",
+            "fetched_at": "2026-10-30",
             "sample_note": "OP.GG ロール別カウンター統計"
           }
         ],
         "unfavorable": [
           {
-            "champion_id": "Caitlyn",
-            "name": "ケイトリン",
-            "winrate": null,
-            "winrate_num": null,
-            "winrate_display": "不利",
+            "champion_id": "AurelionSol",
+            "name": "オレリオン・ソル",
+            "winrate": "41.13%",
+            "winrate_num": 41.13,
+            "winrate_display": "勝率 41.13%",
             "advantage": "unfav",
-            "advantage_label": "警戒・不利（ADC実測統計）",
-            "reason": "勝率 46.1% | 圧倒的な通常攻撃射程とトラップにより、レーンでタワー下に押し込まれやすく厳しい展開を強いられる。",
+            "advantage_label": "警戒・不利（勝率 41.13% / ADC実測）",
+            "reason": "理由データなし",
             "source": "opgg_stats",
             "is_estimated": false,
             "role": "ADC",
-            "patch": "16.20.1",
+            "patch": "16.21.1",
             "region": "Global",
             "tier": "Emerald+",
-            "fetched_at": "2026-10",
+            "fetched_at": "2026-10-30",
             "sample_note": "OP.GG ロール別カウンター統計"
           },
           {
-            "champion_id": "Draven",
-            "name": "ドレイヴン",
-            "winrate": null,
-            "winrate_num": null,
-            "winrate_display": "不利",
+            "champion_id": "Katarina",
+            "name": "カタリナ",
+            "winrate": "42.27%",
+            "winrate_num": 42.27,
+            "winrate_display": "勝率 42.27%",
             "advantage": "unfav",
-            "advantage_label": "警戒・不利（ADC実測統計）",
-            "reason": "勝率 46.7% | 序盤の暴力的な通常攻撃火力に殴り負ける。無理なトレードを避け、ガンクを待つのが鉄則。",
+            "advantage_label": "警戒・不利（勝率 42.27% / ADC実測）",
+            "reason": "理由データなし",
             "source": "opgg_stats",
             "is_estimated": false,
             "role": "ADC",
-            "patch": "16.20.1",
+            "patch": "16.21.1",
             "region": "Global",
             "tier": "Emerald+",
-            "fetched_at": "2026-10",
+            "fetched_at": "2026-10-30",
             "sample_note": "OP.GG ロール別カウンター統計"
           },
           {
-            "champion_id": "Jinx",
-            "name": "ジンクス",
-            "winrate": null,
-            "winrate_num": null,
-            "winrate_display": "不利",
+            "champion_id": "Nilah",
+            "name": "ニーラ",
+            "winrate": "42.51%",
+            "winrate_num": 42.51,
+            "winrate_display": "勝率 42.51%",
             "advantage": "unfav",
-            "advantage_label": "警戒・不利（ADC実測統計）",
-            "reason": "勝率 47.3% | 中盤以降の集団戦スケールと長射程ロケットで火力負けしやすいため、序盤に差をつけたい。",
+            "advantage_label": "警戒・不利（勝率 42.51% / ADC実測）",
+            "reason": "理由データなし",
             "source": "opgg_stats",
             "is_estimated": false,
             "role": "ADC",
-            "patch": "16.20.1",
+            "patch": "16.21.1",
             "region": "Global",
             "tier": "Emerald+",
-            "fetched_at": "2026-10",
+            "fetched_at": "2026-10-30",
             "sample_note": "OP.GG ロール別カウンター統計"
           }
         ]
       },
       "build_patterns": [
         {
-          "name": "【標準】APC・継続火力型",
-          "desc": "ブラックファイアトーチとライアンドリーの苦悶で敵前衛から後衛まで溶かし尽くすAPボットビルド。",
-          "starter": [
-            "ドラン リング",
-            "体力ポーション"
-          ],
-          "boots": "ソーサラー シューズ",
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・ADCの取得済み統計",
           "core": [
-            "ブラックファイア トーチ",
-            "ライアンドリーの苦悶",
-            "シャドウフレイム"
-          ],
-          "situational": [
-            "ラバドン デスキャップ",
-            "ヴォイド スタッフ",
-            "ゾーニャの砂時計"
+            "女神の涙",
+            "トリニティ フォース",
+            "ムラマナ"
           ],
           "core_items": [
             {
-              "name": "ブラックファイア トーチ",
-              "item_id": "1001"
+              "step": 1,
+              "item_id": "3070",
+              "name": "女神の涙",
+              "description": "推奨コア"
             },
             {
-              "name": "ライアンドリーの苦悶",
-              "item_id": "1001"
+              "step": 2,
+              "item_id": "3078",
+              "name": "トリニティ フォース",
+              "description": "推奨コア"
             },
             {
-              "name": "シャドウフレイム",
-              "item_id": "4645"
+              "step": 3,
+              "item_id": "3042",
+              "name": "ムラマナ",
+              "description": "推奨コア"
             }
-          ]
-        },
-        {
-          "name": "【バースト特化】ワンコンボ消滅型",
-          "desc": "甘えた立ち位置の敵を一瞬で吹き飛ばす純魔力集中ビルド。",
+          ],
           "starter": [
-            "ドラン リング",
+            "ドラン ボウ",
             "体力ポーション"
           ],
-          "boots": "ソーサラー シューズ",
-          "core": [
-            "ルーデン コンパニオン",
-            "ストームサージ",
-            "ラバドン デスキャップ"
-          ],
-          "situational": [
-            "シャドウフレイム",
-            "ヴォイド スタッフ",
-            "バンシー ヴェール"
-          ],
-          "core_items": [
-            {
-              "name": "ルーデン コンパニオン",
-              "item_id": "1001"
-            },
-            {
-              "name": "ストームサージ",
-              "item_id": "4646"
-            },
-            {
-              "name": "ラバドン デスキャップ",
-              "item_id": "3089"
-            }
-          ]
-        },
-        {
-          "name": "【自衛・生存重視】防衛型APC",
-          "desc": "アサシンの飛び込みに対してゾーニャの砂時計やバンシーヴェールで耐え抜き、返り討ちにする構成。",
-          "starter": [
-            "ドラン リング",
-            "体力ポーション"
-          ],
-          "boots": "マーキュリー ブーツ",
-          "core": [
-            "ゾーニャの砂時計",
-            "ライアンドリーの苦悶",
-            "クリプトブルーム"
-          ],
-          "situational": [
-            "バンシー ヴェール",
-            "リライのクリスタル セプター",
-            "ラバドン デスキャップ"
-          ],
-          "core_items": [
-            {
-              "name": "ゾーニャの砂時計",
-              "item_id": "3157"
-            },
-            {
-              "name": "ライアンドリーの苦悶",
-              "item_id": "1001"
-            },
-            {
-              "name": "クリプトブルーム",
-              "item_id": "3137"
-            }
-          ]
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "source": "opgg_stats",
+          "patch": "16.21.1"
         }
       ],
       "combos": [
@@ -522,14 +443,7 @@
       },
       "spell_sets": [
         {
-          "name": "第1採用セット（王道・最高採用率）",
-          "spells": [
-            "フラッシュ",
-            "ヒール"
-          ]
-        },
-        {
-          "name": "第2採用セット（攻撃的・対面別）",
+          "name": "OP.GG 推奨",
           "spells": [
             "フラッシュ",
             "バリア"
@@ -542,108 +456,98 @@
         "badge": "遠隔",
         "range": 550,
         "desc": "通常攻撃射程 550 の遠隔攻撃チャンピオンです。"
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3008",
+            "name": "グラトナス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3078",
+            "name": "トリニティ フォース",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3042",
+            "name": "ムラマナ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/ezreal/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:26:35+09:00"
       }
     }
   },
   "build_patterns": [
     {
-      "name": "【標準】APC・継続火力型",
-      "desc": "ブラックファイアトーチとライアンドリーの苦悶で敵前衛から後衛まで溶かし尽くすAPボットビルド。",
-      "starter": [
-        "ドラン リング",
-        "体力ポーション"
-      ],
-      "boots": "ソーサラー シューズ",
+      "name": "[AD] OP.GG 推奨ビルド",
+      "desc": "パッチ16.21.1・ADCの取得済み統計",
       "core": [
-        "ブラックファイア トーチ",
-        "ライアンドリーの苦悶",
-        "シャドウフレイム"
-      ],
-      "situational": [
-        "ラバドン デスキャップ",
-        "ヴォイド スタッフ",
-        "ゾーニャの砂時計"
+        "女神の涙",
+        "トリニティ フォース",
+        "ムラマナ"
       ],
       "core_items": [
         {
-          "name": "ブラックファイア トーチ",
-          "item_id": "1001"
+          "step": 1,
+          "item_id": "3070",
+          "name": "女神の涙",
+          "description": "推奨コア"
         },
         {
-          "name": "ライアンドリーの苦悶",
-          "item_id": "1001"
+          "step": 2,
+          "item_id": "3078",
+          "name": "トリニティ フォース",
+          "description": "推奨コア"
         },
         {
-          "name": "シャドウフレイム",
-          "item_id": "4645"
+          "step": 3,
+          "item_id": "3042",
+          "name": "ムラマナ",
+          "description": "推奨コア"
         }
-      ]
-    },
-    {
-      "name": "【バースト特化】ワンコンボ消滅型",
-      "desc": "甘えた立ち位置の敵を一瞬で吹き飛ばす純魔力集中ビルド。",
+      ],
       "starter": [
-        "ドラン リング",
+        "ドラン ボウ",
         "体力ポーション"
       ],
-      "boots": "ソーサラー シューズ",
-      "core": [
-        "ルーデン コンパニオン",
-        "ストームサージ",
-        "ラバドン デスキャップ"
-      ],
-      "situational": [
-        "シャドウフレイム",
-        "ヴォイド スタッフ",
-        "バンシー ヴェール"
-      ],
-      "core_items": [
-        {
-          "name": "ルーデン コンパニオン",
-          "item_id": "1001"
-        },
-        {
-          "name": "ストームサージ",
-          "item_id": "4646"
-        },
-        {
-          "name": "ラバドン デスキャップ",
-          "item_id": "3089"
-        }
-      ]
-    },
-    {
-      "name": "【自衛・生存重視】防衛型APC",
-      "desc": "アサシンの飛び込みに対してゾーニャの砂時計やバンシーヴェールで耐え抜き、返り討ちにする構成。",
-      "starter": [
-        "ドラン リング",
-        "体力ポーション"
-      ],
-      "boots": "マーキュリー ブーツ",
-      "core": [
-        "ゾーニャの砂時計",
-        "ライアンドリーの苦悶",
-        "クリプトブルーム"
-      ],
-      "situational": [
-        "バンシー ヴェール",
-        "リライのクリスタル セプター",
-        "ラバドン デスキャップ"
-      ],
-      "core_items": [
-        {
-          "name": "ゾーニャの砂時計",
-          "item_id": "3157"
-        },
-        {
-          "name": "ライアンドリーの苦悶",
-          "item_id": "1001"
-        },
-        {
-          "name": "クリプトブルーム",
-          "item_id": "3137"
-        }
-      ]
+      "boots": "アイオニア ブーツ",
+      "situational": [],
+      "source": "opgg_stats",
+      "patch": "16.21.1"
     }
   ],
   "skill_order": "Q > E > W",
@@ -708,170 +612,6 @@
       ]
     }
   ],
-  "matchup_matrix": {
-    "Brand": {
-      "champion_id": "Brand",
-      "name": "ブランド",
-      "winrate": "41.33%",
-      "winrate_num": 41.33,
-      "winrate_display": "勝率 41.33%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 41.33% / ADC実測）",
-      "reason": "ブランドの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Caitlyn": {
-      "champion_id": "Caitlyn",
-      "name": "ケイトリン",
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": "不利",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（ADC実測統計）",
-      "reason": "勝率 46.1% | 圧倒的な通常攻撃射程とトラップにより、レーンでタワー下に押し込まれやすく厳しい展開を強いられる。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Draven": {
-      "champion_id": "Draven",
-      "name": "ドレイヴン",
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": "不利",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（ADC実測統計）",
-      "reason": "勝率 46.7% | 序盤の暴力的な通常攻撃火力に殴り負ける。無理なトレードを避け、ガンクを待つのが鉄則。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Hwei": {
-      "champion_id": "Hwei",
-      "name": "フェイ",
-      "winrate": "39.97%",
-      "winrate_num": 39.97,
-      "winrate_display": "勝率 39.97%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 39.97% / ADC実測）",
-      "reason": "フェイの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Jinx": {
-      "champion_id": "Jinx",
-      "name": "ジンクス",
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": "不利",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（ADC実測統計）",
-      "reason": "勝率 47.3% | 中盤以降の集団戦スケールと長射程ロケットで火力負けしやすいため、序盤に差をつけたい。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Kaisa": {
-      "champion_id": "Kaisa",
-      "name": "カイ＝サ",
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": "有利",
-      "advantage": "fav",
-      "advantage_label": "有利（ADC実測統計）",
-      "reason": "勝率 52.8% | 序盤のショートトレードで主導権を握り、相手がパワースパイクを迎える前にタワーを破壊。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Samira": {
-      "champion_id": "Samira",
-      "name": "サミラ",
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": "有利",
-      "advantage": "fav",
-      "advantage_label": "有利（ADC実測統計）",
-      "reason": "勝率 52.2% | 接近戦を許さず長射程からポーク。相手のオールインラインを見極めて安全にダメージを蓄積。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Vayne": {
-      "champion_id": "Vayne",
-      "name": "ヴェイン",
-      "winrate": null,
-      "winrate_num": null,
-      "winrate_display": "有利",
-      "advantage": "fav",
-      "advantage_label": "有利（ADC実測統計）",
-      "reason": "勝率 53.6% | 射程差を活かして序盤のレーン戦で圧倒。CSを取る隙にハラスを重ねてリコールを強要可能。",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    },
-    "Yasuo": {
-      "champion_id": "Yasuo",
-      "name": "ヤスオ",
-      "winrate": "39.74%",
-      "winrate_num": 39.74,
-      "winrate_display": "勝率 39.74%",
-      "advantage": "unfav",
-      "advantage_label": "警戒・不利（勝率 39.74% / ADC実測）",
-      "reason": "ヤスオの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
-      "source": "opgg_stats",
-      "is_estimated": false,
-      "role": "ADC",
-      "patch": "16.20.1",
-      "region": "Global",
-      "tier": "Emerald+",
-      "fetched_at": "2026-10",
-      "sample_note": "OP.GG ロール別カウンター統計"
-    }
-  },
   "attack_type": {
     "type": "RANGED",
     "label": "遠隔 (レンジ) [射程 550]",
@@ -889,170 +629,172 @@
     "shield_skills": [],
     "summary": "固有のサステイン・シールドスキルは持ちません。"
   },
+  "wiki_info": {
+    "champion_id": "Ezreal",
+    "name": "エズリアル",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ezreal",
+    "fetched_at": "2026-10-30T09:18:13+09:00",
+    "status": "success",
+    "sections": {
+      "考察": "ピルトーヴァー出身、自由奔放なイケメン冒険家。シュリーマの遺跡で発見したガントレットを武器に戦う 短CDのポークスキルQと使い勝手の良いワープスキルEの両立による単体性能の高さが魅力のマークスマン QはOHEも乗り、その特性を活かすため通常",
+      "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） ()/長射程マークスマン AAの射程を活かしたハラスを中心にしたレーン戦を組み立ててくる相手。 Qによるポークの射程はこれらのAAより長く、相手のハラスに負けずにレーニングが可能。 Push"
+    },
+    "patch_verified": false
+  },
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/ezreal/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:03+09:00"
+  },
   "matchup_matrix_by_role": {
     "ADC": {
-      "Brand": {
-        "champion_id": "Brand",
-        "name": "ブランド",
-        "winrate": "41.33%",
-        "winrate_num": 41.33,
-        "winrate_display": "勝率 41.33%",
+      "AurelionSol": {
+        "champion_id": "AurelionSol",
+        "name": "オレリオン・ソル",
+        "winrate": "41.13%",
+        "winrate_num": 41.13,
+        "winrate_display": "勝率 41.13%",
         "advantage": "unfav",
-        "advantage_label": "警戒・不利（勝率 41.33% / ADC実測）",
-        "reason": "ブランドの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+        "advantage_label": "警戒・不利（勝率 41.13% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       },
-      "Caitlyn": {
-        "champion_id": "Caitlyn",
-        "name": "ケイトリン",
-        "winrate": null,
-        "winrate_num": null,
-        "winrate_display": "不利",
+      "Katarina": {
+        "champion_id": "Katarina",
+        "name": "カタリナ",
+        "winrate": "42.27%",
+        "winrate_num": 42.27,
+        "winrate_display": "勝率 42.27%",
         "advantage": "unfav",
-        "advantage_label": "警戒・不利（ADC実測統計）",
-        "reason": "勝率 46.1% | 圧倒的な通常攻撃射程とトラップにより、レーンでタワー下に押し込まれやすく厳しい展開を強いられる。",
+        "advantage_label": "警戒・不利（勝率 42.27% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       },
-      "Draven": {
-        "champion_id": "Draven",
-        "name": "ドレイヴン",
-        "winrate": null,
-        "winrate_num": null,
-        "winrate_display": "不利",
-        "advantage": "unfav",
-        "advantage_label": "警戒・不利（ADC実測統計）",
-        "reason": "勝率 46.7% | 序盤の暴力的な通常攻撃火力に殴り負ける。無理なトレードを避け、ガンクを待つのが鉄則。",
-        "source": "opgg_stats",
-        "is_estimated": false,
-        "role": "ADC",
-        "patch": "16.20.1",
-        "region": "Global",
-        "tier": "Emerald+",
-        "fetched_at": "2026-10",
-        "sample_note": "OP.GG ロール別カウンター統計"
-      },
-      "Hwei": {
-        "champion_id": "Hwei",
-        "name": "フェイ",
-        "winrate": "39.97%",
-        "winrate_num": 39.97,
-        "winrate_display": "勝率 39.97%",
-        "advantage": "unfav",
-        "advantage_label": "警戒・不利（勝率 39.97% / ADC実測）",
-        "reason": "フェイの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
-        "source": "opgg_stats",
-        "is_estimated": false,
-        "role": "ADC",
-        "patch": "16.20.1",
-        "region": "Global",
-        "tier": "Emerald+",
-        "fetched_at": "2026-10",
-        "sample_note": "OP.GG ロール別カウンター統計"
-      },
-      "Jinx": {
-        "champion_id": "Jinx",
-        "name": "ジンクス",
-        "winrate": null,
-        "winrate_num": null,
-        "winrate_display": "不利",
-        "advantage": "unfav",
-        "advantage_label": "警戒・不利（ADC実測統計）",
-        "reason": "勝率 47.3% | 中盤以降の集団戦スケールと長射程ロケットで火力負けしやすいため、序盤に差をつけたい。",
-        "source": "opgg_stats",
-        "is_estimated": false,
-        "role": "ADC",
-        "patch": "16.20.1",
-        "region": "Global",
-        "tier": "Emerald+",
-        "fetched_at": "2026-10",
-        "sample_note": "OP.GG ロール別カウンター統計"
-      },
-      "Kaisa": {
-        "champion_id": "Kaisa",
-        "name": "カイ＝サ",
-        "winrate": null,
-        "winrate_num": null,
-        "winrate_display": "有利",
+      "Mel": {
+        "champion_id": "Mel",
+        "name": "メル",
+        "winrate": "54.91%",
+        "winrate_num": 54.91,
+        "winrate_display": "勝率 54.91%",
         "advantage": "fav",
-        "advantage_label": "有利（ADC実測統計）",
-        "reason": "勝率 52.8% | 序盤のショートトレードで主導権を握り、相手がパワースパイクを迎える前にタワーを破壊。",
+        "advantage_label": "有利（勝率 54.91% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       },
-      "Samira": {
-        "champion_id": "Samira",
-        "name": "サミラ",
-        "winrate": null,
-        "winrate_num": null,
-        "winrate_display": "有利",
-        "advantage": "fav",
-        "advantage_label": "有利（ADC実測統計）",
-        "reason": "勝率 52.2% | 接近戦を許さず長射程からポーク。相手のオールインラインを見極めて安全にダメージを蓄積。",
-        "source": "opgg_stats",
-        "is_estimated": false,
-        "role": "ADC",
-        "patch": "16.20.1",
-        "region": "Global",
-        "tier": "Emerald+",
-        "fetched_at": "2026-10",
-        "sample_note": "OP.GG ロール別カウンター統計"
-      },
-      "Vayne": {
-        "champion_id": "Vayne",
-        "name": "ヴェイン",
-        "winrate": null,
-        "winrate_num": null,
-        "winrate_display": "有利",
-        "advantage": "fav",
-        "advantage_label": "有利（ADC実測統計）",
-        "reason": "勝率 53.6% | 射程差を活かして序盤のレーン戦で圧倒。CSを取る隙にハラスを重ねてリコールを強要可能。",
-        "source": "opgg_stats",
-        "is_estimated": false,
-        "role": "ADC",
-        "patch": "16.20.1",
-        "region": "Global",
-        "tier": "Emerald+",
-        "fetched_at": "2026-10",
-        "sample_note": "OP.GG ロール別カウンター統計"
-      },
-      "Yasuo": {
-        "champion_id": "Yasuo",
-        "name": "ヤスオ",
-        "winrate": "39.74%",
-        "winrate_num": 39.74,
-        "winrate_display": "勝率 39.74%",
+      "Nilah": {
+        "champion_id": "Nilah",
+        "name": "ニーラ",
+        "winrate": "42.51%",
+        "winrate_num": 42.51,
+        "winrate_display": "勝率 42.51%",
         "advantage": "unfav",
-        "advantage_label": "警戒・不利（勝率 39.74% / ADC実測）",
-        "reason": "ヤスオの交戦距離やスキルセットが厳しく、無理なトレードを避けて味方のガンクを待つ立ち回りが求められるため不利",
+        "advantage_label": "警戒・不利（勝率 42.51% / ADC実測）",
+        "reason": "理由データなし",
         "source": "opgg_stats",
         "is_estimated": false,
         "role": "ADC",
-        "patch": "16.20.1",
+        "patch": "16.21.1",
         "region": "Global",
         "tier": "Emerald+",
-        "fetched_at": "2026-10",
+        "fetched_at": "2026-10-30",
         "sample_note": "OP.GG ロール別カウンター統計"
       }
+    }
+  },
+  "matchup_matrix": {
+    "AurelionSol": {
+      "champion_id": "AurelionSol",
+      "name": "オレリオン・ソル",
+      "winrate": "41.13%",
+      "winrate_num": 41.13,
+      "winrate_display": "勝率 41.13%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 41.13% / ADC実測）",
+      "reason": "理由データなし",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "role": "ADC",
+      "patch": "16.21.1",
+      "region": "Global",
+      "tier": "Emerald+",
+      "fetched_at": "2026-10-30",
+      "sample_note": "OP.GG ロール別カウンター統計"
+    },
+    "Katarina": {
+      "champion_id": "Katarina",
+      "name": "カタリナ",
+      "winrate": "42.27%",
+      "winrate_num": 42.27,
+      "winrate_display": "勝率 42.27%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 42.27% / ADC実測）",
+      "reason": "理由データなし",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "role": "ADC",
+      "patch": "16.21.1",
+      "region": "Global",
+      "tier": "Emerald+",
+      "fetched_at": "2026-10-30",
+      "sample_note": "OP.GG ロール別カウンター統計"
+    },
+    "Mel": {
+      "champion_id": "Mel",
+      "name": "メル",
+      "winrate": "54.91%",
+      "winrate_num": 54.91,
+      "winrate_display": "勝率 54.91%",
+      "advantage": "fav",
+      "advantage_label": "有利（勝率 54.91% / ADC実測）",
+      "reason": "理由データなし",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "role": "ADC",
+      "patch": "16.21.1",
+      "region": "Global",
+      "tier": "Emerald+",
+      "fetched_at": "2026-10-30",
+      "sample_note": "OP.GG ロール別カウンター統計"
+    },
+    "Nilah": {
+      "champion_id": "Nilah",
+      "name": "ニーラ",
+      "winrate": "42.51%",
+      "winrate_num": 42.51,
+      "winrate_display": "勝率 42.51%",
+      "advantage": "unfav",
+      "advantage_label": "警戒・不利（勝率 42.51% / ADC実測）",
+      "reason": "理由データなし",
+      "source": "opgg_stats",
+      "is_estimated": false,
+      "role": "ADC",
+      "patch": "16.21.1",
+      "region": "Global",
+      "tier": "Emerald+",
+      "fetched_at": "2026-10-30",
+      "sample_note": "OP.GG ロール別カウンター統計"
     }
   }
 }

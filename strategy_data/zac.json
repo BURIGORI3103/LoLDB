@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ゾウンの汚水地区の奥深くで生まれ、二人の錬金術師によって育てられた心優しきスライム生命体 長距離を飛び込んで豊富なCCを叩き込めるのが特徴で、Gankも集団戦も得意なヴァンガード Ultも含めて全ての攻撃スキルがAoE、CDの短い割合ダメー",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/zac/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:26:08+09:00"
+  },
   "wiki_info": {
     "champion_id": "Zac",
     "name": "ザック",
@@ -191,5 +197,375 @@
       "相性・対策 (カウンター)": "Strong Against タンクJG同士のマッチアップで、お互いやりたいことは同じ。 そんな中割合ダメージのWによるDPSでタイマン有利であり、かつザックのほうがAoECCが豊富で集団戦でのインパクトに優れるため、勝率優位になる。 Me"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "winrate": "62.77%",
+            "winrate_num": 62.77,
+            "winrate_display": "勝率 62.77%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.77%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "61.11%",
+            "winrate_num": 61.11,
+            "winrate_display": "勝率 61.11%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.11%（統計的に有利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "58.75%",
+            "winrate_num": 58.75,
+            "winrate_display": "勝率 58.75%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.75%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Lillia",
+            "name": "リリア",
+            "winrate": "44.71%",
+            "winrate_num": 44.71,
+            "winrate_display": "勝率 44.71%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.71%（統計的に不利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "44.72%",
+            "winrate_num": 44.72,
+            "winrate_display": "勝率 44.72%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.72%（統計的に不利）"
+          },
+          {
+            "champion_id": "Nunu",
+            "name": "ヌヌ＆ウィルンプ",
+            "winrate": "46.01%",
+            "winrate_num": 46.01,
+            "winrate_display": "勝率 46.01%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.01%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "1103",
+            "name": "モスストンパーの幼体"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3152",
+            "name": "ヘクステック ロケットベルト",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3068",
+            "name": "サンファイア イージス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "心身調整",
+            "生気付与"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/zac/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:26+09:00"
+      }
+    },
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG",
+        "TOP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "MonkeyKing",
+            "name": "ウーコン",
+            "winrate": "71.88%",
+            "winrate_num": 71.88,
+            "winrate_display": "勝率 71.88%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 71.88%（統計的に有利）"
+          },
+          {
+            "champion_id": "Teemo",
+            "name": "ティーモ",
+            "winrate": "64.71%",
+            "winrate_num": 64.71,
+            "winrate_display": "勝率 64.71%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 64.71%（統計的に有利）"
+          },
+          {
+            "champion_id": "Tryndamere",
+            "name": "トリンダメア",
+            "winrate": "63.41%",
+            "winrate_num": 63.41,
+            "winrate_display": "勝率 63.41%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.41%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Poppy",
+            "name": "ポッピー",
+            "winrate": "38.89%",
+            "winrate_num": 38.89,
+            "winrate_display": "勝率 38.89%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 38.89%（統計的に不利）"
+          },
+          {
+            "champion_id": "Kayle",
+            "name": "ケイル",
+            "winrate": "41.3%",
+            "winrate_num": 41.3,
+            "winrate_display": "勝率 41.3%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.3%（統計的に不利）"
+          },
+          {
+            "champion_id": "Olaf",
+            "name": "オラフ",
+            "winrate": "43.68%",
+            "winrate_num": 43.68,
+            "winrate_display": "勝率 43.68%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.68%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3068",
+            "name": "サンファイア イージス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3075",
+            "name": "ソーンメイル",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8437",
+          "keystone_name": "不死者の握撃",
+          "choices": [
+            "打ちこわし",
+            "息継ぎ",
+            "生気付与"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/zac/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:27:26+09:00"
+      }
+    }
   }
 }

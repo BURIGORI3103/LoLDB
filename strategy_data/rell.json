@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "モルデカイザーに対抗する力を求めた黒薔薇団の人体実験により、金属を操る強大な魔力を得た鋼鉄の乙女 弱肉強食がモットーのノクサス出身でありながら、自らの力で戦うことができない者たちを守るために戦う生粋の騎士 自身の防御力を上昇させる手段に長じ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/rell/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:16+09:00"
+  },
   "wiki_info": {
     "champion_id": "Rell",
     "name": "レル",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /キャッチャー タンク系列の常としてフックに強い。わざと捕まってオールインの起点にすることも可能。 加速のお陰でADCもフックを避けやすくなり、またレルがキャッチされた後の接近も早くなる。 "
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "62.26%",
+            "winrate_num": 62.26,
+            "winrate_display": "勝率 62.26%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 62.26%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sylas",
+            "name": "サイラス",
+            "winrate": "60.21%",
+            "winrate_num": 60.21,
+            "winrate_display": "勝率 60.21%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.21%（統計的に有利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "59.02%",
+            "winrate_num": 59.02,
+            "winrate_display": "勝率 59.02%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.02%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Taric",
+            "name": "タリック",
+            "winrate": "46.62%",
+            "winrate_num": 46.62,
+            "winrate_display": "勝率 46.62%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.62%（統計的に不利）"
+          },
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "46.76%",
+            "winrate_num": 46.76,
+            "winrate_display": "勝率 46.76%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.76%（統計的に不利）"
+          },
+          {
+            "champion_id": "Maokai",
+            "name": "マオカイ",
+            "winrate": "47.44%",
+            "winrate_num": 47.44,
+            "winrate_display": "勝率 47.44%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.44%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3050",
+            "name": "ジーク コンバージェンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3109",
+            "name": "騎士の誓い",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "シールドバッシュ",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ヘクステックフラッシュネイター",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/rell/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:02+09:00"
+      }
+    }
   }
 }

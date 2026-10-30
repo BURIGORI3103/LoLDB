@@ -7,6 +7,7 @@ merged_data/all_champions.json を出力します。
 """
 
 import json
+import copy
 import os
 from pathlib import Path
 from tqdm import tqdm
@@ -24,10 +25,47 @@ def save_json(data, path):
 
 # Data DragonのチャンピオンIDとOP.GGスラッグの表記揺れエイリアス辞書
 CHAMPION_SLUG_ALIASES = {
-    "monkeyking": "wukong",
-    "renata": "renataglasc",
+    "monkeyking": "monkeyking",
+    "renata": "renata",
     "nunu": "nunu",
 }
+
+
+def merge_record(base, strategy, previous):
+    """手動補完を保ちつつ統計を現在パッチ・現在ロールの取得結果へ置換する。"""
+    if not strategy or strategy.get("patch") != base["patch"] or not strategy.get("opgg_source", {}).get("patch_verified"):
+        raise ValueError(f"最新パッチの検証済み攻略データがありません: {base['id']}")
+    merged = copy.deepcopy(previous)
+    merged.update(base)
+    merged["classes"] = base.get("roles", [])
+    for key in ("roles", "summoner_spells", "matchups", "build", "runes", "wiki_info", "opgg_source"):
+        merged[key] = copy.deepcopy(strategy.get(key, {} if key not in ("roles", "summoner_spells") else []))
+    for entries in merged["matchups"].values():
+        for entry in entries:
+            entry["reason"] = "理由データなし"
+    old_roles = previous.get("role_data", {})
+    roles = {}
+    for role in merged["roles"]:
+        measured = strategy.get("role_data", {}).get(role)
+        if not measured or measured.get("opgg_source", {}).get("role") != role:
+            raise ValueError(f"ロール別統計がありません: {base['id']} {role}")
+        rd = copy.deepcopy(old_roles.get(role, {}))
+        rd.update({key: copy.deepcopy(measured[key]) for key in ("build", "runes", "matchups", "opgg_source")})
+        for entries in rd["matchups"].values():
+            for entry in entries:
+                entry["reason"] = "理由データなし"
+        rd["role"] = role
+        rd["spells"] = measured["summoner_spells"]
+        rd["build_patterns"] = [{"name": "OP.GG 推奨ビルド", "desc": f"パッチ{base['patch']}・{role}の取得済み統計", "core": [item["name"] for item in measured["build"]["core"]], "core_items": measured["build"]["core"], "starter": [item["name"] for item in measured["build"]["starter"]], "boots": next((item["name"] for item in measured["build"]["boots"]), "取得データなし"), "situational": [], "source": "opgg_stats", "patch": base["patch"]}]
+        rd["spell_sets"] = [{"name": "OP.GG 推奨", "spells": measured["summoner_spells"]}]
+        roles[role] = rd
+    merged["role_data"] = roles
+    primary = merged["roles"][0]
+    merged["build_patterns"] = copy.deepcopy(roles[primary]["build_patterns"])
+    merged["gameplay_notes"] = copy.deepcopy(previous.get("gameplay_notes", {}))
+    for key in ("matchup_matrix", "matchup_matrix_by_role"):
+        merged.pop(key, None)
+    return merged
 
 def find_strategy_file(strategy_dir, champ_id):
     lower_id = champ_id.lower()
@@ -49,6 +87,7 @@ def merge_champion_data():
     strategy_dir = "strategy_data"
     output_dir = "merged_data"
     combined_file = os.path.join(output_dir, "all_champions.json")
+    previous = load_json(combined_file) or {}
 
     if not os.path.exists(base_dir):
         print(f"エラー: 基本データフォルダ（{base_dir}）が見つかりません。")
@@ -106,7 +145,7 @@ def merge_champion_data():
             continue
 
         strategy_data = load_json(strategy_path) if strategy_path else None
-        merged = dict(base_data)
+        merged = merge_record(base_data, strategy_data, previous.get(champ_id, {}))
         # 公式の基本クラス情報（Fighter, Mage, Tank 等）を classes として保持
         merged["classes"] = list(base_data.get("roles", []))
 
@@ -114,10 +153,9 @@ def merge_champion_data():
             if strategy_data.get("roles"):
                 merged["roles"] = strategy_data.get("roles")
             merged["summoner_spells"] = strategy_data.get("summoner_spells", [])
-            merged["matchups"] = strategy_data.get("matchups", default_strategy["matchups"])
             merged["build"] = strategy_data.get("build", default_strategy["build"])
             merged["runes"] = strategy_data.get("runes", default_strategy["runes"])
-            merged["gameplay_notes"] = strategy_data.get("gameplay_notes", default_strategy["gameplay_notes"])
+            # wiki抜粋はwiki_infoへ保持し、レーン戦・集団戦の専用メモと混同しない。
             strategy_applied_count += 1
         else:
             merged["roles"] = default_strategy["roles"]
@@ -127,12 +165,12 @@ def merge_champion_data():
             merged["runes"] = default_strategy["runes"]
             merged["gameplay_notes"] = default_strategy["gameplay_notes"]
 
-        output_path = os.path.join(output_dir, filename)
-        save_json(merged, output_path)
-
         all_champions_dict[champ_id] = merged
         merged_count += 1
 
+    # 全件の検証を通過するまで既存のマスター・個別JSONへ書き込まない。
+    for cid, merged in tqdm(all_champions_dict.items(), desc="検証済みJSON保存"):
+        save_json(merged, os.path.join(output_dir, f"{cid}.json"))
     save_json(all_champions_dict, combined_file)
 
     file_size_kb = os.path.getsize(combined_file) / 1024 if os.path.exists(combined_file) else 0

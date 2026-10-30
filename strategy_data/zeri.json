@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "仲間を脅かすケミ長者に立ち向かうゾウンの下層地域出身の少女。家族と友人が作ってくれたコートとライフルで自身の電気の魔法をコントロールして戦う AAがスキル扱い・方向指定のQがAA扱いという一風変わったマークスマンで、全チャンピオンでも特にス",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/zeri/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:26:09+09:00"
+  },
   "wiki_info": {
     "champion_id": "Zeri",
     "name": "ゼリ",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/接近手段に確実性が無いMelee Eのブリンク、Ultの加速により機動力が高く、これらのキャッチにはまず当たる危険が小さい。 うっかり当たったとしてもCCが基本的に単発であり、追撃を"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "バリア"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "56.52%",
+            "winrate_num": 56.52,
+            "winrate_display": "勝率 56.52%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.52%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ezreal",
+            "name": "エズリアル",
+            "winrate": "54.75%",
+            "winrate_num": 54.75,
+            "winrate_display": "勝率 54.75%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.75%（統計的に有利）"
+          },
+          {
+            "champion_id": "Corki",
+            "name": "コーキ",
+            "winrate": "54.43%",
+            "winrate_num": 54.43,
+            "winrate_display": "勝率 54.43%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.43%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Karthus",
+            "name": "カーサス",
+            "winrate": "43.21%",
+            "winrate_num": 43.21,
+            "winrate_display": "勝率 43.21%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.21%（統計的に不利）"
+          },
+          {
+            "champion_id": "Seraphine",
+            "name": "セラフィーン",
+            "winrate": "43.38%",
+            "winrate_num": 43.38,
+            "winrate_display": "勝率 43.38%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.38%（統計的に不利）"
+          },
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "44.13%",
+            "winrate_num": 44.13,
+            "winrate_display": "勝率 44.13%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.13%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3008",
+            "name": "グラトナス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3032",
+            "name": "ユン・タル ワイルドアロー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3085",
+            "name": "ルナーン ハリケーン",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8008",
+          "keystone_name": "リーサルテンポ",
+          "choices": [
+            "凱旋",
+            "レジェンド: 血脈",
+            "切り崩し"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "キャッシュバック",
+            "トリプル トニック"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/zeri/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:27:27+09:00"
+      }
+    }
   }
 }

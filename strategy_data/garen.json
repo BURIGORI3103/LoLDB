@@ -176,10 +176,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "デマーシアの名家・クラウンガード家の長男でラックスの実の兄 出自に相応しい高潔な騎士であり、王族のジャーヴァンIVとは少年期からの親友 マナを持たず、管理すべきリソースがHealthとCDのみというシンプルなジャガーノートで初心者にも安心 ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/garen/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:08+09:00"
+  },
   "wiki_info": {
     "champion_id": "Garen",
     "name": "ガレン",
@@ -192,5 +198,375 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) etc/スカーミッシャー トップに来るスカーミッシャー、具体的には細かいヒット＆アウェイでトレードを狙うタイプのMelee。 接近したところをQのサイレンスでスキルを封じ、反撃も逃走も出来な"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "KSante",
+            "name": "カ・サンテ",
+            "winrate": "57.02%",
+            "winrate_num": 57.02,
+            "winrate_display": "勝率 57.02%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.02%（統計的に有利）"
+          },
+          {
+            "champion_id": "Jax",
+            "name": "ジャックス",
+            "winrate": "56.99%",
+            "winrate_num": 56.99,
+            "winrate_display": "勝率 56.99%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.99%（統計的に有利）"
+          },
+          {
+            "champion_id": "Yasuo",
+            "name": "ヤスオ",
+            "winrate": "54.01%",
+            "winrate_num": 54.01,
+            "winrate_display": "勝率 54.01%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.01%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Kayle",
+            "name": "ケイル",
+            "winrate": "44.26%",
+            "winrate_num": 44.26,
+            "winrate_display": "勝率 44.26%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.26%（統計的に不利）"
+          },
+          {
+            "champion_id": "Anivia",
+            "name": "アニビア",
+            "winrate": "45.23%",
+            "winrate_num": 45.23,
+            "winrate_display": "勝率 45.23%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.23%（統計的に不利）"
+          },
+          {
+            "champion_id": "Aurora",
+            "name": "オーロラ",
+            "winrate": "45.4%",
+            "winrate_num": 45.4,
+            "winrate_display": "勝率 45.4%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.4%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6631",
+            "name": "ストライドブレイカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3046",
+            "name": "ファントム ダンサー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3033",
+            "name": "モータル リマインダー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト",
+            "背水の陣"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "アクシオム アルカニスト",
+            "追い風"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/garen/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:37+09:00"
+      }
+    },
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP",
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Azir",
+            "name": "アジール",
+            "winrate": "63.16%",
+            "winrate_num": 63.16,
+            "winrate_display": "勝率 63.16%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.16%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "60.48%",
+            "winrate_num": 60.48,
+            "winrate_display": "勝率 60.48%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.48%（統計的に有利）"
+          },
+          {
+            "champion_id": "Lux",
+            "name": "ラックス",
+            "winrate": "56.25%",
+            "winrate_num": 56.25,
+            "winrate_display": "勝率 56.25%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.25%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "30.0%",
+            "winrate_num": 30.0,
+            "winrate_display": "勝率 30.0%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 30.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Leblanc",
+            "name": "ルブラン",
+            "winrate": "37.29%",
+            "winrate_num": 37.29,
+            "winrate_display": "勝率 37.29%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 37.29%（統計的に不利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "40.0%",
+            "winrate_num": 40.0,
+            "winrate_display": "勝率 40.0%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.0%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6631",
+            "name": "ストライドブレイカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3046",
+            "name": "ファントム ダンサー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3033",
+            "name": "モータル リマインダー",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "アクシオム アルカニスト",
+            "追い風",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/garen/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:37+09:00"
+      }
+    }
   }
 }

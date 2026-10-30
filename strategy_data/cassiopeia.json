@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "呪いを受けて半身が蛇の姿になってしまった黒薔薇団の諜報員にしてカタリナの妹 スキルを連射して高いDPSを叩き出すメイジだが、マナ消費が激しく操作も忙しいため難易度は高い メドゥーサを思わせる外観の通り、目から光を放ち視線を合わせた相手を石化",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/cassiopeia/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:54+09:00"
+  },
   "wiki_info": {
     "champion_id": "Cassiopeia",
     "name": "カシオペア",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /短射程メイジ バトルメイジとしても最高峰のDPSにより、メイジ同士の殴り合いが非常に強い。 射程の短い相手なら互いに射程に入らずに過ごすのが難しいので有利がつき、特に序盤が弱い相手に勝率が"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "MID": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "MID"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Gwen",
+            "name": "グウェン",
+            "winrate": "63.33%",
+            "winrate_num": 63.33,
+            "winrate_display": "勝率 63.33%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.33%（統計的に有利）"
+          },
+          {
+            "champion_id": "Irelia",
+            "name": "イレリア",
+            "winrate": "58.53%",
+            "winrate_num": 58.53,
+            "winrate_display": "勝率 58.53%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.53%（統計的に有利）"
+          },
+          {
+            "champion_id": "Sion",
+            "name": "サイオン",
+            "winrate": "56.41%",
+            "winrate_num": 56.41,
+            "winrate_display": "勝率 56.41%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.41%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "36.84%",
+            "winrate_num": 36.84,
+            "winrate_display": "勝率 36.84%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 36.84%（統計的に不利）"
+          },
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "39.06%",
+            "winrate_num": 39.06,
+            "winrate_display": "勝率 39.06%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 39.06%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "40.11%",
+            "winrate_num": 40.11,
+            "winrate_display": "勝率 40.11%",
+            "role": "MID",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.11%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1056",
+            "name": "ドラン リング"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3020",
+            "name": "ソーサラー シューズ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6657",
+            "name": "ロッド オブ エイジス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3040",
+            "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8992",
+          "keystone_name": "死神の残り火",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "冷静沈着",
+            "最期の慈悲"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/cassiopeia/build/mid",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "MID",
+        "fetched_at": "2026-10-30T09:26:31+09:00"
+      }
+    }
   }
 }

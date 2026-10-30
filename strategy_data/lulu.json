@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "いたずら好きながら思いやりのあるヨードルの魔法使い。妖精ピックスと仲良く旅をしている。 対象指定ポリモーフで敵単体を確実に無力化し、これまた対象指定のシールドとHP増加で味方単体を守ることに特化したエンチャンター 一方エンゲージ・キャッチ性",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/lulu/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:45+09:00"
+  },
   "wiki_info": {
     "champion_id": "Lulu",
     "name": "ルル",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /ダイバー、アサシン 後衛に飛び込み、キャリーを直接狙ってくるダイバーやアサシンに類する相手。 単体を無力化するW、Health回復（増加）＋ノックアップのUltでPeelが容易。 スキルに"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "63.59%",
+            "winrate_num": 63.59,
+            "winrate_display": "勝率 63.59%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.59%（統計的に有利）"
+          },
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "56.0%",
+            "winrate_num": 56.0,
+            "winrate_display": "勝率 56.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Camille",
+            "name": "カミール",
+            "winrate": "54.24%",
+            "winrate_num": 54.24,
+            "winrate_display": "勝率 54.24%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.24%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "45.5%",
+            "winrate_num": 45.5,
+            "winrate_display": "勝率 45.5%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.5%（統計的に不利）"
+          },
+          {
+            "champion_id": "Leona",
+            "name": "レオナ",
+            "winrate": "45.8%",
+            "winrate_num": 45.8,
+            "winrate_display": "勝率 45.8%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.8%（統計的に不利）"
+          },
+          {
+            "champion_id": "Thresh",
+            "name": "スレッシュ",
+            "winrate": "46.28%",
+            "winrate_num": 46.28,
+            "winrate_display": "勝率 46.28%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.28%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3504",
+            "name": "アーデント センサー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6617",
+            "name": "ムーンストーンの再生",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2065",
+            "name": "シュレリアの戦歌",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8214",
+          "keystone_name": "エアリー召喚",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "追火"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ボーンアーマー",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/lulu/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:50+09:00"
+      }
+    }
   }
 }

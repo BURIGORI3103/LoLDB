@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "軍務放棄の咎を受けて祖国を追放された後、霊峰ターゴンの試練を乗り越え守護の神髄へと生まれ変わったデマーシアの元軍人。 飛び込んできた敵へのカウンターを得意とするタンクと回復・シールド・無敵を付与するエンチャンター、二つの側面を持つチャンピオ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/taric/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:40+09:00"
+  },
   "wiki_info": {
     "champion_id": "Taric",
     "name": "タリック",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/キャッチャー・ダイバー系サポート 仕掛けてきた相手をいなすのが得意な性質上、これらのこちらに飛び込んでくるタイプの対面に有利。 特に発動が遅いスキルでキャッチしたり、ダメージの出力が"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "イグゾースト",
+        "フラッシュ"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Shaco",
+            "name": "シャコ",
+            "winrate": "60.26%",
+            "winrate_num": 60.26,
+            "winrate_display": "勝率 60.26%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.26%（統計的に有利）"
+          },
+          {
+            "champion_id": "Camille",
+            "name": "カミール",
+            "winrate": "60.0%",
+            "winrate_num": 60.0,
+            "winrate_display": "勝率 60.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ashe",
+            "name": "アッシュ",
+            "winrate": "60.0%",
+            "winrate_num": 60.0,
+            "winrate_display": "勝率 60.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.0%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "40.0%",
+            "winrate_num": 40.0,
+            "winrate_display": "勝率 40.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Soraka",
+            "name": "ソラカ",
+            "winrate": "41.18%",
+            "winrate_num": 41.18,
+            "winrate_display": "勝率 41.18%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.18%（統計的に不利）"
+          },
+          {
+            "champion_id": "Janna",
+            "name": "ジャンナ",
+            "winrate": "43.32%",
+            "winrate_num": 43.32,
+            "winrate_display": "勝率 43.32%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.32%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3070",
+            "name": "女神の涙",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3121",
+            "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "天啓",
+          "keystone": "8351",
+          "keystone_name": "グレイシャルオーグメント",
+          "choices": [
+            "魔法の靴",
+            "ビスケットデリバリー",
+            "宇宙の英知"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "心身調整",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/taric/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:27:14+09:00"
+      }
+    }
   }
 }

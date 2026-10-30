@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "古くはシュリーマから現代のゾウンにまで語り継がれてきた、人の世を見守り続ける風の精霊 多彩なCCにより敵を味方キャリーから遠ざけるPeel・ディスエンゲージ性能に特化したエンチャンター CCがディスエンゲージに使いやすい方向に発生する分エン",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/janna/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:18+09:00"
+  },
   "wiki_info": {
     "champion_id": "Janna",
     "name": "ジャンナ",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against) /張り付く性能が高いタンク 長期的に張り付く性能の高いタンク全般。圧倒的なディスエンゲージでこれら相手もPeelが可能。 一度完全な拒否に成功すると再度仕掛ける能力は高くないので有利がつく。"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "61.29%",
+            "winrate_num": 61.29,
+            "winrate_display": "勝率 61.29%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.29%（統計的に有利）"
+          },
+          {
+            "champion_id": "Camille",
+            "name": "カミール",
+            "winrate": "59.6%",
+            "winrate_num": 59.6,
+            "winrate_display": "勝率 59.6%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.6%（統計的に有利）"
+          },
+          {
+            "champion_id": "Shaco",
+            "name": "シャコ",
+            "winrate": "58.0%",
+            "winrate_num": 58.0,
+            "winrate_display": "勝率 58.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.0%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Amumu",
+            "name": "アムム",
+            "winrate": "45.91%",
+            "winrate_num": 45.91,
+            "winrate_display": "勝率 45.91%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.91%（統計的に不利）"
+          },
+          {
+            "champion_id": "Maokai",
+            "name": "マオカイ",
+            "winrate": "46.94%",
+            "winrate_num": 46.94,
+            "winrate_display": "勝率 46.94%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.94%（統計的に不利）"
+          },
+          {
+            "champion_id": "Blitzcrank",
+            "name": "ブリッツクランク",
+            "winrate": "47.28%",
+            "winrate_num": 47.28,
+            "winrate_display": "勝率 47.28%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.28%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6617",
+            "name": "ムーンストーンの再生",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3107",
+            "name": "リデンプション",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2065",
+            "name": "シュレリアの戦歌",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8214",
+          "keystone_name": "エアリー召喚",
+          "choices": [
+            "マナフローバンド",
+            "追い風",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "生命の泉",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Move Speed",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/janna/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:41+09:00"
+      }
+    }
   }
 }

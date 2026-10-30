@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "見た目通りにパワフルな戦いを得意とするミノタウロス。モォ～CC命 豊富なCCに高いタフネスを併せ持ち、ピールもエンゲージも可能なタンクサポート 一方で遠距離攻撃手段は無く、基本的に同時に行えるのはどちらか一方のみ 直接的な攻撃性能も低いので",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/alistar/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:39+09:00"
+  },
   "wiki_info": {
     "champion_id": "Alistar",
     "name": "アリスター",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) /キャッチャー 主にフック系の引き寄せるスキルでオールイン、スノーボールを狙うサポート。 高いPeel性能を備えるため、相手の接近・オールインを高精度で拒否、安全にADCにスケールして貰える"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "68.52%",
+            "winrate_num": 68.52,
+            "winrate_display": "勝率 68.52%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 68.52%（統計的に有利）"
+          },
+          {
+            "champion_id": "Zoe",
+            "name": "ゾーイ",
+            "winrate": "58.31%",
+            "winrate_num": 58.31,
+            "winrate_display": "勝率 58.31%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.31%（統計的に有利）"
+          },
+          {
+            "champion_id": "Yuumi",
+            "name": "ユーミ",
+            "winrate": "56.47%",
+            "winrate_num": 56.47,
+            "winrate_display": "勝率 56.47%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.47%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "43.89%",
+            "winrate_num": 43.89,
+            "winrate_display": "勝率 43.89%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.89%（統計的に不利）"
+          },
+          {
+            "champion_id": "Soraka",
+            "name": "ソラカ",
+            "winrate": "46.81%",
+            "winrate_num": 46.81,
+            "winrate_display": "勝率 46.81%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 46.81%（統計的に不利）"
+          },
+          {
+            "champion_id": "Zilean",
+            "name": "ジリアン",
+            "winrate": "48.0%",
+            "winrate_num": 48.0,
+            "winrate_display": "勝率 48.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 48.0%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3050",
+            "name": "ジーク コンバージェンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3109",
+            "name": "騎士の誓い",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "ボーンアーマー",
+            "気迫"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "ヘクステックフラッシュネイター",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/alistar/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:23+09:00"
+      }
+    }
   }
 }

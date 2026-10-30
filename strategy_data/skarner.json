@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "蠍の姿をした古代種族・ブラカーンの末裔にして齢1万を超えるイシュタル建国の祖 人間の無益な争いにより滅びた文明の悲劇を繰り返さぬよう、自国の民と外界の接触を拒絶している 豊富なCCにより敵を抑え込み、割合ダメージで殴り抜くヴァンガード寄りの",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/skarner/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:32+09:00"
+  },
   "wiki_info": {
     "champion_id": "Skarner",
     "name": "スカーナー",
@@ -189,5 +195,190 @@
       "考察": "蠍の姿をした古代種族・ブラカーンの末裔にして齢1万を超えるイシュタル建国の祖 人間の無益な争いにより滅びた文明の悲劇を繰り返さぬよう、自国の民と外界の接触を拒絶している 豊富なCCにより敵を抑え込み、割合ダメージで殴り抜くヴァンガード寄りの"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Malphite",
+            "name": "マルファイト",
+            "winrate": "66.67%",
+            "winrate_num": 66.67,
+            "winrate_display": "勝率 66.67%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 66.67%（統計的に有利）"
+          },
+          {
+            "champion_id": "Rammus",
+            "name": "ラムス",
+            "winrate": "63.0%",
+            "winrate_num": 63.0,
+            "winrate_display": "勝率 63.0%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Quinn",
+            "name": "クイン",
+            "winrate": "61.43%",
+            "winrate_num": 61.43,
+            "winrate_display": "勝率 61.43%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 61.43%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Aatrox",
+            "name": "エイトロックス",
+            "winrate": "35.42%",
+            "winrate_num": 35.42,
+            "winrate_display": "勝率 35.42%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 35.42%（統計的に不利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "44.58%",
+            "winrate_num": 44.58,
+            "winrate_display": "勝率 44.58%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.58%（統計的に不利）"
+          },
+          {
+            "champion_id": "Ivern",
+            "name": "アイバーン",
+            "winrate": "44.64%",
+            "winrate_num": 44.64,
+            "winrate_display": "勝率 44.64%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.64%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1103",
+            "name": "モスストンパーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3084",
+            "name": "心の鋼",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "2502",
+            "name": "終わりなき絶望",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8437",
+          "keystone_name": "不死者の握撃",
+          "choices": [
+            "シールドバッシュ",
+            "心身調整",
+            "超成長"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "疾駆"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/skarner/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:08+09:00"
+      }
+    }
   }
 }

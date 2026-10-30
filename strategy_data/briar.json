@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "黒薔薇団の操血術によって造られた敵も味方も見境なく貪り食らう生体兵器 失敗作とみなされ幽閉されていたが、獄中で血への渇望を抑制する術を身に付け、ノクサスを脱走。兵器としてではない新たな道を歩み始める Wで自分自身にバーサークをかけ、スキル以",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/briar/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:52+09:00"
+  },
   "wiki_info": {
     "champion_id": "Briar",
     "name": "ブライアー",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） etc/逃走・拒否が苦手 AA主体、かつバーサークでステップによる回避が出来ないのでCCに弱い。 裏を返すと、これらのCCや逃げの弱い相手には高い追撃性能とDPSを押しつけやすい。 バーサー"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Qiyana",
+            "name": "キヤナ",
+            "winrate": "55.81%",
+            "winrate_num": 55.81,
+            "winrate_display": "勝率 55.81%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.81%（統計的に有利）"
+          },
+          {
+            "champion_id": "Kindred",
+            "name": "キンドレッド",
+            "winrate": "55.61%",
+            "winrate_num": 55.61,
+            "winrate_display": "勝率 55.61%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.61%（統計的に有利）"
+          },
+          {
+            "champion_id": "Nunu",
+            "name": "ヌヌ＆ウィルンプ",
+            "winrate": "55.49%",
+            "winrate_num": 55.49,
+            "winrate_display": "勝率 55.49%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.49%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Fizz",
+            "name": "フィズ",
+            "winrate": "43.17%",
+            "winrate_num": 43.17,
+            "winrate_display": "勝率 43.17%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.17%（統計的に不利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "44.16%",
+            "winrate_num": 44.16,
+            "winrate_display": "勝率 44.16%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.16%（統計的に不利）"
+          },
+          {
+            "champion_id": "RekSai",
+            "name": "レク＝サイ",
+            "winrate": "44.25%",
+            "winrate_num": 44.25,
+            "winrate_display": "勝率 44.25%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.25%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1103",
+            "name": "モスストンパーの幼体"
+          },
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6676",
+            "name": "コレクター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3748",
+            "name": "タイタン ハイドラ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8005",
+          "keystone_name": "プレスアタック",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "サドンインパクト",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/briar/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:29+09:00"
+      }
+    }
   }
 }

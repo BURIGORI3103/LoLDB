@@ -1,7 +1,7 @@
 ---
 project: LoLDB
 status: active
-last_reviewed: 2026-10-22
+last_reviewed: 2026-10-30
 summary: LoL のチャンピオン・アイテム・対面情報を集約し、スマートフォンでも使えるオフライン対応 PWA を生成するプロジェクト。
 ---
 
@@ -28,6 +28,8 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 - refresh_wiki.py は公式取得済みチャンピオン一覧から日本語名と参照URLを再生成し、現行の www.loljp-wiki.jp/wiki/?Champion/<英語ID> から「考察」「相性・対策」の短い抜粋を再取得します。
 - wikiの取得結果は strategy_data の wiki_info と docs/wiki_refresh_report.json に、出典URL・取得日時・成否を付けて保存します。wikiのパッチ対応は未検証であり、OP.GGの取得チェックとは別に管理します。失敗時は本文を生成して成功扱いにしません。
+- OP.GGの正式slugはウーコンが monkeyking、レナータが renata。process_url_list.py --refresh --reuse-wiki で全件を再取得し、ページ表示のパッチを検証します。refresh_role_stats.py が実運用ロールごとのページから統計を取得し、表示ロールとパッチを検証して role_data へ保存します。
+- merge_data.py はパッチ・ロール別の取得が未完了なら停止し、検証済みデータで統計を置換します。コンボ・スキル順などの既存補完を保持し、ダメージ属性・AAタイプ・サステインと対面マトリクスを後段で再計算します。sync_all_roles_complete.py の固定相性・固定ビルドによる補完はパッチ更新フローでは実行しません。
 
 ## 生成物と運用上の制約
 

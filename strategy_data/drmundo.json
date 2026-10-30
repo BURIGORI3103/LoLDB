@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "治療という名目の恐るべき人体実験により、理性の代わりに強靱な肉体を得たゾウンの元用心棒 タンクアイテムしか積まないが、豊富なHPレシオと割合ダメージで高い火力も発揮するジャガーノート 多彩な自己回復能力でダメージを耐え、パッシブでハードCC",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/drmundo/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:59+09:00"
+  },
   "wiki_info": {
     "champion_id": "DrMundo",
     "name": "ドクター・ムンド",
@@ -191,5 +197,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /APタンク APタンクのハラス程度であれば余裕を持って耐えきれる回復量を持つ。 仕掛ける手段を単発のCCに依存するため、パッシブの拒否も十分に機能する。 MRのスケールは並以上にあるため、"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "TOP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "TOP"
+      ],
+      "summoner_spells": [
+        "ゴースト",
+        "テレポート"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Swain",
+            "name": "スウェイン",
+            "winrate": "59.13%",
+            "winrate_num": 59.13,
+            "winrate_display": "勝率 59.13%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 59.13%（統計的に有利）"
+          },
+          {
+            "champion_id": "Malzahar",
+            "name": "マルザハール",
+            "winrate": "58.88%",
+            "winrate_num": 58.88,
+            "winrate_display": "勝率 58.88%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 58.88%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ryze",
+            "name": "ライズ",
+            "winrate": "56.58%",
+            "winrate_num": 56.58,
+            "winrate_display": "勝率 56.58%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.58%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Warwick",
+            "name": "ワーウィック",
+            "winrate": "40.91%",
+            "winrate_num": 40.91,
+            "winrate_display": "勝率 40.91%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 40.91%（統計的に不利）"
+          },
+          {
+            "champion_id": "Kayle",
+            "name": "ケイル",
+            "winrate": "42.46%",
+            "winrate_num": 42.46,
+            "winrate_display": "勝率 42.46%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 42.46%（統計的に不利）"
+          },
+          {
+            "champion_id": "Anivia",
+            "name": "アニビア",
+            "winrate": "43.83%",
+            "winrate_num": 43.83,
+            "winrate_display": "勝率 43.83%",
+            "role": "TOP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.83%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1054",
+            "name": "ドラン シールド"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3083",
+            "name": "ワーモグ アーマー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3084",
+            "name": "心の鋼",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3748",
+            "name": "タイタン ハイドラ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8437",
+          "keystone_name": "不死者の握撃",
+          "choices": [
+            "打ちこわし",
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "疾駆"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/drmundo/build/top",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "TOP",
+        "fetched_at": "2026-10-30T09:26:33+09:00"
+      }
+    }
   }
 }

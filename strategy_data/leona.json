@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "太陽を信仰するソラリの騎士団長にして太陽の神髄。月の神髄であるダイアナはかつての親友 耐久力と単体に張り付く性能に長ずるヴァンガード。単独での火力は低めなのでサポート運用が基本 序盤からのキルメイクを得意とする一方、直接的なサステインが皆無",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/leona/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:41+09:00"
+  },
   "wiki_info": {
     "champion_id": "Leona",
     "name": "レオナ",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "敵との相性 有利（Strong Against） /ダイバー・スカーミッシャー CCが豊富、特にQは実質対象指定ということで確実性が高い。 特に防御スキルがレオナに有効に働かない相手は必然低い防御力を晒しやすく有利がつく。 /オールインに弱"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "63.79%",
+            "winrate_num": 63.79,
+            "winrate_display": "勝率 63.79%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 63.79%（統計的に有利）"
+          },
+          {
+            "champion_id": "Yuumi",
+            "name": "ユーミ",
+            "winrate": "57.25%",
+            "winrate_num": 57.25,
+            "winrate_display": "勝率 57.25%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.25%（統計的に有利）"
+          },
+          {
+            "champion_id": "Leblanc",
+            "name": "ルブラン",
+            "winrate": "55.5%",
+            "winrate_num": 55.5,
+            "winrate_display": "勝率 55.5%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.5%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Taric",
+            "name": "タリック",
+            "winrate": "47.32%",
+            "winrate_num": 47.32,
+            "winrate_display": "勝率 47.32%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.32%（統計的に不利）"
+          },
+          {
+            "champion_id": "Braum",
+            "name": "ブラウム",
+            "winrate": "47.88%",
+            "winrate_num": 47.88,
+            "winrate_display": "勝率 47.88%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.88%（統計的に不利）"
+          },
+          {
+            "champion_id": "Velkoz",
+            "name": "ヴェル＝コズ",
+            "winrate": "47.89%",
+            "winrate_num": 47.89,
+            "winrate_display": "勝率 47.89%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 47.89%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3109",
+            "name": "騎士の誓い",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2524",
+            "name": "バンドルパイプ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "不滅",
+          "keystone": "8439",
+          "keystone_name": "アフターショック",
+          "choices": [
+            "生命の泉",
+            "息継ぎ",
+            "超成長"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Health Scaling",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/leona/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:49+09:00"
+      }
+    }
   }
 }

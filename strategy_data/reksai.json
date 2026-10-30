@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "砂漠の地底に潜むヴォイドの怪物・ゼル＝サイ族の女王。知性と呼べるものが殆ど見られず、本能のまま獲物を貪る無情な捕食者 潜伏状態でトンネルを作って接近し、非潜伏状態でバーストを叩き込むダイバー 序盤の強さを生かしてスノーボールし、中盤までに戦",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/reksai/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:16+09:00"
+  },
   "wiki_info": {
     "champion_id": "RekSai",
     "name": "レク＝サイ",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "有利（Strong Against） /スカーミッシャー系JG Lv6前のGank性能について圧倒的にレク＝サイのほうが優秀なため序盤に優位を築きやすく、Lv6になっても相手のGank性能は大して伸びないためそのまま逆転されづらく勝ちやすい"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Pantheon",
+            "name": "パンテオン",
+            "winrate": "60.0%",
+            "winrate_num": 60.0,
+            "winrate_display": "勝率 60.0%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 60.0%（統計的に有利）"
+          },
+          {
+            "champion_id": "Gragas",
+            "name": "グラガス",
+            "winrate": "56.82%",
+            "winrate_num": 56.82,
+            "winrate_display": "勝率 56.82%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.82%（統計的に有利）"
+          },
+          {
+            "champion_id": "Zed",
+            "name": "ゼド",
+            "winrate": "56.55%",
+            "winrate_num": 56.55,
+            "winrate_display": "勝率 56.55%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.55%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Volibear",
+            "name": "ボリベア",
+            "winrate": "41.33%",
+            "winrate_num": 41.33,
+            "winrate_display": "勝率 41.33%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.33%（統計的に不利）"
+          },
+          {
+            "champion_id": "Darius",
+            "name": "ダリウス",
+            "winrate": "43.24%",
+            "winrate_num": 43.24,
+            "winrate_display": "勝率 43.24%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.24%（統計的に不利）"
+          },
+          {
+            "champion_id": "Fizz",
+            "name": "フィズ",
+            "winrate": "43.59%",
+            "winrate_num": 43.59,
+            "winrate_display": "勝率 43.59%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.59%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1101",
+            "name": "スコーチクロウの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6631",
+            "name": "ストライドブレイカー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3161",
+            "name": "ショウジンの矛",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3053",
+            "name": "ステラックの篭手",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/reksai/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:02+09:00"
+      }
+    }
   }
 }

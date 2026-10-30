@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "宇宙の平衡を保つことが目的とされる、宇宙からの来訪者 サポートでありながら、多彩な加速と特殊な移動スキルによるロームをコンセプトとする変わり種 戦場にバラ捲かれた鐘を回収して強くなっていき、スキルも全体的に個性的で独自性が強い ただし相手に",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/bard/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:48+09:00"
+  },
   "wiki_info": {
     "champion_id": "Bard",
     "name": "バード",
@@ -187,5 +193,186 @@
       "相性・対策 (カウンター)": "味方との相性 良い(Strong With) (AP)/ミニオン処理が早い AoEが豊富なAPCを始めとした、ミニオン処理が早い相方。 得意のロームの間も安全な距離からCSだけ取る動きが狙いやすく、留守番しやすい。 オールインに弱いものが多"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "イグナイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "56.14%",
+            "winrate_num": 56.14,
+            "winrate_display": "勝率 56.14%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.14%（統計的に有利）"
+          },
+          {
+            "champion_id": "Neeko",
+            "name": "ニーコ",
+            "winrate": "54.74%",
+            "winrate_num": 54.74,
+            "winrate_display": "勝率 54.74%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.74%（統計的に有利）"
+          },
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "53.66%",
+            "winrate_num": 53.66,
+            "winrate_display": "勝率 53.66%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.66%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Elise",
+            "name": "エリス",
+            "winrate": "43.77%",
+            "winrate_num": 43.77,
+            "winrate_display": "勝率 43.77%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.77%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sona",
+            "name": "ソナ",
+            "winrate": "43.95%",
+            "winrate_num": 43.95,
+            "winrate_display": "勝率 43.95%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.95%（統計的に不利）"
+          },
+          {
+            "champion_id": "TahmKench",
+            "name": "タム・ケンチ",
+            "winrate": "44.09%",
+            "winrate_num": 44.09,
+            "winrate_display": "勝率 44.09%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.09%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3742",
+            "name": "デッド マン プレート",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3190",
+            "name": "ソラリのロケット",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2524",
+            "name": "バンドルパイプ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "覇道",
+          "keystone": "8112",
+          "keystone_name": "電撃",
+          "choices": [
+            "追い打ち",
+            "ディープワード",
+            "貪欲な賞金首狩り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "なんでも屋"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Move Speed",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/bard/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:27+09:00"
+      }
+    }
   }
 }

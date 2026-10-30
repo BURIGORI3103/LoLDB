@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ヴィエゴのかつての配下、その野心がシャドウアイルを黒き霧に飲み込ませる最後の要因になった 半人半馬の見た目通り、機動力が命のダイバーで、高めた移動速度は攻撃力にも変換される 高速で敵に接近して2種類のCCにより強烈なキルメイクを行う、そのG",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/hecarim/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:13+09:00"
+  },
   "wiki_info": {
     "champion_id": "Hecarim",
     "name": "ヘカリム",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "Strong Against およそカウンターJGを行ってこないタンクJG。序盤やりたいことを通しやすく、集団戦での影響力も引けを取らない。 Weak Against (JG) 高いDPSを誇るコントロール系JG。全ての時間で遭遇戦不利であ"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "ゴースト",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Ambessa",
+            "name": "アンベッサ",
+            "winrate": "56.58%",
+            "winrate_num": 56.58,
+            "winrate_display": "勝率 56.58%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.58%（統計的に有利）"
+          },
+          {
+            "champion_id": "Qiyana",
+            "name": "キヤナ",
+            "winrate": "56.56%",
+            "winrate_num": 56.56,
+            "winrate_display": "勝率 56.56%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 56.56%（統計的に有利）"
+          },
+          {
+            "champion_id": "Rengar",
+            "name": "レンガー",
+            "winrate": "55.17%",
+            "winrate_num": 55.17,
+            "winrate_display": "勝率 55.17%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 55.17%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Darius",
+            "name": "ダリウス",
+            "winrate": "44.34%",
+            "winrate_num": 44.34,
+            "winrate_display": "勝率 44.34%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.34%（統計的に不利）"
+          },
+          {
+            "champion_id": "Briar",
+            "name": "ブライアー",
+            "winrate": "45.21%",
+            "winrate_num": 45.21,
+            "winrate_display": "勝率 45.21%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.21%（統計的に不利）"
+          },
+          {
+            "champion_id": "Belveth",
+            "name": "ベル＝ヴェス",
+            "winrate": "45.24%",
+            "winrate_num": 45.24,
+            "winrate_display": "勝率 45.24%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.24%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3008",
+            "name": "グラトナス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "3161",
+            "name": "ショウジンの矛",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6333",
+            "name": "デス ダンス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "2517",
+            "name": "終わりなき飢え",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8230",
+          "keystone_name": "嵐乗りの勇躍",
+          "choices": [
+            "ニンバスクローク",
+            "追い風",
+            "水走り"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "凱旋",
+            "レジェンド: ヘイスト"
+          ]
+        },
+        "shards": [
+          "Adaptive Force",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/hecarim/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:26:39+09:00"
+      }
+    }
   }
 }

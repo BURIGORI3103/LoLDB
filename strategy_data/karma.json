@@ -171,10 +171,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "幾度も転生を繰り返しながら、人々に平和と調和を説く神聖なるアイオニアの魂の顕現 ポークのQ・スネアのW・シールドのEと、火力とユーティリティを両立するメイジ兼エンチャンター Lv1からUltを使用出来るためレーン戦で高いプレッシャーを放てる",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/karma/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:24:26+09:00"
+  },
   "wiki_info": {
     "champion_id": "Karma",
     "name": "カルマ",
@@ -186,5 +192,186 @@
       "相性・対策 (カウンター)": "Strong Against mid運用: 機動スキルを繰り返し使うことができずバーストコンボが長めなMelee。 機動スキルで接近された際まずはEでシールドを張りつつ加速で距離を取ることでコンボが成立しないようにするべし。 そのままWでス"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "SUP": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "SUP"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "ヒール"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Hwei",
+            "name": "フェイ",
+            "winrate": "54.45%",
+            "winrate_num": 54.45,
+            "winrate_display": "勝率 54.45%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.45%（統計的に有利）"
+          },
+          {
+            "champion_id": "Mel",
+            "name": "メル",
+            "winrate": "54.24%",
+            "winrate_num": 54.24,
+            "winrate_display": "勝率 54.24%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.24%（統計的に有利）"
+          },
+          {
+            "champion_id": "Morgana",
+            "name": "モルガナ",
+            "winrate": "53.94%",
+            "winrate_num": 53.94,
+            "winrate_display": "勝率 53.94%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 53.94%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Taric",
+            "name": "タリック",
+            "winrate": "43.9%",
+            "winrate_num": 43.9,
+            "winrate_display": "勝率 43.9%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.9%（統計的に不利）"
+          },
+          {
+            "champion_id": "Sona",
+            "name": "ソナ",
+            "winrate": "44.0%",
+            "winrate_num": 44.0,
+            "winrate_display": "勝率 44.0%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.0%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rell",
+            "name": "レル",
+            "winrate": "44.3%",
+            "winrate_num": 44.3,
+            "winrate_display": "勝率 44.3%",
+            "role": "SUP",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.3%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3158",
+            "name": "アイオニア ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6620",
+            "name": "ヘリアの残響",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6617",
+            "name": "ムーンストーンの再生",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3107",
+            "name": "リデンプション",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "魔道",
+          "keystone": "8214",
+          "keystone_name": "エアリー召喚",
+          "choices": [
+            "マナフローバンド",
+            "至高",
+            "強まる嵐"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "生命の泉",
+            "生気付与"
+          ]
+        },
+        "shards": [
+          "Ability Haste",
+          "Adaptive Force",
+          "Health"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/karma/build/support",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "SUP",
+        "fetched_at": "2026-10-30T09:26:44+09:00"
+      }
+    }
   }
 }

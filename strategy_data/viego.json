@@ -175,10 +175,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "亡き妻イゾルデを甦らせるために大災厄を引き起こし、ブレスドアイルを呪われた島に変えたカマヴォール王国最後の王 スレッシュらの手によって現世に甦り、黒き霧と亡霊たちを統べる滅びの王としてシャドウアイルに君臨する 普段はAA主体のスカーミッシャ",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/viego/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:25:54+09:00"
+  },
   "wiki_info": {
     "champion_id": "Viego",
     "name": "ヴィエゴ",
@@ -190,5 +196,190 @@
       "相性・対策 (カウンター)": "敵との相性 有利(Strong Against) etc/ダイバー 離脱手段の薄いダイバー全般。デスに繋がりやすいのでパッシブが発動しやすい。 通常スキルだけでもUltの射程に相手を入れるには十分な追撃性能があり、奪った後の反転攻勢にも繋が"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "JUG": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "JUG"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "スマイト"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Locke",
+            "name": "ロック",
+            "winrate": "57.47%",
+            "winrate_num": 57.47,
+            "winrate_display": "勝率 57.47%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 57.47%（統計的に有利）"
+          },
+          {
+            "champion_id": "Trundle",
+            "name": "トランドル",
+            "winrate": "54.87%",
+            "winrate_num": 54.87,
+            "winrate_display": "勝率 54.87%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.87%（統計的に有利）"
+          },
+          {
+            "champion_id": "Teemo",
+            "name": "ティーモ",
+            "winrate": "54.68%",
+            "winrate_num": 54.68,
+            "winrate_display": "勝率 54.68%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 54.68%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Belveth",
+            "name": "ベル＝ヴェス",
+            "winrate": "43.49%",
+            "winrate_num": 43.49,
+            "winrate_display": "勝率 43.49%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 43.49%（統計的に不利）"
+          },
+          {
+            "champion_id": "Rammus",
+            "name": "ラムス",
+            "winrate": "44.89%",
+            "winrate_num": 44.89,
+            "winrate_display": "勝率 44.89%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 44.89%（統計的に不利）"
+          },
+          {
+            "champion_id": "Evelynn",
+            "name": "イブリン",
+            "winrate": "45.26%",
+            "winrate_num": 45.26,
+            "winrate_display": "勝率 45.26%",
+            "role": "JUG",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 45.26%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1102",
+            "name": "ガストウォーカーの幼体"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3047",
+            "name": "プレート スチールキャップ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3111",
+            "name": "マーキュリー ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "6672",
+            "name": "クラーケン スレイヤー",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "6676",
+            "name": "コレクター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6673",
+            "name": "イモータル シールドボウ",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8010",
+          "keystone_name": "征服者",
+          "choices": [
+            "凱旋",
+            "レジェンド: 迅速",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "魔法の靴",
+            "宇宙の英知"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/viego/build/jungle",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "JUG",
+        "fetched_at": "2026-10-30T09:27:20+09:00"
+      }
+    }
   }
 }

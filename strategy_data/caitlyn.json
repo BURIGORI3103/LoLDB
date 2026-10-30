@@ -160,10 +160,16 @@
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
-    "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
+    "laning": "ピルトーヴァーの名門商人キラマン家の娘だが狙撃の腕と知性が高じて保安官になった女性。最近は新入りのヴァイとコンビを組んでいる 狙撃手らしくAA射程が非常に長く、スネア+かかった敵へのAA強化の罠で一方的なハラスとゾーニングを行える AoEは",
+    "teamfight": ""
   },
   "fetched_at": "2026-10-30",
+  "opgg_source": {
+    "url": "https://www.op.gg/champions/caitlyn/build",
+    "patch": "16.21",
+    "patch_verified": true,
+    "fetched_at": "2026-10-30T09:23:52+09:00"
+  },
   "wiki_info": {
     "champion_id": "Caitlyn",
     "name": "ケイトリン",
@@ -175,5 +181,175 @@
       "相性・対策 (カウンター)": "敵との相性 Strong Against /短射程 全チャンピオン最長のAA射程により、一方的なハラスを狙える相手。 ブリンクを持つものは機動力を利用してインファイトを狙う場合もあるが、Wの罠でそれを制限できる。 レーン段階で差をつけやすく"
     },
     "patch_verified": false
+  },
+  "role_data": {
+    "ADC": {
+      "patch": "16.21.1",
+      "fetched_at": "2026-10-30",
+      "roles": [
+        "ADC"
+      ],
+      "summoner_spells": [
+        "フラッシュ",
+        "バリア"
+      ],
+      "matchups": {
+        "favorable": [
+          {
+            "champion_id": "Yunara",
+            "name": "ユナラ",
+            "winrate": "51.29%",
+            "winrate_num": 51.29,
+            "winrate_display": "勝率 51.29%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 51.29%（統計的に有利）"
+          },
+          {
+            "champion_id": "Ezreal",
+            "name": "エズリアル",
+            "winrate": "50.51%",
+            "winrate_num": 50.51,
+            "winrate_display": "勝率 50.51%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 50.51%（統計的に有利）"
+          }
+        ],
+        "unfavorable": [
+          {
+            "champion_id": "Lux",
+            "name": "ラックス",
+            "winrate": "41.36%",
+            "winrate_num": 41.36,
+            "winrate_display": "勝率 41.36%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.36%（統計的に不利）"
+          },
+          {
+            "champion_id": "Xerath",
+            "name": "ゼラス",
+            "winrate": "41.38%",
+            "winrate_num": 41.38,
+            "winrate_display": "勝率 41.38%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.38%（統計的に不利）"
+          },
+          {
+            "champion_id": "Seraphine",
+            "name": "セラフィーン",
+            "winrate": "41.98%",
+            "winrate_num": 41.98,
+            "winrate_display": "勝率 41.98%",
+            "role": "ADC",
+            "patch": "16.21.1",
+            "source": "opgg_stats",
+            "region": "Global",
+            "tier": "Emerald+",
+            "fetched_at": "2026-10-30",
+            "is_estimated": false,
+            "reason": "勝率 41.98%（統計的に不利）"
+          }
+        ]
+      },
+      "build": {
+        "starter": [
+          {
+            "item_id": "1086",
+            "name": "ドラン ボウ"
+          },
+          {
+            "item_id": "2003",
+            "name": "体力ポーション"
+          }
+        ],
+        "boots": [
+          {
+            "item_id": "3006",
+            "name": "バーサーカー ブーツ",
+            "condition": "推奨靴"
+          },
+          {
+            "item_id": "3009",
+            "name": "スイフトネス ブーツ",
+            "condition": "推奨靴"
+          }
+        ],
+        "core": [
+          {
+            "step": 1,
+            "item_id": "2523",
+            "name": "ヘクスオプティックC44",
+            "description": "推奨コア"
+          },
+          {
+            "step": 2,
+            "item_id": "3031",
+            "name": "インフィニティ エッジ",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3036",
+            "name": "ドミニク リガード",
+            "description": "推奨コア"
+          }
+        ],
+        "situational": []
+      },
+      "runes": {
+        "primary": {
+          "path": "栄華",
+          "keystone": "8008",
+          "keystone_name": "リーサルテンポ",
+          "choices": [
+            "冷静沈着",
+            "レジェンド: 血脈",
+            "最期の慈悲"
+          ]
+        },
+        "secondary": {
+          "path": "",
+          "choices": [
+            "英気集中",
+            "強まる嵐"
+          ]
+        },
+        "shards": [
+          "Attack Speed",
+          "Adaptive Force",
+          "Health Scaling"
+        ]
+      },
+      "opgg_source": {
+        "url": "https://www.op.gg/champions/caitlyn/build/adc",
+        "patch": "16.21",
+        "patch_verified": true,
+        "role": "ADC",
+        "fetched_at": "2026-10-30T09:26:30+09:00"
+      }
+    }
   }
 }
