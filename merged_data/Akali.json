@@ -1354,5 +1354,108 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Akali#ced9694a",
+    "fetched_at": "2026-10-30T09:48:37+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xerath",
+          "Viktor",
+          "Syndra",
+          "Velkoz"
+        ],
+        "label": "CCの発生が遅いメイジ",
+        "text": "機動力が非常に高く、Wの煙幕も込みで相手の地点・方向指定スキルをかわしやすい。 これらは逃げ手段を発生の遅いCCに依存するため、1発スキルをかわすだけで接敵に成功できる。 1回キルに繋げば火力を稼ぎ、スノーボールのチャンスに繋がる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yone",
+          "Yasuo",
+          "Irelia",
+          "Fizz",
+          "Ekko"
+        ],
+        "label": "AA・スタックに火力を依存",
+        "text": "Wの煙幕はAAに依存する火力を透かせる。DPS・バーストをかわせるのでそれらの相手に有利。 スタックに依存する相手ヨネヤスオイレリアは煙幕で隠れている間にスタックの時間を終了させることも可能。 逃げ性能に劣る相手も多く、追撃性能の高いアカリならばキルチャンスを逃さず仕留めきれる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kayle",
+          "Teemo",
+          "Udyr",
+          "Volibear",
+          "Olaf"
+        ],
+        "label": "AAに依存",
+        "text": "他のレーン相手でも、AAに依存するチャンピオン全般に有利。概ね理由は同様。 べた足系のチャンピオンはアカリのロームから逃げ切る手段が乏しく、Healthが少なくなったところを狙い撃てる。 主にトップが持ち場のチャンプが多いので、アカリ側から対面にカウンターで出す選択肢も。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Galio",
+          "TwistedFate",
+          "Akshan",
+          "Talon",
+          "Ryze"
+        ],
+        "label": "Push・ロームが素早い",
+        "text": "Pushが早く、長距離のロームを得意とする対面。 Q連打以外にウェーブをクリアする手段が無く、Pushを返そうとしても処理した時点では気が枯渇している。 この状態では戦闘能力が低いので対面からのハラスに返すのも難しく、当然ながらロームも止められない。 ステルスを看破する手段を持つ相手ガリオツイステッド・フェイトアクシャンはWを機能させづらくなるのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vex",
+          "Poppy",
+          "Veigar",
+          "Taliyah"
+        ],
+        "label": "アンチブリンク",
+        "text": "追撃・逃走の双方をブリンクに依存、遠距離攻撃手段を持たないのでブリンクが機能しなくなると途端に足が鈍る。 閉じ込められたり弾かれると接近・離脱がともに出来なくなり、キルを稼ぐどころかデスが重なりかねない。 例外としてカシオペアカシオペアに対しては火力源のEをWだけで弾けるのでむしろ有利がつく。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lissandra",
+          "Malzahar",
+          "Fiddlesticks"
+        ],
+        "label": "確実性の高いCC・AoE",
+        "text": "飛び込んだ後の反撃に対しては煙幕でかわすのが前提。必然CCに弱く、特に発生の早いものは天敵。 煙幕はステルスになるだけで防御ステータスそのものには関与しない以上、広範囲のAoEにも弱い。 これらは双方をカバーしている上に、対面に来る相手リサンドラマルザハールは中盤からのPushが早いのも厳しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "LeeSin",
+          "RekSai",
+          "Rengar",
+          "Nidalee"
+        ],
+        "label": "ステルス看破",
+        "text": "防御性能は前述の通り煙幕頼り。対面に来るものガリオツイステッド・フェイトアクシャンも含め、必然的にステルス看破に弱い。 火力を出すのにやや時間がかかるので、殴り合いに持ち込まれると競り負けてしまう。 集団戦でも同様、隠れられなければ対象指定のスキルやAAを食らい放題になるのでデスに繋がりがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

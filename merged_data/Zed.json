@@ -1354,5 +1354,53 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Zed#e2589112",
+    "fetched_at": "2026-10-30T09:49:35+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Galio",
+          "Kassadin",
+          "Veigar"
+        ],
+        "label": "序盤弱いメイジ",
+        "text": "ゼドは追撃性能が高く、強引にトレード・オールインを仕掛ける性能が高い。 そのため上記のような序盤弱い対面やARの低い対面相手にキルを稼ぎやすく、安定して有利がつく。 移動スキルがワープなのも強みで、ベイガーベイガーがEを展開しても容易に追いかけることが可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "Tryndamere",
+          "Gragas",
+          "Irelia"
+        ],
+        "label": "(mid)/バースト低減・デス回避持ちのファイター・タンク",
+        "text": "バーストの基本はUltを絡めたコンボが前提。タイミングが分かりやすいのでバースト低減スキルを合わされやすい。 中でも迂闊に影を使ったゼドを追い詰めるに十分な機動力と殴り合いの強さを持つ上記の対面に不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zoe",
+          "Sylas",
+          "Qiyana"
+        ],
+        "label": "(mid)/強力なスキルショットのハードCC",
+        "text": "こちらは軽減はされないが、Ultの出現位置に強力なハードCCを合わせられ、手痛い反撃を食らう。 普通のメイジ相手は撤退が可能な場合も多いが、序中盤において十分な殴り合いの強さを持つ対面だとそのまま倒されかねない。 サイラスサイラスはUltを奪われると、ダメージの出し方が相手の方が確実かつサステインもあるのでタイマン不利なのも理由に。 ※LoLalytics 12.23-13.5 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

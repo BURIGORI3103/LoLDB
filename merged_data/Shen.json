@@ -1353,5 +1353,104 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Shen#g7407670",
+    "fetched_at": "2026-10-30T09:49:19+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "TahmKench",
+          "Ornn",
+          "Poppy"
+        ],
+        "label": "キャリー性能の低いタンク",
+        "text": "Ultでレーンを離れがちな性質上、対面にファームで負けやすい。 タワー破壊やPushが遅く、キャリー性能も低いタンク相手は多少ファームされても火力面での影響力が低い。 味方のキャリーを育て、相手のキャリーを腐らせれば多少のタンク性能の差も跳ね返して集団戦での有利を取れる。 特にAA依存度の高い相手にはWの無効化が刺さる為、序盤のタイマンも有利に進められる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Irelia",
+          "Camille",
+          "MasterYi",
+          "Briar"
+        ],
+        "label": "AAに依存するダイバー・スカーミッシャー",
+        "text": "AAを軸として単体へのDPSを叩き出すタイプのダイバー・スカーミッシャー。 キャッチされてもUltで凌ぎ、相手は離脱性能が低いのでカウンターも決まりやすい。 本人が狙われてもWのAA無効によりバーストを凌ぐことが出来るのでGankを捌きやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Illaoi",
+          "Mordekaiser",
+          "Darius"
+        ],
+        "label": "ジャガーノートのSplit Pusher",
+        "text": "Push性能の低いシェンでは、これらのスピーディーなミニオン処理にはまず追いつけない。 オールインを仕掛けようにもサステイン・火力にも雲泥の差があり、ダリウスダリウス以外はGankに対しても回答がある。 放置して飛んでもタワープレートで育ち、得意のSplitやロームを成立させてしまうリスクが大きく、全時間帯で動きづらい相手。 モルデカイザーモルデカイザーに拉致された味方はUltでの救出も出来ず、対面以外で出てきても明らかな不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kayle",
+          "Gwen",
+          "Gangplank",
+          "Vayne",
+          "Jayce"
+        ],
+        "label": "スケールが高い",
+        "text": "仕掛ける手段はEのみ。ブリンクなどで拒否が出来るレイトキャリー相手はスケールを許してしまう。 Ranged相手は一方的なハラスも食らいやすく、シェンのステータスでは耐えきるのも難しい。 Gankに弱い相手も多いが、多少シェンにキルが入ったからといってタイマンを制せる相手でもないので短所を突きづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nocturne"
+        ],
+        "label": "ノクターン",
+        "text": "特殊な例。単に自分が狙われるだけならどうとでもなるが、味方を狙われた場合が厄介。 Ultの視界低下を食らっている間は味方を指定することはもちろん、ミニマップのアイコンから飛ぶことすら出来なくなる。 飛べるようになった頃には既に大勢が決まっているケースが多く、一方的に強みを押しつけられてしまう難敵。 一応スペルシールドで弾けるが、Push性能を装備でカバーしたいシェンで積むと飛ぶ以前にタイマンが辛いことに。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Talon",
+          "Yasuo",
+          "MasterYi",
+          "Nilah",
+          "Briar"
+        ],
+        "label": "etc/キャリー系のスレイヤー",
+        "text": "射程が短く、飛び込む必要がある代わりに高いDPSやバーストを発揮するアサシン・スカーミッシャー。 シェンは単体を守る性能が高く、飛び込んだ瞬間にUltで飛ぶことで相手の真っ只中にタンクが出現可能。 飛ぶ前はシールド、飛んだ後はAA無効とタウントでキャリーを守り、存分にダメージを出して貰うことが出来る。 タロンタロンについてはUltのステルス中に飛ぶと飛んできていることに気づかれづらくなるのもポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zac",
+          "Sejuani",
+          "Rammus"
+        ],
+        "label": "タンクジャングラー",
+        "text": "本人がタンクでAoEが貧弱な性質上、タンク過多の状態ではダメージが目に見えて不足する。 特にヴァンガード系の攻撃的なタンクは反撃が得意なシェンと互いに動きが噛み合わない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

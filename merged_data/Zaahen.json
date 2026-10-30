@@ -942,5 +942,55 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Zaahen#rc2294a4",
+    "fetched_at": "2026-10-30T09:49:34+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Riven",
+          "Yasuo",
+          "Irelia",
+          "Kled",
+          "Warwick"
+        ],
+        "label": "etc/逃げの弱いスカーミッシャー・ダイバー",
+        "text": "一部を除くスカーミッシャーやダイバー。射程が短いため、互いに相手の射程に入り込まざるを得ない。 殴り合いさえ出来れば最高峰の強さを誇るためスノーボールを狙いやすく、有利がつく。 後述するが離脱・拒否の強い相手にはむしろ不利になるため注意。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Teemo",
+          "Jax",
+          "Malphite",
+          "Fiora"
+        ],
+        "label": "アンチAA",
+        "text": "ダメージ出力はADが軸、かつAAにも強く依存する性質上、AS低下を含めたAAへのカウンター要素に弱い。 それでも殴り合えればまだしも、本格的な殴り合いになる前に加速やブリンクで殴り合いを一方的に打ち切られる。 レーン段階の主導権を握りづらく、基本的に後半の影響力も相手の方が上回るので不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Varus",
+          "Heimerdinger",
+          "Kennen"
+        ],
+        "label": "Ranged",
+        "text": "一部を除くRanged。接近手段が乏しいため、一方的にハラスやPushを食らい続ける。 パッシブに動いても限界はあり、そもそもスケールが相手の方が大きいので意味が無い。 例外としてクインクインは射程が短い上に拒否手段のEにWを合わせられるため、むしろ少し有利がつく。 弾速がやや遅めのQさえEで透かせばAAを止める手段が乏しく、殴り合いを挑める。",
+        "has_caveat": true
+      }
+    ]
   }
 }

@@ -943,5 +943,71 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Evelynn#b41763a2",
+    "fetched_at": "2026-10-30T09:48:48+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Veigar",
+          "Viktor",
+          "Lillia",
+          "Lux",
+          "Velkoz"
+        ],
+        "label": "etc/逃げ手段が乏しい",
+        "text": "Wの準備をしても攻撃を発動するまではステルスが続くため、奇襲に反撃する余地は少ない。 チャームが発動する前に逃げ切れず、効果時間が終わってからの反撃も許さない脆い相手全般に有利。 特に拒否手段がスキルショットのCCのみだと、どちらから近づいてくるかの予測が難しいイブリンに対処しづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Illaoi",
+          "Yorick",
+          "Volibear",
+          "Poppy",
+          "Singed"
+        ],
+        "label": "etc/エンゲージが苦手",
+        "text": "ステルスを活かして先手を打ち、エンゲージする側に回り続けるのがイブリンの基本。 能動的に仕掛ける手段が乏しく、逃げ性能も控えめなトップレーナー相手も有利がつく。 中盤のバーストが高いイブリンであれば、これら相手でも十分にダメージが足りるためGankも可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Rengar",
+          "LeeSin",
+          "TwistedFate",
+          "Akshan"
+        ],
+        "label": "ステルス看破",
+        "text": "ジャングラーとしての動き全てにおいてステルスに強く依存する。必然、看破してくる相手には相性が悪い。 特にジャングラーの場合、序盤から追撃性能が高く、タイマンも少なくともイブリンより強い相手が大半。 入られた場合は逃げる以外の選択肢がなくなり、結果としてファームも遅れてステルスを得るまでも長引いてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nunu",
+          "JarvanIV",
+          "Pantheon",
+          "Fiddlesticks",
+          "Vi"
+        ],
+        "label": "Ganker",
+        "text": "ステルスを得る前は遭遇戦もGankも苦手なため、序盤からGankを繰り返す相手には差をつけられやすい。 またUltを覚える頃には必然的に対面もUltを覚える訳で、イブリン以上に確実性の高いGankには後手に回りがち。 手をこまねいている間に集団戦までもつれ込むと、育っていないイブリンは貧弱なので影響力で劣ってしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

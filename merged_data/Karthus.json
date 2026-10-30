@@ -1342,5 +1342,133 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Karthus#ibf13797",
+    "fetched_at": "2026-10-30T09:48:58+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Amumu",
+          "Rammus",
+          "Zac",
+          "Fiddlesticks",
+          "JarvanIV"
+        ],
+        "label": "タイマン弱いJG",
+        "text": "敵のJGがタンク等タイマン弱いチャンピオンの際は、まず襲ってこないので、主目標である高速ファームでのスケールは達成できる。 Gank性能は相手の方が上なので、カウンターGankで返したり、カウンターJGでファーム差を付けつつ相手の位置を特定して味方レーナーへのプレッシャーを緩和したりする意識を持ちたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lissandra",
+          "Sylas",
+          "Yasuo"
+        ],
+        "label": "(mid)",
+        "text": "短射程adc タンク・キャッチャーsup パッシブやEでのゾーンコントロール力は、オールインに寄った構成相手に効果的。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Olaf"
+        ],
+        "label": "",
+        "text": "敵を殴ることで低体力から粘るファイター。単純なDPSに加え、射程無限でのキル回収やデス後無敵状態での攻撃が刺さる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Evelynn",
+          "Ekko",
+          "MasterYi",
+          "Kindred",
+          "Nidalee"
+        ],
+        "label": "離脱に長けたアサシンJG",
+        "text": "カーサスはジャングラーの中で最も自衛力の低いチャンピオン。アサシンに襲われると成す術がない。 特にこれらは無敵スキルや優秀な離脱スキルを持つので、パッシブやUltでの相打ちすら難しい。 スケールが妨害されつつ相手がスノーボールしてしまうことの多い厳しいマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Twitch",
+          "Quinn"
+        ],
+        "label": "ロームが得意なアサシンマークスマン",
+        "text": "こちらも相打ちリスクが低いのでよく狩りにくる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zoe",
+          "Xerath",
+          "Lux"
+        ],
+        "label": "ポーク",
+        "text": "カーサスはエンゲージ性能がないのでポークを受ける時間が長くなる。 特にこれらはバーストも高いためポークでそのままキルされる可能性があり、その場合パッシブすら有効活用できない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Soraka",
+          "Sona",
+          "Janna",
+          "Karma",
+          "Lux"
+        ],
+        "label": "(sup)/エンチャンター",
+        "text": "キル回収を狙って撃つUltは予告時間が長いため、ヒール・シールドに長けたエンチャンターが敵にいると耐えられやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Akshan",
+          "Talon",
+          "Qiyana",
+          "Pyke",
+          "Pantheon"
+        ],
+        "label": "その他ADファイターmid",
+        "text": "タンク・キャッチャーsup カーサスが襲われるにしろカーサスがカウンターJGしに行くにしろ、森が戦場になる。 その際上記のようなRoamを得意とするチャンピオンが味方にいると心強い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Annie",
+          "Cassiopeia",
+          "Ziggs",
+          "Velkoz",
+          "Brand",
+          "Seraphine"
+        ],
+        "label": "etc/メイジレーナー、特にDPS型",
+        "text": "森にDPSメイジを置く以上、レーンにまで置くとAP過剰になりがち。 特にDPSメイジを重ねてしまうとバーストが不足して当たり負けしやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

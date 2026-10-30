@@ -1355,5 +1355,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Diana#bc1729ad",
+    "fetched_at": "2026-10-30T09:48:46+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lillia",
+          "Karthus",
+          "Teemo",
+          "Fiddlesticks"
+        ],
+        "label": "中距離DPS",
+        "text": "スローや単発のCCにより距離を保ち、KiteでDPSを出すタイプのジャングラー。 序盤からQと組み合わせて連続で使えるEにより距離を開けることを許さずに攻め込める。 ダイアナのDPS・バーストであればこれら相手は十分に殴り勝てるので総じて有利。 ・ミッド",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Fizz",
+          "Katarina",
+          "Zed"
+        ],
+        "label": "バーストにラグのあるアサシン",
+        "text": "バーストが出るまでにラグのあるMeleeアサシン。Wのシールドでバーストを防げる。 その後の離脱を許さずに殴り合いを続けるブリンクを持ち、ダイバーとしては高いDPSによりキルを稼げる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Belveth",
+          "Briar",
+          "MasterYi",
+          "XinZhao",
+          "Viego"
+        ],
+        "label": "AA主体のスカーミッシャー",
+        "text": "離脱手段に乏しい性質上、接敵すると相手をキルするかデスするかになりがち。 APチャンピオンとしてはDPSが高めとはいえ、AAを軸とするファイターに殴り勝つほどではない。 特にジャングリング中に遭遇戦になると、素のCDの長さが祟って何も出来ずに殴り負けてしまう。 ・共通",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xayah",
+          "Nilah",
+          "Taric",
+          "Renata"
+        ],
+        "label": "オールインに強い",
+        "text": "遠距離攻撃手段はQのみで、基本的に飛び込むのが前提。 必然、入ったところをすかしたりCCで固められてしまうと何も出来ずに落とされてしまう。 ピーラーやオールインから自衛を可能とするキャリーは止められず、むしろスノーボールを加速させてしまいがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

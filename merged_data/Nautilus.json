@@ -933,5 +933,74 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Nautilus#x310cab8",
+    "fetched_at": "2026-10-30T09:49:09+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yuumi",
+          "Soraka",
+          "Nami"
+        ],
+        "label": "回復が主力のエンチャンター",
+        "text": "彼女たちはショートトレードと回復を繰り返して少しずつ有利を積み上げる硬派なサポートなので、 フック系の10割オールインに対して耐性がない。（フルヘルスから殺されるので回復が意味をなさない）",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Lucian",
+          "Jhin"
+        ],
+        "label": "機動力型のキャリー",
+        "text": "機動力によりスキルをかわすタイプのキャリー陣。 対象指定のUltを起点にすれば逃げが成立せずにしっかりキャッチ可能。 Qについてはかわされやすいので、Ultを覚えるまではやや耐える形になりやすいのは注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Braum",
+          "Rell",
+          "Alistar",
+          "Janna"
+        ],
+        "label": "ピーラー",
+        "text": "キャッチからのCCコンボを重ねる間にADCと一緒に火力を出すのが基本。 必然、Peelに徹されるとキルまで繋ぐ前に逃げ切られてしまいがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Braum"
+        ],
+        "label": "に関してはそもそも殴り合いが強すぎるので軽率なファイトは絶対に厳禁。",
+        "text": "盾に引っかかってしまうQではなくDPSに優れるEを上げることも視野に入れよう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xayah",
+          "Sivir",
+          "Nilah"
+        ],
+        "label": "自衛性能の高いキャリー",
+        "text": "特にザヤシヴィアはこちらのCCを躱せるのみならず、adcの中でトップクラスのpush力を持つ。 ミニオンを押し付けられるとフックの射線が通らずroamするわけにもいかなくなるのでまさに天敵。 幸い1コア完成までは弱いため、それまでにjgやmidと一緒にアクションを起こしたい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

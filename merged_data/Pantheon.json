@@ -2180,5 +2180,111 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Pantheon#pad2d155",
+    "fetched_at": "2026-10-30T09:49:12+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Yone",
+          "Irelia",
+          "Kassadin",
+          "Akali"
+        ],
+        "label": "etc/耐久の低いスレイヤー・ダイバー",
+        "text": "耐久が低く、ダメージを出すには接近も必要なスレイヤーおよびダイバー。 Wの対象指定スタンにより、防御スキルを使わせること無く逆にこちらのダメージのみを叩き込める。 相手は火力を出すタイミングがわかりやすいのでEで防ぐのも狙いやすく、総じてレーン段階から圧をかけやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Teemo",
+          "Kennen",
+          "Akshan",
+          "TwistedFate"
+        ],
+        "label": "etc/短射程Ranged",
+        "text": "比較的射程が短めのRanged全般。対象指定スタンのWの射程がこれらの有効射程よりも長い。 強化Wを使うと逃げ手段を吐かれる前にAA（3連続）＞Q（タップ）程度まで繋がり、反撃もEで防げる。 ミッドレーナーについてはロームを得意とするものが多いが、パンテオンはUltでついていけるので問題なく有利を広げられる。 ●サポート運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Velkoz",
+          "Brand",
+          "Neeko",
+          "Lux",
+          "Xerath"
+        ],
+        "label": "etc/メイジサポート",
+        "text": "メイジサポート全般。Wのキャッチからバーストで一気に仕留める基本の流れをなぞりやすい。 一応視界確保を得意とする相手は他に比べて勝率が下がり、パッチによってはスキルマッチアップになるが基本有利。 レーン段階で負けたメイジサポートは後半に向けてどんどん存在感がなくなるため、スケールの悪さも響きづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sion",
+          "Gragas",
+          "Malphite",
+          "Chogath",
+          "DrMundo"
+        ],
+        "label": "タンク",
+        "text": "タンク全般。多少レーンで有利を取れても、割合ダメージが薄くCDが長めなので中盤以降のこれらを溶かしきれない。 序盤も有利な相手に比べて耐久力が高く、息切れを引き起こしやすくそもそも有利を取りづらい。 ムンドドクター・ムンドはトレードの軸である対象指定スタンを弾かれてしまうのも不利な要素。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gangplank",
+          "Fiora",
+          "Olaf"
+        ],
+        "label": "アンチCC",
+        "text": "前述の通り、トレードの軸は対象指定の確実性が高いスタン。 これを弾かれてしまうとトレードの有利な時間が短縮されてしまい、相手からも殴り返される。 そうなるとサステインを持たない点が響いて競り負けやすく、レーン段階で負けたパンテオンは後半にも大きな悪影響が出る。 ガングプランクガングプランクについてはハラスが痛い上に、Ultで飛んでもUltで支援を合わせられる点も厳しい。 ●ミッド運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Swain",
+          "Viktor",
+          "Orianna",
+          "Anivia",
+          "Syndra"
+        ],
+        "label": "etc/ゾーンコントロール",
+        "text": "パンテオンの射程外からハラス・CSを取る手段がある対面。 仕掛けられても透かしたりパンテオンの苦手なロングトレードに持ち込む手段があるのでそもそも圧をかけづらい。 Pushも早いのでUltのロームも難しく、レイトキャリーが多いためもたもたしていると影響力で大きく劣るようになる。 ●サポート運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renata",
+          "Braum",
+          "Taric",
+          "Janna",
+          "Soraka"
+        ],
+        "label": "etc/ピーラー",
+        "text": "主に回復を得意とする一部のエンチャンターを含むピーラー全般。 Wからのオールインを透かされてしまえばダメージを思ったように出せず、仕留めきる前に息切れしがち。 レーン段階で有利を取れないと、CCが単体かつ射程も集団戦段階では長いと言えないので存在感を失う。",
+        "has_caveat": true
+      }
+    ]
   }
 }

@@ -1350,5 +1350,75 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Tahm%20Kench#c979fdfd",
+    "fetched_at": "2026-10-30T09:49:23+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Tryndamere",
+          "Nasus",
+          "Trundle"
+        ],
+        "label": "([[Renekton]])/長時間Ult",
+        "text": "効果時間が長い自己バフUlt。発動の瞬間に飲み込み、最大まで解除しないことで時間を大きく稼げる。 特にナサスナサストリンダメアトリンダメアはタムのWを中断させることが出来ないので、いざという時の緊急回避も可能。 レネクトンレネクトンについては基本的には有利がつくが、シールドの破壊、詠唱の中断といったカウンター要素も持つ。 一部のパッチでは微不利がついているケースもあるため、確実なカウンターという訳ではない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Pantheon",
+          "Irelia"
+        ],
+        "label": "([[Leona]])/エンゲージ型のタンク、ダイバー",
+        "text": "イニシエートは得意だが逃げが弱い相手。特にCCにキル・アシスト性能を依存するもの。 タム・ケンチ本人が狙われたところでデスよりも先に相手のHealthが尽きるため、キルまで届かずとも退散させられる。 味方が狙われた場合はUltで飲み込み仕切り直し。相手は離脱手段に乏しいので逆に囲んで袋だたきに出来る。 対面に来るタイプはいずれもタム・ケンチの得意なDPS勝負から逃げる手段も勝つ手段も無く、レーン段階からして有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Teemo",
+          "Kennen",
+          "Kayle",
+          "Quinn"
+        ],
+        "label": "逃げが弱いRanged",
+        "text": "MeleeだがQの射程の長さ、WでブリンクがあることからRangedに追いつきやすい。 相手のハラスはEの回復＋シールドで耐えられるので、マナを尽きさせたりGankを呼び込む動きを狙えばOK。 トップにRangedが来ている＝相手の前衛の駒が減りやすいため、集団戦でも前からの殴り合いにかなり有利が取れる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gwen",
+          "Riven",
+          "Gnar",
+          "Singed"
+        ],
+        "label": "機動力が高い",
+        "text": "ブリンクは時間差のあるWのみ、瞬間火力は低くDPSで戦うタイプなので、追い逃げ双方に機動力の高い相手にはトレード負けしがち。 グウェングウェンは追撃のQを無効化されてしまうのも辛く、リヴェンリヴェンは細かいシールドでダメージを吸われる。 なあなあで過ごしていても集団戦の影響力で負けるため、総じて勝率が厳しくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shen"
+        ],
+        "label": "シェン",
+        "text": "AA無効により火力を出しづらい。それでも殴り合えればともかく、Ultを覚えたらレーン戦をほとんどして貰えない。 飛んでいる間にファーム・タワー破壊に勤しんでも、タムは集団戦が得意で無いので育っても影響力が低い。 他レーンの負けをカバーしづらく、Ult習得前はシェン側もそれなりに殴り合いが強いので差をつけられずに終わりやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

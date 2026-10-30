@@ -936,5 +936,136 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Milio#w7dad80e",
+    "fetched_at": "2026-10-30T09:49:06+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lillia",
+          "AurelionSol",
+          "Lissandra",
+          "Varus",
+          "Swain",
+          "Morgana",
+          "Amumu"
+        ],
+        "label": "強力なCC",
+        "text": "UltのAoE CC解除により、CCにチャンピオンパワーが偏っている相手に強い。 相手のハラスも単発であればW、Eで凌げるので有利を作りやすく、対面での勝率も高い。 スタンについてはミリオ本人が食らうとUltが使えなくなるので、やや引いた立ち位置で構えるようにしよう。 後述するが解除できないCCも存在するため、CCが強い＝有利という訳では無い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Nocturne",
+          "Malzahar"
+        ],
+        "label": "単体キャッチ",
+        "text": "理由については上と同様、CCを解除できるためKiteの手助けが出来、キャッチも空ぶらせることが可能。 また、これらの相手は単体へのDPSも強みとするが、Eのシールドをかければ大きくキルラインを遠ざけられる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "KogMaw",
+          "Vayne",
+          "Sivir",
+          "Samira",
+          "Nilah"
+        ],
+        "label": "短射程",
+        "text": "射程を延長させるWにより、これらの相手がCSを取ろうとしたところをハラスしていける。 基本的にオールインを狙ってくるものが多く、向かってくる相手に当てやすいQの拒否も刺さる。 コグ＝マウコグ＝マウは育つとミリオの射程外から単独で皆殺しにしてくる火力を発揮するので、積極的に咎めておきたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "Talon",
+          "Nidalee",
+          "Kassadin",
+          "Qiyana"
+        ],
+        "label": "追撃性能の高いアサシン",
+        "text": "ミリオの拒否スキルはQのみで弾速が遅い。多段階のブリンクで長距離の追跡が得意なアサシンにはあっさり捕まりやすい。 警戒しなければ自分が奇襲を食らってデスするが、警戒すれば視界管理で遅れを取ることになる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gragas",
+          "Fiddlesticks",
+          "Blitzcrank",
+          "Nautilus",
+          "Rell"
+        ],
+        "label": "ミリオを巻き込みやすいAoE CC、ノックアップ",
+        "text": "Ultは自身が行動不能CCを受けていると発動できないので、AoE CCでミリオ本人が巻き込まれると無力。 また単体CCでもノックアップはCC解除が効かないのでやはりUltで対処できない。特にミリオ本人が捕まると耐久の低さからデスに直結する。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Senna",
+          "Karma",
+          "Janna",
+          "Sona",
+          "Soraka"
+        ],
+        "label": "長射程エンチャンター",
+        "text": "射程の長い攻撃スキルを持つエンチャンター。ミリオは攻撃の射程が短く、一方的にハラスを食らいやすい。 セナセナとソナソナはミリオのエンゲージが弱いのをいいことにスタックを貯める動きをしてくる。 集団戦でもキャッチ性能に雲泥の差がある他、ミリオのUltが効果的に働くCCも少ないため不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "KogMaw",
+          "Ashe",
+          "Varus",
+          "Lucian"
+        ],
+        "label": "onhit系のマークスマン",
+        "text": "味方の生存を助けつつAAの射程を伸ばせるということで、AAの回数を稼がせる性能においてミリオの右に出る者はいない。 したがってonhit系のマークスマンとの相性が良好で、とりわけ射程が短くCCを食らう位置まで出やすいヴェインが最も相性良い。 ルシアンルシアンはonhitとは言い難いが、↑と同様に短い射程をカバーでき、ミリオのバフによりルシアンのパッシブ警戒を多く回せるため相性が良い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Samira",
+          "Nilah",
+          "Kalista"
+        ],
+        "label": "([[Kaisa]][[Xayah]])/味方のエンゲージを求める",
+        "text": "オールインが強いものの射程が短いので味方に捕まえてもらう必要のあるマークスマン。 ミリオはエンゲージが苦手で、シールド・回復の瞬間的な数値も他のエンチャンターに劣り気味。 レーン段階では射程の短さから沈黙してしまい、集団戦でも他の味方のエンゲージに頼るしかなくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "MissFortune",
+          "Zeri"
+        ],
+        "label": "AA依存度が低め",
+        "text": "Wが延長するのはAAの射程のみ。必然、AAにダメージ出力を強く依存しないADCとの相性が悪め。 この2人は基礎ADのスケールも悪く、パッシブの強化の効率が悪い点が相性の悪さに拍車をかける。 更にMFミス・フォーチュンはUltの全段ヒットに足止めが必要な点がCCの薄いミリオと噛み合いが悪い。 ゼリゼリはゼリのスピードにべた足のミリオがついていけず、的確なサポートが出来ない点も厳しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

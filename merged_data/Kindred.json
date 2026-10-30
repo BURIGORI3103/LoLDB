@@ -942,5 +942,100 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kindred#j6b3de09",
+    "fetched_at": "2026-10-30T09:49:00+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kayn",
+          "Udyr",
+          "Volibear",
+          "Trundle",
+          "Hecarim"
+        ],
+        "label": "([[JarvanIV]])/ジャガーノート系",
+        "text": "カウンターJGのリターンが大きいため、タイマンで勝てる敵JG相手に勝率が高くなる。 例を挙げると上記のチャンピオンが対面の際勝率が高い。 ほぼ全てに共通することだがLv6以前のほうが敵の機動力やCCの差で勝ちやすいので、序盤にカウンターJGを行う立ち回りが推奨される。 中でもマークスマンに弱くUltの相性も絶妙なリリアに対しては通算で+5ポイントをつけるハードカウンターとして機能する。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Illaoi",
+          "Yorick",
+          "Singed"
+        ],
+        "label": "(top)/ジャガーノート",
+        "text": "並のJGチャンピオンではこれらに対しGankしても火力と耐久で押し返されがちなものだが、キンドレッドなら反転の叶わないKite性能と並ではない火力によってGankを刺しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kassadin",
+          "Swain",
+          "Kayle"
+        ],
+        "label": "(mid)/序盤弱いmid",
+        "text": "敵midがこれら序盤弱すぎて寄れないチャンピオンの時は、序盤かなり自由に動いてよくなる。 通常より踏み込んだカウンターJGやGankを行い、大きな差をつけたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "LeeSin",
+          "XinZhao",
+          "MasterYi"
+        ],
+        "label": "",
+        "text": "裏を返せば、タイマンで勝てない敵JG相手には動きづらく勝率が低い。 やはりKiteしきれない機動力にバーストを持ち合わせる相手、特にUltに対するカウンタープレイを持つ相手が厳しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rammus"
+        ],
+        "label": "",
+        "text": "ADチャンピオンとの遭遇戦に強いタンク。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yasuo",
+          "Qiyana"
+        ],
+        "label": "",
+        "text": "アクションを起こした時に寄ってくる敵midとの相性も濃く出る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Singed",
+          "Galio",
+          "Amumu",
+          "Maokai",
+          "Blitzcrank"
+        ],
+        "label": "",
+        "text": "味方に来てほしいレーナーの条件を挙げると、CCの薄さを補うGank合わせ性能・アクション時の寄りの早さ・そしてできればUltの範囲から敵を引きずり出したり終わり際にAoECC入れたりしてくれること。 特にガリオは有名。 ※LoLalytics 12.21-13.3 Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

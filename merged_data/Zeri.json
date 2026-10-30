@@ -939,5 +939,86 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Zeri#g7407670",
+    "fetched_at": "2026-10-30T09:49:35+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "DrMundo",
+          "TahmKench",
+          "Mordekaiser",
+          "Nocturne",
+          "Diana"
+        ],
+        "label": "etc/接近手段に確実性が無いMelee",
+        "text": "Eのブリンク、Ultの加速により機動力が高く、これらのキャッチにはまず当たる危険が小さい。 うっかり当たったとしてもCCが基本的に単発であり、追撃を食らう前に再び距離を離すことが出来る。 一度拒否すればCDの間は一方的に殴れるので、DPSを出しやすくKiteを狙える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Tristana",
+          "Samira"
+        ],
+        "label": "短射程の対面",
+        "text": "序盤のミニオン処理能力が低く、基礎ステータスの低さからハラスを食らうとかなり辛い。 しかしこれらの対面は射程が短く、スキルもトリスターナトリスターナ以外は方向指定が軸なのでゼリの機動力ならかわしきれる。 互いにUltを覚えた後は、その機動力によりスキルをドッジしながら殴れるため有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Shaco"
+        ],
+        "label": "シャコ",
+        "text": "特殊な例。Qは複数の弾丸を指定方向に打ち込む性質で、至近距離であれば全段ヒットによりダメージが跳ねる。 シャコシャコのW（ボックス）は仕掛ける際には密着した状態で置かれるため、即座にQを打ち込むと一瞬で破壊可能。 Fearさえ回避すればDPSでシャコに負ける要素が無く、Gankされても即座に逃げれるため勝率有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Poppy"
+        ],
+        "label": "アンチブリンク",
+        "text": "集団戦においてはUltからEも用いたKiteでDPSを出すのが仕事。 必然、ブリンクに強く依存しており釘付けで封殺してくる相手には為す術が無い。 これらの相手は機動力も高く、強引にゼリに迫りキル或いは離脱を強要してくる難敵。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kalista",
+          "Draven"
+        ],
+        "label": "([[Caitlyn]][[Varus]])/レーンキャリー",
+        "text": "主力であるQは方向指定、かつミニオンの貫通に条件があるためハラスが苦手で序盤が弱い。 これらの相手は序盤にゼリを追うだけの機動力や、遠くからQでファームするゼリを狙える射程を持つ。 更に火力も基礎ステータスの低いゼリを潰すには十分。総じてレーン段階で差をつけられやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Amumu",
+          "Alistar",
+          "Maokai"
+        ],
+        "label": "対象指定・広範囲へのCCを持つタンクサポート",
+        "text": "EとUlt効果時間中のMSの高さにより、方向指定のCCに対してはドッジ性能が高い。 一方で対象指定を防ぐ手段は持たず、対象指定や即時発動で広範囲にCCをバラ撒く相手にはあっさり捕まる。 特にこれらはその後の拘束時間まで長い上に本体が硬く、DPSに劣りやすいゼリではトレード負けしがち。 アムムアムムについてはEのパッシブにより、攻撃回数に依存するゼリのダメージを大きく削ってくるのも辛い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

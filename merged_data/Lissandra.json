@@ -1356,5 +1356,46 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Lissandra#d358cf35",
+    "fetched_at": "2026-10-30T09:49:02+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Naafiri",
+          "Fizz",
+          "Yasuo",
+          "Ekko",
+          "Akali",
+          "Katarina",
+          "Leblanc",
+          "Pantheon"
+        ],
+        "label": "etc/大半のスレイヤー・ダイバー",
+        "text": "Wは短射程だが周囲即時発動スネア、Ultは短射程だが敵に使えば対象指定即時発動スタン、自分に使えば即時発動無敵+回復+反撃。 いずれも接近してからバーストを叩き込む必要のあるスレイヤー・ダイバーにカウンターするスキルとして非常に優秀。 特に防御スキルが強力な代わりにキルタイムが長めの相手に有利がつく傾向にある。(即時発動のため防御スキルが間に合わず、キルタイムが長いということはCCでのコンボ阻止が刺さるため) 集団戦においてもやはり飛び込んできて防御スキルによりデス前に離脱を狙ってくるが、レーン戦同様に即時発動確定CCでそれを許さず咎めることができる。 例外は強力なUltを有効活用されるサイラスサイラスと、アンチAPのカサディンカサディン程度。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Cassiopeia",
+          "Anivia",
+          "Viktor",
+          "Azir",
+          "AurelionSol"
+        ],
+        "label": "etc/DPSメイジ全般",
+        "text": "リサンドラはメイジとしては射程が短く、距離を保ったまま攻撃出来るスキルはQのみでハラス性能が控えめ。 ダメトレを狙って無理にEで接近しても離脱が無いので反撃をモロに受け続ける羽目になり、DPSの高い相手には不利なトレードになりがち。 相手はPushも早いのでロームも狙いづらく、射程の短さのせいで集団戦においても正面から当たる形では不利となる。 ※LoLalytics 13.17-13.21 Global Eme+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

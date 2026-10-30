@@ -945,5 +945,96 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Olaf#j35497b6",
+    "fetched_at": "2026-10-30T09:49:11+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Teemo",
+          "Urgot",
+          "Mordekaiser",
+          "Maokai"
+        ],
+        "label": "CCに依存",
+        "text": "UltでCCを無効化できるので、CCに戦闘能力を依存しやすい相手に強い。 Ultを覚える前もキャッチ・タイマン能力の高さを押しつけやすく、レーン全体を通して有利がつく。 集団戦についても相手の選択肢を常に1つ消せるため、全体的に勝率が高い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar",
+          "Galio",
+          "Veigar",
+          "Vex",
+          "Ashe"
+        ],
+        "label": "etc/他レーンにおいてCCに依存",
+        "text": "CCに強い性質は、レーン戦以降、他レーンの相手と戦闘になる場合も有効。 特に単体を止める性質が強くAoE CCに乏しい相手は全般的に有利がついている。 CCを持つ分、バーストが低い相手が多いのでHealthが減ってから本領を発揮するオラフの強みも活かしやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nautilus",
+          "Leona"
+        ],
+        "label": "（[[Pantheon]]/sup）/ピーラー",
+        "text": "理由については上記と同様。CCによる足止めが一切通じないので、Peelをガン無視してキャリーに迫れる。 レーンでの勝利を他レーンに波及させる際、CCで固められキャリーにシャットダウンを渡してしまう負け筋をたどりづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Garen",
+          "Evelynn",
+          "Kindred",
+          "Ekko"
+        ],
+        "label": "減少Healthスケール",
+        "text": "体力が減ってからの殴り合いが本領なのだが、これらは減少Healthに応じてダメージが増えるスキルを持つ。 殴りあって本領を発揮しようとしたところで特大のダメージを食らい、落とされてしまいがち。 CC無効についてもいまいち活用しづらかったり、逃げ性能が高く追いつけない相手が多くオラフの強みを押しつけづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jax",
+          "Akali",
+          "Kled",
+          "Taric",
+          "Bard",
+          "Yuumi",
+          "MasterYi"
+        ],
+        "label": "CCに依存しない時間稼ぎ",
+        "text": "Ultは大半の足止めを無視して相手に殴りかかれるが、これらはCC以外の手段で戦闘時間を延ばしてくる。 AAかEが当てられなければUltの効果時間は短く、すぐにCCを普通に食らう状態に陥ってしまうので不利。 タリックタリックはAA・Eを無効化する訳ではないが、ダメージが発生しない以上は必然、LSが無くなり粘り強さを失う。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Akshan",
+          "Zeri",
+          "Tryndamere",
+          "Fiora"
+        ],
+        "label": "逃げ性能の高いキャリー",
+        "text": "こちらも逃げ性能が高く、AA・Eが届かない位置まで逃げ切れてしまうキャリー陣。 Ultの効果時間が切れてしまうのはもちろん、耐久力はLSに依存するので殴れなければ割とあっさり倒されてしまう。 Meleeフィオラトリンダメア相手は一方的に殴られる訳ではないが、どちらもAAへのデバフを持ち通常時のオラフでは殴り合いが不利。",
+        "has_caveat": false
+      }
+    ]
   }
 }

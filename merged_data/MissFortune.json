@@ -940,5 +940,106 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Miss%20Fortune#j2380fed",
+    "fetched_at": "2026-10-30T09:49:07+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "KogMaw",
+          "Varus",
+          "Aphelios"
+        ],
+        "label": "サステインが無い",
+        "text": "サステインを持たず、機動力が低かったり射程の短いADC。 Qの跳弾を咄嗟に避けるのが難しく、レーン段階のハラスが強いMFの長所を刺しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Heimerdinger",
+          "Yorick",
+          "Malzahar"
+        ],
+        "label": "ペットを多用",
+        "text": "レーンは異なるが、ペットを多用するチャンピオン全般に有利が付く傾向にある。 ペットを出されてもQの中継点として使用可能、召喚直後は基本的に本体の傍に出るので跳弾も当てやすい。 機動力が低く、Ultをかわす手段の乏しい相手が多いのも好都合。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nilah",
+          "Twitch",
+          "Zeri",
+          "Yunara",
+          "Jhin"
+        ],
+        "label": "etc/機動力が高い",
+        "text": "機動力が高いマークスマン全般。特にオールインが強いものには勝率が落ちる。 QもUltも機動力が高い相手にクリーンヒットさせるのが難しく、Health差を作りづらい。 ADの低さからシンプルな殴り合いは不得手、かつ逃げ手段も乏しいので接近に成功されると競り負けてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mel",
+          "Braum",
+          "Bard",
+          "Soraka",
+          "Zilean"
+        ],
+        "label": "Ultに回答のあるサポート",
+        "text": "Ultは方向指定のチャネリングスキル。反射や方向指定でスキルを防ぐ相手には刺さらない。 発動中は移動も出来ないので地点指定で詠唱を止めるスキルバードソラカに妨害されやすいのも短所。 ジリアンジリアンはスキルを防ぐ訳ではないが、直撃しているチャンピオンにUltをかけられ蘇生されてしまう。 加速もUltの範囲から逃れるのに都合がよく、総じて不利がつく対面。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rell",
+          "Leona",
+          "Maokai",
+          "Amumu"
+        ],
+        "label": "CCチェインが強いヴァンガード",
+        "text": "MFは加速により距離を調整するのが前提で、CCはスローのみと貧弱。 強引な仕掛けに弱く、Ultも相手を一定時間押しとどめなければ有効打にならない。 逆説的に豊富なCCを持ち、エンゲージ・Peelがともに得意なサポートと相性が良好。 AoEのCCを持つ場合はいわゆるWombo Comboに繋がり、一気に集団戦を決定づけられる場合も。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Pyke",
+          "Blitzcrank",
+          "Thresh"
+        ],
+        "label": "フック系のキャッチャー",
+        "text": "レーン段階のMFはQの跳弾でハラスを行うため、ミニオンの裏にいない相手には圧が落ちる。 これらはミニオンを盾にされなければ強烈なフックでキルチャンスを作り出す。 結果、相手がミニオンの裏にいてもいなくても圧をかけられるためレーン段階で差をつけやすい。 ヴァンガードに比べるとCCは基本単体、かつ有効時間も短いのでUltの活用はやや難しくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Soraka",
+          "Milio",
+          "Lulu"
+        ],
+        "label": "ハードCCの薄いエンチャンター",
+        "text": "相方のCCも薄い場合、Ultを有効に活用するのが難しくなる。特にレーン段階は逃げられやすい。 強引なエンゲージに弱い短所も被りやすく、また基礎ADが低いのでASを上げても単体相手のDPSがいまいち上がらない。 エンチャンターの得意な展開に持ち込むのが難しくなり、相性が悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

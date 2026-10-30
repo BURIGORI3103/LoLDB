@@ -942,5 +942,123 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sivir#fed8593c",
+    "fetched_at": "2026-10-30T09:49:20+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Amumu",
+          "Morgana"
+        ],
+        "label": "etc/CCに依存",
+        "text": "キャッチャーを始め、CCを軸にしたオールインを得意とする相手全般。 Eのスペルシールドで起点となるCCを弾けるので有利がつく。 キャッチャーについては、Push性能の高さでウェーブ差を作りやすいのも強み。 ただしレオナやアムムのような、突撃してきて即座にCCチェインをしてくる相手には注意。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ezreal",
+          "Ziggs",
+          "Swain",
+          "Hwei"
+        ],
+        "label": "スキル主体のキャリー",
+        "text": "対面に来るAPCや、エズリアルエズリアルなどのスキルを主軸とした相手。 主力スキルやキャッチ手段をEで弾けば有利なトレードを作りやすい。 処理の早いメイジ系の対面にも互角のPush勝負が可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Caitlyn"
+        ],
+        "label": "ケイトリン",
+        "text": "ケイトリンは序盤に有利を築いてスノーボールを目的とする長射程ADCだが、序盤でタワープレートを獲得できないと中盤DPSで劣るチャンピオン。 射程の不利はあるものの、シヴィアのウェーブクリア能力によってタワープレートを渡さないことができる。 シヴィアの欠点である中盤の単体DPSの低さがケイトリンの欠点と一致しているため、前から殴る集団戦になった時に後衛までダメージが通るシヴィアの方が戦闘で有利になりやすい。 レーン戦で勝つ必要のないセーフプレイを行うことで自然と逆転出来るため、基本的には有利な相手と言える。 ケイトリンと組みがちなハードCC持ちもシヴィアは苦にしない。間合い管理だけは丁寧に。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Twitch",
+          "Draven"
+        ],
+        "label": "AA主体のキャリー",
+        "text": "AAに対してはスペルシールドが一切機能しない。 射程が短いので先に殴られる相手にはトレードが成立しづらく、オールインで負けやすい。 ヴェインヴェインについては序盤の処理能力でレーン段階に限り有利を取れるのでそこで差をつけたい。 その場合でもタイマン性能では劣り、方向指定のQをブリンクでかわされるので中盤以降は無理をしないこと。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Janna",
+          "Lulu",
+          "Nami",
+          "Soraka"
+        ],
+        "label": "etc/エンチャンター",
+        "text": "高いレーン維持性能と拒否能力を持つエンチャンター。 シヴィアは射程が短く、戦闘を行う際は味方のCCが決まってからになりがち。 これらの相手は最初にCCを狙う味方を拒否することでシヴィアの得意な形に入る前に戦闘を終わらせてくる。 QやWのハラス程度なら容易に耐えるだけの防衛性能もあり、総じて有利を取りづらい。 互角のレーン戦を行うと最終的に敵ADCとの殴り合いになりやすく、シヴィアの嫌いな試合展開になりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Alistar"
+        ],
+        "label": "アリスター",
+        "text": "アリスターのW→QコンボはスペルシールドでWをはじいてしまうため、Qを回避することができない。 射程はシヴィアのAAレンジよりもアリスターのWの方が長いため、回避もほぼ不可能。 タワー下に引いてからのウェーブクリアをしようにも、アリスターはタワーダイブも得意としている。 味方のサポート次第だが、アリスター対面の時は守ってもらうように動こう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Leona",
+          "Nautilus",
+          "Pyke"
+        ],
+        "label": "キャッチャー",
+        "text": "射程が短く、CCも皆無ということで対面と殴り合う手段に欠けるのがシヴィアの短所。 キャッチャーは相手をシヴィアの射程内に引きずり込んでくれるので相性が良好。 逆にキャッチャーの短所であるPush補助が苦手な点も、シヴィアの処理能力なら単独でカバー。 スキルショットの射線を通しやすくなるので互いに短所を補い合える。 敵ADCとのDPS勝負になると分は悪いため、仕掛けるタイミングは選んでもらうこと。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yuumi",
+          "Sona",
+          "Lulu"
+        ],
+        "label": "エンチャンター",
+        "text": "エンチャンター、特にシヴィアの機動力に追随できるものとの相性も良好。 レーン段階が苦手なものが多いが、シヴィアは高速のウェーブクリアでレーンをスキップしやすい。 特にユーミユーミは自動で追随してくれる上、あちらの苦手なオールインにシヴィアが強いので相性が良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Velkoz",
+          "Brand"
+        ],
+        "label": "メイジサポート",
+        "text": "火力が武器のメイジサポート。シヴィア本人はキャッチを弾けても、相方がキャッチされるのは防げない。 本来シヴィアが得意とするはずのキャッチャーを苦手としているメイジは特に避けたほうが良い。 シヴィアはプッシュが得意なため、タワー下ハラスが得意なキャラとレーンを勝ちに行くことは可能。 その際はガンクを捌くワードを絶やさないようにしよう。置きに行く際は一緒に行動してあげるように。 総合的には短所をお互いにカバーしきれないレーン戦になるため、難易度が非常に高い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

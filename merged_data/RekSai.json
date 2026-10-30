@@ -942,5 +942,79 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rek%27Sai#mee3c721",
+    "fetched_at": "2026-10-30T09:49:14+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Briar",
+          "Kayn",
+          "Lillia",
+          "Belveth"
+        ],
+        "label": "スカーミッシャー系JG",
+        "text": "Lv6前のGank性能について圧倒的にレク＝サイのほうが優秀なため序盤に優位を築きやすく、Lv6になっても相手のGank性能は大して伸びないためそのまま逆転されづらく勝ちやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Evelynn"
+        ],
+        "label": "イブリン",
+        "text": "イブリンが動いていればステルス中であっても位置がわかる。 インビジブルではないので接近すれば殴る事ができ、序中盤のタイマン性能、ガンク性能も雲泥の差。 相手のやりたいことを潰しやすく、序盤に築いた有利を手放すことなくゲームを畳みやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Taliyah",
+          "Karthus",
+          "Kindred",
+          "Gragas",
+          "Brand"
+        ],
+        "label": "Ranged",
+        "text": "レク＝サイの接近は潜伏してトンネルを掘ってから浮上とかなり時間がかかるため、遠くから拒否できるRangedに接近するのは難しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nocturne",
+          "Warwick",
+          "Hecarim",
+          "Malphite",
+          "Qiyana"
+        ],
+        "label": "レベル6スパイク",
+        "text": "Ultを覚えるとガンク性能が大幅に向上する相手。 これらがレベル6を迎えるとガンク性能で遅れを取ってしまい、多少の有利は覆されてしまいがち。 レクサイは失速が激しいためガンクで勝っていかなければ存在感が薄れていくがそれがしにくい。 最序盤でレーンや森を破壊しきる意識を持ちたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lissandra",
+          "Heimerdinger",
+          "Malzahar"
+        ],
+        "label": "アンチダイバー",
+        "text": "動きとしては典型的なダイバーであり、相手の真っ只中に飛び込むのが前提。 飛び込んだところを固めての反撃が得意なこれら相手は真っ先に無力化され、そのまま落とされがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -933,5 +933,42 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Bard#b66ac8b5",
+    "fetched_at": "2026-10-30T09:48:42+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ziggs",
+          "Mel",
+          "Hwei",
+          "Sivir",
+          "KogMaw"
+        ],
+        "label": "(AP)/ミニオン処理が早い",
+        "text": "AoEが豊富なAPCを始めとした、ミニオン処理が早い相方。 得意のロームの間も安全な距離からCSだけ取る動きが狙いやすく、留守番しやすい。 オールインに弱いものが多いが、迫ってくる相手にはバードのQを当てやすいので傍にいる間はPeelも可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lucian",
+          "Kalista",
+          "Xayah",
+          "Samira"
+        ],
+        "label": "射程が短い",
+        "text": "逆に射程が短く、安全にCSを取る手段の乏しい相方との相性が悪い。 ロームの間はミニオンに触るのも難しくなり、かといって傍に控えていてもチャイムを集められずスケールが遅れる。 Ultが時間をかけて大ダメージを出すものルシアンサミーラはタイミングが悪いとUltが重なる最悪のディスシナジーも引き起こす。",
+        "has_caveat": false
+      }
+    ]
   }
 }

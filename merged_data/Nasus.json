@@ -1358,5 +1358,108 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Nasus#ced9694a",
+    "fetched_at": "2026-10-30T09:49:09+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Kennen",
+          "Quinn",
+          "Jayce",
+          "Gnar"
+        ],
+        "label": "etc/AS依存度の高いRanged",
+        "text": "AAに依存するRanged。Q上げでは一方的なハラスでボコボコにされるがE上げなら話が変わる。 耐久が低いので範囲の広いハラスが効果的で、相手のオールインもWで凌げるので弱い序盤を誤魔化せる。 もちろんQのスタックが貯まりづらくなるのでスケールは落ちるが、Ultを覚えた辺りまで差を付けきられなければ逆転。 効果時間の長いスローで追いつき、逆に一方的にボコボコに殴れる。仮に差を付けきれずとも、レーンで有利を取れなかったRangedは後半腐る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Trundle",
+          "Irelia",
+          "Yone",
+          "Tryndamere",
+          "Yasuo"
+        ],
+        "label": "AS依存度の高いファイター・スカーミッシャー",
+        "text": "概ね理由は同様。Wが刺さるAS依存度の高い相手に有利。逃げ性能の低い相手はGank合わせも狙いやすい。 一方で序盤の殴り合いは強いものが多いので、ナサスも強くなってくるまでは油断は禁物。あくまで取れるCSを取る意識で。 一部のAS型ファイタージャックスシェンはAA無効がナサスのQに刺さり、セトセトは確定ダメージのWを移動手段が乏しいナサスに当てやすい。 パッチにもよるが概ねスキルマッチアップからそこそこ不利程度の相性となる。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "DrMundo",
+          "Vladimir",
+          "Singed",
+          "Kayle"
+        ],
+        "label": "etc/バーストが低いDPS",
+        "text": "バーストが低めで、オールインのプレッシャーに乏しいDPS型チャンピオン全般。 ミニオンに触りやすいのでQのスタックを貯めやすく、レベルが上がってくるとパッシブでハラスも全く痛くなくなる。 スタックさえ貯まればタンク相手も十分にキルに届くだけのDPSを発揮できるため総じて有利。 特にケイルケイルは前述のAS型チャンピオンの特徴まで満たすため、Wをかけるだけで一気に脅威度が下がる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Garen",
+          "Aatrox",
+          "TahmKench",
+          "Urgot",
+          "KSante"
+        ],
+        "label": "etc/AS依存度が低く、タイマンが強い",
+        "text": "比較的序盤から殴り合いが強く、本人のASがあまり重要にならないスキルファイター。 ゾーニングされてしまうとミニオンに触れず、スタックも装備も進まずにスケールが大幅にダウン。 E上げでレーンを拒否しようとしても、機動力がナサスよりは高い相手が大半なので今ひとつ有効に機能しない。 特にガレンガレンはQでスローを解除してくるため、追い逃げ双方の主導権を常に掴まれる最悪のカウンター。 タム・ケンチタム・ケンチはASこそ重要だが、ナサスのUltにUltを合わせることで長時間の拘束をされてしまうので不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rumble",
+          "Ryze",
+          "Swain"
+        ],
+        "label": "拒否を持つDPSメイジ",
+        "text": "DPS型には基本有利だが、あくまで触れる相手というのが前提。Wをかけてなお逃げ切られる加速やCCを持つ相手は厳しい。 殴れない限りはパッシブのサステインが失われ、Ultの割合ダメージも凌がれるため耐久力にまで悪影響が出る。 ダメージ面のスケールが大きく、またナサスが持たないAoEやCCまで備えているため、集団戦での影響力でも大きく劣る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Anivia",
+          "Veigar",
+          "Annie",
+          "Fiddlesticks"
+        ],
+        "label": "エンゲージ手段を持つメイジ",
+        "text": "ナサスはエンゲージができないのでこういったAoECCを入れてもらえると集団戦で動きやすくなる。 特にエンゲージ役がダメージのでるメイジだとフロント過多ダメージ不足にもなりにくい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kassadin",
+          "Smolder"
+        ],
+        "label": "CCが薄いレイトキャリー、特にMIDレーナー",
+        "text": "MIDがCCを持たず中盤の戦闘力が低いタイプだとTOPサイドでアクションが起こせなくなり必然的にナサスもMIDも育つ機会が減ってしまう。 逆に相手のジャングルはTOPサイドで動きやすいということなので味方側のジャングルが荒らされたりタワーダイブで徐々に腐らせられてしまう。 同じレイトキャリーではあるが強力なCCを持つオレリオンソルオレリオン・ソルと組んだ時の勝率は悪くない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

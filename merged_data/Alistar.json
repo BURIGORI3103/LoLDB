@@ -933,5 +933,78 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Alistar#ldcb3b6e",
+    "fetched_at": "2026-10-30T09:48:38+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Rell",
+          "Pantheon"
+        ],
+        "label": "キャッチャー",
+        "text": "主にフック系の引き寄せるスキルでオールイン、スノーボールを狙うサポート。 高いPeel性能を備えるため、相手の接近・オールインを高精度で拒否、安全にADCにスケールして貰える。 わざと自分がキャッチされることで逆にエンゲージも可能。相手との射線に体を割り込ませていこう。 集団戦でのタンク性能もUltで保障されており、トントンでスケールすれば影響力で上回るため勝率有利。 Peelや逃げ性能の高い相手スレッシュパイクには極端な有利は無く、ほぼスキルマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Warwick",
+          "Nunu",
+          "XinZhao",
+          "Briar"
+        ],
+        "label": "etc/ダイバー・スカーミッシャー",
+        "text": "後衛に張り付いてDPSを出すタイプのジャングラー。特に防御面をスキルの効果で補っているものに有利。 Peel性能でキャリーを守り、自分を狙われても受けきれる耐久力で相手の得意な展開を許さない。 集団戦でも飛び込んできたところをCCで固めて袋だたきにすれば耐えきれるほどの防御性能が無いので有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Janna",
+          "Lulu",
+          "Renata",
+          "Morgana",
+          "Milio"
+        ],
+        "label": "etc/Peel寄りのエンチャンター",
+        "text": "レーン段階での圧はCCチェインを用いたオールインによるもの。これら相手はチェインが成立前にPeelされる。 必然、互いにキャリーが育っての集団戦になりやすいが、シージ性能が皆無のアリスターは睨み合いは苦手。 混戦でもCCの範囲が本人の周囲に留まる分、やや影響力で劣りジワジワと不利になるマッチアップ。 モルガナモルガナは正確にはエンチャンターではないが、EでCCを弾かれるので同様の理由で不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Brand",
+          "Velkoz",
+          "Swain"
+        ],
+        "label": "DPS型のメイジサポート",
+        "text": "サステインはパッシブのみ。DPSの低い相手ならば十分な回復量となるが、これら相手は話が変わる。 高いDPSにより回復量以上のダメージを食らい続け、消費も比較的軽めなので息切れより先にこちらの体力が尽きる。 かといってオールインを狙うにせよ、事前に削られていることや射程差を考えるとMeleeよりもかなり狙いづらいのは変わらず。 これらは割合・確定ダメージを持つので元々タンクに強く、更にWQコンボからのチェインに挟めるCCも持つので競り負けがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sylas"
+        ],
+        "label": "サイラス",
+        "text": "特殊な例。基本的にレーンも異なる相手ながら、常にカウンターとして立ちはだかる難敵。 元が追撃方面の機動力とサステインに長ずるので長期戦に強いのだが、アリスターのUltを奪われると最悪。 CC解除＋ダメージ軽減により一時的にタンク並かそれ以上の耐久力を獲得、固めて倒すことも出来ずに暴れ回られる羽目になる。 プロシーンにおいては、サイラスの強いパッチではアリスターがピックされなくなると言われるほどに影響力が大きい相手。",
+        "has_caveat": false
+      }
+    ]
   }
 }

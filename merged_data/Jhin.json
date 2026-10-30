@@ -941,5 +941,119 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Jhin#g7407670",
+    "fetched_at": "2026-10-30T09:48:55+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nasus",
+          "Teemo",
+          "Rammus",
+          "Amumu"
+        ],
+        "label": "アンチAS",
+        "text": "AA関連の特殊な仕様の都合、AA回数に対するカウンター要素に強い。 またクリティカルで加速、スイフトネスブーツも積みやすいのでCCを食らっても即座に逃げて効果の終了を待てる。 通常であればその間はDPSが下がる点についても、リロードの時間を合わせるように立ち回れれば大して差が無く全体的に有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Velkoz",
+          "Xerath",
+          "Brand",
+          "Veigar",
+          "Fiddlesticks"
+        ],
+        "label": "etc/べた足メイジ",
+        "text": "足が速いのでスキルショットをかわしやすく、他のADCに比べても序盤からメイジサポートの圧を受けづらい。 ジンのスキルはやや発生が遅めなのが短所だが、これらの相手も足が鈍いので咄嗟にかわしづらく、キルを回収しやすく総じて有利。 ミッドレーナーに対しても、射程が短めのべた足相手は遠距離からUltで一方的にエンゲージが可能になる分、有利がつきやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nautilus",
+          "Rell",
+          "Blitzcrank",
+          "Taric",
+          "Braum"
+        ],
+        "label": "タンク・キャッチャー",
+        "text": "スキルの発動時に足が止まるため、キャッチャー相手に捕まりやすい。 咄嗟に逃げようにも更にCCを重ねられると加速も意味が無く、防御ステータスそのものは劣悪なのであっさりデスに繋がる。 元より集団戦のDPSに劣る性質上、レーン段階から有利を稼ぎたい分、溶かしづらいタンクサポート自体が苦手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Leblanc",
+          "Naafiri",
+          "Kassadin"
+        ],
+        "label": "瞬間的な機動力が高い",
+        "text": "アサシンのうち、多段ブリンクや対象指定不可でスキルをかわされやすい相手。 他のADCと比べると事前に視界管理ができるが、これらは多少足が鈍っても接近・奇襲するだけの機動力を誇る。 DPSが低いタイミングを狙われやすく、先述の通り防御ステータスは低いため一瞬でデスしてしまいがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kaisa",
+          "Samira",
+          "Tristana",
+          "Draven"
+        ],
+        "label": "機動力が高く、オールインが強い",
+        "text": "主に射程が短い代わりにオールインの殴り合いが強く、それを仕掛けるための機動力も備えた対面。 ジンはDPSの波が大きく、4発目の直後に殴り込まれるとダメージが出せない時間が発生しがち。 逃走手段は加速のみな以上、長距離Ultやブリンクによる追撃をかわす手段が無く、デスが嵩みやすい。 これらの相手は不足するエンゲージ性能を補うためにサポートに上述のキャッチャーがいる場合も多いのもあって二重に不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Velkoz",
+          "Zyra",
+          "Xerath",
+          "Brand",
+          "Senna"
+        ],
+        "label": "etc/メイジサポート全般",
+        "text": "射程の長いサポート全般。特にAoEを持ち、Pushが早いタイプとの相性が良好。 Wのスネア条件を満たしやすく、移動を妨害するCCが付随していれば容易にCCチェインが可能。 ハラスして体力が減った所にジンの4発目を打ち込めば一気に削れ、そのままキルまでつなぎやすい。 またガンク耐性が低い部分もユーティリティに長けたジンは察知しやすい。総じて互いの長所が伸びる強力な組み合わせ。 特にヴェルコズヴェル＝コズはメインスキルのQにスローが付き、ハードCCも持つためチェインしやすい。 更にジンが苦手とするタンク相手も確定ダメージで削れるため、ミッドの味方としても勝率が大きく上がる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Lulu"
+        ],
+        "label": "ASエンチャンター",
+        "text": "ASを増加させ、OHEを付与するタイプのエンチャンター。ジンはASが伸びない以上、必然的に相性が悪い。 ADが伸びるとは言え序盤は変換の効率も劣悪で、レーン段階のバーストも思ったように伸びない。 エンチャンター全般との相性が微妙だが、特にこの2体は最悪クラスのディスシナジーがある。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Braum",
+          "Nautilus",
+          "Maokai",
+          "Leona"
+        ],
+        "label": "etc/タンク・キャッチャー全般",
+        "text": "DPSの波が激しい性質上、キャッチしてもタイミングが合わずに火力を出せない場面が多い。 元々ジンはPushしている状況の方が得意なため、Push補助が苦手なこれらの短所も出やすい。 一応Gank合わせについてはCCチェインを重ねやすいので悪くないが、それ以外の魅力に乏しく相性が悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

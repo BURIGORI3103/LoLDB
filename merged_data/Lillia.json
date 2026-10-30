@@ -940,5 +940,71 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Lillia#ced9694a",
+    "fetched_at": "2026-10-30T09:49:03+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Malphite",
+          "Zac",
+          "Sejuani",
+          "DrMundo"
+        ],
+        "label": "etc/瞬間的な機動力の低いタンク",
+        "text": "割合・Trueダメージでタンクを溶かしやすく、高いMSで機動力が低いこれら相手であればカイトがやりやすい。 Ultで集団戦の影響力も引けを取らず、特にAPに弱い相手ラムスマルファイトには大きな有利がつく。 ただしヌヌヌヌ＆ウィルンプだけはリリアの出足の遅さをついて序盤にガンクを繰り返せるため有利がつかない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Yasuo",
+          "Nilah",
+          "Ezreal",
+          "Ziggs"
+        ],
+        "label": "etc/Melee、もしくはスキルショット主体のボットレーナー",
+        "text": "リリアはMSでのスキルドッジが通用しない長射程の対象指定が苦手な傾向にある。 裏を返せば、ADCがMeleeだったり、AA以外の手段でダメージを出すものであれば対象指定のダメージソースが減って動きやすくなる。 スキルショットやAAを無効化したりヤスオニーラ高い耐久力を持つ相手スウェインもリリアであればそれほど問題にならない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "Rengar",
+          "MasterYi",
+          "Khazix",
+          "Talon"
+        ],
+        "label": "etc/アサシン",
+        "text": "短時間で高いバーストを出せるアサシン。基礎ステータスの低いリリアではバーストに耐えきれず落とされやすい。 高いMSを得るにも、Ultを発動するにもやや時間差が発生するためばったり遭遇してしまうと成す術がない。 キンドレッドキンドレッドについてはDPS寄りだが、長射程でリリアを殴れる上に仮にリリアのUltを発動できてもキンドレッドのUltでデスを防がれるため不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "KogMaw",
+          "Twitch",
+          "Senna",
+          "Draven",
+          "Aphelios"
+        ],
+        "label": "リリアを溶かしやすいADC",
+        "text": "対象指定でダメージを出せるADCのうち、長射程でDPSを出せる相手かバーストが高い相手。特にどちらの条件も満たすトゥイッチトゥイッチはほぼ全パッチでワーストクラスの不利がつく。 カイティングが通用しづらく、リリアがダメージを出し切る前に溶かされやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

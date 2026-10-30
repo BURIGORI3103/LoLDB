@@ -932,5 +932,69 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Pyke#ced9694a",
+    "fetched_at": "2026-10-30T09:49:13+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xerath",
+          "Lux",
+          "Zyra",
+          "Senna",
+          "Sona"
+        ],
+        "label": "脆く逃げ性能が低い",
+        "text": "耐久が低く、逃げ性能の低いサポート対面。ADCとどちらにフックをしてもキルまで繋げられる。 相手のハラスは基本的に散発のためパッシブの回復で誤魔化し、レーン段階からスノーボールを狙える。 ザイラザイラはペットにフックを弾かれるが、発生が遅めなので見てからの発動は間に合わない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MissFortune",
+          "Seraphine",
+          "Jhin",
+          "Veigar",
+          "Varus"
+        ],
+        "label": "脆く逃げ性能が低い",
+        "text": "スキル全般が方向指定・地点指定、発生に少し間があるので相手の機動力が命中率に直結する。 対面以外でも、足が止まりやすかったりブリンクを持たない脆いチャンピオンが多いほど勝率が上がる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shaco",
+          "Heimerdinger",
+          "Alistar",
+          "Nautilus"
+        ],
+        "label": "カウンターが得意",
+        "text": "Ultはトドメに使うことが多いので、トレードのための火力はQとEのみ。 フックはボディブロック可能、Eは相手の懐に飛び込むため、Qをペットやタンクに防がれると辛い。 ヴァンガード気質の相手を引っ張ってしまうと、逆に相手のオールインに繋がるリスクまである。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kaisa",
+          "Samira",
+          "Kalista",
+          "Zeri"
+        ],
+        "label": "機動力の高いキャリー",
+        "text": "機動力の高い相手にはスキルを直撃させるのが難しく、必然的に影響力を出しづらい。 スケールが大きい相手も多く、Healthを増やせないので集団戦でも瞬殺されがち。 サミーラサミーラに至っては仮に当たる位置にいてもWで弾かれてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -1351,5 +1351,102 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ashe#v34a43c0",
+    "fetched_at": "2026-10-30T09:48:40+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Garen",
+          "DrMundo",
+          "Darius",
+          "Yorick"
+        ],
+        "label": "接近手段の乏しいジャガーノート",
+        "text": "パッシブによりAAだけでスローを付与し続けられるのでKiteが得意。接近手段が乏しい相手は一方的に殴り続けられる。 いざとなればUltも有効で、Qが発動できればDPSもこれらを溶かせる程度には出るので有利。 ムンドドクター・ムンドやガレンガレンは一部のCCを無効化されるが、解除されても即座にスローを重ねられる。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MissFortune",
+          "Vayne",
+          "Xayah"
+        ],
+        "label": "射程が短めの対面",
+        "text": "ケイトリンケイトリンほどではないがAA射程が長く、有効射程が短めの相手に強い。 GankもEで予見できることからレーン段階での番狂わせが発生しづらく、差をつけやすい。 ミス・フォーチュンミス・フォーチュンはUltにUltで返せるのもポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Draven",
+          "Varus"
+        ],
+        "label": "バーストが高いスノーボーラー",
+        "text": "アッシュのAA射程からキャッチする手段のあるスノーボーラーADC。 バーストが低い分、これらとのオールイン合戦は基本的に不利。 一度キルを渡してしまうと更にオールインの差が出来てしまい、スノーボールを許しがち。 逃げ性能が低いのでUltを覚えるまで慎重にプレイしつつ、先手を打ってスノーボールを開始したい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Pyke",
+          "Bard",
+          "Blitzcrank",
+          "Nautilus"
+        ],
+        "label": "キャッチャー",
+        "text": "機動力が低いので相手のスキルをかわしづらい。 キャッチャー相手は捕まったと同時に殴られ、逃げる手段も無いので即デスに繋がりがち。 殴り返してキルまで繋げられるバーストも無く、総じて不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sylas",
+          "Olaf"
+        ],
+        "label": "接近手段を持つファイター",
+        "text": "拒否性能はあくまでCCによるもの。長時間CCを無効化するオラフオラフの接近は防げない。 サイラスサイラスについてはUltを奪われると接近手段を与え、APスケールが高いせいでアッシュよりも火力が高まる。 いずれも高いサステインを持つので殴り合いを挑んでも勝てず、バーストの低さがマイナスに働く厄介な相手。 メインのレーンが異なるのでBANによる対処も負担になりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Soraka",
+          "Taric",
+          "Sona",
+          "Janna",
+          "Milio",
+          "Zilean"
+        ],
+        "label": "エンチャンター",
+        "text": "エンチャンター全般、特にKiteを補助する回復や防御を得意とするもの。 オールインに弱いアッシュの短所をカバーしてくれるので、一方的に殴る形を維持しやすい。 逆にエンチャンターに不足しがちなエンゲージ性能、視界確保をアッシュが担えるので相性が良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nautilus",
+          "Leona",
+          "Rell"
+        ],
+        "label": "ヴァンガード",
+        "text": "豊富なCCによるキャッチを得意とするヴァンガード。アッシュはバーストが低いのでキャッチしても殴り負けがち。 元々アッシュはエンゲージ方面のCCについては不足が無いので過剰になりやすく噛み合いが悪い。 かといって射程を活かしてPush＋ハラスを狙うと、これらは飛び込むタイプなのでタワー下の相手に手が出せない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -944,5 +944,63 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sett#ibcde034",
+    "fetched_at": "2026-10-30T09:49:18+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Irelia",
+          "Garen",
+          "Sion",
+          "Chogath",
+          "Nasus"
+        ],
+        "label": "etc/拒否が弱いMelee",
+        "text": "CDは長めながら、WのシールドとQのAA強化＋キャンセルにパッシブの存在もあって長期戦が強い。 接近手段は加速のみだが、いざ近づければEのキャッチでロングトレードに持ち込むことが可能。 離脱が弱い相手には得意の殴り合いを挑みやすく、またHealthを積む相手にはUltの威力も叩き出しやすく有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Gnar",
+          "Kennen",
+          "Aurora"
+        ],
+        "label": "拒否手段があるRanged",
+        "text": "接近手段が加速のみな以上、これらのEによるキャッチに回答があるRangedには一方的なハラスを食らう。 Healthを積むことも少ないのでUltで投げるリターンも小さく、総じて相性不利。 フラッシュさえあればGank合わせは可能なので、森の介入までHPregを利用して耐えていきたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jax",
+          "Volibear"
+        ],
+        "label": "ロングトレード",
+        "text": "離脱手段が乏しい以上、仕掛ける際は相手が引かない限りロングトレードを前提にする。 これらの相手は長期戦になるとDPSやサステインがセト以上に強く、タイマンでの不利を背負いがち。 ジャックスジャックスについてはAA無効を持つのでCDの長さが枷になりやすく、いざとなれば逃げもあるので主導権を握られやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renekton"
+        ],
+        "label": "レネクトン",
+        "text": "特殊な例。ロングトレードをWの分厚いシールドで競り勝つのが基本。 シールドをW（強化）で破壊されてしまう上に、Eのブリンクがあるのでダメージ部分も裏に回って透かされやすい。 互いにレーン段階で有利を取っていくファイター同士ということで、パワースパイクの逆転を待つのも難しい。 ちなみに他のシールド破壊手段ブリッツクランクレルに対しては、トップとサポートでレーンがまるで異なるので対峙する頃には集団戦段階。 集団戦におけるセトの役割はレーン段階で稼いだ有利を用いたファイトである都合、明確な有利・不利はつかない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

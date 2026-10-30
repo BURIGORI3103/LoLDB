@@ -933,5 +933,109 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Lulu#l0dd5d30",
+    "fetched_at": "2026-10-30T09:49:04+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Briar",
+          "Nocturne",
+          "Naafiri",
+          "Yone"
+        ],
+        "label": "ダイバー、アサシン",
+        "text": "後衛に飛び込み、キャリーを直接狙ってくるダイバーやアサシンに類する相手。 単体を無力化するW、Health回復（増加）＋ノックアップのUltでPeelが容易。 スキルにより生存能力を確保する相手もWにより無力化するため、総じて有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Kalista",
+          "Sivir",
+          "Vayne",
+          "Samira"
+        ],
+        "label": "短射程ADC",
+        "text": "射程の短いADC。エンチャンターとしては有効射程の短いルルの短所が気になりづらい。 いざ戦闘になれば上記の相手と同様にWで無力化もしやすく、対象指定なので機動力の高い相手にも有効。 サミーラサミーラとシヴィアシヴィアはルルのスキルを無効化する手段があるので、発動のタイミングには注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Aphelios",
+          "Jinx",
+          "Twitch",
+          "Taliyah",
+          "Fiddlesticks"
+        ],
+        "label": "長射程AoEキャリー・CC",
+        "text": "射程の長いキャリー。射程が短めなのでこれら相手は無力化を狙えず一方的に削られやすい。 エンゲージが苦手なので強引に仕掛けてトレード勝ちするのも難しく、レーン段階から不利。 キャリーの傍に控える形になりやすいため、特にAoEを持つ相手は同時にダメージを浴びがち。 同じく強力なAoE CCを持つ相手に対してもキャリーと同時に巻き込まれ、手も足も出ないままやられてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Senna",
+          "Milio",
+          "Soraka",
+          "Sona",
+          "Yuumi"
+        ],
+        "label": "ヒーラー",
+        "text": "仕掛ける性能が低いエンチャンター、中でもヒーラー系の相手。互いに決め手がないのでキャリーが育つ展開になりやすい。 ルル側はサステインを持たないのでレーンでの小競り合いでは少々不利がつく他、バフも単体に留まるので集団戦が少々不利。 明確にスノーボールされる心配は薄いがジワジワと差をつけられてジリ貧に陥りやすい地味ながら苦手な相手。 特にセナセナやソナソナはこちらの攻撃性能が低いのをいいことに、スタックを貯める動きを狙ってくる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "KogMaw",
+          "Twitch",
+          "Jinx",
+          "Vayne",
+          "Tristana"
+        ],
+        "label": "AS依存度が高い",
+        "text": "強力なAS強化を持つ為、ASに依存して加速度的に強くなるタイプのキャリーと相性が良好。 特に射程の長いADCは通常はアサシンに弱いので、傍に構えている限り防御性能の高いルルならば弱点を補完しやすい。 ルルの火力の低さについても十分にカバーできるだけの火力を持つため、互いに長所・短所が噛み合っている。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jhin",
+          "Caitlyn",
+          "Ezreal"
+        ],
+        "label": "Pushを求めるキャリー",
+        "text": "Pushしてハラス、がレーニング段階の基本となるADC。ルルはエンゲージ性能が乏しくプレッシャーを与えづらい。 Pushを手伝う性能も控えめなので、これらのキャリーが強いタイミングを逃しやすくなる。 ケイトリンケイトリン以外はASへの依存度も低く、Wのバフが少々無駄になりがちなのも弱み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Samira",
+          "Kaisa",
+          "Xayah"
+        ],
+        "label": "（[[Graves]]）/エンゲージを求めるキャリー",
+        "text": "射程は短いが高いDPSやバーストを発揮できるキャリー陣。エンゲージ性能の無いルルではこれらの得意な展開を作れない。 ジャングラーも同様、CCが薄くエンゲージの出来る味方が必要なスカーミッシャーやダイバーを据えると短所が被る。 Gank合わせの性能も必然的に落ちるので、キャリーを求めるチャンピオンが多いそれらとは二重に相性が悪い。 ※LoLalytics 13.23-14.3 Global Eme+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -2182,5 +2182,80 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sylas#xa63fda8",
+    "fetched_at": "2026-10-30T09:49:22+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Fizz",
+          "Ashe",
+          "Varus"
+        ],
+        "label": "etc./Ultが強力なエンゲージスキル",
+        "text": "本人の射程はやや短め、かつCCもスローと単体のスタン（＋ノックアップ）のみで真正面からのエンゲージは不得手。 その点をカバーできる射程の長いエンゲージスキルを持つ相手は暴れやすくなるので有利。 特に通常は装備の都合で活用できないAPレシオを持つ相手マルファイトアッシュは本来の所有者よりも強いUltを使用できる。 フィズフィズについてはサイラスが弱い序盤はフィズも弱いというのも有利な理由になる。 マルファイトマルファイトについてはAR特化のタンクであるため対面の場合は魔法ダメージを出すサイラスが優位になるのも合わせて有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nasus",
+          "Swain",
+          "Alistar",
+          "Ekko"
+        ],
+        "label": "Ultが強力なタンクスキル",
+        "text": "前線で戦う以上、耐久力はあればあるほど嬉しいが本人の持つ防御スキルはWの回復のみ。 エンゲージ手段を他の味方や奇襲でカバーできれば、強力なタンクスキルを奪うと大きく継戦能力を引き上げてくれる。 特にスウェインスウェインアリスターアリスターは有名で、プロシーンにおける採用率にまで関与してくることも。 MID運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zed",
+          "Irelia",
+          "Diana"
+        ],
+        "label": "主力スキル・CCスキルが地点・方向指定",
+        "text": "機動力も高いので、ミッド運用の場合は方向指定や地点指定に依存しやすい対面に全体的に有利。 イレリアイレリアについては魔法ダメージに弱く、ダイアナダイアナはUltが集団戦で強力なのも理由に。 ゼドゼドに対してはあちらのUltを奪うことで、Ultや手裏剣を透かしやすく主導権を握りやすくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Poppy",
+          "Janna",
+          "Renata",
+          "Galio"
+        ],
+        "label": "UltがPeel向け",
+        "text": "自分から突っ込むスカーミッシャー系ということで、Peel用のUltとは相性が悪い。 奪えても役割と合致しなかったり、発動のタイミングと位置取りが難しかったりで有効活用がしづらい。 最悪の場合は敵を逃がして終了という可能性すらあり、総じて勝率が低め。 逆に相手側はサイラスの仕掛けをいなしやすいという訳なので二重に不利。 特にポッピーポッピーはアンチブリンクも併せ持つため相手にいるときの勝率がワーストクラスのカウンター。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Vex",
+          "Cassiopeia",
+          "Taliyah",
+          "Malzahar"
+        ],
+        "label": "アンチブリンク",
+        "text": "戦闘能力の多くをブリンク付きのスキルに依存しており、必然的にブリンクを使えない状況に追い込まれると辛い。 対象指定CCや釘付けで機動力を封じられると追撃も逃走もままならなくなり途端に戦闘能力が落ちる。 マルザハールマルザハールも釘付けではないが長時間サプレッションのUltが敵の懐に入り込む必要のあるサイラスへのカウンターであるため不利。 Ultを奪ったときに有効活用できるものもあるが、これらの持つカウンター要素を覆せるほどのものとは言い難い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

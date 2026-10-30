@@ -940,5 +940,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Vi#ced9694a",
+    "fetched_at": "2026-10-30T09:49:29+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Lillia",
+          "Nidalee",
+          "Naafiri"
+        ],
+        "label": "スカーミッシャーに類するキャリー",
+        "text": "スカーミッシャーに類するジャングラー。Ultの確実性が高いGankにより、相手が育つ前に差をつけやすい。 相手を殴れている限りは耐久性能もある程度高くなるので、CCの薄い相手にはタイマンも有利。 仮に相手が育ってもUltのキャッチは確実な上にどこまで逃げても回避できないためCCチェインでの対処も狙いやすくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Ashe",
+          "KogMaw",
+          "Twitch"
+        ],
+        "label": "咄嗟の拒否手段が薄いキャリー",
+        "text": "概ね理由は同様。Ultの確実性が高いキャッチはCCや接近される前にしか対処できないキャリーに強い。 ヴェインヴェインは拒否性能こそあるが射程が短いので捕まえやすく、単独で仕留めきれずとも味方の火力も叩き込める。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "MonkeyKing",
+          "Viego",
+          "Shyvana"
+        ],
+        "label": "レベル6からの戦闘能力",
+        "text": "序盤はQの後が続かないため、本領を発揮するのはこれらと同じくUltを覚えてから。 しかしUltを覚えた後は、これらのタイマンは高いARやアンストッパブルのリープによるUltの回避でヴァイが不利になる。 集団戦においてもAoEが豊富だったり、ヴィエゴヴィエゴはヴァイがデスしやすい分でパッシブを回され、影響力で劣りがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Taric",
+          "Renata",
+          "Shen",
+          "Sivir",
+          "Xayah"
+        ],
+        "label": "アンチダイバー",
+        "text": "Ultで脆いキャリーを確実に捕まえてキルするのが基本的な役割。 強引なエンゲージに回答を持つPeelや自衛手段に弱く、これらが相手にいると不利。 離脱が弱く、殴れない状況では耐久も低いのでPeel・Kiteしきられるとそのままデスが嵩んでしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

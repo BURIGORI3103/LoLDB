@@ -935,5 +935,107 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Soraka#ldcb3b6e",
+    "fetched_at": "2026-10-30T09:49:21+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Samira",
+          "Nilah",
+          "Xayah",
+          "Sivir"
+        ],
+        "label": "短射程ADC",
+        "text": "射程の短いADC。特に本人のCCが薄く、相方のオールインに依存するもの。 最初のオールイン段階でEを重ねることで拒否すれば相手は追いつけなくなる。 こちらに飛び込んでくる相手サミーラニーラは本人の足元にEで無力化が可能。 総じてレーン段階から育てることなく、万一育っても集団戦で止めやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Shaco",
+          "Swain",
+          "Velkoz",
+          "Morgana",
+          "Braum"
+        ],
+        "label": "オールインに乏しい",
+        "text": "CCがEの効果時間終了時にしか無いため、オールインを食らうとデスに繋がりやすい。 逆に言えばオールインが苦手な相手には有利なレーニングをこなせる。多少のハラスはヒールで容易に補填可能。 集団戦においてもUltの即時全体回復はダメージを出す以外の仕事が乏しいメイジ系サポートに強く出られる要素に。 ブラウムブラウムは互いに集団戦に向けてキャリーがスケールするが、影響を及ぼせる範囲の広さはソラカが上。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Pyke",
+          "Thresh",
+          "Bard"
+        ],
+        "label": "キャッチャー",
+        "text": "本人の逃げ性能は劣悪、救出手段もヒールのみで迫る相手を止めるのが難しい。 こちらに飛び込んでくる相手はEで無力化できても、フックで引き寄せられるとあっさりデスに繋がる。 セーフプレイを心掛けたいが、かといって引きすぎると相手の得意なロームにより他レーンに悪影響が出る。 ソラカのエンゲージ性能は低いので留守番中のADCを咎めることも出来ないまま、相手の好きに動かれやすい。 バードバードについてはフックでは無いが、ロームを得意とする点と長距離Ultのキャッチを凌げない点が響く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Lulu",
+          "Nami",
+          "Senna"
+        ],
+        "label": "エンチャンター",
+        "text": "ソラカ側からアクションを起こしづらいため、互いに集団戦に向けてスケール、集団戦でもキャリー同士の競り合いになりがち。 キャリーのバフ手段を持たないので、互いのキャリーがフリーな集団戦での影響力では少々押されやすい。 セナセナはバフこそ貧弱ながら本人も火力を出せる上に、ソラカのオールイン性能の低さからスタックを貯められやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ashe",
+          "Varus"
+        ],
+        "label": "強力なCC",
+        "text": "ソラカの短所であるCCの薄さをカバーできる、強烈なCCを使用できるADC。 これらは射程も長めでCCを用いてKite・長期戦を得意とするため、同じく長期戦を得意とするソラカと相性良好。 アッシュアッシュは視界確保のEにより、ソラカのもう1つの短所である視界確保能力まで備える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Twitch",
+          "Jinx"
+        ],
+        "label": "序盤が弱い",
+        "text": "スケールが大きいが序盤のレーン段階が貧弱なキャリー。 ADCへのオールインをEで捌き、ハラスに対してはWで持ちこたえさせることが出来る。 レーン段階から取り返しのつかない差をつけられなければ、これらは終盤に逆転するだけの性能を持つので相性が良好。 ただしソラカもこれらもキャッチャーには不利がつきやすいので、出来れば対面のサポートを見てから合わせたい。",
+        "has_caveat": true
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Samira",
+          "Kalista",
+          "Kaisa",
+          "Xayah",
+          "Zeri",
+          "MissFortune"
+        ],
+        "label": "火力を出すのに下準備が必要",
+        "text": "DPS・バーストは高いが、最大限の火力を発揮するには相手の足止めが必要なADC群。 CCが貧弱なソラカではこれらの持つ問題を解決できず、そもそも自身がADCの機動力に追いつけない場合も。 カリスタカリスタについてはUltも実質ソラカの逃げ専用となってしまい非常に噛み合いが悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

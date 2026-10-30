@@ -933,5 +933,62 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Janna#seee2bf4",
+    "fetched_at": "2026-10-30T09:48:54+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Leona",
+          "Alistar",
+          "Rell",
+          "Zac"
+        ],
+        "label": "張り付く性能が高いタンク",
+        "text": "長期的に張り付く性能の高いタンク全般。圧倒的なディスエンゲージでこれら相手もPeelが可能。 一度完全な拒否に成功すると再度仕掛ける能力は高くないので有利がつく。 ダメージは基本的に足りないので、あくまでPeelに専念した上で集団戦を迎える形を狙おう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Samira"
+        ],
+        "label": "([[Tristana]])/インファイトを好むADC",
+        "text": "概ね理由は同様。ディスエンゲージが得意なのでオールインを仕掛けてきたところを咎めやすい。 サミーラサミーラについてはWでQを防ぐことは出来るので注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Senna",
+          "Sona",
+          "Seraphine"
+        ],
+        "label": "スケールの大きいヒーラー",
+        "text": "レーン段階を凌ぐのは楽だが、こちらからの攻撃性能も不足するので互いに育つ形になりがち。 そうなるとこれらの相手は後半のスケールが高いため後半になるに連れてサポートの差が発生する。 バフも加速と単体相手のEのみなジャンナに対して広範囲に広げられる相手が多く、集団戦のインパクトで押されやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Pyke"
+        ],
+        "label": "長距離フック",
+        "text": "Peel性能の高さは確かだが、あくまで迫ってくる相手を捌く能力。 これらの長距離を拉致していくタイプのキャッチャー相手は上手く機能せず相性が悪い。 ADCを狙われた場合ももちろん、ジャンナ本人も脆いので一度捕まるとデスに繋がりがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

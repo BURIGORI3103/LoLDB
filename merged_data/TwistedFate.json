@@ -940,5 +940,80 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Twisted%20Fate#k9b143ef",
+    "fetched_at": "2026-10-30T09:49:26+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Akshan",
+          "Akali",
+          "Evelynn",
+          "Khazix",
+          "Vayne"
+        ],
+        "label": "etc/ステルス",
+        "text": "Ultを使用するだけで長時間ステルスを暴けるので、ステルスに防御や奇襲を依存する相手に強い。 Pushも早めなので対面に来た場合はロームを許すリスクも小さく、仮に消えてもいざとなれば瞬時にどこにいるかが分かる。 集団戦段階でもセットアップの時点でUltにより入ってくるのを許さず、場合によっては逆にキャッチを狙えるので総じて有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Gragas",
+          "Leblanc",
+          "Vex",
+          "Lissandra",
+          "Malzahar"
+        ],
+        "label": "etc/短射程メイジ",
+        "text": "対面に来る短射程のメイジ全般。特にPushがTFよりも遅い相手。 弱点である射程の短さも相手が更に短射程なので問題になりづらく、Push速度でも互角以上。 Ultの移動はこれらのブリンクよりも素早くこなせるので、互いに得意とするロームでも先手を取りやすく、後手からでも追いつきやすい。 マルザハールマルザハールについては召喚されるヴォイドリングのキルでもパッシブが発動、スケールが早まる点も嬉しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yasuo",
+          "Fizz",
+          "Mel",
+          "Olaf",
+          "Teemo"
+        ],
+        "label": "W無効",
+        "text": "自衛・追撃は共にWの赤・金に依存。準備が必要なので相手にも飛んでくるタイミングが分かりやすい。 そこで対象指定不可やCC無効などで無効にされてしまうとそれ以上の戦闘続行が難しくなる。 機動力の高い相手は逆にTFをキャッチされてしまい、脆いので逃げ手段を失えば即座にデスしかねない。 他レーンの相手についても、Wによるキャッチを絡めたGankが刺さらなくなるのでやはり不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kassadin",
+          "Katarina",
+          "Sylas",
+          "Diana"
+        ],
+        "label": "多段ブリンク",
+        "text": "これらはWこそ当たるが、その後もTFを追撃出来るだけの機動力を持つ。 殴り合いの強さでは雲泥の差があり、逃げ切れなければ遅かれ早かれデスするのみ。 相手の側もロームからの小規模戦が得意なため、Ultでロームを狙っても下手をすると追ってきたこれらにマルチキルが入る。 レーン段階で勝つとそのまま勝ちを広げるスノーボーラーが多いのもあり、総じて勝率は低く出る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nocturne"
+        ],
+        "label": "ノクターン",
+        "text": "特殊な例。TFのRはあくまで「真の視界を確保する」だけであり、視界範囲に関するデバフは貫通する。 そのため強制的に視界範囲を減らすノクターンのRを使われてしまうと、自分の周囲を除いてどこにも飛べなくなる。 飛べるようになった頃には既に戦闘の勝敗が決しているケースが多く、危険察知や先回りGank・バックドアと言った全ての強みを封印されてしまう。 ノクターン側はTFのRエフェクトを見てからRを返すだけでワープを止められるため、先んじて動くことも難しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

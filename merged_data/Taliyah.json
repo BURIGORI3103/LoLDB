@@ -1355,5 +1355,91 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Taliyah#x7efc06a",
+    "fetched_at": "2026-10-30T09:49:23+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Sylas",
+          "Akali",
+          "Pantheon",
+          "Galio"
+        ],
+        "label": "短射程かつダッシュ・リープに依存",
+        "text": "Eは相手のダッシュスキルに合わせることで大ダメージ＋スタンを決められる。 必然、ダッシュに接近手段を依存するスカーミッシャーやダイバー系列に有利。 一度拒否した後は更なる追撃手段を持たないものが多いため、CD中は一方的に殴り続けられる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vex",
+          "Malzahar",
+          "Lissandra",
+          "Cassiopeia"
+        ],
+        "label": "([[Ryze]][[Swain]])/短射程メイジ",
+        "text": "Qの射程はそれなりに長いため、これらの射程が短いメイジに対して有利。 一方的なハラスが狙えるだけでなく、射程の短さからCSのために前に出たところをE＞Wのコンボに引っかけられる。 特に機動力の低い相手、瞬間的なブリンクを持たない相手に有利がついている。 ・JG運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Samira",
+          "Nilah",
+          "Kalista"
+        ],
+        "label": "ブリンクに依存するキャリー",
+        "text": "集団戦のタイミングにおいてブリンクに強く依存するハードキャリー陣。 どこまで育っているとしてもタリヤのEに引っかければ耐久の低さが露呈する。 ゼリゼリは例外で、ブリンクを封じてもUlt中は加速だけでもKiteが可能。 また前衛から順に溶かしていく性質と射程の長さが相まって、むしろ不利がつくパッチも。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Katarina",
+          "Kassadin",
+          "Zed"
+        ],
+        "label": "ワープを持つバーストアサシン",
+        "text": "拒否手段はEに強く依存している。必然的に反応しないワープ型の接近手段を持つアサシンに弱い。 Wについても発生の遅さが災いして、機動力の高いこれらの相手にはまともに当たらない。 そして拒否に失敗したが最後、逃げる手段は無く殴り合いでも勝てないので総じて不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ziggs",
+          "Velkoz",
+          "Syndra",
+          "Zoe"
+        ],
+        "label": "長射程メイジ",
+        "text": "ミニオンを貫通しないQ以外の射程は短めで、アーティラリー系のメイジ相手は一方的にハラスを食らいやすい。 またW、Eを発動する際に足が止まるのでそこでコンボを食らうとHealthが大きく削られてしまう。 Pushを作れても瀕死の状態ではロームは出来ず、またゾーイゾーイ以外の相手は向こうもPushが早いのでレーンを離れづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "Khazix",
+          "Ekko"
+        ],
+        "label": "奇襲性能が高いアサシン",
+        "text": "概ね理由はミッドと同様。奇襲に成功されると瞬時にデスに繋がれやすい。 ブリンクはEで止まるタイプではあるが、そもそもEの発動が遅いので不意打ちを食らうと反応しきれない。 エコーエコーについてはEの2段目はワープでEが反応しないのも辛い。 スノーボール性能の高い相手が多く、キルを渡すとそのまま流れを持って行かれてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

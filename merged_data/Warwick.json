@@ -1358,5 +1358,93 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Warwick#t324c6fb",
+    "fetched_at": "2026-10-30T09:49:31+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Shyvana",
+          "Evelynn"
+        ],
+        "label": "出足が遅いキャリー",
+        "text": "出足が遅い、キャリー型のMeleeジャングラー。周回の遅い序盤に差をつけられづらい。 殴り合いにおいてはWWは最強格のため、相手が動き出せるようになった頃にもタイマンは優位。 少数戦においても相手は基本的に接近しなければ仕事が出来ず、近づいてきたところをE・Ultで拘束できる。 総じて相手の狙いを潰しやすく、WWの弱いタイミングを突かれづらいので有利。 イブリンイブリンはHealthを減らすとWのパッシブで疑似的に位置を把握できる点もポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "XinZhao",
+          "Talon",
+          "LeeSin"
+        ],
+        "label": "カウンタージャングラー",
+        "text": "逆に序盤からこちらの森に積極的に入ってくるカウンタージャングラー相手も有利。 殴り合える距離に入ってさえくるならばタイマンはこれらに勝る強さを誇る。 Gank性能では差を開けられているが、相手の選択肢を1つ潰せるので優位がつく。 集団戦でも入ってきたところをPeel・固めて袋だたきにしやすい。 ●トップ運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "DrMundo",
+          "Yorick",
+          "Mordekaiser",
+          "Irelia",
+          "Yasuo"
+        ],
+        "label": "etc/拒否が弱いMelee",
+        "text": "拒否手段を単発のCC・ブリンクに依存するジャガーノートやスカーミッシャー。 接近さえすればQの長押しで相手の逃げに付いていけるので殴り合いを続行可能。 殴り合いにおいては最高峰の性能を持つので有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "Taliyah",
+          "Karthus",
+          "Vayne",
+          "Heimerdinger"
+        ],
+        "label": "etc/Kiteが得意",
+        "text": "追いつく手段は射程の短いQと方向指定のUltのみ。 射程に入らずに一方的に削ってくる相手はレーンを問わず不利になる。 殴れないとパッシブ・Qの回復も機能しない以上、耐久力にも悪影響を及ぼす難敵たち。 接近さえ出来ればついていける相手も多いので、それらには視界を管理して如何に近づくかが勝負になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "KSante",
+          "Braum",
+          "Rell",
+          "Taric",
+          "Galio"
+        ],
+        "label": "etc/ピーラー",
+        "text": "理由は同様。これらはキャリーに近づいたところを確実性の高いPeelでワーウィックを引き剥がす。 CCを得意とするのでAAやQでの回復が出来ずに固められ、為す術無く落されてしまう。 本人を狙ったところで元よりダメージを引き受けるのが仕事なのでむしろ願ったり叶ったりとしかならず、総じて不利。 ●ジャングル運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shaco",
+          "Nunu",
+          "Rammus"
+        ],
+        "label": "アーリーGanker",
+        "text": "出足が速く、WWの動き出す前にGankを繰り返して差をつけてくるジャングラー。 序盤の影響力が低いWWでは相手の動きについていけず、周回も遅めなのでオブジェクトとの交換も難しい。 中盤以降もWWからPeel・Kiteを可能とするCCやブリンクを持ち、集団戦での挽回も厳しい厄介な相手。 ラムスラムスは元々AAに依存するチャンピオンに強く、負傷をコアとして積めるハードカウンター。",
+        "has_caveat": false
+      }
+    ]
   }
 }

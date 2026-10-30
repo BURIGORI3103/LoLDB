@@ -1760,5 +1760,96 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Vel%27Koz#p53e1f81",
+    "fetched_at": "2026-10-30T09:49:28+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Alistar",
+          "Leona",
+          "Amumu",
+          "Rammus",
+          "Rell"
+        ],
+        "label": "etc/飛び込むタイプのタンク",
+        "text": "スキルコンボを重ねるとTrueダメージを与えられるので、ステータスでタンク性能を確保している相手に強い。 特にエンゲージ・キャッチを飛び込むスキルに依存する場合は仮に入ってきても足元にEを置けば拒否が可能。 実際にCCを重ねられてしまえばその脆さと逃げ性能の低さからデスに直結するので、適当にEを振らないよう注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xayah",
+          "Nilah",
+          "Malzahar",
+          "Fiddlesticks",
+          "Swain"
+        ],
+        "label": "etc/短射程",
+        "text": "アーティラリーとして長い射程を持つので、これらの有効射程が短い相手にも有利。 射程に近寄らずに一方的にハラスが可能、Wのお陰でPushも引けを取らずに済む。 フィドルフィドルスティックスについては、射程が長く範囲の広いポークにより、戦闘状態にしてFleeを防げるのも大きい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Talon",
+          "Akshan",
+          "Katarina",
+          "Fizz",
+          "Kassadin"
+        ],
+        "label": "etc/機動力の高いアサシン",
+        "text": "CCは発生が遅め、防御面も脆くべた足のメイジということで、Eの拒否を透かしたり奇襲が得意なアサシンに弱い。 対面した場合はロームが強い相手が多く、かといって追えばやはり餌にされてしまうので咎める手段もPushのみ。 出来るだけ事前にリバーに視界を置きつつ、消えたらpingで危険を知らせることは徹底しておこう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Pyke",
+          "Blitzcrank",
+          "Bard",
+          "Rakan"
+        ],
+        "label": "飛び込まない、或いは機動力の高いキャッチャー",
+        "text": "原則として、捕まればそのままデスする脆さなのでCCには弱い。 飛び込んでくる相手は前述の通りEの圧で牽制出来るのでまだしも、フックにはその対処が利かないので常に圧をかけられる。 飛び込んでくる場合もその後の機動力が高い相手はアサシンと同じくEがまともに当たらないため、拒否・反撃が難しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Jhin",
+          "Caitlyn",
+          "Ashe",
+          "MissFortune"
+        ],
+        "label": "Push＋ハラス",
+        "text": "レーン段階からPushしてハラスを狙うタイプのADC。 WによるPush補助が得意な他、Qを当てるとスローからADCのスキルも当てやすくなる。 Gankに弱い点も罠や視界の確保により、多少程度には補っているADCが多い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lucian",
+          "Vayne",
+          "Zeri",
+          "Xayah"
+        ],
+        "label": "短射程",
+        "text": "有効射程の短いADC全般。近づかせないのが前提のヴェル＝コズとは射程がまるで噛み合わない。 逆にADCが仕掛けた場合も腰の重さが災いして合わせられず、一時的に1vs2を強いる羽目になる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

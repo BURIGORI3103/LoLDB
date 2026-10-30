@@ -940,5 +940,117 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Twitch#b4f8164f",
+    "fetched_at": "2026-10-30T09:49:26+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Jinx",
+          "Sivir",
+          "MissFortune",
+          "Swain",
+          "Xerath",
+          "Zyra"
+        ],
+        "label": "etc/逃げ性能が低い対面",
+        "text": "ステルスからの奇襲に回答を持たない対面。バーストが低ければ理想的。 Ultの習得後はQのAS増加・UltのAD増加の効果時間中に十分にキルに繋ぐことが可能。 メイジサポートについては序盤はハラスが痛いが、ある程度の被害までに抑え込めば容易に逆転できる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Gangplank",
+          "Karthus",
+          "Veigar",
+          "Malzahar"
+        ],
+        "label": "etc/逃げ性能が低い他レーナー",
+        "text": "理由は同様。逃げる手段が無い相手はロームからのGankを刺しやすい。 ステルス中は加速するため、コントロールワードに見つからなければ比較的歩き回りやすい。 CCに引っかかるとデスに繋がりやすいので、不安ならサッシュなどで対策しておくとより万全。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "Hecarim"
+        ],
+        "label": "([[Zac]][[Qiyana]][[Talon]][[Pyke]])/機動力の高い奇襲",
+        "text": "トゥイッチは奇襲を得意とするチャンピオンでありながら、本人も逃げ性能が低く奇襲に弱い。 高い機動力でGank・暗殺を狙ってくるチャンピオンには全体的に不利がつく。 特にアサシン系は見つかった瞬間にデスに繋がる場合も多いので、育ってしまった場合は単独行動は避けたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nilah",
+          "Xayah",
+          "Draven"
+        ],
+        "label": "殴り合いが強いADC",
+        "text": "先手を打った後は、Ultを使わない限りマークスマンの一般的な射程での殴り合いになる。 CCが貧弱で逃げ性能も悪いため、殴り合いの強いADCに殴り返されると競り負けやすい。 ニーラニーラザヤザヤはAAを無効化し、先手を打った分の時間的優位を失ってしまうのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rakan",
+          "Renata",
+          "Zilean"
+        ],
+        "label": "([[Braum]])/確実性の高い防御",
+        "text": "先手を打ってキルまで繋ぎ、その後の追撃・撤退はCDが解消されたQで行うのが基本。 必然的にキルを防がれると後が続かず、低い機動力を晒してしまう羽目になる。 蘇生や高い機動力とPeel性能を両立するサポート相手は最初のキルを稼ぎづらくなり、全体的に不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lulu",
+          "Yuumi",
+          "Renata",
+          "Milio"
+        ],
+        "label": "射程が長めのエンチャンター",
+        "text": "奇襲の際、駆け寄って十分な支援を出来るエンチャンター系。 射程や効果時間が長かったり、加速で後から追いつけるものは奇襲を察知されずに動きやすい。 特にユーミユーミはトゥイッチに密着しているとユーミ本人もステルスになれる。 QやUltを使うとそこにいることがバレるため、トゥイッチがAAを開始してから参加するのがコツ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Braum",
+          "Rakan",
+          "Taric"
+        ],
+        "label": "機動力が高い・射程の長いピーラー",
+        "text": "トゥイッチ本人の逃走能力は低く、またAAに依存する分CCにも弱い。 後から駆けつけられるピーラーであれば奇襲に失敗したトゥイッチを守り切れるので相性が良好。 単に相手の奇襲に対しても、これらは速やかに駆けつけて保護することが可能。 タリックタリックは機動力こそ足りないが、ユーミと同じくステルスとの相性が良好。 唐突にスタンを放てるので反撃を封じて攻撃をスタートできる他、いざとなればUltで無敵状態に出来る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Heimerdinger",
+          "Velkoz",
+          "Lux",
+          "Brand",
+          "Zyra"
+        ],
+        "label": "徒歩型のメイジサポート",
+        "text": "トゥイッチの奇襲についていけないメイジサポート。 火力については基本的にトゥイッチだけでも十分なため、仮に追いつけてもオーバーキルになるだけ。 序盤のオールインに弱い弱点も被ってしまい、長所・短所が噛み合わない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

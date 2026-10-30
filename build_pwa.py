@@ -3332,6 +3332,14 @@ def build():
 
         <!-- 実戦コンボ -->
         <div class="detail-section">
+          <div class="detail-heading">📚 wiki掲載の敵・味方との相性</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-bottom:8px;">折りたたみ内を含む掲載文の自動抽出。ロール・現在パッチの指定なし。OP.GGの勝率理由とは別の資料です。</div>
+          ${{(c.wiki_matchups?.groups || []).map(g => `<details style="margin-bottom:10px;"><summary>${{g.relation === "ally" ? "味方" : "敵"}}・${{g.advantage === "favorable" ? "有利／相性良好" : "不利／相性不良"}}：${{escapeHtml(g.label || "対象チャンピオン")}}（${{g.champion_ids.map(id => escapeHtml(CHAMPIONS[id]?.name || id)).join("、")}}）</summary><p style="font-size:12px; white-space:pre-wrap; line-height:1.7;">${{escapeHtml(g.text)}}</p></details>`).join("") || "構造化して取得できた相性項目はありません。"}}
+          ${{c.wiki_matchups?.source_url?.startsWith("https://www.loljp-wiki.jp/") ? `<a href="${{escapeHtml(c.wiki_matchups.source_url)}}" target="_blank" rel="noopener noreferrer">出典の相性・対策欄を開く</a>` : ""}}
+        </div>
+
+        <!-- 実戦コンボ -->
+        <div class="detail-section">
           <div class="detail-heading">📖 wikiの考察・対策</div>
           ${{Object.entries(c.wiki_info?.sections || {{}}).map(([heading, text]) => `<div style="font-size:12px; margin-bottom:8px;">${{escapeHtml(heading)}}：${{escapeHtml(text)}}</div>`).join("")}}
           <div style="font-size:11px; color:var(--text-muted);">取得日：${{escapeHtml((c.wiki_info?.fetched_at || "").slice(0, 10))}}・パッチ対応未検証</div>

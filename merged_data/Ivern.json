@@ -942,5 +942,53 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ivern#ldcb3b6e",
+    "fetched_at": "2026-10-30T09:48:54+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Amumu",
+          "Sejuani"
+        ],
+        "label": "etc/Ultに依存するタンクジャングラー",
+        "text": "相手のキャンプのスティールが序盤から容易で、Gank性能についてもQ・Eが揃えば序盤は十分。 Gank性能をUltに依存する相手は動き出す前に差をつけることが可能で、スティールによりUltの習得も遅らせることが出来る。 また、逃げ性能が低い相手はアイバーンのカウンターを察知してもこちらの森に入りづらい。 無理に入っても視界さえあればレーナーで挟み撃ちにしてキルに繋げられる場合もあるため、序盤からマクロ面でも有利。 仮に相手の森で鉢合わせても火力や追撃力が不足していれば、逃げ切るのは然程難しくない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Nocturne",
+          "MasterYi",
+          "Briar"
+        ],
+        "label": "Ultに依存するダイバー・スカーミッシャー",
+        "text": "理由は上記に近く、相手が動き出す準備を整える前に差をつけやすい。 Gank・集団戦においてもこれらは1人の相手に張り付く性能に長ずるが、アイバーンなら十分なPeelが可能。 Ultの習得後は強力なペットもPeelに関われるなど、ゲーム全体を通して有利がつく。 戦闘能力そのものはアイバーンを大きく凌駕しているケースが大半なので、鉢合わせないよう視界はしっかり確保したい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Talon",
+          "Shaco",
+          "Ekko",
+          "Rengar"
+        ],
+        "label": "アサシン",
+        "text": "アイバーン本人の戦闘能力は低く、逃走も然程強くないためアサシンに遭遇すると瞬殺される。 特にステルスやブリンクを利用して奇襲してくる相手は、味方を狙われた時にEが間に合わない危険も大きい。 仮に間に合ったとしても、アイバーンは守れる相手が基本的に1人のため、他の味方に標的を変えられると守り切れない。 レンガーレンガーについては、味方の姿やオブジェクトを隠そうと作った茂みを逆用されるのも辛い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

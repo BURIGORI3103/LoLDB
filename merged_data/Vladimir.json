@@ -1358,5 +1358,82 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Vladimir#e9aac04e",
+    "fetched_at": "2026-10-30T09:49:30+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Katarina",
+          "Fizz",
+          "Ekko",
+          "Yasuo",
+          "Vex"
+        ],
+        "label": "etc/火力の発生が遅め",
+        "text": "ダメージの発生に下準備や時間が必要なアサシン・バーストメイジ。 Wの無敵により相手のバーストを透かして逃げてもよし、Eのチャージを先に使っておきトレードに持ち込んでもよし。 仮に仕掛けてこなかったとしても、相手はスノーボールを狙うタイプが多く、こちらはレイトゲームが得意なのでいずれ逆転が可能。 もちろん適当にWを使ってCD中に仕掛けられれば普通に倒されてしまうので、あまり舐めた動きはしないように注意。 ●トップ運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Volibear",
+          "Fiora",
+          "MonkeyKing",
+          "Malphite"
+        ],
+        "label": "etc/DPSファイター",
+        "text": "トップでも概ね似たような傾向の相手に強い。こちらはDPSを出すタイプだが、やはりWで一方的に戦闘を打ち切れる。 相手の得意な殴り合いに持ち込ませずにスケールして、集団戦の頃にはこれらを仕留めきれるだけのDPSも出せる。 マルファイトマルファイトについてはタンクだが、いずれにせよ相手の得意な戦闘にならずに済むので有利。 AR方面のスケールが良い相手ウーコンマルファイトはAPに弱いのも優位点。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Kayle",
+          "Teemo",
+          "Gangplank"
+        ],
+        "label": "Ranged、およびそれに類する相手",
+        "text": "射程が短めとはいえ、あくまでメイジとしてはの話。 これらのトップに来るRanged相手は射程が足りるので、ハラスを返しやすい。 Wの分でGank耐性にも勝るので、森の介入があった場合にも有利を作るのが難しくない。 育った後のスノーボール性能に長ずるものも多いが、そこはブラッドミアも同様。レーン段階の優位を波及させやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malzahar",
+          "Ryze",
+          "TwistedFate",
+          "Orianna",
+          "Anivia"
+        ],
+        "label": "etc/Pushが早い",
+        "text": "主にAoEが強く、Pushの早い相手全般。AoEがEしか無く、序盤は威力が低い上に消費も激しいので一方的にPushされがち。 レーン段階からキルを量産される訳ではなくとも、射程の短さとCCの薄さもあり、集団戦での影響力でも少々劣り気味。 ロームを得意とする相手ライズツイステッド・フェイトは他レーンへの悪影響も大きく、不利をそのまま波及されてしまう。 マルザハールマルザハールについてはUltの効果中はWで逃げることが出来なくなり、生存能力が大きく低下する。 ●トップ運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nasus",
+          "Chogath",
+          "Yorick"
+        ],
+        "label": "スケールが大きめのジャガーノート",
+        "text": "自衛性能の高さの分、純粋な単体へのDPSは他のバトルメイジに比べて劣る。 耐久力が高く、スケールの大きいジャガーノートは対処に時間がかかり、長く殴り合う展開では流石に勝てなくなる。 サイドレーンのタワーへの圧が大きくかかってしまい、ブラッドミアが自由に動けなくなる厄介な相手。 ヨリックヨリックは本人の耐久力こそ然程でもないが、ペットにEを吸われる上にAoEの貧相なブラッドミアでは処理に手間取る。 Wでは壁を抜けることが出来ないため、捕まってしまえば最後、最早逃げる手段がなくなる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

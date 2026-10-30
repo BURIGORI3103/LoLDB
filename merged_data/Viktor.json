@@ -1354,5 +1354,54 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Viktor#pf344f2b",
+    "fetched_at": "2026-10-30T09:49:30+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar",
+          "Swain",
+          "Vladimir",
+          "Vex",
+          "Lissandra"
+        ],
+        "label": "短射程メイジ",
+        "text": "Eによりバトルメイジとしてはハラスの射程が長めで、Wも機動力の低い相手には有効なCCとなる。 自分よりも射程が短い相手は一方的にハラスしやすく、相手の仕掛けもWでかわせるため有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Akali",
+          "Kassadin",
+          "Ekko",
+          "Qiyana",
+          "Talon",
+          "Fizz"
+        ],
+        "label": "アサシン",
+        "text": "ビクターの拒否スキルは発生の遅いスタンと極短時間のサイレンスのみ、さらに序盤は火力も低い。 アサシンからしたらまさに狩りやすい対象であり、スノーボールを許しがち。 ただしカタリナカタリナゼドゼドについては出てくる場所が分かりやすくWを合わせやすいため不利がつかない。 もちろんアサシンである以上、迂闊にWを振るとキルをもぎ取られるので油断はしないように。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xerath"
+        ],
+        "label": "ゼラス",
+        "text": "ビクターはゾーンコントロール力にもスペックを振ったメイジであるため、ダメージと射程に振り切ったゼラスには削り負けしやすい。 スキルをすべて叩き込めばバーストでワンコンが見込める、というスキルセットでもないのでチャンスをつかみづらい。 Wについてもレーン段階においては活用しずらく、一方的に削られる展開になりがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

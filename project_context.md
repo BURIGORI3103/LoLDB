@@ -31,6 +31,8 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 - OP.GGの正式slugはウーコンが monkeyking、レナータが renata。process_url_list.py --refresh --reuse-wiki で全件を再取得し、ページ表示のパッチを検証します。refresh_role_stats.py が実運用ロールごとのページから統計を取得し、表示ロールとパッチを検証して role_data へ保存します。
 - merge_data.py はパッチ・ロール別の取得が未完了なら停止し、検証済みデータで統計を置換します。コンボ・スキル順などの既存補完を保持し、ダメージ属性・AAタイプ・サステインと対面マトリクスを後段で再計算します。sync_all_roles_complete.py の固定相性・固定ビルドによる補完はパッチ更新フローでは実行しません。
 - apply_matchup_reasons.py は文献確認済み解説をマスター・個別JSON・対面マトリクスへ同期する。基礎特性から推測した説明は相性理由として採用しない。シミュレーターも確認済み解説がない場合は未確認と表示する。
+- collect_wiki_matchups.py --refresh は全173体のwiki相性欄を取得し、CSSで折りたたまれた本文も対象画像群・有利不利・敵味方・説明文に分けて data/wiki_matchups.json へ集計する。保存済みHTMLからの再集計は引数なし。本文中の補足参照や例外を対象画像群へ追加しない。結果と取得不可・抽出項目なしのページは docs/wiki_matchup_collection_report.json に記録する。
+- アプリの「wiki掲載の敵・味方との相性」は自動抽出した掲載文として独立表示する。ロール・現在パッチの検証済み統計ではなく、OP.GGの勝率・有利不利判定へ自動転用しない。
 
 ## 生成物と運用上の制約
 

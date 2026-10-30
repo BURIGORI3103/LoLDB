@@ -943,5 +943,76 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Renekton#e3016159",
+    "fetched_at": "2026-10-30T09:49:15+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Irelia",
+          "Fiora",
+          "Akali",
+          "Gwen"
+        ],
+        "label": "スカーミッシャー",
+        "text": "耐久力が低い代わりに機動力が高いタイプのMeleeスカーミッシャー。 Wが対象指定なので機動力に翻弄される心配が薄く、タイマン有利によりスノーボールしやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sett",
+          "Riven",
+          "Yasuo",
+          "Yone"
+        ],
+        "label": "トレードをシールドに依存",
+        "text": "フューリーが貯まった状態のWはシールドを一瞬で破壊できる。シールドを用いたトレードを狙う対面に有利。 セトセトについてはWのチャージが長く、Eで裏に回りつつ強化W、と繋ぐことを意識すると戦いやすい。 スカーミッシャーリヴェンヤスオヨネ系の対面は上記の通り、機動力で翻弄されづらいのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick"
+        ],
+        "label": "ヨリック",
+        "text": "特殊な例。Qは当てた数に応じた回復を行うため、グールによる数の暴力が機能しづらい。 Wの壁もEのブリンクで乗り越えてトレードを挑めるので有利を作りやすい。 ただしウェーブを押し込まれると処理にQを吐かされ、フューリーも使わされやすく殴り負ける場合も。 Pushウェーブになったタイミングでの仕掛けを意識して動くといいだろう。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Teemo",
+          "Gnar",
+          "Ornn",
+          "DrMundo",
+          "Singed"
+        ],
+        "label": "etc/トレード拒否",
+        "text": "レネクトンの強みはレーン段階のショートトレードのゴリ押し。 逆に言えばブラインドティーモやCC無効、ブリンクなどでショートトレードを拒否されると思ったように差がつけられない。 多くが遠距離からCSだけ取る手段を持ち、シンジドシンジドもいざとなればプロキシが可能、いずれもスケールはレネクトンより大きい。 セーフファームされている間にパワースパイクを逃し、影響力で劣る状況に陥りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Illaoi",
+          "Kled"
+        ],
+        "label": "強力な方向指定",
+        "text": "仕掛ける際は直線的なブリンクに依存する都合、これらの当たれば強力な方向指定には競り負ける。 スキルのCDが長いためCDの間に仕掛けるのも難しく、Health差が出来るとフューリーの維持すら困難に。 かといってセーフティにしていたところで、レネクトン本人がレーンで有利を築かないと息切れするタイプなので意味が薄い。 クレッドクレッドに至ってはロームが強く、他のレーンにまで苦労をかける羽目になる。 %%実は全体的な傾向として、APチャンピオンが不得手です。 APファイターは割合ダメージ持ちが多いため、Rの最大体力増加がメタられています。 またmidレネクトンを規制するためにLv1のMRが28という低水準なのも理由だと思われます。%%",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -1349,5 +1349,43 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Shaco#y59f4b0e",
+    "fetched_at": "2026-10-30T09:49:19+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Kindred",
+          "Viego",
+          "Warwick"
+        ],
+        "label": "AAに依存するダイバー・スカーミッシャー",
+        "text": "QのステルスでAAやスキルをかわし、強化の効果時間が切れたタイミングで奇襲に移れる。 キンドレッドキンドレッド以外は遠距離攻撃手段に乏しく、Wに引きつけやすいのも強み。 基本的に序盤はあまり強くないスノーボーラーが多く、流れに乗らせずに何もさせないままゲームを締めやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Hecarim",
+          "Lillia",
+          "Shyvana",
+          "Vi",
+          "Nocturne",
+          "Sejuani"
+        ],
+        "label": "Lv6スパイク",
+        "text": "こういったUltを覚えると格段に強くなり高いGank性能を手に入れるチャンピオン相手に不利。 シャコは複数戦が不得意なので、カウンターGankはするのもされるのも苦手だし、Lv6になってもGank性能は向上しない。 そのためたとえシャコが2キル程持っていたとしても、Lv6時点で積極的に動いてアクションの成功数を稼ぎやすいのは相手の方。 結果バロン等を狙う時間帯には逆転されている試合展開が多いため不利がつく。",
+        "has_caveat": false
+      }
+    ]
   }
 }

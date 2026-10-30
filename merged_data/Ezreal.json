@@ -796,5 +796,164 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ezreal#yc9c1f8e",
+    "fetched_at": "2026-10-30T09:48:48+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Jinx",
+          "Ashe",
+          "Varus"
+        ],
+        "label": "([[MissFortune]])/長射程マークスマン",
+        "text": "AAの射程を活かしたハラスを中心にしたレーン戦を組み立ててくる相手。 Qによるポークの射程はこれらのAAより長く、相手のハラスに負けずにレーニングが可能。 Pushに移行されると面倒だが、足が止まる相手が多いので適時オールインを狙って行くのもアリ。 首尾良く育ったら集団戦ではエンゲージ耐性が雲泥の差のため、積極的に仕掛けていくことで優位に立てる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Brand",
+          "Morgana",
+          "Zyra"
+        ],
+        "label": "etc/メイジsup",
+        "text": "理由は概ね上と同様。スキルの射程外からポークでHealthに有利を作れる。 メイジ系のサポートの場合、CCが基本的にスキルショットなのでEでかわせるのも優位点。 やはりPushに移行されると厄介だが、Gank耐性の無い相手が多いので森を呼ぶことで対処可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Veigar",
+          "Lissandra",
+          "AurelionSol",
+          "Velkoz",
+          "Anivia",
+          "Viktor"
+        ],
+        "label": "ゾーンコントロールメイジ",
+        "text": "マークスマンとしては異例の壁を超えられるワープであるEにより、キャッチやゾーニングを回避でき、安定してDPSを出しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xayah"
+        ],
+        "label": "ザヤ",
+        "text": "あちらのオールインは射程に入り込んだ相手へのEからスタートするが、エズはブリンクでそれをかわせる。 それ以前に羽の射程より遠くからのポークも可能なので、レーン段階で負ける心配が小さい。 集団戦ではAoEが厄介ではあるが、レーンの優位を活かして装備差を作っていれば依然としてダメージで有利を取れる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sivir"
+        ],
+        "label": "（[[Ziggs]][[Yasuo]]）/Pushが早い対面",
+        "text": "弱点であるPushの遅さを、凄まじいまでのウェーブクリア性能で突いてくる対面。 ミニオンを貫通するハラス手段も無いのをいいことにバンバンPushしてプレートやハラスで差をつけてくる。 シヴィアシヴィアヤスオヤスオについてはスキルショットのバーストを防ぐスキルまで持っている難敵。 シヴィア以外は射程やダメージ分類の都合で構成が崩れやすいので、そこを突くのが対処法となる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kalista",
+          "Kaisa",
+          "Zeri"
+        ],
+        "label": "機動力が高い",
+        "text": "スキルショットが主力となる性質上、的確に当てないと火力が出ない。 これらはレーン段階から既に一定の機動力を持ち、エズリアルのKiteにも付いていく手段が存在。 戦闘になった場合の対抗策が少なく、相手はこちらの火力をかわしながらダメージを出してくる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Sona",
+          "Taric",
+          "Janna",
+          "Soraka"
+        ],
+        "label": "ヒール型のエンチャンター",
+        "text": "レーン段階はスキルによるポークが基本で、オールインはある程度削ってからキルを狙う際に使う。 これらの相手はこまめなヒールやシールドでハラスを防がれ、削りきるより先に息切れしやすい。 ポークによる優位に立っていないとPush性能の低さ・ミニオンがいる際の殴り合いの弱さからファームも不利になる。 じわじわと差をつけられ、集団戦の頃には装備差をつけられがちな厄介な相手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rakan",
+          "Nautilus",
+          "Maokai"
+        ],
+        "label": "持続時間が長いCC持ち",
+        "text": "瞬間的なキャッチはEにより防げるが、連続でハードCCを使えるサポートには追撃を食らいがち。 特にこれらはCCスキルの確実性が高かったり、長期的にCCを発生させゾーニングを狙ってくるため不利がつく。 複数相手のDPSに欠ける分、シールドや耐久力で受けられる相手にダメージを吸われると押し負けてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Evelynn",
+          "Rengar",
+          "Kassadin",
+          "Akshan",
+          "Katarina"
+        ],
+        "label": "機動力やステルス性能の高いアサシン",
+        "text": "Eによる離脱は強力ながら、CDが長く連続で使うことは出来ない。 これらの相手はEにすら付いてくる機動力や、壁の無い場所でステルスから近づいてくることで逃げ性能を殺してくる。 主力がスキルショットなので機動力が高い相手には反撃もかわされやすく、総じて一方的に倒されがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Karma",
+          "Brand",
+          "Zyra",
+          "Lux"
+        ],
+        "label": "Pushが早いメイジsup",
+        "text": "EzはPush力が低い上に、Pushされている状況では対面への圧も無いなのが弱点。 その点メイジsup(特にミニオンを巻き込んでPushとハラスを同時に行うタイプ)と組めば自然にPushレーンで戦えて、 supと同じラインで敵へのポークを狙う形にできるため相性が良い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Bard"
+        ],
+        "label": "バード",
+        "text": "Qのスタンは1体までならミニオンも貫通。Ezも含め1stリコールまでが強いので、そこで差をつけることも不可能ではない。 更に遠距離からQでのファームが可能、Eの逃げもあることから留守番が得意なため、バードのローム中も隙を晒しづらい。 とはいえ、当然1vs2を長々と続けて悪影響が無い訳ではないので放置しすぎないようには注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Lulu",
+          "Taric",
+          "Thresh"
+        ],
+        "label": "([[Pyke]][[Nautilus]][[Blitzcrank]][[Sona]])/Pushが弱い",
+        "text": "Push性能の低いサポート。これらと組むと弱点が被ってしまい押しつけられやすい。 特にエンチャンターは元々生存能力の高いエズリアルに恩恵が薄く相性が悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

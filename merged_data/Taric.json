@@ -935,5 +935,109 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Taric#m38e6908",
+    "fetched_at": "2026-10-30T09:49:24+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Pantheon",
+          "Nautilus",
+          "Rell",
+          "Leona",
+          "Amumu"
+        ],
+        "label": "etc/キャッチャー・ダイバー系サポート",
+        "text": "仕掛けてきた相手をいなすのが得意な性質上、これらのこちらに飛び込んでくるタイプの対面に有利。 特に発動が遅いスキルでキャッチしたり、ダメージの出力が遅い相手はUltが間に合いやすいので勝率が高くなる。 飛び込んで来なかったとしても装備依存度が高めのタリックとしては、レーン段階をスキップ出来るのは有利に働く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Volibear",
+          "Briar",
+          "Sylas",
+          "Samira",
+          "Viego"
+        ],
+        "label": "etc/ダイバー・スカーミッシャー",
+        "text": "サポート以外でも、飛び込んでくるが離脱手段の乏しいダイバー・スカーミッシャーに有利。 概ね理由は同様で、飛び込んできたところを固めて袋だたきにすれば相手は為す術が無い。 特にWのARスケールにより、物理ダメージを主体とする相手全般に有利がつく。 上記以外の相手でも、該当する性質を持つチャンピオン全般へのカウンターとして働く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zeri",
+          "Vayne",
+          "Fiora",
+          "Lillia",
+          "Ekko"
+        ],
+        "label": "etc/機動力が高い",
+        "text": "逆に機動力が高く、ヒット&アウェイを可能とする相手は捕まえきれない。 殴れないとCDがやや長めなので、スキルを空ぶったところで再突入されてしまえば為す術無し。 Ultの完成が遅いのでバーストの高い相手には間に合わない場合も多く、総じて不利がつきがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Brand",
+          "Varus",
+          "Smolder",
+          "Taliyah",
+          "Karma"
+        ],
+        "label": "etc/射程が長い",
+        "text": "有効射程が短く、急接近も不可能なので距離を保って攻撃できる相手にはレーン・集団戦を問わず一方的なハラスを食らう。 いざとなれば緊急回避やCCによる反撃が可能な相手には逆にキルを稼がれかねない。 MRスケールが一切無いため、特にAPやハイブリッド型のダメージを出力できる相手が厳しい。 やはり上記以外でも、該当する性質を持つ相手に不利がつく。総じて有利・不利ははっきりしたタイプといえる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Vayne",
+          "Samira"
+        ],
+        "label": "機動力が高い",
+        "text": "機動力の高いキャリー。相手に接近する手段が豊富なのでEを当てやすい。 また飛び込むタイプのADCの場合、Ultによる無敵が集団戦の保険として強烈。 ただしタリック自身のエンゲージ性能は低いので、味方にエンゲージ手段があるかどうかの確認は必要。",
+        "has_caveat": true
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Varus",
+          "Ashe",
+          "KogMaw",
+          "Senna"
+        ],
+        "label": "自衛性能が低い",
+        "text": "ワーデンなので当然ではあるが、自衛性能が低いキャリーとの相性が良好。 エンゲージ耐性を得れば射程の長さとDPSの高さを存分に活用できる。 CCを持つADCヴァルスアッシュについてはタリックの弱点であるエンゲージ性能もカバー出来る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Zeri",
+          "Ezreal",
+          "Jhin"
+        ],
+        "label": "Push・ハラス",
+        "text": "Pushとハラスによりレーニングで優位を取りたいチャンピオン全般。 タリックはPushを補助する性能が皆無で、タワー下への圧も無いので噛み合いが悪い。 ゼリゼリについては機動力の高さからEとの相性は良いのだが、それ以外のタイミングでは単独でもKiteが可能。 エズリアルエズリアルも込みでKite補助が過剰になり、その分のリソースが無駄になりやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

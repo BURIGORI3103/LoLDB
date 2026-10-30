@@ -935,5 +935,101 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rakan#z15d33b6",
+    "fetched_at": "2026-10-30T09:49:14+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Nocturne",
+          "Vi",
+          "Naafiri",
+          "Akshan"
+        ],
+        "label": "etc/スカーミッシャー・アサシン",
+        "text": "ダメージの出力に接近が前提となるスカーミッシャーやアサシン全般。 2種類のCCとシールドによりPeel性能が高く、飛び込んで来たところを固めやすい。 無敵やスペルシールドでCC対策をする相手も、Ultの効果時間が長いお陰で空振りする心配が小さくしっかり捕まえられる。 ラカン本人も2種類のブリンクで逃げ性能が高く、張り付く性能が低めの相手には逃げやすい点から脆さの割にキルを与えづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Leona",
+          "Nautilus",
+          "Pyke"
+        ],
+        "label": "キャッチャー",
+        "text": "相方が捕まっても駆けつけてPeelを狙え、本人が捕まっても味方を足場に逃げられる。 本人もキャッチャーでありながらこれらのキャッチャー相手はどちらを狙われても凌ぎやすい。 集団戦においても、基本的に単体をキャッチしてくる相手なので捕まった味方に飛ぶと纏めてUltで一掃を狙いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Poppy",
+          "Taliyah"
+        ],
+        "label": "アンチブリンク",
+        "text": "W、Eがどちらも移動を伴うスキルである以上、釘付けやブリンクに反応するスキルに弱い。 頼みの機動力を失うと射程の短さと脆さもあって、前線に影響を与えることが出来なくなる。 対面にはポッピーポッピー以外はあまり来ないが、集団戦を行う際には該当するスキルの使用を見てから飛び込む意識を。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renata",
+          "Zilean",
+          "Janna"
+        ],
+        "label": "ピーラー・蘇生スキル",
+        "text": "本人が脆い分、ロングトレードになる前にスキルを叩き込んで離脱が基本。 必然オールイン系の動きになり、CDも短くないので透かされると長時間無力化される。 飛び込む方面のブリンクはWのみなので、集団戦でも入ったところを拒否されると再突入が難しくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Hwei",
+          "Seraphine",
+          "Ziggs",
+          "MissFortune"
+        ],
+        "label": "スキル射程が長い",
+        "text": "前線にEからW、Ultで仕掛けていくのが基本の流れで、キャッチを狙える距離が非常に長い。 その分キャリーからの距離が長くなり、殴れる時間が縮みやすいのが短所だがこれらは遠くからでも追撃を重ねられる。 射程が長いのでラカン側もスキルを吐ききった後にEで戻れる距離が長く、トレードを切り上げやすいのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Nilah",
+          "Zeri"
+        ],
+        "label": "機動力が高い",
+        "text": "射程こそ短めだったりMeleeだが、長期的な機動力の高いADCとも相性が良好。 対象指定で駆けつけるEにより、凄まじいスピードで移動を繰り返すこれらにもしっかりシールドをつけられる。 更にWとUltに繋ぐコンボも実質的に範囲が広まり、エンゲージしつつもキャリーが倒れるリスクを大きく低下させられる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xayah"
+        ],
+        "label": "ザヤ",
+        "text": "特殊な例にして、ストーリー的にも鉄板のパートナー。固有のシナジーによりシンプルに性能が高くなる。 リコールの共有により、ザヤザヤ側もギリギリまでタワーやミニオンを殴り、ゴールドを集めやすいのも利点。 ラカンは自分の側に引き寄せる形のエンゲージが得意なため、有効射程の短さも緩和。 AoEが豊富なザヤならば単独でも十分にPushが可能なので、ラカン側の短所もカバーしてくれる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

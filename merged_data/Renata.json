@@ -933,5 +933,109 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Renata%20Glasc#qb4804ee",
+    "fetched_at": "2026-10-30T09:49:15+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kayle",
+          "Warwick",
+          "MasterYi",
+          "Vayne",
+          "Kaisa"
+        ],
+        "label": "etc/AAが強く射程が短い",
+        "text": "相手のAAが強力なほどレナータのUltも実質的に強化されることになる。 特に射程の短い相手は接敵してきた時にカウンターで撃つUltが当たりやすく、戦力として逆用しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Alistar",
+          "Rell",
+          "Nautilus",
+          "Leona",
+          "Amumu"
+        ],
+        "label": "etc/オールイン型のタンクサポート",
+        "text": "Peelが強力なため、こちらに飛び込んでくるタイプのオールインに強い。 集団戦においても何かしらの役割を果たすには前線に出る必要があり、そこを狙ってハラス・キャッチしやすい。 Wの蘇生により、仮にキャリーがオールインを食らっても反撃で仕留めきれば有利なトレードに出来るのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zoe",
+          "Viktor",
+          "Taliyah",
+          "Xerath",
+          "Velkoz"
+        ],
+        "label": "etc/メイジ",
+        "text": "逆にAAが弱いメイジには不利。射程が長い分Ultが当てづらく、巻き込めてもまともなダメージ源にならない。 通常スキルの射程もメイジほど長くはなく、一方的に削られやすくレナータ側に出来ることがほとんど存在しない。 残留性のゾーニングスキルゾーイビクタータリヤに対しては、Ultを活かしたエンゲージが決まりづらいのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Milio",
+          "Senna",
+          "Seraphine",
+          "Soraka",
+          "Yuumi"
+        ],
+        "label": "etc/エンチャンター",
+        "text": "エンチャンター全般。WやUltを用いたトレードをシールドやサステインで拒否してくる。 結果として互いに集団戦にフォーカスを当てる形になりがちだが、その場合はシールド・回復のサポート手段が多い相手の方が影響力が大きくなる。 射程の長い相手はメイジと同じく一方的に削られやすい他、ユーミユーミはシンプルにUltが当たらず同士討ちを狙えないのもあって不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zeri"
+        ],
+        "label": "ゼリ",
+        "text": "特殊な例。ボットに来るADCでありながらメインの火力源はQで、AAは連発しても火花程度の威力。 メイジと同じくUltを当てても大したダメージにならず、またエンチャンターと組むことが多いのもあって二重に不利。 そもそも機動力が高いため、スキルを当てること自体が難しくレーン段階から圧をかけられずに育たれやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Draven",
+          "Samira",
+          "Vayne",
+          "Kaisa"
+        ],
+        "label": "短射程",
+        "text": "射程が短く、危険な位置まで出やすいADC。WのAS増加＋加速で追撃を補強、反撃にも保険をかけられる。 レーン段階が弱いキャリーについては豊富なPeel手段でCSを助けられるのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "KogMaw",
+          "Twitch",
+          "Jinx",
+          "MissFortune",
+          "Aphelios"
+        ],
+        "label": "自衛力が低い",
+        "text": "Peel性能の高さから、DPSは高いが自衛性能の低いADCと相性が良好。 シールドやフック、Ultによる拒否はもちろん、Wの時間稼ぎでキルを取り返せば蘇生に繋ぎやすい。 ミス・フォーチュンミス・フォーチュンについては、足止めが必要なUltとレナータのUltが相性抜群。",
+        "has_caveat": false
+      }
+    ]
   }
 }

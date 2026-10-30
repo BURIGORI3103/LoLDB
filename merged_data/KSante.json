@@ -945,5 +945,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/K%27Sante#m6e6fa13",
+    "fetched_at": "2026-10-30T09:48:56+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Quinn",
+          "Jayce"
+        ],
+        "label": "拒否をCCに依存するRanged",
+        "text": "射程差によるハラスを狙ってくるRangedのうち、CCで拒否を行うもの。 Wのアンストッパブルを拒否に合わせることでしっかり接近可能で、Rangedとしては射程が短い分だけ当てやすい。 オールアウトを防ぐ手段も特に無いのでトレードで有利を作った後、一気にキルまで持ち込む動きを狙いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Chogath",
+          "Ornn",
+          "Sion"
+        ],
+        "label": "etc/タンク",
+        "text": "一部を除くタンク。CCが少々頼り無い分、タイマンに強いスキル構成を持つのでレーン段階が有利。 発生が遅いスキルが主力の相手はEの機動力でかわし、いざという時もWで受け止めてから反撃・逃走を狙える。 集団戦でも相手のエンゲージをワーデンとして受け止めてから開戦が可能。DPSの乏しい相手が多いのでダメージ勝ちも狙いやすい。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gwen",
+          "Fiora",
+          "Vayne",
+          "Shen",
+          "Garen"
+        ],
+        "label": "etc/アンチタンク",
+        "text": "機動力が高めとはいえ、基本的にはタンク。割合やTrueダメージには弱い。 ならばとUltで入ろうにも相手の機動力も高いのでQが当たりづらく、効果的なトレードが出来るかとなると怪しいところ。 特にフィオラフィオラは主力スキルにCCが付属する上に発生の遅い点を狙ってパリィを決められる危険が非常に大きい。 シェンシェンは序盤は基本的に相手の殴り合いが強く、装備が整ってきた頃にはカ・サンテの得意とするタイマンに付き合って貰えない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Poppy",
+          "Singed",
+          "Cassiopeia",
+          "Taliyah"
+        ],
+        "label": "アンチブリンク",
+        "text": "ブリンクを多用するため、必然的にブリンク対策を持つ相手全般に弱い。 対面に来る相手ポッピーシンジドはそれぞれ割合ダメージや重傷により、カ・サンテの得意な展開を完全に封殺してくる。 集団戦でも基本的にブリンクに依存するため、他のレーンに出てくる相手も勝率が明らかに落ちる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

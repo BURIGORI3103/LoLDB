@@ -942,5 +942,68 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Cassiopeia#ced9694a",
+    "fetched_at": "2026-10-30T09:48:44+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Vex",
+          "Lissandra",
+          "Vladimir"
+        ],
+        "label": "短射程メイジ",
+        "text": "バトルメイジとしても最高峰のDPSにより、メイジ同士の殴り合いが非常に強い。 射程の短い相手なら互いに射程に入らずに過ごすのが難しいので有利がつき、特に序盤が弱い相手に勝率が高い。 例外としてマルザハールマルザハールはEの連射によるDPSをUltで封じられてしまう。 相手の射程が短いのは確かで、Ultの効果時間を凌げば圧倒的なDPSで競り勝てるので概ねイーブン。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sylas",
+          "Katarina",
+          "Diana",
+          "Irelia",
+          "Yone"
+        ],
+        "label": "etc/離脱の弱いスカーミッシャー・ダイバー",
+        "text": "ブリンクで入り、バーストを与えてブリンクか徒歩で引く形のトレードを得意とする対面。 相手の反転するタイミングでWを敷くことで、ブリンクの有無を問わず下がる足を鈍らせる。 バーストに欠ける分、DPSでは有利を取れるので総じてカウンターを決めやすく有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Velkoz",
+          "Syndra",
+          "Xerath",
+          "Taliyah"
+        ],
+        "label": "アーティラリーおよびそれに類するメイジ",
+        "text": "スキルの射程が短く、接近手段も乏しいので遠距離から一方的にハラスされると何も出来ない。 基本がQを当てるかWの上でEを連打する形のため、前振りとなるスキルが当たった瞬間に拒否された場合も厳しい。 いずれかの条件を満たす相手は高いDPSを活かすことが出来ないため、総じて不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Qiyana",
+          "Rengar",
+          "Khazix",
+          "Talon"
+        ],
+        "label": "([[Akali]])/ステルスアサシン",
+        "text": "DPSを対象指定のEに依存するため、ステルスで対象指定出来ない状態になると火力が出ない。 逃げ性能も悪く、耐久もメイジ相応なのでこれらのバーストを防ぐ手段に乏しく、中盤以降も常に警戒が必要。 一応アカリアカリはバーストの発生にややラグがあり、Wで接近を許さない動きは可能なので対面からは微不利程度。",
+        "has_caveat": false
+      }
+    ]
   }
 }

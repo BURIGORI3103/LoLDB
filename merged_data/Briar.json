@@ -946,5 +946,90 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Briar#j6b3de09",
+    "fetched_at": "2026-10-30T09:48:43+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "Diana",
+          "Naafiri",
+          "Irelia",
+          "Brand"
+        ],
+        "label": "etc/逃走・拒否が苦手",
+        "text": "AA主体、かつバーサークでステップによる回避が出来ないのでCCに弱い。 裏を返すと、これらのCCや逃げの弱い相手には高い追撃性能とDPSを押しつけやすい。 バーサーク中は多少スキルが直撃しても、殴り合えれば競り勝つだけのスペックは持つのでスノーボールしやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Shaco",
+          "Rengar"
+        ],
+        "label": "ステルス",
+        "text": "逃げ性能をステルスに依存する相手。Ultを当てれば真の視界を得るので逃がさず追い詰めることが出来る。 当たらなければ視界は当然得られないので、出来るだけ味方のCCに重ねるのが重要。 特にシャコシャコは単独ではQから撃ってもUltで透かされてしまうため、直撃させるか否かで結果が変わりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shen",
+          "Braum",
+          "Zac",
+          "Taric",
+          "Alistar"
+        ],
+        "label": "etc/ワーデン",
+        "text": "Ultは最初に当たった対象を強制的に狙う都合上、タンクにボディブロックされると最悪。 特にCCを持つ相手はバーサーク中は能動的な回避行動がQ、Wのブリンクしか無いのでカウンターを食らいやすい。 Eで解除すると今度は戦闘能力が落ち、再びWを使うとEのCD中はやはり自由に動けなくなってしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Cassiopeia",
+          "Singed",
+          "Taliyah",
+          "Poppy"
+        ],
+        "label": "アンチブリンク",
+        "text": "バーサーク中はスキルショットに自ら突っ込んで行く羽目になりがち。 これを回避する手段がQ、Wのブリンクなのだが、これらはそのブリンクを防いでくる。 結果としてスキルショットに当たりやすくなるだけでなく、ブリンク付きのスキルが使えないので戦闘能力も大幅に落ちる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xayah",
+          "Draven",
+          "Vayne",
+          "Nilah"
+        ],
+        "label": "カウンター型のADC",
+        "text": "概ね理由は同様。直線的に殴りかかる以外の行動ができなくなるので、短射程だがインファイトの強いADCが苦手。 バーサーク中の融通のきかなさを利用してKiteされ、ヴェインヴェインは壁ドンを容易に決められてしまう。 ニーラニーラはKiteされる訳ではないがインファイトが強く、AA無効で火力源を無効化されてしまうのが辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rammus"
+        ],
+        "label": "タウント持ち",
+        "text": "ブライアーがバーサーク状態の時、タウントをかけられると攻撃対象がそちらで固定されてしまう。 QやEを残していない限り攻撃対象を変更できず、固い相手を殴り続けてしまうため非常にやりづらい。 特にを持つチャンピオンは天敵。ラムス相手はアンチAA性能も有り厳しい相手と言える。",
+        "has_caveat": false
+      }
+    ]
   }
 }

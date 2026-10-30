@@ -943,5 +943,74 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kayn#adad1dc7",
+    "fetched_at": "2026-10-30T09:48:59+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sion",
+          "Chogath"
+        ],
+        "label": "HPタンクtop",
+        "text": "赤ケインはHPの高い敵が多いほど強い。特に対面がタンクなら持ち前のカウンターJG性能で積極的に赤オーブを貯めることもできる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo"
+        ],
+        "label": "(bot)",
+        "text": "赤ケインは多くの敵をQやWに巻き込める団子状のファイトが得意。集団戦がそういった形になりやすくかつ赤オーブを貯めやすい、Melee過多の構成に強い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "Graves",
+          "MasterYi"
+        ],
+        "label": "機動力の高いDPSジャングラー",
+        "text": "DPSと機動力を両立したジャングラー。序盤のケインもCCが無い以上、殴り合いでは基本勝てない。 機動力も高く、その気になれば壁を越えるブリンクも可能なのでケインでも逃げ切れない可能性もある。 変身後でも、ダーキンはスキルにラグがあるため回避されやすく、影の暗殺者のバーストを受けきる・かわす手段があり総じて不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fiddlesticks",
+          "Vi",
+          "Malzahar",
+          "Lissandra"
+        ],
+        "label": "（[[Poppy]]）/確定・長時間CC",
+        "text": "アサシンである影の暗殺者はもちろん、ダーキンも耐久性能は敵にダメージを与えて得るのが前提。 必然的に確実性が高いハードCCを食らうと脆い状態で停止してしまうことになり不利がつく。 Ultに強めに依存するジャングラーフィドルスティックスヴァイについては、序盤のケインでは弱い時間帯を突くのが難しいのも辛い。 ポッピーポッピーは確実なCCという訳ではないのだが、主力スキルにブリンクが付く都合上、接近されると為す術無し。 壁に潜って逃げようとしてもEで壁ドンを食らう。壁に潜り始めた瞬間に食らうとほぼ確実にスタンに繋がる厄介なカウンター。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Aphelios",
+          "Jinx",
+          "Draven"
+        ],
+        "label": "＋エンチャンター/高い単体DPS＋エンチャンター",
+        "text": "ダーキンはDPSに耐えきれず、影の暗殺者はエンチャンターに火力を弾かれる。 片方だけならばどうとでもなるが、組み合わさるとケインでは手出し出来なくなる可能性が高い。 ヴェインヴェインについてはEで壁を抜けている間にEを食らうと、引きずり出された挙句壁ドンされるのも辛い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

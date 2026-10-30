@@ -942,5 +942,79 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kled#c709d3d6",
+    "fetched_at": "2026-10-30T09:49:00+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nasus",
+          "Urgot",
+          "DrMundo",
+          "Olaf",
+          "Volibear"
+        ],
+        "label": "拒否の少ないジャガーノート・タンク",
+        "text": "Eで接近、Qでプル、Wで殴りかかる動きは、機動力の低いジャガーノートやタンクによく刺さる。 Wの4発目とUltに割合ダメージがあるのでコンスタントに削りやすく、キルを稼ぎやすい。 DPS型の相手が多く、それらには殴り合いを挑んでもデスの前に再騎乗が間に合うのも含め全体的に有利。 ダイブ耐性が低めの相手には、スカールを利用したダイブの強さも有利に働きやすいのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Akali",
+          "Rengar"
+        ],
+        "label": "対面に来るスカーミッシャー・アサシン",
+        "text": "2段階ブリンクが可能なEの追撃性能と殴り合いの強さ、そして瞬時のバーストを防ぐスカールによりトレードが有利。 アカリアカリについては煙幕で消えられてもQが当たれば視界を取れ、そのまま殴り抜くことが出来る。 ただしヨネヨネはQ（ブリンク）やEにより、至近距離からでもクレッドのQ・Eをかわしやすい分で概ねイーブン。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fiora",
+          "KSante",
+          "Warwick",
+          "Udyr"
+        ],
+        "label": "CC無効",
+        "text": "Qのプルを決めつつ殴りかかるのがトレードの基本だが、引き寄せる瞬間が非常に分かりやすい。 CC無効を合わせられてしまうと有利な時間が減り、反撃を許してしまう。 逃げ性能が低いので対面・ジャングラーを問わず、CCを無効にする相手は基本的には苦手。 例外としてノクターンノクターンは序盤の影響力が低く、クレッドの強いタイミングで干渉が難しい。 更にダメージの出し方がDPS型でパッシブの再騎乗が間に合えば殴り勝てるため、むしろ有利がついている。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shen",
+          "Jax",
+          "Malphite"
+        ],
+        "label": "アンチAA",
+        "text": "トレードの強さはWの乗ったAAにも強く依存する。必然的にAAを回避したり、ASを低下させてくる相手は苦手。 レーン段階からのスノーボールが難しいが、かといってレイトスケールも相手の方が勝る。総じて動きづらい厄介な相手。 ティーモティーモはブラインドを持つが、拒否性能の低さがクレッドに有利に働く分でパッチごとの変動が見られる。 概ね微不利程度のスキルマッチアップという認識でいいだろう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Gwen",
+          "Kennen",
+          "Karma"
+        ],
+        "label": "逃げ手段のあるRanged、およびそれに類する相手",
+        "text": "Eで接近、Qを当てて殴りかかる動きを防ぐ手段のある相手。引っ張るまでに時間がかかるので逃げ切られやすい。 レイトスケールが大きい相手が多いので、レーン段階をなあなあで過ごしても結局相手の方が強くなる。 降車後の再騎乗には脆い状態で敵チャンピオンを殴ることが重要だが、Ranged相手はそれがままならないのもあって不利がつく。",
+        "has_caveat": false
+      }
+    ]
   }
 }

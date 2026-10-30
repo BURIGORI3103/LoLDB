@@ -939,5 +939,109 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Xayah#r5852c65",
+    "fetched_at": "2026-10-30T09:49:32+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Samira",
+          "Kaisa",
+          "Lucian",
+          "Vayne"
+        ],
+        "label": "短射程",
+        "text": "射程の短い対面。相手は火力を出すにはエンゲージを必要とするが、ザヤは接近戦が非常に得意。 予め羽を設置出来ているならもちろん、そうでなくともWでKiteしつつ羽をバラ撒き、一気に引き寄せ大ダメージを狙える。 サポートにエンゲージを得意とするヴァンガードレオナノーチラスアリスターを置くことが多く、そちらにも対象指定不可＋羽のカウンターが刺さる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Katarina",
+          "Nocturne",
+          "Vi",
+          "MasterYi",
+          "Vex"
+        ],
+        "label": "etc/離脱が弱いダイバー・アサシン",
+        "text": "概ね理由は同様。Ultで相手のバーストを凌ぎ、追撃も離脱もEで反撃を決める。 特に確実性が高いが単体しか狙えない相手に強く、対象指定すらかわせるのでデスの危険が小さい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nidalee",
+          "Gangplank",
+          "Zoe"
+        ],
+        "label": "長射程バースト",
+        "text": "射程がザヤより長く、かつスキル1つで高いバーストを発揮する相手。 Wは相手を殴らないと加速しないので機動力が低く、Ultも一瞬で発生するバーストに対しては合わせづらい。 仮に合わせて回避に成功しても、相手は射程に入らないままザヤを狙う手段があるので不利な時間が長く一方的に圧を受けがち。 ゾーイゾーイは時間差のあるコンボでバーストを出すタイプだが、Eの効果時間がザヤのUltの無敵時間より長く、結局回避できずに終わる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ezreal",
+          "Caitlyn",
+          "Varus",
+          "Xerath",
+          "Velkoz"
+        ],
+        "label": "etc/長射程",
+        "text": "射程が長く、羽の範囲に入らずにハラスを行える対面。前述の通り入ってこない相手には圧が無いので不利。 集団戦の段階でも基本的に射程に入ってこないのでザヤのダメージもCCも期待出来ず、対応が味方頼りになりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vladimir",
+          "Graves",
+          "Kindred",
+          "Karthus"
+        ],
+        "label": "Eを躱せる中射程DPS",
+        "text": "中射程での殴り合いを得意とする相手のうち、Eのバースト＋CCをかわす・透かす手段がある相手。 得意分野が同様だと、Eのバースト＋CCにチャンピオンパワーを割いている分で不利がつく。 カーサスカーサスについてはかわす訳ではなく、実際にキルまで持ち込みやすいのだがパッシブでデス後も戦線に残ってくる。 こちらはカーサスを倒すのに羽を使っている為、再びダメージを出すには羽を貯め直す必要が出て、最終的な集団戦のDPSで負けやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Pyke",
+          "Thresh",
+          "Rakan"
+        ],
+        "label": "キャッチャー",
+        "text": "Eの射程内に相手が入ってこないと圧が低い。逆に言えば射程内に相手を持ってくるキャッチャーと相性が良好。 羽を仕掛けたところにフックで持ってくれば、スネア＋バーストを重ねて一気にキルラインまで持ってこれる。 ラカンラカンはフックではないが、ペアによるバフを持ち、キャッチャーには違い無いので相性良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zilean",
+          "Lulu",
+          "Brand",
+          "Soraka"
+        ],
+        "label": "エンゲージが苦手",
+        "text": "エンゲージ性能の低いサポート全般。射程外への圧の低さをカバー出来ず、ザヤの強みを押しつけられない。 レーン段階は射程外から一方的にハラスを受け続けることになりやすく、総じて差をつけられがち。 仮に他レーンがエンゲージを持っていてもザヤは中射程である程度殴らないと火力を発揮できないため、集団戦の難易度も上がる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

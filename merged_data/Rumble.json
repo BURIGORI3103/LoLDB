@@ -940,5 +940,55 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rumble#q5c5f6c5",
+    "fetched_at": "2026-10-30T09:49:16+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Teemo",
+          "Shen",
+          "Malphite",
+          "Jax",
+          "Akali"
+        ],
+        "label": "etc/アンチAA",
+        "text": "AAに依存しないスキルファイターのため、AAに強い要素は基本的に無駄になる。 集団戦におけるDPSの高さもこれらと比較して段違いであり、Pushも十分に早いのでゲーム全体を通して有利。 DPSの低い相手はWのシールドを短いCDで使用できる点も強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Poppy",
+          "DrMundo",
+          "Vladimir"
+        ],
+        "label": "バーストが低い",
+        "text": "バーストが低い対面も、Wのシールドが刺さるのでトレード有利。 サステインの高い相手も無理なく負傷を積めるので対策しやすい。 ランブルの短所の一つである逃げ性能の低さも、これらはエンゲージが得意でないので十分にカバー可能。 Pushも早く、主導権を握ったまま手放しづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gwen",
+          "Yone",
+          "Yasuo",
+          "Tryndamere",
+          "Irelia"
+        ],
+        "label": "一部を除くスカーミッシャー",
+        "text": "ハードCCを持たないため、これらの機動力が高いスカーミッシャーを捕まえられない。 有利なタイミングはもちろん、不利なタイミングにも逃げ性能の低さを的確に突かれてしまいがち。 相手に仕掛けの主導権を握られるとヒートゲージの管理が難しくなり、弱いタイミングを相手にコントロールされやすい。 そうなれば更に仕掛けられるタイミングを増やされ、加速度的に差を作られてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

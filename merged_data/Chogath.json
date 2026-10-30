@@ -1357,5 +1357,51 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Cho%27Gath#f7da1e80",
+    "fetched_at": "2026-10-30T09:48:45+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "MonkeyKing"
+        ],
+        "label": "AR特化",
+        "text": "APタンクということで、こういったARにスペックを割いたチャンピオンに対しては有利かつ安定性の高いレーニングができる。 近づいたところをWでサイレンス、逃げスキルをはけない間にQで止めてトレードという流れを狙う。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gwen",
+          "Fiora",
+          "Vayne",
+          "Mordekaiser"
+        ],
+        "label": "アンチタンク",
+        "text": "ステータスや戦闘における強みは概ね普通のタンクと同じ。やはり割合やTrueダメージに弱い。 特にこれらの相手はQを回避したり無効化してくるため、トレードを挑むことすら難しくなる。 モルデカイザーモルデカイザーはQこそ当たるものの、こちらもEに当たりやすく不利なロングトレードを挑まれる。 レイトスケールが高い相手も多く、手をこまねいている間にキャリーが完成してしまいがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "DrMundo",
+          "KSante",
+          "Ornn"
+        ],
+        "label": "CC無効を持つファイター・タンク",
+        "text": "トレード性能をQの命中に依存するため、ノックアップを無効化されると一気に厳しくなる。 それぞれレーン維持性能も高く、Ultを覚えた瞬間のバーストでキルまで届きづらい点も厄介。 相手のスケールを許しやすく、集団戦での影響力も相手の方が安定しているため勝率不利。 ※LoLalytics 12.21-13.3 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

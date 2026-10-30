@@ -940,5 +940,89 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ornn#ced9694a",
+    "fetched_at": "2026-10-30T09:49:12+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Jayce",
+          "Teemo",
+          "Quinn"
+        ],
+        "label": "瞬間的な機動力の低いRanged",
+        "text": "タンクだがQEの接近、Wによる拒否のキャンセル。そして十分なダメージによりRanged相手もトレードが可能。 UltのGank合わせもあるので相手が有利を取りたい筈のレーン段階から積極的に動きやすく、総じて勝率優位。 基本的にトップがRangedの場合はフロントが不足しがちなので真正面からの集団戦も有利になる。集団戦の開始もオーンの得意分野。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Chogath"
+        ],
+        "label": "APタンク",
+        "text": "W本体と脆弱、2種類の割合ダメージによりタンク同士のダメージ出力はオーンの方が高い。 序盤はハラスを基礎Healthで耐えつつ、必要に応じてWのCC無効も活かしてトレードが可能。 集団戦でも相手は継続的なCCやエンゲージ性能に短所があり、オーンは両立するので存在感で上回れる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Poppy",
+          "Singed"
+        ],
+        "label": "アンチブリンクの前衛",
+        "text": "EにせよUltにせよ、CCの発生にはダッシュが必要。釘付けなどで封じられると出来ることが途端に減る。 双方がダメージの出力にも重要なスキルなためにトレードも不利、機動力にも雲泥の差が出てレーン段階から不利。 一方でレーンが異なり、エンゲージ用のUltを弾くには射程が足りない相手カシオペアについては明確な不利はつかない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fiora",
+          "Camille",
+          "Yone",
+          "Irelia",
+          "Ambessa"
+        ],
+        "label": "スカーミッシャー",
+        "text": "機動力の高いスカーミッシャー相手はスキルがまともに当たらず、逃げもワンテンポ遅れるためトレード不利。 遠くからCSだけ取る選択肢があるのでタンクとしてはスケールを待てる部類ではあるが、原則として不利がつく。 フィオラフィオラについてはCCの発生が遅い点を突かれてパリィを決められやすいのも厳しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Samira",
+          "MasterYi",
+          "Gwen"
+        ],
+        "label": "etc/味方のエンゲージを求める",
+        "text": "確実性が高く、数値も優秀なDPSやバーストを持つが、エンゲージ性能が低く射程に難のあるチャンピオン全般。 オーンのUltは遠距離からのエンゲージを可能とし、その後の拘束も得意なので総じて相性が良い。 スノーボーラーが多いため、終盤にステータスボーナスを与えられるパッシブも有効に働きやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sejuani",
+          "Ivern",
+          "Zac",
+          "Nautilus"
+        ],
+        "label": "etc/ダメージ不足に注意",
+        "text": "オーンは非常に手堅いレーニングとエンゲージ性能、スケールのよさで多くの構成に入る余地がある。 一方で、AD・APレシオ共に貧弱で、ダメージはほぼ割合部分頼みのため余りにもタンクやコントローラー過剰な構成だとダメージが足りず押し負ける可能性がある。 特に、CCで固めてレーナーと殴るタイプのAPジャングラーは、良いgankが刺さってもダメージが足りず逃げ切られるリスクも高まり、ややアンチシナジー気味ではある。 とはいえ、それらのジャングラーでもmid、botレーンのスノーボールが期待できるならそちら側に注力してもらい、topはウィークサイドとしてセーフファームを狙うという選択肢も十分に現実的である。 オーンは安定したtop先出しチャンピオンとして非常に優れているが、チーム全体のダメージバランスはどうか、理想的な当たり方はどのようなものかあるいは当たらずポークやスプリットで駆け引きする構成になりそうか、相手のサイドレーンの圧力に対抗する手段はあるかなどを賢く考えて使いたい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

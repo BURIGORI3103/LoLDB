@@ -940,5 +940,84 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kai%27Sa#nfcdf3c6",
+    "fetched_at": "2026-10-30T09:48:57+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Jhin",
+          "Ezreal",
+          "Xerath",
+          "Lux",
+          "Pyke"
+        ],
+        "label": "etc/スキルショットに依存",
+        "text": "スキルショットの精度が重要なADCおよびサポート全般。 Eの加速でスキルショットを回避、接近すれば得意とするオールインに持ち込める。 基本的にスキルショットが軸の相手は射程が長く、オールインが弱い傾向があるので主導権を握りやすい。 逃げ性能も原則として控えめなため、レーンで優位を取ればUltの追撃力によりスノーボールを狙える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xayah",
+          "Nilah",
+          "Draven",
+          "Samira"
+        ],
+        "label": "オールインが強い",
+        "text": "カイ＝サ以上にオールインが強い対面。射程の短さから逆にオールインを狙われやすい。 CCが無く逃げ手段も基本的に加速のみなため、一度主導権を握られると取り返すのが難しい。 逆に相手もスノーボーラーが多く、流れに乗せると止めようがなくなる危険も。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rakan",
+          "Braum",
+          "Renata",
+          "Janna",
+          "Lulu"
+        ],
+        "label": "ピーラー",
+        "text": "有効射程が短く、超遠距離から仕掛けられるUltも結局は懐に潜り込む。 必然的にそこで固められると防御ステータスの低さもあって容易にデスしてしまう。 集団戦においてもダメージを出すには接近が必要な以上、繊細な立ち回りを要求される羽目に。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Maokai",
+          "Rell",
+          "Leona",
+          "Alistar"
+        ],
+        "label": "エンゲージ",
+        "text": "エンゲージ手段を持つキャッチャー系のサポート全般。 カイ＝サの短所である接近手段を提供してくれる。機動力の高さによりUltを覚える前も合わせやすい。 CCが豊富なので序盤からパッシブのスタックを貯められるため、火力面でも補助してくれる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shaco",
+          "Yuumi",
+          "Braum",
+          "Lulu",
+          "Milio"
+        ],
+        "label": "etc/ピーラー",
+        "text": "エンゲージ手段の乏しい、エンチャンターを中心としたピーラー全般。 射程が短いので射程外から一方的にハラスを受けやすく、オールインが仕掛けられないのでジワジワ負けが嵩む。 パッシブについても能動的に使えるCCが少なく、スタックが貯まりづらいので互いに長所を活かしづらい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

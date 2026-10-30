@@ -942,5 +942,45 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Nunu#va37e6e5",
+    "fetched_at": "2026-10-30T09:49:11+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Maokai",
+          "Zac",
+          "Amumu",
+          "Udyr",
+          "Lillia",
+          "Nocturne"
+        ],
+        "label": "([[Shyvana]][[Vi]])",
+        "text": "出足の遅いJG全般。 J4は相手が動けない序盤にGankを繰り返して大きな差をつけるのが得意で、エンゲージ役としては失速しないのでそのまま試合を畳むのも得意なので有利がつく。 特にJ4が中盤以降タイマン弱いという弱点を突いてこないタンク系の相手に有利が目立つ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Karthus",
+          "MasterYi",
+          "Viego",
+          "Nidalee",
+          "Kindred"
+        ],
+        "label": "([[Talon]][[Graves]])",
+        "text": "J4はGank性能は高いがタイマン性能は序盤並程度でそこから落ちていき、こういったキャリー系JGとのタイマンは基本的に不利。 なので、カウンターJGやカウンターGankで同数戦を狙われると、満足な差をつけれないことが多い。 ※LoLalytics 13.1-13.6 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

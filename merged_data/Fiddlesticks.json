@@ -941,5 +941,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Fiddlesticks#u4f61980",
+    "fetched_at": "2026-10-30T09:48:49+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Khazix",
+          "Akali",
+          "Katarina",
+          "Samira"
+        ],
+        "label": "etc/CCに弱いスカーミッシャー・アサシン",
+        "text": "確実性の高いCCを持つので、こちらに飛び込んでくるスカーミッシャーやアサシンに有利。 QのCD中でもEを中心で当てればサイレンスが付くので、特に詠唱に火力・耐久を依存する相手に勝率が高い。 アカリアカリについては煙幕で消えてもWのドレインは使用可能、吸収が止まらないのも強み。 ジャングラーは遭遇戦に弱い性質から入られる場合も多いが、その際もQを使って逃げられるので不利はつかない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Seraphine",
+          "Yuumi",
+          "Sona",
+          "Milio"
+        ],
+        "label": "etc/エンチャンター",
+        "text": "耐久が低く、視界を取るスキルも持たないエンチャンター全般。 視界確保が苦手なので、他のサポート相手よりも相手の視界が無い場所で待ち伏せてUltを刺しやすい。 エンチャンターは味方キャリーの傍で構える形になりがちで、Ultに巻き込みマルチキルを狙いやすいのもポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Maokai",
+          "Xerath",
+          "Ashe",
+          "Pyke"
+        ],
+        "label": "視界確保",
+        "text": "視界を確保されている状態ではUltの脅威が大きく低下する。 ワードを置かれるだけならパッシブで除去できるが、これらはワードに依存しない視界確保手段を持つので不利がつく。 Wの詠唱中にそれを停止させるCCもあるので耐久の保障も効かず、逆にこちらが奇襲される危険も増える。 同じくタンクサポートアリスターレルレオナも単独では潰しきれないので視界確保を咎めづらく、全体的に不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Olaf",
+          "Gangplank"
+        ],
+        "label": "（[[Karthus]]）/CC無効・解除",
+        "text": "防御ステータスは貧弱で、如何に先手を取ってCCを広範囲にかけつつDPSを出すかが勝負。 必然、そもそもCCを無効化したり解除される相手には勝ちパターンを潰され、デスに繋がりがち。 カーサスカーサスはCCを無効にする訳ではないがデスした後もDPSを出されてしまう。 Wで足が止まりやすいフィドルはQの連打やWのMR低下をモロに食らい、オブジェクトに繋げられなくなりやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

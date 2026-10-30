@@ -1778,5 +1778,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Jayce#i4ecff94",
+    "fetched_at": "2026-10-30T09:48:55+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Singed",
+          "Darius",
+          "Jax",
+          "Gwen"
+        ],
+        "label": "追撃性能が低めのジャガーノート、スカーミッシャー",
+        "text": "距離を取ってハラス、接近されたらすかさずMeleeEで拒否の基本的な動きが刺さりやすい相手。 遠距離攻撃手段が無い相手は一方的に削りやすく、ジェイスの有利な展開に持ち込みやすい。 スカーミッシャーについてはレイトスケールの高い相手が多い分、序盤に転ばせるとかなり優位になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Teemo",
+          "Kayle",
+          "Vayne"
+        ],
+        "label": "トップRanged",
+        "text": "MeleeQを絡めたバーストを持つため、同じRanged相手でも序盤の有利を得やすい。 序盤に転ばせれば必然的に後半まで影響を引きずらせることが可能で、全体的に有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sejuani",
+          "KSante",
+          "Sion",
+          "Malphite",
+          "Poppy",
+          "Ornn"
+        ],
+        "label": "タンク",
+        "text": "ジェイスは脅威ビルドが主流でダメージ出力がバースト型なので、純タンクがスケールしてくるとキルまで持っていくのは困難。 追う手段を複数持つ相手にはMeleeEのみでは拒否しきらず、キルプレッシャーを受ける側になることが多い。 集団戦では、ジェイスがポークをする前に積極的にエンゲージしジェイスの苦手な大規模なオールインファイトを誘発してくるので、そこでも影響力において差がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yorick",
+          "Nasus",
+          "Irelia"
+        ],
+        "label": "追撃性能の高いジャガーノート、スカーミッシャー",
+        "text": "MeleeEだけで拒否しきれない相手には逃げ切れず、殴り合いになると元のステータスの低さから打ち負けがち。 ヨリックヨリックは壁、ナサスナサスは長時間のスローによりEで弾いても再び追いつかれてしまう。 相手も集団戦は苦手な場合も多いが、普通にタイマンで負ける以上Splitで勝てず、動きの幅が狭くなる。 ※LoLalytics 12.23-13.5 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

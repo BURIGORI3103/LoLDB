@@ -1356,5 +1356,119 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Vayne#ced9694a",
+    "fetched_at": "2026-10-30T09:49:28+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Garen",
+          "Darius",
+          "Rammus",
+          "Leona",
+          "Alistar"
+        ],
+        "label": "etc/接近手段が乏しいMelee",
+        "text": "レーンを問わず、基本的には遠距離攻撃手段が乏しいMelee相手に有利。 QのブリンクとEのノックバックにより、接近手段が1つまでの相手は比較的簡単にKiteが決まる。 一方的に殴れる限りはWの割合Trueダメージでタンクだろうとあっさり溶かせる。 TrueダメージなのでAR・MRの増加ラムスレオナやダメージ軽減アリスターも貫通出来る。 ●ボット運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ezreal",
+          "Sivir",
+          "Ziggs",
+          "Mel",
+          "Xerath"
+        ],
+        "label": "etc/スキルショット",
+        "text": "CDが短く、マナコストも軽いQでスキルショットを回避するのは非常に得意。 基本的にレーン段階で差をつけられすぎなければDPSが非常に高くなるので逆転が可能。 ファームの早い相手は殴りかかってもミニオン差で競り負けるので、トレードはあくまで牽制・Gank合わせに留めたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Taliyah",
+          "Cassiopeia",
+          "Anivia",
+          "Azir",
+          "Veigar"
+        ],
+        "label": "etc/アンチブリンク",
+        "text": "Ultの発動中はステルスも含めて、Qにより位置調整をしつつスキルドッジしながら殴るのが基本。 必然的にブリンクを封じられる釘付けや、範囲の広い移動不能CCを持つ相手には機動力の高さを活かせない。 ダッシュが壁を越えられないため、壁の生成アニビアアジールにも幅が広いと妨害されやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Quinn",
+          "Jayce",
+          "Caitlyn",
+          "Senna",
+          "Aphelios"
+        ],
+        "label": "etc/長射程",
+        "text": "AA以上の距離に影響を及ぼせないので、必然的に自分よりも射程の長い相手に不利。 トップ運用の場合はサポートが不在な都合、殴り合いの弱い時間に接近手段を持つRangedにも弱い。 ヴェインの弱い序盤に徹底的に腐らせられたり、逆にスケールがヴェイン以上に良い相手が多く全体的に不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fiddlesticks",
+          "Annie",
+          "TwistedFate",
+          "Nasus",
+          "Malphite"
+        ],
+        "label": "etc/対象指定CC",
+        "text": "機動力でスキルをかわす前提のステータスだが、対象指定スキルは流石に回避不能。 所詮はADCなので一度CCを食らえばそのままデスに繋がりやすく、またスキルの射程もヴェインのAAより長い。 移動不能CCで無い場合も、効果時間が長いナサスマルファイト場合は一度拒否しても追いつかれて倒されてしまう。 トップレーナーの2体はAS低下も備えており、ADよりもASに依存するヴェインでは火力の低下も著しい悪影響を受ける。 ●トップ運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Teemo"
+        ],
+        "label": "ティーモ",
+        "text": "マルファイトマルファイトと並ぶ最悪のカウンター。ヴェインと射程が然程変わらず、E付きのAAで殴られる。 オールインしようにもQのブラインドを食らえばE以外のスキルが実質無力化されてしまい、逆に一方的に殴られる。 更に仮に上手く壁ドンを決めたとしても、退路にキノコを置かれていたら追撃のしようも無くそれまでと全てにおいて噛み合いが悪い。 そもそも耐久性能が劣悪なヴェインではE付きのAAやキノコを単発で食らっただけでも普通に痛く、ほぼ全てのパッチでワースト級の勝率になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yuumi",
+          "Milio",
+          "Janna",
+          "Soraka"
+        ],
+        "label": "エンチャンター",
+        "text": "ヴェインの最大の難所はいかにレーンを耐えるか。苦しいレーン戦をシールドや回復で耐えさせつつ、後々ヴェインが暴れ出す時に追従して支援できるエンチャンターとの相性が良い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Taric",
+          "Alistar"
+        ],
+        "label": "回復持ちのワーデン",
+        "text": "上と同じ理由で、回復を持ち受けが強いタンクSUPも相性がいい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

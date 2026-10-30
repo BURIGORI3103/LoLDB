@@ -1352,5 +1352,69 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Galio#ced9694a",
+    "fetched_at": "2026-10-30T09:48:50+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Akali",
+          "Katarina",
+          "Diana",
+          "Fizz"
+        ],
+        "label": "APアサシン",
+        "text": "APアサシン全般。特にダメージを出すのに下準備が必要だったり時間のかかるMeleeに有利。 魔法ダメージを弾くシールドでトレードに有利、ロームにもUltで駆けつけてカウンターが可能。 集団戦ではCCにより味方を守り、詠唱を見たらW、Eのどちらでも解除が可能。 アカリアカリについては煙幕をタウントで実質無効化できるのも重要なポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Talon",
+          "Zed",
+          "Yone",
+          "Qiyana"
+        ],
+        "label": "ADアサシン",
+        "text": "対面に来るADアサシン。ARはマークスマン並でスキルのスケールにもARは皆無。 トレードでは基本的に不利、かといってセーフティに行くとロームが得意な相手が多いのが辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Anivia",
+          "AurelionSol",
+          "Veigar",
+          "Swain",
+          "Taliyah"
+        ],
+        "label": "ゾーンコントロールメイジ",
+        "text": "ADほどに明確に不利な訳ではなく、パッチにも左右されるがゾーンコントロールを得意とする相手は基本苦手。 トレードには接近が必要で離脱手段が乏しい為、拒否されるとAP相手だとしてもそもそも一方的にダメージを受ける。 ロームしようとしても相手のスケールが大きいためリスクが大きく、総じて勝率が控えめに出る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Briar",
+          "MasterYi",
+          "Diana",
+          "Nilah"
+        ],
+        "label": "etc/スカーミッシャー・ダイバー",
+        "text": "接近・奇襲が得意なスカーミッシャーやダイバー全般。 これらが相手の真っ只中に飛び込んだところをUltで守りつつ参戦できるので相性が良好。 逆にガリオに不足しがちなDPSもこれらは保障してくれるため、互いに短所もカバーしやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

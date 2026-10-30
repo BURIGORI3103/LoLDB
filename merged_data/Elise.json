@@ -1359,5 +1359,40 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Elise#u599b8ee",
+    "fetched_at": "2026-10-30T09:48:48+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Belveth",
+          "Viego",
+          "Kindred"
+        ],
+        "label": "スカーミッシャー・ダイバー",
+        "text": "硬さが不足しがちなキャリー系のジャングラー。奇襲に成功すればそのままキルに繋ぎやすい。 Gank性能でも圧倒的にエリスが上回るため優位を築きやすく、また中盤からもGank性能については然程伸びない。 序盤に築いた有利をそのまま逆転されずに押し切りやすく、総じて有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Amumu",
+          "Zac",
+          "Sejuani"
+        ],
+        "label": "Ultが強力なタンク",
+        "text": "Ultを習得してからGankを狙ってくるCC型のタンクジャングラー。 序盤こそ有利を築けるが、習得後のGank性能はエリスと同等以上でレーンへの圧が高い。 エリスはAoEが貧相かつバーストもタンクを落とせるほどではないので、同数戦でも不利がつき存在感を失いがち。 更にエンゲージも得意なのでキャッチアップを狙う前に集団戦で当たられやすく、逆転を許しやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

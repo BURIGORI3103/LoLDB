@@ -941,5 +941,110 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Lucian#uf1d629f",
+    "fetched_at": "2026-10-30T09:49:04+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Twitch",
+          "Varus",
+          "Jinx"
+        ],
+        "label": "咄嗟の逃げ手段を持たない",
+        "text": "ルシアンのEスタートのコンボから逃げる手段が無く、殴り合いもルシアンより弱いADC。 特にスキルショットにレーンでのハラス性能を依存する相手はEで透かしつつ挑めるので有利がつく。 レーン段階から差をつければ、後半のスケールが高い相手が多いので後半まで悪影響を与えられる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Velkoz",
+          "Lux",
+          "Xerath",
+          "Brand"
+        ],
+        "label": "スキルショットに依存するメイジサポート",
+        "text": "概ね理由は同じ。メイジサポートはADC以上にスキルショットに依存しやすいので有利。 レーン段階で有利を作れなかったメイジサポートの影響力は急速に低下する。 視界で優位を取れると待ち伏せからの奇襲で溶かしやすくなるので、有利を広げるのも容易。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xayah",
+          "Kaisa",
+          "Draven"
+        ],
+        "label": "オールインが強いADC",
+        "text": "ルシアン以上に序盤のオールインが強いインファイト型のADC。 ザヤザヤについては射程が短い都合、相手の羽が設置された内側に入りやすいのが響く。 いずれにせよ得意とする筈の序盤のファイトで不利を背負うため、終盤に向けて差が生まれる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Janna",
+          "Lulu",
+          "Rell",
+          "Alistar",
+          "Rakan"
+        ],
+        "label": "ピーラー",
+        "text": "射程の短さから、基本的にどこかしらで仕掛けなければジリ貧になる。 必然的にそこで確実性の高いPeelを仕掛けてくる相手には拒否されてしまう。 相手の仕掛けはEでかわせる場合も多いが、レーン段階で育つ前提を崩されると結局不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Milio",
+          "Yuumi",
+          "Janna",
+          "Sona",
+          "Nami"
+        ],
+        "label": "エンチャンター",
+        "text": "エンチャンター全般。射程の短さからハラスを受けやすい短所をカバーできる。 なおpatch13.12以降、バフではパッシブ 警戒 のスタックが得られないよう調整された。 回復またはシールド（もしくはスネア以上のCC）でのみパッシブがたまるため、 CDの短いこれらのスキルをもつチャンピオンと相性が良い。 よく知られる『ルシナミ』について、現在安定的にパッシブがたまるのはWのみで QやRは敵に当てないとスタックが得られない。練度が問われるので注意しよう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Taric",
+          "Thresh",
+          "Leona",
+          "Nautilus",
+          "Alistar"
+        ],
+        "label": "タンクサポート",
+        "text": "同じくCCでパッシブを発動できるヴァンガード系のサポートも相性が良好。 ルシアンの機動力であれば遠くの相手に仕掛けるサポートにも無理なく合わせが可能。 序盤からオールインが得意なので、一通りのスキルが揃えば一気に攻め込める。 すべての通常スキルでパッシブが発動できるタリックとの相性は特に抜群。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Velkoz",
+          "Brand",
+          "Swain",
+          "Zyra",
+          "Xerath"
+        ],
+        "label": "メイジサポート",
+        "text": "腰の重いメイジではルシアンの機動力に付いていけず、オールインの強さが機能しづらい。 パッシブの回転も確実性の高いCCを持たないものが大半のため、他のサポートよりも悪くなる。 一応火力はあるのでCCさえ当たれば機能しない訳ではないが、総じて相性は悪め。 ちなみにラックスラックスは2回付与するシールドを持つので、良いという程ではないが多少マシ。",
+        "has_caveat": false
+      }
+    ]
   }
 }

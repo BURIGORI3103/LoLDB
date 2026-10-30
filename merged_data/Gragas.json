@@ -1772,5 +1772,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Gragas#j3da3fa6",
+    "fetched_at": "2026-10-30T09:48:51+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Trundle",
+          "Tryndamere",
+          "Jax",
+          "Sett"
+        ],
+        "label": "TOP運用: AA依存度が高い",
+        "text": "長射程スキルを持たず、AA依存度の高いに対面。 相手はCSをAAで取るのでそこにQを置いておくことで簡単かつ確実にハラスができ、仕掛けてきたらEで即時拒否。 安定して有利なレーニングが可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Jax",
+          "Warwick",
+          "LeeSin"
+        ],
+        "label": "JG運用: AA依存度が高い",
+        "text": "こちらも同様。 少数戦・集団戦において相手の入りを安定して拒否できる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Olaf",
+          "KSante",
+          "Vladimir"
+        ],
+        "label": "TOP運用: CC無効",
+        "text": "グラガスはEの拒否を担保にハラスやショートトレードを繰り返してレーニングする。 CC無効でEをすかされると途端にロングトレードに持ち込まれ、DPSの低さが露呈し倒されがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malzahar",
+          "Cassiopeia",
+          "AurelionSol",
+          "Ryze"
+        ],
+        "label": "MID運用: DPSメイジ",
+        "text": "※LoLalytics 13.24-14.4 Global Eme+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

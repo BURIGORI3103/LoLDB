@@ -942,5 +942,63 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Shyvana#df27bb01",
+    "fetched_at": "2026-10-30T09:49:19+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MonkeyKing",
+          "Jax"
+        ],
+        "label": "特定のダメージ分類に強い",
+        "text": "主な火力源はAAだが、スキルは割合含めた魔法ダメージの出力に長ずる。 ハイブリッドダメージを出せるチャンピオンの常として、AR・MRどちらかに特化した相手に有利。 特にUltにGank性能を依存する相手は、シヴァーナが能動的に動けない序盤の間に差をつけられる心配も薄い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nocturne",
+          "Vi",
+          "Warwick",
+          "Amumu"
+        ],
+        "label": "Ultに依存するGanker",
+        "text": "前述の通り、まともなCCがUltのノックバックしか無いので序盤のGankは苦手。 逆に言えばその間に差をつけきられなければ、Gankの確実性にパワーを偏重させている分だけスケールで上回れる。 これらの対面はGank性能をUltに依存するため、同様に序盤はファームに勤しむしか無い。 殴り合いも基本的にシヴァーナの方が強いので、Ultの習得後はゲーム全体を通して有利を取りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nidalee",
+          "Elise",
+          "Kindred",
+          "Udyr",
+          "Ivern"
+        ],
+        "label": "アーリージャングラー",
+        "text": "序盤の強さを活かして積極的に動いてくる相手。Gank・カウンターJGのどちらに対しても、序盤のシヴァーナでは常に後手に回ってしまう。 何も出来ない間に差をつけられてしまい、Ultを覚えた後もGank性能は極端に高くなる訳ではなく差を埋めるのが難しい。 シヴァーナ自身もCCやKiteに弱く、それらを可能とする相手は封殺されがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sylas"
+        ],
+        "label": "サイラス",
+        "text": "特殊な例。通常の変身系Ultは変身前後のスキルコンボを前提にするのでサイラスサイラスに奪われても痛くない。 だがシヴァーナの場合は自己強化型のUltとしての側面が強く、Meleeファイターのサイラスにとって好都合。 APレシオも大きいので奪われた場合の被害が大きく、変身中もあちらのパッシブは発動されるため、殴り合いで勝つのも難しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

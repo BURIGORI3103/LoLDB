@@ -943,5 +943,63 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Nocturne#k50be531",
+    "fetched_at": "2026-10-30T09:49:10+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vi",
+          "Fiddlesticks",
+          "Volibear"
+        ],
+        "label": "UltによるGank",
+        "text": "ジャングラーの中でも、出足が遅くUltを習得するまで積極的なGankが難しい相手。 互いにUltを覚えてからが本番だが、ノクターンのUltはこれらよりも確実性が高く超遠距離からカウンターも狙える。 スキル依存度の高い相手が多いためWも刺さりタイマンも有利、集団戦でもダイバー相手は視界低下で連携を絶てる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nidalee",
+          "Elise",
+          "Shaco",
+          "RekSai"
+        ],
+        "label": "失速の激しいGanker",
+        "text": "序盤のGank性能に大きくパワーを割いている、特にアサシン寄りのジャングラー。 最初は多少差をつけられても、Ultを覚えればGank性能には雲泥の差が発生。カウンターも狙いやすい。 相手も集団戦が不得手で中盤以降はキャッチに勝負をかけることになるが、そこをUltで反撃すれば何も出来なくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ekko",
+          "Talon",
+          "Graves"
+        ],
+        "label": "機動力が高いヒット＆アウェイ",
+        "text": "EのFleeは一定時間対象を範囲内に留めていなければ効果が無い。 移動手段もUlt以外徒歩なので、機動力が高くヒット＆アウェイが得意な相手に不利が付く。 カウンターを試みても逃げられてしまい、逆に追われると逃げ切れずタイマンが厳しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "MasterYi",
+          "Olaf"
+        ],
+        "label": "対象指定不可・CC無効",
+        "text": "同じくEを無効化できるジャングラー。対象指定不可やCC無効により、一方的に殴れる時間を透かされる。 ダメージの出力もAAが軸なのでWが刺さりづらく、タイマンで負けるのでジャングリングもGankも仕掛けづらい。 キャンプの処理も早いため離れていても逆サイドでゲームを動かされやすく総じて不利。",
+        "has_caveat": false
+      }
+    ]
   }
 }

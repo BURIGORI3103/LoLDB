@@ -1358,5 +1358,77 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Garen#d3bbe8e0",
+    "fetched_at": "2026-10-30T09:48:50+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Irelia",
+          "Jax",
+          "Yasuo",
+          "Yone",
+          "Riven"
+        ],
+        "label": "etc/スカーミッシャー",
+        "text": "トップに来るスカーミッシャー、具体的には細かいヒット＆アウェイでトレードを狙うタイプのMelee。 接近したところをQのサイレンスでスキルを封じ、反撃も逃走も出来ない状態でトレードを狙える。 スノーボーラーが多いのでレーン段階で転ばせておくと後半まで悪影響が大きく、総じて相性有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Olaf",
+          "KSante",
+          "Illaoi"
+        ],
+        "label": "減少Healthスケール",
+        "text": "本人の減少Healthスケールでサステインや火力を得るファイター。 Healthが減って本領発揮、という瞬間に強烈な減少HealthスケールのTrueダメージで仕留めきれる。 集団戦でも袋だたきにしたところから一気にキルまで持っていき、仕事を果たさせずに済む。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nasus"
+        ],
+        "label": "ナサス",
+        "text": "特殊な例。ナサスナサスのWを受けてもQで解除できる。 元々ナサスが序盤は弱いチャンピオンであるため、1コアの時間帯くらいまではWを受けていても普通に殴り勝てる。 またWでGank合わせを狙われても逃げやすいので積極的な動きを維持しやすい。 ただし先に自分がQを使うとあとからスローをかけられてしまうためそこには注意。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kayle",
+          "Vayne",
+          "Teemo",
+          "Yorick",
+          "Gangplank"
+        ],
+        "label": "etc/接近の拒否",
+        "text": "ガレンは射程が短く接近手段も乏しい典型的なジャガーノート。 必然的に拒否を持ち、射程外から殴れる相手には一方的にハラスされ続け、まともなレーニングが不可能。 仮にガレンを倒しきれるだけの火力が無い相手でも、育ったりロームを狙ってくるのを防ぎきれず不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Darius",
+          "Mordekaiser"
+        ],
+        "label": "ロングトレード",
+        "text": "戦闘が続いている間はパッシブが無いも同然。WのCDも長いのでロングトレードは得意ではない。 拒否も加速しか持たないので苦手で、これらのキャッチ手段を持つジャガーノート対面はかなり厳しくなる。 上手くQを搦めてトントン程度のトレードが出来ればUltのバーストで押し切るチャンスはあるが、原則として不利。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -942,5 +942,56 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Vex#v38d7973",
+    "fetched_at": "2026-10-30T09:49:29+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yone",
+          "Yasuo",
+          "Sylas",
+          "Irelia",
+          "Leblanc"
+        ],
+        "label": "etc/ブリンクを多用",
+        "text": "トレードやオールインのためにブリンクを多用し、火力を出すにもWの射程内に接近する必要のある対面。 ブリンクごとにしっかりとAAを入れておくことでパッシブを回し、ダメージとCCの回転率を高められる。 即時発動のシールド付きなWを使えば相手のバーストをしのぎ、逆にトレード勝ちを狙える。 基本的に耐久は低いアサシン・スカーミッシャーなので、Fleeを的確に決めれば自分のキルチャンスに。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Viktor",
+          "Anivia",
+          "Cassiopeia",
+          "Ryze",
+          "Veigar"
+        ],
+        "label": "etc/ゾーンコントロール",
+        "text": "中射程のバトルメイジを中心に、特定の範囲にダメージやCCを出すのが得意な相手。 瞬間的な機動力が低いのでこれらのDPSをモロに食らいやすく、遠距離にはスキルの発生が遅いため反撃も難しい。 Pushにスキルを使わされれば相手はダッシュを持たないのでCCのCDが長くなり、大きな隙を晒す。 かといって相手のPushが早いのでAAだけで処理するのも現実的でなく、レーン段階から立ち回りが難しい。 基本的にレイトキャリーが多いので、なあなあで済ませようとしてもスケール差で不利がついてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Syndra",
+          "Velkoz",
+          "Ziggs",
+          "Mel"
+        ],
+        "label": "アーティラリー",
+        "text": "遠距離へのスキルは発生が遅く、射程の長い相手にはまともに当たらない。 一方的にダメージを出されると、防御スキルがWしか無く耐久が低いので削りきられてしまう。 メルメルについてはW以外のスキルが弾速を持つため、Wで反射されてしまうのも辛いところ。 例外としてゼラスゼラスはQを構えている間は足が鈍く、接近に成功すれば拒否手段が貧相なEのみ。 射程さえ足りていれば反撃を当てられ、Ultでの追撃も成立するので微不利～微有利で留まるスキルマッチアップ。",
+        "has_caveat": true
+      }
+    ]
   }
 }

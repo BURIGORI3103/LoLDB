@@ -1351,5 +1351,51 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Amumu#ced9694a",
+    "fetched_at": "2026-10-30T09:48:39+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Briar",
+          "Belveth",
+          "Viego"
+        ],
+        "label": "AS型のスカーミッシャー",
+        "text": "タンクなのでCCが有効に刺さりやすい相手に強いが、特にAS型のスカーミッシャーに有利。 Eのパッシブにより物理ダメージを受けるごとに軽減を行うため、攻撃回数に依存する相手は軽減回数が増える。 攻撃回数に依存する相手はそのASを前提に火力を調整されるので仕事をしやすく、多少育ってもCCが刺さる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Poppy",
+          "Rammus"
+        ],
+        "label": "単体型のタンクジャングラー",
+        "text": "タンク相手はアムムの苦手な序盤に襲われてもデスまで届く危険が小さい。 集団戦段階では高いキャッチ・Peel性能を活用してくるが、アムムのUltから味方をカバーする手段は無い。 火力面でもDPS型の分だけAoEが豊富なアムムの方がインパクトで勝り、勝ちやすいマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Karthus",
+          "Kindred",
+          "Kayn"
+        ],
+        "label": "（赤）/コントロールジャングル",
+        "text": "周回が早く、DPSも高いコントロール系のジャングラー。 アムムはタイマンが非常に弱いので、これらに積極的に入られると逃げるしかなくなりがち。 集団戦にこぎつけたとしても高いDPSや割合ダメージでアムムが得意な長期戦になる前に溶けてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

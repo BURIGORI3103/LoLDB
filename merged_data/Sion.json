@@ -1305,5 +1305,83 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sion#ced9694a",
+    "fetched_at": "2026-10-30T09:49:20+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Teemo",
+          "Gangplank",
+          "Jayce",
+          "Urgot"
+        ],
+        "label": "瞬間的な機動力が低い",
+        "text": "主力スキルのQは射程が長い上に高威力。発生の遅さもこれらは瞬間的な機動力が低く、詠唱を止めるCCも無いので問題無し。 多少のハラス程度ならWで我慢出来るのもあり、トレードを成立させやすい。 Ultを覚えた後はサイオンのGank合わせから逃れる手段が乏しいため、総じて戦いやすい相手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "Malzahar",
+          "Heimerdinger",
+          "Zyra"
+        ],
+        "label": "ペット",
+        "text": "機動力が低く、ペットを主力として使うチャンピオンたち。 サイオンはWのパッシブによりCSでHealthを伸ばせるが、ペットにも有効なので育ちやすい。 ザイラザイラとハイマーハイマーディンガーについてはペットの射程が長く一応は拒否もあるが、Eで花/タレットを吹っ飛ばせる。 序盤は削られがちだがバーストは低いので耐えやすく、1コアが完成した辺りからハラスをWで凌ぎながらファームが可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gwen",
+          "Yone",
+          "Fiora",
+          "Vayne",
+          "KSante"
+        ],
+        "label": "etc/機動力とDPSが高い",
+        "text": "主にスカーミッシャーを中心に、瞬間的な機動力の高い相手全般に不利。 スキル全般の発動から発生までに間があり、特にQやUltは見てからかわされがち。 火力面もサイオンを溶かすに十分なDPSを持ち、タイマン・集団戦ともに不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mordekaiser",
+          "Aatrox",
+          "Darius",
+          "Singed"
+        ],
+        "label": "CCを持つジャガーノート",
+        "text": "特に序盤のスキルはCDが長く、ロングトレードは基本的に苦手な上に逃げ手段もほぼ無い。 これらの相手は殴り合いの強いファイターでありながらサイオンをキャッチする手段を持つ。 主力スキルであるQのモーションの隙が大きいのも災いして、スノーボールを許しがち。 シンジドシンジドについてはMSまで高くなるため、Qのチャージを横にすり抜けられてしまう。 相性のいい味方 好相性(Strong With)",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rell",
+          "Nautilus",
+          "Zac",
+          "Maokai",
+          "Leona"
+        ],
+        "label": "拘束系ヴァンガードJG・SUP",
+        "text": "自分から敵に入り仕掛けることが可能なヴァンガード。 サイオンもエンゲージは可能だが、命中すれば長時間の拘束保障の代償に、にらみ合いの状況下で自分からRでエンゲージしてもまず命中せず、むしろ不利に陥る可能性のほうが高い。 エンゲージする際に味方に先にCCを付与してもらい、その間にサイオンが入ることで発動が遅いサイオンのスキルの命中精度を大幅に上げることができる。 特にレルレルはRによる集敵があるので、サイオン側のRが複数人に命中しやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

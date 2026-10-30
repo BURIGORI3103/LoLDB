@@ -933,5 +933,77 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sona#ced9694a",
+    "fetched_at": "2026-10-30T09:49:21+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Heimerdinger",
+          "Brand",
+          "Morgana",
+          "Xerath",
+          "Zyra"
+        ],
+        "label": "etc/メイジサポート",
+        "text": "回復・シールドにより、ハラスでレーニングするメイジsup相手は耐えやすい。 適宜Qでハラスを返しつつアッチェレランドを貯め、味方のGankが来ればUltで合わせるという基本を徹底しやすい。 序盤のうちに差をつけられすぎなければ、ソナのほうがスケールで優るため、集団戦が有利になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zilean",
+          "Lulu",
+          "Nami"
+        ],
+        "label": "([[Janna]][[Yuumi]])/エンチャンター",
+        "text": "他はお見合いファームにしやすいが、ナミだけは非常に殺意が高い。レーン段階では不利なのでとにかくキルを与えないこと。 後半戦にさえもつれこめばソナのほうがスケールに優れ、綺麗な形の集団戦を得意とするため、集団戦で勝ちやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Thresh",
+          "Amumu",
+          "Rell"
+        ],
+        "label": "([[Pyke]][[Leona]])/キャッチャー・ヴァンガード",
+        "text": "ソナは本体が非常に脆い。レーン戦にしろ集団戦にしろ、捕まってしまえば簡単に倒れてしまう。 ソナとADCどちらがキャッチスキルにかかっても負けてしまうので、常に高いプレッシャーを受け続けることになる。 特にソナがUltを覚える前の早い段階でキャッチスキルが揃う相手が厳しい傾向にある。 だからといって消極的に行くと、アッチェレランド貯めを諦める分スケールが遅れ、相手の得意なRoamを許す事になってしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Senna"
+        ],
+        "label": "セナ",
+        "text": "特殊な例。同じくスタックによるスケールがあるサポート。 互いに射程がメイジほどに長くなく、オールインの圧も比較的弱いのでスケールし合う展開になりがち。 なのだが、セナセナのヒールの方がソナのWよりも数値が大きく、またソナよりはマナ持ちもよい。 更にセナのEでカモフラージュ状態になられるとQが当たらず、ハラス合戦ではジリ貧になってしまう。 レーン段階で優位を押しつけられると必然スケールにもじわじわ差をつけられてしまい、不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lucian",
+          "Nilah",
+          "Zeri"
+        ],
+        "label": "",
+        "text": "エンチャンターとの相性が良く機動力も高いADC。",
+        "has_caveat": false
+      }
+    ]
   }
 }

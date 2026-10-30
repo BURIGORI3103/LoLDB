@@ -930,5 +930,75 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Zilean#m51c12a5",
+    "fetched_at": "2026-10-30T09:49:36+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar",
+          "Nocturne",
+          "Vi",
+          "Garen",
+          "Briar"
+        ],
+        "label": "単体をキルする性能が高い",
+        "text": "単体を強力なCCで固めたり、確実性の高いブリンクで張り付いてくる相手。 フォーカスされた味方にUltを使うだけでデスを防ぎ、スキルを使い果たした相手を返り討ちにできる。 ガレンガレンについては、Qで加速したところを後からEによりほぼ完全にPeelしきれるのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Darius",
+          "MasterYi",
+          "Viego"
+        ],
+        "label": "キルに依存するスノーボーラー",
+        "text": "集団戦において、1キル目に依存するタイプの相手。やはりUltでデスを防ぎ勢いを挫ける。 一方でこれらは状況にもよるが、フォーカスしている相手が分かりづらい場合もある点には注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "Khazix",
+          "Rengar"
+        ],
+        "label": "([[Nidalee]][[Talon]])/カウンタージャングラー",
+        "text": "CC・ダメージ源が共にQのみ、かつ条件付きの上にマナの消費が重いため、レーンの主導権を失いやすい。 必然的に味方のジャングラーを助ける性能は低く、序盤から積極的にカウンターを狙ってくる相手に手出ししづらい。 キルタイムが速いのでUltが間に合わなかったり、間に合っても離脱手段があるので効果時間が切れるのを待ちやすい厄介な相手。 総じてジリアンが機能しづらく、スノーボールを許しがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Zoe"
+        ],
+        "label": "設置型のCC",
+        "text": "Ultの蘇生は強力ではあるが、蘇生までに少々時間がかかり、場所も倒された場所で固定。 持続時間が長く即効性の高いCCを置かれると、蘇生した瞬間に喰らって動けないままバーストを叩き込まれる。 倒されるのが早いか遅いかの違いだけになりやすく、特にこれらは該当スキルのCDが長すぎない程度なので戦闘への影響も小さくなりがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Senna",
+          "Sona"
+        ],
+        "label": "後半に強いエンチャンター",
+        "text": "ジリアンの攻撃手段はQのみと手数が少なく、ヒールで十分なほどに誤魔化されてしまう。 ジリアン自身も素のMSは低く、Qも足が止まるためハラスを食らいやすく、スタックを貯める動きも許しやすい。 総じて相手が育っていくのを咎める手段に乏しいため、集団戦での活躍を許しがち。 ※LoLalytics 13.3-13.7 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

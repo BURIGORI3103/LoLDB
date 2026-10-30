@@ -933,5 +933,140 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Blitzcrank#z518b825",
+    "fetched_at": "2026-10-30T09:48:42+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yuumi",
+          "Lux",
+          "Velkoz",
+          "Brand"
+        ],
+        "label": "メイジ・エンチャンター全般",
+        "text": "キャッチが即座にキルに繋がる脆い相手はブリッツにとって格好の獲物。 特に対面に来た場合、ADCとどちらを掴んでも構わないので相手の動きを制限しやすい。 モルガナモルガナは例外で、Eによりグラブを無効化されてしまう分で明確な有利がつかない。 発動が間に合わなければ問題無く掴み、瞬時にキル出来るので明確な不利ともならないスキルマッチアップ。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Jhin",
+          "Aphelios",
+          "Jinx"
+        ],
+        "label": "足の止まりやすいマークスマン",
+        "text": "Qはフックとしても射程が長く、これらのAA射程外から掴み、手元まで持ってこれる。 スキルやAAのモーションが悪い相手は特に掴みやすいため、そうした相手に有利がつく。 レーン外においても、上記のような機動力が低かったり耐久が低い相手はキャッチが成立しやすく有利が付く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Vi",
+          "Khazix",
+          "Katarina"
+        ],
+        "label": "ダイバー・スカーミッシャー",
+        "text": "対象指定でノックアップ、広範囲のサイレンスを持つので実はPeel性能も高い。 懐に入り込むアサシン系の相手に強く、特に詠唱に火力・防御手段を依存する相手に有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Braum",
+          "Alistar",
+          "Amumu",
+          "Zac"
+        ],
+        "label": "タンク全般",
+        "text": "フックでのキャッチ、CCで固めてキルまで持っていくのがブリッツの基本にして全て。 タンクを掴んだ場合、通常の集団戦同様に互いに前からの溶かし合いになるだけ。 そしてブリッツの圧はQに集中しており、それがCDになった分で競り負けてしまう。 最悪の場合は味方を強力なCCの射程に入れてしまうだけになる可能性すらあり、総じて不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nilah",
+          "Sivir",
+          "Samira"
+        ],
+        "label": "Qを防ぐ、インファイトを得意とするADC",
+        "text": "要のQは非貫通・方向指定であり、加速やブリンクで機動力の高い相手に当てづらい。 特にこれらの相手は防御スキルで弾いたり、育ち具合によってはキャッチしても競り負けるインファイトの強さを持つ。 いざという時のPeelを防ぐ手段もあり、ADCを狙ってQを使う基本戦術が通じない厄介な相手。 ちなみにエズリアルエズリアルもEで逃げられてしまうが、Push性能の低さがブリッツにとって都合が良く明確な不利はつかない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mel",
+          "Swain"
+        ],
+        "label": "ブリッツクランクの性質を逆用",
+        "text": "メイジでも数少ない不利が付く相手がこの2体。ミッド・APC・サポートに出現するがいずれも不利。 メルメルはブリッツの全てであるフックを反射してくる。 万一反射されてしまえば自分や味方が逆にキャッチされる危険があり、敵にいるだけでブリッツが取れる選択肢が大きく減る。 スウェインスウェインはRが周囲の敵の数に応じて回復する性質を持つが、ダメージがほぼないブリッツはスウェインの回復リソースとなってしまう。 フックを当てても他のメイジと比べて耐久が高い為キルまでつなぎきれず、逆に味方をスウェインのRに巻き込んでしまう事態になりやすい。 ブリッツが存在しているだけで相手に好都合な状況が作り出されてしまい、どちらも大きめの不利がついている。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Xayah",
+          "Tristana",
+          "Draven",
+          "Kaisa"
+        ],
+        "label": "Pushが早い",
+        "text": "Push補助性能が皆無なのにも関わらず、押されている状況ではミニオンが盾になり射線が通しづらい。 Pushの早いADCと組むと弱点をカバーして貰え、またそれらのADCは射程が短めなオールイン型が多め。 あちらの射程まで対面を引っ張り込み、スノーボールを開始しやすく相性が良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MissFortune"
+        ],
+        "label": "ミスフォーチュン",
+        "text": "やや特殊な例。Qの跳弾は相手がミニオンを盾にしようとすると当てやすくなる。 かといってミニオンの背後を避けると今度はブリッツのQが当たりやすくなるので、対面は非常に動きづらい。 威力が高い代わりにある程度相手を押しとどめる必要のあるUltも、単体の拘束が得意なブリッツと相性良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Jhin",
+          "Ashe",
+          "KogMaw",
+          "Varus"
+        ],
+        "label": "長射程",
+        "text": "わざわざ持ってこずともハラス・CSを取れる長射程ADCはブリッツのQによる恩恵が小さい。 元々グラブにチャンピオンとしてのパワーを大きく割いている都合、相対的にチャンピオンパワーが落ちる。 特に純粋な殴り合いが苦手な面子の場合、単に相手に接近手段を与えるだけになりかねないので注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Ezreal",
+          "Samira"
+        ],
+        "label": "Pushが遅い",
+        "text": "前述の通り、Push補助は苦手でかつグラブはミニオンに弾かれるので押されている状況に弱い。 レーン段階のPushが遅いこれらのチャンピオンが相方だと、文字通り置物になるリスクがある。 キャッチさえ出来ればインファイトが強いチャンピオンも多いのだが、原則として相性が悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

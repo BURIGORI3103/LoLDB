@@ -931,5 +931,118 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Leona#ne5cd5db",
+    "fetched_at": "2026-10-30T09:49:02+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Irelia",
+          "MasterYi",
+          "Yasuo",
+          "Samira"
+        ],
+        "label": "ダイバー・スカーミッシャー",
+        "text": "CCが豊富、特にQは実質対象指定ということで確実性が高い。 特に防御スキルがレオナに有効に働かない相手は必然低い防御力を晒しやすく有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zyra",
+          "Brand",
+          "Yuumi",
+          "Senna",
+          "Sona"
+        ],
+        "label": "オールインに弱い",
+        "text": "タンクスキルも含め、基本のオールイン性能はレベル3までに十分なレベルで完成する。 逃げ性能が悪く、キャッチされた後の回答が少ないメイジ・エンチャンター系のサポートに有利。 特に攻撃がDoTなザイラザイラ、ブランドブランドはメイジ系の中でも有利がつく。 射程の都合でレベル1の時点では削られやすく、また殴られすぎるとオールインが狙いづらくなる。 もちろん可能な限りレベル2に先行したいところではあるが、狙いすぎると逆に動きづらくなるのは忘れずに。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xayah",
+          "Sivir",
+          "Nilah",
+          "Vayne"
+        ],
+        "label": "オールインに強いADC",
+        "text": "特にレーン段階ではオールインがほぼ全てである以上、必然的にオールインに回答のあるADCには不利。 いずれもE>Qのコンボをかわす手段があり、飛び込んできたレオナをキルするだけの火力も備える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Morgana",
+          "Janna",
+          "Renata",
+          "Alistar",
+          "Rell"
+        ],
+        "label": "Peelが強いエンチャンター・ワーデン",
+        "text": "何をするにせよ、Eで飛びつかなければ始まらない。必然的にここでPeelされるとCCを重ねられない。 サステインが無いので飛び込みを弾かれると、積み重なるダメージの差でジワジワと不利が広がっていく。 中盤以降の影響力も、レオナに比べて高い相手が多いのでなあなあで過ごしても解決しない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Hwei",
+          "Swain",
+          "Ziggs",
+          "MissFortune"
+        ],
+        "label": "射程が長い",
+        "text": "Eによる仕掛けの射程が長いため、ギリギリから狙うと相方の攻撃が届かない状況に陥りやすい。 その点、これらのAPCを始めとした相方はレオナのエンゲージにも合わせられるだけの射程があり、パッシブも回収しやすい。 DPSが高くないAPCの場合は一通りスキルを叩き込んだ後は退く必要があるが、レオナは長期的な耐久力が高いので生き残れる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lucian",
+          "Samira",
+          "Kaisa"
+        ],
+        "label": "オールインが強く機動力のあるADC",
+        "text": "概ね理由は同様。これらは射程こそ短いが、レオナが入ったところに駆けつける機動力を持つ。 逆に本人の接近手段が乏しい場合が多いので、互いに互いの短所をカバーし合うことが出来て相性が良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Aphelios",
+          "Tristana"
+        ],
+        "label": "スケールが高い分、序盤が弱い",
+        "text": "レーン段階が苦手なタイプのADC。レオナの長所である序盤の強さを活かせない。 アフェリオスアフェリオスについては瞬間的な機動力が低く、仮にコンボを決めてもそれに付いていけないのも辛い。 トリスターナトリスターナは機動力こそあるが、タワー下まで押し込んでしまいやすくオールイン出来ない状況に陥る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Varus",
+          "Ashe"
+        ],
+        "label": "PushしてハラスするADC",
+        "text": "Pushを作り、ハラスを繰り返して差を作っていくタイプのADC。 射程が長いので合わせることは出来ても、その後のバースト・DPSが低いので競り負けやすい。 レオナはPushを補助するのが苦手なため、ADCの得意なレーン状況を作り出すのも難しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

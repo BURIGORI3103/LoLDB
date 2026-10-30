@@ -931,5 +931,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Braum#ldcb3b6e",
+    "fetched_at": "2026-10-30T09:48:43+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Leona",
+          "Amumu"
+        ],
+        "label": "キャッチャー",
+        "text": "フックを中心に、キャッチによる単体へのキルプレッシャーが高いタンク全般。 Peelが得意なワーデンであり、自身の基礎ステータスも高いので盾になりやすい。 仮に相方が捕まってもWで即座に駆け寄り、EでADCのダメージ出力を防ぎトレードが成立する。 ただし相方の傍で構える形になりやすいため、AoE CCがメインの相手レルアリスターは概ねイーブン。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "JarvanIV",
+          "Vi",
+          "XinZhao"
+        ],
+        "label": "ダイバー",
+        "text": "序盤から中盤のGank性能でスノーボールを狙い、集団戦はそこまで得意でないダイバー。 高いPeel性能でADCを守りつつ、自分を狙われてもWで離脱できるためGankを刺されづらい。 集団戦では入り込んできたところを固めて逆にキルまで持っていき、ゲーム全体を通して主導権を握られづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Senna",
+          "Karma",
+          "Swain",
+          "Velkoz",
+          "Xerath"
+        ],
+        "label": "射程が長いサポート",
+        "text": "サステインを持たず、遠距離への対抗手段が碌に無いので一方的なハラスを受ける。 カルマカルマスウェインスウェインはQを当ててもシールドやサステインで強引にトレードを返せる。 終盤にも接近してこず、こちらの接近も難しいので常に厳しい相手になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Veigar",
+          "Taliyah"
+        ],
+        "label": "アンチブリンク",
+        "text": "味方を守る性能はWのブリンクにも依存しがちなため、ブリンクを封じてくる相手に勝率が低い。 ただしポッピーポッピーは射程の都合で、得意とする迎撃戦になりがちな為か優位がついているパッチも。",
+        "has_caveat": true
+      }
+    ]
   }
 }

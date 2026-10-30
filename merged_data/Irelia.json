@@ -1357,5 +1357,82 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Irelia#y86f9997",
+    "fetched_at": "2026-10-30T09:48:53+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kayle",
+          "Kennen",
+          "Velkoz",
+          "Malzahar",
+          "Ryze"
+        ],
+        "label": "etc/拒否の弱いRanged",
+        "text": "スキルの命中精度にも依存するが、最大で3連続で対象に追撃を行うQが優秀。 Ranged相手は多少の拒否は物ともせずに接近し、殴り合いを挑むことが出来る。 Meleeとしてはステータスが低いとはいえRanged相手は問題無く、多少スタックの管理が甘くとも殴り勝てる。 ただしティーモティーモはブラインドが刺さる点で明確な有利がつかない。 ステータスと逃げ性能の低さは変わらないので、概ねスキルマッチアップとなる。 ●トップ運用",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "DrMundo",
+          "Aatrox"
+        ],
+        "label": "インファイトの弱いジャガーノート",
+        "text": "インファイトが苦手で、かつ即座に離脱できる機動力やCCも無い対面。 スタックが貯まる前に攻め込まれるリスクも小さく、貯めた後は飛び込んで殴り合いに持ち込める。 エイトロックスエイトロックスのQ3は当たると非常に痛いので合わせてWを意識しておこう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "Tryndamere",
+          "Jax",
+          "Fiora",
+          "Shen"
+        ],
+        "label": "アンチAA",
+        "text": "火力を出すにはAAも必要。AS低下やAA無効を持つ相手はDPSが落ちやすい。 有利な殴り合いを演出出来ないとステータスの低さが露呈して殴り負けてしまう。 レーン段階で順調に育てないと悪影響が大きく、集団戦でも前に出る性質上CCを持つ相手は辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Volibear",
+          "Sett",
+          "Warwick",
+          "Renekton",
+          "Riven"
+        ],
+        "label": "etc/レーン番長",
+        "text": "レーンでの殴り合いが強い対面。スタックを貯めて飛び込んだとしても殴り負ける危険がある。 遠距離からCSだけを取る手段が乏しい都合、どうしても相手の有効射程に入り込まざるをえない。 相手もスノーボーラーが多く、一度転ぶとキルレーンを作られがち。 ●ミッド運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sylas",
+          "Ekko",
+          "Leblanc",
+          "Akali"
+        ],
+        "label": "瞬間的な機動力",
+        "text": "Eの命中は一方的に殴る時間を作るにも、Qの再発動のためにもトレードで非常に重要。 短所である発生の遅さは咄嗟にブリンクを出せる相手に不利に働き、透かされた後で相手の火力を叩き込まれがち。 Wの軽減も魔法ダメージには効果が弱まるため、特にAP系のチャンピオンに勝率が下がる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

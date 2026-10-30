@@ -1773,5 +1773,80 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Malphite#gffc2bef",
+    "fetched_at": "2026-10-30T09:49:05+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Jax",
+          "Yasuo",
+          "Briar",
+          "Nocturne"
+        ],
+        "label": "AA軸のスカーミッシャー・ダイバー",
+        "text": "WのパッシブによりARのスケールが良好。EのAS低下もあり、AAに火力を依存するMeleeに有利。 対面からなら安定したレーニング、森に来てもUlt込みで捌きやすくなるため勝率が高くなる。 ただしCCに依存した有利のため、CCを無効化しつつ確定ダメージを出し、AR低下まで持つオラフオラフ相手は微不利がつく。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Quinn",
+          "Jayce",
+          "Teemo"
+        ],
+        "label": "対面に来るRanged",
+        "text": "対象指定でダメージ＋スロー＋加速のQにより、MeleeながらRanged相手もハラスが可能。 耐久が低い分、マナが尽きる前にキルに繋ぐ、或いは帰らせることが可能になる。 集団戦ではトップが後衛になる分、フロントの数で優位に立ちやすい点も有利な要素。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sylas",
+          "Vladimir",
+          "Mordekaiser"
+        ],
+        "label": "対面に来る、一定の耐久を持つAPチャンピオン",
+        "text": "MR方面のスケールは一切無いため、AP相手はビルドにおいて耐久力か火力のどちらかを手放すことになる。 そのため一定の耐久を持つAP相手は互いにビルドが出てくると不利が広がっていく。 特にサイラスサイラスはアイデンティティであるUltをより高威力で利用されてしまう最悪のカウンター。 対面はもちろん、他レーンで出てきても勝率が大きく落ち込むので、マルファイトを出す予定ならBANしておきたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Chogath",
+          "Sion",
+          "TahmKench",
+          "DrMundo",
+          "Shen"
+        ],
+        "label": "高サステイン",
+        "text": "シールドや回復により、レーン段階のHealthを維持しやすいタンク・ジャガーノートの対面。 Qのハラスは相殺され、かといってEのAS低下も刺さりづらく、トレードが全面的に不利。 タイマンが強い相手はレーン段階から餌にされ、後半のスケールが大きい相手は全体への影響力で劣りがち。 特にチョガスチョ＝ガスはタンクとしてはダメージが高くさらに魔法ダメージ出力というかなり厳しい相手。 チョガスQをマルファイトがよけづらく、不利なトレードを強いられがちなのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "MasterYi",
+          "Samira",
+          "Nilah"
+        ],
+        "label": "スカーミッシャー",
+        "text": "接近手段やCCに乏しい代わりにDPSが高いスカーミッシャー全般。 強烈なエンゲージ性能によりこれらの短所をカバー、逆にマルファイトの継続火力の低さもカバーして貰える。 特にヤスオヤスオはあちらのUltの条件であるノックアップも満たせる優秀なパートナー。 ただし構成がオールADになりやすい点には要注意。",
+        "has_caveat": true
+      }
+    ]
   }
 }

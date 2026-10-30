@@ -1355,5 +1355,79 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Veigar#ced9694a",
+    "fetched_at": "2026-10-30T09:49:29+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vex",
+          "Galio",
+          "Neeko"
+        ],
+        "label": "ワープスキルを持たないコンボ型メイジ",
+        "text": "接近を前提とするコンボによりキルを稼ぐバーストメイジ。 Eの縁に触れるとブリンク中だろうがなんだろうが止めるため、囲まれた時点で出来ることが無くなる。 単発でのハラスならば一気に持っていかれる危険が小さく、比較的安全にファーム・スケールが可能。 ヴェックスヴェックスのUltについてはアンストッパブルがつくが、再発動を見た瞬間に軌道上にEを置くと着地後に固まる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Singed",
+          "Poppy",
+          "Illaoi",
+          "Urgot",
+          "Warwick"
+        ],
+        "label": "etc/ワープを持たないダイバー・ジャガーノート",
+        "text": "同じくワープスキルが無く、かつMeleeを中心とした射程が短い相手は全般的に有利。 多少育っていたとしてもEを置くだけで無力化。仮にアンストッパブル等で強引に抜けても後衛をゾーニングすれば孤立。 特に一定数の武器を必要とし、MRを多数積む余裕の少ない相手ならば、コンボで普通にキルまで持っていけることも。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zed",
+          "Katarina",
+          "Kassadin",
+          "Ekko"
+        ],
+        "label": "ワープスキルを多用するアサシン",
+        "text": "自衛手段はEのみ。壁を越えて追撃してくるワープ持ちのアサシンを相手するのは辛い。 対面して的確にプレッシャーをかけられると、CS及びスタックによる成長が遅れ腐る羽目になりがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Evelynn",
+          "Rengar",
+          "Khazix",
+          "Shaco"
+        ],
+        "label": "ステルスアサシン",
+        "text": "ワープ持ちでなくてもステルスで先手を取ってくる相手には、Eが間に合わないリスクが付き纏う。 ナイトエッジやバンシーヴェールでEを突破してくる場合もある。なるべく孤立せず動くよう気を付けたい。 スタンにひっかけさえすればワンコンで返り討ちにできるポテンシャルはあるので、Eを当てやすい狭い場所での戦いを狙うのもコツ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xerath",
+          "Velkoz",
+          "Corki"
+        ],
+        "label": "アーティラリーメイジ",
+        "text": "序盤はスキルの火力が低く、サステインも皆無なので射程が長い相手は一方的なハラスを受けやすい。 Eがまともに当たらないのでオールインやGankで逆転も難しく、如何にスケールが高くともレーンで差をつけられすぎれば意味が無い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

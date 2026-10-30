@@ -1347,5 +1347,43 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Poppy#ced9694a",
+    "fetched_at": "2026-10-30T09:49:12+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kayn",
+          "Sylas",
+          "Jax",
+          "Camille",
+          "LeeSin"
+        ],
+        "label": "etc/ブリンクを多用するスレイヤー・ダイバー",
+        "text": "レーンを問わず、ブリンクを多用する相手はWで撃ち落として実質スキルを1つ減らせる。 ポッピーを溶かす火力も、ポッピーと殴り合える耐久力も無いスレイヤーやダイバー相手に有利。 特に壁を利用する相手ケインカミールは壁に接近した瞬間にEでぶつかると壁ドンに繋がりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kayle",
+          "Gangplank",
+          "Darius",
+          "Yorick",
+          "Olaf"
+        ],
+        "label": "etc/ブリンクを用いない",
+        "text": "射程が短く拒否も得意でないので、Rangedやキャッチを持つジャガーノート相手のタイマン厳しい。 ブリンクに一切依存しないのでWが加速とパッシブ効果しか発揮出来ず、有利な相手とは逆に実質トレードに使えるスキルが1つ減る。 特にスケールの大きい相手、レーン段階からのスノーボールを狙う相手にはビハインドを背負いがち。 ちなみに、イラオイイラオイもこれに該当するように見えるが、実は殴り合いにおける主力スキルのWに短いブリンクがついている。 相手はWで殴れないことにはダメージを出しきれないため、的確に自分のWを合わせればトレードを有利に進められる。 ただし相手のUlt中はCDが2秒になり何度もトライできるため、確実にカウンターできるというわけではない。 勝率的には概ねスキルマッチアップとなっている。",
+        "has_caveat": true
+      }
+    ]
   }
 }

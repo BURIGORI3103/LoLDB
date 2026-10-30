@@ -1355,5 +1355,81 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Katarina#gbeb72ee",
+    "fetched_at": "2026-10-30T09:48:58+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Veigar",
+          "Taliyah",
+          "Xerath",
+          "Velkoz",
+          "Anivia"
+        ],
+        "label": "etc/べた足メイジ",
+        "text": "Eは速度を持たないワープ。育った後はそれを連打出来るので特に追撃方面の機動力が高い。 自衛性能をスキルショットや地点指定のCCに依存する徒歩型のメイジはカタリナから逃げ切れない。 序盤はCDの解消が不十分だが、ある程度育った時点から一方的なキルプレッシャーを与えることが可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nocturne",
+          "Nunu",
+          "Nidalee",
+          "Viego",
+          "Gwen"
+        ],
+        "label": "咄嗟のCCが薄い",
+        "text": "咄嗟のCCが薄いジャングラー全般。特に離脱手段の乏しいダイバー・スカーミッシャーに有利。 追撃手段も基本的に徒歩や単発のブリンクに依存するため、長距離を移動できるカタリナはGankも刺さりづらい。 集団戦でもUltを止められるリスクが小さく、最初の衝突さえかわせばダメージの出力を妨害されづらいのも強み。 ロームが得意で森の中の小競り合いにも介入しやすく、高い追撃性能でキルを拾いやすいのもポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Galio",
+          "Kassadin",
+          "Vladimir",
+          "Fizz",
+          "Diana"
+        ],
+        "label": "バースト耐性",
+        "text": "ダメージを出力するにはパッシブやUltを回転させる必要があり少々時間がかかる。 必然的に見てからバーストを防ぐ手段を持つ相手には総じて不利がつく。 特にUltを速やかに止める手段を持つ相手ガリオカサディンダイアナはUltに重ねられると逆にデスの危険が高まる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fiddlesticks",
+          "Pantheon",
+          "Singed",
+          "Rammus",
+          "Lissandra"
+        ],
+        "label": "確実性の高いCC",
+        "text": "確実性が高い行動不能CCを持つ相手。いずれもUltの回転を瞬時に止められてしまう。 射程が短いので前に出なければ何も出来ないが、前に出ればUltの発動前に固められてデスする可能性すらある。 バースト耐性を持つ硬いチャンピオンも多く、その場合はスノーボールを開始するのが難しくなるのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mordekaiser"
+        ],
+        "label": "モルデカイザー",
+        "text": "特殊な例。メインレーンは異なるが、ほぼ全てのパッチで大きめの不利を背負う難敵。 カタリナの武器であるAoE火力をUltの拉致により強制的にタイマンに持ち込むことで防いでくる。 逃げ方向の機動力が低いカタリナでは普通にタイマンするだけでも辛い。 戻った頃には既に集団戦の勝敗は大体決しており、カタリナのスキルもCDになっている場合が多くスノーボールがまず見込めない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

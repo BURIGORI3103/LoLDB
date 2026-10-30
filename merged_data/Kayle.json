@@ -1363,5 +1363,81 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kayle#ef214c42",
+    "fetched_at": "2026-10-30T09:48:59+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Garen",
+          "Illaoi",
+          "Darius",
+          "Singed",
+          "Yorick"
+        ],
+        "label": "etc/ジャガーノート",
+        "text": "急接近する手段を持たないべた足のジャガーノート全般。 スローと加速で間合いを保ちやすく、トレードを狙いに来た時に捌いてKiteしやすい。 Rangedになるまでに差をつけられすぎなければ簡単にひっくり返せる性能があるので総じて有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zed",
+          "Katarina",
+          "Fizz",
+          "MasterYi",
+          "Kayn"
+        ],
+        "label": "ダメージを出すタイミングが分かりやすい",
+        "text": "バーストを出すタイミングが分かりやすいアサシン・スカーミッシャー全般。 相手のバーストにUltを合わせることでデスを回避、場合によっては返り討ちに出来る。 基本的にスノーボールを要求するチャンピオンが多く、単になあなあでスケールするだけでも十分に優位を取れる。 接近手段そのものは豊富なので、対面に来た場合はRangedになるまでは注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Irelia",
+          "Jax",
+          "Yone",
+          "Riven",
+          "Yasuo"
+        ],
+        "label": "etc/スカーミッシャー",
+        "text": "長期的な機動力があり、ダメージ出力もDPS系のスカーミッシャー全般。 スローや加速程度では逃げ切れず、Ultでバーストを回避しようにも長時間ダメージを出せるので押し切られる。 Rangedになった後も油断するとトレードを狙いに来るため、終盤までタイマンが厳しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nasus"
+        ],
+        "label": "ナサス",
+        "text": "特殊な例。ジャガーノートながらWでASを低下させながら強引な接近を可能とする。 特にUltの効果時間中はDPSも高く、Ultでも止めきれないので長時間タイマンが不利。 スケール曲線も似通うので逆転のタイミングが遅く、パッシブが最終段階になるレベル16まで厳しい戦いが続く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Amumu",
+          "Warwick",
+          "JarvanIV",
+          "Vi"
+        ],
+        "label": "etc/タンク・ダイバー",
+        "text": "強引なエンゲージを可能とするタンクやダイバー系のジャングラー全般。 ケイルに不足するエンゲージ性能をカバーし、これらのエンゲージに重要なMSはケイルが補強できる。 相手の真っ只中に飛び込む性質からUltとの相性も良く、キャッチ性能の高さからキャリーを落して時間稼ぎもしやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -939,5 +939,54 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Draven#p57a35f6",
+    "fetched_at": "2026-10-30T09:48:47+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Vayne",
+          "Tristana",
+          "Kaisa"
+        ],
+        "label": "短射程",
+        "text": "序盤の強さを活かしたスノーボールが基本。射程が短いキャリー相手は火力を押しつけやすく、キルに繋ぎやすい。 キルがキルを呼び込む性質上、序盤の射程が重要なのでトリスターナトリスターナにも有利がつく。 ただしカイ＝サカイ＝サについてはミニオンがいない場所ではQに押し負ける危険もあるので、無理に突っ込まないよう注意。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nilah",
+          "Samira",
+          "Yasuo",
+          "Xayah"
+        ],
+        "label": "オールインが強い",
+        "text": "逆にレーン段階の殴り合いがドレイヴン以上に強い相手には不利がつく。 ドレイヴンのAAを無効化することも可能なので火力源を失いがちで、機動力も相手の方が高いので離脱も難しい。 弾速のあるスキルを無効化する相手サミーラヤスオに至っては、その間に殴るとQの斧が消滅してしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Braum",
+          "Alistar",
+          "Poppy",
+          "Thresh"
+        ],
+        "label": "ピーラー",
+        "text": "メインの火力源がAAな都合、ピーラー相手は射程まで近づけないまま終わりやすい。 基本的に硬い相手が多いのでサポート側をキルするのも難しく、何も出来ずに賞味期限が切れがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

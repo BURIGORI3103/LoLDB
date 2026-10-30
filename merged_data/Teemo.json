@@ -1356,5 +1356,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Teemo#z404b39d",
+    "fetched_at": "2026-10-30T09:49:24+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Quinn",
+          "Kayle"
+        ],
+        "label": "AA依存度の高いRanged",
+        "text": "ブラインド効果により、バースト・DPSをAAに依存するRangedには有利。 射程は多少短いながら、相手も長過ぎる訳でもなくCS妨害も比較的得意。 パワースパイクが極端な相手が多いため、序盤に転ばせておくと終始有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Camille",
+          "Renekton",
+          "Jax",
+          "Volibear"
+        ],
+        "label": "AAに依存するファイター",
+        "text": "一気に飛び込んできてAAを用いたダメージを出してくる相手。 キノコで出鼻を挫きつつ、ブラインドでAAを無力化すれば有利に立ち回れる。 集団戦でも同様、AAを絡めたDPSの出力を妨害でき、ティーモの得意な展開に持ち込みやすい。 レネクトンレネクトンは基本スキルファイターだが、CCのWをブラインドでかわすと有利なトレードにできる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ornn",
+          "Sion",
+          "Chogath",
+          "TahmKench",
+          "Malphite"
+        ],
+        "label": "高サステイン",
+        "text": "高いサステインを持ち、序盤からティーモを殴ることも可能なタンク類。 ブリンクを持たないためエンゲージスキルをかわしづらく、掠れば不利なトレードを強いられる。 遠距離からのEハラスもサステインの高さやシールドでかわされてしまう。 総じて繊細なレーニングを強いられ、Gank合わせも得意な相手が多く餌にされやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rumble",
+          "Jayce",
+          "Aatrox",
+          "Mordekaiser"
+        ],
+        "label": "スキルファイター",
+        "text": "AAを用いない、或いはあまり依存しない純スキルファイター。 ブラインドが刺さらない相手にはWがダメージを出せない分競り負けやすい。 キャッチする手段を持つ相手の場合、徒歩勢のティーモは捕まりがちなのも厳しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

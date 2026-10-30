@@ -1359,5 +1359,76 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ekko#ced9694a",
+    "fetched_at": "2026-10-30T09:48:47+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Tryndamere",
+          "Olaf"
+        ],
+        "label": "JG運用: (top)",
+        "text": "即時性の高いCCを持たず、ブリンクも少なく、近接AAでのDPSにダメージ出力を依存する相手。 エコーは高い機動力でヒットアンドアウェイの戦い方ができ、十分な反撃を食らわないので、ダメトレ有利。 すなわち同数戦においてエコー側のほうが取れるキル数の期待値が高いということで、勝ちやすいマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Syndra",
+          "Veigar",
+          "Azir",
+          "Xerath"
+        ],
+        "label": "MID運用: スキルショットに依存",
+        "text": "逃げ性能の低さをバーストやスキルショットのCCでカバーするタイプのメイジ。 相手の拒否をEのブリンクで回避、そのまま逃げ手段を失った相手に2段目で追撃していく。 バーストで返り討ち・相討ちを狙ってくる相手もUltの緊急回避があるため全体的に有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "Khazix",
+          "Talon",
+          "LeeSin"
+        ],
+        "label": "JG運用:",
+        "text": "同等の機動力を持ち、DPSも高めのADアサシンJG。 エコーは1通りコンボを入れた後約5秒間ダメージが出ず、10割削り切る時間は相手の方が早い。 そして相手の機動力も高いためしっかりダメージを入れた後5秒間アウェイするのは難しいので、基本的にタイマン不利。 カウンターJGでのキルを狙ってくる相手も多いので、JG主導権を奪われやすい不利なマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "TwistedFate"
+        ],
+        "label": "JG運用:",
+        "text": "エコーの自衛力の要であるEとUltは釘付けやスネアにより封じられる。敵にこれらがいると捕まえきられるリスクが急激に高まりリスキー。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Akali",
+          "Kassadin",
+          "Sylas",
+          "Yasuo"
+        ],
+        "label": "MID運用:",
+        "text": "高い追撃力を持つスレイヤーの中でもこれら。機動力の差でヒットアンドアウェイが難しいのでキルレーンになりがちだが、そこにおいて勝ちづらい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

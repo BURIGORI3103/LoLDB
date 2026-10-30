@@ -945,5 +945,73 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Dr.Mundo#l25a1470",
+    "fetched_at": "2026-10-30T09:48:47+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Chogath"
+        ],
+        "label": "APタンク",
+        "text": "APタンクのハラス程度であれば余裕を持って耐えきれる回復量を持つ。 仕掛ける手段を単発のCCに依存するため、パッシブの拒否も十分に機能する。 MRのスケールは並以上にあるため、比較的早い段階から殴り合いが可能になるマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Darius",
+          "Volibear",
+          "Renekton"
+        ],
+        "label": "ハードCCで仕掛けてくるレーン番長",
+        "text": "オールインをハードCCに依存するレーン番長。 殴り合いの強さには雲泥の差があるものの、パッシブがある限り拒否が可能。 Qのお陰でタンクとしては珍しく安全な距離からCSは取れるし、割合ダメージなのでボディブロックも難しい。 相手はレーン段階の殴り合いが強い分、スケールはムンドに劣るので徐々に盛り返していける。 一方で、ジャガーノートの中でもアンチタンクの側面を持つモルデカイザーモルデカイザーには明確な有利はつかない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Irelia",
+          "Gwen",
+          "Tryndamere",
+          "Yone",
+          "Kled"
+        ],
+        "label": "CCに強く依存しないスカーミッシャー・ダイバー",
+        "text": "ブリンクを持たないので、機動力が高い対面には追い逃げの主導権を常に握られる。 特に序盤は咄嗟の回復手段が無い上に、主力スキルの消費が固定値な分、相対的に負担が大きくなる。 装備への依存度が高いジャガーノートということで序盤に転ぶと挽回が難しく、総じて勝率が低い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yorick",
+          "Nasus"
+        ],
+        "label": "キャッチ手段がハードCCではないジャガーノート",
+        "text": "ヨリックはヨリック壁、ナサスナサスはウィザーの強力なスローで接近を試みてくる。 これらのCCはムンドのパッシブでは無効化できないため、殴り合いを強制されてしまう。 どちらも最序盤が弱点なのだがムンドではそれを突くことが出来ないのも不利な点。 更にタワー破壊まで速く、一度レーンで不利を背負うと次々とタワーが折られていく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Aatrox"
+        ],
+        "label": "エイトロックス",
+        "text": "やや特殊な例。CCに依存するジャガーノートではあるが、機動力が比較的高め。 ブリンクを持たないのでQに連続で当たりやすく、結果としてパッシブがHealthを消費するだけになりがち。 相手もスケールが大きいのでレーンの不利がそのままゲーム全体への不利に繋がりやすく、総じてかなり厳しいマッチアップ。",
+        "has_caveat": false
+      }
+    ]
   }
 }

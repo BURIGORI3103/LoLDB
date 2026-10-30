@@ -1359,5 +1359,112 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Naafiri#ge9d942a",
+    "fetched_at": "2026-10-30T09:49:08+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zoe",
+          "Leblanc",
+          "Morgana",
+          "Ahri",
+          "AurelionSol"
+        ],
+        "label": "自衛手段が乏しい・非貫通スキルに依存",
+        "text": "ペットにスキルショットをボディブロックさせることが出来るので、非貫通のスキルに依存する相手に強い。 ナフィーリのオールインは対象指定なのでステップでかわすことも出来ず、チャンスを逃さずスノーボールに繋げられる。 特にハラスも非貫通のスキルに依存する相手ゾーイルブランには大きな有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kassadin",
+          "Galio",
+          "Akali"
+        ],
+        "label": "ARが低め",
+        "text": "ADアサシンなので当然ながら、ARの低めな対面に有利がつく。 ナフィーリは追撃の確実性が高く、またPushも比較的早めなのでレーン段階で有利。 元々中盤以降にパワースパイクのある相手が多く、序盤に転ばせると影響が大きい。 ・ジャングル",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "LeeSin",
+          "Graves",
+          "Morgana",
+          "Nidalee"
+        ],
+        "label": "非貫通の攻撃に依存",
+        "text": "こちらもミッドと同じくペットにより相手の攻撃を無力化しやすく有利がつきやすい。 序盤のうちに有利を取っておきたいチャンピオンが多いが、ナフィーリの高い自衛＆追撃性能によりカウンタージャングルの択が取りにくくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Khazix"
+        ],
+        "label": "カ＝ジックス",
+        "text": "特殊な例。カジックスは孤立した敵に高い火力を発揮するが、ナフィーリは群れがいる限り孤立しない。 ほぼすべての時間でタイマン有利なので、積極的にアクションを起こしていきたい。 またナフィーリとカジックスはパワースパイクが中盤型で似ており、その分カジックスは敵が孤立しにくいため集団戦で活躍しづらく、疑似的なフロント性能を持つナフィーリは集団戦で活躍しやすいのも有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Taliyah",
+          "Poppy"
+        ],
+        "label": "アンチブリンク",
+        "text": "追撃性能はブリンクに依存、対象指定不可があるとはいえ離脱もEにある程度依存しているため、それらを封じられると辛い。 特にこの三体はレーンを問わず不利がついている。 ・ミッド",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yasuo",
+          "Yone",
+          "Tristana"
+        ],
+        "label": "etc/主力がAoE",
+        "text": "AoEを主力とする相手は自分がミッドでもジャングラーでも辛い。 ペットを素早く処理された挙句、自分にまでダメージが入るとタイマンで殴り負ける。 Ult以外で仕掛けるのが難しい性質上、拒否手段を複数持つ相手トリスターナもミクロで勝ちづらい。 ・ジャングル",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kayn",
+          "Volibear",
+          "Diana",
+          "Briar"
+        ],
+        "label": "AoEが得意",
+        "text": "やはりミッドと同じくAoEが得意なチャンピオンに対しては勝率は低め。 上記のチャンピオンは加えてタイマンも得意なためできることが少ない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Hecarim",
+          "Nocturne"
+        ],
+        "label": "回復量を数に依存する相手",
+        "text": "展開するペットが逆に相手の回復に繋がってしまう。 レベル6で長距離ブリンクを手に入れるという点で似ているが、それによって得るガンク力はこれらの方が上なのも厳しい。 特にAoEも豊富で集団戦も得意なへカリムヘカリムは大きな不利を背負う天敵。",
+        "has_caveat": false
+      }
+    ]
   }
 }

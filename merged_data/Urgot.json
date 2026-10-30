@@ -942,5 +942,69 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Urgot#of24f7f3",
+    "fetched_at": "2026-10-30T09:49:27+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Garen",
+          "Darius",
+          "Volibear",
+          "Singed"
+        ],
+        "label": "etc/ジャガーノート",
+        "text": "Eを拒否する手段が無い、或いは薄いジャガーノート。 相手の射程が短いのでEを当てやすく、当てさえすれば殴り合いは全チャンピオンでもトップクラス。 更にUltを覚えた後はキルの閾値が下がり、タイマンで大きく有利が取れるようになる。 ダリウスダリウスについてはQを見てから飛び込めるのもポイント。ただし、相手の習熟度が高い場合はスキルマッチアップ寄り。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Riven",
+          "Fiora",
+          "Irelia",
+          "Jax",
+          "Yasuo"
+        ],
+        "label": "スカーミッシャー",
+        "text": "こちらは動作こそ速めではあるが、いずれにせよ射程が短くCSのためにも前に出る必要がある。 逃げ方面の機動力が低い相手が多いので、一度捕まえればそのままキルまで繋げることも可能。 フィオラフィオラはパリィでEやUltを弾いてくるので、そこだけは一応注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "DrMundo",
+          "Olaf",
+          "Warwick",
+          "MonkeyKing",
+          "Kayle",
+          "Vayne"
+        ],
+        "label": "etc/仕掛けを拒否",
+        "text": "トレードを仕掛ける手段であるEに対する回答があるチャンピオン全般。 基本的に発生が遅いEを当てなければダメージを出せない都合、加速やブリンクでかわされやすい。 逆に相手はアーゴットよりもスケールの高い場合が多く、レーン段階から有利を取る必要が無いのも拍車をかける。 オラフオラフについてはアーリー寄りだが、EだけでなくUltの処刑まで弾かれる上に殴り合いがアーゴット以上に強いのでやはり不利。 ワーウィックワーウィックはアーゴットのEのシールドが貼られたタイミングでQを発動されるとKnock Asideが起きず、パッシブAAが発動できないまま殴り合いをすることになり、レベル6前は相手が理解している場合は非常に不利。Rにもリープ時に行動妨害無効が付いているので、こちらはタイミングがシビアにしても、それまでに差を付けられると、しばらくはタイマンでも試合全体でも不利を背負うことになる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "Poppy",
+          "Sion"
+        ],
+        "label": "タンク",
+        "text": "アーゴットは基本的にミドルゲームキャリーのため、レーン段階で一定の有利を取りたいが差をつけきれずに終わりがち。 また、致命的なアンチアイテムであるソーンメイルをこちらの武器より先に完成させてくることからすぐに力関係が逆転する。 なんならブランブルベストの時点でつらい。当たり判定が大きく鈍足のアーゴットに対して、タンクの大振りなCCスキルはまさにカウンター。",
+        "has_caveat": false
+      }
+    ]
   }
 }

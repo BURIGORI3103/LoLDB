@@ -1210,5 +1210,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Qiyana#n1e3255e",
+    "fetched_at": "2026-10-30T09:49:13+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xerath",
+          "Ziggs",
+          "AurelionSol",
+          "Viktor",
+          "Syndra"
+        ],
+        "label": "etc/機動力の低いメイジ",
+        "text": "基本はADアサシン。ということで機動力の低いメイジ系に有利。 茂みQのステルスにより拒否手段を無視しやすく、耐久力も低いのであっさりキルが可能。 キヤナのロームについてくることも出来ないので、有利を他レーンに還元しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zed",
+          "Talon",
+          "Naafiri"
+        ],
+        "label": "誘導しやすい",
+        "text": "Ultの壁ドンが決まれば大抵のアサシンに勝てる性能を持つ。 これらは壁超えを多用したり、対象指定のブリンク＝壁際に誘導しやすいのでUltを決めやすい。 集団戦においてもキヤナの方が影響力が高いため、レーン段階で勝ちきれずとも問題なく勝ちに繋げられる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "Pantheon",
+          "Swain",
+          "Diana"
+        ],
+        "label": "etc/バーストに強い",
+        "text": "ダメージの出力そのものは普通にバースト型のアサシン。耐えて反撃を狙われると厳しい。 集団戦の得意な相手が多いのでレーン段階をなあなあで過ごしてもあまり意味が無く、徐々に差をつけられてしまう。 パンテオンパンテオンについては終盤のスケールこそ高くないが、キヤナの得意とするロームにUltでついてくる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vex",
+          "Poppy",
+          "Taliyah"
+        ],
+        "label": "アンチブリンク",
+        "text": "W・Eのブリンクによる接近からバーストを叩き込むのが基本。必然的にブリンクに強い相手は苦手。 ただし、この手のチャンピオンの代表例でもあるカシオペアカシオペアについては茂みQで相手のDPSを透かせる。 接近を防がれたとしてもWのCDは長いので次のチャンスを伺えばよく、耐久力も低いのでむしろ大きな有利がつく。",
+        "has_caveat": true
+      }
+    ]
   }
 }

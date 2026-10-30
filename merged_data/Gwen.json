@@ -1771,5 +1771,80 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Gwen#v3a0a596",
+    "fetched_at": "2026-10-30T09:48:52+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "DrMundo",
+          "Chogath",
+          "Sion",
+          "Malphite",
+          "Maokai"
+        ],
+        "label": "etc./タンク",
+        "text": "割合ダメージとTrueダメージにより、耐久力の向上が意味を為しづらい。 特に逃げ手段をCCに頼る相手はCCを打ち込んだ瞬間にW、Eで回避できるため有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Illaoi",
+          "Yorick",
+          "Mordekaiser"
+        ],
+        "label": "地点・方向指定スキルが重要なジャガーノート",
+        "text": "概ね理由は同様。ブリンクで回避できるスキルが主力の相手に強い。 そうでないジャガーノートも耐久重視のビルドをする相手には有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Velkoz",
+          "AurelionSol",
+          "MissFortune",
+          "Brand",
+          "Zyra"
+        ],
+        "label": "長射程AoE",
+        "text": "集団戦における役割が遠距離からのAoEスキルに偏重している相手。 Wのフィールドにいれば基本的に巻き込まれないため動きやすく、勝率有利。 体力の高いスウェインスウェインに関しては割合ダメージも刺さる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yone",
+          "Riven",
+          "Jax",
+          "Tryndamere",
+          "Jayce"
+        ],
+        "label": "スカーミッシャー",
+        "text": "多くのスカーミッシャー。相手はほぼ武器しか積まないので割合ダメージ・確定ダメージがあまり意味ない。 機動力でQやRを避けられたり、QのスタックやWのない弱いタイミングに機動力で仕掛けられたりもする。 これらが持つハードCCも、AA回数が重要なグウェンに刺さる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed"
+        ],
+        "label": "シンジド",
+        "text": "パッチを問わずワーストクラスの勝率を記録しているハードカウンター。 釘付けによりブリンクが封じられるのも辛いが、AAをしないとダメージを出し切れないグウェンはそれをしようとするとシンジドの毒をモロに食らってしまう。 逆にシンジドから仕掛けてきた場合も、チャンピオンへの接近で足が速くなるシンジドはすくいなげをした後グウェンから即座に離れることが可能で、QはおろかAAすらもまともにさせてもらえない。 集団戦でも釘付けの影響は大きく、またハードCCを持たないグウェンでは足が速いシンジドを止めることもできず、時間帯問わずかなり厳しい相手。",
+        "has_caveat": false
+      }
+    ]
   }
 }

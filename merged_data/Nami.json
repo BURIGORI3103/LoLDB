@@ -933,5 +933,85 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Nami#p8f4ba28",
+    "fetched_at": "2026-10-30T09:49:08+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Nilah",
+          "MissFortune",
+          "Vayne",
+          "Xayah"
+        ],
+        "label": "短射程",
+        "text": "有効射程の短いADC全般。対象指定、かつ射程の長めなWによりハラスを容易に重ねられる。 仮に強引に接近してきても進路にQやUltを置けばディスエンゲージも簡単。 パッシブの加速もあるため、特にブリンクを持たない相手には安全マージンを取りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Taric"
+        ],
+        "label": "時間制限のあるUlt",
+        "text": "一定時間だけ強烈に強くなるタイプのUltに依存するサポート。 いずれもUltの広範囲かつ確実性の高いディスエンゲージで戦線をリセットできる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Leona"
+        ],
+        "label": "キャッチャー",
+        "text": "キャッチャー全般。基礎ステータス高めとはいえ所詮はヒールサポートであり、バーストには弱い。 オールインを受ける側に回るとCDの長さから競り負けやすく、加速はあれど徒歩なので捕まりがち。 2vs2で有利をとりたいnamiに対して常に3vs2をちらつかせてくる天敵。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Milio"
+        ],
+        "label": "に関してはやはりUltがネックだろう。スケールはさしてよくないが、シールドでWをしのがれやすいのと",
+        "text": "射程延長が後半になるほど効いてくるのが痛い。延長されたAAは加速では避けられないのだ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lucian",
+          "Yasuo",
+          "Vayne",
+          "Nilah"
+        ],
+        "label": "短射程ADC",
+        "text": "射程の短いADC。対面に来た時には有利だが、逆に相方に来ても勝率が上がる。 機動力をパッシブにより後押しして、トレードに持ち込んだらスローを活かしてQを当てる。 逆にQを素当てしたときに合わせられる機動力も備えており、総じて相性が良い。 前に出てくれた方が相手と味方の間でWが跳ねやすいのもポイント。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lucian"
+        ],
+        "label": "と並び別格の組み合わせ。",
+        "text": "お互いユーティリティに富んでいることから極めて柔軟な立ち回りが可能であり、 序盤が強いお陰でアフェリオスの弱い時間帯を埋めやすい。スノーボール志向なのも合致。 特筆すべきは通常スキルでスネアを持っていること。低レベルから強力なCCチェインを狙える。",
+        "has_caveat": false
+      }
+    ]
   }
 }

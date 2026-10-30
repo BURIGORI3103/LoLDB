@@ -943,5 +943,69 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Fiora#xbc2e660",
+    "fetched_at": "2026-10-30T09:48:49+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "KSante",
+          "Ornn",
+          "Chogath",
+          "DrMundo"
+        ],
+        "label": "タンクおよびそれに近いジャガーノート",
+        "text": "パッシブが最大Health割合のダメージを与えつつ自身を回復するため、火力の控えめなタンク系に強い。 相手の得意とするCCに対してもWを合わせられればスタンにより、逆に自分の起点として利用することも可能。 いずれもCCの発生は遅めのため、多少反応が遅れてもパリィが間に合うのも有利な要素。 例外はマルファイトマルファイト。フィオラ側のAS依存度が高いので殴り合いで勝てず、一方的に圧がかかる。 パリィでスタンになるCCもUltしか無く、発生が早い上に集団戦ではフィオラ以外を狙っても問題が無いので非常に辛い。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Mordekaiser",
+          "Aatrox",
+          "Kled",
+          "Irelia"
+        ],
+        "label": "CCのモーションが悪い",
+        "text": "Wのパリィは移動不能CCを無効化するとスタンが追加。それらのモーションが鈍重で合わせやすい対面に有利がつく。 Qで急所を突きつつ相手が反撃しようとCCを仕掛けてきたらタイミングを合わせてW、追撃しつつ更なる反撃が来る前に離脱。 実質的にスキル１個分の差がつくので概ねの時間帯で有利だが、Ultのタイマン性能が高い相手は6からしばらく不利なケースも。 特にモルデカイザーモルデカイザーについてはEとUlt、どちらを弾くかの判断はデスを回避するためにも非常に重要となる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vladimir",
+          "Jayce",
+          "Kayle",
+          "Akshan",
+          "Quinn"
+        ],
+        "label": "etc/Ranged全般",
+        "text": "接近手段はQのリープ＋パッシブの加速のみ。Qは距離が短くパッシブは急所を突く＝接近が必要。 いずれにせよRanged相手に接近しつつ殴り勝つのが難しく、相手のハラスに対する反撃としても不十分。 Gank合わせが弱いため森の介入も難しく、一方的にダメージを受け続け差をつけられたままレーンを終える羽目になりがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renekton",
+          "Darius",
+          "Warwick",
+          "Skarner",
+          "Udyr"
+        ],
+        "label": "レーン段階が強いジャガーノート・ダイバー",
+        "text": "いわゆるレーン番長。CCの発生が遅い相手はともかく、早い相手はWを合わせづらくそのまま食らいがち。 フィオラはAoEも遠距離攻撃もない以上、序盤から強い対面にはレーン段階での主導権を握りづらい。 不利な状況でのファームも苦手でGank合わせも弱いため、そのままずるずると腐らせられがち。 一応CCに合わせたパリィに連続で成功すればトレードに勝ち、逆にスノーボールに繋ぐことも可能だが基本は不利。",
+        "has_caveat": false
+      }
+    ]
   }
 }

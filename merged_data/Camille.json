@@ -1359,5 +1359,41 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Camille#qadebb29",
+    "fetched_at": "2026-10-30T09:48:44+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "Garen",
+          "Nasus",
+          "Trundle",
+          "DrMundo"
+        ],
+        "label": "DPS型のジャガーノート",
+        "text": "機動力に欠けるジャガーノートはカミールのヒット&アウェイを咎めることが出来ない。 ショートトレードはシールドと確定ダメージで得意なため、タンク寄りのジャガーノートは全体的に有利。 タイマンを制してスケール、Splitを成立させる基本の勝ち筋をなぞりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Teemo",
+          "Jax",
+          "Shen"
+        ],
+        "label": "AA無効",
+        "text": "トレードの基本はパッシブで反撃を防ぎつつQで優位を取る形。 いずれもAAが必要なため、AAを無効化する相手にはダメージが不足してしまう。 とはいえUltの強制力により、Gankを貰えれば勝てるようになるぐらいのポテンシャルはある。 構成やドラゴンの状況にもよるが、積極的に森を呼ぶ意識はしておきたい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

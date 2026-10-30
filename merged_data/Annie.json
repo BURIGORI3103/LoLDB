@@ -942,5 +942,51 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Annie#t5839e03",
+    "fetched_at": "2026-10-30T09:48:39+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yone",
+          "Yasuo",
+          "Vex",
+          "Malzahar"
+        ],
+        "label": "短射程",
+        "text": "有効射程が短い相手全般。確実性の高いスタンを決めやすく、バーストで一気に仕留めきることが出来る。 特にダメージ出力がDPS型の相手はEのシールドやスタックの獲得が間に合いやすく有利。 シールドは味方に付けることも出来るので、味方が狙われても補助しつつカウンターを仕掛けることが出来る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Talon",
+          "Diana",
+          "Galio"
+        ],
+        "label": "([[Qiyana]])/APに強い",
+        "text": "高いMRやシールドにより、APバーストへの耐性が高い相手。 一気に溶かせないとCD中はほぼ何も出来なくなるため、相手の反撃で落されてしまいがち。 アサシンについてはパッシブを消費した瞬間に接近されると為す術が無くなるのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Anivia",
+          "AurelionSol"
+        ],
+        "label": "([[Cassiopeia]][[Viktor]][[Syndra]])/ゾーンコントロール",
+        "text": "メイジとしては射程が短いため、射程が長い相手は基本的に不利。 特にPushの早い相手は気軽に使えるAoEがWしか無い点を突かれて一方的に動かれがち。 レイトゲームが強い相手が多く、レーン段階で差を付けきれずに成長曲線で上回られる。 シンドラシンドラに至ってはティバーズをWで捕まえてあちらの武器にされてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

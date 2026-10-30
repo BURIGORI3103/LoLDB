@@ -1351,5 +1351,91 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/LeBlanc#ec05f61f",
+    "fetched_at": "2026-10-30T09:49:01+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Talon",
+          "Tryndamere",
+          "Pantheon",
+          "Yone"
+        ],
+        "label": "遠距離攻撃手段に乏しい",
+        "text": "優秀なブリンクとEのスネアにより間合いを管理するのが得意なため、大半のMeleeは一方的に殴れる。 特に追撃手段や有効な反撃を持たない相手には返り討ちのリスクも減らせる。 ウェーブ処理は早い相手も多いので、そもそも触れないぐらいまでHealth差をつける意識を持ちたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Velkoz",
+          "Xerath",
+          "Lux",
+          "AurelionSol",
+          "Orianna"
+        ],
+        "label": "機動力・自衛力が低いメイジ",
+        "text": "べた足メイジのうち、拒否手段の確実性が低いこれら。 多段ブリンクによりスキルを回避して接近、バーストを出すという基本戦法を狙いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nocturne",
+          "Nunu",
+          "Evelynn"
+        ],
+        "label": "逃げ性能が低くCCの発生が遅いスノーボールGanker",
+        "text": "序盤から高性能なブリンクを使用できるため、こういったCCの発生が遅いJGによるGank・キャッチはかなり刺さりづらい。 これは特にGank・キャッチを繰り返しスノーボールする必要があるJGにとっては選択肢が狭まるだけでも厳しいものとなる。 また相手は逃げ性能が低いので、ルブランが隙を見て森に入って殺しにいくのも刺さりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malzahar",
+          "Lissandra",
+          "Vex",
+          "Ahri"
+        ],
+        "label": "Pushが早めで、即時発動のCCを持つ",
+        "text": "Pushが早め、かつ入ったルブランを瞬時にキャッチ出来る対面。 バーストには差があるのでレーン段階のオールインでは勝てても、Push性能に差があるため自由にロームが出来ない。 そもそもルブランが入ったところで反撃を仕掛けやすいということでもあり、別にレーン段階でも有利な訳ではない。 特にヴェックスヴェックスはブリンクに反応してバーストが伸びる＆CCのCDが短縮されてしまい、シールドも持つためトレードでも勝ちきれずかなり厳しい対面。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Galio",
+          "TwistedFate",
+          "Ryze",
+          "Akshan"
+        ],
+        "label": "Pushが早くロームが得意",
+        "text": "同じくPush性能に差がある対面だが、こちらはルブランを止めるのではなくサイドレーンを育ててくる。 ルブランのアサシン性能はバーストで落とせることが前提のため、レベルや装備による対策が容易。 キルやタワープレートで資金差をつけられてしまえば、得意の展開に持ち込むのはほぼ不可能になってしまう。 ガリオガリオは耐久力が高くオールインも強いので、仮に上手くコンボをたたき込めても反撃を食らえば負けかねない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mel",
+          "Naafiri"
+        ],
+        "label": "方向指定に強い",
+        "text": "ダメージを最大限出すためにはEを当てる必要があるが、これらはそれを防いでくる。 Eはルブランが持つ唯一のCCでもあるのでかわされてしまうと厳しい。 メルメルは逃げ性能の低さがルブラン側に有利に働く分圧倒的に不利というわけではないが、ナフィーリナフィーリはヴェックスヴェックスと並んで最悪のカウンター。",
+        "has_caveat": false
+      }
+    ]
   }
 }

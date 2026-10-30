@@ -1355,5 +1355,82 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Varus#a8f83434",
+    "fetched_at": "2026-10-30T09:49:27+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Aphelios",
+          "KogMaw",
+          "Smolder"
+        ],
+        "label": "短射程レイトキャリー",
+        "text": "AA・スキル共に射程が長いため、これらの射程外から一方的にハラスを重ねられる。 逃げ性能の低い相手アフェリオスコグ＝マウはUltを咄嗟に避ける手段も無く、レーン段階から勝ちやすい。 レイトキャリー相手はヴァルスがスノーボールを狙いやすい点も含め、レーンでの有利が集団戦まで良い影響を与える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sivir",
+          "Xayah",
+          "Zeri",
+          "Kalista"
+        ],
+        "label": "機動力が高い",
+        "text": "機動力の高いADC全般。スキルの発生までにやや間があるためかわされがち。 シヴィアシヴィアについてはUltをEで透かす選択肢もあるので有利を築ききれない。 集団戦でのKite性能・DPSに大きく差があり、トントンの育ちでは徐々に不利を背負い始める。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Pyke",
+          "Bard",
+          "Blitzcrank",
+          "Alistar"
+        ],
+        "label": "キャッチャー",
+        "text": "ヴァルスは逃げ性能は徒歩、かつスキルの発動時に足が止まりやすい。 射程の長いフックやキャッチ系のスキルに捕まりやすく、一度捕まれば逃げようがないので不利。 ただしヴァルス側も小まめなハラスが可能なため、サステインが低い相手スレッシュノーチラスには明確な不利はつかない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Taric",
+          "Soraka",
+          "Lulu",
+          "Senna",
+          "Janna"
+        ],
+        "label": "エンチャンター",
+        "text": "逃げ性能の不足するヴァルスの短所をカバーしてくれるエンチャンター全般。 逆にエンチャンターに不足するエンゲージ性能をUltで担保できるので相性が良好。 ただし逃げ性能の低さが二重にのしかかってくるユーミユーミとは相性が悪い。",
+        "has_caveat": true
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lux",
+          "Zyra",
+          "Brand",
+          "Hwei",
+          "Velkoz"
+        ],
+        "label": "メイジサポート",
+        "text": "逃げが弱い短所が重なるべた足メイジサポート。Gankや対面のオールインに為す術がなくなる。 基本的にレーン段階のハラスは片方だけで十分に可能な能力を持つので、シージ過多になりがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

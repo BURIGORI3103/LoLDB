@@ -1354,5 +1354,44 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Syndra#pb85b3da",
+    "fetched_at": "2026-10-30T09:49:23+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Veigar",
+          "Annie",
+          "Vex",
+          "Ryze",
+          "Neeko",
+          "Malzahar"
+        ],
+        "label": "短射程メイジ",
+        "text": "シンドラはハラス射程が長めで強力なノックバックを持つため、短射程メイジ相手は無理な接近はノックバックで拒否する前提でハラスを重ね、安定したレーニングを行いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Katarina",
+          "Irelia",
+          "Ekko",
+          "Fizz",
+          "Qiyana"
+        ],
+        "label": "アサシン、特に多段ブリンクやバーストカット持ち",
+        "text": "シンドラの唯一の自衛スキルであるEはCDが長いため、多段ブリンクでEを使わされてから再び接近されると一気に窮地に陥る。 またソロキルには数値的にUltがほぼ必須だが、ダメージが入り切るまでが長いので、エコーのRやフィズのEといった無敵スキルで容易にダメージスキップされる。 ※LoLalytics 13.16-13.20 Global Eme+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -1445,5 +1445,53 @@
         "confirmation": "source_confirmed"
       }
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Aatrox#p36e782f",
+    "fetched_at": "2026-10-30T09:48:37+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "DrMundo",
+          "Nasus",
+          "Trundle",
+          "Sion",
+          "Teemo"
+        ],
+        "label": "etc/瞬間的な機動力が低い",
+        "text": "主力であるQのモーションが長く、機動力の高い相手にはかわされやすい。 逆説的に、瞬間的な機動力の低い相手はスイートスポットに連続で当てやすく、強烈なダメージとCCを叩き込める。 主にジャガーノートやタンクだが、一部を除く対面に来るRangedにも有利がつく。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fiora",
+          "Irelia",
+          "Riven",
+          "Vayne",
+          "Kennen"
+        ],
+        "label": "etc/瞬間的な機動力が高い",
+        "text": "ということで、逆に瞬間的な機動力の高い相手はQのスイートスポットをかわされやすい。 スキルファイターでありながら序盤は全てのスキルのCDが長く、咄嗟の逃げ手段も乏しいのでKiteされたり懐に潜り込まれると弱い。 特にフィオラフィオラはQ・WにCCがついている分、パリィからスタンに繋がる危険性が非常に高いハードカウンター。 イレリアイレリアに関してもQ1-2は簡単に潜り込まれてしまい、Q3も割合ダメージ軽減で受けられてしまいトレードが成立しない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed"
+        ],
+        "label": "シンジド",
+        "text": "特殊な例。Meleeかつブリンクも無いが、歩きながらCS・トレードが可能なのでまともにスキルが当たらない。 ミニオン相手のサステインが貧相なため、プロキシされるとミニオンを処理しようとするだけでタワーや自身の体力が削れていく。 仮に接近出来たとしてもUlt＋Qに重傷が付いており、交戦中のサステインまでも下げられてしまうため基本的にどうしようもない。 トップAPのためにやや構成が崩れやすい以外の弱点を突きづらく、逆にエイトロックスの短所を突かれやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

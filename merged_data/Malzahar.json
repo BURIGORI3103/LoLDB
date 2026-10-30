@@ -1355,5 +1355,70 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Malzahar#i4bee443",
+    "fetched_at": "2026-10-30T09:49:05+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Leblanc",
+          "Akali",
+          "Yasuo",
+          "Vladimir",
+          "MasterYi"
+        ],
+        "label": "etc/射程が短い",
+        "text": "メイジとしては射程が短いが、これらの相手はその射程に入らないとマルザハール以上に何も出来ない。 対象指定かつ長時間CCのUltにより、機動力の高さもほぼ無視してキャッチ。防御スキルを使わせずにキル出来る。 序盤を除いて相手の方がPushも遅くなるので、仕掛けずにいても単にCS・タワープレートの差が出来るだけ。 AP相手は苦手なサッシュを積みづらいのもミソ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zoe",
+          "Sylas",
+          "Blitzcrank",
+          "Pyke",
+          "Nautilus"
+        ],
+        "label": "etc/非貫通・方向指定スキル",
+        "text": "短いCDでペットを出せるため、非貫通の方向指定スキルをボディブロックさせやすい。 仮にブリンクで角度を変えられたり、反応が遅れてもパッシブが残っていればバーストやCCを防げる。 べた足メイジでありながらキャッチされづらく、対面の他それらに依存しがちなキャッチャー相手に有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Smolder",
+          "Sion",
+          "AurelionSol",
+          "TwistedFate"
+        ],
+        "label": "ユニットのキルでスケール",
+        "text": "Push・トレードの性能をペットに依存するが、これらはそのペットをスタックに変換してくる。 通常よりも早くスケールされてしまい、レイトキャリーが多いためパワースパイクで常に上回られる。 フェイトツイステッド・フェイトについてはスタックではないが、ゴールドを多く稼がれるのでやはり不利。 かといってペットを出せないとPushが遅れ、トレードも弱いので結局腐ってしまい、レイトスケールは相手の方が大きい。 特にサイオンサイオンは耐久力が高いのでEの連鎖を無理矢理受け止められるため、本当に何も出来ない。 例外として、ベイガーベイガーはQが方向指定かつ貫通する数に制限があるためスタックは稼がれるが火力を防ぐことが出来る。 有効射程を考えるとUltでのキャッチも十分に狙えることもあり、むしろ多くのパッチでやや有利がつく。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Viktor",
+          "Swain",
+          "Ziggs",
+          "Xerath",
+          "Velkoz"
+        ],
+        "label": "アーティラリー・ゾーンコントロール",
+        "text": "CCの確実性が高い分、射程はバトルメイジとしても短めな部類で一方的なハラスを受けやすい。 序盤の弱さを突いてゾーニングされれば何も出来ず、相手のスケールばかりを許してしまう。 序盤が弱い相手ビクタースウェインもいるが、それはマルザハール側も同様。 順調にスケールされると集団戦での性能で劣るため、なあなあで過ごしたところで解決しない。 マルザハールがPush出来る頃には相手のPush性能も高くなっており、Pushだけ作って森で優位をとるのも難しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

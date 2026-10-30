@@ -934,5 +934,75 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Karma#k91f6797",
+    "fetched_at": "2026-10-30T09:48:57+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Talon",
+          "Sylas",
+          "Ekko",
+          "Diana"
+        ],
+        "label": "",
+        "text": "機動スキルを繰り返し使うことができずバーストコンボが長めなMelee。 機動スキルで接近された際まずはEでシールドを張りつつ加速で距離を取ることでコンボが成立しないようにするべし。 そのままWでスネアにしQとAAでダメージを返すことで安定して有利なレーニングができる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vex",
+          "Vladimir"
+        ],
+        "label": "",
+        "text": "Rangedのメイジだがダメトレに接近が必要なもの。 ↑と同様にレーン戦有利。 sup運用:",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Brand",
+          "Morgana",
+          "Velkoz",
+          "Lux"
+        ],
+        "label": "",
+        "text": "メイジsup。 カルマはEのシールド+加速により味方のADCをハラスから守るのが得意、かつこちらから強いハラスを行えるため有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Syndra"
+        ],
+        "label": "",
+        "text": "セーフファーム可能なレイトキャリー。 sup運用:",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Sona"
+        ],
+        "label": "",
+        "text": "スケールの大きいエンチャンター。 ※LoLalytics 14.2-14.4 Global Eme+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

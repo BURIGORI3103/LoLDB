@@ -942,5 +942,53 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Riven#ldc0f202",
+    "fetched_at": "2026-10-30T09:49:16+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Gwen",
+          "Irelia",
+          "Yone"
+        ],
+        "label": "AA主体のスカーミッシャー",
+        "text": "CCで固めながらダメージを叩き込むリヴェンの動きは、特にAA主体のスカーミッシャー相手に刺さる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Quinn",
+          "Kennen",
+          "Jayce",
+          "Vayne"
+        ],
+        "label": "ハードCCでの拒否を持つRanged",
+        "text": "リヴェンは多段ブリンクを持つものの、1個1個の距離が短いため、ハードCCで中断されるとRanged相手に接近しきれない。 リヴェンはサステインスキルも持たないので、一方的なハラスで削りきられレーン負けやすいマッチアップ。 ちなみに拒否がハードCCでないブラッドミアケイルティーモ相手は多段ブリンクを途中で止められることがなく十分接近してダメージを与えれるので、勝率微有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renekton",
+          "Pantheon",
+          "Urgot"
+        ],
+        "label": "スタンからのショートトレード",
+        "text": "リヴェンはダメトレが強いといっても、レネクトンやパンテオンが行うスタンからのショートトレードは普通に食らう。 ロングトレードを強制するような性能も遠距離ファーム手段もないのでショートトレード勝つ必要があるリヴェンにとって難しいマッチアップ。 ※LoLalytics 12.20-13.1 Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

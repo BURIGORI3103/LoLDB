@@ -942,5 +942,64 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rengar#r5df3a78",
+    "fetched_at": "2026-10-30T09:49:16+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Khazix",
+          "Shaco",
+          "Talon",
+          "Evelynn"
+        ],
+        "label": "ステルスアサシン",
+        "text": "バーストを受けてもWで持ちこたえられるので、基本的にアサシン同士のタイマンは有利。 特にステルスを活用する相手にはUltの視界確保も刺さり、先手も取りやすい。 茂みが多い森の中では機動力も上。カウンタージャングルによるキルも狙いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lillia",
+          "Ivern",
+          "Taliyah"
+        ],
+        "label": "Rangedジャングラー",
+        "text": "Ranged相手も原則として有利。基本的にステータスが低く、バーストを耐える性能に乏しい。 パッシブのリープにより逃げ・拒否スキルを使われても強引に追いつき、キルまで繋ぐことが可能。 アイバーンアイバーンについては相手の作る茂みをレンガー側が利用できるのも優位点となる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rammus",
+          "Sejuani",
+          "Zac"
+        ],
+        "label": "タンクジャングラー",
+        "text": "Ultを覚えるまでGank性能が今ひとつなので、序盤のアクションは相手のジャングラーに向けるものになる。 そのタイミングで発見してもキルに繋げられないタンク相手はスケールにブレーキがかかる。 相手のファームを妨害することが出来ても、互いに腐った場合の存在感はCCのあるタンク側が上回るため勝率不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "LeeSin",
+          "XinZhao",
+          "JarvanIV"
+        ],
+        "label": "序盤の強いダイバー",
+        "text": "序盤はGank性能が低めなため、序盤から積極的なGankを狙える相手にはゴールド差をつけられがち。 カウンタージャングルしようにもタイマンで負ける状況になるとむしろ追い返されてしまい、存在感を出せない展開に陥りやすい。 逃げ性能が低いため逆にカウンターされる危険もあり、特にステルス看破を持つ相手はUltを使ってすら逃げられなくなりかねない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

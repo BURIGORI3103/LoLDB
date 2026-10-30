@@ -1349,5 +1349,62 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Zoe#mcb64ddd",
+    "fetched_at": "2026-10-30T09:49:36+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Pantheon",
+          "Zed",
+          "Vladimir"
+        ],
+        "label": "(mid)/Eを当てやすい・防御スキルの効果時間が短い",
+        "text": "基本はEを当て、長距離を移動させたQでワンコンバーストを叩き出す。 ゼドゼドはUltを使用した時にEを合わせやすく、追撃を防ぎながら反撃でワンコンを狙える。 他の面子も防御スキルの効果時間がEの効果時間よりも短いため、Eに当たったが最後ダメージを防ぐ手段が無くなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malzahar",
+          "Naafiri"
+        ],
+        "label": "ペットによるボディブロック",
+        "text": "ダメージのQもCCのEも弾速のある非貫通方向指定スキル。 召喚したペットにスキルショットを吸わせてくる相手にはとにかく手出しすることが困難な一方、相手からは普通にハラスされる。 相手はPushも早いのでタワーに押しつけられながらCS差をつけられ、ジリ貧になってしまいがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kassadin",
+          "Irelia",
+          "Gangplank"
+        ],
+        "label": "ステータス差・バースト回避",
+        "text": "いくら殴り合いが強いとはいえ、流石にアンチAPのカサディンや普段topで使われるイレリアガングプランク相手に殴り勝てるわけではない。 Ult取得後のカサディン相手は寝かせても高性能なブリンクによりコンボを入れづらく、イレリア相手はゾーイのRの戻りにEを合わせられ、ガングプランク相手はWでCCそのものを解除される。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Katarina",
+          "Talon",
+          "Diana"
+        ],
+        "label": "Pushの早いアサシン・ロームが得意",
+        "text": "ゾーイはミニオンブロックに弱いにも関わらずPush力は並、あるいはそれ以下。 したがってPushの早いアサシンにミニオンを盾にウェーブクリアしてロームする動きをされると、後手後手になってしまう。 中盤以降も、相手の多段ブリンクから逃げ切れる程の機動力をゾーイは持たないため危険。 ※LoLalytics 13.15-13.20 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

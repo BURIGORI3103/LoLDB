@@ -1357,5 +1357,54 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ambessa#ua481bd6",
+    "fetched_at": "2026-10-30T09:48:38+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "DrMundo",
+          "Sion",
+          "Urgot",
+          "Nasus",
+          "Chogath"
+        ],
+        "label": "etc/ジャガーノート",
+        "text": "機動力の低いジャガーノート全般。スキルに付属するブリンクで追撃も逃走も自由自在。 CCが薄いか発生の遅い相手にはやや間のあるブリンクでも十分にスキルドッジを狙えるので有利がつく。 一方で序盤から強く、キャッチ手段のある相手ダリウスモルデカイザーはトントンから微不利程度で落ち着く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renekton",
+          "Camille",
+          "Tryndamere",
+          "Irelia",
+          "Kled"
+        ],
+        "label": "ダイバー・スカーミッシャー",
+        "text": "序盤のCDが長いのでトレードを挑めるタイミングが分かりやすい。 そこで仕掛けることが出来て、かつ序盤から殴り合いを挑めるダイバーやスカーミッシャーに不利。 スノーボーラーが多いので一度デスしてしまうと雪崩式に負けが込み、本人もスノーボーラーなため存在感が無くなってしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Poppy",
+          "Singed"
+        ],
+        "label": "アンチブリンク",
+        "text": "パッシブのブリンクが追撃・逃走のどちらにも重要。必然的に対面に来るブリンク対策を持つ相手には不利となる。 回復阻害のアイテムも自然と積める（シンジドシンジドに至ってはUltを発動するだけで付与される）のでサステインも活かしづらい。 基本的にレーンからのスノーボールを狙う都合、他のレーンに出てくる相手カシオペアタリヤには不利がついていない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

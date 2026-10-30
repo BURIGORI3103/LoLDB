@@ -939,5 +939,104 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Aphelios#tfa75f72",
+    "fetched_at": "2026-10-30T09:48:40+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vayne",
+          "Kaisa",
+          "Tristana",
+          "Xayah"
+        ],
+        "label": "序盤のハラスが弱い",
+        "text": "ハラス性能が低いマークスマン全般。武器の順序が整っておらず、装備も乏しい序盤に仕掛けられづらい。 序盤さえ凌げば後半にはこれらの脆い相手は瞬時に溶かすことも可能となり、総じて対峙しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ziggs",
+          "Hwei",
+          "Seraphine",
+          "Xerath",
+          "Velkoz"
+        ],
+        "label": "etc/長射程メイジ",
+        "text": "射程の延長される緑でもメイジのスキルよりAA射程が短く、Pushされると射程の長い緑Qも当てづらい。 機動力と耐久力も不足するのでマナが切れる前にHealthを削り切られやすく、腐りがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Pyke",
+          "Blitzcrank",
+          "Leona",
+          "Ashe",
+          "Varus"
+        ],
+        "label": "キャッチ",
+        "text": "機動力が低い都合、これらのキャッチ手段を持つ相手には捕まりやすい。 防御ステータスは普通に低く、自衛スキルもスネア止まり、DPS型のためオールインされると非常に辛い。 ADCは比較的射程が長いので緑以外でのレーニングが難しく、タンクサポートには防具で対策される。 パワースパイクの高まる中盤以降のアフェリオスに対しても一定の回答があり、総じて不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nami",
+          "Soraka",
+          "Janna",
+          "Renata"
+        ],
+        "label": "エンチャンター",
+        "text": "理由は概ね同様。アフェリオスの苦手なオールインに回答のあるピーラーを中心に、一部を除くエンチャンター。 AA依存度が高いのでAS補助やAA強化との相性も良く、バフを活用しやすいのも追い風。 特にナミナミはスキル構成のユーティリティが高く、同じく戦術の幅が広いアフェリオスと組めば対面との相性に左右されづらくなる。",
+        "has_caveat": true
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nautilus",
+          "Leona",
+          "Rakan"
+        ],
+        "label": "飛び込むタイプのキャッチャー",
+        "text": "キャッチの際に敵陣に飛び込むタイプのキャッチャー全般。得意とするオールインにアフェリオスが合わせられない。 集団戦でも敵陣に突っ込むのが役割になりやすく、アフェリオスが取り残されアサシンの餌食になりがち。 ピールを意識して動けば相性は悪くないが、その前提であれば最初から純粋なワーデンを使った方が早い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Taric",
+          "TahmKench",
+          "Braum",
+          "Thresh"
+        ],
+        "label": "ワーデン",
+        "text": "守りに特化しており、本人の耐久力も高いのでキャッチャー相手に有利。 なのだが、能動的に攻める手段が乏しくタンク以外ほぼ全てのサポートから熾烈なハラスを受けてしまう。 元より先出しに向いたサポートではないので、相手のボットレーンの構成を見た上でピックするのに向く。 留意点としてアフェリオスのDPSは高くない。脅威によって異様なバーストが出ているだけであり、防具を積む相手にはすこぶる弱い。 いくらワーデンをつけてもらおうと、武器をDPS寄りにしようと敵が硬い時点でぐっとポテンシャルが落ちてしまうのは覚えておこう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi"
+        ],
+        "label": "ユーミ",
+        "text": "特殊な例。逃げスキルが無く機動力も低いアフェリオスでは、的が減るとスキルの集中砲火に耐えられない。 一応シールドと加速で多少は誤魔化しが効かない訳ではないが、他のエンチャンターと比べてレーン維持の難易度が非常に高い。 アサシン1体だけであればシールドとイグゾースト、アフェリオス本体のインファイト性能で潰せるがブルドーザー戦法には無力。 味方の助けで運よくスノーボールできた時にだけ強い一発屋の組み合わせ。",
+        "has_caveat": false
+      }
+    ]
   }
 }

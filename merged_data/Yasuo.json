@@ -1770,5 +1770,125 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Yasuo#cbf4ba44",
+    "fetched_at": "2026-10-30T09:49:33+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "TwistedFate",
+          "Diana",
+          "Akshan",
+          "Mel",
+          "Ahri",
+          "Draven"
+        ],
+        "label": "etc/弾速のあるアクション",
+        "text": "弾速を持つスキルやAAへの依存度が高い相手に有利。Ranged相手もEで接近・離脱が可能。 スキルショット相手はEのみでかわすことも狙え、いざとなればWで防げるので安定したレーニングが出来る。 ドレイヴンドレイヴンはメインレーンは異なるものの、Q＋AAを消すと斧が反射しなくなるので育っても咎めることが可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lux",
+          "Xerath"
+        ],
+        "label": "([[Hwei]])/アーティラリーメイジ",
+        "text": "射程の長さを活かして遠距離から一方的なハラスを狙うタイプのメイジ。 接近をスキルショットで防ぐのが前提なので、1発スキルを防ぐと為す術が無くなりやすい。 安全圏を保とうとするとヤスオのCSを止められなくなり、スケールの差で有利をつけられる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Taliyah",
+          "Poppy",
+          "Vex",
+          "Cassiopeia"
+        ],
+        "label": "アンチブリンク",
+        "text": "アクションの軸となるのはEのブリンク。それを弾く相手には接近も離脱もできなくなる。 距離が短め、速度もブリンクとしては速くないので見てから止められやすいのも辛い。 集団戦においても同様の理由で活躍が難しくなる天敵たち。 一応対面に来る相手タリヤヴェックスカシオペアは弾速のあるスキルが主力なので、それが突破口にはなり得る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Annie",
+          "Malzahar",
+          "Lissandra",
+          "Leona",
+          "Alistar",
+          "Janna"
+        ],
+        "label": "確定・広範囲CC",
+        "text": "弾速の無い対象指定や範囲の広いCCにはEもWも有効に機能しない。 足を止められれば袋だたきに遭い即死してしまう。該当するスキルを持つ相手に弱い。 火力面を装備に強く依存するので、防具を積んで対処しようとしても今度は肝心のダメージが不足する。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Garen",
+          "Nasus",
+          "Ambessa",
+          "Tryndamere"
+        ],
+        "label": "対面に来るファイター",
+        "text": "ミッドにも適性があるファイター。基本はトップが持ち場だが、カウンターとして出張してくることも。 逆にヤスオをトップで出した場合には普通に対面することもあるが、いずれにせよ不利。 弾速を持つスキルを一切持たないのでWが実質無いようなもので、ステータスにも雲泥の差があり殴り合いで競り負ける。 サステインのある相手ガレンナサストリンダメアは上手く体力差を作っても次の機会を伺ううちにイーブンに戻されてしまいかねない。 ナサスナサスについては序盤は弱いのでそこで差をつけることは出来無くはないが、WのAS低下により完全に引き離すのは難しい。 元々AS低下がヤスオに対するカウンター要素なので、中盤以降のタイマンが圧倒的に不利となり容易に逆転を許す。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Ornn",
+          "Chogath",
+          "Nautilus",
+          "Alistar"
+        ],
+        "label": "etc/ノックアップを持つタンク",
+        "text": "基本はスカーミッシャーなので、エンゲージ手段を持つヴァンガードとの相性が良好。 Ultの発動条件を満たせるノックアップを持つ味方とは特に相性が良い。 先にスキルを受けてもらった挙句、入る手段まで確保してくれるため非常に暴れやすくなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Fiddlesticks",
+          "Nunu",
+          "Diana",
+          "Gragas",
+          "MonkeyKing"
+        ],
+        "label": "etc/CCを持つダイバー",
+        "text": "概ね理由は同様。先に入って戦線を荒らしてくれるCCのあるダイバー。 こちらもノックアップを持つものが多く、そうでなくても強力なCCを持っていればヤスオが動きやすい。 ヤスオをピックするとAD過多になりやすいので、APフィドルスティックスグラガスダイアナは二重に相性が良くなる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Irelia",
+          "Jax",
+          "Fiora",
+          "MasterYi",
+          "Rengar"
+        ],
+        "label": "etc/スカーミッシャー・CCの無いダイバー",
+        "text": "CCの弱いダイバーやスカーミッシャー、スレイヤー系の味方全般。 役割がモロに被ってしまい、火力過多のCC不足に陥りやすい。 誰も先に入れなくなると射程の短さが響き、シージ戦になるとまともにやれることが無くなる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

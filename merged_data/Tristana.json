@@ -1303,5 +1303,87 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Tristana#pf11829d",
+    "fetched_at": "2026-10-30T09:49:25+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xerath",
+          "Senna",
+          "Zyra"
+        ],
+        "label": "etc/体が脆く拒否スキルに乏しいsup",
+        "text": "最序盤のトリスターナは自ら飛び込んでバーストを叩き込む立ち回りが可能。 その際敵の耐久が低く拒否も弱ければそこを標的にしてスノーボールしやすい。 スノーボールに成功することで後半戦でも同様の事が出来るため、ゲームを通して有利と言える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kaisa"
+        ],
+        "label": "",
+        "text": "カイ＝サの射程を序盤から上回ることができ、カイ＝サの仕掛けを拒否することも可能なトリスターナは有利が付きやすい。 下記のサポートと組まれることが多いため、その点は注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Thresh",
+          "TahmKench",
+          "Taric",
+          "Alistar"
+        ],
+        "label": "etc/拒否の強いタンクsup",
+        "text": "こういった固いsupが相手だとオールインが狙えず、育つチャンスが減る。 またトリスはEのパッシブのせいでどうしてもウェーブを押してしまうため、Meleeのsupを困らせるようなウェーブ管理ができないのも難点。 とりわけスレッシュはEが即時発動かつ射程があるノックアップなので、トリスのWを撃ち落とすのを得意とする点が厄介。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yuumi",
+          "Lulu",
+          "Sona",
+          "Nami"
+        ],
+        "label": "エンチャンター",
+        "text": "レーン戦序盤のトリスは射程が短く、ヒール系のエンチャンターで耐えることで安全なファームが出来る。 アグレッシブなポジションでのダメージ出力を支えることができるのも相性が良い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Taric",
+          "Braum"
+        ],
+        "label": "",
+        "text": "タンクサポートとの相性はともに中に入っていける点で良い方。 この二人は特にコンボが狙えるため強力(トリスWでタリックEを当てる等)。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Swain",
+          "Senna",
+          "Velkoz",
+          "Morgana"
+        ],
+        "label": "ハラスメイジsup",
+        "text": "レーン戦のトリスはキルプレッシャーを出すためには前に出る必要があり、メイジsupと同じラインでダメージを出すのは困難。 トリスターナの序盤の射程の短さとプッシュしてしまう性質から、ガンクを避けながらファームを取ることが難しくなる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -942,5 +942,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Tryndamere#i1794e2c",
+    "fetched_at": "2026-10-30T09:49:26+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Gwen",
+          "Irelia",
+          "Yasuo",
+          "MasterYi",
+          "Ambessa"
+        ],
+        "label": "etc/離脱が弱い",
+        "text": "離脱手段が乏しく、射程も短めなダイバー・スカーミッシャー。 これらは入った後、倒される前にキルから徒歩で離脱が基本のためUltが刺さる。 逃げ方向のブリンクを持つ相手ヤスオアンベッサも距離が短ければEで追いかけてトレードを続行可能。 互いにDPS型であればUltもギリギリに使いやすい分、レーン段階から競り勝つことも可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "Illaoi",
+          "Mordekaiser"
+        ],
+        "label": "機動力に弱い",
+        "text": "スキルの発生が遅かったり、ブリンクを持つ相手に弱いジャガーノート全般。 高性能なEによりスキルをかわしやすく、DPS型が多いのでサステインの高さでレーンを維持しやすい。 仮に仕掛けが決まってもEさえ残してあれば即座に離脱でき、逆に相手の逃げは弱いのでほぼ常に主導権を握れる。 モルデカイザーモルデカイザーについては、Ultの効果時間をUltで稼げる点も強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "TahmKench",
+          "Gnar",
+          "Malphite",
+          "Vayne"
+        ],
+        "label": "etc/時間稼ぎが得意",
+        "text": "ダメージ以外、具体的にはCCや機動力による時間稼ぎの得意な対面。 Ultの効果時間を凌がれれば、後は単なるAAファイターが残るだけなので競り負ける。 ショートトレードもCCに弱い性質が祟り、全体的に不利に終わりがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Khazix",
+          "Rengar",
+          "Ekko"
+        ],
+        "label": "バーストと離脱の両立",
+        "text": "バーストが非常に高く、奇襲からの離脱も長距離の相手。特にアサシン系ジャングラーには顕著。 これらが育つとUltを早めに使わざるをえず、直後に離脱されれば殴り合いも挑めずに効果時間が過ぎる。 CD中に再び襲われればデス、そうでなくとも保険を切っている以上は得意のSplitも慎重にならざるを得なくなる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

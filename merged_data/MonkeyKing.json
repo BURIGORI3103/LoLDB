@@ -1357,5 +1357,90 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Wukong#lae61b56",
+    "fetched_at": "2026-10-30T09:49:07+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Irelia",
+          "Pantheon",
+          "Tryndamere",
+          "Yorick",
+          "Urgot",
+          "Darius"
+        ],
+        "label": "ADファイター全般",
+        "text": "パッシブによりARが増加。ADファイター相手は基本的に有利がつく。 特にWはブリンク＋ステルス＋チャンピオン扱いの壁ということで、非貫通のスキルショットや対象指定に強い。 ●JG運用:",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vi",
+          "MasterYi",
+          "Kayn"
+        ],
+        "label": "ADファイターJG、特に出足の遅いもの",
+        "text": "理由は概ねトップと同じ。タイマン有利で、集団戦においてもUltの影響力で優ることが多く、勝率は全体的に高い。 特に出足の遅い相手にはUltを覚えるまでの時間にレーンを崩される心配が小さく勝率優位が目立つ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Sejuani"
+        ],
+        "label": "タンクJG",
+        "text": "AR/MRの数値にタンク性能を依存する相手にも、割合低減スキルを持つことで有利。 やはりレーン段階で崩されるリスクが比較的小さく、集団戦に持ち込めれば影響力の高さを押しつけやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shen",
+          "Malphite",
+          "Jax"
+        ],
+        "label": "AA無効・AS低下",
+        "text": "単体へのダメージ出力はAAに依存。必然、AAを防がれたりASを低下させられると辛い。 特にこれらはレーン段階では魔法ダメージも多く出してくるので、↓と同様MRの強化が無い点を突かれる形になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Chogath",
+          "Mordekaiser",
+          "Warwick"
+        ],
+        "label": "APファイター",
+        "text": "前述の通り、MR方面に有効な防御スキルを持たないのでAP相手の殴り合いは不利。 遠距離攻撃手段が無い以上、CSを狙うだけでもリスクを背負うかWを切るかを強いられやすい。 特にサステインの高い相手はレーン維持性能の差が大きく、徐々に厳しくなっていく。 ●JG運用:",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Karthus",
+          "Nidalee",
+          "Elise",
+          "Evelynn"
+        ],
+        "label": "APアサシン・キャリー系JG",
+        "text": "こちらの理由も概ねトップ同様。AP相手は仕掛けづらい上に仕掛けられると辛い。 カーサスカーサス、イブリンイブリンは序盤の影響力が低いのが短所なのだが、そこはウーコンも同様。 ※LoLalytics 12.22-13.4 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

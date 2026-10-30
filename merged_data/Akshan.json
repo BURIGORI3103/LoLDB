@@ -942,5 +942,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Akshan#y9f2ce9d",
+    "fetched_at": "2026-10-30T09:48:38+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yone",
+          "Fizz",
+          "Kassadin",
+          "Leblanc",
+          "Akali"
+        ],
+        "label": "序盤の殴り合いがそこそこなMelee系",
+        "text": "アクシャンの序盤のAAハラスは極めて強力で、プレスアタックを交えると、この辺りのMeleeでは接近できてもダメトレ勝つのは難しい。 さらに相手の動きを見て、パッシブのAAキャンセルを行うと、MSバフの差でアクシャンが追い付かれない事もそこそこある。 特に序盤にウェーブ主導権を失うと一気に失速するタイプのアサシン対面に勝率が高い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ziggs",
+          "Corki",
+          "Xerath"
+        ],
+        "label": "etc/大抵のメイジ",
+        "text": "アクシャンはAAレンジ500と短めで、多くのメイジよりもAAレンジで劣っている。 しかし、Eのオールイン性能に加え、パッシブのシールドやEの移動速度でミニオンのアグロが切れやすく、AAのダメージトレードではかなりの有利。 アクシャンはマナの制限も緩いため、ウェーブを押し込んだ後、ロームでゲームを壊すのも容易。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yasuo",
+          "Diana",
+          "Pantheon",
+          "Irelia"
+        ],
+        "label": "トレードの強いダイバー・スカーミッシャー",
+        "text": "序盤はシールドのCDが長く、Wは火力に直結しない。ショートトレードの強い相手は競り負ける。 相手もPushが早かったりローム性能が高いためPushを作ってサイドレーンにGankするのも一苦労。 総じて相手のスノーボールを許しやすく、逆に自分のスノーボールは止められやすい厄介な相手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Anivia",
+          "Cassiopeia",
+          "Taliyah"
+        ],
+        "label": "アンチブリンク",
+        "text": "追撃・逃走性能はほぼE頼り。火力を出した後の離脱にも多用するため、ブリンクを止められると非常に脆い。 相手も脆いので奇襲で一気に沈めるぐらいまでスノーボールするか、Healthが少ない時を狙いたい。 それでも集団戦に持ち込まれると劣勢を負いがちなので、立ち回りは慎重に。",
+        "has_caveat": false
+      }
+    ]
   }
 }

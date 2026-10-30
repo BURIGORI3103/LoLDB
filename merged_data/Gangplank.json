@@ -941,5 +941,70 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Gangplank#e30c48f9",
+    "fetched_at": "2026-10-30T09:48:50+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Singed",
+          "Poppy",
+          "Illaoi",
+          "Darius",
+          "Olaf"
+        ],
+        "label": "etc/短射程Melee",
+        "text": "有効射程の短い対面。MeleeながらRanged並の射程でハラスが可能。 樽を壊すにも近づく必要があるので爆発に巻き込みやすく、かわされづらい。 集団戦があまり得意でない相手イラオイダリウスオラフ、相手のファームを止める手段に乏しい相手シンジドについては、最悪レーン段階でスノーボールされなければ十分に優位が取れる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Shen",
+          "Nasus",
+          "Pantheon",
+          "Malzahar",
+          "TwistedFate"
+        ],
+        "label": "etc/単発のCCに依存",
+        "text": "トレード時のダメージ優位やGank合わせ・逃走性能を単発CCに依存する相手。 Wで即座にCCを解除し逃走、あるいは反撃に移ることができる。ガンクを狙われても回避しやすい。 シェンシェンについてはレーンを留守にしやすく、スケールの大きさを活かしやすいのも追い風。 対面以外でも、該当するCCを用いたキャッチに重きを置く相手パンテオンマルザハールツイステッド・フェイトの勝率が高く出やすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Quinn",
+          "Kayle",
+          "Vladimir",
+          "Jayce"
+        ],
+        "label": "トップRanged",
+        "text": "一部を除くトップのRanged。範囲外から樽を壊され、樽を用いたゾーニングが難しい。 Qによるハラスの射程は相手の射程内のため、序盤が強い相手にはオールインを食らいデスしかねない。 序盤が弱い相手はレイトスケールがGPと同等かそれ以上に高い場合が多く、なあなあでやっても有利が取れない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Aatrox",
+          "Sion",
+          "Ornn",
+          "Chogath",
+          "Mordekaiser"
+        ],
+        "label": "スキルファイター・タンク",
+        "text": "Qの射程外から届くスキルを持つファイターやタンク。 スキルの発動から発生までにラグのある相手が多いが、GPの機動力ではかわしきれず強引にトレードに入られてしまう。 序盤で転ぶと後半まで影響があり、ハラスすら容易ではないのでCSにもリスクを背負う羽目になる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

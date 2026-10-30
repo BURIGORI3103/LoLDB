@@ -1358,5 +1358,76 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Trundle#ced9694a",
+    "fetched_at": "2026-10-30T09:49:25+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Poppy",
+          "Amumu",
+          "Sejuani"
+        ],
+        "label": "ステータス型のタンク",
+        "text": "相手のAR/MRを割合で吸収する性質上、AR/MRの高さでタンク性能を確保している相手に強い。 タイマンで負けることはまず無いのでオブジェクトの確保やカウンターといった要素をコントロールしやすい。 集団戦においても、これらにUltをかければタンク性能に凄まじい差が出来るためゲーム全体を通して有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "XinZhao",
+          "Diana"
+        ],
+        "label": "逃げ性能が低いダイバー",
+        "text": "追撃性能が高いダイバーは逃げ性能は低いケースが多い。 殴り合いになればトランドルは序盤から非常に強く、タイマン有利のため選択肢を広く取れる。 集団戦でも突出したダイバーをEで止め、Wのサステインで一方的に優位を取りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "Nidalee",
+          "Lillia"
+        ],
+        "label": "拒否のあるRanged",
+        "text": "接近手段はWの加速とEのノックバック＋スローに依存。 ブリンクや長期的な加速を持つRangedには拒否されやすく、そのままKiteに繋がる。 相手はキャリーということでUltの効果も薄く、タイマンから集団戦まで常に不利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Khazix",
+          "Ekko",
+          "Shaco"
+        ],
+        "label": "ヒットアンドアウェイのアサシン",
+        "text": "理由は概ね同じ。Meleeでも接近・離脱手段のある相手はキルまで繋がらない。 バーストにも大きな差があり、トランドルのPeel性能は低いので一方的にキャリーを仕留められる。 トランドルの望む展開に持ち込みづらく、逆に相手の望む展開を防ぐのが難しい厄介な相手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Teemo",
+          "Malphite",
+          "Shen",
+          "Jax"
+        ],
+        "label": "TOP運用: AA無効・AS低下",
+        "text": "AAへの依存度は全チャンピオンでもトップクラス。AA無効やAS低下に弱い。 相手もこちらを仕留めきるほどの火力が無い場合も多いが、集団戦の貢献度の差で負けやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

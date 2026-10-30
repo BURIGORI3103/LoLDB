@@ -1346,5 +1346,136 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Brand#w69666da",
+    "fetched_at": "2026-10-30T09:48:43+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zeri",
+          "Kalista"
+        ],
+        "label": "高機動によるスキルドッジを得意とするADC",
+        "text": "炎上中の敵ユニットに対するEやUlt、パッシブにより付近の敵を巻き込んでダメージを出す性質はこれらの高機動によるスキルドッジを許さない。 ADCの場合ダメージを出す以外の仕事があまりないため有利だが、一気に陣形の中央に入り込んでエンゲージができる相手の場合（シンジドシンジド、リリアリリア、へカリムヘカリムetc.）はブランドは一度掴まってしまうと脆いため有利はつかない。 JG運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MonkeyKing",
+          "Rammus"
+        ],
+        "label": "AR特化",
+        "text": "DPS型のメイジ全般に言えることだがAR特化のタンク・ファイターは溶かしやすく有利。 ブランドの場合、極めて優秀な割合ダメージを持つため特に顕著に出る。 SUP運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Braum",
+          "Alistar",
+          "TahmKench"
+        ],
+        "label": "サステインの乏しいワーデン",
+        "text": "ブランドはサポート最強クラスのダメージを持ち、タンク相手でも十分削ることが出来る。 特に受けに特化したタンクSUPに有利が付く傾向がある。エンゲージができる物でも仕掛けが直線的であればEQが刺さる。 サステインの豊富なワーデンタリックには、後述のエンチャンターと同様の理由で不利がつく。 また実際にCCで固められてしまうとブランドは脆いため、Qは雑に使ってしまわないよう注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zed",
+          "Naafiri",
+          "Khazix",
+          "Talon"
+        ],
+        "label": "etc./アサシン",
+        "text": "その自衛力の低さからアサシンに襲われると成す術がない。 EQによるスタンが間に合わず瞬殺されてしまいがち。 JG運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "MasterYi",
+          "Karthus"
+        ],
+        "label": "ファームによるスケール",
+        "text": "ブランドは自衛力が低いため敵のファームを妨害しに行くリスクが高い。 これらはファームによってスケールしていき最終的には集団戦の影響力でブランドをさらに上回ってくる。 ガンクで差を付けようにもブランドはガンク力が高いというわけではないので難しく、総じて厄介な相手。 SUP運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Janna",
+          "Karma",
+          "Sona",
+          "Yuumi",
+          "Nami"
+        ],
+        "label": "エンチャンター",
+        "text": "レーン維持を得意とするエンチャンター。シールドを合わせられると強みの火力が発揮しづらい。 コンボを軸とするのでシールドやヒールが間に合う場合も多く、仕留めるより早くマナが枯渇してしまう。 集団戦でも範囲シールドやヒールでブランドのAoEダメージを弾かれてしまい、総じて不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nautilus",
+          "Leona",
+          "Rell"
+        ],
+        "label": "ミニオンを貫通するヴァンガード",
+        "text": "ヴァンガードの中でも、ミニオン状況を無視したキャッチを可能とするもの。 逃げ性能が劣悪、かつべた足のためキャッチされやすく、された場合デスに繋がりやすい。 高いPush補助性能でミニオンウェーブの差は作りやすいのだが、それらを無視されると辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ezreal",
+          "Vayne",
+          "Jhin"
+        ],
+        "label": "Kiteの得意なADC",
+        "text": "Peel性能が皆無に近いため、ADCを守る手段は乏しい。 これらの本人のスキルや機動力で自衛が可能な相方との相性が良好。 特にエズリアルエズリアルはあちらの苦手なPushをブランドが補助できる有名なシナジー。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "KogMaw",
+          "Jinx",
+          "Twitch"
+        ],
+        "label": "長射程AoE",
+        "text": "射程が長く、装備やスキルでAoEダメージを出せるADCとの相性も良好。 長所・短所が共通しているものの、ADとAPでメインのダメージ源が異なるためタンクに対応されづらい。 レーン段階が苦手なものが多いが、そのタイミングをブランドのPush性能で誤魔化しやすいのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Swain",
+          "Ziggs",
+          "Viktor",
+          "Hwei"
+        ],
+        "label": "APC",
+        "text": "AoEダメージやPush性能が強みのAPC全般。長所・短所が完全に重なってしまう。 前述した長射程AoEと違いMRを積まれるだけでダメージが激減するので相性が悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -1354,5 +1354,51 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Jax#c5bd9467",
+    "fetched_at": "2026-10-30T09:48:55+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Volibear",
+          "Irelia",
+          "Gwen"
+        ],
+        "label": "・[[Briar]][[Masteryi]][[Udyr]]/AA依存度が高い",
+        "text": "EのAA無効により、DPSを出す手段をAAに依存する相手は全体的に有利。 拒否手段が乏しい物は特に有利で、Qで飛びつきEで回避しながらスタンさせて殴るという基本の動きを狙いやすい。 トップジャングルいずれの場合もタイマン有利を活かして差をつけていきたい。 ただしジャックス自身もAA依存度が高いチャンピオンであるため、アンチAAスキルを持つナサスナサスシェンシェンには有利がつかない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vladimir",
+          "Kennen",
+          "Quinn"
+        ],
+        "label": "・[[Lillia]]/拒否手段を持つRangedおよびそれに類する相手",
+        "text": "サステインも、遠距離への攻撃手段も持たないため、間合いを保たれたまま殴られ続けると成す術がない。 Qによる飛びつき＋スタンまで入れば競り勝てるが、Eは発動前に時間があるので、CCや高い機動力でEをかわされると殴り掛かることが出来ない。 ジャックスは序盤のプッシュ・ファームが遅いのでウェーブ差・ファーム差をつけられがちなのも厳しい。 特にトップにおいて、AAに依存しない上にガンクに強いブラッドミアブラッドミアは難敵。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Singed",
+          "Chogath",
+          "Illaoi"
+        ],
+        "label": "・[[Karthus]][[Zed]][[DrMundo]]/プッシュ・ファームが早い",
+        "text": "AoEがEのみで防御スキルも兼ねている分トップにおいてはプッシュとトレードの両立は難しく、ジャングルにおいてはファームが遅め。 いずれも拒否性能が高いか殴り合いが強く、ウェーブ差・ファーム差をつけられがち。 カーサス&karthus;については自衛性能は低いが集団戦ではデス後もDPSを出し続けることができ、AoEも豊富な上にレートゲームの強さがジャックスを大きく凌駕しており、全体的な影響力の差で負けがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

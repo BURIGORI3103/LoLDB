@@ -939,5 +939,76 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rammus#u5bb09de",
+    "fetched_at": "2026-10-30T09:49:14+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Belveth",
+          "Viego",
+          "Warwick",
+          "Briar"
+        ],
+        "label": "etc/AA主体のMeleeジャングラー",
+        "text": "Wの効果時間中はAAに対して自動で反撃を行えるため、AA依存度の高いMeleeに有利。 序盤に殴り合いになっても戦える相手が多く、序盤型の相手も追撃スキルを見るまで耐えてからQで逃げられる。 集団戦では後衛に飛び込んでDPSを出すのをEで防げるため、ゲーム全体を通して有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Irelia"
+        ],
+        "label": "スカーミッシャー",
+        "text": "概ね理由はジャングラー相手と同様。AA主体で遠距離攻撃手段に乏しい相手は格好の標的。 レーン段階でもこれらは逃げ性能が低く、Qで飛び込んでEでキャッチするGankの基本ルートを狙いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Swain",
+          "Cassiopeia",
+          "Lillia",
+          "Shyvana",
+          "Mordekaiser"
+        ],
+        "label": "(jg,top) /キャッチに回答のあるDPSメイジ",
+        "text": "MR方面のスケールはARに比べて低いので、必然的にDPSの出るAPチャンピオンには弱い。 特に拒否性能が高い相手や、耐久があってCCに強めな相手はキャッチを試みても成功しづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Amumu",
+          "Zac"
+        ],
+        "label": "DPSタンク",
+        "text": "タンクとしてはダメージも出る方ではあるが、基本的に攻撃範囲が狭く単体へのDPSタイプ。 張り付き性能が高く、かつ継続的にAoEでDPSを出し続けるタンク相手は集団戦での影響力に劣る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Trundle",
+          "Rell"
+        ],
+        "label": "AR・MR吸収",
+        "text": "タンク性能はWのAR・MRバフの数値の暴力で実現させている。 割合で吸収されると自分が脆くなるのはもちろん、相手が凄まじく硬くなるので不利がつく。 前線のぶつかり合いで勝てなくなりがちなので、ピックアップでの各個撃破を狙いたいところ。 備考 ※パッチ25.12でARスケールが若干落ちた代わりにMRのスケールも持つようになったため、一部有利不利が変動する可能性があります。 現状、パッチ25.11以前は勝率イーブン程度だった一部APアサシンエリスイブリンに明確な有利が付くなどの変動が発生している模様です。",
+        "has_caveat": true
+      }
+    ]
   }
 }

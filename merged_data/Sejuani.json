@@ -939,5 +939,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sejuani#o6c3fee3",
+    "fetched_at": "2026-10-30T09:49:17+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Shaco",
+          "Khazix",
+          "Elise",
+          "Evelynn",
+          "Rengar"
+        ],
+        "label": "アサシン",
+        "text": "集団戦が苦手なバースト系のアサシン全般。遭遇戦に強いセジュアニならば対面しても有利に戦える。 多少Gankで育ったとしても、パッシブのお陰で奇襲に強いので視界確保の先陣を切れる。 エンゲージ性能も高いため、人数不利でないことを確認したら積極的に開戦していこう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MasterYi",
+          "Belveth",
+          "Warwick",
+          "Jax"
+        ],
+        "label": "スカーミッシャー・ダイバー",
+        "text": "CCに弱いスカーミッシャーやダイバー全般。概ね理由はアサシン相手と同様。 これらはDPSが高いので、あまり長く生かしておくと不利になる。 CCで固めるのはこれらを優先していく意識を強めに持っておけば同じ対策が通じる。 これらのキャリーはセジュアニのGank性能が低めの序盤に動けないので、先にGankを刺すとより有利に。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Trundle",
+          "Rell"
+        ],
+        "label": "AR・MRの割合吸収",
+        "text": "タンク性能はパッシブによるAR・MR増加に依存。必然、それらを吸収されると辛い。 相手が硬く、こちらが脆くなってしまうので前線のぶつかり合いが弱くなるので相性が悪い。 トランドルトランドルに至っては数値が大きい上に発動時点の数値で吸収量を計算するので、パッシブの効果中に食らうと最悪。 特にアフターショックを積んでいた場合、発動タイミングによってはAR・MRがマイナスまで低下しかねない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lillia",
+          "Kayn",
+          "Gwen",
+          "MonkeyKing"
+        ],
+        "label": "方向指定スキルを回避する割合ダメージ",
+        "text": "セジュアニのスキルを透かす機動力や防御スキルを持ち、割合ダメージも備える対面。 長距離からのQやUltを透かされやすく、更にそのままダメージを出されるので相性が悪い。 ウーコンウーコンは割合ダメージこそUltのみで数値も食らい続けなければ高くないが、ARの割合低下を備える。 場合によってはセジュアニのエンゲージに続こうとする味方の後衛に飛び込まれ、壊滅的な被害を受けかねない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

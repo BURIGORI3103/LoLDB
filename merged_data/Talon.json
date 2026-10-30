@@ -1356,5 +1356,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Talon#m1c56bb1",
+    "fetched_at": "2026-10-30T09:49:24+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nocturne",
+          "Shaco",
+          "Lillia"
+        ],
+        "label": "共通:",
+        "text": "タロンはMID運用・JG運用いずれの際も敵の森に入り敵JGのキルを狙う動きが得意。 その際相手がこういった耐久が低く逃げ性能の低い相手だと狩りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar",
+          "Xerath",
+          "Galio",
+          "Viktor",
+          "Kassadin",
+          "AurelionSol"
+        ],
+        "label": "MID運用:",
+        "text": "タロンはV8.4で、top運用を減らしmid運用を推奨するため、基礎MRがアサシンとしてはかなり高い。 スキルセットとしては、Wの往路が当たりやすい短射程チャンピオンに有利なのは変わらず、APメレーに有利が付きやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "Poppy",
+          "RekSai",
+          "LeeSin"
+        ],
+        "label": "共通:",
+        "text": "逆にスキルセット上殴り負ける敵JG。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "Akshan",
+          "Pantheon"
+        ],
+        "label": "MID運用:",
+        "text": "殴り負け、かつ相手もRoamを得意とするような対面。 ※LoLalytics 13.1-13.6 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

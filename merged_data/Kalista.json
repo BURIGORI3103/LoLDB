@@ -939,5 +939,109 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kalista#w465a38c",
+    "fetched_at": "2026-10-30T09:48:57+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "TahmKench",
+          "DrMundo",
+          "Shyvana",
+          "Viego",
+          "JarvanIV"
+        ],
+        "label": "接近手段が徒歩・方向指定",
+        "text": "戦闘中は常にステップを踏み続けるため、方向指定や徒歩で追いつかれる危険が小さい。 一度接近に失敗した後は離脱が難しい相手が多く、Kiteしきって一方的に溶かせる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ezreal",
+          "Zeri",
+          "Ziggs",
+          "Xerath",
+          "Soraka"
+        ],
+        "label": "スキルショットに依存",
+        "text": "理由は概ね同様。対面に来る相手もスキルショットに依存する場合はダメージを受けづらい。 カリスタ側のダメージ出力はQ以外が対象指定・即時発動のため一方的にHealthを削れる。 キャリー性能も非常に高いので、レーン段階で優位を取れれば後半での活躍が容易に。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Taliyah",
+          "Vex",
+          "Poppy",
+          "Cassiopeia",
+          "Singed"
+        ],
+        "label": "アンチブリンク",
+        "text": "逆に言えばこれらのブリンクへのカウンター要素を持つ相手に不利がつく。 実際の挙動はAAとAAの合間、移動できるタイミングで代わりにブリンクを行っている。 よって釘付けを食らうと移動せずにその場で殴り続けるか、AAをせずに抜け出すかしか無くなる。 単にブリンクが腐るチャンピオン以上に影響が大きく、特に効果時間・射程が長いタリヤタリヤは天敵。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nasus",
+          "Pantheon",
+          "Annie",
+          "Kennen",
+          "Heimerdinger"
+        ],
+        "label": "etc/対象指定及び広範囲CC",
+        "text": "対象指定には流石にステップでは太刀打ち出来ず、射程に入らないようにするとカリスタ側も殴れない。 同じく広範囲にCCを重ねられる相手にも多少のステップでは範囲から出られなくなりがち。 そしていざ捕まれば防御ステータスの低さが響き、瞬時に溶かされやすい。 DPSメイジハイマーディンガーブランド相手はステップを遅らせるスローを積みやすいのも辛い。 ちなみにフィドルフィドルスティックスも該当するが、視界確保のWが刺さるので概ねイーブンマッチアップ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Braum",
+          "Leona",
+          "Blitzcrank",
+          "Nautilus",
+          "Rell"
+        ],
+        "label": "etc/タンク・キャッチャー",
+        "text": "射程が短い代わりにオールインは比較的強いので、これらのオールインが強いタンクサポートと組むと勝率が高くなる。 通常、ワーデンはエンゲージを必要とするADCとの相性が悪くなるのだが、カリスタのUltでエンゲージ性能を確保可能で相性抜群。 もちろんヴァンガードとの相性もよく、拒否性能の低い対面はスキルのCDがあがる度にキルに繋ぐことも可能。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Renata"
+        ],
+        "label": "レナータ・グラスク",
+        "text": "特殊な例。後述するが、基本的にエンチャンターとの相性は悪いのだがレナータ・グラスクは例外。 WとEによりカリスタのKiteを補助しつつ、必要とあれば射程の長いUltでオールインも可能と相性が良い。 更にカリスタのEがダメージを出すタイミングを操作しやすい点から、Wの一時的な蘇生を完全蘇生に変換しやすくスペックを活かしやすい。",
+        "has_caveat": true
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nami",
+          "Soraka",
+          "Yuumi",
+          "Xerath",
+          "Karma"
+        ],
+        "label": "etc/エンチャンター・メイジサポート",
+        "text": "サポートを投げ込むUltの性質上、前に出られないRanged系のサポートとはやはり相性が悪い。 一応逃げには使えるので無駄にはならないが、極力避けた方がよい組み合わせとなる。 元々カリスタは射程が短く、戦闘はオールインになりがちで小刻みな支援の恩恵を受けづらいのもネック。 逆にこれらのサポートはオールインが苦手なため、強いタイミングも噛み合わない。",
+        "has_caveat": false
+      }
+    ]
   }
 }

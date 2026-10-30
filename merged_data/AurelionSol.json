@@ -1354,5 +1354,41 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Aurelion%20Sol#cf549a8b",
+    "fetched_at": "2026-10-30T09:48:41+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar",
+          "Anivia",
+          "Swain",
+          "Veigar"
+        ],
+        "label": "短射程のメイジ",
+        "text": "射程が短めなメイジ。AoEは豊富な相手も多いが、ソルもEで比較的安全にファームが可能。 ベイガーベイガーを含めスケールのよい相手が揃うものの、ソルはそれを更に上回るため総じて有利。 特にマルザハールマルザハール相手はペットをEでスタックに変換できるので得意のPushも許さない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Fizz",
+          "Qiyana",
+          "Yone",
+          "Katarina"
+        ],
+        "label": "アサシン",
+        "text": "AD・APを問わず機動力の高いアサシン全般。非常に脆いので接近を許すと瞬殺される。 特に序盤からブリンクを持つ相手は拒否手段がEの疑似スローしか無いのもありレーン段階から餌になりがち。 序盤は火力も低いのでどうにか反撃しようにも競り負けてしまい、スケールを大きく阻害される。 特にフィズフィズは2種類のブリンクで容易にスキルをかわされ、主要ダメージがDoTのためにパッシブで軽減される天敵。",
+        "has_caveat": false
+      }
+    ]
   }
 }

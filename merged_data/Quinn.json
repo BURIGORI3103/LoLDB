@@ -1356,5 +1356,69 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Quinn#ced9694a",
+    "fetched_at": "2026-10-30T09:49:13+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Volibear",
+          "Illaoi",
+          "Garen",
+          "Darius",
+          "Riven"
+        ],
+        "label": "etc/接近が徒歩、或いは短距離",
+        "text": "接近手段が徒歩のジャガーノートや、ブリンクを持っていても短距離のダイバー・スカーミッシャー。 Eは拒否しつつ距離を空けられるため、接近手段を切ったところで使えば再接近されずに一方的に殴れる。 特にサステインの低い相手は小まめなハラスが得意で茂みの視界も取れるので削りやすい。 消極的なプレイをされても、その間に森と一緒に相手のジャングラーを襲ったり、ロームで有利を還元していけばよし。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lillia",
+          "MasterYi",
+          "Evelynn",
+          "Briar",
+          "Shyvana"
+        ],
+        "label": "逃げ性能が低いスノーボーラー",
+        "text": "レーンの強さを活かしてPushした後は、ロームやカウンタージャングルで他レーンに有利を広げていくのが基本。 これらは装備やレベルに依存する部分が大きく、序盤のクインに入り込まれると逃げるしかなくなる。 基本的にスノーボーラーなので周回が遅れると影響が大きく、総じて有利がつく。 ただし序盤はクインだけで倒しきれるほどの火力はないので、極力森と一緒に入りたい。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "KSante",
+          "Ornn",
+          "Nasus",
+          "Irelia"
+        ],
+        "label": "etc/長距離の追跡が可能",
+        "text": "一度距離を取っても再接近を可能とするタンクやファイター。 基礎ステータスは低く、火力もスキルだけでは不足しがちで、接近に成功されてしまうと競り負ける。 タンク相手はGank合わせが得意なものも多く、元よりクインはGankに弱いので積極的に動きづらい。 ファイターには普通に殴り負けるのでデスが嵩みやすく、いずれにせよクインのパワースパイクを逃しがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zac",
+          "Sejuani",
+          "Amumu"
+        ],
+        "label": "タンクジャングラー",
+        "text": "CCが豊富で、Gankも狙いやすいタンクジャングラー全般。元より単体にしか火力が出ず、本体が脆い以上Gankに弱い。 これら相手は返り討ちにするのも難しく、いずれもクインに接近する手段も備える難敵。 レーンで有利を取ったらロームやカウンターJGを狙うのが基本だが、これらは見つけても倒しきれないので差をつけきれずに終わりやすい。 特にセジュアニセジュアニは遭遇戦が強く、MSの高さから単体行動が多いのもあって返り討ちに遭う危険すらある。",
+        "has_caveat": false
+      }
+    ]
   }
 }

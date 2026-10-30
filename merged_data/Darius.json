@@ -1358,5 +1358,78 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Darius#ced9694a",
+    "fetched_at": "2026-10-30T09:48:45+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Fiora",
+          "Yasuo",
+          "Garen",
+          "Tryndamere"
+        ],
+        "label": "遠距離攻撃を持たないMelee",
+        "text": "遠距離からのファーム手段を持たないMeleeの中でも特にこれら。 CSを取ろうとする度にキャッチのチャンスで、序盤のダリウス相手にロングトレードで勝つのも不可能。 セーフな動きをされたとしても、これらは装備依存度が高いのでゴールド差を広げるだけでも十分。 他にもウェーブ差をつけてロームという選択肢も取りやすく、試合の主導権を握りやすい。 ただしナサスナサスシンジドシンジドについてはレーンを拒否する手段があり、レートゲームも強く一歩間違えると逆転を許すため有利がつかない。 他のMeleeと比べると的確にプレッシャーをかけつつ有利を広げる必要があり、そういう意味でも互いのマクロ・ミクロが試されるスキルマッチアップと言える。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sion",
+          "Malphite",
+          "Poppy",
+          "Shen"
+        ],
+        "label": "殴り合いが苦手なタンク",
+        "text": "概ね理由は上と同様。相手の苦手なロングトレードを序盤から狙える分で有利がつく。 ファイターと比べると装備やレベルが足りずとも貢献しやすいので、ダリウス側はレーン段階から積極的にスノーボールを狙いたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Quinn",
+          "Kennen",
+          "Vladimir",
+          "Kayle"
+        ],
+        "label": ".etc/Ranged",
+        "text": "接近手段は射程が短いEのみ。サステインもQの外周をチャンピオンに当てないと無いのでRanged相手が苦手。 特に拒否スキルを持つ相手は強引に入っても、得意のロングトレードに持ち込む前に離脱されてしまう。 かといって安全圏を保ってもスケールもダリウスより高い相手ばかりなので逆効果にしかならない。 ゴーストやフラッシュを交えた強引な接近が非常に重要になるので、タイミングの見極めを練習しておきたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jax",
+          "Kled",
+          "Riven"
+        ],
+        "label": "ヒット＆アウェイ",
+        "text": "レーン段階は火力・耐久力の双方をQに依存し、懐に入り込まれると戦闘能力が長時間、大幅に低下。 更にこれらはその後、ダリウスの得意なロングトレードになる前にダメージを出し切って離脱までこなす機動力がある。 集団戦における影響力も相手の方が上回り、ダリウスの強い時間を逃しやすく相手の強い時間はかわしづらい厄介な相手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "DrMundo",
+          "Yorick"
+        ],
+        "label": "拒否を持つジャガーノート",
+        "text": "仕掛ける手段は基本的にEのみ。遠距離からセーフファームできるムンドドクター・ムンドには勝ちきれずにスケール負けしがち。 ヨリックヨリックもWで足止めされるとQの先端が当たらず、またダリウスはASが遅いのでグールの処理にも手間がかかる。 どちらも手をこまねいている間にタイマンに勝てなくなるので、可能な限り森を呼び込んでGankを決めて差をつけたい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

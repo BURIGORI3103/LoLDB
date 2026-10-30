@@ -1357,5 +1357,80 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Zac#yb081fb5",
+    "fetched_at": "2026-10-30T09:49:34+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Rammus",
+          "Sejuani",
+          "Amumu"
+        ],
+        "label": "",
+        "text": "タンクJG同士のマッチアップで、お互いやりたいことは同じ。 そんな中割合ダメージのWによるDPSでタイマン有利であり、かつザックのほうがAoECCが豊富で集団戦でのインパクトに優れるため、勝率優位になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Briar",
+          "MasterYi",
+          "Elise",
+          "Nidalee",
+          "LeeSin",
+          "Viego"
+        ],
+        "label": "",
+        "text": "MeleeのJGのうち、CCに弱いか集団戦が苦手なもの。 相手の苦手な集団戦を積極的に起こしたり、しっかりCCで固めたりできるので、集団戦フェーズで活躍しやすいのは圧倒的にこちら。 差をつけられすぎなければ良いので、相手がタワーダイブ等できないよう同じサイドで動くのも手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "Graves",
+          "Kayn",
+          "Lillia",
+          "Karthus",
+          "Mordekaiser"
+        ],
+        "label": "",
+        "text": "これらのキャリー系JG。 ザックはファーム中に襲われると基本的に逃げるしかないので、対面したキャリー系JGはカウンターJGで位置捕捉しつつファームを奪う動きが鉄板。 中でもこれらは射程か耐久があるので、ザックのCCプレッシャーがあっても集団戦で継続的にDPSを出してきて、ザック自身溶かされやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "JarvanIV",
+          "Hecarim"
+        ],
+        "label": "",
+        "text": "逆に遭遇戦が弱点とされるこれらのJG。ザック1人ではその弱点を突けないので自由に動かれやすく、相手はエンゲージ性能もあるのでそのまま畳まれやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Janna",
+          "Morgana",
+          "Nami"
+        ],
+        "label": "",
+        "text": "Eの飛んでくるモーションはわりと長く、敵にこれらがいるとエンゲージを阻止されやすい。 ※LoLalytics 13.3-13.7 Global Plat+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

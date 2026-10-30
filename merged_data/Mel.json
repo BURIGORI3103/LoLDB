@@ -1693,5 +1693,56 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Mel#da38916d",
+    "fetched_at": "2026-10-30T09:49:06+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ahri",
+          "Vex",
+          "Smolder",
+          "TwistedFate",
+          "Lux"
+        ],
+        "label": "etc/主力スキルが弾速を持つ",
+        "text": "Wの反射により、弾速を持つスキルに依存する相手全般に有利。 特にエンゲージ・ディスエンゲージを1つのスキルでこなすタイプの相手はそれを自分側の仕掛けに出来る。 基本的に射程が短いか、スケールの悪い相手が多いのでメル側のスケールの悪さも誤魔化しやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ryze",
+          "AurelionSol",
+          "Viktor",
+          "Cassiopeia",
+          "Orianna"
+        ],
+        "label": "etc/DPSメイジ",
+        "text": "DPSが高いメイジ全般。Wの効果時間は短いので、長時間にわたってダメージを出せる相手には有効に機能しない。 全体的にメインとなるスキルに弾速があるものが少なく、反射自体が活用しづらいのも難。 ハラスこそ一方的に可能な相手も多いのだが、バーストが低いので耐えられやすく中盤から逆転されがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xerath",
+          "Hwei",
+          "Ziggs",
+          "Syndra"
+        ],
+        "label": "アーティラリー",
+        "text": "メル以上に射程の長いアーティラリーメイジ。CCが薄いメルではこれらのファームを止められない。 スケールが悪く、レーン段階で差をつけるのが前提のため、それが難しい相手には何も出来なくなりがち。 主力スキルに弾速が無い相手はもちろん、あっても射程が長い＝必然的に反射の際に距離があり反撃を当てづらいのも厳しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

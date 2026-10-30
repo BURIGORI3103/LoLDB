@@ -944,5 +944,57 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Gnar#ne5731f4",
+    "fetched_at": "2026-10-30T09:48:51+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Warwick",
+          "Sett",
+          "Trundle",
+          "Garen",
+          "Tryndamere"
+        ],
+        "label": "etc/接近手段が乏しい",
+        "text": "継続的な接近を苦手とするタイプのジャガーノート。Kiteで削り、メガナーのオールインでキルを取る動きが成立しやすい。 基本的に相手は集団戦が苦手なものが多いため、スノーボールを許さなければ後半の影響力でも上回れる。 トランドルトランドルについてはキャッチ手段のEを飛び越えて逃げられるのも優位点。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Irelia",
+          "Nasus",
+          "Poppy",
+          "Malphite",
+          "Sylas"
+        ],
+        "label": "etc/接近が得意",
+        "text": "逆に接近手段が豊富な相手はEのみではKiteしきれずオールインを食らいがち。 ミニナーの状態で殴り合いになれば競り負けてしまうため、どうしても慎重に動く必要があり勝ちきれない。 純タンクやスケールの大きい相手はなあなあでファームしても、変身が自由に出来ない分だけ影響力で劣りやすい。 サイラスサイラスについてはUltを奪われると使用条件が消え、APスケールが大きいため本人よりも威力まで高まりがちなのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gangplank",
+          "Olaf",
+          "Vladimir",
+          "Akali",
+          "Ornn"
+        ],
+        "label": "オールインに回答がある",
+        "text": "普段は射程差で削り、変身後はオールインで一気にキルまで繋ぐのがレーニングの基本。 CC無効や対象指定不可でCCを防がれると有利なトレードが難しく、サステインが高い相手には勝ちきれずに競り負けてしまう。 それでもCSだけ取っていれば問題無ければともかく、接近手段を備えていたりスケールがナー以上に大きいとじり貧になりがち。 アカリアカリについてはメガナーのスキルを透かすわけではないが、機動力が高いので結局当たりづらくミニナーのAAもステルスで防がれる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

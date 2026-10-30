@@ -932,5 +932,109 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Morgana#i232f75b",
+    "fetched_at": "2026-10-30T09:49:08+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Leona",
+          "Alistar",
+          "Nautilus",
+          "Amumu",
+          "Zac"
+        ],
+        "label": "etc/CCに依存",
+        "text": "CCチェインを軸にしたオールインを得意とする相手。高性能なスペルシールドでCCを防げる。 特にサポート相手はオールインを安定して拒否できるのでレーン段階から有利がつく。 ただし発生が早く引き寄せ距離の長いフック持ちブリッツクランクパイクに関しては、僅かに反応が遅れるだけでデスに直結するのでイーブン。 AoE CCが豊富で複数人に纏めて仕掛けてくる相手レルラカンも単体対象のEでは守りきれない場面が多いので有利がつかない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Yasuo",
+          "Samira",
+          "Xayah",
+          "MissFortune"
+        ],
+        "label": "短射程ADC",
+        "text": "射程が短めのADC。スキルドッジが苦手な相手はQを当てやすいので有利。 ただしスキルを防げる相手ヤスオサミーラはQを弾かれる可能性もある。 その場合もCDの長い防御スキルを落とすので有利ではあるが、無駄に追撃しようとしないように。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Milio",
+          "Karma",
+          "Sona",
+          "Soraka",
+          "Lulu"
+        ],
+        "label": "エンチャンター",
+        "text": "モルガナの火力における主力はWのDoTなため、シールドやヒールを持っている相手にはほぼ確実にダメージを防がれダメトレ不利。 レーニングを乗り切ったところで集団戦でのダメージレースへの影響が大きいのは相手の方。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Naafiri",
+          "Gwen",
+          "Olaf"
+        ],
+        "label": "Qを無効化",
+        "text": "直接的な拒否スキルは基本的にQのみで逃げスキルが無いため、そこを防がれると逃げ手段を失う。 これらはペットのボディブロックや対象指定不可などでQを凌いで追撃を仕掛けてくる。 Ultで拒否しようにも相手は機動力で一度距離をとることもできるので、スタン前に離脱してから再び追撃を狙ってくる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Twitch",
+          "Akshan",
+          "Khazix",
+          "Rengar"
+        ],
+        "label": "ステルスアサシン",
+        "text": "理由は上記に近く、Qは方向指定かつ弾速が遅めで、見えている相手にすら当てづらい。 ステルス状態で接近から一気にバーストを出す相手には間に合わず、バーストを叩き込まれがち。 接近に成功されたら最早Qを当てても離脱前にデスする可能性すらあるため、勝率が低い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MissFortune",
+          "Caitlyn",
+          "Jhin",
+          "Senna"
+        ],
+        "label": "PushするADC",
+        "text": "Pushを作り、コンスタントなハラスを繰り返すレーニングを行うADC。 WによりPush補助が得意で、相手のミニオンがいなければQも当てやすくなる。 逃げが弱く、オールインが苦手な相方が多いのでEが役立ちやすいのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kaisa",
+          "Samira",
+          "Xayah",
+          "Kalista"
+        ],
+        "label": "エンゲージを要求",
+        "text": "射程が短い代わりにオールインが強いタイプのADC。 モルガナはキャッチ手段が弾速の遅いQのみ、ミニオンに防がれるのでPushの遅い相方は二重に辛い。 Qさえ当たればEの保険をかけつつ飛び込ませることが出来るが、足が遅く一時的に2vs1になりがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

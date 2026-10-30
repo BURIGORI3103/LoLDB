@@ -942,5 +942,55 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Viego#ldcb3b6e",
+    "fetched_at": "2026-10-30T09:49:29+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vi",
+          "Pantheon",
+          "XinZhao",
+          "Sylas",
+          "Diana"
+        ],
+        "label": "etc/ダイバー",
+        "text": "離脱手段の薄いダイバー全般。デスに繋がりやすいのでパッシブが発動しやすい。 通常スキルだけでもUltの射程に相手を入れるには十分な追撃性能があり、奪った後の反転攻勢にも繋がる。 タイマンでもCCに依存する相手が多く、Ultのアンストッパブルで透かせば有利に戦闘しやすいのも強み。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zilean",
+          "Renata",
+          "Taric",
+          "Tryndamere",
+          "Kayle"
+        ],
+        "label": "無敵・蘇生",
+        "text": "集団戦ではキルに絡み、パッシブを発動することでターゲットをずらすことも込みで生存を狙う。 必然、無敵や蘇生でキルを無かったことにする相手には最初の1キルを防がれてしまい出足を挫かれやすい。 ヴィエゴ自身も本体は離脱手段が乏しいダイバーのため、逆にデスに繋がってしまう。 トリンダメアトリンダメアは本人のみだが、ヴィエゴのCCが薄く序盤のGankも弱い点と相手のスケールが悪く機能している。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rammus",
+          "Zac",
+          "Amumu"
+        ],
+        "label": "CCが豊富なタンク",
+        "text": "基本はAA主体のスカーミッシャー。豊富なCCを持ち、追撃・エンゲージも得意なタンク相手は後手に回りがち。 ジャングラーとして運用する場合、序盤のGankが強い相手ラムスザックにはヴィエゴが動き出す前に差をつけられる。 集団戦でも張り付かれればパッシブを回転させる前に落されてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

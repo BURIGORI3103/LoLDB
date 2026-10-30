@@ -943,5 +943,55 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Yorick#gd7c2c47",
+    "fetched_at": "2026-10-30T09:49:33+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Illaoi",
+          "Darius",
+          "Garen"
+        ],
+        "label": "接近の弱いジャガーノート",
+        "text": "ブリンクを持たないジャガーノート系列。特にASが低い相手は壁もミストウォーカーも処理しづらい。 Wで囲み、Eを当ててミストウォーカーに殴らせる基本のトレードを狙いやすく、レーン段階から勝ちやすい。 レーンで負けると存在感がなくなる相手が多く、後半のSplit段階でも同様の理由で有利がつく。 イラオイイラオイについてはミストウォーカーでEの触手を防げるのも大きい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Kennen",
+          "Teemo",
+          "Gnar",
+          "Vladimir",
+          "Jayce"
+        ],
+        "label": "逃走の弱いRanged",
+        "text": "逃げ手段の乏しいRanged全般にも有利な傾向。 最序盤こそハラスを一方的に受けるが、墓が増えてきたらE1発でそれなり以上に削れる。 スローをかけた後は走って追いつき、Wで囲んで再び殴り抜いてキルまで繋がる。 基本的にAoEが弱い相手が多いため、ミストウォーカーによる数の暴力で押し切れる場合が多い。 ナーナーは逃げ手段は持つがゲージを調整するのが困難で、またペットがQを防いでくれるために有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Irelia",
+          "Tryndamere",
+          "Gwen",
+          "Yasuo",
+          "Yone"
+        ],
+        "label": "スカーミッシャー",
+        "text": "CDが短めのブリンクを持つスカーミッシャー。壁による拒否をブリンクで実質無力化される。 スキルが1つ少ない状況での殴り合いに陥り、AAが強い相手はミストウォーカーも簡単に処理されてしまう。 壁を越えられなければUlt習得後の殴り合いは最強クラスのため、該当する相手アンベッサカ・サンテはスカーミッシャーでも有利。",
+        "has_caveat": false
+      }
+    ]
   }
 }

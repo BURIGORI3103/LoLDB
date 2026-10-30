@@ -941,5 +941,73 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Illaoi#i284f449",
+    "fetched_at": "2026-10-30T09:48:53+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Renekton",
+          "Volibear",
+          "Warwick"
+        ],
+        "label": "仕掛けが直線的なファイター",
+        "text": "Eさえ当たれば大半の相手に殴り合いを挑める。接近手段が直線的なブリンクや加速の相手に有利。 最序盤は直接殴り合うのは難しいが、射程の長いQでCS・Pushは十分に誤魔化せる。 いざ殴り勝てるようになれば、基本的に相手もエンゲージ手段が乏しく集団戦が苦手なのでSplitを狙いやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nasus",
+          "TahmKench",
+          "Shen"
+        ],
+        "label": "Pushが遅い",
+        "text": "AoEが豊富な上にCDも短いのでPushが異様に早く、サステインも高い。 これらのPushが遅い相手はミニオン差をつけて一方的にタワーを削り、タワー下にもEを投げて防衛も妨害できる。 圧をかけてCS差を作ったら、装備差を活かしてSplit展開に持ち込みゲームを決めていける。 ただし、シェンシェンについては序盤が強く、レーニングを拒否して他を勝たせる選択肢がある。 基本的に追いかけても無意味なので素早く押しつけてタワーを折るしか無い。他レーンも迂闊に仕掛けて反撃を食らわないよう注意。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Quinn",
+          "Jayce",
+          "Heimerdinger",
+          "Gangplank"
+        ],
+        "label": "etc/Ranged、およびそれに類する相手",
+        "text": "スキルの弾速が遅いので距離があると避けられやすく、Ranged相手は触手も容易に壊されてしまう。 攻防両面で触手とスキルの命中に依存する以上、これらの要素へのカウンターに弱く主導権を握られがち。 ガングプランクガングプランクはRangedでは無いが、ウェーブ処理が早くQの射程が長いためやはり一方的にハラスを受ける。 更に相手はスケールが高いのでレーン段階をなあなあで過ごしても意味が無く、逆転が難しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mordekaiser"
+        ],
+        "label": "モルデカイザー",
+        "text": "特殊な例。Ultで連れて行かれる冥界には、触手を持っていくことが出来ない。 必然的にタイマンが弱い状態で殴り合いを強制され、Ultの効果も薄くなる。 相手もサステインが高くPushも比較的早めなため、強みが被ることになりタイマン不利が響きがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yorick"
+        ],
+        "label": "ヨリック",
+        "text": "大量のペットを展開してくるのでイラオイのEがまるで当たらず、Pushも早いのでレーン段階から苦しい。 更にべた足かつ足が止まりやすいのが災いして、Wに囲まれグールにタコ殴りにされやすいのも厳しい。 Ultを決めても囲まれた後で離脱されれば最早追う手段は無い。Splitも得意なのでたまらず帰れば素早くタワーを削ってくる。 Ultを覚える前の弱さを頼りに序盤の間に完全な優位を取るか、味方のエンゲージを頼りに集団戦に賭けるのが薄い勝ち筋となる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

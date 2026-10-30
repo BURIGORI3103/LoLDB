@@ -1355,5 +1355,55 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ryze#qcb3f3e9",
+    "fetched_at": "2026-10-30T09:49:17+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Fizz",
+          "Vladimir",
+          "Pantheon",
+          "Akali",
+          "Leblanc"
+        ],
+        "label": "Pushが遅く、有効射程が短め",
+        "text": "対象指定CCのWにより有効射程の短い相手には有利がつく。 特にPushが遅い相手はE＋Qにより一気に処理してロームを狙いやすく勝率が高く出る。 比較的タンキーな装備との相性が良いため、バースト系のアサシンにスノーボールされるリスクも小さく済む。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Taliyah",
+          "Syndra",
+          "Cassiopeia",
+          "Malzahar"
+        ],
+        "label": "etc/ゾーンコントロール",
+        "text": "射程やDPSがライズよりも高く、ゾーンコントロールが得意なメイジ全般。 射程の短さから一方的なハラスやトレード負けを引き起こしやすく、相手もPushは早めなのでロームの隙も作りづらい。 集団戦においても同様、ライズの有効射程よりも遠くからダメージを出したりCCを発生させてくるためゲーム全体を通して不利。 マルザハールマルザハールについては射程・DPSそのものはトントンだが、Ultのキャッチと序盤の弱さを突きづらく相性が悪い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yasuo",
+          "Yone",
+          "Irelia"
+        ],
+        "label": "Pushの早いスカーミッシャー",
+        "text": "素早いPushと機動力を両立するスカーミッシャー。Pushを作ってもあっという間に処理され、ロームが狙いづらい。 DPSもライズ並かそれ以上に高く、ヤスオヤスオは主力スキルを防がれてしまうこともありトレードに応じることも出来ない。 タイマンが勝てないので中盤以降もサイドレーンでのPushを作りづらく、ライズのやりたいことを完遂しづらい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

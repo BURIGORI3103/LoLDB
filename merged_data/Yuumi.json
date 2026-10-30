@@ -937,5 +937,97 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Yuumi#counter",
+    "fetched_at": "2026-10-30T09:49:34+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xerath",
+          "Zyra",
+          "Brand",
+          "Ashe",
+          "Jhin"
+        ],
+        "label": "etc/ハラス型のメイジサポート・ADC",
+        "text": "ハラスを繰り返すことでダメージを蓄積させるレーニングを得意とする相手全般。 相手の主力は方向・地点指定なのでEの加速でADCがかわしやすくなり、仮に当たってもシールドの保険がある。 相手は機動力が低いのでQも誘導弾で当てやすく、ハードCCを使わせた後なら降りてAAでパッシブを回転させることも可能。 サステインの高さを押しつけやすく、レーンで耐えきれば集団戦のサポート性能は上回るので有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Khazix",
+          "Nocturne",
+          "Kayn"
+        ],
+        "label": "(青)[[Shaco]]/バースト型のアサシン",
+        "text": "確実性の高い防御手段を持ち、自身はターゲットにならないのでアサシン相手に立ち回りやすい。 これらは単体を落とすバーストに特化、スノーボール前はギリギリの火力で運用するため初動を防ぎやすいので有利。 CCが薄い相手が多いので加速＋シールド、Ultの習得後はスロー＋ヒールを抜けてキルに繋がれる心配も小さい。 特にカ＝ジックスカ＝ジックスは 密着 しているだけで自動で孤立を防げるのでハードカウンターとして機能する。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Nautilus",
+          "Rell",
+          "Alistar",
+          "Leona",
+          "Blitzcrank"
+        ],
+        "label": "タンクサポート",
+        "text": "CCは弱め、かつADCの強化もDPSの底上げ・長期戦の補助が専門。 オールインからの短期戦を仕掛けられるといなすのも難しく、トレードで勝つのも不可能。 また視界確保などのためにADCから離れる際も、これらに捕まると 密着 できない時間が発生しデスに直結する。 かといって降りずにいたとしても、今度は相手の狙いがADCに集中するので相方の動きを制限しがち。 相手はロームが得意、かつユーミは留守番しているADCを咎める手段が乏しく、他のレーンにまで悪影響を及ぼしてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Vi",
+          "Nunu",
+          "Belveth",
+          "Kindred"
+        ],
+        "label": "スカーミッシャー・ダイバー",
+        "text": "後衛に突っ込み、高い張り付き性能でキルをもぎ取るタイプの相手。 CCが薄く、短期的なPeel手段がEしか無いのでバーストが高く、反撃でキルに繋ぎづらいこれらに不利がつく。 ADCを仕留めきられてしまうと単独での戦闘能力が皆無に近いのでマルチキルに繋がれやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Zeri",
+          "Twitch",
+          "Nilah",
+          "Tristana"
+        ],
+        "label": "機動力や奇襲性能に優れたADC",
+        "text": "自衛・オールイン性能に優れたADC。特に機動力に依存するもの。 密着 していれば自動的に追従、対象がステルスになるトゥイッチとユーミもステルスになる。 忙しなく動く味方も的確にサポートしていけるので確実性が高く、相性が良好。 Pushの早い相方シヴィアトリスターナについてはユーミの短所であるPush力もカバーしてくれる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ashe",
+          "Jhin",
+          "Varus",
+          "Aphelios",
+          "Caitlyn"
+        ],
+        "label": "逃げ性能が悪い",
+        "text": "咄嗟の逃げ性能が悪いADC。捕まるとマルチキルに繋がってしまう。 Pushから積極的なハラスでレーニングを行うものが多いが、ユーミはPush性能が低いので手助けできない。 仮に押せても、ディスエンゲージが苦手なのでGankを呼び込みがちとどうにも噛み合いが悪い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -933,5 +933,104 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rell#ldcb3b6e",
+    "fetched_at": "2026-10-30T09:49:15+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Pyke",
+          "Nautilus"
+        ],
+        "label": "キャッチャー",
+        "text": "タンク系列の常としてフックに強い。わざと捕まってオールインの起点にすることも可能。 加速のお陰でADCもフックを避けやすくなり、またレルがキャッチされた後の接近も早くなる。 キャッチャーはタンクになるのが基本のため、AR/MRの吸収効率がよい利点も存在。 ただしスレッシュスレッシュはPeel性能の高さがレルに不都合が大きく、微不利からイーブン程度。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lulu",
+          "Yuumi",
+          "Sona",
+          "Ashe"
+        ],
+        "label": "拒否が弱めのエンチャンター・メイジ系サポート",
+        "text": "AoE CCの種類が多く、相手を拘束できる時間が長め。キャッチに弱い相手全般に有利がつく傾向。 ルルルルは拒否こそ優秀ながら、CCを全て使い切った後のレルにはほぼ無意味。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jinx",
+          "KogMaw",
+          "Varus"
+        ],
+        "label": "射程の長いDPS",
+        "text": "遠距離への攻撃手段を持たない以上、オールインを狙うのがレーン段階における勝ち筋。 しかし騎乗Wは射程が短め、鎧身Wは加速による接近であり、射程が長い相手に入り込むのが難しい。 自衛能力の低いADCの横には救出性能の高いエンチャンターが控えることが多いのもあり勝率不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zeri",
+          "Vayne",
+          "Xayah",
+          "Nilah"
+        ],
+        "label": "Wに対する回答を持つ",
+        "text": "機動力が高かったり、オールインに強いキャリー群。 基本的にWのオールインを前提とするため、Wをかわしたりカウンターを決められると競り負けてしまう。 ヴェインヴェインについては元々アンチタンクとしての性能を持つほか、鎧身形態の鈍足のせいで位置取りを狙われがち。 壁ドンが決まると如何にレルといえども非常に痛く、集団戦においてもオールインの範囲に入れる難易度が高い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Janna",
+          "Renata",
+          "Alistar",
+          "Taric"
+        ],
+        "label": "ピーラー",
+        "text": "原則としてオールインになる以上、起点を潰されると弱い。必然的にピーラーには不利。 レーン・集団戦を問わず排除された後の復帰が遅かったり固められた時に脆い点を突かれてしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nunu",
+          "Hecarim",
+          "Yasuo",
+          "Nilah"
+        ],
+        "label": "移動速度に依存",
+        "text": "Meleeの相方や、移動速度に強く依存するジャングラーたち。 通常スキルで対象と自身双方の加速が行えるので接近・離脱を補助する性能が高い。 キャリーヤスオニーラはいずれもサポートにオールインを要求するが、レルならば能動的な仕掛けを積極的に行える。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "MissFortune",
+          "Viktor",
+          "Hwei",
+          "Ziggs"
+        ],
+        "label": "ゾーンコントロール型のキャリー",
+        "text": "逆にPeel性能も高いので、自衛能力が低めなこれらのキャリーをしっかり守るのも得意。 特定の範囲に対してダメージを出し続けるのが得意な性質を、豊富なCCで敵を押しとどめて支援していける。 APCについてはスキルを吐ききった後はDPSが出ないので撤退が必要になるが、レルの耐久力なら下がりきれる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

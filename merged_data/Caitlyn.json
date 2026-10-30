@@ -867,5 +867,116 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Caitlyn#ja2f719a",
+    "fetched_at": "2026-10-30T09:48:44+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Vayne",
+          "Xayah",
+          "Lucian",
+          "Brand",
+          "Swain"
+        ],
+        "label": "短射程",
+        "text": "全チャンピオン最長のAA射程により、一方的なハラスを狙える相手。 ブリンクを持つものは機動力を利用してインファイトを狙う場合もあるが、Wの罠でそれを制限できる。 レーン段階で差をつけやすく、相手のスケールを妨害できるのもあり有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zilean"
+        ],
+        "label": "ジリアン",
+        "text": "特殊な例。Ultの蘇生にはラグがあるので、足元にトラップを置くと復活後すぐにバーストを叩き込める。 結果としてほとんど意味を為さず、ジリアン自身も脆く、手数が少ないため比較的安全に差をつけられる。 なお、同じく足の止まる他レーナーマルザハールリサンドラ相手も同様の動きは可能。 だがこれらはケイトリンが苦手な強烈なCCを持ち、得意とするレーン段階で対峙しないため勝率はトントン。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lillia",
+          "Amumu",
+          "Fiddlesticks",
+          "Warwick"
+        ],
+        "label": "出足が遅めのジャングラー",
+        "text": "射程の長さはレーン段階で最も輝く特徴だが、ジャングラーはそこに横槍を入れてくる。 逃げ性能が低い訳ではないが序盤からタワーシージを狙う都合、早めにGankを狙う相手は圧がかかる。 逆に言えばUltに強めに依存する相手は比較的安全にやりたいことを完遂可能。 Ultを覚えて以降は普通にGankを狙ってくるので極端に有利な訳ではないが、ソフトカウンター程度には優位を作りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Nautilus",
+          "Pyke",
+          "Thresh"
+        ],
+        "label": "フック型のキャッチャー",
+        "text": "スキルのモーションが長く、射程の長さに反してスキルショットに当たりやすい。 ブリンクもモーションが遅い上に直線的なため、特に一度のヒットが命取りになるフック相手は不利がつく。 純粋な2vs2ならまだしも、ケイトリンの苦手なGankを呼び込みやすいこともあってデスが嵩みがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jhin",
+          "Varus",
+          "Kalista"
+        ],
+        "label": "オールインが強く、有効射程が長い",
+        "text": "罠に引っかけたりEを当てない限りはバーストが低いDPS型。 これらはケイトリンの射程からオールインを仕掛けるCCや機動力を持ち、足回りの弱さを突かれやすい。 バーストもケイトリンより大分高く、殴り合いになれば勝ち目は薄い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Ziggs",
+          "Xerath",
+          "Velkoz",
+          "Seraphine"
+        ],
+        "label": "([[Ezreal]])/アーティラリー、およびそれに類する長射程",
+        "text": "射程の長さが強みとはいえ、アーティラリー級には流石にかなわない。 Wの罠に引っかかる射程に入ってこないので、普段とは逆に一方的なハラスを食らいやすい。 AoEが豊富で比較的Pushが早いため、タワーシージを狙いづらいのも厳しい。 エズリアルエズリアルはAoEが弱くPushも貧弱ながら、Qの射程の長さでハラスを狙ってくる。 隣にPush性能をカバーできるこれらのメイジがいるケースも多いため、組み合わせとしての不利もつきやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Rammus",
+          "Zac"
+        ],
+        "label": "ワードでの警戒が難しいGanker",
+        "text": "Gank回避は罠による感知に強く依存。掻い潜られると発生が遅いEでなんとかするしか無くなる。 Gankのルートが幅広い相手はどこから来るかの予測が難しく、罠で感知できずに奇襲を食らいがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zyra",
+          "Morgana",
+          "Lux",
+          "Xerath"
+        ],
+        "label": "CCを持つメイジサポート",
+        "text": "Push力の高いメイジサポートのうち、移動不能CCを持つ相方。 射程差を活かしてハラス・Push、タワー下まで押し込んでも更なるハラスやWの設置によりタワーシージを続行できる。 特にスネア・スタンを持っているとWを重ねることでバーストを叩き込めるようになり、キルプレッシャーも高くなる。 Gank耐性は低いので、対面が合わせられなくなるまでハラスをしつつ視界もしっかり確保しておきたい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

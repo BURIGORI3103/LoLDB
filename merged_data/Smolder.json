@@ -1355,5 +1355,65 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Smolder#sc34fcd8",
+    "fetched_at": "2026-10-30T09:49:21+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar",
+          "Naafiri",
+          "Yorick",
+          "Shaco",
+          "Zyra"
+        ],
+        "label": "ペット",
+        "text": "Qで破壊可能なタイプのペットはスタックの糧に出来る。 特にマルザハールマルザハールはペットの数が多い上に密集して出てくるので、25スタック以降のQで一掃しやすい。 ミッドに出てきた場合、対面にスモルダーを出張させることもあるぐらいのカウンターになる。 当然捕まれば命はないので、舐めた立ち位置をしてキルレーンにされないようには注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nilah",
+          "Xayah",
+          "Vayne",
+          "Braum",
+          "Taric"
+        ],
+        "label": "etc/短射程",
+        "text": "射程が短いADCや、エンゲージ性能の低めなサポート。レーンで穏当に過ごしてスタックを稼ぎやすい。 ADCについてはCSを取るにもある程度前に出ることになるため、WやEも当てやすくスケールさせやすい。 例外としてヤスオヤスオはWに全スキルを消されてしまうため有利を取れない。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Mel",
+          "Brand",
+          "Hwei"
+        ],
+        "label": "APC",
+        "text": "射程が長めのAPC全般に不利が付く。 Q、Wを当てづらく、スタックが貯めにくいうえにこちらが削られやすい厄介な対面。 特にメルメルは全スキルを反射されてしまうハードカウンター。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi"
+        ],
+        "label": "ユーミ",
+        "text": "特殊な例。ほぼ常時対象指定不可のためスキルで巻き込める相手が一人減る。 スモルダーのレーニングはハラスすることが多く、ユーミがハラス系の相手に対して強いためそこも不利。 こちらのスケールが遅れてしまい、逆にユーミのスケールも大きいため中盤から終盤にかけての戦闘で差を付けられてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

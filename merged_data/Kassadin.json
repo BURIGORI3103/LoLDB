@@ -940,5 +940,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kassadin#ced9694a",
+    "fetched_at": "2026-10-30T09:48:58+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Katarina",
+          "Fizz",
+          "Akali",
+          "Sylas"
+        ],
+        "label": "APアサシン",
+        "text": "魔法ダメージを軽減するパッシブ、QのシールドでAP相手に強い。 特に射程の差を押しつけることも出来ないMeleeに有利。機動力もUltの習得後は追いつけるように。 カタリナカタリナ相手はUltをQで止めることも出来るのも大きく、全面的にカウンターとして機能する。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Veigar",
+          "Zoe",
+          "Xerath",
+          "Velkoz"
+        ],
+        "label": "拒否手段が地点・方向指定スキル",
+        "text": "拒否手段がCCのみであるメイジ。特に対象指定を持たない相手に有利。 序盤こそ機動力の低さとファームの遅さを突かれやすいが、Ultを覚えれば一転。 設置型のCCは乗り越え、方向指定も飛び越えるなり角度を変えるなりで接近が容易。 育ち方にもよるがアーティラリー相手は十分なバーストが出るのもあって特に有利。 前線が厚くなると狙いづらくはなるので、出来るだけレーン段階で有利を取っていきたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Talon",
+          "Zed",
+          "Akshan",
+          "Tristana"
+        ],
+        "label": "対面に来るADチャンピオン",
+        "text": "ARは初期値・スケール、共に全チャンピオンでも最低クラス。 序盤は機動力もバーストも拒否手段も無く、一方的にキルのプレッシャーを受け続ける羽目に。 レーン段階から取り返しの付かない差をつけられ、一度転ぶと逆転しづらい性質もあって腐りがち。 どうにかレーンをトントン程度に抑えたとしても、特にアサシン相手は普通にワンコンでキルされかねない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "MasterYi",
+          "RekSai",
+          "XinZhao",
+          "Qiyana"
+        ],
+        "label": "スノーボール型のADジャングラー",
+        "text": "ADアサシンを始めとした、ダメージ出力が物理かつキャリー型のジャングラー。 序盤のカサディンは非常に弱いため、森の小競り合いには対面に一方的に介入されがち。 結果、森のスケールに大きな差がついてしまい、そちらから崩されてしまう危険が大きい。 カサディン自身も序盤は逃げ性能が非常に低く、キャンプされると何も出来なくなるパターンもある。",
+        "has_caveat": false
+      }
+    ]
   }
 }

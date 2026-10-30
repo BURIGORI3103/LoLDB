@@ -943,5 +943,122 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Lee%20Sin#wd9b1339",
+    "fetched_at": "2026-10-30T09:49:01+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Evelynn",
+          "Ekko",
+          "Talon",
+          "Khazix",
+          "Kindred",
+          "MasterYi",
+          "Kayn",
+          "Graves",
+          "Nidalee"
+        ],
+        "label": "",
+        "text": "中盤の優位が重要なアサシン/キャリー系JG",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Amumu",
+          "Nunu"
+        ],
+        "label": "",
+        "text": "逃げ性能が悪く序盤に荒らされると苦しいタンクJG",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Akali",
+          "Rengar",
+          "Vayne"
+        ],
+        "label": "",
+        "text": "Qの真の視界が刺さるステルス持ち",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Akali",
+          "Leblanc",
+          "Qiyana",
+          "Talon",
+          "Akshan",
+          "Irelia"
+        ],
+        "label": "",
+        "text": "普段ロームでJGをキルしているアサシンmid",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Udyr",
+          "Poppy"
+        ],
+        "label": "",
+        "text": "数少ない、序盤タイマン不利な相手。普段と違って序盤の動きが制限され、リードをとりづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Shyvana",
+          "Lillia"
+        ],
+        "label": "",
+        "text": "Lv6から倒しきれなくなる相手？",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Zac",
+          "Rammus",
+          "Gragas"
+        ],
+        "label": "",
+        "text": "中盤のGankと終盤の集団戦にフォーカスするタンクJG",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Veigar",
+          "Malzahar",
+          "Annie",
+          "Vex",
+          "Syndra",
+          "Lux",
+          "Lissandra"
+        ],
+        "label": "",
+        "text": "スケールも良いバーストメイジmid",
+        "has_caveat": false
+      }
+    ]
   }
 }

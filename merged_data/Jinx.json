@@ -939,5 +939,154 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Jinx#rc33b63e",
+    "fetched_at": "2026-10-30T09:48:56+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Samira",
+          "Sivir",
+          "Nilah",
+          "Xayah",
+          "Tristana"
+        ],
+        "label": "短射程ADC",
+        "text": "射程の短いADC。Qonの射程の長さを利用して安全にCSを確保、ハラスも可能。 集団戦においても比較的安全圏からDPSを出していけるので基本有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Caitlyn"
+        ],
+        "label": "ケイトリン",
+        "text": "逆に最長の射程を持つケイトリンにも有利がついている。 Qのスキルレベルが3になればケイトリンと張り合える射程になり、Pushも早いので、ケイトリンのやりたいことを自然に潰せるため。 さらに集団戦における影響力も圧倒的にジンクスの方が上のため、イーブンで済ませるだけでも十分。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Morgana",
+          "Brand",
+          "Swain",
+          "Lux"
+        ],
+        "label": "メイジサポート",
+        "text": "Qonの射程の長さにより、最序盤を除いてハラスをかわしながらCSを取っていける。 キャッチスキルにだけは当たらないようにしつつスケールしていくとよい。 集団戦では脆いメイジサポートであれば、即キルに関与してパッシブの足がかりに出来る。 ただしゼラスゼラスヴェルコズヴェル＝コズは更に長い射程でハラスが可能、必然的に相手との間合いが大きくなりキルまでつなぎにくい。 いずれも機動力は低いため味方のサポート・JGにもよるが強引にキャッチできさえすればスノーボールはできるので、イーブン前後のマッチアップ。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Pantheon",
+          "Leona",
+          "Alistar",
+          "Rell"
+        ],
+        "label": "飛び込むタイプのキャッチャー",
+        "text": "相手のエンゲージの有効射程外からCSを取れるキャッチャー相手も有利。 また仮に入られてもADCからの最短経路に向けてEを置けば一時的に2vs1の状況を作れる。 撤退時に踏めば更にダメージを出すチャンスが出来る為、トレードを有利にしやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Evelynn",
+          "Nidalee",
+          "Twitch"
+        ],
+        "label": "アサシン",
+        "text": "自衛スキルが貧弱なため、アサシンに接近されると為す術が無い。 特にステルスで近づいてくる相手を察知する手段は皆無。 どこまで育っていても瞬殺されるリスクがあるので、警戒を怠らずに動きたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Malphite",
+          "Ambessa",
+          "Nocturne",
+          "MonkeyKing",
+          "Gnar"
+        ],
+        "label": "バックラインにCCを入れやすいダイバー",
+        "text": "ジンクスはべた足なのでこれらに無理やりエンゲージされてしまうと基本的にできることがない。 特にアンストッパブルマルファイトアンベッサやスペルシールドノクターンを持つものは唯一の自衛手段であるEを透かしてくる厄介な相手。 ジンクス一人ではどうしようもない場合が多いため、これらが敵にいる場合は味方の近くにいることをより一層意識したい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Pyke",
+          "Blitzcrank",
+          "Bard"
+        ],
+        "label": "飛び込まないキャッチャー",
+        "text": "べた足ADCの宿命としてキャッチスキルそのものは食らいやすく、逃げづらい。 こちらに飛び込んでくる分にはEでADCと分断できるが、そうでない場合は殴り負けてしまう。 パイクパイクは苦手なステルスを使ってくることもあって特に苦手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Renata",
+          "Zilean"
+        ],
+        "label": "蘇生・キルの無効化",
+        "text": "パッシブが発動すると凄まじい殲滅力を発揮。逆に言えばキルを無かったことにされると辛い。 追いかけた後の離脱はパッシブが前提のため、レナータレナータ・グラスクの蘇生も正式な蘇生に繋がりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Leona",
+          "Amumu"
+        ],
+        "label": "ヴァンガード",
+        "text": "キャッチからのオールインを得意とするヴァンガードサポート。 ジンクスがキル・アシストを取ればパッシブが発動。カバーに来た敵にも有利に戦える。 特に対象指定or広範囲のハードCCを持っている場合はジンクスの苦手なアサシンに強く、相性が良好。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Braum",
+          "Janna",
+          "Thresh",
+          "Renata",
+          "Lulu"
+        ],
+        "label": "ピーラー",
+        "text": "逆にピールが得意な相方との相性も良好。逃げ性能の悪さをカバーして貰える。 こちらについてはパッシブの発動は目的とせず、ファームでスケール勝ちを狙う展開。 集団戦でも相手の強引な侵入を咎めてジンクスを生き延びさせることに長ずる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Senna",
+          "Hwei",
+          "Ashe"
+        ],
+        "label": "ピールが弱く、バーストも薄い",
+        "text": "逃げ性能をカバーできないサポートとの相性が悪い。 どちらがキャッチされてもデスに直結し、基本的に視界確保能力が低いのでGankにも弱い。 バーストのあるメイジサポートであればまだしも、DPS寄りの相方と組むと勝率が分かりやすく落ちる。",
+        "has_caveat": false
+      }
+    ]
   }
 }

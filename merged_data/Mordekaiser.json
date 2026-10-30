@@ -943,5 +943,81 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Mordekaiser#h543b54b",
+    "fetched_at": "2026-10-30T09:49:07+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Shen",
+          "Teemo",
+          "Malphite",
+          "Chogath",
+          "Zac"
+        ],
+        "label": "ロングファイトが苦手",
+        "text": "Eにより引きずり込んでロングトレードを挑むのが基本戦術。 拒否が弱く、咄嗟にEを透かす手段も乏しい対面は全体的に有利がつく。 サステインが高いのでマナ消費が激しい相手ティーモマルファイトチョ＝ガスは息切れに追い込める点も重要。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Fiddlesticks",
+          "Katarina",
+          "Lissandra",
+          "Amumu",
+          "Sejuani"
+        ],
+        "label": "etc/強力なAoE",
+        "text": "Ultでタイマンを強制するため、集団戦におけるAoEにチャンピオンとしてのパワーが集中している相手に有利。 入ってきたところでタイマンを強制すると、受けるのが自分だけになるのでDPSを大きく低下させられる。 その手のAoEが強力な相手は単体相手のDPSに劣ることが多く、タイマンそのものも普通に有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Illaoi"
+        ],
+        "label": "イラオイ",
+        "text": "特殊な例。Ultで拉致するだけで相手の火力・耐久力の源である触手が消滅する。 ただしUltにUltで合わせられるとアンストッパブルで透かされる危険もあるので、先にUltを使わせるのがコツ。 互いにUlt抜きでトレードした場合も相手の足が止まりやすいためスキルを当てやすい。 パッシブやWにより殴り合いの性能が高いこともあって、真正面から戦闘するならば有利。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Olaf",
+          "Fiora",
+          "Gwen",
+          "KSante",
+          "DrMundo"
+        ],
+        "label": "CC無効",
+        "text": "Ultは解除が出来ないだけで発動の瞬間はCC扱い。咄嗟に無効化する手段があると透かされてしまう。 いずれも機動力が高かったりタイマン性能がモルデカイザー以上に高く、拉致出来ても仕留めきれずに終わりやすい。 Eのキャッチも当然CCであり、これを透かされるだけでも普通に辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vayne",
+          "Yone",
+          "Yasuo",
+          "Singed",
+          "MasterYi"
+        ],
+        "label": "etc/機動力が高い",
+        "text": "Ultを使ったとしても殴り合いを挑むには結局他のスキルも当てる必要がある。 いずれも発生が遅い以上、機動力の高い相手は引きずり込めたとしても辛いことには変わりない。 逆にモルデカイザー側の機動力の低さから、Eを外した状態からの交換に容易に持ち込まれ削り負けてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

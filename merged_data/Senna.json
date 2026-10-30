@@ -935,5 +935,94 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Senna#eab9660e",
+    "fetched_at": "2026-10-30T09:49:18+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Xayah",
+          "Vayne",
+          "Samira"
+        ],
+        "label": "短射程ADC",
+        "text": "AAモーションは悪いが射程は最序盤から長いので、これらの短射程なADCにハラスを重ねやすい。 ハラスを重ね続けることでパッシブを強化、射程を伸ばして更に一方的にダメージを出せるようになる。 ただし殴り合いになるとバーストはなく、モーションの悪さの都合でDPSでの競り合いも弱め。 捕まるとデスに繋がるので、これらの隣に配置されやすいキャッチャーに注意。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Renata",
+          "Braum",
+          "Poppy",
+          "Shaco",
+          "Alistar"
+        ],
+        "label": "カウンターエンゲージ",
+        "text": "迎撃を得意とするサポート全般。基本的に飛び込む必要が無いので相手の得意な展開に持ち込まれずに済む。 相方のMeleeにCSを取らせる断食運用の場合も、セナは無理にレーン段階から仕掛ける必要は無い。 キルプレッシャーを抑えてスケールを待つことが出来るため全般的に有利。 アリスターアリスターはエンゲージも出来るが、仕掛けが直線的なのでWを経路に置きやすく逃げやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jhin",
+          "Ashe",
+          "Varus",
+          "Pyke",
+          "Blitzcrank"
+        ],
+        "label": "etc/Gank合わせが得意",
+        "text": "脆い上にCCの発生が遅く、序盤はDPSも低めなのでGankやキャッチに非常に弱い。 特にキャッチャーは対面から捕まっても、Gank合わせで強引に飛び込まれても為す術がない天敵。 ADCについてもハラス性能が高い相手が多く、Qのヒールで賄おうとするとマナが尽きがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Veigar",
+          "Seraphine",
+          "Hwei"
+        ],
+        "label": "APC",
+        "text": "序盤からWのスネアがあり、メイジと組み合わせるとCCチェインを狙いやすくなる。 AD・APのバランスも良く、Push性能が高い上にAPCに不足しがちなサステインも補えてレーンが強い。 いずれもレーンで育つと後半にも存在感を発揮しやすいチャンピオンが揃っているため相性が良好。 Gankに弱いという短所は互いに全く補っていないので、相手の森の位置には要注意。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "TahmKench",
+          "Yasuo",
+          "Nilah",
+          "Taric",
+          "Braum"
+        ],
+        "label": "etc/Meleeボットレーナー",
+        "text": "基本的にキャリー・サポートを問わずMeleeとの相性が良好。 これらの短所である射程の短さをセナが補いつつ、ヒールでサステインも引き上げられる。 逆にセナの苦手な接近戦は相方が強くなる、APCとは逆に互いに短所を補うタイプのシナジー。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Brand",
+          "Zyra",
+          "Velkoz"
+        ],
+        "label": "メイジサポート",
+        "text": "APCとは逆に、これらのメイジサポート全般と相性が悪い。 Push・ハラスは確かに強いが元よりメイジサポートはレーン段階からダメージが十分出るので火力過剰。 Gankに弱い短所をカバーしていない上に、これらはAPCと違いゴールドが少なくともダメージが出る＝ゴールドの恩恵が小さい。 セナがCSを取れば亡霊があまり落ちず、メイジがCSを取っても（サポートアイテムなら亡霊も落ちない）見返りが薄い。 総じてレーンでは勝てても息切れが早く、逆転を許しやすい構成。",
+        "has_caveat": false
+      }
+    ]
   }
 }

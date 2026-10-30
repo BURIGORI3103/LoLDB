@@ -1766,5 +1766,135 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Xerath#b2cfc2ff",
+    "fetched_at": "2026-10-30T09:49:32+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Karthus",
+          "Fiddlesticks",
+          "Warwick",
+          "Rammus"
+        ],
+        "label": "直線的な接近",
+        "text": "射程が短く、直線的に接近を狙ってくるタイプの相手全般。 接近しようとしなければ一方的に削り、強引に狙ってもEを当てやすいので離脱しやすい。 これらは一度接近に失敗した後は離脱・再接近を狙う手段が乏しいため、機動力の低いゼラスでも比較的逃げやすい。 ●サポート運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Swain",
+          "Morgana",
+          "Lux",
+          "Seraphine",
+          "Zyra"
+        ],
+        "label": "etc/メイジサポート",
+        "text": "メイジサポート全般。全チャンピオンでもトップクラスの射程によりハラス勝ちしやすい。 射程は同格の相手であっても全スキルがダメージスキルのゼラスなら削り勝ちできる。 もちろん相手のスキルに当たりすぎると普通に負けるので、射程を活かして相手のスキルショットは避けるのが重要。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Caitlyn",
+          "Jinx",
+          "MissFortune"
+        ],
+        "label": "射程が長い",
+        "text": "有効射程が長めの代わりに機動力の低いADC全般。 ゼラスはこれらよりも更に射程が長いため、やはり一方的にハラスしやすい。 セーフティにCSを取ろうとする相手にも構わずハラスが出来るので、レーン段階でのファームを許さずに進められる。 ●ミッド運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Viktor",
+          "Malzahar",
+          "Lissandra",
+          "Azir",
+          "Ryze"
+        ],
+        "label": "etc/バトルメイジ",
+        "text": "バトルメイジ全般。やはり射程の長さによって一方的なハラスで削り取りやすい。 相手は強引にトレードに持ち込む手段が乏しく、射程も短いのでCSの度にハラスのチャンス。 もちろんサポートと同じくスキルを当てられながら勝てる訳ではないので、射程の把握は徹底しておきたい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "Ekko",
+          "Talon",
+          "Akali",
+          "Leblanc"
+        ],
+        "label": "etc/アサシン",
+        "text": "レーンを問わずアサシン全般に弱い。機動力・耐久の両方が低い以上、奇襲されればあっさりとデスに繋がる。 特にEを瞬時にかわしたり、当たっても徒歩のゼラスに追いつける機動力のある相手は天敵。 ステルスで接近してくる相手も、咄嗟のEが凄まじく当てづらくなるので拒否する余地が薄く不利。 ●サポート運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Pyke",
+          "Bard",
+          "Nautilus",
+          "Blitzcrank"
+        ],
+        "label": "キャッチャー",
+        "text": "フック系のキャッチャー。フックの射程は概ねゼラスの射程と同等なため、一方的なハラスが難しい。 そしてキャッチされたが最後逃げる手段は無く、固められてあっさりデスしてしまう。 機動力が低いのでキャッチ自体もされやすく、またタンク系の相手が多いので純粋にゼラス側が息切れに追い込まれがち。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kalista",
+          "Kaisa",
+          "Vayne",
+          "Twitch"
+        ],
+        "label": "スキルドッジ・奇襲性能の高いADC",
+        "text": "方向・地点指定スキルしか持たず、発生がやや遅いのでスキルドッジの得意な機動力の高いADCに弱い。 Eを透かして近づかれるとDPSでは差をつけられており、本人の脆さと鈍さもあって逃げ切れない。 トゥイッチトゥイッチは機動力こそ微妙だが、アサシンと同じくステルスを用いた奇襲でゼラスを積極的にキルしに来る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Jhin",
+          "Caitlyn",
+          "Ezreal",
+          "Ashe"
+        ],
+        "label": "Push＋ハラス",
+        "text": "レーン段階からPushしてハラスでの削り勝ちを狙うタイプのADC全般。 ゼラスもPush・ハラスの双方が得意なため、互いにやりたいことが噛み合いレーン段階で差をつけやすい。 逃げや索敵が得意なものが多いが、ゼラス側はGankに弱いので視界はしっかりと確保しておきたい。 エズリアルエズリアルについてはPushの遅さをゼラス側がカバー出来るのも嬉しい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Samira",
+          "Zeri",
+          "Lucian",
+          "Xayah",
+          "Nilah"
+        ],
+        "label": "エンゲージを求める",
+        "text": "味方のエンゲージを求めるADC全般。エンゲージはWのスロー程度しかないので補助が難しい。 オールイン気味に動くものが多く、スキルを撃ち終わった後は置物となるゼラスと噛み合わない。 逆に相方が上手く入り込めたとしても、今度は機動力の低いゼラスではこれらのinに合わせられず孤立させがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

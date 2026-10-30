@@ -942,5 +942,40 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Hecarim#ge1d26c3",
+    "fetched_at": "2026-10-30T09:48:52+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Zac",
+          "Amumu",
+          "Rammus"
+        ],
+        "label": "",
+        "text": "およそカウンターJGを行ってこないタンクJG。序盤やりたいことを通しやすく、集団戦での影響力も引けを取らない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Graves",
+          "Kindred",
+          "MasterYi",
+          "Mordekaiser"
+        ],
+        "label": "(JG)",
+        "text": "高いDPSを誇るコントロール系JG。全ての時間で遭遇戦不利であり、森を荒らされ続ける試合展開になりがち。 森から走り込んでGankを決めたいヘカリムにとって、位置がバレるだけでも厄介。",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -1359,5 +1359,68 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Volibear#x2948572",
+    "fetched_at": "2026-10-30T09:49:31+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo",
+          "Warwick",
+          "Gwen",
+          "Yorick",
+          "Irelia"
+        ],
+        "label": "etc/短射程ファイター",
+        "text": "単純な殴り合いでは最強クラス。拒否性能が低く、射程の短いファイター相手は得意の展開に持ち込みやすい。 一度殴り勝てるようになるとUltによりタワー下での土下座も許さずに殴り込めるのもあり、総じて有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Jax",
+          "Shen",
+          "Teemo",
+          "Akali"
+        ],
+        "label": "AA無効",
+        "text": "仕掛ける手段をQ、トレードや殴り合いをWに依存するが、いずれもAA扱いのため無効化されるケースも多い。 殴り合いの拒否に対する回答が無いので、強い時間帯を逃しやすく逆に相手の強い時間を逃れづらい。 ティーモティーモはRangedのため、CSを取ろうとしたタイミングでも一方的にハラスを受ける点でも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Quinn",
+          "Kennen",
+          "Vayne",
+          "Jayce",
+          "Aurora"
+        ],
+        "label": "拒否を持つRanged",
+        "text": "遠距離攻撃手段が発生の遅いE、接近手段は時間の短い加速のQのみで、殴り合いを挑む性能が高くない。 必然、拒否を持つRanged対面は一方的にハラスを食らい、レーン段階から辛いことになる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "DrMundo",
+          "Aatrox",
+          "Illaoi"
+        ],
+        "label": "長射程ファイター",
+        "text": "理由は概ね同様。仕掛ける能力が低いので射程が長いCCや、遠距離からCSを取る手段を持つ相手はMeleeでも勝ちきれない。 中盤以降の影響力が高くはない相手も多いが、レーン段階で差をつけきれなかったボリベアは更に仕事が無くなるので不利。",
+        "has_caveat": false
+      }
+    ]
   }
 }

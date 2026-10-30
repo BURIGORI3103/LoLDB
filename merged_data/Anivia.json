@@ -1354,5 +1354,70 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Anivia#l820e61e",
+    "fetched_at": "2026-10-30T09:48:39+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Akshan",
+          "Ekko",
+          "Lissandra",
+          "Vex",
+          "Pantheon"
+        ],
+        "label": "etc/短射程",
+        "text": "有効射程が短い対面。Ultを覚える前もAA射程は長く、直線的な仕掛けはQで防げる。 Ultを覚えた後はPush性能がアニビアの方が圧倒的に高いため、相手の得意なロームを許さない。 集団戦においてもこれらは一気に飛び込んだ後の離脱手段が乏しく、WやUltのゾーニングが決まりやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Nasus",
+          "Garen",
+          "Warwick",
+          "Poppy",
+          "MissFortune"
+        ],
+        "label": "etc/短射程",
+        "text": "対面以外でも、やはり射程が短く咄嗟の離脱手段が無い相手に有利。 ゾーンコントロールを狙いやすく、仮に多少育ったとしても問題なくディスエンゲージが可能。 バースト型の相手はパッシブの蘇生による保険も有効に働く。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Syndra",
+          "Azir",
+          "Orianna",
+          "Xerath"
+        ],
+        "label": "射程が長い",
+        "text": "射程の長いアーティラリー、およびそれに類するスケールの大きい対面。 Ultを習得しても射程が短めなので一方的にハラスを食らいやすく、レーンが不利。 スケールの大きい相手には追撃が不得手なアニビアの短所がモロに出る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Talon",
+          "Kassadin",
+          "Akali",
+          "Qiyana"
+        ],
+        "label": "壁を越えられるアサシン",
+        "text": "壁を越える手段がある相手はWの拒否が成立しない。 DPS型の相手であれば競り合いに持ち込む事も可能だが、これらはバーストが高く離脱までが早い。 ステルスを持つ相手にはEも機能しなくなるため、一方的にキルされてしまいがち。",
+        "has_caveat": false
+      }
+    ]
   }
 }

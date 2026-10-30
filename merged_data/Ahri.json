@@ -943,5 +943,43 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Ahri#ide963e5",
+    "fetched_at": "2026-10-30T09:48:37+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Vex",
+          "Hwei",
+          "Anivia",
+          "Viktor"
+        ],
+        "label": "etc/べた足メイジ",
+        "text": "主力スキルが方向指定のため、咄嗟にスキルをかわす手段を持たない相手に有利。 CCが地点・方向指定の相手はWの加速とUltのブリンクでかわしながらオールインを狙える。 キルを稼げばスキルのスケールの悪さが目立つことなくゲームを畳むことが出来る。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yasuo",
+          "Kassadin",
+          "Mel",
+          "Naafiri",
+          "Samira"
+        ],
+        "label": "etc/方向指定に強い",
+        "text": "逆にスキルを防ぐ相手ヤスオサミーラや瞬間的な機動力でスキルをかわされるとダメージが出せない。 Push性能が比較的高いのでロームによる誤魔化しも可能ではあるが、対面からだとキル出来ずデスをかわしづらい難敵。 特にメルメルは全てのスキルを逆用されてしまうハードカウンター。",
+        "has_caveat": false
+      }
+    ]
   }
 }

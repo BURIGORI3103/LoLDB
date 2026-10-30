@@ -941,5 +941,51 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Heimerdinger#gef5897e",
+    "fetched_at": "2026-10-30T09:48:53+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Illaoi",
+          "Poppy",
+          "Darius",
+          "Warwick"
+        ],
+        "label": "接近手段が徒歩",
+        "text": "タレットの範囲外からハイマーを殴りきる射程も、瞬時に接近するブリンクも持たない相手。 タレットの範囲に入ったらEを当ててカウンターという基本の流れを決めやすい。 Gank合わせにもタレットの範囲内に入る必要があるため、デスしても相討ちに持ち込めるのもあり有利。 イラオイイラオイについては、Eをタレットで防げるのも強み。Pushは早いのでQで一掃されないよう設置したい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Chogath",
+          "Renekton",
+          "DrMundo"
+        ],
+        "label": "高サステイン",
+        "text": "特にレーン段階のダメージ出力は小まめにハラスで削り、タレットに手出しできなくする形。 ハラスを高いサステインで無力化される対面は、射程が短くPushも遅いワーウィックワーウィックを除き不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sion",
+          "Syndra"
+        ],
+        "label": "ペットの移動",
+        "text": "Push・安全な立ち回りの両方においてQのタレットに強く依存する。 これらの相手はペットをノックバックさせたり、自由に移動させることで明後日の方向に持って行ってしまう。 必然、そのタレットは火力を出せなくなった挙句、場合によっては相手の火力源として機能する羽目に。 集団戦のDPSもタレットに依存しがちなため、対面以外で出てきた場合でも勝率が大きく低下する天敵。",
+        "has_caveat": false
+      }
+    ]
   }
 }

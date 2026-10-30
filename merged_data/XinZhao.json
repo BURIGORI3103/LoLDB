@@ -942,5 +942,67 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Xin%20Zhao#ie608ee2",
+    "fetched_at": "2026-10-30T09:49:32+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Amumu",
+          "Zac",
+          "Nunu"
+        ],
+        "label": "序盤の弱いタンク",
+        "text": "序盤の遭遇戦に弱いタンクジャングラー。いずれもジャオとのタイマンをこなす戦闘能力は無い。 逃走性能もそう高くないため、対象指定ノックアップと長距離のリープを両立したジャオから逃げるのも難しい。 同数戦でもほぼ常に有利なので積極的にカウンタージャングルを狙いやすく、総じて有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yorick",
+          "Teemo",
+          "Ryze",
+          "Galio",
+          "MissFortune"
+        ],
+        "label": "etc/逃げ性能の低いレーナー",
+        "text": "逃げ性能が低いレーナー全般。序盤から確実性の高いGankが可能なため、キルレーンを作りやすい。 首尾良く育ったらレーン段階以降も高い追撃力とタイマン性能により、単独でこれらの相手をこなせる。 終盤の影響力が高い相手も多めなので、極力念入りに潰しておくと後が楽。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Warwick",
+          "Olaf",
+          "Trundle",
+          "Volibear"
+        ],
+        "label": "タイマン特化",
+        "text": "追撃性能にもリソースを割いたダイバーな以上、これら相手の殴り合いは流石に不可能。 得意とするカウンタージャングルの選択肢が消えてしまい、パワースパイクも近いので逆転のタイミングが無い。 逃げ性能の低い序盤にこちらの森に入られると逆に逃げる以外に無くなりやすく、総じて厳しい勝負になる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Gwen",
+          "Jax",
+          "Ivern",
+          "Shen"
+        ],
+        "label": "AA・スキルへのカウンター",
+        "text": "AAやスキルに追撃の確実性を依存するため、逆にそれらを透かせる相手に勝率が落ちる。 アイバーンアイバーンについてはそれらを防ぐ訳ではないが、Peel性能が高すぎてキルまで繋ぎきれない。 序盤の間に有利を築けないと息切れする性質上、トントンで進んだとしてもスケール負けしてしまう。",
+        "has_caveat": false
+      }
+    ]
   }
 }

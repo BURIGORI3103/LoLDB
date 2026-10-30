@@ -1710,5 +1710,115 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Lux#adf33f2c",
+    "fetched_at": "2026-10-30T09:49:04+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Xayah",
+          "Jinx",
+          "MissFortune"
+        ],
+        "label": "機動力が低めのキャリー",
+        "text": "Qを当てればE、Ultを絡めたコンボも決めやすく、味方のCC次第では一気にフルヘルスを削りきれる場合も。 スキルショットを当てやすいべた足系の相手に基本的に有利で、射程が短かったりPushが遅めだとベスト。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Senna",
+          "Morgana",
+          "Brand",
+          "Swain"
+        ],
+        "label": "短射程のメイジ系サポート",
+        "text": "理由は同様。キャッチの射程が長く、範囲が広めなEのハラスも狙いやすいため有利がつく。 DoT型の相手はWのシールドが有効になることもあり、勝率が高く出る。 モルガナモルガナはQを真正面から撃ってもEで防がれる。CDの長さを利用して連続で狙ったり、茂みから狙うのが重要。 セナセナは他ほど射程が短いわけでもないが、足が止まりやすいのでやはりQを当てやすい。 ミッド運用",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Neeko",
+          "Lissandra",
+          "Vex",
+          "Cassiopeia",
+          "Malzahar"
+        ],
+        "label": "短射程メイジ",
+        "text": "サポートと同じく、特にべた足で機動力が低く、射程の短い対面に有利。 仕掛けられてもQを狙え、CSを狙うタイミングでEを当てることでハラスとPushを両立可能。 一方的なハラスを狙いやすい有利なマッチアップだが、Gank合わせは得意な対面が多いことは忘れずに。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Akshan",
+          "Kaisa",
+          "Twitch"
+        ],
+        "label": "アサシン、およびそれに類する対面",
+        "text": "逃げ手段はスキルショットのQのみ。接近された状況からだとWの上からキルを取られる。 これらの相手は基本的に機動力が高かったりステルスで接近してくるため、Qがそもそも当てづらい。 当てたとしてもスネア止まり、MSも低く普通に追いつかれる危険すらある危険な相手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Blitzcrank",
+          "Pyke",
+          "Bard",
+          "Nautilus"
+        ],
+        "label": "キャッチャー",
+        "text": "概ね理由は同様。逃げ手段が無い上に本人が脆く、捕まれば最後逃げ切れない。 フックさえかわせれば一方的なハラスは可能だが、オールインが難しいレベルまで削るには相当アグレッシブな動きが必要。 もちろんその間に捕まってしまえば水の泡となり、レーン段階で有利を取りたいラックスにとってはどちらにせよ辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi"
+        ],
+        "label": "ユーミ",
+        "text": "通常のエンチャンターなら有利とは行かずともQのキャッチからキルを狙えたりもするが、ユーミは例外。 ユーミ自身を狙えない上にADCを加速させるためQを当てづらく、またユーミ側のQをかわしづらい。 結果としてコンスタントな回復を許し、レーン段階からのスノーボールが難しくなる。 トントン程度で集団戦に入るとサポートとしての能力が明確に劣り、不利になる。 ミッド運用",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Naafiri",
+          "Yasuo",
+          "Irelia",
+          "Kassadin"
+        ],
+        "label": "機動力の高いアサシン・スカーミッシャー",
+        "text": "理由は概ねサポートと同様。素早く接近・バーストを出されると原則として何も出来ない。 カサディンカサディンはUltを覚えるまでは優位を取れるが、それ以外は序盤から常に危険が大きい。 ナフィーリナフィーリはペット、ヤスオヤスオは風の壁でQを防がれるのも辛い。 共通",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Evelynn",
+          "Rengar",
+          "Talon"
+        ],
+        "label": "アサシンジャングラー",
+        "text": "対面以外のアサシンも普通に苦手。タロンタロンについてはミッドで対面に出てきてもやはり辛い。 ステルスや長距離のブリンクで一気に距離を詰めてくる相手が特に苦手であり、勝率が低く出る。",
+        "has_caveat": false
+      }
+    ]
   }
 }

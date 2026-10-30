@@ -2177,5 +2177,149 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Swain#e0abf452",
+    "fetched_at": "2026-10-30T09:49:22+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Vex",
+          "Galio",
+          "TwistedFate",
+          "Pantheon",
+          "Diana"
+        ],
+        "label": "([[Qiyana]])",
+        "text": "対面としてはこれらに勝率が高い。離脱性能が無い・ロングトレードが苦手・ロームを好むといった共通点がある。 Eのキャッチ力により、レーン戦ならロングトレード、集団戦ならオールインファイトを強制し、スウェインの得意な形に持っていきやすい。 スウェインはPushが早くタワープレートを食べて育つだけでも強いので相手はロームしづらく、またメイジとしては破格のタフネスによりキャッチにも強めなのでロームを追う選択肢も取りやすく、中盤のローテにおいて崩されることも少ない。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malzahar"
+        ],
+        "label": "",
+        "text": "お互い序盤が弱点だがスウェインのほうが強くUltを覚えるまで安定しやすい点、集団戦でUlt中のスウェインにネザーグラスプをしてもあまり意味ない点、及び↑と同じくキャッチ耐性で返せる点により勝率優位。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Malphite",
+          "Chogath",
+          "Ornn",
+          "Sion"
+        ],
+        "label": "(top)",
+        "text": "タンクsup全般 これらのタンクは集団戦で5v5のオールインファイトを誘発するのでスウェインが活躍しやすく、中盤キャッチを試みてくるがそれにもスウェインはある程度の耐性を持つ。 またある程度育ったスウェインにとって、CCはあまり怖くなく、Ult範囲内に入ったタンクは謂わば回復リソースであり、ライアンドリーの苦悶を含めたDPSにより十分溶かせるので相手しやすい。 SUP運用:",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Leona",
+          "Alistar",
+          "Rell",
+          "Nautilus",
+          "Blitzcrank"
+        ],
+        "label": "etc/タンク・キャッチャーsup",
+        "text": "supスウェインは、メイジsupでありながらインファイトができるという特殊なチャンピオン。 Meleeの敵相手は、メイジらしくショートトレードでヘルス有利を作りつつも、相手がオールインしてきたらUltを使ってオールインし返す、という動きでレーン勝ちやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Cassiopeia",
+          "Yone",
+          "Tristana"
+        ],
+        "label": "(mid)",
+        "text": "これら対面はDPSが高いのでUltを使ったオールインでも先に溶かされる。ディスエンゲージ性能(ヨネの場合はE)により、Ultを吐かせる動きもされる。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Katarina"
+        ],
+        "label": "",
+        "text": "重傷持ちでDPSが高いのでUltを使っても溶かされる点、機動力により捉えづらい点、お互い序盤が弱点だがスウェインのほうが弱いという点により不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Sylas"
+        ],
+        "label": "",
+        "text": "強力なUltを奪われる点、お互い序盤が弱点だがスウェインのほうが弱いという点により不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Kindred",
+          "MasterYi",
+          "Belveth",
+          "Karthus"
+        ],
+        "label": "(jg)",
+        "text": "高いDPSにより集団戦やGank時に溶かされる点、スウェインが動けない序盤にカウンターJG等を行いスノーボールしやすい点により不利。 SUP運用:",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Yuumi",
+          "Lulu",
+          "Milio",
+          "Karma",
+          "Zilean",
+          "Soraka"
+        ],
+        "label": "",
+        "text": "メイジsupらしくハラスを耐えられるエンチャンター相手に勝率が悪い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xerath",
+          "Velkoz"
+        ],
+        "label": "",
+        "text": "スウェインはメイジsupの中で最も射程が短い部類。長射程で一方的に殴られて普通に溶かされるケースも苦手。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Ashe",
+          "Kalista",
+          "Jhin"
+        ],
+        "label": "",
+        "text": "※LoLalytics 12.21-13.3 Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }

@@ -1357,5 +1357,66 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Yone#l379076a",
+    "fetched_at": "2026-10-30T09:49:33+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Swain",
+          "Malzahar",
+          "Ryze",
+          "Kassadin"
+        ],
+        "label": "バトルメイジ",
+        "text": "高い機動力とDPSを併せ持つことから、拒否が弱めのメイジ相手に有利を取りやすい。 序盤相手のプッシュ力や戦闘能力がそこまで高くないため、互角以上に戦えることが多い。 カサディンカサディンはアサシン寄りだが同じくUlt習得前が弱く、ARの低さから有利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Yasuo"
+        ],
+        "label": "ヤスオ",
+        "text": "やや特殊な例。ミッドADは多くがアサシンであり、逃げられるタイミングが少ないことから不利～トントンの相手が多い。 だが弟ヤスオは例外的に、相手の防御スキルであるWがQ3以外に機能しないので比較的有利。 相手のノックアップに合わせてUltのアンストッパブルで突っ込むことで相手のUltを封じ、一方的にダメージを出しやすいのも強み。 互いに逃げ手段が乏しいので森の介入が発生しやすいマッチアップだが、ヨネの方が前準備無しでブリンクのUltを使える分だけ回避しやすいのもポイント。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Vex",
+          "Taliyah",
+          "Cassiopeia",
+          "Poppy"
+        ],
+        "label": "アンチブリンク",
+        "text": "追撃・逃走を共にQの3段目に強く依存するので、ブリンク対策を持つ相手に弱い。 ヨネの仕掛けに対する回答を持ち、地点指定スキルも持つのでEの戻る場所が明確な点も突かれがち。 集団戦においても、原則としてE・Ultを絡めた接近からのDPSが重要なため、その出だしを止められると分かりやすく辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Annie",
+          "Lissandra",
+          "Qiyana",
+          "Evelynn",
+          "Lulu"
+        ],
+        "label": "etc/確実性の高いCC",
+        "text": "耐久方面は低く、スケールの都合で防具を積むのも難しい。ということでCCで固められると即死する。 機動力で誤魔化せる相手はまだしも、対象指定を始めとした確実性の高い相手は避けることもままならない。 例外として、上述したバトルメイジ相手であれば対象指定を持っていても他の部分で優位が取れる。",
+        "has_caveat": true
+      }
+    ]
   }
 }

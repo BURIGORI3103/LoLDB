@@ -930,5 +930,70 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Neeko#q7a7257a",
+    "fetched_at": "2026-10-30T09:49:09+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Pantheon",
+          "Naafiri",
+          "Vex"
+        ],
+        "label": "([[Talon]])/短射程、特にCSリスクの高いもの",
+        "text": "射程が短く、CS・トレードのために前に出てくる必要のある相手。ミニオン貫通でEを当てQを多段ヒットさせる基本的なコンボを狙いやすい。 仮に強引にキルを狙ってきてもW、Ultの自衛が決まり、安定して有利なレーニングを過ごしやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Syndra",
+          "AurelionSol",
+          "Ziggs"
+        ],
+        "label": "長射程でPushも早いメイジ",
+        "text": "相手に先にPushされると、ニーコはミニオン貫通Eも期待しづらくなるので、射程差で一方的にハラスされる形になりやすい。 ミニオンに化けて奇襲を狙おうにも、相手は十分な距離を取ってミニオンを早急に処理する手段があるので刺さりづらく、むしろただ巻き込まれてダメージを受ける羽目に陥りがち。 特にレイトキャリーシンドラオレリオン・ソル相手はイーブンで済ませてもスケール負けしてしまう。 相手のレーン拒否性能が整わない序盤のうちに、味方のGankや少数戦あるいは単純にハンドスキルでキルを取ってスノーボールしたいところ。 (カサディン) ※LoLalytics 13.17～13.21より Support",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Milio"
+        ],
+        "label": "",
+        "text": "UltでAoEしてくる上にEnchanterというまさに天敵だが、UltのCDの短さでは勝っている点に注目してゲームを進行しよう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Bard",
+          "Pyke"
+        ],
+        "label": "",
+        "text": "機動力が高く、Lv6以前が強力なSupportには序盤のRoamingで差をつけられやすい。 ※ニーコは変身を駆使したり、のようなカードを切らなければまともにGankできないが、例に挙げたChampionでは低レベル時からただ走ってGankするだけでも一定の成果を得やすい。また、視界ファイトの安全性でも差をつけられている。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Anivia"
+        ],
+        "label": "",
+        "text": "ほぼ全ての地形でニーコの思い通りの動きがしにくくなる。 とにかく位置がバレないようにしよう。 その他 敵Carryがを持たなかった場合、ゲーム進行が楽になる。 相手視点ではを持ってもUltによるほぼ確定のノックアップがあるので完全な対策にはならないという非常に難しい選択を強いることができる。 Ultはこのアイテムを持っている敵ごと巻き込むようにしよう。 Tenacity効果がないためニーコ相手にはよりも役に立たないことが多い。",
+        "has_caveat": false
+      }
+    ]
   }
 }

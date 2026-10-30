@@ -1356,5 +1356,95 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kog%27Maw#ced9694a",
+    "fetched_at": "2026-10-30T09:49:01+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Chogath",
+          "TahmKench",
+          "Sion",
+          "DrMundo",
+          "Maokai",
+          "Malphite"
+        ],
+        "label": "接近・離脱の弱いタンク",
+        "text": "QのAR/MR減少、Wの割合ダメージでタンクを溶かす性能はマークスマンとしてもトップクラス。 コグ＝マウまで接近する手段が乏しかったり、離脱手段の無い相手は1回かわせば殴り放題。 割合ダメージでタンキーな装備をしてもDPSを出せるので、これらに溶かされるリスクも小さい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Sivir",
+          "Vayne",
+          "Samira",
+          "Swain",
+          "Morgana"
+        ],
+        "label": "([[Kalista]][[Kaisa]][[Brand]])/射程の短い対面",
+        "text": "コグ＝マウは素の射程が短く、レーン戦が弱い代わりに集団戦で強い典型的なレイトキャリー。 必然的にレーン段階で咎める射程を持たない相手にはファームしやすく、スケーリングの逆転で有利がつく。 ただし素の殴り合いが強い訳ではない。挑むのはQを当ててAR/MRが低下していたり、Wが有効で一方的に殴れる状況で。 もちろんタンクがしっかりCCを当てた場合にも積極的に殴りかかりに行こう。引き際の見極めも忘れずに。",
+        "has_caveat": true
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Soraka",
+          "Milio",
+          "Yuumi"
+        ],
+        "label": "([[Sona]][[Senna]])/ヒーラー",
+        "text": "割合ダメージが主力。最大HPを変動させないまま回復する動きをされた場合が最も耐えられやすい。 Ultが減少Health依存でスケールするので、そちらが通りづらくなるのも嫌なところ。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Veigar",
+          "Ziggs",
+          "Caitlyn"
+        ],
+        "label": "長射程キャリー",
+        "text": "序盤はWの強化の射程があまり長くなく、CD中は何も出来なくなりがち。 これらは発動中でもハラスが可能な程度の射程もあり、CS差をつけられやすい。 元がレイトキャリーということで、中盤以降の展開で遅れを取ってしまう。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "RekSai",
+          "Khazix",
+          "Talon",
+          "Ekko",
+          "Evelynn"
+        ],
+        "label": "アサシンJG",
+        "text": "コグ＝マウは一切の機動力もハードCCもバーストも持たない、最も自衛力が低い部類のマークスマン。 当然アサシン相手、特にレーン段階から狙ってくるアサシンJG相手の勝率が低い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "ally",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lulu",
+          "Milio",
+          "Zilean",
+          "Renata"
+        ],
+        "label": "ピール型のエンチャンター",
+        "text": "立ち止まって殴り続けることが出来れば最高峰のDPSを発揮。 接近してきた相手からコグ＝マウを守れるエンチャンター、特にピールが得意なものと相性が良好。 特にルルルルはAS増加が噛み合うため有名なシナジー。",
+        "has_caveat": false
+      }
+    ]
   }
 }

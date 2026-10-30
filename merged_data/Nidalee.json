@@ -946,5 +946,54 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Nidalee#u6dc4b9a",
+    "fetched_at": "2026-10-30T09:49:10+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Lillia",
+          "Karthus",
+          "Kindred",
+          "Graves",
+          "Khazix"
+        ],
+        "label": "etc/序盤が弱めのスノーボーラー",
+        "text": "CCが乏しく、Gank性能が低めだが高いキャリー性能を持つジャングラー全般。 互いに育って火力を出すのが主な役割であるため、先に優位を築いた側が森の視界を確保して一方的に育ちやすい。 序盤のタイマンや森への侵入が得意なニダリー側が先手を打ちやすい分で勝率優位。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Poppy",
+          "Rammus",
+          "Zac",
+          "Amumu"
+        ],
+        "label": "タンク",
+        "text": "単体に張り付く性能の高いタンク。序盤に多少腐らせても、装備が整ってきたこれらを突破出来る火力が持てない。 ニダリーの苦手な集団戦にフォーカスした相手が多いので、Ultを覚えた辺りから一気に逆転されてしまう。 積極的にエンゲージされればニダリーはCCが皆無、DPSも控えめになる都合、レーン段階から余程大きな有利を取らなければ不利に。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Rengar",
+          "RekSai",
+          "Warwick"
+        ],
+        "label": "タイマン特化",
+        "text": "DPSが高くタイマンが得意で、バーストに強い防御スキルを持つ対面。 ニダリーのバーストを耐え、反撃されると負けてしまうのでカウンターJGが狙いづらい。 互いに決め手がなく育った場合の影響力でも劣るため、ゲーム全体を通してスケールで負けやすいマッチアップ。 特に茂み周りの機動力に長ずる点を、更に上回る追撃性能で台無しにしてくるレンガーレンガー相手は非常に厳しい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

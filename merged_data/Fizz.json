@@ -1356,5 +1356,52 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Fizz#ca9f2c54",
+    "fetched_at": "2026-10-30T09:48:49+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "AurelionSol",
+          "Xerath",
+          "Velkoz",
+          "Lux",
+          "Veigar"
+        ],
+        "label": "etc/拒否手段が少ないメイジ",
+        "text": "べた足のメイジ。拒否手段を特定のスキルに依存するので、そこをEでかわせば最早為す術無し。 Ultを覚えれば長射程のキャッチが出来るので、アーティラリー相手も問題無くバーストを出せる。 フィズの短所である序盤の弱さを誤魔化しやすい序盤が弱い対面には特に有利がつく。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Lissandra",
+          "Pantheon",
+          "Vladimir"
+        ],
+        "label": "無敵スキル",
+        "text": "バーストを出すのに必要なUlt、Eのどちらも予告が長く、火力に無敵を合わせられやすい。 対象指定CCを持つ相手パンテオンリサンドラにはQが回避手段にならないのも難。 本来ならパワースパイクであるUltを覚えるタイミングで有利を取れず、全体的に不利。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Galio",
+          "Kassadin"
+        ],
+        "label": "アンチAPアサシン",
+        "text": "典型的なAPアサシンである以上、必然的にAPに強い相手に不利がつく。 ガリオガリオはキャリーにUltを当ててもUltでカウンターを食らうのも辛い。 カサディンカサディンに対しても機動力の差が響き、元々トレード不利な上にEやUltをかわされやすい。",
+        "has_caveat": false
+      }
+    ]
   }
 }

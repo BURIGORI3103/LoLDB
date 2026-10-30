@@ -942,5 +942,64 @@
       "fetched_at": "2026-10-30",
       "sample_note": "OP.GG ロール別カウンター統計"
     }
+  },
+  "wiki_matchups": {
+    "status": "extracted",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Azir#me78c0e3",
+    "fetched_at": "2026-10-30T09:48:41+09:00",
+    "extracted_at": "2026-10-30T09:50:32+09:00",
+    "scope": "wiki_general_not_role_specific",
+    "patch_verified": false,
+    "groups": [
+      {
+        "relation": "enemy",
+        "advantage": "favorable",
+        "champion_ids": [
+          "Pantheon",
+          "Yasuo",
+          "Fizz",
+          "Vladimir",
+          "Naafiri"
+        ],
+        "label": "離脱性能の低いスレイヤー",
+        "text": "ステータスが低いので序盤はデスのリスクが付きまとうものの、これらはキルタイムがやや長い。 概ねが一度拒否されるとその後の更なる追撃が難しいのでWEQで安定した拒否が可能。安全なレーニングを狙いやすい。 いざUltを覚えたら仕掛けられてもWEQUlt、通称シュリーマシャッフルのinsecでタワー下に叩き込める。 集団戦の影響力についてもアジールが上回るため、トントン程度でスケールした場合も有利を取りやすい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Xerath",
+          "Syndra",
+          "Viktor"
+        ],
+        "label": "長射程メイジ",
+        "text": "射程が長くDPSも高いがダメージを出すためには持続的にオートアタックする必要がある。だがステータスはバトルメイジとしては貧相な部類。 アーティラリーや、比較的距離を取ってミニオン処理と同時にハラスを可能とする相手にはジリ貧に陥る。 シンドラシンドラは他2人に比べてハラス射程は短めだが、WEQのコンボを見てから間に合う拒否性能を持ち、オールインや集団戦でのシュリーマシャッフルを決めづらい。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Taliyah",
+          "Cassiopeia"
+        ],
+        "label": "アンチブリンク",
+        "text": "追撃・逃走の双方をEに強く依存。発生が遅めなので相手の釘付けやブリンクに反応するスタンで足が止まる。 かといって中距離のDPS対決に持ち込んでも相手の方が単体に対するDPSは高く、レーン段階で差をつけられると後半にも悪影響が出る。 タリヤタリヤについてはローム性能も高く、不利を背負うと容易に他レーンに波及されてしまうリスクがあるのも辛い。",
+        "has_caveat": false
+      },
+      {
+        "relation": "enemy",
+        "advantage": "unfavorable",
+        "champion_ids": [
+          "Leblanc",
+          "Ekko",
+          "Talon"
+        ],
+        "label": "離脱性能の高いアサシン",
+        "text": "アサシンに対しては前述の通り、シュリーマシャッフルによるタワーへの押し込みを込みに自衛する。 タワー下に引きずり込んでも容易に離脱が決まるアサシンに対してはそれが通じず、積極的に殴られがち。 ステータスは低いので叩かれるとデスに繋がりやすく、いずれもロームも得意なために序盤の負けが響きやすい。 ※LoLalytics 13.17-13.21 Global Eme+ Deltaより",
+        "has_caveat": false
+      }
+    ]
   }
 }
