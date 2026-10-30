@@ -293,20 +293,13 @@ def validate_parsed_opgg_data(parsed: dict, html: str, expected_slug: str) -> tu
 
 
 def extract_wiki_notes_safe(wiki_url):
-    """日本語wikiから立ち回りを安全に抽出（タイムアウト3秒でブロック回避）"""
-    if not wiki_url:
-        return {"laning": "", "teamfight": ""}
+    """現行wikiの考察を取得する。取得失敗は空欄とし、汎用文を取得結果にしない。"""
+    from refresh_wiki import fetch_wiki
     try:
-        req = urllib.request.Request(wiki_url, headers=get_headers())
-        with urllib.request.urlopen(req, timeout=3.0) as resp:
-            html = resp.read().decode("utf-8", errors="ignore")
-        text = re.sub(r"<[^>]+>", " ", html)
-        text = re.sub(r"\s+", " ", text)
-        match = re.search(r"立ち回り.*?(?=おすすめ|長所|短所|$)", text)
-        summary = match.group(0)[:150].strip() if match else ""
-        return {"laning": summary, "teamfight": ""}
-    except Exception:
-        return {"laning": "", "teamfight": ""}
+        info = fetch_wiki(wiki_url)
+        return {"laning": next(iter(info["sections"].values())), "teamfight": "", "wiki_info": info}
+    except Exception as error:
+        return {"laning": "", "teamfight": "", "wiki_info": {"status": "failed", "source_url": wiki_url, "error": str(error)}}
 
 
 def generate_fallback_notes(name, roles):
@@ -425,10 +418,11 @@ def run():
         # 日本語wiki立ち回り抽出
         if entry["wiki_url"]:
             wiki_notes = extract_wiki_notes_safe(entry["wiki_url"])
+            strategy_json["wiki_info"] = wiki_notes.pop("wiki_info")
             if wiki_notes.get("laning"):
                 strategy_json["gameplay_notes"] = wiki_notes
             else:
-                strategy_json["gameplay_notes"] = generate_fallback_notes(champ_name, strategy_json["roles"])
+                strategy_json["gameplay_notes"] = {"laning": "", "teamfight": ""}
         else:
             strategy_json["gameplay_notes"] = generate_fallback_notes(champ_name, strategy_json["roles"])
 
