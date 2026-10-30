@@ -1,9 +1,9 @@
 {
   "name": "繝輔ぅ繝峨Ν繧ｹ繝・ぅ繝・け繧ｹ",
   "slug": "fiddlesticks",
+  "patch": "16.21.1",
   "roles": [
-    "JUG",
-    "SUP"
+    "JUG"
   ],
   "summoner_spells": [
     "フラッシュ",
@@ -12,36 +12,96 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Gragas",
-        "name": "グラガス",
-        "reason": "勝率 61.9%（統計的に有利）"
-      },
-      {
         "champion_id": "Locke",
         "name": "ロック",
-        "reason": "勝率 59.77%（統計的に有利）"
+        "winrate": "61.17%",
+        "winrate_num": 61.17,
+        "winrate_display": "勝率 61.17%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 61.17%（統計的に有利）"
       },
       {
-        "champion_id": "Naafiri",
-        "name": "ナフィーリ",
-        "reason": "勝率 58.25%（統計的に有利）"
+        "champion_id": "Pantheon",
+        "name": "パンテオン",
+        "winrate": "60.78%",
+        "winrate_num": 60.78,
+        "winrate_display": "勝率 60.78%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 60.78%（統計的に有利）"
+      },
+      {
+        "champion_id": "Nidalee",
+        "name": "ニダリー",
+        "winrate": "57.62%",
+        "winrate_num": 57.62,
+        "winrate_display": "勝率 57.62%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 57.62%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Maokai",
-        "name": "マオカイ",
-        "reason": "勝率 34.33%（統計的に不利）"
+        "champion_id": "Teemo",
+        "name": "ティーモ",
+        "winrate": "39.71%",
+        "winrate_num": 39.71,
+        "winrate_display": "勝率 39.71%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 39.71%（統計的に不利）"
       },
       {
-        "champion_id": "Malphite",
-        "name": "マルファイト",
-        "reason": "勝率 42.31%（統計的に不利）"
+        "champion_id": "Aatrox",
+        "name": "エイトロックス",
+        "winrate": "40.0%",
+        "winrate_num": 40.0,
+        "winrate_display": "勝率 40.0%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 40.0%（統計的に不利）"
       },
       {
-        "champion_id": "Rammus",
-        "name": "ラムス",
-        "reason": "勝率 45.16%（統計的に不利）"
+        "champion_id": "Karthus",
+        "name": "カーサス",
+        "winrate": "42.33%",
+        "winrate_num": 42.33,
+        "winrate_display": "勝率 42.33%",
+        "role": "JUG",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 42.33%（統計的に不利）"
       }
     ]
   },
@@ -71,14 +131,14 @@
     "core": [
       {
         "step": 1,
-        "item_id": "3152",
-        "name": "ヘクステック ロケットベルト",
+        "item_id": "3118",
+        "name": "マリグナンス",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "4645",
-        "name": "シャドウフレイム",
+        "item_id": "6653",
+        "name": "ライアンドリーの仮面",
         "description": "推奨コア"
       },
       {
@@ -117,5 +177,6 @@
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

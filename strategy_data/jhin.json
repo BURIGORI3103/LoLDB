@@ -1,6 +1,7 @@
 {
   "name": "繧ｸ繝ｳ",
   "slug": "jhin",
+  "patch": "16.21.1",
   "roles": [
     "ADC"
   ],
@@ -11,36 +12,96 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Mel",
-        "name": "メル",
-        "reason": "勝率 54.29%（統計的に有利）"
-      },
-      {
-        "champion_id": "Varus",
-        "name": "ヴァルス",
-        "reason": "勝率 53.7%（統計的に有利）"
-      },
-      {
         "champion_id": "Ezreal",
         "name": "エズリアル",
-        "reason": "勝率 53.61%（統計的に有利）"
+        "winrate": "53.64%",
+        "winrate_num": 53.64,
+        "winrate_display": "勝率 53.64%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 53.64%（統計的に有利）"
+      },
+      {
+        "champion_id": "Viktor",
+        "name": "ビクター",
+        "winrate": "53.14%",
+        "winrate_num": 53.14,
+        "winrate_display": "勝率 53.14%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 53.14%（統計的に有利）"
+      },
+      {
+        "champion_id": "Caitlyn",
+        "name": "ケイトリン",
+        "winrate": "52.54%",
+        "winrate_num": 52.54,
+        "winrate_display": "勝率 52.54%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 52.54%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "AurelionSol",
-        "name": "オレリオン・ソル",
-        "reason": "勝率 45.9%（統計的に不利）"
-      },
-      {
         "champion_id": "Karthus",
         "name": "カーサス",
-        "reason": "勝率 45.94%（統計的に不利）"
+        "winrate": "45.84%",
+        "winrate_num": 45.84,
+        "winrate_display": "勝率 45.84%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 45.84%（統計的に不利）"
       },
       {
         "champion_id": "Yasuo",
         "name": "ヤスオ",
-        "reason": "勝率 46.47%（統計的に不利）"
+        "winrate": "45.91%",
+        "winrate_num": 45.91,
+        "winrate_display": "勝率 45.91%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 45.91%（統計的に不利）"
+      },
+      {
+        "champion_id": "Lux",
+        "name": "ラックス",
+        "winrate": "46.65%",
+        "winrate_num": 46.65,
+        "winrate_display": "勝率 46.65%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 46.65%（統計的に不利）"
       }
     ]
   },
@@ -76,8 +137,8 @@
       },
       {
         "step": 2,
-        "item_id": "6676",
-        "name": "コレクター",
+        "item_id": "3046",
+        "name": "ファントム ダンサー",
         "description": "推奨コア"
       },
       {
@@ -116,5 +177,6 @@
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

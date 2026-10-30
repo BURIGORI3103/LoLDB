@@ -1,6 +1,7 @@
 {
   "name": "繝代Φ繝・が繝ｳ",
   "slug": "pantheon",
+  "patch": "16.21.1",
   "roles": [
     "TOP",
     "SUP",
@@ -16,34 +17,94 @@
       {
         "champion_id": "Vayne",
         "name": "ヴェイン",
-        "reason": "勝率 60.47%（統計的に有利）"
+        "winrate": "56.82%",
+        "winrate_num": 56.82,
+        "winrate_display": "勝率 56.82%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 56.82%（統計的に有利）"
       },
       {
-        "champion_id": "Ryze",
-        "name": "ライズ",
-        "reason": "勝率 59.05%（統計的に有利）"
+        "champion_id": "Riven",
+        "name": "リヴェン",
+        "winrate": "54.91%",
+        "winrate_num": 54.91,
+        "winrate_display": "勝率 54.91%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 54.91%（統計的に有利）"
       },
       {
-        "champion_id": "Malzahar",
-        "name": "マルザハール",
-        "reason": "勝率 58.43%（統計的に有利）"
+        "champion_id": "Aurora",
+        "name": "オーロラ",
+        "winrate": "53.8%",
+        "winrate_num": 53.8,
+        "winrate_display": "勝率 53.8%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 53.8%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Malphite",
-        "name": "マルファイト",
-        "reason": "勝率 44.12%（統計的に不利）"
+        "champion_id": "Malzahar",
+        "name": "マルザハール",
+        "winrate": "42.97%",
+        "winrate_num": 42.97,
+        "winrate_display": "勝率 42.97%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 42.97%（統計的に不利）"
       },
       {
-        "champion_id": "Anivia",
-        "name": "アニビア",
-        "reason": "勝率 44.9%（統計的に不利）"
+        "champion_id": "Illaoi",
+        "name": "イラオイ",
+        "winrate": "44.49%",
+        "winrate_num": 44.49,
+        "winrate_display": "勝率 44.49%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 44.49%（統計的に不利）"
       },
       {
-        "champion_id": "Yorick",
-        "name": "ヨリック",
-        "reason": "勝率 45.42%（統計的に不利）"
+        "champion_id": "Sion",
+        "name": "サイオン",
+        "winrate": "44.76%",
+        "winrate_num": 44.76,
+        "winrate_display": "勝率 44.76%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 44.76%（統計的に不利）"
       }
     ]
   },
@@ -73,20 +134,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "6692",
-        "name": "赤月の刃",
+        "item_id": "3134",
+        "name": "セレイテッド ダーク",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "3071",
-        "name": "ブラック クリーバー",
+        "item_id": "2520",
+        "name": "バスティオンブレイカー",
         "description": "推奨コア"
       },
       {
         "step": 3,
-        "item_id": "6333",
-        "name": "デス ダンス",
+        "item_id": "6699",
+        "name": "ボルテイク サイクロソード",
         "description": "推奨コア"
       }
     ],
@@ -94,30 +155,31 @@
   },
   "runes": {
     "primary": {
-      "path": "栄華",
-      "keystone": "8010",
-      "keystone_name": "征服者",
+      "path": "魔道",
+      "keystone": "8230",
+      "keystone_name": "嵐乗りの勇躍",
       "choices": [
-        "冷静沈着",
-        "レジェンド: ヘイスト",
-        "背水の陣"
+        "マナフローバンド",
+        "至高",
+        "追火"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "至高",
-        "追火"
+        "凱旋",
+        "切り崩し"
       ]
     },
     "shards": [
       "Adaptive Force",
       "Adaptive Force",
-      "Health Scaling"
+      "Health"
     ]
   },
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

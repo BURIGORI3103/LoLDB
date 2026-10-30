@@ -1,55 +1,116 @@
 {
   "name": "繝繧､繧｢繝・",
   "slug": "diana",
+  "patch": "16.21.1",
   "roles": [
-    "JUG",
-    "MID"
+    "MID",
+    "JUG"
   ],
   "summoner_spells": [
     "フラッシュ",
-    "スマイト"
+    "イグナイト"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Locke",
-        "name": "ロック",
-        "reason": "勝率 59.01%（統計的に有利）"
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "winrate": "66.18%",
+        "winrate_num": 66.18,
+        "winrate_display": "勝率 66.18%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 66.18%（統計的に有利）"
       },
       {
-        "champion_id": "Pantheon",
-        "name": "パンテオン",
-        "reason": "勝率 58.99%（統計的に有利）"
+        "champion_id": "Brand",
+        "name": "ブランド",
+        "winrate": "61.62%",
+        "winrate_num": 61.62,
+        "winrate_display": "勝率 61.62%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 61.62%（統計的に有利）"
       },
       {
-        "champion_id": "Naafiri",
-        "name": "ナフィーリ",
-        "reason": "勝率 58.56%（統計的に有利）"
+        "champion_id": "Azir",
+        "name": "アジール",
+        "winrate": "57.81%",
+        "winrate_num": 57.81,
+        "winrate_display": "勝率 57.81%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 57.81%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "XinZhao",
-        "name": "シン・ジャオ",
-        "reason": "勝率 43.34%（統計的に不利）"
+        "champion_id": "Gwen",
+        "name": "グウェン",
+        "winrate": "36.11%",
+        "winrate_num": 36.11,
+        "winrate_display": "勝率 36.11%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 36.11%（統計的に不利）"
       },
       {
-        "champion_id": "Aatrox",
-        "name": "エイトロックス",
-        "reason": "勝率 44.62%（統計的に不利）"
+        "champion_id": "Nasus",
+        "name": "ナサス",
+        "winrate": "45.61%",
+        "winrate_num": 45.61,
+        "winrate_display": "勝率 45.61%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 45.61%（統計的に不利）"
       },
       {
-        "champion_id": "Warwick",
-        "name": "ワーウィック",
-        "reason": "勝率 44.94%（統計的に不利）"
+        "champion_id": "Veigar",
+        "name": "ベイガー",
+        "winrate": "46.14%",
+        "winrate_num": 46.14,
+        "winrate_display": "勝率 46.14%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 46.14%（統計的に不利）"
       }
     ]
   },
   "build": {
     "starter": [
       {
-        "item_id": "1101",
-        "name": "スコーチクロウの幼体"
+        "item_id": "1056",
+        "name": "ドラン リング"
       },
       {
         "item_id": "2003",
@@ -63,22 +124,22 @@
         "condition": "推奨靴"
       },
       {
-        "item_id": "3047",
-        "name": "プレート スチールキャップ",
+        "item_id": "3111",
+        "name": "マーキュリー ブーツ",
         "condition": "推奨靴"
       }
     ],
     "core": [
       {
         "step": 1,
-        "item_id": "2510",
-        "name": "黄昏と暁",
+        "item_id": "4646",
+        "name": "ストームサージ",
         "description": "推奨コア"
       },
       {
         "step": 2,
-        "item_id": "4633",
-        "name": "リフトメーカー",
+        "item_id": "4645",
+        "name": "シャドウフレイム",
         "description": "推奨コア"
       },
       {
@@ -92,30 +153,31 @@
   },
   "runes": {
     "primary": {
-      "path": "栄華",
-      "keystone": "8010",
-      "keystone_name": "征服者",
+      "path": "覇道",
+      "keystone": "8112",
+      "keystone_name": "電撃",
       "choices": [
-        "凱旋",
-        "レジェンド: 迅速",
-        "最期の慈悲"
+        "サドンインパクト",
+        "グリスリー メメント",
+        "貪欲な賞金首狩り"
       ]
     },
     "secondary": {
       "path": "",
       "choices": [
-        "魔法の靴",
-        "宇宙の英知"
+        "シールドバッシュ",
+        "ボーンアーマー"
       ]
     },
     "shards": [
-      "Attack Speed",
+      "Adaptive Force",
       "Adaptive Force",
       "Health Scaling"
     ]
   },
   "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。JUGでのCS管理とマップ警戒を徹底する。",
+    "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

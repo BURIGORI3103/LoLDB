@@ -1,6 +1,7 @@
 {
   "name": "繧ｿ繝ｪ繝､",
   "slug": "taliyah",
+  "patch": "16.21.1",
   "roles": [
     "MID",
     "JUG"
@@ -12,36 +13,96 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Garen",
-        "name": "ガレン",
-        "reason": "勝率 59.46%（統計的に有利）"
-      },
-      {
-        "champion_id": "Lucian",
-        "name": "ルシアン",
-        "reason": "勝率 59.02%（統計的に有利）"
+        "champion_id": "Tristana",
+        "name": "トリスターナ",
+        "winrate": "62.82%",
+        "winrate_num": 62.82,
+        "winrate_display": "勝率 62.82%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 62.82%（統計的に有利）"
       },
       {
         "champion_id": "Cassiopeia",
         "name": "カシオペア",
-        "reason": "勝率 57.63%（統計的に有利）"
+        "winrate": "57.81%",
+        "winrate_num": 57.81,
+        "winrate_display": "勝率 57.81%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 57.81%（統計的に有利）"
+      },
+      {
+        "champion_id": "Garen",
+        "name": "ガレン",
+        "winrate": "57.41%",
+        "winrate_num": 57.41,
+        "winrate_display": "勝率 57.41%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 57.41%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "KogMaw",
-        "name": "コグ＝マウ",
-        "reason": "勝率 38.98%（統計的に不利）"
+        "champion_id": "Malphite",
+        "name": "マルファイト",
+        "winrate": "35.09%",
+        "winrate_num": 35.09,
+        "winrate_display": "勝率 35.09%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 35.09%（統計的に不利）"
       },
       {
-        "champion_id": "Zoe",
-        "name": "ゾーイ",
-        "reason": "勝率 42.92%（統計的に不利）"
+        "champion_id": "Smolder",
+        "name": "スモルダー",
+        "winrate": "36.11%",
+        "winrate_num": 36.11,
+        "winrate_display": "勝率 36.11%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 36.11%（統計的に不利）"
       },
       {
-        "champion_id": "Katarina",
-        "name": "カタリナ",
-        "reason": "勝率 44.61%（統計的に不利）"
+        "champion_id": "Nasus",
+        "name": "ナサス",
+        "winrate": "37.93%",
+        "winrate_num": 37.93,
+        "winrate_display": "勝率 37.93%",
+        "role": "MID",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 37.93%（統計的に不利）"
       }
     ]
   },
@@ -93,8 +154,8 @@
   "runes": {
     "primary": {
       "path": "魔道",
-      "keystone": "8992",
-      "keystone_name": "死神の残り火",
+      "keystone": "8230",
+      "keystone_name": "嵐乗りの勇躍",
       "choices": [
         "マナフローバンド",
         "至高",
@@ -117,5 +178,6 @@
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。MIDでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

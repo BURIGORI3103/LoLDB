@@ -1,10 +1,10 @@
 {
   "name": "繝・ぅ繝ｼ繝｢",
   "slug": "teemo",
+  "patch": "16.21.1",
   "roles": [
     "TOP",
-    "JUG",
-    "SUP"
+    "JUG"
   ],
   "summoner_spells": [
     "フラッシュ",
@@ -15,34 +15,94 @@
       {
         "champion_id": "Vayne",
         "name": "ヴェイン",
-        "reason": "勝率 60.54%（統計的に有利）"
+        "winrate": "61.63%",
+        "winrate_num": 61.63,
+        "winrate_display": "勝率 61.63%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 61.63%（統計的に有利）"
       },
       {
-        "champion_id": "Corki",
-        "name": "コーキ",
-        "reason": "勝率 59.52%（統計的に有利）"
+        "champion_id": "Udyr",
+        "name": "ウディア",
+        "winrate": "59.69%",
+        "winrate_num": 59.69,
+        "winrate_display": "勝率 59.69%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 59.69%（統計的に有利）"
       },
       {
         "champion_id": "Varus",
         "name": "ヴァルス",
-        "reason": "勝率 57.95%（統計的に有利）"
+        "winrate": "59.31%",
+        "winrate_num": 59.31,
+        "winrate_display": "勝率 59.31%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 59.31%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
-        "champion_id": "Ornn",
-        "name": "オーン",
+        "champion_id": "Zac",
+        "name": "ザック",
+        "winrate": "35.29%",
+        "winrate_num": 35.29,
+        "winrate_display": "勝率 35.29%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 35.29%（統計的に不利）"
+      },
+      {
+        "champion_id": "Poppy",
+        "name": "ポッピー",
+        "winrate": "40.43%",
+        "winrate_num": 40.43,
+        "winrate_display": "勝率 40.43%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 40.43%（統計的に不利）"
+      },
+      {
+        "champion_id": "Sion",
+        "name": "サイオン",
+        "winrate": "45.76%",
+        "winrate_num": 45.76,
+        "winrate_display": "勝率 45.76%",
+        "role": "TOP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
         "reason": "勝率 45.76%（統計的に不利）"
-      },
-      {
-        "champion_id": "Olaf",
-        "name": "オラフ",
-        "reason": "勝率 45.78%（統計的に不利）"
-      },
-      {
-        "champion_id": "Kled",
-        "name": "クレッド",
-        "reason": "勝率 46.65%（統計的に不利）"
       }
     ]
   },
@@ -118,5 +178,6 @@
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。TOPでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

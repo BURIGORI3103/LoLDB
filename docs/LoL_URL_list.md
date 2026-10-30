@@ -1,4 +1,4 @@
-﻿---
+---
 tags:
   - LoLDB
 ---
@@ -322,7 +322,7 @@ tags:
 - [x] 繝ｬ繝ｫ (rell)
   OP.GG: https://www.op.gg/champions/rell/build
   wiki: https://loljp-wiki.tk/wiki/?Champion%2F%E3%83%AC%E3%83%AB%EF%BC%88Rell%EF%BC%89
-- [x] 繝ｬ繝翫・繧ｿ繝ｻ繧ｰ繝ｩ繧ｹ繧ｯ (renataglasc)
+- [ ] 繝ｬ繝翫・繧ｿ繝ｻ繧ｰ繝ｩ繧ｹ繧ｯ (renataglasc)
   OP.GG: https://www.op.gg/champions/renataglasc/build
   wiki: https://loljp-wiki.tk/wiki/?Champion%2F%E3%83%AC%E3%83%8A%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%B0%E3%83%A9%E3%82%B9%E3%82%AF%EF%BC%88Renata_Glasc%EF%BC%89
 - [x] 繝ｬ繝阪け繝医Φ (renekton)
@@ -466,7 +466,7 @@ tags:
 - [x] 繝ｯ繝ｼ繧ｦ繧｣繝・け (warwick)
   OP.GG: https://www.op.gg/champions/warwick/build
   wiki: https://loljp-wiki.tk/wiki/?Champion%2F%E3%83%AF%E3%83%BC%E3%82%A6%E3%82%A3%E3%83%83%E3%82%AF%EF%BC%88Warwick%EF%BC%89
-- [x] 繧ｦ繝ｼ繧ｳ繝ｳ (wukong)
+- [ ] 繧ｦ繝ｼ繧ｳ繝ｳ (wukong)
   OP.GG: https://www.op.gg/champions/wukong/build
   wiki: https://loljp-wiki.tk/wiki/?Champion%2F%E3%82%A6%E3%83%BC%E3%82%B3%E3%83%B3%EF%BC%88Wukong%EF%BC%89
 - [x] 繧ｶ繝､ (xayah)

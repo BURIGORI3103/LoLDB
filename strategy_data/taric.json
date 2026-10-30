@@ -1,46 +1,107 @@
 {
   "name": "繧ｿ繝ｪ繝・け",
   "slug": "taric",
+  "patch": "16.21.1",
   "roles": [
     "SUP"
   ],
   "summoner_spells": [
-    "フラッシュ",
-    "イグナイト"
+    "イグゾースト",
+    "フラッシュ"
   ],
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Sylas",
-        "name": "サイラス",
-        "reason": "勝率 64.52%（統計的に有利）"
-      },
-      {
         "champion_id": "Shaco",
         "name": "シャコ",
-        "reason": "勝率 61.18%（統計的に有利）"
+        "winrate": "60.26%",
+        "winrate_num": 60.26,
+        "winrate_display": "勝率 60.26%",
+        "role": "SUP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 60.26%（統計的に有利）"
       },
       {
-        "champion_id": "Leblanc",
-        "name": "ルブラン",
-        "reason": "勝率 60.42%（統計的に有利）"
+        "champion_id": "Camille",
+        "name": "カミール",
+        "winrate": "60.0%",
+        "winrate_num": 60.0,
+        "winrate_display": "勝率 60.0%",
+        "role": "SUP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 60.0%（統計的に有利）"
+      },
+      {
+        "champion_id": "Ashe",
+        "name": "アッシュ",
+        "winrate": "60.0%",
+        "winrate_num": 60.0,
+        "winrate_display": "勝率 60.0%",
+        "role": "SUP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 60.0%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
         "champion_id": "Hwei",
         "name": "フェイ",
+        "winrate": "40.0%",
+        "winrate_num": 40.0,
+        "winrate_display": "勝率 40.0%",
+        "role": "SUP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 40.0%（統計的に不利）"
+      },
+      {
+        "champion_id": "Soraka",
+        "name": "ソラカ",
+        "winrate": "41.18%",
+        "winrate_num": 41.18,
+        "winrate_display": "勝率 41.18%",
+        "role": "SUP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
         "reason": "勝率 41.18%（統計的に不利）"
       },
       {
-        "champion_id": "Zyra",
-        "name": "ザイラ",
-        "reason": "勝率 45.52%（統計的に不利）"
-      },
-      {
-        "champion_id": "Sona",
-        "name": "ソナ",
-        "reason": "勝率 45.71%（統計的に不利）"
+        "champion_id": "Janna",
+        "name": "ジャンナ",
+        "winrate": "43.32%",
+        "winrate_num": 43.32,
+        "winrate_display": "勝率 43.32%",
+        "role": "SUP",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 43.32%（統計的に不利）"
       }
     ]
   },
@@ -112,5 +173,6 @@
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。SUPでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }

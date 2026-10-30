@@ -1,6 +1,7 @@
 {
   "name": "繝溘せ繝ｻ繝輔か繝ｼ繝√Η繝ｳ",
   "slug": "missfortune",
+  "patch": "16.21.1",
   "roles": [
     "ADC"
   ],
@@ -11,36 +12,96 @@
   "matchups": {
     "favorable": [
       {
-        "champion_id": "Veigar",
-        "name": "ベイガー",
-        "reason": "勝率 53.57%（統計的に有利）"
-      },
-      {
-        "champion_id": "Varus",
-        "name": "ヴァルス",
-        "reason": "勝率 52.75%（統計的に有利）"
+        "champion_id": "Seraphine",
+        "name": "セラフィーン",
+        "winrate": "55.76%",
+        "winrate_num": 55.76,
+        "winrate_display": "勝率 55.76%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 55.76%（統計的に有利）"
       },
       {
         "champion_id": "Kalista",
         "name": "カリスタ",
-        "reason": "勝率 52.52%（統計的に有利）"
+        "winrate": "54.83%",
+        "winrate_num": 54.83,
+        "winrate_display": "勝率 54.83%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 54.83%（統計的に有利）"
+      },
+      {
+        "champion_id": "Vayne",
+        "name": "ヴェイン",
+        "winrate": "53.38%",
+        "winrate_num": 53.38,
+        "winrate_display": "勝率 53.38%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 53.38%（統計的に有利）"
       }
     ],
     "unfavorable": [
       {
         "champion_id": "Karthus",
         "name": "カーサス",
-        "reason": "勝率 37.75%（統計的に不利）"
+        "winrate": "44.48%",
+        "winrate_num": 44.48,
+        "winrate_display": "勝率 44.48%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 44.48%（統計的に不利）"
       },
       {
-        "champion_id": "Viktor",
-        "name": "ビクター",
-        "reason": "勝率 42.02%（統計的に不利）"
+        "champion_id": "Xerath",
+        "name": "ゼラス",
+        "winrate": "45.53%",
+        "winrate_num": 45.53,
+        "winrate_display": "勝率 45.53%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 45.53%（統計的に不利）"
       },
       {
-        "champion_id": "AurelionSol",
-        "name": "オレリオン・ソル",
-        "reason": "勝率 43.26%（統計的に不利）"
+        "champion_id": "Velkoz",
+        "name": "ヴェル＝コズ",
+        "winrate": "45.82%",
+        "winrate_num": 45.82,
+        "winrate_display": "勝率 45.82%",
+        "role": "ADC",
+        "patch": "16.21.1",
+        "source": "opgg_stats",
+        "region": "Global",
+        "tier": "Emerald+",
+        "fetched_at": "2026-10-30",
+        "is_estimated": false,
+        "reason": "勝率 45.82%（統計的に不利）"
       }
     ]
   },
@@ -70,8 +131,8 @@
     "core": [
       {
         "step": 1,
-        "item_id": "6697",
-        "name": "ヒュブリス",
+        "item_id": "3072",
+        "name": "ブラッドサースター",
         "description": "推奨コア"
       },
       {
@@ -116,5 +177,6 @@
   "gameplay_notes": {
     "laning": "序盤は相手のスキル使用後に有利なトレードを狙う。ADCでのCS管理とマップ警戒を徹底する。",
     "teamfight": "集団戦では自身の役割（キャリー攻撃や味方の保護）を意識し、有利な位置取りからスキルを叩き込む。"
-  }
+  },
+  "fetched_at": "2026-10-30"
 }
