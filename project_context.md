@@ -21,7 +21,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
    - ダメージ属性（AD/AP/タンク/両型）およびサステイン特性を付与し、UI上の一覧・シミュレーター双方で複合絞り込み（AND条件）をサポート。
    - マッチアップは正規スキーマ（champion_id, name, winrate, winrate_display, reason, role, patch, source, is_estimated）で管理。
    - 実測データ（opgg_stats）と推定相性（synergy_estimate）を厳格に分離し、ハッシュ値による疑似勝率生成は廃止。
-   - role_data とトップレベルの詳細理由を同期管理し、理由がない場合は定型文を乱発せず「理由データなし」と明記。
+   - 相性解説は data/matchup_reason_evidence.json に出典付きで登録し、対面・ロール・有利不利の方向が一致した文献確認済みのものだけを表示する。未確認の対面カードには解説を出さず、勝率を保持する。文献上の相性説明と現在パッチの勝率の因果関係は区別する。
 4. build_pwa.py が単一 HTML、マニフェスト、Service Worker を生成します。
 
 詳細なデータスキーマは docs/LoL_Database_Specification.md、攻略情報の参照先は docs/LoL_URL_list.md を確認してください。収集元の構造や記載内容は変わるため、スクレイピング結果を検証せずに正しい最新情報とみなしません。
@@ -30,6 +30,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 - wikiの取得結果は strategy_data の wiki_info と docs/wiki_refresh_report.json に、出典URL・取得日時・成否を付けて保存します。wikiのパッチ対応は未検証であり、OP.GGの取得チェックとは別に管理します。失敗時は本文を生成して成功扱いにしません。
 - OP.GGの正式slugはウーコンが monkeyking、レナータが renata。process_url_list.py --refresh --reuse-wiki で全件を再取得し、ページ表示のパッチを検証します。refresh_role_stats.py が実運用ロールごとのページから統計を取得し、表示ロールとパッチを検証して role_data へ保存します。
 - merge_data.py はパッチ・ロール別の取得が未完了なら停止し、検証済みデータで統計を置換します。コンボ・スキル順などの既存補完を保持し、ダメージ属性・AAタイプ・サステインと対面マトリクスを後段で再計算します。sync_all_roles_complete.py の固定相性・固定ビルドによる補完はパッチ更新フローでは実行しません。
+- apply_matchup_reasons.py は文献確認済み解説をマスター・個別JSON・対面マトリクスへ同期する。基礎特性から推測した説明は相性理由として採用しない。シミュレーターも確認済み解説がない場合は未確認と表示する。
 
 ## 生成物と運用上の制約
 

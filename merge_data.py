@@ -65,7 +65,8 @@ def merge_record(base, strategy, previous):
     merged["gameplay_notes"] = copy.deepcopy(previous.get("gameplay_notes", {}))
     for key in ("matchup_matrix", "matchup_matrix_by_role"):
         merged.pop(key, None)
-    return merged
+    from apply_matchup_reasons import apply_reasons, load_evidence
+    return apply_reasons(merged, load_evidence())
 
 def find_strategy_file(strategy_dir, champ_id):
     lower_id = champ_id.lower()

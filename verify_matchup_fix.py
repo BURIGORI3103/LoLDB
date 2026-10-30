@@ -20,8 +20,8 @@ def verify_all():
         for item in top_fav:
             if not item.get("winrate"):
                 errors.append(f"{cid}: top favorable missing winrate: {item}")
-            if not item.get("reason"):
-                errors.append(f"{cid}: top favorable missing tactical reason: {item}")
+            if item.get("reason") and not item.get("reason_evidence"):
+                errors.append(f"{cid}: 相性解説に出典情報がありません")
             if "統計的に有利" in (item.get("reason") or ""):
                 errors.append(f"{cid}: top favorable reason contains stats boilerplate: {item}")
 
@@ -67,10 +67,10 @@ def verify_all():
     else:
         print("[OK] renderMatchupCard is present in generated HTML.")
 
-    if "理由データなし" not in root_html:
-        errors.append("'理由データなし' is not found in generated HTML")
+    if 'evidence?.confirmation === "source_confirmed"' not in root_html:
+        errors.append("文献確認済み解説の表示制御がありません")
     else:
-        print("[OK] '理由データなし' explicit fallback is present in generated HTML.")
+        print("[OK] 文献確認済み解説の表示制御があります。")
 
     # Service Worker
     sw_file = (BASE_DIR / "dist" / "sw.js").read_text(encoding="utf-8")

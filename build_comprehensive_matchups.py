@@ -43,11 +43,7 @@ def _enrich_measured_entry(entry: dict, adv: str, default_role: str, patch: str)
     tier_val = entry.get("tier", "Emerald+")
     fetched_val = entry.get("fetched_at", "2026-10")
     sample_val = entry.get("sample_note", "OP.GG ロール別カウンター統計")
-    detail = entry.get("reason") or (
-        "統計的に主導権を握りやすい有利なマッチアップです。"
-        if adv == "fav"
-        else "統計的に警戒すべき不利なマッチアップです。無理なトレードを避ける必要があります。"
-    )
+    detail = entry.get("reason") if entry.get("reason_evidence", {}).get("confirmation") == "source_confirmed" else ""
     label_prefix = "有利" if adv == "fav" else "警戒・不利"
 
     return {
@@ -59,6 +55,7 @@ def _enrich_measured_entry(entry: dict, adv: str, default_role: str, patch: str)
         "advantage": adv,
         "advantage_label": f"{label_prefix}（{wr_disp} / {role_val}実測）" if wr_str else f"{label_prefix}（{role_val}実測統計）",
         "reason": detail,
+        "reason_evidence": entry.get("reason_evidence"),
         "source": entry.get("source", "opgg_stats"),
         "is_estimated": False,
         "role": role_val,

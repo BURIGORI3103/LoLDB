@@ -3205,43 +3205,16 @@ def build():
           }}
         }}
 
-        // 2. 戦術的理由の抽出
-        let reasonText = "";
-        if (m.reason && typeof m.reason === "string") {{
-          let raw = m.reason.trim();
-          if (raw.includes(" | ")) {{
-            const parts = raw.split(" | ");
-            raw = parts.slice(1).join(" | ").trim();
-          }}
-          // "勝率 XX%（統計的に有利/不利）" などの純粋な統計文を除外
-          const isStatsOnly = /勝率\\s*\\d+(?:\\.\\d+)?%/.test(raw) || /統計的に(?:有利|不利)/.test(raw);
-          if (!isStatsOnly && raw.length > 5) {{
-            reasonText = raw;
-          }}
-        }}
-
-        // 3. フォールバック (matchup_matrix から具体的理由を取得)
-        if (!reasonText && c.matchup_matrix && c.matchup_matrix[m.champion_id]?.reason) {{
-          const matR = c.matchup_matrix[m.champion_id].reason;
-          if (matR && !matR.includes("統計的に有利") && !matR.includes("統計的に不利")) {{
-            reasonText = matR;
-          }}
-        }}
-
-        // 4. 因果関係が未検証の場合は、確認できる基礎特性を参考情報として示す。
-        if (!reasonText || reasonText === "理由データなし") {{
-          const opponent = CHAMPIONS[m.champion_id];
-          const myRange = c.stats?.attackrange;
-          const oppRange = opponent?.stats?.attackrange;
-          const facts = [];
-          if (Number.isFinite(myRange) && Number.isFinite(oppRange)) facts.push(`通常攻撃射程は${{c.name}} ${{myRange}}、${{opponent.name}} ${{oppRange}}`);
-          if (opponent?.sustain_info?.has_sustain) facts.push(`${{opponent.name}}は回復または自己シールドを持つ`);
-          reasonText = facts.length ? `参考特性：${{facts.join("。")}}。勝率の原因は未検証。` : "勝率の原因は未検証。";
-        }}
+        // 出典・対面・レーン・方向が一致する文献確認済み解説だけを表示する。
+        const evidence = m.reason_evidence;
+        const hasConfirmedReason = evidence?.confirmation === "source_confirmed"
+          && evidence.champion_id === c.id && evidence.opponent_id === m.champion_id
+          && evidence.role === currentSelectedRole
+          && evidence.advantage === (isFav ? "favorable" : "unfavorable")
+          && evidence.source_url?.startsWith("https://");
+        const reasonHtml = hasConfirmedReason ? `<div class="matchup-reason">${{escapeHtml(evidence.reason)}}<br><a href="${{escapeHtml(evidence.source_url)}}" target="_blank" rel="noopener noreferrer">出典</a>（参照元 Patch ${{escapeHtml(evidence.source_patch || "未確認")}}・現在の勝率の因果関係は未検証）</div>` : "";
 
         const badgeClass = isFav ? "badge-fav" : "badge-unfav";
-        const isNoReason = reasonText === "理由データなし";
-        const reasonStyle = isNoReason ? "color:var(--text-muted); font-size:12px; font-style:italic;" : "";
 
         return `
           <div class="matchup-item">
@@ -3252,7 +3225,7 @@ def build():
               </div>
               <span class="${{badgeClass}}">${{escapeHtml(winrateText)}}</span>
             </div>
-            <div class="matchup-reason" style="${{reasonStyle}}">${{escapeHtml(reasonText)}}</div>
+            ${{reasonHtml}}
           </div>
         `;
       }}
@@ -4164,7 +4137,12 @@ def build():
       else if (advCode === "unfav" || advCode === "unfavorable") advClass = "sim-adv-unfav";
 
       const advText = evalData.advantage_label || (isEst ? "特性推定" : "実測統計");
-      let advReason = evalData.reason || `${{me.name}} と ${{opp.name}} のマッチアップ。`;
+      const reasonEvidence = evalData.reason_evidence;
+      let advReason = reasonEvidence?.confirmation === "source_confirmed"
+        && reasonEvidence.champion_id === me.id && reasonEvidence.opponent_id === opp.id
+        && reasonEvidence.role === targetLane
+        ? `${{reasonEvidence.reason}}（文献上の相性解説・現在の勝率の因果関係は未検証。出典: ${{reasonEvidence.source_url}}）`
+        : "出典を確認できた相性解説はありません。";
       if (advReason.includes(" | ")) {{
         advReason = advReason.split(" | ").slice(1).join(" | ");
       }}
