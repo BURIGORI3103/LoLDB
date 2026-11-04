@@ -1509,7 +1509,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.21 / v2.7.9 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.21 / v2.7.10 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1647,6 +1647,15 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.7.10</span>
+              <span class="changelog-date">2026-11-04</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【オフラインHTMLの内容検証とキャッシュ汚染防止】v2.7.9の公開後オフライン検査で、新キャッシュ名に旧HTMLが入る不整合を検出。SWのプリキャッシュをキャッシュ非再利用・HTML本文のSHA-256照合付きへ変更し、検証後だけ切り替えるよう修正。オンラインで別ビルドのHTMLを受け取っても現在の検証済みキャッシュを汚染せず、オフライン時は自アプリの現コアだけを参照する。旧実装で再現するNode回帰テストを追加し、修正後は旧HTML拒否・切替順序・汚染防止・切断復帰・他アプリ保護を検証。アイテム辞書の参照収集を全ロールへ適用し、補正データの未登録IDを保存前に拒否する検証も追加。監査9件の修正とパッチ16.21.1・173体264ロールのデータを継続する。</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.7.9</span>

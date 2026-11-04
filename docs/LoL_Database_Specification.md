@@ -56,3 +56,9 @@ Lux ADC・Sion MID・Tristana MIDはOP.GGのパッチ16.21のスキル順と、�
 - モーダルは種類・ID・選択ロールを履歴へ保存し、戻る・進むで復元する。最上位だけを操作可能とし、終了時にスクロールとフォーカスを戻す。
 - HTMLは最新優先、画像はキャッシュを使いながら更新する。省データ・低速回線では画像の一括先読みを止める。未キャッシュ画像と外部出典のオフライン利用は保証しない。
 - python -m unittest discover -s tests、node tests/test_ui_behavior.cjs、python verify_patch_data.py、python verify_matchup_fix.pyで生成物・パッチ・ロール・個別JSON・文献照合・キャッシュを検証する。
+
+【HTMLキャッシュの内容検証】
+
+- service_worker_template.jsを生成元とし、インストール時はHTTPキャッシュを再利用せず、HTML本文のSHA-256がビルド時の値と一致した場合だけキャッシュとSWを切り替える。
+- オンラインで別ビルドのHTMLを受け取っても、現在の検証済みオフラインキャッシュを上書きしない。オフライン時は現在のコアキャッシュだけを参照する。
+- node tests/test_service_worker.cjsで旧HTMLの混入拒否、切替順序、切断後の復帰、他アプリのキャッシュ保護を検証する。

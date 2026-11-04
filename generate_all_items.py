@@ -9,7 +9,7 @@ import re
 import urllib.request
 import argparse
 from tqdm import tqdm
-from audit_normalization import canonical_item_ids
+from audit_normalization import canonical_item_ids, referenced_item_ids
 
 def format_stat_line(line):
     line = re.sub(r'<[^>]+>', ' ', line).strip()
@@ -120,17 +120,7 @@ def main(patch=None):
     if os.path.exists(champs_path):
         with open(champs_path, "r", encoding="utf-8") as f:
             champs = json.load(f)
-            for c in champs.values():
-                b = c.get("build", {})
-                for k in ["starter", "boots", "core", "situational"]:
-                    for it in b.get(k, []):
-                        if it.get("item_id"):
-                            used_item_ids.add(str(it["item_id"]))
-                for rdata in c.get("role_data", {}).values():
-                    for bp in rdata.get("build_patterns", []):
-                        for it in bp.get("items", []):
-                            if it.get("id"):
-                                used_item_ids.add(str(it["id"]))
+    used_item_ids = referenced_item_ids(champs)
 
     allowed = canonical_item_ids(raw_data, used_item_ids)
     processed_items = {}

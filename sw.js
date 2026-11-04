@@ -1,106 +1,88 @@
-// LoLDB Service Worker - Dual Cache Architecture v2.7.9-0454c672 (Scoped Cache Cleanup)
+// LoLDBのHTML内容検証付き2層キャッシュ v2.7.10-9381b4a6
 const CACHE_PREFIX = 'loldb-';
-const CORE_CACHE = 'loldb-core-v2.7.9-0454c672';
-const IMAGE_CACHE = 'loldb-images-v1'; // チャンピオン・アイテム・スペル画像オンデマンド＆段階プリフェッチキャッシュ
+const CORE_CACHE = 'loldb-core-v2.7.10-9381b4a6';
+const HTML_HASH = '9381b4a66d4d9b771d4c2fbbed887d1185f9b5764fbe1de49e472de3cd6aa4d3';
+const IMAGE_CACHE = 'loldb-images-v1';
+const ASSETS_TO_CACHE = ['./index.html', './manifest.json', './icon.png', './icon-512.png'];
 
-const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './manifest.json',
-  './icon.png',
-  './icon-512.png'
-];
+async function matchesHtml(response) {
+  if (!response || !response.ok) return false;
+  const text = (await response.clone().text()).replace(/\r\n/g, '\n');
+  const bytes = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  const hash = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
+  return hash === HTML_HASH;
+}
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CORE_CACHE).then((cache) => {
-      console.log('[SW] Pre-caching core offline assets');
-      return cache.addAll(ASSETS_TO_CACHE);
-    })
-  );
-  self.skipWaiting();
+function freshUrl(value) {
+  const url = new URL(value, self.registration.scope);
+  url.searchParams.set('__loldb_build', HTML_HASH.slice(0, 8));
+  url.searchParams.set('__loldb_refresh', Date.now() + '-' + Math.random());
+  return url.href;
+}
+
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    const assets = await Promise.all(ASSETS_TO_CACHE.map(async asset => {
+      const response = await fetch(freshUrl(asset), {cache: 'no-store'});
+      if (!response.ok) throw new Error('コア取得失敗: ' + asset);
+      if (asset === './index.html' && !await matchesHtml(response)) throw new Error('HTMLハッシュ不一致');
+      return [asset, response];
+    }));
+    const cache = await caches.open(CORE_CACHE);
+    for (const [asset, response] of assets) {
+      if (asset === './index.html') await cache.put('./', response.clone());
+      await cache.put(asset, response);
+    }
+    await self.skipWaiting();
+  })());
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        // 同一オリジン上の別アプリのキャッシュを消さないよう、'loldb-' で始まるキャッシュのみを管理・削除する
-        if (key.startsWith(CACHE_PREFIX) && key !== CORE_CACHE && key !== IMAGE_CACHE) {
-          console.log('[SW] Removing old LoLDB cache:', key);
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
-  self.clients.claim();
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    for (const key of await caches.keys()) {
+      if (key.startsWith(CACHE_PREFIX) && key !== CORE_CACHE && key !== IMAGE_CACHE) await caches.delete(key);
+    }
+    await self.clients.claim();
+  })());
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
-
-  // 1. メインHTML（ナビゲーション）は Network-First（オンライン時は最新、オフライン時はキャッシュ）
-  if (event.request.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname === '/' || url.pathname.endsWith('/')) {
-    event.respondWith(
-      fetch(event.request)
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const responseToCache = networkResponse.clone();
-            caches.open(CORE_CACHE).then((cache) => cache.put(event.request, responseToCache));
-          }
-          return networkResponse;
-        })
-        .catch(() => {
-          return caches.match('./index.html').then(response => response || caches.match('./')).then(response => response || caches.match('index.html'));
-        })
-    );
-    return;
-  }
-
-  // 2. 画像リクエスト（Data Dragon CDN および ローカル画像）は Cache-First (永続画像キャッシュ)
-  const isImage = event.request.destination === 'image' ||
-                  url.pathname.match(/\.(png|jpg|jpeg|svg|webp|ico)$/i) ||
-                  url.hostname.includes('ddragon.leagueoflegends.com');
-
-  if (isImage) {
-    event.respondWith(
-      caches.open(IMAGE_CACHE).then((imageCache) => {
-        return imageCache.match(event.request).then((cachedResponse) => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          return fetch(event.request).then((networkResponse) => {
-            // クロスオリジン（no-cors）画像レスポンスは status が 0 (type: 'opaque') になるため、
-            // status === 200 に加えて type === 'opaque' も確実にキャッシュに保存する！
-            if (networkResponse && (networkResponse.status === 200 || networkResponse.type === 'opaque')) {
-              imageCache.put(event.request, networkResponse.clone());
-            }
-            return networkResponse;
-          }).catch(() => {
-            // オフライン時のローカルアイコンフォールバック
-            return caches.match('./icon.png');
-          });
-        });
-      })
-    );
-    return;
-  }
-
-  // 3. その他の静的アセットは CORE_CACHE による Cache-First
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        return response;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200 && event.request.method === 'GET') {
-          const responseToCache = networkResponse.clone();
-          caches.open(CORE_CACHE).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
+  const inScope = url.href.startsWith(self.registration.scope);
+  if (inScope && (event.request.mode === 'navigate' || url.pathname.endsWith('index.html') || url.pathname.endsWith('/'))) {
+    event.respondWith((async () => {
+      const cache = await caches.open(CORE_CACHE);
+      try {
+        const response = await fetch(freshUrl(event.request.url), {cache: 'no-store'});
+        if (!response.ok) throw new Error('HTML取得失敗');
+        // 新版のオンライン表示は許し、別ビルドの内容を現キャッシュへ混入させない。
+        if (await matchesHtml(response)) {
+          await cache.put('./index.html', response.clone());
+          await cache.put('./', response.clone());
         }
-        return networkResponse;
-      });
-    })
-  );
+        return response;
+      } catch {
+        return await cache.match('./index.html') || await cache.match('./')
+          || new Response('オフライン用データが未取得です。オンラインで開き直してください。', {status: 503, headers: {'Content-Type':'text/plain; charset=utf-8'}});
+      }
+    })());
+    return;
+  }
+  const isImage = event.request.destination === 'image' || /\.(png|jpg|jpeg|svg|webp|ico)$/i.test(url.pathname)
+    || url.hostname === 'ddragon.leagueoflegends.com';
+  event.respondWith((async () => {
+    const cache = await caches.open(isImage ? IMAGE_CACHE : CORE_CACHE);
+    const cached = await cache.match(event.request);
+    if (cached) return cached;
+    try {
+      const response = await fetch(event.request);
+      if (response.ok || isImage && response.type === 'opaque') await cache.put(event.request, response.clone());
+      return response;
+    } catch {
+      if (isImage) return await (await caches.open(CORE_CACHE)).match('./icon.png') || Response.error();
+      return Response.error();
+    }
+  })());
 });

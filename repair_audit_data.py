@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 
 from tqdm import tqdm
-from audit_normalization import normalize_champion, normalize_runes, plain_text, rune_parent_names, pattern_from_build
+from audit_normalization import normalize_champion, normalize_runes, plain_text, rune_parent_names, pattern_from_build, validate_build_references
 from merge_data import find_strategy_file
 from process_url_list import build_dictionaries, get_headers, parse_opgg_rsc, JST
 
@@ -113,6 +113,7 @@ def run():
             summary = next(iter(wiki.get("sections", {}).values()), "")
             champ["overview"] = {"summary": plain_text(summary), "source_url": wiki.get("source_url", ""), "source_patch": "未検証"}
         updated[cid] = normalize_champion(champ, item_data, evidence)
+        validate_build_references(updated[cid], item_data)
         for role, before in [(None, previous[cid]), *previous[cid]["role_data"].items()]:
             after = updated[cid] if role is None else updated[cid]["role_data"][role]
             if before.get("matchups") != after.get("matchups"):

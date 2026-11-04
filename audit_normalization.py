@@ -54,6 +54,29 @@ def canonical_item_ids(raw, referenced=()):
                  or item.get("requiredChampion") or item.get("requiredAlly") or str(i) in referenced)}
 
 
+def referenced_item_ids(champions):
+    ids = set()
+    for champ in champions.values():
+        for data in [champ, *champ.get("role_data", {}).values()]:
+            groups = list(data.get("build", {}).values())
+            for pattern in data.get("build_patterns", []):
+                groups.extend(pattern.get(key, []) for key in ("core_items", "starter_items", "boots_items", "situational_items", "items"))
+            for group in groups:
+                if isinstance(group, list):
+                    for item in group:
+                        if isinstance(item, dict) and (iid := item.get("item_id", item.get("id"))):
+                            ids.add(str(iid))
+    return ids
+
+
+def validate_build_references(champ, items):
+    for role, data in [("primary", champ), *champ.get("role_data", {}).items()]:
+        for group in data.get("build", {}).values():
+            for item in group:
+                if str(item.get("item_id")) not in items:
+                    raise ValueError(f"未登録アイテム: {champ['id']} {role} {item.get('item_id')}")
+
+
 def is_finished_item(iid, raw, allowed=None):
     iid = str(iid)
     allowed = canonical_item_ids(raw) if allowed is None else allowed

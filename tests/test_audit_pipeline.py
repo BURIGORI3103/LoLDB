@@ -7,11 +7,20 @@ from pathlib import Path
 
 from audit_normalization import (canonical_item_ids, is_finished_item, normalize_champion,
                                  normalize_runes, plain_text, project_for_display, rsc_item_groups)
+from audit_normalization import referenced_item_ids, validate_build_references
 
 BASE = Path(__file__).resolve().parent.parent
 
 
 class NormalizationTests(unittest.TestCase):
+    def test_catalog_collects_references_from_secondary_roles(self):
+        champions={'x':{'role_data':{'SUP':{'build':{'core':[{'item_id':'3040'}]},'build_patterns':[{'boots_items':[{'item_id':'3006'}]}]}}}}
+        self.assertEqual(referenced_item_ids(champions),{'3040','3006'})
+
+    def test_unknown_build_reference_is_rejected_before_saving(self):
+        with self.assertRaises(ValueError):
+            validate_build_references({'id':'x','build':{'core':[{'item_id':'9999'}]}},{})
+
     def test_plain_text_preserves_breaks_and_removes_executable_content(self):
         self.assertEqual(plain_text('A<br><magicDamage>B</magicDamage><script>bad()</script>&amp;C'), 'A\nB&C')
 
