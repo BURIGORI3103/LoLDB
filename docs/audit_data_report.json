@@ -4,5 +4,24 @@
   "champions": 173,
   "roles": 264,
   "core_shortages": [],
-  "matchups_preserved": true
+  "matchups_preserved": true,
+  "verification": {
+    "python_tests": 31,
+    "node_ui_tests": "PASS",
+    "browser_preview": "PASS",
+    "mobile_widths": [
+      375,
+      390,
+      430
+    ],
+    "horizontal_overflow": false,
+    "cases": [
+      "HYBRIDの5体抽出",
+      "ピックの公式名・通称・英語・かな検索",
+      "カシオペアの靴非表示",
+      "Lux ADCの出典とスキル順",
+      "モーダル・アイテム履歴",
+      "背面スクロールの復元"
+    ]
+  }
 }
