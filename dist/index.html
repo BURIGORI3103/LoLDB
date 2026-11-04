@@ -129,6 +129,10 @@
       border-color: #334155;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
+    @media (max-width: 600px) {
+      .main-nav { flex-wrap: nowrap; gap: 2px; overflow-x: auto; }
+      .nav-tab { flex: 0 0 auto; white-space: nowrap; font-size: 11px; padding: 8px 5px; }
+    }
     .pick-guide { max-width: 1000px; margin: 20px auto; padding: 0 12px; }
     .pick-guide p { color: #cbd5e1; line-height: 1.6; }
     .pick-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
