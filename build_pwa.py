@@ -574,6 +574,10 @@ def build():
     .pick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }}
     .pick-filters button {{ background: #1e293b; color: #e2e8f0; border: 1px solid #475569; border-radius: 8px; padding: 8px 12px; cursor: pointer; }}
     .pick-filters button.active {{ border-color: #38bdf8; color: #38bdf8; }}
+    @media (max-width: 600px) {{
+      .pick-filters {{ flex-wrap: nowrap; gap: 4px; overflow-x: auto; }}
+      .pick-filters button {{ flex: 0 0 auto; white-space: nowrap; font-size: 11px; padding: 8px 5px; }}
+    }}
     .pick-list {{ display: grid; gap: 8px; }}
     .pick-row {{ background: #172235; border: 1px solid #334155; border-radius: 10px; padding: 12px; }}
     .pick-row strong {{ color: #7dd3fc; }}
