@@ -427,7 +427,11 @@ def build():
         )
 
     # HTML <script> 内への安全なシリアライズ (</script> 等の混入を完全防止)
-    json_str = safe_json_for_script(all_champs)
+    # 廃止したシミュレーター専用の対面マトリクスは配布HTMLへ含めない。
+    display_champs = {cid: {key: value for key, value in champ.items()
+                            if key not in ("matchup_matrix", "matchup_matrix_by_role")}
+                      for cid, champ in all_champs.items()}
+    json_str = safe_json_for_script(display_champs)
     items_json_str = safe_json_for_script(all_items)
 
     html_content = f"""<!DOCTYPE html>
@@ -572,7 +576,6 @@ def build():
     .pick-choice-garen {{ color: #fcd34d; }}
     .pick-choice-mordekaiser {{ color: #d8b4fe; }}
     .pick-choice-malphite {{ color: #86efac; }}
-    .pick-choice-olaf {{ color: #fda4af; }}
     .pick-row p {{ margin: 5px 0 0; }}
     .controls {{
       display: flex;
@@ -886,16 +889,6 @@ def build():
       color: var(--text-muted);
       margin-left: auto;
     }}
-    .sim-picker-mini-badge {{
-      position: absolute;
-      bottom: 2px;
-      right: 2px;
-      font-size: 10px;
-      padding: 1px 3px;
-      border-radius: 3px;
-      background: rgba(0, 0, 0, 0.75);
-      line-height: 1;
-    }}
     /* 詳細モーダル用ダメージ属性・防具対策ガイド */
     .modal-damage-header {{
       display: flex;
@@ -928,49 +921,6 @@ def build():
       font-size: 11.5px;
       line-height: 1.5;
       margin-bottom: 10px;
-    }}
-    /* 対面シミュレーター 詳細モーダルジャンプボタン */
-    .sim-view-detail-btn {{
-      background: #0284c7;
-      color: #fff;
-      border: 1px solid #38bdf8;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 8px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      transition: all 0.2s;
-      white-space: nowrap;
-      margin-top: 4px;
-    }}
-    .sim-view-detail-btn:hover {{
-      background: #0369a1;
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
-    }}
-    .champ-info {{
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }}
-    .champ-name {{
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-main);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }}
-    .champ-title {{
-      font-size: 11px;
-      color: var(--text-muted);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }}
     /* モーダル */
     .modal-overlay {{
@@ -1500,278 +1450,6 @@ def build():
       margin-bottom: 10px;
       line-height: 1.4;
     }}
-    /* 対面対策シミュレーター スタイル (Phase 4) */
-    .sim-container {{
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 10px 0 40px;
-    }}
-    .sim-slots-wrap {{
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 20px;
-    }}
-    .sim-slot {{
-      flex: 1;
-    }}
-    .sim-slot-label {{
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }}
-    .sim-slot-card {{
-      background: var(--bg-card);
-      border: 2px dashed var(--border);
-      border-radius: 12px;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-      transition: all 0.2s;
-      min-height: 68px;
-    }}
-    .sim-slot-card:hover {{
-      border-color: var(--primary);
-      background: var(--bg-card-hover);
-      transform: translateY(-2px);
-    }}
-    .sim-slot-card.selected {{
-      border-style: solid;
-      border-color: var(--primary);
-      background: #151d30;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-    }}
-    .sim-slot-icon-wrap {{
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: #0b0f19;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 1px solid var(--border);
-    }}
-    .sim-slot-plus {{
-      font-size: 24px;
-      font-weight: 300;
-      color: var(--text-muted);
-    }}
-    .sim-slot-img {{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }}
-    .sim-slot-info {{
-      flex: 1;
-      overflow: hidden;
-    }}
-    .sim-slot-name {{
-      font-size: 13.5px;
-      font-weight: 800;
-      color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }}
-    .sim-slot-sub {{
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }}
-    .sim-vs-wrap {{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }}
-    .sim-vs-badge {{
-      background: #0b0f19;
-      border: 2px solid var(--border);
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 900;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }}
-    .sim-result-card {{
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 14px;
-    }}
-    .sim-result-header {{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }}
-    .sim-result-title {{
-      font-size: 13.5px;
-      font-weight: 800;
-      color: #fff;
-    }}
-    .sim-adv-badge {{
-      font-size: 12px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 6px;
-    }}
-    .sim-adv-fav {{
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      color: var(--favorable);
-    }}
-    .sim-adv-unfav {{
-      background: rgba(244, 63, 94, 0.15);
-      border: 1px solid rgba(244, 63, 94, 0.4);
-      color: var(--unfavorable);
-    }}
-    .sim-adv-even {{
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      color: var(--accent);
-    }}
-    .sim-picker-controls {{
-      margin-bottom: 12px;
-    }}
-    .sim-role-btn {{
-      background: #151d30;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      padding: 5px 12px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-    }}
-    .sim-role-btn:hover {{
-      color: #fff;
-      border-color: var(--primary);
-    }}
-    .sim-role-btn.active {{
-      background: #0284c7;
-      color: #fff;
-      border-color: var(--primary);
-    }}
-    .sim-picker-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-      gap: 8px;
-      max-height: 50vh;
-      overflow-y: auto;
-      padding-right: 4px;
-    }}
-    .sim-picker-item {{
-      background: #101726;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 8px 4px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-align: center;
-    }}
-    .sim-picker-item:hover {{
-      border-color: var(--primary);
-      background: #1e293b;
-      transform: translateY(-2px);
-    }}
-    .sim-picker-img {{
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      object-fit: cover;
-    }}
-    .sim-picker-name {{
-      font-size: 11px;
-      font-weight: 700;
-      color: #f1f5f9;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 100%;
-    }}
-    /* 対面シミュレーター 推奨アイテム複数グリッド表示 */
-    .sim-items-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 10px;
-      margin-top: 10px;
-    }}
-    .sim-item-card {{
-      background: #101726;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }}
-    .sim-item-card:hover {{
-      border-color: var(--primary);
-      background: #151e33;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }}
-    .sim-item-img {{
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      border: 1px solid #334155;
-      flex-shrink: 0;
-      object-fit: cover;
-    }}
-    .sim-item-info {{
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }}
-    .sim-item-top {{
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }}
-    .sim-item-tag {{
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: #38bdf8;
-      white-space: nowrap;
-    }}
-    .sim-item-name {{
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #f1f5f9;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }}
-    .sim-item-reason {{
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.3;
-    }}
     /* アイテム図鑑スタイル */
     .item-controls {{
       display: flex;
@@ -2264,8 +1942,7 @@ def build():
       <nav class="main-nav">
         <button class="nav-tab active" data-tab="champions">👑 チャンピオン</button>
         <button class="nav-tab" data-tab="items">🛡️ アイテム図鑑</button>
-        <button class="nav-tab" data-tab="simulator">⚔️ 対面シミュレーター</button>
-        <button class="nav-tab" data-tab="picks">📋 チャンプピック早見表</button>
+        <button class="nav-tab" data-tab="picks">📋 ピック早見表</button>
       </nav>
       <div class="controls" id="champControls">
         <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名・ひらがなで検索..." autocomplete="off">
@@ -2370,122 +2047,18 @@ def build():
 
     <div id="viewPicks" style="display: none;">
       <section class="pick-guide">
-        <h2>チャンプピック早見表</h2>
-        <p>ガレンの習熟度を優先。相性が僅差ならガレン、APが必要ならモルデカイザーも検討。オラフは習得後に選択。</p>
+        <h2>ピック早見表</h2>
+        <p>ガレンの習熟度を優先。相性が僅差ならガレン、APが必要ならモルデカイザーも検討。</p>
         <p>パッチ26.21を基準にした実戦用の暫定判断です。勝率を検証した統計表ではありません。相手チームにAPが多い場合はマルファイトを再検討してください。</p>
         <input id="pickSearch" class="search-input" type="search" placeholder="相手チャンピオン名で検索" aria-label="相手チャンピオン名で検索">
         <div class="pick-filters" aria-label="推奨チャンピオンで絞り込み">
-          <button type="button" class="active" data-pick="すべて" aria-pressed="true">すべて</button><button type="button" data-pick="ガレン" aria-pressed="false">ガレン</button><button type="button" data-pick="モルデカイザー" aria-pressed="false">モルデカイザー</button><button type="button" data-pick="マルファイト" aria-pressed="false">マルファイト</button><button type="button" data-pick="オラフ" aria-pressed="false">オラフ</button>
+          <button type="button" class="active" data-pick="すべて" aria-pressed="true">すべて</button><button type="button" data-pick="ガレン" aria-pressed="false">ガレン</button><button type="button" data-pick="モルデカイザー" aria-pressed="false">モルデカイザー</button><button type="button" data-pick="マルファイト" aria-pressed="false">マルファイト</button>
         </div>
         <p id="pickCount" aria-live="polite"></p><div id="pickList" class="pick-list"></div>
         <h3>先出し・BANの目安</h3>
         <p>先出しはガレン。味方がAD過多ならモルデカイザーも候補。ガレンのBANはダリウスかカミール、モルデカイザーのBANはオラフかグウェンを検討。</p>
-        <p>相手がモルデカイザーなら、習得後のオラフを検討。マルファイトは避けたい対面です。未習得のチャンピオンより、使い慣れたガレンを優先して構いません。</p>
+        <p>相手がモルデカイザーならガレンを選択。イラオイとケイルへの後出しはモルデカイザーを選択します。</p>
       </section>
-    </div>
-    <!-- 対面シミュレータービュー (Phase 4 実装) -->
-    <div id="viewSimulator" style="display: none;">
-      <div class="sim-container">
-        <!-- ピッカーエリア (自分 vs 相手) -->
-        <div class="sim-slots-wrap">
-          <!-- 自分のチャンピオン -->
-          <div class="sim-slot" id="simSlotMe">
-            <div class="sim-slot-label">👑 あなたのピック</div>
-            <div class="sim-slot-card empty" id="simCardMe" onclick="openSimPicker('me')">
-              <div class="sim-slot-icon-wrap">
-                <div class="sim-slot-plus">+</div>
-                <img id="simImgMe" class="sim-slot-img" src="" alt="" style="display: none;">
-              </div>
-              <div class="sim-slot-info">
-                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-                  <div class="sim-slot-name" id="simNameMe">チャンピオンを選択</div>
-                  <span id="simDamageBadgeMe" class="damage-badge" style="display: none;"></span>
-                </div>
-                <div class="sim-slot-sub" id="simRoleMe">タップして選択</div>
-                <button id="simDetailBtnMe" class="sim-view-detail-btn" style="display: none;" onclick="viewSimChampDetail(event, 'me')">🔍 スキル・詳細を見る</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="sim-vs-wrap">
-            <div class="sim-vs-badge">VS</div>
-          </div>
-
-          <!-- 対面の相手チャンピオン -->
-          <div class="sim-slot" id="simSlotOpp">
-            <div class="sim-slot-label">👿 対面の相手ピック</div>
-            <div class="sim-slot-card empty" id="simCardOpp" onclick="openSimPicker('opp')">
-              <div class="sim-slot-icon-wrap">
-                <div class="sim-slot-plus">+</div>
-                <img id="simImgOpp" class="sim-slot-img" src="" alt="" style="display: none;">
-              </div>
-              <div class="sim-slot-info">
-                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-                  <div class="sim-slot-name" id="simNameOpp">チャンピオンを選択</div>
-                  <span id="simDamageBadgeOpp" class="damage-badge" style="display: none;"></span>
-                </div>
-                <div class="sim-slot-sub" id="simRoleOpp">タップして選択</div>
-                <button id="simDetailBtnOpp" class="sim-view-detail-btn" style="display: none;" onclick="viewSimChampDetail(event, 'opp')">🔍 スキル・詳細を見る</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 分析結果表示エリア -->
-        <div id="simEmptyPrompt" style="padding: 40px 16px; text-align: center; color: var(--text-muted);">
-          <div style="font-size: 40px; margin-bottom: 10px;">⚔️</div>
-          <div style="font-size: 14px; font-weight: 700; color: #fff;">自分と相手のチャンピオンを選択してください</div>
-          <div style="font-size: 12px; margin-top: 4px;">相性・統計勝率・警戒スキル・対策アイテムを瞬時に分析します。</div>
-        </div>
-
-        <div id="simResultArea" style="display: none;">
-          <!-- 1. 相性・勝率メーター (レーン別厳格分離 ＆ 実測/推定メタ情報明示) -->
-          <div class="sim-result-card" id="simAdvantageCard">
-            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
-              <span class="sim-result-title">⚖️ レーン別 対面相性判定</span>
-              <div class="role-tabs" id="simMatchupLaneTabs" style="margin:0;">
-                <button class="chip-btn sim-lane-tab active" data-lane="AUTO">自動(主ロール)</button>
-                <button class="chip-btn sim-lane-tab" data-lane="TOP">TOP</button>
-                <button class="chip-btn sim-lane-tab" data-lane="JUG">JUG</button>
-                <button class="chip-btn sim-lane-tab" data-lane="MID">MID</button>
-                <button class="chip-btn sim-lane-tab" data-lane="ADC">ADC</button>
-                <button class="chip-btn sim-lane-tab" data-lane="SUP">SUP</button>
-              </div>
-            </div>
-            <div class="sim-result-header">
-              <span id="simMatchupSourceTag" style="font-size:11px; color:var(--text-muted); font-weight:600;">判定区分: -</span>
-              <span id="simAdvantageBadge" class="sim-adv-badge">判定中</span>
-            </div>
-            <div id="simAdvantageDesc" style="font-size: 13px; color: #e2e8f0; line-height: 1.5; margin-top: 6px;"></div>
-            <div id="simAdvantageMeta" style="font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--border);"></div>
-          </div>
-
-          <!-- 2. レーン戦の注意点 ＆ 相手の警戒スキル -->
-          <div class="sim-result-card">
-            <div class="sim-result-header">
-              <span class="sim-result-title">⚠️ レーン戦の注意点 ＆ 警戒スキル</span>
-            </div>
-            <div id="simSustainWarning" style="display: none;" class="sustain-reason-box"></div>
-            <div id="simLaningTips" style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; margin-top: 6px;"></div>
-          </div>
-
-          <!-- 3. 積むべき対策アイテムリスト -->
-          <div class="sim-result-card">
-            <div class="sim-result-header">
-              <span class="sim-result-title">🛡️ 積むべき対策おすすめアイテム（タップで詳細）</span>
-            </div>
-            <div id="simItemList" class="sim-items-grid"></div>
-          </div>
-
-          <!-- 4. 狙い目コンボ ＆ 仕掛けどころ -->
-          <div class="sim-result-card">
-            <div class="sim-result-header">
-              <span class="sim-result-title">🥊 有効なショートトレード ＆ 仕掛けどころ</span>
-            </div>
-            <div id="simCombosArea" class="combo-grid" style="margin-top: 8px;"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </main>
 
@@ -2558,49 +2131,6 @@ def build():
           <div class="detail-heading">✨ 特殊効果（パッシブ / アクティブ）</div>
           <div id="itemDetailDescText" style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; white-space: pre-line;"></div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- チャンピオン選択ピッカーモーダル (ロール絞り込み付き) -->
-  <div class="modal-overlay" id="simPickerModal" style="z-index: 150;">
-    <div class="modal-content" style="max-width: 650px;">
-      <div class="modal-header">
-        <div class="modal-title-wrap">
-          <h2 id="simPickerTitle" style="font-size: 16px; font-weight: 800; color: #fff;">チャンピオンを選択</h2>
-        </div>
-        <button class="modal-close-btn" id="simPickerCloseBtn">&times;</button>
-      </div>
-      <div class="modal-body" style="padding: 12px;">
-        <!-- 検索 ＆ ロール絞り込みタブ (濱田くんの重要指定！) -->
-        <div class="sim-picker-controls">
-          <input type="text" id="simSearchInput" class="item-search-input" placeholder="名前・英語名で検索..." autocomplete="off">
-          <div class="role-tabs" style="margin-top: 8px;">
-            <button class="sim-role-btn active" data-sim-role="ALL">ALL</button>
-            <button class="sim-role-btn" data-sim-role="TOP">TOP</button>
-            <button class="sim-role-btn" data-sim-role="JUG">JUG</button>
-            <button class="sim-role-btn" data-sim-role="MID">MID</button>
-            <button class="sim-role-btn" data-sim-role="ADC">ADC</button>
-            <button class="sim-role-btn" data-sim-role="SUP">SUP</button>
-          </div>
-          <!-- ピッカー用AAタイプ＆属性絞り込み -->
-          <div class="filter-chips-bar" style="margin-top: 6px; padding: 4px 8px;">
-            <div class="filter-group">
-              <span class="filter-label">AA:</span>
-              <button class="chip-btn sim-chip-btn active" data-sim-filter="attack" data-val="ALL">すべて</button>
-              <button class="chip-btn sim-chip-btn" data-sim-filter="attack" data-val="MELEE">🗡️ 近接</button>
-              <button class="chip-btn sim-chip-btn" data-sim-filter="attack" data-val="RANGED">🏹 遠隔</button>
-            </div>
-            <div class="filter-group">
-              <span class="filter-label">属性:</span>
-              <button class="chip-btn sim-chip-btn active" data-sim-filter="damage" data-val="ALL">すべて</button>
-              <button class="chip-btn sim-chip-btn" data-sim-filter="damage" data-val="AD">⚔️ AD</button>
-              <button class="chip-btn sim-chip-btn" data-sim-filter="damage" data-val="AP">🔮 AP</button>
-              <button class="chip-btn sim-chip-btn" data-sim-filter="damage" data-val="TANK">🛡️ タンク</button>
-            </div>
-          </div>
-        </div>
-        <div class="sim-picker-grid" id="simPickerGrid"></div>
       </div>
     </div>
   </div>
@@ -3225,6 +2755,7 @@ def build():
               </div>
               <span class="${{badgeClass}}">${{escapeHtml(winrateText)}}</span>
             </div>
+            ${{m.games ? `<div style="font-size:11px; color:var(--text-muted);">${{Number(m.games).toLocaleString("ja-JP")}}試合・Patch ${{escapeHtml(m.patch || patch)}}・${{escapeHtml(m.role || currentSelectedRole)}}${{m.source_url?.startsWith("https://www.op.gg/") ? `・<a href="${{escapeHtml(m.source_url)}}" target="_blank" rel="noopener noreferrer">OP.GG</a>` : ""}}</div>` : ""}}
             ${{reasonHtml}}
           </div>
         `;
@@ -3839,523 +3370,8 @@ def build():
       }};
     }}
 
-    // ==========================================
-    // 対面対策シミュレーター制御 (Phase 4)
-    // ==========================================
-    let simMyChampId = null;
-    let simOppChampId = null;
-    let simCurrentPickingTarget = null; // 'me' or 'opp'
-    let simPickerRole = "ALL";
-    let simPickerAttack = "ALL";
-    let simPickerDamage = "ALL";
-    let simPickerSearch = "";
-
-    const simCardMe = document.getElementById("simCardMe");
-    const simCardOpp = document.getElementById("simCardOpp");
-    const simImgMe = document.getElementById("simImgMe");
-    const simImgOpp = document.getElementById("simImgOpp");
-    const simNameMe = document.getElementById("simNameMe");
-    const simNameOpp = document.getElementById("simNameOpp");
-    const simRoleMe = document.getElementById("simRoleMe");
-    const simRoleOpp = document.getElementById("simRoleOpp");
-
-    const simEmptyPrompt = document.getElementById("simEmptyPrompt");
-    const simResultArea = document.getElementById("simResultArea");
-    const simAdvantageBadge = document.getElementById("simAdvantageBadge");
-    const simAdvantageDesc = document.getElementById("simAdvantageDesc");
-    const simSustainWarning = document.getElementById("simSustainWarning");
-    const simLaningTips = document.getElementById("simLaningTips");
-    const simItemList = document.getElementById("simItemList");
-    const simCombosArea = document.getElementById("simCombosArea");
-
-    const simPickerModal = document.getElementById("simPickerModal");
-    const simPickerCloseBtn = document.getElementById("simPickerCloseBtn");
-    const simPickerTitle = document.getElementById("simPickerTitle");
-    const simSearchInput = document.getElementById("simSearchInput");
-    const simPickerGrid = document.getElementById("simPickerGrid");
-
-    function openSimPicker(target) {{
-      simCurrentPickingTarget = target;
-      if (simPickerTitle) {{
-        simPickerTitle.textContent = target === 'me' ? '👑 あなたのチャンピオンを選択' : '👿 対面の相手チャンピオンを選択';
-      }}
-      if (simSearchInput) simSearchInput.value = "";
-      simPickerSearch = "";
-      if (simPickerModal) simPickerModal.classList.add("open");
-      renderSimPickerGrid();
-      if (!history.state || history.state.modal !== 'sim_picker') {{
-        history.pushState({{ modal: 'sim_picker' }}, '');
-      }}
-    }}
-
-    function closeSimPicker() {{
-      if (simPickerModal) simPickerModal.classList.remove("open");
-    }}
-
-    if (simPickerCloseBtn) {{
-      simPickerCloseBtn.onclick = () => {{
-        if (history.state && history.state.modal === 'sim_picker') history.back();
-        else closeSimPicker();
-      }};
-    }}
-
-    if (simPickerModal) {{
-      simPickerModal.onclick = (e) => {{
-        if (e.target === simPickerModal) {{
-          if (history.state && history.state.modal === 'sim_picker') history.back();
-          else closeSimPicker();
-        }}
-      }};
-    }}
-
-    function renderSimPickerGrid() {{
-      if (!simPickerGrid) return;
-      simPickerGrid.innerHTML = "";
-      const q = simPickerSearch.trim();
-
-      // 日本語五十音順（あいうえお順）にソート (濱田くんの重要指定！)
-      let sortedChamps = Object.values(CHAMPIONS).slice().sort((a, b) => {{
-        return (a.name || "").localeCompare(b.name || "", "ja");
-      }});
-
-      sortedChamps.forEach(champ => {{
-        // 1. ロール絞り込み
-        if (simPickerRole !== "ALL") {{
-          if (!champ.roles || !champ.roles.includes(simPickerRole)) return;
-        }}
-
-        // 2. AA攻撃タイプ絞り込み (近接 / 遠隔)
-        if (simPickerAttack !== "ALL") {{
-          const attType = champ.attack_type?.type || (champ.stats?.attackrange <= 250 ? "MELEE" : "RANGED");
-          if (simPickerAttack === "MELEE") {{
-            if (attType !== "MELEE" && attType !== "HYBRID") return;
-          }} else if (simPickerAttack === "RANGED") {{
-            if (attType !== "RANGED" && attType !== "HYBRID") return;
-          }}
-        }}
-
-        // 3. ダメージ属性絞り込み (AD / AP / TANK)
-        if (simPickerDamage !== "ALL") {{
-          const pType = champ.damage_profile?.primary_type || "AD";
-          if (simPickerDamage === "AD") {{
-            if (pType !== "AD" && pType !== "HYBRID") return;
-          }} else if (simPickerDamage === "AP") {{
-            if (pType !== "AP" && pType !== "HYBRID") return;
-          }} else if (simPickerDamage === "TANK") {{
-            if (pType !== "TANK") return;
-          }}
-        }}
-
-        // 4. 検索クエリ (ひらがな・カタカナ・英字部分一致対応)
-        if (q) {{
-          const isHit = matchSearch(champ.name, q) || matchSearch(champ.id, q);
-          if (!isHit) return;
-        }}
-
-        const item = document.createElement("div");
-        item.className = "sim-picker-item";
-        const patch = champ.patch || DEFAULT_PATCH;
-        const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{champ.id}}.png`;
-
-        // AAタイプ＆属性ミニアイコン
-        const att = champ.attack_type || {{}};
-        const attRange = champ.stats?.attackrange || 175;
-        let attIcon = "🗡️";
-        if (att.type === "RANGED" || (!att.type && attRange > 250)) {{
-          attIcon = "🏹";
-        }} else if (att.type === "HYBRID") {{
-          attIcon = "🔄";
-        }}
-
-        const dp = champ.damage_profile || {{}};
-        const dpText = dp.badge_text || "";
-
-        item.innerHTML = `
-          <div style="position:relative; width:48px; height:48px; margin:0 auto 4px;">
-            <img class="sim-picker-img" src="${{imgUrl}}" alt="${{champ.name}}" loading="lazy" onerror="this.src='icon.png';" style="margin:0;">
-            <span class="sim-picker-mini-badge" title="${{escapeHtml(att.label || '')}}">${{attIcon}}</span>
-          </div>
-          <div class="sim-picker-name">${{champ.name}}</div>
-          ${{dpText ? `<div style="font-size:9px; color:var(--text-muted); line-height:1;">[${{dpText}}]</div>` : ""}}
-        `;
-        item.onclick = () => selectSimChamp(champ.id);
-        simPickerGrid.appendChild(item);
-      }});
-    }}
-
-    function selectSimChamp(champId) {{
-      const c = CHAMPIONS[champId];
-      if (!c) return;
-      const patch = c.patch || DEFAULT_PATCH;
-      const dp = c.damage_profile || {{}};
-
-      if (simCurrentPickingTarget === 'me') {{
-        simMyChampId = champId;
-        if (simCardMe) {{
-          simCardMe.classList.remove("empty");
-          simCardMe.classList.add("selected");
-          const plusEl = simCardMe.querySelector(".sim-slot-plus");
-          if (plusEl) plusEl.style.display = "none";
-        }}
-        if (simImgMe) {{
-          simImgMe.src = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{c.id}}.png`;
-          simImgMe.style.display = "block";
-        }}
-        if (simNameMe) simNameMe.textContent = c.name;
-        if (simRoleMe) simRoleMe.textContent = c.roles ? c.roles.join(" / ") : "";
-
-        const dmgBadgeMe = document.getElementById("simDamageBadgeMe");
-        const detailBtnMe = document.getElementById("simDetailBtnMe");
-        if (dmgBadgeMe && dp.badge_text) {{
-          dmgBadgeMe.textContent = dp.badge_text;
-          dmgBadgeMe.className = `damage-badge ${{dp.badge_class || "badge-ad"}}`;
-          dmgBadgeMe.style.display = "inline-flex";
-        }}
-        if (detailBtnMe) detailBtnMe.style.display = "inline-flex";
-      }} else {{
-        simOppChampId = champId;
-        if (simCardOpp) {{
-          simCardOpp.classList.remove("empty");
-          simCardOpp.classList.add("selected");
-          const plusEl = simCardOpp.querySelector(".sim-slot-plus");
-          if (plusEl) plusEl.style.display = "none";
-        }}
-        if (simImgOpp) {{
-          simImgOpp.src = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/champion/${{c.id}}.png`;
-          simImgOpp.style.display = "block";
-        }}
-        if (simNameOpp) simNameOpp.textContent = c.name;
-        if (simRoleOpp) simRoleOpp.textContent = c.roles ? c.roles.join(" / ") : "";
-
-        const dmgBadgeOpp = document.getElementById("simDamageBadgeOpp");
-        const detailBtnOpp = document.getElementById("simDetailBtnOpp");
-        if (dmgBadgeOpp && dp.badge_text) {{
-          dmgBadgeOpp.textContent = dp.badge_text;
-          dmgBadgeOpp.className = `damage-badge ${{dp.badge_class || "badge-ad"}}`;
-          dmgBadgeOpp.style.display = "inline-flex";
-        }}
-        if (detailBtnOpp) detailBtnOpp.style.display = "inline-flex";
-      }}
-
-      if (history.state && history.state.modal === 'sim_picker') history.back();
-      else closeSimPicker();
-
-      updateSimAnalysis();
-    }}
-
-    // 対面シミュレーターから選んだチャンプの詳細ページへ飛ぶ関数 (濱田くんの重要指定！)
-    function viewSimChampDetail(e, who) {{
-      if (e) e.stopPropagation();
-      const cid = (who === 'me') ? simMyChampId : simOppChampId;
-      if (cid && CHAMPIONS[cid]) {{
-        openDetail(cid);
-      }}
-    }}
-
-    if (simSearchInput) {{
-      simSearchInput.addEventListener("input", (e) => {{
-        simPickerSearch = e.target.value;
-        renderSimPickerGrid();
-      }});
-    }}
-
-    document.querySelectorAll(".sim-role-btn").forEach(btn => {{
-      btn.addEventListener("click", () => {{
-        document.querySelectorAll(".sim-role-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        simPickerRole = btn.getAttribute("data-sim-role");
-        renderSimPickerGrid();
-      }});
-    }});
-
-    // ピッカー用AAタイプ＆属性絞り込みボタンイベント
-    document.querySelectorAll(".sim-chip-btn").forEach(btn => {{
-      btn.addEventListener("click", () => {{
-        const filterType = btn.getAttribute("data-sim-filter");
-        const val = btn.getAttribute("data-val");
-        const parentGroup = btn.closest(".filter-group");
-        if (parentGroup) {{
-          parentGroup.querySelectorAll(".sim-chip-btn").forEach(b => b.classList.remove("active"));
-        }}
-        btn.classList.add("active");
-
-        if (filterType === "attack") {{
-          simPickerAttack = val;
-        }} else if (filterType === "damage") {{
-          simPickerDamage = val;
-        }}
-        renderSimPickerGrid();
-      }});
-    }});
-
-    let simSelectedLane = "AUTO";
-    document.querySelectorAll(".sim-lane-tab").forEach(btn => {{
-      btn.addEventListener("click", () => {{
-        document.querySelectorAll(".sim-lane-tab").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        simSelectedLane = btn.getAttribute("data-lane") || "AUTO";
-        updateSimAnalysis();
-      }});
-    }});
-
-    function updateSimAnalysis() {{
-      if (!simMyChampId || !simOppChampId) {{
-        if (simEmptyPrompt) simEmptyPrompt.style.display = "block";
-        if (simResultArea) simResultArea.style.display = "none";
-        return;
-      }}
-
-      if (simEmptyPrompt) simEmptyPrompt.style.display = "none";
-      if (simResultArea) simResultArea.style.display = "block";
-
-      const me = CHAMPIONS[simMyChampId];
-      const opp = CHAMPIONS[simOppChampId];
-
-      // 対象レーンの決定: AUTO時は自分と相手の共通ロール優先、なければ自分の第1ロール
-      let targetLane = simSelectedLane;
-      if (targetLane === "AUTO") {{
-        const meRoles = me.roles || ["TOP"];
-        const oppRoles = opp.roles || [];
-        const commonRole = meRoles.find(r => oppRoles.includes(r));
-        targetLane = commonRole || meRoles[0] || "TOP";
-      }}
-
-      // (自分, 相手, レーン, パッチ) に一致する実測データのみを検索（別レーン統計は混同しない）
-      let measuredData = null;
-      if (me.matchup_matrix_by_role && me.matchup_matrix_by_role[targetLane] && me.matchup_matrix_by_role[targetLane][opp.id]) {{
-        const candidate = me.matchup_matrix_by_role[targetLane][opp.id];
-        if (candidate.is_estimated === false && candidate.role === targetLane) {{
-          measuredData = candidate;
-        }}
-      }}
-      if (!measuredData && me.role_data && me.role_data[targetLane] && me.role_data[targetLane].matchups) {{
-        const rm = me.role_data[targetLane].matchups;
-        const favHit = (rm.favorable || []).find(m => (m.champion_id === opp.id || m.name === opp.name) && (!m.role || m.role === targetLane));
-        const unfavHit = (rm.unfavorable || []).find(m => (m.champion_id === opp.id || m.name === opp.name) && (!m.role || m.role === targetLane));
-        if (favHit) measuredData = Object.assign({{ advantage: "fav", is_estimated: false, role: targetLane }}, favHit);
-        else if (unfavHit) measuredData = Object.assign({{ advantage: "unfav", is_estimated: false, role: targetLane }}, unfavHit);
-      }}
-
-      const evalData = measuredData || computeHeuristicMatchup(me, opp, targetLane);
-      const isEst = evalData.is_estimated !== false;
-
-      let advClass = "sim-adv-even";
-      const advCode = (evalData.advantage || "").toLowerCase();
-      if (advCode === "fav" || advCode === "favorable") advClass = "sim-adv-fav";
-      else if (advCode === "unfav" || advCode === "unfavorable") advClass = "sim-adv-unfav";
-
-      const advText = evalData.advantage_label || (isEst ? "特性推定" : "実測統計");
-      const reasonEvidence = evalData.reason_evidence;
-      let advReason = reasonEvidence?.confirmation === "source_confirmed"
-        && reasonEvidence.champion_id === me.id && reasonEvidence.opponent_id === opp.id
-        && reasonEvidence.role === targetLane
-        ? `${{reasonEvidence.reason}}（文献上の相性解説・現在の勝率の因果関係は未検証。出典: ${{reasonEvidence.source_url}}）`
-        : "出典を確認できた相性解説はありません。";
-      if (advReason.includes(" | ")) {{
-        advReason = advReason.split(" | ").slice(1).join(" | ");
-      }}
-
-      const simMatchupSourceTag = document.getElementById("simMatchupSourceTag");
-      const simAdvantageMeta = document.getElementById("simAdvantageMeta");
-
-      if (simMatchupSourceTag) {{
-        if (evalData.source === "mirror") {{
-          simMatchupSourceTag.textContent = `📊 判定区分: ミラーマッチ (${{targetLane}})`;
-        }} else if (!isEst) {{
-          simMatchupSourceTag.textContent = `📊 判定区分: 実測統計データ (${{targetLane}}レーン専用)`;
-        }} else {{
-          simMatchupSourceTag.textContent = `🔍 判定区分: ヒューリスティック特性推定 (${{targetLane}}レーン実測統計なし)`;
-        }}
-      }}
-
-      if (simAdvantageBadge) {{
-        simAdvantageBadge.className = `sim-adv-badge ${{advClass}}`;
-        simAdvantageBadge.textContent = advText;
-      }}
-      if (simAdvantageDesc) simAdvantageDesc.textContent = advReason;
-
-      if (simAdvantageMeta) {{
-        if (evalData.source === "mirror") {{
-          simAdvantageMeta.textContent = `対象レーン: ${{targetLane}} | パッチ: ${{evalData.patch || DEFAULT_PATCH}}`;
-        }} else if (!isEst) {{
-          simAdvantageMeta.textContent =
-            `【実測データ情報】参照元: ${{evalData.source || "opgg_stats"}} | レーン: ${{evalData.role || targetLane}} | ` +
-            `地域: ${{evalData.region || "Global"}} | ランク帯: ${{evalData.tier || "Emerald+"}} | ` +
-            `パッチ: ${{evalData.patch || DEFAULT_PATCH}} | 取得時期: ${{evalData.fetched_at || "2026-10"}} | ` +
-            `区分: ${{evalData.sample_note || "OP.GG ロール別カウンター統計"}}`;
-        }} else {{
-          const factorsStr = (evalData.estimation_factors || []).join(" / ") || "基礎ステータス均衡";
-          simAdvantageMeta.textContent =
-            `【推定の要因】${{factorsStr}} ｜ 【推定の限界】${{evalData.estimation_limitation || "基礎特性からの推定であり実戦統計勝率ではありません。"}}`;
-        }}
-      }}
-
-      // 2. 相手のサステイン警告 (escapeHtml による安全なレンダリング)
-      if (simSustainWarning) {{
-        if (opp.sustain_info && opp.sustain_info.has_sustain) {{
-          simSustainWarning.style.display = "block";
-          simSustainWarning.innerHTML = `🩸 <strong>【相手は高回復・サステイン持ち！】</strong> ${{escapeHtml(opp.name)}} は強力な回復能力を誇ります。${{escapeHtml(opp.sustain_info.reason || "")}} 早期リコール時に必ず「重傷アイテム（回復阻害）」を購入してください。`;
-        }} else {{
-          simSustainWarning.style.display = "none";
-        }}
-      }}
-
-      // レーン戦注意点 ＆ ダメージ属性対策 (escapeHtml 徹底)
-      if (simLaningTips) {{
-        const oppWeaknesses = escapeHtml((opp.overview?.weaknesses || []).join("、") || "主要スキルのクールダウン中が最大の仕掛けどころです。");
-        const oppDp = opp.damage_profile || {{}};
-        let dualNote = "";
-        if (oppDp.has_dual_build) {{
-          dualNote = `<div style="margin-top:6px; padding:6px 10px; background:rgba(245, 158, 11, 0.12); border-left:3px solid #f59e0b; border-radius:4px; color:#fde68a;">⚠️ <strong>【対面注意・AD/AP両型あり】</strong> ${{escapeHtml(oppDp.dual_build_desc || "")}}</div>`;
-        }}
-        const roleLaning = me.role_data?.[targetLane]?.gameplay_notes?.laning || me.gameplay_notes?.laning || "相手のスキルを躱してからトレードに入りましょう。";
-        simLaningTips.innerHTML = `
-          <div style="margin-bottom: 6px;"><strong>【相手の属性 ＆ 対策】</strong> 主ダメージ: <span class="damage-badge ${{escapeHtml(oppDp.badge_class || 'badge-ad')}}">${{escapeHtml(oppDp.badge_text || 'AD')}} (${{escapeHtml(oppDp.label || '')}})</span> ➔ <strong>${{escapeHtml(oppDp.counter_defense || '防御アイテムを選択')}}</strong></div>
-          ${{dualNote}}
-          <div style="margin-bottom: 6px; margin-top: 6px;"><strong>【相手の弱み・突くべき隙】</strong> ${{oppWeaknesses}}</div>
-          <div><strong>【あなたの立ち回り指針 (${{escapeHtml(targetLane)}})】</strong> ${{escapeHtml(roleLaning)}}</div>
-        `;
-      }}
-
-      // 3. 積むべき対策 ＆ おすすめアイテムの選定 (複数アイテム)
-      if (simItemList) {{
-        const recommendedItems = [];
-        const seenIds = new Set();
-
-        function findItemId(name) {{
-          if (!name) return null;
-          for (const [id, it] of Object.entries(ITEMS)) {{
-            if (it.name === name) return id;
-          }}
-          return null;
-        }}
-
-        function addItem(id, name, tag, reason) {{
-          if (!id && name) {{
-            id = findItemId(name);
-          }}
-          if (id && !seenIds.has(id)) {{
-            seenIds.add(id);
-            recommendedItems.push({{ id, name: ITEMS[id]?.name || name, tag, reason }});
-          }}
-        }}
-
-        const oppRoles = opp.roles || [];
-        const oppClasses = opp.classes || opp.tags || [];
-        const oppResource = opp.resource || "";
-        const myRoles = me.roles || [];
-        const myClasses = me.classes || me.tags || [];
-        const oppDp = opp.damage_profile || {{}};
-        const isOppAP = oppDp.primary_type === "AP" || (oppDp.primary_type === "TANK" && !["DrMundo", "KSante", "Poppy", "Sion", "Skarner"].includes(opp.id));
-        const isOppDual = oppDp.has_dual_build;
-
-        // ① 対面属性・サステイン対策特化
-        if (opp.sustain_info?.has_sustain) {{
-          if (myClasses.includes("Mage") || (me.resource && me.resource.includes("マナ") && !myClasses.includes("Marksman"))) {{
-            addItem("3916", "忘却のオーブ", "対面重傷", "回復阻害(AP)");
-          }} else if (myClasses.includes("Tank")) {{
-            addItem("3076", "ブランブル ベスト", "対面重傷", "回復阻害(AR)");
-          }} else {{
-            addItem("3123", "エクスキューショナー コーリング", "対面重傷", "回復阻害(AD)");
-          }}
-        }}
-
-        // 対面ダメージ属性対策（靴＋防具）
-        if (isOppDual) {{
-          // 両型持ちの場合: 相手の型に合わせたAR/MR両方の選択肢を提示
-          addItem("3047", "プレート スチールキャップ", "対AD型", "相手がADビルド時の通常攻撃低減");
-          addItem("3111", "マーキュリー ブーツ", "対AP型", "相手がAPビルド時の魔法耐性&CC低減");
-          if (myClasses.includes("Tank") || myClasses.includes("Fighter")) {{
-            addItem("2504", "ケイニック ルーケルン", "対AP防具", "相手がAPビルド時の魔法シールド");
-          }}
-        }} else if (isOppAP) {{
-          addItem("3111", "マーキュリー ブーツ", "対AP靴", "魔法耐性 ＆ 行動妨害低減");
-          if (myClasses.includes("Tank") || myClasses.includes("Fighter")) {{
-            addItem("2504", "ケイニック ルーケルン", "対AP防具", "魔法シールド ＆ 高MR");
-          }} else if (myClasses.includes("Assassin") || myClasses.includes("Marksman")) {{
-            addItem("3156", "マルモティウスの胃袋", "対AP火力", "魔法シールド ＆ 攻撃力");
-          }}
-        }} else {{
-          addItem("3047", "プレート スチールキャップ", "対AD靴", "通常攻撃被ダメ12%低減");
-          if (myClasses.includes("Tank")) {{
-            addItem("3143", "ランデュイン オーメン", "対AD防具", "クリティカル＆通常攻撃耐性");
-          }} else if (myClasses.includes("Fighter")) {{
-            addItem("6333", "デス ダンス", "対AD耐久", "被ダメ遅延 ＆ キル時回復");
-          }}
-        }}
-
-        // 相手が硬いタンクの場合の貫通アイテム
-        if (oppClasses.includes("Tank") || ["Sion", "Malphite", "ChoGath", "Ornn", "DrMundo", "Shen", "Rammus", "TahmKench"].includes(opp.id)) {{
-          if (myClasses.includes("Mage")) {{
-            addItem("3135", "ヴォイド スタッフ", "対タンク貫通", "40% 魔法防御貫通");
-          }} else {{
-            addItem("3071", "ブラック クリーバー", "対タンク破甲", "物理防御破壊 ＆ 加速");
-          }}
-        }}
-
-        // ② あなたの主戦力・中核コアアイテム (採用率・勝率重視)
-        const myCoreBuild = me.core_build || (me.build_patterns && me.build_patterns[0]?.core) || [];
-        myCoreBuild.forEach(itemName => {{
-          if (recommendedItems.length < 5) {{
-            addItem(null, itemName, "主戦力コア", "対面戦を制する中核コア");
-          }}
-        }});
-
-        // ③ 後半・交戦の保険・生存アイテム
-        if (recommendedItems.length < 6) {{
-          if (myClasses.includes("Fighter") || myClasses.includes("Tank")) {{
-            addItem("3053", "ステラックの篭手", "交戦生存", "瀕死時巨大シールド＆耐性");
-          }} else if (myClasses.includes("Mage")) {{
-            addItem("3157", "ゾーニャの砂時計", "緊急無敵", "2.5秒無敵でバースト回避");
-          }} else if (myClasses.includes("Marksman") || myClasses.includes("Assassin")) {{
-            addItem("3026", "ガーディアン エンジェル", "復活保険", "死亡時HP50%で復活");
-          }}
-        }}
-
-        simItemList.innerHTML = recommendedItems.slice(0, 6).map(it => {{
-          const itemImg = `https://ddragon.leagueoflegends.com/cdn/${{DEFAULT_PATCH}}/img/item/${{escapeHtml(it.id)}}.png`;
-          return `
-            <div class="sim-item-card clickable-item" data-item-id="${{escapeHtml(it.id)}}" title="タップして性能詳細を表示">
-              <img class="sim-item-img" src="${{itemImg}}" alt="${{escapeHtml(it.name)}}" onerror="this.src='icon.png';">
-              <div class="sim-item-info">
-                <div class="sim-item-top">
-                  <span class="sim-item-tag">${{escapeHtml(it.tag)}}</span>
-                  <span class="sim-item-name">${{escapeHtml(it.name)}}</span>
-                </div>
-                <div class="sim-item-reason">${{escapeHtml(it.reason)}}</div>
-              </div>
-            </div>
-          `;
-        }}).join("");
-
-        simItemList.querySelectorAll(".clickable-item").forEach(el => {{
-          el.onclick = (e) => {{
-            e.stopPropagation();
-            const iid = el.getAttribute("data-item-id");
-            if (iid && ITEMS[iid]) openItemDetail(iid);
-          }};
-        }});
-      }}
-
-      // 4. 狙い目コンボ
-      if (simCombosArea) {{
-        const combos = me.combos || [];
-        simCombosArea.innerHTML = combos.map(cb => `
-          <div class="combo-card">
-            <div class="combo-name">🥊 ${{escapeHtml(cb.name)}}</div>
-            <div class="combo-recipe">${{escapeHtml(cb.recipe)}}</div>
-            <div class="combo-desc">${{escapeHtml(cb.desc)}}</div>
-          </div>
-        `).join("");
-      }}
-    }}
-
     // スマホのジェスチャースワイプ「戻る」イベント対応（アプリ終了防止・モーダル多重スタック制御）
     window.addEventListener("popstate", (e) => {{
-      if (simPickerModal && simPickerModal.classList.contains("open")) {{
-        closeSimPicker();
-        return;
-      }}
       if (itemDetailModalEl && itemDetailModalEl.classList.contains("open")) {{
         closeItemDetailModal();
         return;
@@ -4373,11 +3389,6 @@ def build():
     // ESCキー対応（モーダル多重スタック制御）
     window.addEventListener("keydown", (e) => {{
       if (e.key === "Escape") {{
-        if (simPickerModal && simPickerModal.classList.contains("open")) {{
-          if (history.state && history.state.modal === 'sim_picker') history.back();
-          else closeSimPicker();
-          return;
-        }}
         if (itemDetailModalEl && itemDetailModalEl.classList.contains("open")) {{
           if (history.state && history.state.modal === 'item_detail') history.back();
           else closeItemDetailModal();
@@ -4391,7 +3402,6 @@ def build():
         if (changelogModalEl && changelogModalEl.classList.contains("open")) {{
           if (history.state && history.state.modal === 'changelog') history.back();
           else closeChangelogModal();
-          return;
         }}
       }}
     }});
@@ -4400,17 +3410,16 @@ def build():
     const champControlsEl = document.getElementById("champControls");
     const viewChampsEl = document.getElementById("viewChampions");
     const viewItemsEl = document.getElementById("viewItems");
-    const viewSimEl = document.getElementById("viewSimulator");
     const viewPicksEl = document.getElementById("viewPicks");
 
     // ユーザー提供のガレン対面表と、暫定の補足候補。勝率統計ではない。
     const pickRows = [
-      ["アカリ","ガレン","耐えて短期トレード"],["アトロックス","ガレン","Qの外側を避ける"],["アンベッサ","ガレン","ダッシュ後を狙う"],["イラオイ","ガレン","Eを避けて短期戦"],["ウラジミール","ガレン","序盤に圧力"],["オラフ","ガレン","R中の長期戦を避ける"],["カシオペア","ガレン","接近が難しいので慎重に"],["ガリオ","ガレン","AP耐久型に物理ダメージ"],["ガングプランク","ガレン","樽の処理が重要"],["クレッド","ガレン","乗馬中の長期戦を避ける"],["グウェン","ガレン","Q中央を回避"],["グラガス","ガレン","回復と妨害に注意"],["ケイル","ガレン","序盤に主導権"],["ケネン","ガレン","無理な接近を避ける"],["コグ＝マウ","ガレン","珍しいTOP、序盤に圧力"],["ザーヘン","ガレン","長期戦を避ける"],["シンジド","ガレン","追いかけすぎない"],["スウェイン","ガレン","長期戦を避ける"],["ダリウス","ガレン","不利ならBANを検討"],["トランドル","ガレン","長い殴り合いを避ける"],["ニーコ","ガレン","分身とEに注意"],["ヘイマーディンガー","ガレン","タレットに無理に突っ込まない"],["ボリベア","ガレン","2回目のWを受けない"],["ランブル","ガレン","長い炎上トレードを避ける"],["リヴェン","ガレン","短期トレードで対応"],["リサンドラ","ガレン","無理なダイブをしない"],["リリア","ガレン","移動速度と継続ダメージに注意"],["ワーウィック","ガレン","低HP時の回復に注意"],
+      ["アカリ","ガレン","耐えて短期トレード"],["アトロックス","ガレン","Qの外側を避ける"],["アンベッサ","ガレン","ダッシュ後を狙う"],["イラオイ","モルデカイザー","Eを避け、触手の位置を意識して戦う"],["ウラジミール","ガレン","序盤に圧力"],["オラフ","ガレン","R中の長期戦を避ける"],["カシオペア","ガレン","接近が難しいので慎重に"],["ガリオ","ガレン","AP耐久型に物理ダメージ"],["ガングプランク","ガレン","樽の処理が重要"],["クレッド","ガレン","乗馬中の長期戦を避ける"],["グウェン","ガレン","Q中央を回避"],["グラガス","ガレン","回復と妨害に注意"],["ケイル","モルデカイザー","序盤に主導権。射程とRに注意"],["ケネン","ガレン","無理な接近を避ける"],["コグ＝マウ","ガレン","珍しいTOP、序盤に圧力"],["ザーヘン","ガレン","長期戦を避ける"],["シンジド","ガレン","追いかけすぎない"],["スウェイン","ガレン","長期戦を避ける"],["ダリウス","ガレン","不利ならBANを検討"],["トランドル","ガレン","長い殴り合いを避ける"],["ニーコ","ガレン","分身とEに注意"],["ヘイマーディンガー","ガレン","タレットに無理に突っ込まない"],["ボリベア","ガレン","2回目のWを受けない"],["ランブル","ガレン","長い炎上トレードを避ける"],["リヴェン","ガレン","短期トレードで対応"],["リサンドラ","ガレン","無理なダイブをしない"],["リリア","ガレン","移動速度と継続ダメージに注意"],["ワーウィック","ガレン","低HP時の回復に注意"],
       ["マルファイト","モルデカイザー","対タンク枠。孤立Qを狙う"],["オーン","モルデカイザー","タンク対策。鍛冶神の呼び声に注意"],["サイオン","モルデカイザー","継続魔法ダメージ。Qの範囲から出る"],["チョ＝ガス","モルデカイザー","タンク対策。QとRに注意"],["タム・ケンチ","モルデカイザー","長期戦と割合ダメージを意識"],
       ["ウディア","モルデカイザー","継続戦闘を意識"],["カ・サンテ","モルデカイザー","AP継続ダメージを活用"],["ガレン","モルデカイザー","長期戦で優位を狙う"],["シェン","モルデカイザー","Rで相手のRによる離脱を妨害"],["セト","モルデカイザー","W中央を回避"],["ティーモ","モルデカイザー","Qのブラインドを受けてもスキルで戦える"],["ドクター・ムンド","モルデカイザー","パッシブによる行動妨害への耐性に注意"],["ナサス","モルデカイザー","序盤にスタックを妨害"],["ポッピー","モルデカイザー","AP継続ダメージを活用"],["ヨリック","モルデカイザー","メイデンとグールの処理に注意"],
       ["トリンダメア","マルファイト","通常攻撃対策。R中の殴り合いを避ける"],["ヤスオ","マルファイト","対AD通常攻撃。Eの攻撃速度低下を活用"],["ヨネ","マルファイト","通常攻撃主体への候補。魔法ダメージとEの戻り位置に注意"],["クイン","マルファイト","対ADレンジ。R習得後に反撃"],["ヴェイン","マルファイト","対ADレンジ。Wの確定ダメージに注意"],["ジェイス","マルファイト","対ADレンジ。遠隔攻撃を受けすぎない"],
       ["アーゴット","マルファイト","Eで攻撃速度を下げる"],["アッシュ","マルファイト","対ADレンジ"],["ジャックス","マルファイト","Eの攻撃速度低下を活用。魔法ダメージに注意"],["イレリア","マルファイト","攻撃速度低下を活用"],["ウーコン","マルファイト","物理ダメージ対策"],["カミール","マルファイト","対ADだが確定ダメージに注意"],["ジャーヴァンIV","マルファイト","対AD。防御低下に注意"],["ナー","マルファイト","対ADレンジ。メガナーに注意"],["ノクターン","マルファイト","対AD。スペルシールドに注意"],["パンテオン","マルファイト","対AD。序盤は慎重に"],["フィオラ","マルファイト","Wと確定ダメージに注意"],["ブライアー","マルファイト","通常攻撃主体。回復に注意"],["レネクトン","マルファイト","序盤のバーストを耐える"],["レク＝サイ","マルファイト","対AD。確定ダメージに注意"],
-      ["モルデカイザー","オラフ","習得後の候補。RでモルデカイザーのRを防げるが、長期戦は体力と装備を確認"]
+      ["モルデカイザー","ガレン","使い慣れたガレンで対応。長期戦を避け、短期トレードを意識"]
     ];
     let pickFilter = "すべて";
     function renderPickGuide() {{
@@ -4425,7 +3434,7 @@ def build():
         const card = document.createElement("div"); card.className = "pick-row";
         const title = document.createElement("strong"); title.textContent = row[0] + " → ";
         const choice = document.createElement("span");
-        const choiceClasses = {{ "ガレン": "garen", "モルデカイザー": "mordekaiser", "マルファイト": "malphite", "オラフ": "olaf" }};
+        const choiceClasses = {{ "ガレン": "garen", "モルデカイザー": "mordekaiser", "マルファイト": "malphite" }};
         choice.className = "pick-choice-" + choiceClasses[row[1]]; choice.textContent = row[1];
         title.append(choice);
         const reason = document.createElement("p"); reason.textContent = row[2];
@@ -4450,18 +3459,15 @@ def build():
         if (target === "champions") {{
           viewChampsEl.style.display = "block";
           viewItemsEl.style.display = "none";
-          viewSimEl.style.display = "none";
           if (champControlsEl) champControlsEl.style.display = "flex";
         }} else if (target === "items") {{
           viewChampsEl.style.display = "none";
           viewItemsEl.style.display = "block";
-          viewSimEl.style.display = "none";
           if (champControlsEl) champControlsEl.style.display = "none";
           renderItemsList();
-        }} else if (target === "simulator" || target === "picks") {{
+        }} else if (target === "picks") {{
           viewChampsEl.style.display = "none";
           viewItemsEl.style.display = "none";
-          viewSimEl.style.display = target === "simulator" ? "block" : "none";
           if (champControlsEl) champControlsEl.style.display = "none";
         }}
       }});

@@ -255,8 +255,8 @@ def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_ver
             entry["reason"] += "（統計的に有利）"
             fav.append(entry)
 
-    result["matchups"]["unfavorable"] = unfav[:3]
-    result["matchups"]["favorable"] = fav[:3]
+    result["matchups"]["unfavorable"] = sorted(unfav, key=lambda m: m["winrate_num"])[:7]
+    result["matchups"]["favorable"] = sorted(fav, key=lambda m: m["winrate_num"], reverse=True)[:7]
 
     return result
 
