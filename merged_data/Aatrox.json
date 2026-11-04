@@ -35,7 +35,7 @@
     {
       "slot": "Passive",
       "name": "死兆の構え",
-      "description": "一定時間ごとに、次の通常攻撃が対象の最大体力に応じた追加<magicDamage>魔法ダメージ</magicDamage>を与え、同量の体力を回復する。 ",
+      "description": "一定時間ごとに、次の通常攻撃が対象の最大体力に応じた追加魔法ダメージを与え、同量の体力を回復する。",
       "image": "Aatrox_Passive.png"
     }
   ],
@@ -445,22 +445,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "ボーンアーマー",
         "生気付与"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・レーン戦】Qの先端（スイートスポット）を当てる距離感を常に維持。Q1先端ノックアップからWを撒き、逃げる相手をEダッシュの角度調整でQ2・Q3で捉える。パッシブAAの割合ダメージと回復で体力差をつける。",
-    "teamfight": "【中終盤・集団戦】Rを発動して攻撃力と回復量を爆発させ、前線からなだれ込む。敵をキルまたはアシストするたびにRの持続時間が延長されるため、常に暴れ回って回復し続ける。",
-    "key_tips": "【スキルの吐きどころ】Eは単体で使わず、必ずQの詠唱モーション中に発動して「Qの落下位置を相手のステップ先にずらす」ために使うのが最重要。"
+    "laning": "Qの先端（スイートスポット）を当てる距離感を常に維持。Q1先端ノックアップからWを撒き、逃げる相手をEダッシュの角度調整でQ2・Q3で捉える。パッシブAAの割合ダメージと回復で体力差をつける。",
+    "teamfight": "Rを発動して攻撃力と回復量を爆発させ、前線からなだれ込む。敵をキルまたはアシストするたびにRの持続時間が延長されるため、常に暴れ回って回復し続ける。",
+    "key_tips": "Eは単体で使わず、必ずQの詠唱モーション中に発動して「Qの落下位置を相手のステップ先にずらす」ために使うのが最重要。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -481,9 +481,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】Qの先端（スイートスポット）を当てる距離感を常に維持。Q1先端ノックアップからWを撒き、逃げる相手をEダッシュの角度調整でQ2・Q3で捉える。パッシブAAの割合ダメージと回復で体力差をつける。",
-        "teamfight": "【中終盤・集団戦】Rを発動して攻撃力と回復量を爆発させ、前線からなだれ込む。敵をキルまたはアシストするたびにRの持続時間が延長されるため、常に暴れ回って回復し続ける。",
-        "key_tips": "【スキルの吐きどころ】Eは単体で使わず、必ずQの詠唱モーション中に発動して「Qの落下位置を相手のステップ先にずらす」ために使うのが最重要。"
+        "laning": "Qの先端（スイートスポット）を当てる距離感を常に維持。Q1先端ノックアップからWを撒き、逃げる相手をEダッシュの角度調整でQ2・Q3で捉える。パッシブAAの割合ダメージと回復で体力差をつける。",
+        "teamfight": "Rを発動して攻撃力と回復量を爆発させ、前線からなだれ込む。敵をキルまたはアシストするたびにRの持続時間が延長されるため、常に暴れ回って回復し続ける。",
+        "key_tips": "Eは単体で使わず、必ずQの詠唱モーション中に発動して「Qの落下位置を相手のステップ先にずらす」ために使うのが最重要。"
       },
       "runes": {
         "primary": {
@@ -497,16 +497,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "ボーンアーマー",
             "生気付与"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -819,8 +819,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "赤月の刃",
             "サンダード スカイ",
@@ -852,8 +854,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -968,6 +989,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:22+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/aatrox/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/aatrox/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "JUG": {
@@ -979,9 +1014,9 @@
       "skill_order": "Q > E > W",
       "role_note": "高速なジャングルキャンプ巡回、ガンクによるレーン介入、ドラゴン・ヘラルドのオブジェクト管理を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】Qの先端（スイートスポット）を当てる距離感を常に維持。Q1先端ノックアップからWを撒き、逃げる相手をEダッシュの角度調整でQ2・Q3で捉える。パッシブAAの割合ダメージと回復で体力差をつける。",
-        "teamfight": "【中終盤・集団戦】Rを発動して攻撃力と回復量を爆発させ、前線からなだれ込む。敵をキルまたはアシストするたびにRの持続時間が延長されるため、常に暴れ回って回復し続ける。",
-        "key_tips": "【スキルの吐きどころ】Eは単体で使わず、必ずQの詠唱モーション中に発動して「Qの落下位置を相手のステップ先にずらす」ために使うのが最重要。"
+        "laning": "Qの先端（スイートスポット）を当てる距離感を常に維持。Q1先端ノックアップからWを撒き、逃げる相手をEダッシュの角度調整でQ2・Q3で捉える。パッシブAAの割合ダメージと回復で体力差をつける。",
+        "teamfight": "Rを発動して攻撃力と回復量を爆発させ、前線からなだれ込む。敵をキルまたはアシストするたびにRの持続時間が延長されるため、常に暴れ回って回復し続ける。",
+        "key_tips": "Eは単体で使わず、必ずQの詠唱モーション中に発動して「Qの落下位置を相手のステップ先にずらす」ために使うのが最重要。"
       },
       "runes": {
         "primary": {
@@ -995,16 +1030,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "宇宙の英知"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1295,8 +1330,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ヒュブリス",
             "サンダード スカイ",
@@ -1323,13 +1360,27 @@
             }
           ],
           "starter": [
-            "スコーチクロウの幼体",
-            "体力ポーション"
+            "スコーチクロウの幼体"
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1101",
+              "name": "スコーチクロウの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1398,10 +1449,6 @@
           {
             "item_id": "1101",
             "name": "スコーチクロウの幼体"
-          },
-          {
-            "item_id": "2003",
-            "name": "体力ポーション"
           }
         ],
         "boots": [
@@ -1444,6 +1491,20 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:22+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/aatrox/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/aatrox/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1451,6 +1512,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・TOPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "赤月の刃",
         "サンダード スカイ",
@@ -1482,8 +1545,27 @@
       ],
       "boots": "プレート スチールキャップ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1055",
+          "name": "ドラン ブレード"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -2525,5 +2607,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/aatrox/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/aatrox/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "ヴォイドとの戦いの果てに堕落した超越者「ダーキン」の大将軍。愛用の剣に封印されたが、復活を遂げて世界の終焉を目論む 高い回復能力とジャガーノートとしては高めの機動力が持ち味で、最大3連続のAoEノックアップを放つQも強烈無比 見た目に違わぬ",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Aatrox",
+    "source_patch": "未検証"
   }
 }

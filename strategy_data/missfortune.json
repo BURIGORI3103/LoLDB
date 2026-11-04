@@ -310,16 +310,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "魔法の靴",
         "ビスケットデリバリー"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -657,16 +657,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "ビスケットデリバリー"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -675,7 +675,97 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:54+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/missfortune/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/missfortune/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ブラッドサースター",
+            "コレクター",
+            "インフィニティ エッジ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3072",
+              "name": "ブラッドサースター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6676",
+              "name": "コレクター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3031",
+              "name": "インフィニティ エッジ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン ブレード",
+            "体力ポーション"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/missfortune/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/missfortune/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

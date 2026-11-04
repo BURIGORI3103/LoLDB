@@ -422,22 +422,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "凱旋",
         "レジェンド: 迅速"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Health Scaling",
-      "Health Scaling"
+      "攻撃速度",
+      "スケーリング体力",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ジャングル巡回＆ガンク】初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
-    "teamfight": "【中終盤・オブジェクト管理＆集団戦】スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
-    "key_tips": "【スキルの吐きどころ】ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
+    "laning": "初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
+    "teamfight": "スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
+    "key_tips": "ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
   },
   "damage_profile": {
     "primary_type": "TANK",
@@ -458,9 +458,9 @@
       "skill_order": "Q > E > W",
       "role_note": "高速なジャングルキャンプ巡回、ガンクによるレーン介入、ドラゴン・ヘラルドのオブジェクト管理を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ジャングル巡回＆ガンク】初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
-        "teamfight": "【中終盤・オブジェクト管理＆集団戦】スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
-        "key_tips": "【スキルの吐きどころ】ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
+        "laning": "初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
+        "teamfight": "スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
+        "key_tips": "ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
       },
       "runes": {
         "primary": {
@@ -474,16 +474,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "凱旋",
             "レジェンド: 迅速"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Health Scaling",
-          "Health Scaling"
+          "攻撃速度",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -774,8 +774,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[TANK] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ソーンメイル",
             "サンファイア イージス",
@@ -807,8 +809,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -923,6 +944,20 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:27:02+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/rammus/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/rammus/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -930,6 +965,8 @@
     {
       "name": "[TANK] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・JUGの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ソーンメイル",
         "サンファイア イージス",
@@ -961,8 +998,27 @@
       ],
       "boots": "プレート スチールキャップ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1102",
+          "name": "ガストウォーカーの幼体"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1698,5 +1754,24 @@
         "has_caveat": true
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/rammus/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/rammus/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "神の遣いとも超越者ともただの強靭な獣とも言われている謎に包まれた寡黙な生物。シュリーマの民からは守護獣として崇められている ころころ転がって体当たりでエンゲージし、タウントをかけて反射ダメージで敵を削るヴァンガード タンクスキルのWは割合で",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rammus",
+    "source_patch": "未検証"
   }
 }

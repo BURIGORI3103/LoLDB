@@ -311,16 +311,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "アクシオム アルカニスト",
         "追い風"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -660,16 +660,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -678,7 +678,83 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:37+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ストライドブレイカー",
+            "ファントム ダンサー",
+            "モータル リマインダー"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6631",
+              "name": "ストライドブレイカー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3046",
+              "name": "ファントム ダンサー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3033",
+              "name": "モータル リマインダー",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "バーサーカー ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "MID": {
       "patch": "16.21.1",
@@ -752,16 +828,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -770,7 +846,97 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:37+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/garen/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/garen/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ストライドブレイカー",
+            "ファントム ダンサー",
+            "モータル リマインダー"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6631",
+              "name": "ストライドブレイカー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3046",
+              "name": "ファントム ダンサー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3033",
+              "name": "モータル リマインダー",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "バーサーカー ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

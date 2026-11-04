@@ -51,7 +51,7 @@
     {
       "slot": "W",
       "name": "勇気の護り",
-      "description": "自動効果: 敵ユニットを倒すたびに物理防御と魔法防御が増加する。<br><br>発動効果: 瞬間的にシールドと行動妨害耐性を獲得し、その後は軽減率が低下するものの、ダメージ軽減効果が長い時間持続する。",
+      "description": "自動効果: 敵ユニットを倒すたびに物理防御と魔法防御が増加する。\n\n発動効果: 瞬間的にシールドと行動妨害耐性を獲得し、その後は軽減率が低下するものの、ダメージ軽減効果が長い時間持続する。",
       "cooldown": "22/19.5/17/14.5/12",
       "cost": "0",
       "image": "GarenW.png"
@@ -424,22 +424,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "アクシオム アルカニスト",
         "追い風"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・レーン戦】パッシブ（不撓不屈）の非戦闘時体力自動回復を活かし、被ダメを恐れずにショートトレード。Qのサイレンス中にEを回転させ、Wの被ダメ軽減で反撃を防ぎ、体力が減ったら下がってパッシブで回復して体力の有利を築く。",
-    "teamfight": "【中終盤・集団戦】敵の主要キャリーまたは前衛にQで突進してサイレンスを付与。Eの回転で相手集団全体の物理防御を25%削り、味方の火力を引き上げる。体力が減った敵には即座にR（確定ダメージ処刑）を叩き込む。",
-    "key_tips": "【スキルの吐きどころ】Wは敵の大技やCC（スタン・スネア）の直前に合わせることで、シールドだけでなく行動妨害耐性（ tenacity 60% ）を得て即座に行動可能になる。"
+    "laning": "パッシブ（不撓不屈）の非戦闘時体力自動回復を活かし、被ダメを恐れずにショートトレード。Qのサイレンス中にEを回転させ、Wの被ダメ軽減で反撃を防ぎ、体力が減ったら下がってパッシブで回復して体力の有利を築く。",
+    "teamfight": "敵の主要キャリーまたは前衛にQで突進してサイレンスを付与。Eの回転で相手集団全体の物理防御を25%削り、味方の火力を引き上げる。体力が減った敵には即座にR（確定ダメージ処刑）を叩き込む。",
+    "key_tips": "Wは敵の大技やCC（スタン・スネア）の直前に合わせることで、シールドだけでなく行動妨害耐性（ tenacity 60% ）を得て即座に行動可能になる。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -460,9 +460,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】パッシブ（不撓不屈）の非戦闘時体力自動回復を活かし、被ダメを恐れずにショートトレード。Qのサイレンス中にEを回転させ、Wの被ダメ軽減で反撃を防ぎ、体力が減ったら下がってパッシブで回復して体力の有利を築く。",
-        "teamfight": "【中終盤・集団戦】敵の主要キャリーまたは前衛にQで突進してサイレンスを付与。Eの回転で相手集団全体の物理防御を25%削り、味方の火力を引き上げる。体力が減った敵には即座にR（確定ダメージ処刑）を叩き込む。",
-        "key_tips": "【スキルの吐きどころ】Wは敵の大技やCC（スタン・スネア）の直前に合わせることで、シールドだけでなく行動妨害耐性（ tenacity 60% ）を得て即座に行動可能になる。"
+        "laning": "パッシブ（不撓不屈）の非戦闘時体力自動回復を活かし、被ダメを恐れずにショートトレード。Qのサイレンス中にEを回転させ、Wの被ダメ軽減で反撃を防ぎ、体力が減ったら下がってパッシブで回復して体力の有利を築く。",
+        "teamfight": "敵の主要キャリーまたは前衛にQで突進してサイレンスを付与。Eの回転で相手集団全体の物理防御を25%削り、味方の火力を引き上げる。体力が減った敵には即座にR（確定ダメージ処刑）を叩き込む。",
+        "key_tips": "Wは敵の大技やCC（スタン・スネア）の直前に合わせることで、シールドだけでなく行動妨害耐性（ tenacity 60% ）を得て即座に行動可能になる。"
       },
       "runes": {
         "primary": {
@@ -476,16 +476,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -776,8 +776,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ストライドブレイカー",
             "ファントム ダンサー",
@@ -809,8 +811,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -925,6 +946,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:37+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "MID": {
@@ -936,9 +971,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】パッシブ（不撓不屈）の非戦闘時体力自動回復を活かし、被ダメを恐れずにショートトレード。Qのサイレンス中にEを回転させ、Wの被ダメ軽減で反撃を防ぎ、体力が減ったら下がってパッシブで回復して体力の有利を築く。",
-        "teamfight": "【中終盤・集団戦】敵の主要キャリーまたは前衛にQで突進してサイレンスを付与。Eの回転で相手集団全体の物理防御を25%削り、味方の火力を引き上げる。体力が減った敵には即座にR（確定ダメージ処刑）を叩き込む。",
-        "key_tips": "【スキルの吐きどころ】Wは敵の大技やCC（スタン・スネア）の直前に合わせることで、シールドだけでなく行動妨害耐性（ tenacity 60% ）を得て即座に行動可能になる。"
+        "laning": "パッシブ（不撓不屈）の非戦闘時体力自動回復を活かし、被ダメを恐れずにショートトレード。Qのサイレンス中にEを回転させ、Wの被ダメ軽減で反撃を防ぎ、体力が減ったら下がってパッシブで回復して体力の有利を築く。",
+        "teamfight": "敵の主要キャリーまたは前衛にQで突進してサイレンスを付与。Eの回転で相手集団全体の物理防御を25%削り、味方の火力を引き上げる。体力が減った敵には即座にR（確定ダメージ処刑）を叩き込む。",
+        "key_tips": "Wは敵の大技やCC（スタン・スネア）の直前に合わせることで、シールドだけでなく行動妨害耐性（ tenacity 60% ）を得て即座に行動可能になる。"
       },
       "runes": {
         "primary": {
@@ -952,16 +987,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -970,8 +1005,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ストライドブレイカー",
             "ファントム ダンサー",
@@ -1003,8 +1040,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1119,6 +1175,20 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:37+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/garen/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/garen/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1126,6 +1196,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・TOPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ストライドブレイカー",
         "ファントム ダンサー",
@@ -1157,8 +1229,27 @@
       ],
       "boots": "バーサーカー ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1054",
+          "name": "ドラン シールド"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3006",
+          "name": "バーサーカー ブーツ"
+        },
+        {
+          "item_id": "3009",
+          "name": "スイフトネス ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1899,5 +1990,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/garen/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "デマーシアの名家・クラウンガード家の長男でラックスの実の兄 出自に相応しい高潔な騎士であり、王族のジャーヴァンIVとは少年期からの親友 マナを持たず、管理すべきリソースがHealthとCDのみというシンプルなジャガーノートで初心者にも安心",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Garen",
+    "source_patch": "未検証"
   }
 }

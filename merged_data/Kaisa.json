@@ -42,7 +42,7 @@
     {
       "slot": "Q",
       "name": "イカシアの雨",
-      "description": "多数のミサイルを乱射する。ミサイルは周囲の敵を追尾する。<br><br>共生兵器: 「イカシアの雨」がアップグレードされて、ミサイル数が増加する。",
+      "description": "多数のミサイルを乱射する。ミサイルは周囲の敵を追尾する。\n\n共生兵器: 「イカシアの雨」がアップグレードされて、ミサイル数が増加する。",
       "cooldown": "10/9/8/7/6",
       "cost": "55",
       "image": "KaisaQ.png"
@@ -50,7 +50,7 @@
     {
       "slot": "W",
       "name": "ヴォイドシーカー",
-      "description": "遠距離ミサイルを発射して、命中した敵にプラズマスタックを付与する。<br><br>共生兵器: 「ヴォイドシーカー」がアップグレードされて、付与するスタック数が増加し、チャンピオンに当たるとクールダウンが短縮されるようになる。",
+      "description": "遠距離ミサイルを発射して、命中した敵にプラズマスタックを付与する。\n\n共生兵器: 「ヴォイドシーカー」がアップグレードされて、付与するスタック数が増加し、チャンピオンに当たるとクールダウンが短縮されるようになる。",
       "cooldown": "20/18.5/17/15.5/14",
       "cost": "55/60/65/70/75",
       "image": "KaisaW.png"
@@ -58,7 +58,7 @@
     {
       "slot": "E",
       "name": "スーパーチャージ",
-      "description": "一時的に移動速度が増加し、その後攻撃速度が増加する。<br><br>共生兵器: 「スーパーチャージ」がアップグレードされて、一時的にインビジブル状態を獲得できるようになる。",
+      "description": "一時的に移動速度が増加し、その後攻撃速度が増加する。\n\n共生兵器: 「スーパーチャージ」がアップグレードされて、一時的にインビジブル状態を獲得できるようになる。",
       "cooldown": "16/14.5/13/11.5/10",
       "cost": "30",
       "image": "KaisaE.png"
@@ -423,22 +423,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "魔法の靴",
         "ビスケットデリバリー"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-    "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-    "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+    "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+    "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+    "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
   },
   "damage_profile": {
     "primary_type": "HYBRID",
@@ -459,9 +459,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -475,16 +475,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "ビスケットデリバリー"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -775,8 +775,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[HYBRID] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "クラーケン スレイヤー",
             "グインソー レイジブレード",
@@ -808,8 +810,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3008",
+              "name": "グラトナス ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -924,13 +945,29 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:43+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/kaisa/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/kaisa/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
   "build_patterns": [
     {
-      "name": "[AD] OP.GG 推奨ビルド",
+      "name": "[HYBRID] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・ADCの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "クラーケン スレイヤー",
         "グインソー レイジブレード",
@@ -962,8 +999,27 @@
       ],
       "boots": "バーサーカー ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1086",
+          "name": "ドラン ボウ"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3006",
+          "name": "バーサーカー ブーツ"
+        },
+        {
+          "item_id": "3008",
+          "name": "グラトナス ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1707,5 +1763,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/kaisa/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/kaisa/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "マルザハールにヴォイドへ落とされながらも、ヴォイドの怪物と共生して生き延びた少女 明言はされていないが、恐らくはカサディンの娘であり専用の台詞も存在する 高い機動力とハイブリッドダメージによるバースト・DPSを両立したマークスマン 特定のス",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kai%27Sa",
+    "source_patch": "未検証"
   }
 }

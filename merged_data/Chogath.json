@@ -35,7 +35,7 @@
     {
       "slot": "Passive",
       "name": "暴食",
-      "description": "敵ユニットを倒すたびに体力とマナが回復する。<br>この回復量はチョ＝ガスのレベルに応じて増加する。",
+      "description": "敵ユニットを倒すたびに体力とマナが回復する。\nこの回復量はチョ＝ガスのレベルに応じて増加する。",
       "image": "GreenTerror_TailSpike.png"
     }
   ],
@@ -424,22 +424,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "アクシオム アルカニスト",
         "追い風"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Move Speed",
-      "Health Scaling"
+      "アダプティブフォース",
+      "移動速度",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ジャングル巡回＆ガンク】初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
-    "teamfight": "【中終盤・オブジェクト管理＆集団戦】スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
-    "key_tips": "【スキルの吐きどころ】ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
+    "laning": "初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
+    "teamfight": "スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
+    "key_tips": "ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
   },
   "damage_profile": {
     "primary_type": "HYBRID",
@@ -460,9 +460,9 @@
       "skill_order": "Q > E > W",
       "role_note": "高速なジャングルキャンプ巡回、ガンクによるレーン介入、ドラゴン・ヘラルドのオブジェクト管理を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ジャングル巡回＆ガンク】初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
-        "teamfight": "【中終盤・オブジェクト管理＆集団戦】スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
-        "key_tips": "【スキルの吐きどころ】ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
+        "laning": "初手フルクリア（3:30スカトル争奪）を狙うか、レベル3での奇襲ガンクを狙うかを対面レーンのプッシュ状況に応じて判断。中立モンスターの湧き時間を管理し、無駄な移動を減らす。",
+        "teamfight": "スマイトでのドラゴン・バロン確保を最優先。視界を取り、敵キャリーへの裏回りガンクまたは味方前衛としてのエンゲージ・ピールを担当する。",
+        "key_tips": "ガンク時はCCスキルを即撃ちせず、相手のFlashやブリンクスキルを待ってから確実に合わせることでキル確率が最大化する。"
       },
       "runes": {
         "primary": {
@@ -476,16 +476,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Move Speed",
-          "Health Scaling"
+          "アダプティブフォース",
+          "移動速度",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -776,8 +776,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[HYBRID] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "心の鋼",
             "デッド マン プレート",
@@ -809,8 +811,27 @@
           ],
           "boots": "スイフトネス ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -925,6 +946,20 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:30+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "TOP": {
@@ -936,9 +971,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
-        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
-        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+        "laning": "フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+        "teamfight": "テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+        "key_tips": "対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
       },
       "runes": {
         "primary": {
@@ -952,16 +987,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Move Speed",
-          "Health Scaling"
+          "アダプティブフォース",
+          "移動速度",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1252,8 +1287,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[HYBRID] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ヘクステック ロケットベルト",
             "リフトメーカー",
@@ -1285,8 +1322,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1401,13 +1457,29 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:31+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
   "build_patterns": [
     {
-      "name": "[AD] OP.GG 推奨ビルド",
+      "name": "[HYBRID] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・JUGの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "心の鋼",
         "デッド マン プレート",
@@ -1439,8 +1511,27 @@
       ],
       "boots": "スイフトネス ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1102",
+          "name": "ガストウォーカーの幼体"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3009",
+          "name": "スイフトネス ブーツ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -2435,5 +2526,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "ヴォイドより現れた、あらゆる生命を捕食して成長してゆく怪物。見た目に反して知能は高め 強力なCCチェインにより相手を拘束、強烈なTrueダメージのUltで捕食し、自身のHealthとサイズをスケールさせる CCは当たれば強烈ながら発動から発",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Cho%27Gath",
+    "source_patch": "未検証"
   }
 }

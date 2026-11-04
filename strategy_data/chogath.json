@@ -311,16 +311,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "アクシオム アルカニスト",
         "追い風"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Move Speed",
-      "Health Scaling"
+      "アダプティブフォース",
+      "移動速度",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -659,16 +659,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Move Speed",
-          "Health Scaling"
+          "アダプティブフォース",
+          "移動速度",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -677,7 +677,83 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:30+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "心の鋼",
+            "デッド マン プレート",
+            "自然の力"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3084",
+              "name": "心の鋼",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3742",
+              "name": "デッド マン プレート",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "4401",
+              "name": "自然の力",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体",
+            "体力ポーション"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "TOP": {
       "patch": "16.21.1",
@@ -991,16 +1067,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Move Speed",
-          "Health Scaling"
+          "アダプティブフォース",
+          "移動速度",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1009,7 +1085,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:31+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/chogath/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ヘクステック ロケットベルト",
+            "リフトメーカー",
+            "デッド マン プレート"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3152",
+              "name": "ヘクステック ロケットベルト",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4633",
+              "name": "リフトメーカー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3742",
+              "name": "デッド マン プレート",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/chogath/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

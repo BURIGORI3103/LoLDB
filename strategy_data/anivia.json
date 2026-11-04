@@ -311,16 +311,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "冷静沈着",
         "最期の慈悲"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -659,16 +659,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -677,7 +677,83 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:24+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/anivia/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/anivia/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ロッド オブ エイジス",
+            "マリグナンス",
+            "ゾーニャの砂時計"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6657",
+              "name": "ロッド オブ エイジス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3118",
+              "name": "マリグナンス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3157",
+              "name": "ゾーニャの砂時計",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "TOP": {
       "patch": "16.21.1",
@@ -960,20 +1036,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6657",
             "name": "ロッド オブ エイジス",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3040",
             "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
             "description": "推奨コア"
           }
         ],
@@ -991,16 +1067,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "切り崩し"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health"
+          "攻撃速度",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "opgg_source": {
@@ -1009,7 +1085,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:25+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/anivia/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/anivia/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ロッド オブ エイジス",
+            "セラフ エンブレイス",
+            "ライアンドリーの仮面"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6657",
+              "name": "ロッド オブ エイジス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3040",
+              "name": "セラフ エンブレイス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/anivia/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/anivia/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

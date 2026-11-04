@@ -24,7 +24,7 @@ def analyze_champion_sustain(cid, cdata):
     for ab in cdata.get("abilities", []):
         all_skills.append(("Passive", ab.get("name", ""), ab.get("description", "")))
     for sp in cdata.get("spells", []):
-        all_skills.append((sp.get("id", ""), sp.get("name", ""), sp.get("description", "")))
+        all_skills.append((sp.get("slot", sp.get("id", "")), sp.get("name", ""), sp.get("description", "")))
 
     heals = []
     shields = []

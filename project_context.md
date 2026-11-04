@@ -60,3 +60,13 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 - 対面シミュレーターは実測勝率の不足が多いため廃止し、ナビゲーション・画面・専用ピッカー・分析処理を削除した。チャンピオン詳細のOP.GG統計とwiki掲載相性は継続する。
 - refresh_matchup_stats.py は既存データのパッチを明示指定したOP.GG対面専用ページを取得し、対象チャンピオン・ロール・パッチを照合する。有利は勝率の高い順、不利は低い順に各最大7体を保存し、試合数・出典URL・取得日時を保持する。50%未満を不利、50%以上を有利とする。母数不足や有利側・不利側の件数不足は推定で補わない。
 - 対面の更新は python refresh_matchup_stats.py、python build_comprehensive_matchups.py、python apply_matchup_reasons.py、python build_pwa.py の順に実行する。対面以外のビルドや手動補完を保持する。途中再開用の --reuse-cache は取得済みHTMLを明示的に再利用する場合のみ指定する。取得結果は docs/matchup_refresh_report.json に保存する。
+
+【監査修正後のデータと描画】
+
+- audit_normalization.pyを共通処理とし、ルーン所属、スキル説明、見出し、ビルドID参照を整合させる。repair_audit_data.py --patch 16.21.1はビルドとルーンだけを取得し、全件検証後に保存する。既存の対面統計は変更しない。
+- カシオペアは靴を表示しない。コアは素材と変身・専用強化を区別して完成品を抽出し、不足を推測で補わない。図鑑は通常SR用225件。正当な専用品の同名はIDと専用条件で区別する。
+- data/role_guidance_evidence.jsonで出典・参照パッチ・確認日を管理する。Lux ADC・Sion MID・Tristana MIDは追加調査済み。文章のパッチ対応未検証、取得表の掲載範囲Lv1〜15を明示する。
+- build_advanced_champion_data.pyとenrich_role_builds.pyの実行入口は既存データを保持し、確認済み補完だけを同期する。merge_data.pyも同一パッチの新しい対面取得結果と攻略補完を保持する。
+- UI生成元はbuild_pwa.pyと埋め込み用ui_helpers.js。配布HTMLだけで重複を減らし、パッシブと通常スキルを両方保持する。未使用の分割チャンピオン・アイテムJSONは生成・配布しない。
+- テキストとURLを文脈別に検証する。モーダルの履歴で対象とロールを復元し、最上位だけを操作可能にする。ピック検索は公式名・通称・英語ID・ひらがなに対応する。両用フィルターは5体を対象とする。
+- node tests/test_ui_behavior.cjsを回帰検証へ追加する。画像先読みは省データ設定・低速回線・オフラインでは停止する。

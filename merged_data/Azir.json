@@ -423,22 +423,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "ボーンアーマー",
         "超成長"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-    "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-    "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+    "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+    "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+    "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
   },
   "damage_profile": {
     "primary_type": "AP",
@@ -459,9 +459,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-        "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-        "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+        "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+        "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+        "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
       },
       "runes": {
         "primary": {
@@ -475,16 +475,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "ボーンアーマー",
             "超成長"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -775,8 +775,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ナッシャー トゥース",
             "シャドウフレイム",
@@ -808,8 +810,27 @@
           ],
           "boots": "ソーサラー シューズ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -924,6 +945,20 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:28+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/azir/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/azir/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -931,6 +966,8 @@
     {
       "name": "[AP] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・MIDの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ナッシャー トゥース",
         "シャドウフレイム",
@@ -962,8 +999,27 @@
       ],
       "boots": "ソーサラー シューズ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1056",
+          "name": "ドラン リング"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3020",
+          "name": "ソーサラー シューズ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1689,5 +1745,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/azir/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/azir/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "側近であり友でもあったゼラスに裏切られ滅びたシュリーマ帝国最後の皇帝 子孫シヴィアの危機に数千年の眠りから目覚め、失われた栄光を再び取り戻すべくシュリーマ全土に大号令をかける 呼び出した砂塵兵の攻撃でDPSを出すだけでなく、長距離ブリンクと",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Azir",
+    "source_patch": "未検証"
   }
 }

@@ -44,7 +44,7 @@
     {
       "slot": "Q",
       "name": "抜刀",
-      "description": "指定方向に突きを放ち、直線上の敵すべてにダメージを与える。<br><br>このスキルが命中するとヤスオは「つむじ風」のスタックを数秒間得る。スタックが2つたまるとヤスオは風を身にまとい、次の「抜刀」と同時に「つむじ風」を放つ。「つむじ風」は指定方向に吹き抜け、触れた敵ユニットを<font color='#6655CC'>ノックアップ</font>させる。<br><br>「抜刀」は通常攻撃扱いのため、通常攻撃と同じように強化される。",
+      "description": "指定方向に突きを放ち、直線上の敵すべてにダメージを与える。\n\nこのスキルが命中するとヤスオは「つむじ風」のスタックを数秒間得る。スタックが2つたまるとヤスオは風を身にまとい、次の「抜刀」と同時に「つむじ風」を放つ。「つむじ風」は指定方向に吹き抜け、触れた敵ユニットをノックアップさせる。\n\n「抜刀」は通常攻撃扱いのため、通常攻撃と同じように強化される。",
       "cooldown": "4",
       "cost": "0",
       "image": "YasuoQ1Wrapper.png"
@@ -60,7 +60,7 @@
     {
       "slot": "E",
       "name": "風薙ぎ",
-      "description": "指定した敵を通り過ぎるようにダッシュし、魔法ダメージを与える。発動ごとに、その後のダッシュで与えるダメージが増加する(上限あり)。<br><br>同一の敵に対しては数秒間、このスキルを再発動できない。<br><br><font color='#99FF99'>このスキルのダッシュ中に「抜刀」を発動すると、円状に斬撃を繰り出す。</font>",
+      "description": "指定した敵を通り過ぎるようにダッシュし、魔法ダメージを与える。発動ごとに、その後のダッシュで与えるダメージが増加する(上限あり)。\n\n同一の敵に対しては数秒間、このスキルを再発動できない。\n\nこのスキルのダッシュ中に「抜刀」を発動すると、円状に斬撃を繰り出す。",
       "cooldown": "0.5/0.4/0.3/0.2/0.1",
       "cost": "0",
       "image": "YasuoE.png"
@@ -68,7 +68,7 @@
     {
       "slot": "R",
       "name": "鬼哭啾々",
-      "description": "<factionIonia1>ノックアップ状態</factionIonia1>の敵チャンピオンのもとへブリンクし、空中で斬撃を繰り出して物理ダメージを与える。また、範囲内の<factionIonia1>ノックアップ中</factionIonia1>の敵をさらに<factionIonia1>ノックアップ</factionIonia1>させる。発動と同時に波動ゲージが満タンになるが「つむじ風」のスタックをすべて消費する。<br><br>少しの間、クリティカル時に対象の物理防御増加分を大きく貫通する。",
+      "description": "ノックアップ状態の敵チャンピオンのもとへブリンクし、空中で斬撃を繰り出して物理ダメージを与える。また、範囲内のノックアップ中の敵をさらにノックアップさせる。発動と同時に波動ゲージが満タンになるが「つむじ風」のスタックをすべて消費する。\n\n少しの間、クリティカル時に対象の物理防御増加分を大きく貫通する。",
       "cooldown": "70/50/30",
       "cost": "0",
       "image": "YasuoR.png"
@@ -425,22 +425,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "息継ぎ",
         "超成長"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-    "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-    "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+    "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+    "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+    "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -461,9 +461,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-        "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-        "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+        "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+        "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+        "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
       },
       "runes": {
         "primary": {
@@ -477,16 +477,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -777,8 +777,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "イモータル シールドボウ",
             "インフィニティ エッジ",
@@ -810,8 +812,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -926,6 +947,20 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:27:24+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/yasuo/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/yasuo/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "TOP": {
@@ -937,9 +972,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
-        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
-        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+        "laning": "フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+        "teamfight": "テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+        "key_tips": "対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
       },
       "runes": {
         "primary": {
@@ -953,16 +988,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1253,8 +1288,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ルインドキング ブレード",
             "イモータル シールドボウ",
@@ -1286,8 +1323,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1402,6 +1458,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:24+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/yasuo/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/yasuo/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "ADC": {
@@ -1413,9 +1483,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -1429,16 +1499,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1729,8 +1799,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "イモータル シールドボウ",
             "インフィニティ エッジ",
@@ -1762,8 +1834,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1878,6 +1969,20 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:27:24+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/yasuo/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/yasuo/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1885,6 +1990,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・MIDの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "イモータル シールドボウ",
         "インフィニティ エッジ",
@@ -1916,8 +2023,27 @@
       ],
       "boots": "バーサーカー ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1086",
+          "name": "ドラン ボウ"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3006",
+          "name": "バーサーカー ブーツ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -3266,5 +3392,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/yasuo/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/yasuo/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "風を操る剣術を修めたアイオニアの侍。師匠殺しの濡れ衣を着せられ、真実を求め逃亡、放浪を始める 現在は真相を知るも、その旅の中で追手となった兄を斬った自分は赦されることは無いと悟り、放浪生活を続けている 回転率の高いスキルとクリティカル率を底",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Yasuo",
+    "source_patch": "未検証"
   }
 }

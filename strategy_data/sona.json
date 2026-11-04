@@ -275,20 +275,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "3070",
-        "name": "女神の涙",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6620",
         "name": "ヘリアの残響",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "2530",
         "name": "旋律のダイアデム",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "6617",
+        "name": "ムーンストーンの再生",
         "description": "推奨コア"
       }
     ],
@@ -306,16 +306,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "心身調整",
         "生気付与"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -619,20 +619,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6620",
             "name": "ヘリアの残響",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "2530",
             "name": "旋律のダイアデム",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "6617",
+            "name": "ムーンストーンの再生",
             "description": "推奨コア"
           }
         ],
@@ -650,16 +650,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "心身調整",
             "生気付与"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -668,7 +668,92 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:27:10+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/sona/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/sona/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ヘリアの残響",
+            "旋律のダイアデム",
+            "ムーンストーンの再生"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6620",
+              "name": "ヘリアの残響",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "2530",
+              "name": "旋律のダイアデム",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6617",
+              "name": "ムーンストーンの再生",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/sona/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/sona/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

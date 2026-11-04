@@ -418,22 +418,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "覇道",
       "choices": [
         "第六感",
         "至極の賞金首狩り"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-    "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-    "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+    "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+    "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+    "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
   },
   "damage_profile": {
     "primary_type": "TANK",
@@ -454,9 +454,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+        "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
       },
       "runes": {
         "primary": {
@@ -470,16 +470,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "第六感",
             "至極の賞金首狩り"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -770,8 +770,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[TANK] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ジーク コンバージェンス",
             "ソラリのロケット",
@@ -802,8 +804,23 @@
           ],
           "boots": "アイオニア ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -914,6 +931,20 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:27:02+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/rakan/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/rakan/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -921,6 +952,8 @@
     {
       "name": "[TANK] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・SUPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ジーク コンバージェンス",
         "ソラリのロケット",
@@ -951,8 +984,23 @@
       ],
       "boots": "アイオニア ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3158",
+          "name": "アイオニア ブーツ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1719,5 +1767,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/rakan/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/rakan/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "鉄火場を華麗に舞い踊る鳥類のヴァスタヤ、ロトラン族随一のバトルダンサー シールドにヒール、エンゲージにもピールにも強力なCC2種と、サポートとして万能なスキルセットを持つ そのスキルのほとんどに機動力が付随するのが特徴で、戦場を舞い踊りなが",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Rakan",
+    "source_patch": "未検証"
   }
 }

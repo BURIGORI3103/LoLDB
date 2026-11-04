@@ -43,7 +43,7 @@
     {
       "slot": "Q",
       "name": "斬命刀",
-      "description": "前方に突きを放ち、直線上の敵すべてにダメージを与える。<br><br>このスキルが命中すると「つむじ風」のスタックを数秒間得る。2スタックになると、「斬命刀」を使用した際、一陣の風をまとって前方にダッシュし、敵を<status>ノックアップ</status>させる。",
+      "description": "前方に突きを放ち、直線上の敵すべてにダメージを与える。\n\nこのスキルが命中すると「つむじ風」のスタックを数秒間得る。2スタックになると、「斬命刀」を使用した際、一陣の風をまとって前方にダッシュし、敵をノックアップさせる。",
       "cooldown": "4",
       "cost": "0",
       "image": "YoneQ.png"
@@ -51,7 +51,7 @@
     {
       "slot": "W",
       "name": "霊断刀",
-      "description": "前方をなぎ払い、扇状の範囲内にいるすべての敵にダメージを与え、シールドを獲得する。シールド量はなぎ払いが命中したチャンピオンの数に応じて増加する。<br><br>攻撃速度が増加すると「霊断刀」のクールダウンと詠唱時間が短縮される。",
+      "description": "前方をなぎ払い、扇状の範囲内にいるすべての敵にダメージを与え、シールドを獲得する。シールド量はなぎ払いが命中したチャンピオンの数に応じて増加する。\n\n攻撃速度が増加すると「霊断刀」のクールダウンと詠唱時間が短縮される。",
       "cooldown": "14",
       "cost": "0",
       "image": "YoneW.png"
@@ -424,22 +424,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "息継ぎ",
         "超成長"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
-    "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
-    "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+    "laning": "フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+    "teamfight": "テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+    "key_tips": "対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
   },
   "damage_profile": {
     "primary_type": "HYBRID",
@@ -460,9 +460,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
-        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
-        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+        "laning": "フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+        "teamfight": "テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+        "key_tips": "対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
       },
       "runes": {
         "primary": {
@@ -476,16 +476,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -776,8 +776,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[HYBRID] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ルインドキング ブレード",
             "イモータル シールドボウ",
@@ -809,8 +811,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -925,6 +946,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:24+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/yone/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/yone/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "MID": {
@@ -936,9 +971,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-        "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-        "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+        "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+        "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+        "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
       },
       "runes": {
         "primary": {
@@ -952,16 +987,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "超成長"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1252,8 +1287,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[HYBRID] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "イモータル シールドボウ",
             "インフィニティ エッジ",
@@ -1285,8 +1322,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1401,13 +1457,29 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:27:25+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/yone/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/yone/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
   "build_patterns": [
     {
-      "name": "[AD] OP.GG 推奨ビルド",
+      "name": "[HYBRID] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・TOPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ルインドキング ブレード",
         "イモータル シールドボウ",
@@ -1439,8 +1511,27 @@
       ],
       "boots": "バーサーカー ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1086",
+          "name": "ドラン ボウ"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3006",
+          "name": "バーサーカー ブーツ"
+        },
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -2450,5 +2541,24 @@
         "has_caveat": true
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/yone/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/yone/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "霊界で悪霊を狩る剣士にしてヤスオの兄、風の刃を操る二刀流の使い手 弟と同じくAA主体のスカーミッシャーで、やはりASとクリティカルによる高いDPSを誇る Pros DPSとスケールが高い Critcal率が2倍になり、QのCDがASで短くな",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Yone",
+    "source_patch": "未検証"
   }
 }

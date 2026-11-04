@@ -34,7 +34,7 @@
     {
       "slot": "Passive",
       "name": "デアデビルインパルス",
-      "description": "直前に命中したものとは異なる通常攻撃またはスキルを命中させることでコンボが増加していく。近接攻撃射程の通常攻撃は追加魔法ダメージを与える。<status>移動不能効果</status>を受けた敵に通常攻撃を行うと、自身の射程内までダッシュする。敵が<status>ノックアップ</status>していた場合は、少しの間だけ<status>ノックアップ</status>させたままにする。",
+      "description": "直前に命中したものとは異なる通常攻撃またはスキルを命中させることでコンボが増加していく。近接攻撃射程の通常攻撃は追加魔法ダメージを与える。移動不能効果を受けた敵に通常攻撃を行うと、自身の射程内までダッシュする。敵がノックアップしていた場合は、少しの間だけノックアップさせたままにする。",
       "image": "SamiraP.png"
     }
   ],
@@ -423,22 +423,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "覇道",
       "choices": [
         "血の味わい",
         "貪欲な賞金首狩り"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-    "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-    "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+    "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+    "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+    "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -459,9 +459,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -475,16 +475,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "血の味わい",
             "貪欲な賞金首狩り"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -775,8 +775,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "コレクター",
             "インフィニティ エッジ",
@@ -808,8 +810,27 @@
           ],
           "boots": "グラトナス ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3008",
+              "name": "グラトナス ブーツ"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -924,6 +945,20 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:27:04+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/samira/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/samira/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -931,6 +966,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・ADCの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "コレクター",
         "インフィニティ エッジ",
@@ -962,8 +999,27 @@
       ],
       "boots": "グラトナス ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1055",
+          "name": "ドラン ブレード"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3008",
+          "name": "グラトナス ブーツ"
+        },
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1716,5 +1772,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/samira/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/samira/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "超越者の争いで故郷を追われるも、天性の戦闘センスとスリルを楽しむ命知らずな性分を武器にノクサスで名を馳せるシュリーマ出身の傭兵 マークスマンでありながら飛翔物カットのW・接近用ブリンクのEとスカーミッシャーめいたスキルセットで接近戦を好む変",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Samira",
+    "source_patch": "未検証"
   }
 }

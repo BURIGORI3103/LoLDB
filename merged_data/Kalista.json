@@ -50,7 +50,7 @@
     {
       "slot": "W",
       "name": "執念の霊魂",
-      "description": "カリスタと「魂盟の同志」が同じ対象を攻撃すると追加ダメージを与える。<br><br>スキルを発動すると霊魂を飛ばして周辺を偵察させ、霊魂の前方エリアを可視状態にする。",
+      "description": "カリスタと「魂盟の同志」が同じ対象を攻撃すると追加ダメージを与える。\n\nスキルを発動すると霊魂を飛ばして周辺を偵察させ、霊魂の前方エリアを可視状態にする。",
       "cooldown": "30",
       "cost": "0",
       "image": "KalistaW.png"
@@ -382,22 +382,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "覇道",
       "choices": [
         "サドンインパクト",
         "貪欲な賞金首狩り"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health"
+      "攻撃速度",
+      "アダプティブフォース",
+      "体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-    "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-    "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+    "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+    "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+    "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -418,9 +418,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -434,16 +434,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "サドンインパクト",
             "貪欲な賞金首狩り"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health"
+          "攻撃速度",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "matchups": {
@@ -694,8 +694,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "スタティック シヴ",
             "グインソー レイジブレード",
@@ -727,8 +729,27 @@
           ],
           "boots": "グラトナス ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3008",
+              "name": "グラトナス ブーツ"
+            },
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -843,6 +864,20 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:44+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/kalista/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/kalista/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -850,6 +885,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・ADCの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "スタティック シヴ",
         "グインソー レイジブレード",
@@ -881,8 +918,27 @@
       ],
       "boots": "グラトナス ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1086",
+          "name": "ドラン ボウ"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3008",
+          "name": "グラトナス ブーツ"
+        },
+        {
+          "item_id": "3006",
+          "name": "バーサーカー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1571,5 +1627,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/kalista/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/kalista/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "同僚に裏切られ、亡霊と化した忘れられし王国の将軍。かつての主君であるヴィエゴは叔父でもある AAをキャンセル出来ない代わりに、短距離だが飛び跳ねるようにリープ出来るのが特徴のマークスマン 操作は非常に忙しいが、上手く使いこなせば実質的にCD",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Kalista",
+    "source_patch": "未検証"
   }
 }

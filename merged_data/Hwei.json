@@ -36,7 +36,7 @@
     {
       "slot": "Passive",
       "name": "夢想家の銘",
-      "description": "スキルで敵チャンピオンにダメージを与えると、最後の仕上げとなるサインを施せるよう、対象を下塗りする。<br><br>2つ目の攻撃スキルを敵に命中させるとサインが完成し、対象の足元に残る。少しするとサインは爆発し、範囲内のすべての敵に魔法ダメージを与える。",
+      "description": "スキルで敵チャンピオンにダメージを与えると、最後の仕上げとなるサインを施せるよう、対象を下塗りする。\n\n2つ目の攻撃スキルを敵に命中させるとサインが完成し、対象の足元に残る。少しするとサインは爆発し、範囲内のすべての敵に魔法ダメージを与える。",
       "image": "HweiPassive.png"
     }
   ],
@@ -44,7 +44,7 @@
     {
       "slot": "Q",
       "name": "題材: 厄災",
-      "description": "終わりなき厄災を思い描き、壊滅的な一撃を描く力を得る。<br><br>このスキルは、フェイのスキルを攻撃スキル「荒廃の炎」、「断ち切る稲妻」、「沸き立つ大地」に置き換える。",
+      "description": "終わりなき厄災を思い描き、壊滅的な一撃を描く力を得る。\n\nこのスキルは、フェイのスキルを攻撃スキル「荒廃の炎」、「断ち切る稲妻」、「沸き立つ大地」に置き換える。",
       "cooldown": "10/9/8/7/6",
       "cost": "80/90/100/110/120",
       "image": "HweiQ.png"
@@ -52,7 +52,7 @@
     {
       "slot": "W",
       "name": "題材: 静謐",
-      "description": "終わりなき静穏を思い描き、爽快な作品を描く力を得る。<br><br>このスキルは、フェイのスキルを補助系スキル「流るる蒼」、「内省の泉」、「迸る光彩」に置き換える。",
+      "description": "終わりなき静穏を思い描き、爽快な作品を描く力を得る。\n\nこのスキルは、フェイのスキルを補助系スキル「流るる蒼」、「内省の泉」、「迸る光彩」に置き換える。",
       "cooldown": "18/17.5/17/16.5/16",
       "cost": "90/95/100/105/110",
       "image": "HweiW.png"
@@ -60,7 +60,7 @@
     {
       "slot": "E",
       "name": "題材: 苦悩",
-      "description": "終わりなき苦悩を思い描き、支配欲に満ちた表情を描く力を得る。<br><br>このスキルは、フェイのスキルを行動妨害スキル「恐怖の形相」、「深淵の眼差し」、「粉砕の牙」に置き換える。",
+      "description": "終わりなき苦悩を思い描き、支配欲に満ちた表情を描く力を得る。\n\nこのスキルは、フェイのスキルを行動妨害スキル「恐怖の形相」、「深淵の眼差し」、「粉砕の牙」に置き換える。",
       "cooldown": "12/11.5/11/10.5/10",
       "cost": "50/55/60/65/70",
       "image": "HweiE.png"
@@ -425,22 +425,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "レジェンド: ヘイスト",
         "切り崩し"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-    "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-    "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+    "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+    "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+    "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
   },
   "damage_profile": {
     "primary_type": "AP",
@@ -461,9 +461,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-        "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-        "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+        "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+        "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+        "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
       },
       "runes": {
         "primary": {
@@ -477,16 +477,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "レジェンド: ヘイスト",
             "切り崩し"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -777,8 +777,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "黒炎のトーチ",
             "シャドウフレイム",
@@ -810,8 +812,27 @@
           ],
           "boots": "ソーサラー シューズ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -926,6 +947,20 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:40+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/hwei/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/hwei/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "ADC": {
@@ -937,9 +972,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -953,16 +988,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "レジェンド: ヘイスト",
             "切り崩し"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1213,8 +1248,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "黒炎のトーチ",
             "ライアンドリーの仮面",
@@ -1246,8 +1283,27 @@
           ],
           "boots": "ソーサラー シューズ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1362,6 +1418,20 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:40+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/hwei/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/hwei/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "SUP": {
@@ -1373,9 +1443,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+        "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
       },
       "runes": {
         "primary": {
@@ -1389,16 +1459,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "レジェンド: ヘイスト"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1689,8 +1759,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "黒炎のトーチ",
             "ライアンドリーの仮面",
@@ -1721,8 +1793,23 @@
           ],
           "boots": "ソーサラー シューズ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1833,6 +1920,20 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:40+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/hwei/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/hwei/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1840,6 +1941,8 @@
     {
       "name": "[AP] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・MIDの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "黒炎のトーチ",
         "シャドウフレイム",
@@ -1871,8 +1974,27 @@
       ],
       "boots": "ソーサラー シューズ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1056",
+          "name": "ドラン リング"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3020",
+          "name": "ソーサラー シューズ"
+        },
+        {
+          "item_id": "3158",
+          "name": "アイオニア ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -3069,5 +3191,24 @@
     "scope": "wiki_general_not_role_specific",
     "patch_verified": false,
     "groups": []
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/hwei/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/hwei/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "アイオニアの寺院で芸術を学んでいた陰鬱な画家。その絵画には恐るべき魔力が込められている 寺院を破壊したかつての学友ジンの足跡を辿り、その心情を知るべく悪人たちを己の芸術で追い詰める 全体的に射程に優れ、Ultを含めて10種類ものアクティブス",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Hwei",
+    "source_patch": "未検証"
   }
 }

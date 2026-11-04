@@ -66,7 +66,7 @@
     {
       "slot": "R",
       "name": "石化の魔眼",
-      "description": "石化の魔眼を開放し、扇形範囲内で自身のほうを向いている敵にスタン効果を付与する。<br>自身に背を向けている敵にはスロウ効果を付与する。",
+      "description": "石化の魔眼を開放し、扇形範囲内で自身のほうを向いている敵にスタン効果を付与する。\n自身に背を向けている敵にはスロウ効果を付与する。",
       "cooldown": "120/100/80",
       "cost": "100",
       "image": "CassiopeiaR.png"
@@ -376,35 +376,24 @@
         "name": "体力ポーション"
       }
     ],
-    "boots": [
-      {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
-        "condition": "推奨靴"
-      },
-      {
-        "item_id": "3020",
-        "name": "ソーサラー シューズ",
-        "condition": "推奨靴"
-      }
-    ],
+    "boots": [],
     "core": [
       {
         "step": 1,
-        "item_id": "3070",
-        "name": "女神の涙",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6657",
         "name": "ロッド オブ エイジス",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3040",
         "name": "セラフ エンブレイス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3116",
+        "name": "リーライ クリスタル セプター",
         "description": "推奨コア"
       }
     ],
@@ -422,22 +411,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "冷静沈着",
         "最期の慈悲"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-    "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-    "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+    "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+    "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+    "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
   },
   "damage_profile": {
     "primary_type": "AP",
@@ -458,9 +447,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-        "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-        "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+        "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+        "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+        "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
       },
       "runes": {
         "primary": {
@@ -474,16 +463,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -774,30 +763,32 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
-            "女神の涙",
             "ロッド オブ エイジス",
-            "セラフ エンブレイス"
+            "セラフ エンブレイス",
+            "リーライ クリスタル セプター"
           ],
           "core_items": [
             {
               "step": 1,
-              "item_id": "3070",
-              "name": "女神の涙",
-              "description": "推奨コア"
-            },
-            {
-              "step": 2,
               "item_id": "6657",
               "name": "ロッド オブ エイジス",
               "description": "推奨コア"
             },
             {
-              "step": 3,
+              "step": 2,
               "item_id": "3040",
               "name": "セラフ エンブレイス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3116",
+              "name": "リーライ クリスタル セプター",
               "description": "推奨コア"
             }
           ],
@@ -805,10 +796,20 @@
             "ドラン リング",
             "体力ポーション"
           ],
-          "boots": "スイフトネス ブーツ",
+          "boots": "",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -883,35 +884,24 @@
             "name": "体力ポーション"
           }
         ],
-        "boots": [
-          {
-            "item_id": "3009",
-            "name": "スイフトネス ブーツ",
-            "condition": "推奨靴"
-          },
-          {
-            "item_id": "3020",
-            "name": "ソーサラー シューズ",
-            "condition": "推奨靴"
-          }
-        ],
+        "boots": [],
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6657",
             "name": "ロッド オブ エイジス",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3040",
             "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3116",
+            "name": "リーライ クリスタル セプター",
             "description": "推奨コア"
           }
         ],
@@ -923,6 +913,20 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:31+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -930,28 +934,30 @@
     {
       "name": "[AP] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・MIDの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
-        "女神の涙",
         "ロッド オブ エイジス",
-        "セラフ エンブレイス"
+        "セラフ エンブレイス",
+        "リーライ クリスタル セプター"
       ],
       "core_items": [
         {
           "step": 1,
-          "item_id": "3070",
-          "name": "女神の涙",
-          "description": "推奨コア"
-        },
-        {
-          "step": 2,
           "item_id": "6657",
           "name": "ロッド オブ エイジス",
           "description": "推奨コア"
         },
         {
-          "step": 3,
+          "step": 2,
           "item_id": "3040",
           "name": "セラフ エンブレイス",
+          "description": "推奨コア"
+        },
+        {
+          "step": 3,
+          "item_id": "3116",
+          "name": "リーライ クリスタル セプター",
           "description": "推奨コア"
         }
       ],
@@ -959,10 +965,20 @@
         "ドラン リング",
         "体力ポーション"
       ],
-      "boots": "スイフトネス ブーツ",
+      "boots": "",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1056",
+          "name": "ドラン リング"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1693,5 +1709,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "呪いを受けて半身が蛇の姿になってしまった黒薔薇団の諜報員にしてカタリナの妹 スキルを連射して高いDPSを叩き出すメイジだが、マナ消費が激しく操作も忙しいため難易度は高い メドゥーサを思わせる外観の通り、目から光を放ち視線を合わせた相手を石化",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Cassiopeia",
+    "source_patch": "未検証"
   }
 }

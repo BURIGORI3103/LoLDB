@@ -311,16 +311,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "覇道",
       "choices": [
         "追い打ち",
         "至極の賞金首狩り"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -660,16 +660,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "追い打ち",
             "至極の賞金首狩り"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -678,7 +678,83 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:24+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/amumu/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/amumu/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ライアンドリーの仮面",
+            "サンファイア イージス",
+            "アビサル マスク"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3068",
+              "name": "サンファイア イージス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "8020",
+              "name": "アビサル マスク",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "モスストンパーの幼体",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1103",
+              "name": "モスストンパーの幼体"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "SUP": {
       "patch": "16.21.1",
@@ -988,16 +1064,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "追い打ち",
             "至極の賞金首狩り"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1006,7 +1082,92 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:24+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/amumu/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/amumu/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ジーク コンバージェンス",
+            "ソラリのロケット",
+            "ソーンメイル"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3050",
+              "name": "ジーク コンバージェンス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3190",
+              "name": "ソラリのロケット",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3075",
+              "name": "ソーンメイル",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/amumu/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/amumu/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

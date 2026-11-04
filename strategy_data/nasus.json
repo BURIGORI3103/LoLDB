@@ -311,16 +311,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "息継ぎ",
         "気迫"
       ]
     },
     "shards": [
-      "Ability Haste",
-      "Health Scaling",
-      "Health Scaling"
+      "スキルヘイスト",
+      "スケーリング体力",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -660,16 +660,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "気迫"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Health Scaling",
-          "Health Scaling"
+          "スキルヘイスト",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -678,7 +678,83 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:57+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/nasus/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/nasus/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "トリニティ フォース",
+            "フローズン ハート",
+            "スピリット ビサージュ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3078",
+              "name": "トリニティ フォース",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3110",
+              "name": "フローズン ハート",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3065",
+              "name": "スピリット ビサージュ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "MID": {
       "patch": "16.21.1",
@@ -992,16 +1068,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "気迫"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Health Scaling",
-          "Health Scaling"
+          "スキルヘイスト",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1010,7 +1086,97 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:57+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/nasus/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/nasus/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "トリニティ フォース",
+            "スピリット ビサージュ",
+            "フローズン ハート"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3078",
+              "name": "トリニティ フォース",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3065",
+              "name": "スピリット ビサージュ",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3110",
+              "name": "フローズン ハート",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/nasus/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/nasus/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

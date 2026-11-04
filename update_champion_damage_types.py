@@ -220,23 +220,9 @@ def main():
         profile = get_damage_profile(cid, cdata)
         cdata['damage_profile'] = profile
 
-        # ビルドパターンの名称に [AD] / [AP] / [TANK] の接頭辞を美しく付与
-        patterns = cdata.get('build_patterns', [])
-        for bp in patterns:
-            name = bp.get('name', '')
-            # 既存の接頭辞を整理
-            if not any(tag in name for tag in ['[AD]', '[AP]', '[TANK]', '[HYBRID]']):
-                core_str = " ".join(bp.get('core', []))
-                if profile['primary_type'] == 'AP' or '魔力' in name or 'AP' in name:
-                    bp['name'] = f"[AP] {name}"
-                elif profile['primary_type'] == 'TANK' or 'タンク' in name or '耐久' in name:
-                    bp['name'] = f"[TANK] {name}"
-                elif profile['primary_type'] == 'HYBRID' and ('AP' in name or '魔力' in name):
-                    bp['name'] = f"[AP] {name}"
-                elif profile['primary_type'] == 'HYBRID' and ('タンク' in name or '耐久' in name):
-                    bp['name'] = f"[TANK] {name}"
-                else:
-                    bp['name'] = f"[AD] {name}"
+        from audit_normalization import normalize_with_evidence
+        champions[cid] = normalize_with_evidence(cdata, Path(__file__).resolve().parent)
+        (Path(MERGED_JSON).parent / f"{cid}.json").write_text(json.dumps(champions[cid], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     with open(MERGED_JSON, "w", encoding="utf-8") as f:
         json.dump(champions, f, ensure_ascii=False, indent=2)

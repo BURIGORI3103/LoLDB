@@ -420,22 +420,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "冷静沈着",
         "切り崩し"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-    "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-    "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+    "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+    "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+    "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
   },
   "damage_profile": {
     "primary_type": "AP",
@@ -456,9 +456,9 @@
       "skill_order": "W > Q > E",
       "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+        "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
       },
       "runes": {
         "primary": {
@@ -472,16 +472,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "切り崩し"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -772,8 +772,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "リーライ クリスタル セプター",
             "ライアンドリーの仮面",
@@ -804,8 +806,23 @@
           ],
           "boots": "ソーサラー シューズ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -916,6 +933,20 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:29+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "MID": {
@@ -927,9 +958,9 @@
       "skill_order": "W > Q > E",
       "role_note": "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ウェーブプッシュ＆サイド介入】ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
-        "teamfight": "【中終盤・キャリー暗殺または範囲火力】サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
-        "key_tips": "【スキルの吐きどころ】ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
+        "laning": "ミニオンウェーブを素早く処理し、敵MIDをタワー下に釘付けにしつつ、JGの小規模戦やサイドレーンへのローム支援を行う。",
+        "teamfight": "サイドレーンでの1v1（スプリット）または正面集団戦での範囲バースト。敵後衛キャリーの射程外から一気に大ダメージを叩き込む。",
+        "key_tips": "ハラススキルと自衛スキルの役割を明確に分ける。ガンクを警戒して逃げスキルは安易にウェーブ処理に使わない。"
       },
       "runes": {
         "primary": {
@@ -943,16 +974,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1243,12 +1274,14 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "黒炎のトーチ",
-            "リーライ クリスタル セプター",
-            "ライアンドリーの仮面"
+            "ライアンドリーの仮面",
+            "リーライ クリスタル セプター"
           ],
           "core_items": [
             {
@@ -1259,14 +1292,14 @@
             },
             {
               "step": 2,
-              "item_id": "3116",
-              "name": "リーライ クリスタル セプター",
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
               "description": "推奨コア"
             },
             {
               "step": 3,
-              "item_id": "6653",
-              "name": "ライアンドリーの仮面",
+              "item_id": "3116",
+              "name": "リーライ クリスタル セプター",
               "description": "推奨コア"
             }
           ],
@@ -1276,8 +1309,27 @@
           ],
           "boots": "ソーサラー シューズ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1373,14 +1425,14 @@
           },
           {
             "step": 2,
-            "item_id": "3116",
-            "name": "リーライ クリスタル セプター",
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
             "description": "推奨コア"
           },
           {
             "step": 3,
-            "item_id": "6653",
-            "name": "ライアンドリーの仮面",
+            "item_id": "3116",
+            "name": "リーライ クリスタル セプター",
             "description": "推奨コア"
           }
         ],
@@ -1392,6 +1444,20 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:29+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/brand/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/brand/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1399,6 +1465,8 @@
     {
       "name": "[AP] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・SUPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "リーライ クリスタル セプター",
         "ライアンドリーの仮面",
@@ -1429,8 +1497,23 @@
       ],
       "boots": "ソーサラー シューズ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3020",
+          "name": "ソーサラー シューズ"
+        },
+        {
+          "item_id": "3158",
+          "name": "アイオニア ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "W > Q > E",
@@ -2509,5 +2592,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "ライズの弟子だったが、ワールドルーンの魔力に魅入られ業火の精霊と化したメイジ パッシブ含め全スキルがダメージスキルという生粋のダメージディーラーで、DoTを絡めた炎上コンボはメイジ随一の火力を誇る 優秀な割合ダメージによりタンクに強く、Ao",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Brand",
+    "source_patch": "未検証"
   }
 }

@@ -295,16 +295,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "冷静沈着",
         "最期の慈悲"
       ]
     },
     "shards": [
-      "Ability Haste",
-      "Adaptive Force",
-      "Health Scaling"
+      "スキルヘイスト",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -627,16 +627,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -645,7 +645,83 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:53+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/mel/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/mel/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ルーデン エコー",
+            "シャドウフレイム",
+            "ゾーニャの砂時計"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6655",
+              "name": "ルーデン エコー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4645",
+              "name": "シャドウフレイム",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3157",
+              "name": "ゾーニャの砂時計",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "ADC": {
       "patch": "16.21.1",
@@ -960,16 +1036,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -978,7 +1054,83 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:54+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/mel/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/mel/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ルーデン エコー",
+            "シャドウフレイム",
+            "ラバドン デスキャップ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6655",
+              "name": "ルーデン エコー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4645",
+              "name": "シャドウフレイム",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3089",
+              "name": "ラバドン デスキャップ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "SUP": {
       "patch": "16.21.1",
@@ -1204,16 +1356,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1222,7 +1374,92 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:54+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/mel/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/mel/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ルーデン エコー",
+            "シャドウフレイム",
+            "ゾーニャの砂時計"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6655",
+              "name": "ルーデン エコー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4645",
+              "name": "シャドウフレイム",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3157",
+              "name": "ゾーニャの砂時計",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/mel/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/mel/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

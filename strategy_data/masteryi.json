@@ -259,10 +259,6 @@
       {
         "item_id": "1102",
         "name": "ガストウォーカーの幼体"
-      },
-      {
-        "item_id": "2003",
-        "name": "体力ポーション"
       }
     ],
     "boots": [
@@ -311,16 +307,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "凱旋",
         "レジェンド: 迅速"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -607,10 +603,6 @@
           {
             "item_id": "1102",
             "name": "ガストウォーカーの幼体"
-          },
-          {
-            "item_id": "2003",
-            "name": "体力ポーション"
           }
         ],
         "boots": [
@@ -659,16 +651,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "凱旋",
             "レジェンド: 迅速"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -677,7 +669,78 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:53+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/masteryi/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/masteryi/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "クラーケン スレイヤー",
+            "コレクター",
+            "ドミニク リガード"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6672",
+              "name": "クラーケン スレイヤー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6676",
+              "name": "コレクター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3036",
+              "name": "ドミニク リガード",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体"
+          ],
+          "boots": "バーサーカー ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "TOP": {
       "patch": "16.21.1",
@@ -991,16 +1054,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "凱旋",
             "レジェンド: 迅速"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1009,7 +1072,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:53+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/masteryi/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/masteryi/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ルインドキング ブレード",
+            "コレクター",
+            "ドミニク リガード"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3153",
+              "name": "ルインドキング ブレード",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6676",
+              "name": "コレクター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3036",
+              "name": "ドミニク リガード",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン ボウ",
+            "体力ポーション"
+          ],
+          "boots": "バーサーカー ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/masteryi/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/masteryi/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

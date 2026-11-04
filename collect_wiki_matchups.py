@@ -12,7 +12,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 BASE = Path(__file__).resolve().parent
-CACHE = BASE.parent / "scratch/wiki_matchup_html"
+CACHE = BASE / "scratch/wiki_matchup_html"
 
 
 class MatchupHTML(HTMLParser):

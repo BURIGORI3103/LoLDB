@@ -7,7 +7,9 @@ import json
 import os
 import re
 import urllib.request
+import argparse
 from tqdm import tqdm
+from audit_normalization import canonical_item_ids
 
 def format_stat_line(line):
     line = re.sub(r'<[^>]+>', ' ', line).strip()
@@ -98,11 +100,11 @@ def determine_categories(item_name, desc_text, stats_list, tags, stats):
 
     return sorted(list(categories))
 
-def main():
+def main(patch=None):
     print("最新Data Dragonバージョンを取得中...")
     with urllib.request.urlopen("https://ddragon.leagueoflegends.com/api/versions.json") as res:
         versions = json.loads(res.read().decode("utf-8"))
-        latest_version = versions[0]
+        latest_version = patch or versions[0]
     print(f"最新バージョン: {latest_version}")
 
     item_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/data/ja_JP/item.json"
@@ -114,6 +116,7 @@ def main():
     # チャンピオンデータから使われているアイテムIDも確認
     champs_path = "merged_data/all_champions.json"
     used_item_ids = set()
+    champs = {}
     if os.path.exists(champs_path):
         with open(champs_path, "r", encoding="utf-8") as f:
             champs = json.load(f)
@@ -129,6 +132,7 @@ def main():
                             if it.get("id"):
                                 used_item_ids.add(str(it["id"]))
 
+    allowed = canonical_item_ids(raw_data, used_item_ids)
     processed_items = {}
     print("アイテムデータ解析およびステータス・カテゴリ生成中...")
     for iid, raw_item in tqdm(raw_data.items(), desc="アイテム処理中"):
@@ -140,11 +144,7 @@ def main():
         req_champ = raw_item.get("requiredChampion", None)
 
         # サモナーズリフト用、またはチャンピオン推奨ビルドで参照されているアイテム
-        if not is_sr and str(iid) not in used_item_ids:
-            continue
-        if req_champ and str(iid) not in used_item_ids:
-            continue
-        if not purchasable and total_gold <= 0 and str(iid) not in used_item_ids:
+        if str(iid) not in allowed:
             continue
 
         raw_desc = raw_item.get("description", "")
@@ -195,10 +195,23 @@ def main():
             "stats_list": stats_list,
             "stats_summary": stats_summary,
             "description": clean_desc,
-            "from": raw_item.get("from", []),
-            "into": raw_item.get("into", [])
+            "from": [ref for ref in raw_item.get("from", []) if ref in allowed],
+            "into": [ref for ref in raw_item.get("into", []) if ref in allowed],
+            "specialRecipe": raw_item.get("specialRecipe"),
+            "patch": latest_version,
+            "requiredChampion": raw_item.get("requiredChampion"),
+            "requiredAlly": raw_item.get("requiredAlly"),
         }
 
+    from collections import Counter
+    counts = Counter(item["name"] for item in processed_items.values())
+    for item in processed_items.values():
+        if counts[item["name"]] > 1:
+            owner = item.get("requiredChampion")
+            if not owner:
+                raise ValueError(f"通常アイテム名が重複しています: {item['name']}")
+            owner_name = champs.get(owner, {}).get("name", owner)
+            item["display_name"] = f"{item['name']}（{owner_name}専用）"
     out_file = "merged_data/all_items.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(processed_items, f, ensure_ascii=False, indent=2)
@@ -206,4 +219,6 @@ def main():
     print(f"合計 {len(processed_items)} 個のアイテムを {out_file} に保存しました。")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--patch", help="取得対象パッチ（省略時は最新）")
+    main(parser.parse_args().patch)

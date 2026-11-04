@@ -311,16 +311,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "ビスケットデリバリー",
         "疾駆"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health"
+      "攻撃速度",
+      "アダプティブフォース",
+      "体力"
     ]
   },
   "gameplay_notes": {
@@ -660,16 +660,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "ビスケットデリバリー",
             "疾駆"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health"
+          "攻撃速度",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "opgg_source": {
@@ -678,7 +678,83 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:25+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/ashe/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/ashe/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ヘクスオプティックC44",
+            "ファントム ダンサー",
+            "インフィニティ エッジ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "2523",
+              "name": "ヘクスオプティックC44",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3046",
+              "name": "ファントム ダンサー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3031",
+              "name": "インフィニティ エッジ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン ボウ",
+            "体力ポーション"
+          ],
+          "boots": "バーサーカー ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "SUP": {
       "patch": "16.21.1",
@@ -937,16 +1013,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "追い打ち",
             "至極の賞金首狩り"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -955,7 +1031,92 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:26+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/ashe/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/ashe/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "マリグナンス",
+            "帝国の指令",
+            "アクシオム アーク"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3118",
+              "name": "マリグナンス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4005",
+              "name": "帝国の指令",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6696",
+              "name": "アクシオム アーク",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/ashe/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/ashe/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

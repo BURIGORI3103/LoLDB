@@ -259,10 +259,6 @@
       {
         "item_id": "1102",
         "name": "ガストウォーカーの幼体"
-      },
-      {
-        "item_id": "2003",
-        "name": "体力ポーション"
       }
     ],
     "boots": [
@@ -311,16 +307,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "追い風",
         "水走り"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -607,10 +603,6 @@
           {
             "item_id": "1102",
             "name": "ガストウォーカーの幼体"
-          },
-          {
-            "item_id": "2003",
-            "name": "体力ポーション"
           }
         ],
         "boots": [
@@ -659,16 +651,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "追い風",
             "水走り"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -677,7 +669,78 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:27:22+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/warwick/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/warwick/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ストライドブレイカー",
+            "ルインドキング ブレード",
+            "デス ダンス"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6631",
+              "name": "ストライドブレイカー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3153",
+              "name": "ルインドキング ブレード",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6333",
+              "name": "デス ダンス",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "TOP": {
       "patch": "16.21.1",
@@ -991,16 +1054,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "生気付与"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1009,7 +1072,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:22+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/warwick/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/warwick/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ルインドキング ブレード",
+            "ストライドブレイカー",
+            "デス ダンス"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3153",
+              "name": "ルインドキング ブレード",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6631",
+              "name": "ストライドブレイカー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6333",
+              "name": "デス ダンス",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン ブレード",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/warwick/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/warwick/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

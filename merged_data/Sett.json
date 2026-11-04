@@ -423,22 +423,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "息継ぎ",
         "気迫"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・レーン戦】パッシブのヘビーハンズ（右パンチの高速追撃）とQの通常攻撃リセットで強力な殴り合いを展開。相手の攻撃で溜まった「豪気」ゲージが最大になった瞬間、EでスタンさせてWの中央確定ダメージを直撃させる。",
-    "teamfight": "【中終盤・集団戦】敵の最も硬いタンクをR（ショーストッパー）で掴み、敵の後衛キャリー陣の中心へ叩きつける。着地後にEで敵全員をスタンさせ、集団にWをぶち込んで一撃で戦況を壊滅させる。",
-    "key_tips": "【スキルの吐きどころ】Wは小出しにせず、必ず豪気ゲージが黄色（最大付近）になるまで引きつけてから撃つこと。シールド量と確定ダメージが桁違いになる。"
+    "laning": "パッシブのヘビーハンズ（右パンチの高速追撃）とQの通常攻撃リセットで強力な殴り合いを展開。相手の攻撃で溜まった「豪気」ゲージが最大になった瞬間、EでスタンさせてWの中央確定ダメージを直撃させる。",
+    "teamfight": "敵の最も硬いタンクをR（ショーストッパー）で掴み、敵の後衛キャリー陣の中心へ叩きつける。着地後にEで敵全員をスタンさせ、集団にWをぶち込んで一撃で戦況を壊滅させる。",
+    "key_tips": "Wは小出しにせず、必ず豪気ゲージが黄色（最大付近）になるまで引きつけてから撃つこと。シールド量と確定ダメージが桁違いになる。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -459,9 +459,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】パッシブのヘビーハンズ（右パンチの高速追撃）とQの通常攻撃リセットで強力な殴り合いを展開。相手の攻撃で溜まった「豪気」ゲージが最大になった瞬間、EでスタンさせてWの中央確定ダメージを直撃させる。",
-        "teamfight": "【中終盤・集団戦】敵の最も硬いタンクをR（ショーストッパー）で掴み、敵の後衛キャリー陣の中心へ叩きつける。着地後にEで敵全員をスタンさせ、集団にWをぶち込んで一撃で戦況を壊滅させる。",
-        "key_tips": "【スキルの吐きどころ】Wは小出しにせず、必ず豪気ゲージが黄色（最大付近）になるまで引きつけてから撃つこと。シールド量と確定ダメージが桁違いになる。"
+        "laning": "パッシブのヘビーハンズ（右パンチの高速追撃）とQの通常攻撃リセットで強力な殴り合いを展開。相手の攻撃で溜まった「豪気」ゲージが最大になった瞬間、EでスタンさせてWの中央確定ダメージを直撃させる。",
+        "teamfight": "敵の最も硬いタンクをR（ショーストッパー）で掴み、敵の後衛キャリー陣の中心へ叩きつける。着地後にEで敵全員をスタンさせ、集団にWをぶち込んで一撃で戦況を壊滅させる。",
+        "key_tips": "Wは小出しにせず、必ず豪気ゲージが黄色（最大付近）になるまで引きつけてから撃つこと。シールド量と確定ダメージが桁違いになる。"
       },
       "runes": {
         "primary": {
@@ -475,16 +475,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "息継ぎ",
             "気迫"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -775,8 +775,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ストライドブレイカー",
             "ブラック クリーバー",
@@ -808,8 +810,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -924,6 +945,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:06+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/sett/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/sett/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -931,6 +966,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・TOPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ストライドブレイカー",
         "ブラック クリーバー",
@@ -962,8 +999,27 @@
       ],
       "boots": "プレート スチールキャップ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1055",
+          "name": "ドラン ブレード"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1690,5 +1746,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/sett/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/sett/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "ノクサス人の父とヴァスタヤの母を持つ半獣人にして、アイオニア裏社会における闘技場のボス 被弾で貯まる「闘魂」に比例して巨大なシールドを張りつつ大ダメージを返すW、敵を掴んで放り投げつつ自身も飛び込むUltと個性的なスキルが揃っている シンプ",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Sett",
+    "source_patch": "未検証"
   }
 }

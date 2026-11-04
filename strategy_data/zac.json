@@ -259,10 +259,6 @@
       {
         "item_id": "1101",
         "name": "スコーチクロウの幼体"
-      },
-      {
-        "item_id": "1103",
-        "name": "モスストンパーの幼体"
       }
     ],
     "boots": [
@@ -311,16 +307,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "凱旋",
         "レジェンド: ヘイスト"
       ]
     },
     "shards": [
-      "Ability Haste",
-      "Adaptive Force",
-      "Health Scaling"
+      "スキルヘイスト",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -607,10 +603,6 @@
           {
             "item_id": "1101",
             "name": "スコーチクロウの幼体"
-          },
-          {
-            "item_id": "1103",
-            "name": "モスストンパーの幼体"
           }
         ],
         "boots": [
@@ -659,16 +651,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "凱旋",
             "レジェンド: ヘイスト"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -677,7 +669,78 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:27:26+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/zac/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/zac/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ヘクステック ロケットベルト",
+            "サンファイア イージス",
+            "スピリット ビサージュ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3152",
+              "name": "ヘクステック ロケットベルト",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3068",
+              "name": "サンファイア イージス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3065",
+              "name": "スピリット ビサージュ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "スコーチクロウの幼体"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1101",
+              "name": "スコーチクロウの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "TOP": {
       "patch": "16.21.1",
@@ -991,16 +1054,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "レジェンド: ヘイスト",
             "背水の陣"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Health Scaling",
-          "Health Scaling"
+          "攻撃速度",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1009,7 +1072,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:26+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/zac/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/zac/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "サンファイア イージス",
+            "スピリット ビサージュ",
+            "ソーンメイル"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3068",
+              "name": "サンファイア イージス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3065",
+              "name": "スピリット ビサージュ",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3075",
+              "name": "ソーンメイル",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン シールド",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/zac/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/zac/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

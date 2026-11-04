@@ -259,10 +259,6 @@
       {
         "item_id": "1102",
         "name": "ガストウォーカーの幼体"
-      },
-      {
-        "item_id": "2003",
-        "name": "体力ポーション"
       }
     ],
     "boots": [
@@ -311,16 +307,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "魔法の靴",
         "宇宙の英知"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -607,10 +603,6 @@
           {
             "item_id": "1102",
             "name": "ガストウォーカーの幼体"
-          },
-          {
-            "item_id": "2003",
-            "name": "体力ポーション"
           }
         ],
         "boots": [
@@ -659,16 +651,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "宇宙の英知"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -677,7 +669,78 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:27:13+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/talon/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/talon/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "アンブラル グレイブ",
+            "バスティオンブレイカー",
+            "ボルテイク サイクロソード"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3179",
+              "name": "アンブラル グレイブ",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "2520",
+              "name": "バスティオンブレイカー",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6699",
+              "name": "ボルテイク サイクロソード",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "MID": {
       "patch": "16.21.1",
@@ -960,20 +1023,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "6692",
-            "name": "赤月の刃",
+            "item_id": "3142",
+            "name": "妖夢の霊剣",
             "description": "推奨コア"
           },
           {
             "step": 2,
-            "item_id": "3071",
-            "name": "ブラック クリーバー",
+            "item_id": "6699",
+            "name": "ボルテイク サイクロソード",
             "description": "推奨コア"
           },
           {
             "step": 3,
-            "item_id": "6333",
-            "name": "デス ダンス",
+            "item_id": "3814",
+            "name": "ナイト エッジ",
             "description": "推奨コア"
           }
         ],
@@ -991,16 +1054,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "覇道",
           "choices": [
             "サドンインパクト",
             "貪欲な賞金首狩り"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "opgg_source": {
@@ -1009,7 +1072,97 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:27:13+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/talon/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/talon/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "妖夢の霊剣",
+            "ボルテイク サイクロソード",
+            "ナイト エッジ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3142",
+              "name": "妖夢の霊剣",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6699",
+              "name": "ボルテイク サイクロソード",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3814",
+              "name": "ナイト エッジ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン ブレード",
+            "体力ポーション"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/talon/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/talon/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

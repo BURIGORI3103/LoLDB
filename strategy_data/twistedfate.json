@@ -310,16 +310,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "ボーンアーマー",
         "気迫"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Move Speed",
-      "Health"
+      "攻撃速度",
+      "移動速度",
+      "体力"
     ]
   },
   "gameplay_notes": {
@@ -657,16 +657,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "ボーンアーマー",
             "気迫"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Move Speed",
-          "Health"
+          "攻撃速度",
+          "移動速度",
+          "体力"
         ]
       },
       "opgg_source": {
@@ -675,7 +675,97 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:27:16+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/twistedfate/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/twistedfate/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ロッド オブ エイジス",
+            "リッチ ベイン",
+            "ラピッド ファイアキャノン"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6657",
+              "name": "ロッド オブ エイジス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3100",
+              "name": "リッチ ベイン",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3094",
+              "name": "ラピッド ファイアキャノン",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/twistedfate/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/twistedfate/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

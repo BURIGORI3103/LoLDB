@@ -420,22 +420,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "ヘクステックフラッシュネイター",
         "宇宙の英知"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-    "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-    "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+    "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+    "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+    "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
   },
   "damage_profile": {
     "primary_type": "TANK",
@@ -456,9 +456,9 @@
       "skill_order": "Q > W > E",
       "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+        "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
       },
       "runes": {
         "primary": {
@@ -472,16 +472,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "ヘクステックフラッシュネイター",
             "宇宙の英知"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -772,8 +772,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[TANK] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "デッド マン プレート",
             "ソラリのロケット",
@@ -804,8 +806,23 @@
           ],
           "boots": "スイフトネス ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -916,6 +933,20 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:27:00+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/poppy/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/poppy/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "TOP": {
@@ -927,9 +958,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ソロレーン主導権＆ウェーブコントロール】フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
-        "teamfight": "【中終盤・サイドスプリット＆テレポート合流】テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
-        "key_tips": "【スキルの吐きどころ】対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
+        "laning": "フリーズやスロープッシュで対面のCSを奪い、ソロキルを狙う。敵ジャングラーの位置を常に意識し、無防備なプッシュを避ける。",
+        "teamfight": "テレポートを活かして反対側のサイドレーンに圧力をかけ、敵を分断。集団戦が始まったら裏テレポートで挟み撃ちにする。",
+        "key_tips": "対面の主要スキル（パリィ、シールド、ブリンク）を誘い出してから自身の最大火力を叩き込むのが勝利の鍵。"
       },
       "runes": {
         "primary": {
@@ -943,16 +974,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "背水の陣"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "matchups": {
@@ -1243,30 +1274,32 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[TANK] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
-            "女神の涙",
             "サンダード スカイ",
-            "フィンブルウィンター"
+            "フィンブルウィンター",
+            "ソーンメイル"
           ],
           "core_items": [
             {
               "step": 1,
-              "item_id": "3070",
-              "name": "女神の涙",
-              "description": "推奨コア"
-            },
-            {
-              "step": 2,
               "item_id": "6610",
               "name": "サンダード スカイ",
               "description": "推奨コア"
             },
             {
-              "step": 3,
+              "step": 2,
               "item_id": "3121",
               "name": "フィンブルウィンター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3075",
+              "name": "ソーンメイル",
               "description": "推奨コア"
             }
           ],
@@ -1276,8 +1309,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1054",
+              "name": "ドラン シールド"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1367,20 +1419,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6610",
             "name": "サンダード スカイ",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3121",
             "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3075",
+            "name": "ソーンメイル",
             "description": "推奨コア"
           }
         ],
@@ -1392,6 +1444,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:00+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/poppy/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/poppy/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1399,6 +1465,8 @@
     {
       "name": "[TANK] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・SUPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "デッド マン プレート",
         "ソラリのロケット",
@@ -1429,8 +1497,23 @@
       ],
       "boots": "スイフトネス ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3009",
+          "name": "スイフトネス ブーツ"
+        },
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > W > E",
@@ -2417,5 +2500,24 @@
         "has_caveat": true
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/poppy/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/poppy/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "友に託されたハンマーを勇者へ渡すべく旅を続ける勇敢なヨードル ダッシュやリープを阻止するW、対象指定ノックバックのE、豪快に敵を吹っ飛ばすUltによるPeelが得意なワーデン スキルセットはタンクだが数値は増加ADレシオしか持たない変わり種",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Poppy",
+    "source_patch": "未検証"
   }
 }

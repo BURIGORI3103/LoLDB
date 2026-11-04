@@ -259,10 +259,6 @@
       {
         "item_id": "1102",
         "name": "ガストウォーカーの幼体"
-      },
-      {
-        "item_id": "2003",
-        "name": "体力ポーション"
       }
     ],
     "boots": [
@@ -311,16 +307,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "魔法の靴",
         "疾駆"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -606,10 +602,6 @@
           {
             "item_id": "1102",
             "name": "ガストウォーカーの幼体"
-          },
-          {
-            "item_id": "2003",
-            "name": "体力ポーション"
           }
         ],
         "boots": [
@@ -658,16 +650,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "疾駆"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -676,7 +668,78 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:27:17+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/udyr/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/udyr/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ショウジンの矛",
+            "実験的ヘクスプレート",
+            "デス ダンス"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3161",
+              "name": "ショウジンの矛",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3073",
+              "name": "実験的ヘクスプレート",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6333",
+              "name": "デス ダンス",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "TOP": {
       "patch": "16.21.1",
@@ -959,20 +1022,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6653",
             "name": "ライアンドリーの仮面",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3121",
             "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3065",
+            "name": "スピリット ビサージュ",
             "description": "推奨コア"
           }
         ],
@@ -990,16 +1053,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "ビスケットデリバリー",
             "疾駆"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1008,7 +1071,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:27:17+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/udyr/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/udyr/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ライアンドリーの仮面",
+            "フィンブルウィンター",
+            "スピリット ビサージュ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3121",
+              "name": "フィンブルウィンター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3065",
+              "name": "スピリット ビサージュ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/udyr/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/udyr/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

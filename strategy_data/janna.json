@@ -306,16 +306,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "生命の泉",
         "生気付与"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Move Speed",
-      "Health Scaling"
+      "アダプティブフォース",
+      "移動速度",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -650,16 +650,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "生命の泉",
             "生気付与"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Move Speed",
-          "Health Scaling"
+          "アダプティブフォース",
+          "移動速度",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -668,7 +668,92 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:41+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/janna/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/janna/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ムーンストーンの再生",
+            "リデンプション",
+            "シュレリアの戦歌"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6617",
+              "name": "ムーンストーンの再生",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3107",
+              "name": "リデンプション",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "2065",
+              "name": "シュレリアの戦歌",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "スイフトネス ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/janna/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/janna/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

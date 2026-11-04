@@ -1,5 +1,6 @@
 """OP.GGのロール別統計を検証して攻略JSONへ保存する。"""
 import concurrent.futures
+import argparse
 import json
 import re
 import time
@@ -17,7 +18,10 @@ ROLE_TITLE = {"TOP": "Top", "JUG": "Jungle", "MID": "Middle", "ADC": "Bottom", "
 
 
 def run():
-    version, items, runes, paths, champs, spells = build_dictionaries()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--patch", help="取得対象パッチ（省略時は最新）")
+    args = parser.parse_args()
+    version, items, runes, paths, champs, spells = build_dictionaries(args.patch)
     short = ".".join(version.split(".")[:2])
     datasets = {}
     tasks = []
@@ -33,14 +37,14 @@ def run():
 
     def fetch(task):
         cid, role, slug = task
-        url = f"https://www.op.gg/champions/{slug}/build/{ROLE_PATH[role]}"
+        url = f"https://op.gg/lol/champions/{slug}/build/{ROLE_PATH[role]}?patch={short}"
         for attempt in range(3):
             try:
                 with urllib.request.urlopen(urllib.request.Request(url, headers=get_headers()), timeout=15) as response:
                     html = response.read().decode("utf-8")
                 if not re.search(r'Build for\s+' + ROLE_TITLE[role] + r',\s*Patch\s+' + re.escape(short) + r'\b', html, re.I):
                     raise ValueError("ページのロールまたはパッチが一致しません")
-                parsed = parse_opgg_rsc(html, items, runes, paths, champs, version)
+                parsed = parse_opgg_rsc(html, items, runes, paths, champs, version, champion_id=cid)
                 valid, reason = validate_parsed_opgg_data(parsed, html, slug)
                 if not valid:
                     raise ValueError(reason)

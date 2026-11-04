@@ -259,16 +259,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "凱旋",
         "背水の陣"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Health Scaling",
-      "Health Scaling"
+      "攻撃速度",
+      "スケーリング体力",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -556,16 +556,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "凱旋",
             "背水の陣"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Health Scaling",
-          "Health Scaling"
+          "攻撃速度",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -574,7 +574,97 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:48+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/ksante/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/ksante/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "アイスボーン ガントレット",
+            "終わりなき絶望",
+            "変幻自在のジャック＝ショー"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6662",
+              "name": "アイスボーン ガントレット",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "2502",
+              "name": "終わりなき絶望",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "6665",
+              "name": "変幻自在のジャック＝ショー",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン ヘルム",
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1120",
+              "name": "ドラン ヘルム"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/ksante/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/ksante/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

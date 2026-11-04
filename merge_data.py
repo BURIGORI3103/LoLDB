@@ -11,6 +11,7 @@ import copy
 import os
 from pathlib import Path
 from tqdm import tqdm
+from audit_normalization import normalize_with_evidence, pattern_from_build
 
 def load_json(path):
     if not os.path.exists(path):
@@ -31,6 +32,19 @@ CHAMPION_SLUG_ALIASES = {
 }
 
 
+def choose_matchups(previous, measured, patch, role):
+    """同一パッチ・ロールの新しい対面専用取得結果を再統合で巻き戻さない。"""
+    old = previous.get("matchups", {})
+    new = measured.get("matchups", {})
+    entries = [entry for group in old.values() for entry in group]
+    incoming = [entry for group in new.values() for entry in group]
+    if entries and all(entry.get("patch") == patch and entry.get("role") == role
+                       and entry.get("source") == "opgg_stats" and entry.get("games") is not None for entry in entries):
+        if max(entry.get("fetched_at", "") for entry in entries) >= max((entry.get("fetched_at", "") for entry in incoming), default=""):
+            return copy.deepcopy(old)
+    return copy.deepcopy(new)
+
+
 def merge_record(base, strategy, previous):
     """手動補完を保ちつつ統計を現在パッチ・現在ロールの取得結果へ置換する。"""
     if not strategy or strategy.get("patch") != base["patch"] or not strategy.get("opgg_source", {}).get("patch_verified"):
@@ -40,6 +54,10 @@ def merge_record(base, strategy, previous):
     merged["classes"] = base.get("roles", [])
     for key in ("roles", "summoner_spells", "matchups", "build", "runes", "wiki_info", "opgg_source"):
         merged[key] = copy.deepcopy(strategy.get(key, {} if key not in ("roles", "summoner_spells") else []))
+    merged["matchups"] = choose_matchups(previous, strategy, base["patch"], merged["roles"][0])
+    for key in ("build_source", "runes_source"):
+        if key in strategy:
+            merged[key] = copy.deepcopy(strategy[key])
     for entries in merged["matchups"].values():
         for entry in entries:
             entry["reason"] = "理由データなし"
@@ -51,12 +69,16 @@ def merge_record(base, strategy, previous):
             raise ValueError(f"ロール別統計がありません: {base['id']} {role}")
         rd = copy.deepcopy(old_roles.get(role, {}))
         rd.update({key: copy.deepcopy(measured[key]) for key in ("build", "runes", "matchups", "opgg_source")})
+        rd["matchups"] = choose_matchups(old_roles.get(role, {}), measured, base["patch"], role)
+        for key in ("build_source", "runes_source"):
+            if key in measured:
+                rd[key] = copy.deepcopy(measured[key])
         for entries in rd["matchups"].values():
             for entry in entries:
                 entry["reason"] = "理由データなし"
         rd["role"] = role
         rd["spells"] = measured["summoner_spells"]
-        rd["build_patterns"] = [{"name": "OP.GG 推奨ビルド", "desc": f"パッチ{base['patch']}・{role}の取得済み統計", "core": [item["name"] for item in measured["build"]["core"]], "core_items": measured["build"]["core"], "starter": [item["name"] for item in measured["build"]["starter"]], "boots": next((item["name"] for item in measured["build"]["boots"]), "取得データなし"), "situational": [], "source": "opgg_stats", "patch": base["patch"]}]
+        rd["build_patterns"] = [pattern_from_build(measured["build"], base["patch"], role)]
         rd["spell_sets"] = [{"name": "OP.GG 推奨", "spells": measured["summoner_spells"]}]
         roles[role] = rd
     merged["role_data"] = roles
@@ -66,7 +88,7 @@ def merge_record(base, strategy, previous):
     for key in ("matchup_matrix", "matchup_matrix_by_role"):
         merged.pop(key, None)
     from apply_matchup_reasons import apply_reasons, load_evidence
-    return apply_reasons(merged, load_evidence())
+    return normalize_with_evidence(apply_reasons(merged, load_evidence()), Path(__file__).resolve().parent)
 
 def find_strategy_file(strategy_dir, champ_id):
     lower_id = champ_id.lower()

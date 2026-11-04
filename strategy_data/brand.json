@@ -307,16 +307,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "冷静沈着",
         "切り崩し"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -652,16 +652,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "切り崩し"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -670,7 +670,78 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:29+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "リーライ クリスタル セプター",
+            "ライアンドリーの仮面",
+            "モレロノミコン"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3116",
+              "name": "リーライ クリスタル セプター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3165",
+              "name": "モレロノミコン",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "MID": {
       "patch": "16.21.1",
@@ -959,14 +1030,14 @@
           },
           {
             "step": 2,
-            "item_id": "3116",
-            "name": "リーライ クリスタル セプター",
+            "item_id": "6653",
+            "name": "ライアンドリーの仮面",
             "description": "推奨コア"
           },
           {
             "step": 3,
-            "item_id": "6653",
-            "name": "ライアンドリーの仮面",
+            "item_id": "3116",
+            "name": "リーライ クリスタル セプター",
             "description": "推奨コア"
           }
         ],
@@ -984,16 +1055,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Ability Haste",
-          "Adaptive Force",
-          "Health Scaling"
+          "スキルヘイスト",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1002,7 +1073,97 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:29+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/brand/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/brand/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "黒炎のトーチ",
+            "ライアンドリーの仮面",
+            "リーライ クリスタル セプター"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "2503",
+              "name": "黒炎のトーチ",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3116",
+              "name": "リーライ クリスタル セプター",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/brand/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

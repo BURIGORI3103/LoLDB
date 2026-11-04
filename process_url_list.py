@@ -18,6 +18,7 @@ import urllib.parse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from tqdm import tqdm
+from audit_normalization import decode_rsc, rsc_item_groups, is_finished_item, canonical_item_ids, SHARDS
 
 JST = timezone(timedelta(hours=9))
 
@@ -34,26 +35,38 @@ def fetch_json(url):
         return json.loads(resp.read().decode("utf-8"))
 
 
-def build_dictionaries():
+class ItemDictionary(dict):
+    """互換の名前辞書に、同一パッチの判定用公式データを添える。"""
+
+
+class RuneDictionary(dict):
+    """ルーンIDから所属ツリーも参照できる日本語辞書。"""
+
+
+def build_dictionaries(patch=None):
     print("公式Data Dragonから日本語辞書データを取得中...")
     versions_url = "https://ddragon.leagueoflegends.com/api/versions.json"
-    latest_version = fetch_json(versions_url)[0]
+    latest_version = patch or fetch_json(versions_url)[0]
 
     # アイテム辞書
     items_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/data/ja_JP/item.json"
     items_data = fetch_json(items_url)["data"]
-    item_dict = {int(k): v["name"] for k, v in items_data.items()}
+    item_dict = ItemDictionary({int(k): v["name"] for k, v in items_data.items()})
+    item_dict.raw = items_data
+    item_dict.allowed = canonical_item_ids(items_data)
 
     # ルーン辞書
     runes_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/data/ja_JP/runesReforged.json"
     runes_data = fetch_json(runes_url)
-    rune_dict = {}
+    rune_dict = RuneDictionary()
+    rune_dict.parents = {}
     path_dict = {}
     for tree in runes_data:
         path_dict[tree["id"]] = tree["name"]
         for slot in tree["slots"]:
             for rune in slot["runes"]:
                 rune_dict[rune["id"]] = rune["name"]
+                rune_dict.parents[rune["id"]] = tree["name"]
 
     # チャンピオン辞書 (key -> id/name と id.lower() -> id/name の両方)
     champs_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/data/ja_JP/champion.json"
@@ -85,16 +98,9 @@ SPELL_NAMES_MAP = {
 }
 
 
-def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_version="16.20.1"):
+def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_version="16.20.1", champion_id=None):
     """OP.GGの最新Next.js App Router (RSC) ストリームから完全な攻略データをパースする"""
-    matches = re.findall(r'self\.__next_f\.push\(\[1,\s*"((?:\\.|[^"\\])*)"\]\)', html, re.DOTALL)
-    combined = ""
-    for m in matches:
-        try:
-            unescaped = bytes(m, "utf-8").decode("unicode_escape")
-        except Exception:
-            unescaped = m.replace('\\"', '"').replace("\\\\", "\\")
-        combined += unescaped
+    combined = decode_rsc(html)
 
     fetched_date = datetime.now(JST).strftime("%Y-%m-%d")
     result = {
@@ -135,19 +141,14 @@ def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_ver
         result["summoner_spells"] = [SPELL_NAMES_MAP.get(s, s) for s in unique_spells]
 
     # 3. ルーン (rune_pages)
-    rp_pos = combined.find('{"data":{"rune_pages"')
+    rp_match = re.search(r'\{\s*"data"\s*:\s*\{\s*"rune_pages"\s*:', combined)
+    rp_pos = rp_match.start() if rp_match else -1
     if rp_pos != -1:
-        depth = 0
         end = -1
-        for i in range(rp_pos, len(combined)):
-            c = combined[i]
-            if c == "{":
-                depth += 1
-            elif c == "}":
-                depth -= 1
-                if depth == 0:
-                    end = i + 1
-                    break
+        try:
+            _, end = json.JSONDecoder().raw_decode(combined, rp_pos)
+        except ValueError:
+            pass
         if end != -1:
             try:
                 clean_json = re.sub(r":\s*\$undefined\b", ": null", combined[rp_pos:end])
@@ -176,41 +177,49 @@ def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_ver
 
                     sub_runes = top_build.get("sub_runes", [])
                     sec_choices = []
+                    sec_parents = set()
                     for row in sub_runes:
                         active_rune = next((r for r in row if r.get("isActive")), None)
                         if active_rune:
                             r_id = active_rune.get("id")
                             sec_choices.append(rune_dict.get(r_id, active_rune.get("name", "")))
+                            parent = getattr(rune_dict, "parents", {}).get(r_id)
+                            if parent:
+                                sec_parents.add(parent)
                     result["runes"]["secondary"]["choices"] = sec_choices
+                    if len(sec_parents) == 1:
+                        result["runes"]["secondary"]["path"] = sec_parents.pop()
 
                     shards = top_build.get("shards", [])
                     shard_list = []
                     for row in shards:
                         active_shard = next((s for s in row if s.get("isActive")), None)
                         if active_shard:
-                            shard_list.append(active_shard.get("name", str(active_shard.get("id", ""))))
+                            shard_list.append(SHARDS.get(active_shard.get("id"), active_shard.get("name", str(active_shard.get("id", "")))))
                     result["runes"]["shards"] = shard_list
             except Exception:
                 pass
 
     # 4. アイテム (starter, boots, core)
-    s_block = re.search(r'"starter_items_0".*?(?=boots_|"core_items_|$)', combined)
-    if s_block:
-        starter_ids = re.findall(r'"metaId":(\d+)', s_block.group(0))
+    starter_groups = rsc_item_groups(combined, "starter_items")
+    if starter_groups:
+        starter_ids = starter_groups[0]
         for s_id in list(dict.fromkeys(starter_ids))[:2]:
             int_id = int(s_id)
             result["build"]["starter"].append({"item_id": s_id, "name": item_dict.get(int_id, f"アイテム_{s_id}")})
 
-    b_matches = re.findall(r'"boots_\d+".*?"metaId":(\d+)', combined)
+    b_matches = [ids[0] for ids in rsc_item_groups(combined, "boots") if ids]
     for b_id in list(dict.fromkeys(b_matches))[:2]:
         int_id = int(b_id)
         result["build"]["boots"].append(
             {"item_id": b_id, "name": item_dict.get(int_id, f"靴_{b_id}"), "condition": "推奨靴"}
         )
 
-    core_block = re.search(r'"core_items_0".*?(?=core_items_1|boots_|$)', combined)
-    if core_block:
-        core_ids = re.findall(r'"metaId":(\d+)', core_block.group(0))
+    core_groups = rsc_item_groups(combined, "core_items")
+    if core_groups:
+        core_ids = core_groups[0]
+        if hasattr(item_dict, "raw"):
+            core_ids = [iid for iid in core_ids if is_finished_item(iid, item_dict.raw, item_dict.allowed)]
         for step, c_id in enumerate(list(dict.fromkeys(core_ids))[:3], 1):
             int_id = int(c_id)
             result["build"]["core"].append(
@@ -221,6 +230,9 @@ def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_ver
                     "description": "推奨コア",
                 }
             )
+
+    if champion_id == "Cassiopeia":
+        result["build"]["boots"] = []
 
     # 5. カウンター (counters) - レーン・パッチ・取得日・参照元メタデータを付与
     counters = re.findall(r'"target_champion":"([a-z0-9]+)".*?"children":"(\d+\.\d+)%"', combined)
@@ -314,6 +326,7 @@ def run():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh", action="store_true", help="チェック済みも再取得")
     parser.add_argument("--reuse-wiki", action="store_true", help="取得済みのwiki情報を再利用")
+    parser.add_argument("--patch", help="取得対象のData Dragonパッチ（省略時は最新）")
     args = parser.parse_args()
     base_dir = Path(__file__).resolve().parent
     doc_paths = [
@@ -333,7 +346,7 @@ def run():
         return
 
     print(f"URLリスト参照先: {md_path}")
-    latest_version, item_dict, rune_dict, path_dict, champ_dict, spell_dict = build_dictionaries()
+    latest_version, item_dict, rune_dict, path_dict, champ_dict, spell_dict = build_dictionaries(args.patch)
     output_dir = base_dir / "strategy_data"
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -408,7 +421,8 @@ def run():
                     html = resp.read().decode("utf-8")
 
                 parsed = parse_opgg_rsc(
-                    html, item_dict, rune_dict, path_dict, champ_dict, latest_version=latest_version
+                    html, item_dict, rune_dict, path_dict, champ_dict, latest_version=latest_version,
+                    champion_id=champ_dict.get(champ_slug, {}).get("id")
                 )
                 is_valid, reason_msg = validate_parsed_opgg_data(parsed, html, champ_slug)
                 short_patch = ".".join(latest_version.split(".")[:2])

@@ -306,16 +306,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "ビスケットデリバリー",
         "宇宙の英知"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Health Scaling",
-      "Health Scaling"
+      "攻撃速度",
+      "スケーリング体力",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -650,16 +650,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "ビスケットデリバリー",
             "宇宙の英知"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Health Scaling",
-          "Health Scaling"
+          "攻撃速度",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -668,7 +668,92 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:29+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/braum/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/braum/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ソラリのロケット",
+            "騎士の誓い",
+            "バンドルパイプ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3190",
+              "name": "ソラリのロケット",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3109",
+              "name": "騎士の誓い",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "2524",
+              "name": "バンドルパイプ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "体力ポーション"
+          ],
+          "boots": "プレート スチールキャップ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/braum/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/braum/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

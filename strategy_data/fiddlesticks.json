@@ -258,10 +258,6 @@
       {
         "item_id": "1102",
         "name": "ガストウォーカーの幼体"
-      },
-      {
-        "item_id": "1101",
-        "name": "スコーチクロウの幼体"
       }
     ],
     "boots": [
@@ -310,16 +306,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "アクシオム アルカニスト",
         "至高"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -606,10 +602,6 @@
           {
             "item_id": "1102",
             "name": "ガストウォーカーの幼体"
-          },
-          {
-            "item_id": "1101",
-            "name": "スコーチクロウの幼体"
           }
         ],
         "boots": [
@@ -658,16 +650,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "至高"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -676,7 +668,92 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:34+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/fiddlesticks/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/fiddlesticks/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "マリグナンス",
+            "ライアンドリーの仮面",
+            "ゾーニャの砂時計"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3118",
+              "name": "マリグナンス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "6653",
+              "name": "ライアンドリーの仮面",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3157",
+              "name": "ゾーニャの砂時計",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/fiddlesticks/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/fiddlesticks/build/jungle?patch=16.21",
+    "patch": "16.21",
+    "role": "JUG",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

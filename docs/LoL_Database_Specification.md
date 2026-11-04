@@ -1,184 +1,58 @@
----
-tags:
-  - LoLDB
----
-League of Legends 攻略データベース自動収集・統合システム 仕様書
-​作成日: 2026-10-02
-対象パッチ: 最新パッチ対応型
+LoLDB データ・生成仕様
 
-​【1. システム概要】
-​本システムは、League of Legends（LoL）に登場する全チャンピオンの基本ステータス、スキル情報、推奨サモナースペル、推奨ビルド、ルーン構成、有利不利な対面相性、立ち回りメモを自動で収集・統合し、オフライン環境（スマートフォンおよびPC）で快適に閲覧できる単一Webアプリケーション（PWA）の基礎データを構築するための仕組みです。
-公式データ、統計サイト、攻略wikiの各長所を抽出し、単一のマスターデータ（all_champions.json）へと集約します。  
+【正本と統合】
 
-​【2. 設計方針とアーキテクチャ選定理由】
-​・Obsidian単体管理を採用しない理由
-マークダウンファイルによる管理はデータ量（160体以上）が増えると端末同期の競合や動作遅延が発生しやすくなります。また、OP.GGのような視覚的なカード型UIをスマートフォン上で再現するにはプラグイン負荷が大きすぎるため、最終閲覧環境は単一HTMLによるPWA（プログレッシブウェブアプリ）を採用します。  
+設計上の正本はproject_context.md、実データの正本はmerged_data/all_champions.jsonとall_items.json。個別チャンピオンJSONはマスターと一致させる。
 
-​・AIによる手作業登録（Gemini Notebook）を自動化へ切り替えた理由
-初期構想ではGemini NotebookにURLを1件ずつ投入して要約させる方式を検討しましたが、登録件数上限の制限に抵触すること、および手作業による人為的ミスやフォーマット崩れが多発することから廃止しました。データ収集はすべてAntigravity（Python実行環境）による自動スクレイピングおよびAPI通信へ移行しています。  
+1. fetch_champions.pyが公式の基礎値・パッシブ・通常スキルを取得する。
+2. process_url_list.pyとrefresh_role_stats.pyがOP.GGのチャンピオン・ロール・パッチを照合する。
+3. merge_data.pyが取得済み統計を統合し、手動補完と同一パッチの新しい対面取得結果を保持する。未検証パッチやロール不足では停止する。
+4. audit_normalization.pyが説明文・見出し・ビルド属性・ID参照・確認済み攻略根拠を正規化する。汎用コンボや固定ビルドを欠損補完として生成しない。
+5. build_pwa.pyがHTML、マニフェスト、Service Worker、ZIPを生成する。ui_helpers.jsはHTMLへ埋め込む。
 
-​・旧スクリプトの廃止と一本化
-初期に検討していた旧スクリプト（fetch_opgg_strategy.py）はOP.GGの取得のみを担当していましたが、後から開発したURLリスト連携スクリプト（process_url_list.py）がURLリスト（LoL_URL_list.md）の参照、進捗チェックボックスの自動更新、日本語wikiからの立ち回り抽出機能を内包した上位互換となったため、完全廃止としました。
+パッチ指定対応の収集スクリプトは--patchで対象を明示でき、省略時は最新を取得する。統合時はパッチ混在を拒否する。repair_audit_data.pyは--patchを必須とし、正本との一致を要求する。
 
-​【3. ディレクトリ構成】
-​ローカルPC（Cドライブ直下）における正式なディレクトリ構成は以下の通りです。
-​C:\Project\LoLDB
-│
-├─ docs\ （設計資材格納フォルダ）
-│   ├─ LoL_Database_Specification.md
-│   ├─ LoL_URL_list.md
-│   ├─ 01_fetch_champions.py.md
-│   ├─ 02_process_url_list.py.md
-│   ├─ 03_merge_data.py.md
-│   └─ Patchnote_URL.md
-│
-├─ fetch_champions.py （docsから抽出・実体化）
-├─ process_url_list.py （docsから抽出・実体化）
-├─ merge_data.py （docsから抽出・実体化）
-├─ build_pwa.py （後続の単一HTML生成用スクリプト）
-│
-├─ champions_data\ （fetch_champions.pyの出力先JSON群）
-├─ strategy_data\ （process_url_list.pyの出力先JSON群）
-├─ merged_data\ （merge_data.pyの出力先）
-│   └─ all_champions.json （統合マスターデータ）
-└─ dist\ （完成アプリ出力先）
-├─ index.html （オフライン動作Webアプリ本体）
-└─ sw.js （Service Workerキャッシュスクリプト）
+【チャンピオン】
 
-​【4. 実行手順と各コンポーネントの役割】
-​ステップ1：公式基礎データの取得
-実行ファイル：fetch_champions.py
-役割：Riot Gamesが提供する公式Data Dragonのエンドポイントへアクセスし、全チャンピオンの基本ステータス（体力、攻撃力、防御力等）、スキル詳細テキスト、クールダウン、消費リソース、画像ファイル名を一括取得します。
-出力先：champions_data フォルダ（Aatrox.json, Garen.json など）  
+| 項目 | 内容 |
+|---|---|
+| id / key / name / title / patch | 公式ID、数値ID、日本語名、二つ名、Data Dragonパッチ |
+| classes / roles | 公式クラスと取得済み運用ロールを別々に保持 |
+| stats | 公式ステータス |
+| abilities | パッシブ配列。slotはPassive |
+| spells | Q・W・E・R配列。slot、名称、説明、CD、コスト、画像 |
+| role_data | TOP・JUG・MID・ADC・SUPをキーとするロール別情報 |
+| build / runes / build_patterns | 第1ロールに対応する情報 |
+| matchups / matchup_matrix_by_role | 検証済み対面統計とロール別正規化結果 |
+| wiki_info / wiki_matchups | wiki考察抜粋と掲載相性。統計と分離 |
+| overview | 確認済み概要のsummaryと出典。汎用の強み・弱みを生成しない |
+| attack_type / damage_profile / sustain_info | 通常攻撃タイプ、ダメージ属性、回復・シールド情報 |
 
-​ステップ2：統計攻略データの収集と進捗更新
-実行ファイル：process_url_list.py
-役割：docs/LoL_URL_list.md を上から読み込み、未チェック（- [ ]）のチャンピオンに対して順次処理を行います。  
-​OP.GGから最新のサモナースペル、コアアイテム、推奨靴、スタートアイテム、ルーンツリー、対面勝率データを取得し、公式日本語辞書と照合して日本語名へ自動変換します。  
-​OP.GGの統計から実際に運用されているポジション（TOP、JUG、MID、ADC、SUP）を抽出し、正規化して保持します。  
-​日本語wikiから立ち回り概要テキストを抽出します。  
-​取得結果を strategy_data フォルダに保存します。  
-​処理が正常終了した行のチェックボックスを（- [x]）へ自動更新します。途中で通信が中断しても、再実行時は未チェック行から即座に再開可能です。
-出力先：strategy_data フォルダ  
+説明文は独自タグを除去し、改行を保持する。abilitiesとspellsは役割が異なるため両方を保持する。
 
-​ステップ3：データの結合とマスターファイル出力
-実行ファイル：merge_data.py
-役割：champions_data（公式基礎値）と strategy_data（攻略統計値）をチャンピオンIDをキーにして突合し、完全な構造体として統合します。
-公式側のクラス情報（FighterやTankなど）は破棄し、process_url_list.py で取得した実運用レーン情報（TOPやMIDなど）でrolesを上書きします。また、サモナースペル情報も追加統合します。攻略データが未取得のチャンピオンが存在する場合でも、空のテンプレートを補完してエラー落ちを防ぎます。
-出力先：merged_data/all_champions.json  
+【ビルド・ルーン・アイテム】
 
-​【5. 最終統合データ（JSON）のスキーマ定義】
-​all_champions.json 内の各チャンピオンオブジェクトは以下の完全な構造を持ちます。ガレンの全スキル（パッシブおよびQ・W・E・R）と現行メタの推奨アイテムを適用した完全な見本です。  
+- buildのstarter・boots・core・situationalはitem_idとnameを持つ配列。
+- build_patternsのcore_items・starter_items・boots_items・situational_itemsもID付き配列。旧core・starter・boots・situationalは互換用に保持し、描画はID付き配列を使う。
+- 不明なアイテムを既定の別アイテムへ置換しない。カシオペアの靴は全保存層・全パターンで空とする。
+- コアは取得元の完成品の組み合わせから採用する。通常の素材とspecialRecipe等による変身・専用強化を区別し、不足枠を推測で補わない。
+- runes.primaryはpath・keystone・keystone_name・choices、secondaryはpath・choices、shardsは日本語名配列。
+- rune_reference.jsonは公式ルーン名と親ツリーの対応を対象パッチ付きで保存する。
+- 図鑑は通常サモナーズリフト用を選別する。6桁のモード別クローン、内部ペットIDを除外し、変身後の正当なアイテムは保持する。from・intoは存在するIDだけを参照する。
+- nameは公式名を保持する。正当な専用品の同名はrequiredChampionで区別し、display_nameに専用条件を付ける。価格・ステータス・合成先はIDで参照する。
 
-{
-  "id": "Garen",
-  "name": "ガレン",
-  "title": "デマーシアの勇士",
-  "patch": "14.20.1",
-  "roles": ["TOP"],
-  "resource": "なし",
-  "summoner_spells": ["フラッシュ", "イグナイト"],
-  "stats": {
-    "hp": 690,
-    "hp_growth": 98,
-    "attack_damage": 69,
-    "ad_growth": 4.5,
-    "armor": 38,
-    "magic_resist": 32,
-    "attack_range": 175
-  },
-  "abilities": [
-    {
-      "slot": "Passive",
-      "name": "タフガイ",
-      "description": "一定時間ダメージを受けずにいると、最大体力の一定割合を毎秒回復する。",
-      "image": "Garen_Passive.png"
-    }
-  ],
-  "spells": [
-    {
-      "slot": "Q",
-      "name": "断固たる一撃",
-      "description": "自身にかかっているすべてのスロウ効果を解除し、移動速度が増加する。次の通常攻撃が強化され、追加物理ダメージを与えて対象にサイレンスを付与する。",
-      "cooldown": "8",
-      "cost": "0",
-      "image": "GarenQ.png"
-    },
-    {
-      "slot": "W",
-      "name": "勇気の護り",
-      "description": "敵ユニット撃破時に物理防御と魔法防御が恒久的に増加する。発動すると短時間シールドと行動妨害耐性を得て、被ダメージを軽減する。",
-      "cooldown": "23/21/19/17/15",
-      "cost": "0",
-      "image": "GarenW.png"
-    },
-    {
-      "slot": "E",
-      "name": "ジャッジメント",
-      "description": "剣を構えて高速回転し、周囲の敵に複数回物理ダメージを与える。最も近くにいる敵にはダメージが増加し、複数回命中した敵の物理防御を低下させる。",
-      "cooldown": "9",
-      "cost": "0",
-      "image": "GarenE.png"
-    },
-    {
-      "slot": "R",
-      "name": "デマーシアの正義",
-      "description": "敵チャンピオンにデマーシアの正義をもたらし、対象の減少体力に応じた確定ダメージを与える。",
-      "cooldown": "120/100/80",
-      "cost": "0",
-      "image": "GarenR.png"
-    }
-  ],
-  "matchups": {
-    "favorable": [
-      { "champion_id": "Nasus", "name": "ナサス", "reason": "勝率 53.8%（統計的に有利）" },
-      { "champion_id": "Jax", "name": "ジャックス", "reason": "勝率 52.4%（統計的に有利）" },
-      { "champion_id": "Riven", "name": "リヴェン", "reason": "勝率 51.9%（統計的に有利）" }
-    ],
-    "unfavorable": [
-      { "champion_id": "Camille", "name": "カミール", "reason": "勝率 47.1%（統計的に不利）" },
-      { "champion_id": "Darius", "name": "ダリウス", "reason": "勝率 46.5%（統計的に不利）" },
-      { "champion_id": "Kayle", "name": "ケイル", "reason": "勝率 45.8%（統計的に不利）" }
-    ]
-  },
-  "build": {
-    "starter": [
-      { "item_id": "1055", "name": "ドラン ブレード" },
-      { "item_id": "2003", "name": "体力ポーション" }
-    ],
-    "boots": [
-      { "item_id": "3006", "name": "バーサーカー ブーツ", "condition": "攻撃速度と回転数重視（標準）" },
-      { "item_id": "3047", "name": "プレート スチールキャップ", "condition": "敵ADが重い場合" }
-    ],
-    "core": [
-      { "step": 1, "item_id": "6631", "name": "ストライドブレイカー", "description": "接近力強化とスロウ付与の最重要アイテム" },
-      { "step": 2, "item_id": "3046", "name": "ファントム ダンサー", "description": "移動速度と攻撃速度の確保" },
-      { "step": 3, "item_id": "3071", "name": "ブラック クリーバー", "description": "物理防御低下と体力・攻撃力の向上" }
-    ],
-    "situational": [
-      { "item_id": "3143", "name": "ランデュイン オーメン", "condition": "敵のクリティカル火力が高い場合" },
-      { "item_id": "4401", "name": "自然の力", "condition": "敵の継続魔法ダメージが重い場合" }
-    ]
-  },
-  "runes": {
-    "primary": {
-      "path": "魔道",
-      "keystone": "8230",
-      "keystone_name": "フェイズラッシュ",
-      "choices": ["ニンバスクローク", "追い風", "強風"]
-    },
-    "secondary": {
-      "path": "不撓",
-      "choices": ["息継ぎ", "過剰成長"]
-    },
-    "shards": ["アダプティブフォース", "移動速度", "体力（レベル比例）"]
-  },
-  "gameplay_notes": {
-    "laning": "序盤は相手のスキル使用後にQで接近しEでトレードを行う。体力が減ったらパッシブで回復してレーン戦を有利に進める。",
-    "teamfight": "ストライドブレイカーとQの加速を活かして敵後衛キャリーに張り付き、沈黙と高火力EからのRで確実に仕留める。"
-  }
-}
+【攻略根拠と欠落】
 
-【6. 今後の開発展開（Webアプリ化）】
-​生成された all_champions.json を読み込み、Tailwind CSSを用いたダークテーマの単一HTMLファイルをAntigravityで生成します。
-roles（TOP、JUG、MID、ADC、SUP）を用いたタブ切り替えフィルター、名前検索バー、対面相性カードを配置し、Service Workerを登録して完全オフライン動作を実現します。
+role_guidance_evidence.jsonはchampion_id・role・field・value・source_url・source_patch・checked_at・verifiedを持つレコード配列。対象と確認済み状態を照合して適用し、明示パッチが正本と違う情報は適用しない。文章のパッチ対応未検証は表示する。
+
+Lux ADC・Sion MID・Tristana MIDはOP.GGのパッチ16.21のスキル順と、対象ロールを明示したMobalyticsの文章攻略を参照する。取得表は掲載されたLv1〜15のみを保存する。未取得は未取得と表示し、別ロールや汎用テンプレートを専用情報として出さない。
+
+対面の相性理由は別のmatchup_reason_evidence.jsonを使用する。チャンピオン・相手・ロール・有利不利方向が一致する文献確認済み理由のみを表示し、文章攻略を勝率の根拠へ転用しない。
+
+【配布・描画・検証】
+
+- 配布HTMLだけで共通情報の重複を減らし、正本JSONは削らない。廃止シミュレーターの処理と未使用の分割チャンピオン・アイテムJSONは配布しない。
+- script内JSONの境界文字をエスケープする。動的テキスト、属性値、外部URL、画像URL、CSSクラスは別々に検証する。
+- モーダルは種類・ID・選択ロールを履歴へ保存し、戻る・進むで復元する。最上位だけを操作可能とし、終了時にスクロールとフォーカスを戻す。
+- HTMLは最新優先、画像はキャッシュを使いながら更新する。省データ・低速回線では画像の一括先読みを止める。未キャッシュ画像と外部出典のオフライン利用は保証しない。
+- python -m unittest discover -s tests、node tests/test_ui_behavior.cjs、python verify_patch_data.py、python verify_matchup_fix.pyで生成物・パッチ・ロール・個別JSON・文献照合・キャッシュを検証する。

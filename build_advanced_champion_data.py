@@ -240,50 +240,17 @@ def generate_rich_gameplay_notes(champ_id, champ_name, role, title):
             }
 
 def main():
-    base_dir = Path(__file__).resolve().parent
-    master_file = base_dir / "merged_data" / "all_champions.json"
-    items_file = base_dir / "merged_data" / "all_items.json"
+    """既存の実測・手動補完を保持し、確認済み情報だけを適用する。"""
+    from audit_normalization import normalize_with_evidence
+    base = Path(__file__).resolve().parent
+    master = base / "merged_data/all_champions.json"
+    champions = json.loads(master.read_text(encoding="utf-8"))
+    for cid in tqdm(champions, desc="確認済み補完の同期"):
+        champions[cid] = normalize_with_evidence(champions[cid], base)
+        (base / "merged_data" / f"{cid}.json").write_text(json.dumps(champions[cid], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    master.write_text(json.dumps(champions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"{len(champions)}体の確認済み情報を同期しました。固定ビルド・汎用コンボは生成しません。")
 
-    with open(master_file, "r", encoding="utf-8") as f:
-        champions = json.load(f)
-
-    with open(items_file, "r", encoding="utf-8") as f:
-        items_db = json.load(f)
-
-    print(f"全 {len(champions)} 体のチャンピオン高度データ更新（QWERコンボ、スペル2セット、スキルマトリクス、立ち回り）を開始...")
-
-    for cid, c in tqdm(champions.items(), desc="高度データ生成中"):
-        # 1. コンボ (QWER表記)
-        if cid in UNIQUE_COMBOS_QWER:
-            c["combos"] = UNIQUE_COMBOS_QWER[cid]
-        else:
-            c["combos"] = generate_default_combos(cid, c.get("spells", []))
-
-        # 2. スキルマトリクス
-        skill_order = c.get("skill_order", "Q > E > W")
-        c["skill_matrix"] = generate_skill_matrix(skill_order)
-
-        # 3. 立ち回りメモ
-        c["gameplay_notes"] = generate_rich_gameplay_notes(cid, c.get("name", cid), c.get("roles", ["TOP"])[0], c.get("title", ""))
-
-        # 4. 各ロールごとの同期
-        role_data = c.get("role_data", {})
-        for r_name, rd in role_data.items():
-            rd["combos"] = c["combos"]
-            r_skill_order = rd.get("skill_order", skill_order)
-            rd["skill_matrix"] = generate_skill_matrix(r_skill_order)
-            rd["spell_sets"] = generate_spell_sets(cid, r_name)
-            rd["gameplay_notes"] = generate_rich_gameplay_notes(cid, c.get("name", cid), r_name, c.get("title", ""))
-
-        # primary role のスペルセット
-        primary_role = c.get("roles", ["TOP"])[0]
-        if primary_role in role_data:
-            c["spell_sets"] = role_data[primary_role]["spell_sets"]
-
-    with open(master_file, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
-
-    print(f"\n[SUCCESS] 全 {len(champions)} 体の高度データ更新が完了しました！")
 
 if __name__ == "__main__":
     main()

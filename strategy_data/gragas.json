@@ -281,20 +281,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "3070",
-        "name": "女神の涙",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6657",
         "name": "ロッド オブ エイジス",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3121",
         "name": "フィンブルウィンター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "4629",
+        "name": "コズミック ドライブ",
         "description": "推奨コア"
       }
     ],
@@ -312,16 +312,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "ビスケットデリバリー",
         "宇宙の英知"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -630,20 +630,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6657",
             "name": "ロッド オブ エイジス",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3121",
             "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "4629",
+            "name": "コズミック ドライブ",
             "description": "推奨コア"
           }
         ],
@@ -661,16 +661,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "ビスケットデリバリー",
             "宇宙の英知"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -679,7 +679,83 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:38+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/gragas/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/gragas/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ロッド オブ エイジス",
+            "フィンブルウィンター",
+            "コズミック ドライブ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6657",
+              "name": "ロッド オブ エイジス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3121",
+              "name": "フィンブルウィンター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "4629",
+              "name": "コズミック ドライブ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "アイオニア ブーツ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "JUG": {
       "patch": "16.21.1",
@@ -994,16 +1070,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "至高",
             "水走り"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1012,7 +1088,83 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:38+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/gragas/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/gragas/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "リッチ ベイン",
+            "シャドウフレイム",
+            "ゾーニャの砂時計"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3100",
+              "name": "リッチ ベイン",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4645",
+              "name": "シャドウフレイム",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3157",
+              "name": "ゾーニャの砂時計",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ガストウォーカーの幼体",
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     },
     "MID": {
       "patch": "16.21.1",
@@ -1327,16 +1479,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "マナフローバンド",
             "追火"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -1345,7 +1497,97 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:38+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/gragas/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/gragas/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "リッチ ベイン",
+            "シャドウフレイム",
+            "ラバドン デスキャップ"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "3100",
+              "name": "リッチ ベイン",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "4645",
+              "name": "シャドウフレイム",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3089",
+              "name": "ラバドン デスキャップ",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "ソーサラー シューズ",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3020",
+              "name": "ソーサラー シューズ",
+              "condition": "推奨靴"
+            },
+            {
+              "item_id": "3158",
+              "name": "アイオニア ブーツ",
+              "condition": "推奨靴"
+            }
+          ],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/gragas/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/gragas/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

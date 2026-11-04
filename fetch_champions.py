@@ -8,19 +8,21 @@ champions_dataフォルダへ保存します。
 import json
 import os
 import urllib.request
+import argparse
 from tqdm import tqdm
+from audit_normalization import plain_text
 
 NETWORK_TIMEOUT_SECONDS = 15
 DEFAULT_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) LoLDB/2.6"}
 
 
-def fetch_lol_data():
+def fetch_lol_data(patch=None):
     versions_url = "https://ddragon.leagueoflegends.com/api/versions.json"
     print("🔧 ステップ 1/3: 最新バージョンを確認中... (33%)")
     ver_req = urllib.request.Request(versions_url, headers=DEFAULT_HEADERS)
     with urllib.request.urlopen(ver_req, timeout=NETWORK_TIMEOUT_SECONDS) as response:
         versions = json.loads(response.read().decode("utf-8"))
-        latest_version = versions[0]
+        latest_version = patch or versions[0]
     print(f"最新バージョン: {latest_version}")
 
     data_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/data/ja_JP/championFull.json"
@@ -48,7 +50,7 @@ def fetch_lol_data():
                 {
                     "slot": "Passive",
                     "name": champ_info["passive"]["name"],
-                    "description": champ_info["passive"]["description"],
+                    "description": plain_text(champ_info["passive"]["description"]),
                     "image": champ_info["passive"]["image"]["full"],
                 }
             ],
@@ -62,7 +64,7 @@ def fetch_lol_data():
                 {
                     "slot": slot_name,
                     "name": spell["name"],
-                    "description": spell["description"],
+                    "description": plain_text(spell["description"]),
                     "cooldown": spell["cooldownBurn"],
                     "cost": spell["costBurn"],
                     "image": spell["image"]["full"],
@@ -77,4 +79,6 @@ def fetch_lol_data():
 
 
 if __name__ == "__main__":
-    fetch_lol_data()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--patch", help="取得対象パッチ（省略時は最新）")
+    fetch_lol_data(parser.parse_args().patch)

@@ -506,95 +506,17 @@ def generate_role_patterns(champ_id, champ, role, is_primary, arch, item_map):
     return pats
 
 def main():
-    base_dir = Path(__file__).resolve().parent
-    master_file = base_dir / "merged_data" / "all_champions.json"
-    items_file = base_dir / "merged_data" / "all_items.json"
+    """既存の実測・手動補完を保持し、確認済み情報だけを適用する。"""
+    from audit_normalization import normalize_with_evidence
+    base = Path(__file__).resolve().parent
+    master = base / "merged_data/all_champions.json"
+    champions = json.loads(master.read_text(encoding="utf-8"))
+    for cid in tqdm(champions, desc="確認済み補完の同期"):
+        champions[cid] = normalize_with_evidence(champions[cid], base)
+        (base / "merged_data" / f"{cid}.json").write_text(json.dumps(champions[cid], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    master.write_text(json.dumps(champions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"{len(champions)}体の確認済み情報を同期しました。固定ビルド・汎用コンボは生成しません。")
 
-    with open(master_file, "r", encoding="utf-8") as f:
-        champions = json.load(f)
-
-    with open(items_file, "r", encoding="utf-8") as f:
-        items_db = json.load(f)
-
-    item_map = {v["name"]: k for k, v in items_db.items()}
-
-    print(f"全 {len(champions)} 体のロール別アイテムビルド＆スペル同期を開始します...")
-
-    for cid, c in tqdm(champions.items(), desc="ロール別ビルド同期中"):
-        c_roles = c.get("roles", ["TOP"])
-        primary_role = c_roles[0] if c_roles else "TOP"
-        arch = detect_champ_archetype(cid, c, items_db)
-
-        role_data = {}
-        for r_name in c_roles:
-            is_primary = (r_name == primary_role)
-
-            # スペル決定
-            if r_name == "JUG":
-                if cid in ["Hecarim", "Warwick", "Olaf", "Singed"]:
-                    r_spells = ["スマイト", "ゴースト"]
-                elif cid in ["Shaco"]:
-                    r_spells = ["スマイト", "イグナイト"]
-                else:
-                    r_spells = ["スマイト", "フラッシュ"]
-                r_note = "高速なジャングルキャンプ巡回、ガンクによるレーン介入、ドラゴン・ヘラルドのオブジェクト管理を担当。"
-
-            elif r_name == "SUP":
-                if cid in ["Soraka", "Janna", "Lulu", "Yuumi", "Milio"]:
-                    r_spells = ["フラッシュ", "イグゾースト"]
-                elif cid in ["Pyke", "Blitzcrank", "Leona", "Nautilus", "Thresh", "Brand", "Zyra"]:
-                    r_spells = ["フラッシュ", "イグナイト"]
-                else:
-                    r_spells = ["フラッシュ", "イグナイト"]
-                r_note = "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。"
-
-            elif r_name == "ADC":
-                if cid in ["Jinx", "Twitch", "Zeri", "Ashe"]:
-                    r_spells = ["フラッシュ", "ゴースト"]
-                elif cid in ["Ezreal", "Vayne", "Kaisa"]:
-                    r_spells = ["フラッシュ", "ヒール"]
-                else:
-                    r_spells = ["フラッシュ", "バリア"]
-                r_note = "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。"
-
-            elif r_name == "MID":
-                if cid in ["Zed", "Talon", "Katarina", "Fizz", "Akali", "Naafiri", "Leblanc"]:
-                    r_spells = ["フラッシュ", "イグナイト"]
-                else:
-                    r_spells = ["フラッシュ", "テレポート"]
-                r_note = "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。"
-
-            else: # TOP
-                if cid in ["Gwen", "Darius", "Olaf", "Singed"]:
-                    r_spells = ["ゴースト", "フラッシュ"]
-                elif cid in ["Camille", "Akali"]:
-                    r_spells = ["テレポート", "イグナイト"]
-                else:
-                    r_spells = ["フラッシュ", "テレポート"]
-                r_note = "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。"
-
-            # ロール専用ビルドパターン生成
-            r_patterns = generate_role_patterns(cid, c, r_name, is_primary, arch, item_map)
-
-            role_data[r_name] = {
-                "role": r_name,
-                "spells": r_spells,
-                "skill_order": c.get("skill_order", "Q > E > W"),
-                "role_note": r_note,
-                "build_patterns": r_patterns
-            }
-
-        c["role_data"] = role_data
-
-        # c["build_patterns"] も第1ロールのパターンで同期
-        if primary_role in role_data:
-            c["build_patterns"] = role_data[primary_role]["build_patterns"]
-
-    # 保存
-    with open(master_file, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
-
-    print(f"\n[SUCCESS] 全 {len(champions)} 体のロール別アイテムビルドとスペルを完全同期しました！")
 
 if __name__ == "__main__":
     main()

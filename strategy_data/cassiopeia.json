@@ -264,35 +264,24 @@
         "name": "体力ポーション"
       }
     ],
-    "boots": [
-      {
-        "item_id": "3009",
-        "name": "スイフトネス ブーツ",
-        "condition": "推奨靴"
-      },
-      {
-        "item_id": "3020",
-        "name": "ソーサラー シューズ",
-        "condition": "推奨靴"
-      }
-    ],
+    "boots": [],
     "core": [
       {
         "step": 1,
-        "item_id": "3070",
-        "name": "女神の涙",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "6657",
         "name": "ロッド オブ エイジス",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3040",
         "name": "セラフ エンブレイス",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3116",
+        "name": "リーライ クリスタル セプター",
         "description": "推奨コア"
       }
     ],
@@ -310,16 +299,16 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "栄華",
       "choices": [
         "冷静沈着",
         "最期の慈悲"
       ]
     },
     "shards": [
-      "Adaptive Force",
-      "Adaptive Force",
-      "Health Scaling"
+      "アダプティブフォース",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
@@ -612,35 +601,24 @@
             "name": "体力ポーション"
           }
         ],
-        "boots": [
-          {
-            "item_id": "3009",
-            "name": "スイフトネス ブーツ",
-            "condition": "推奨靴"
-          },
-          {
-            "item_id": "3020",
-            "name": "ソーサラー シューズ",
-            "condition": "推奨靴"
-          }
-        ],
+        "boots": [],
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "6657",
             "name": "ロッド オブ エイジス",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3040",
             "name": "セラフ エンブレイス",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3116",
+            "name": "リーライ クリスタル セプター",
             "description": "推奨コア"
           }
         ],
@@ -658,16 +636,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "冷静沈着",
             "最期の慈悲"
           ]
         },
         "shards": [
-          "Adaptive Force",
-          "Adaptive Force",
-          "Health Scaling"
+          "アダプティブフォース",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "opgg_source": {
@@ -676,7 +654,86 @@
         "patch_verified": true,
         "role": "MID",
         "fetched_at": "2026-10-30T09:26:31+09:00"
-      }
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "build_patterns": [
+        {
+          "name": "OP.GG 推奨ビルド",
+          "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
+          "core": [
+            "ロッド オブ エイジス",
+            "セラフ エンブレイス",
+            "リーライ クリスタル セプター"
+          ],
+          "core_items": [
+            {
+              "step": 1,
+              "item_id": "6657",
+              "name": "ロッド オブ エイジス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 2,
+              "item_id": "3040",
+              "name": "セラフ エンブレイス",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3116",
+              "name": "リーライ クリスタル セプター",
+              "description": "推奨コア"
+            }
+          ],
+          "starter": [
+            "ドラン リング",
+            "体力ポーション"
+          ],
+          "boots": "",
+          "situational": [],
+          "starter_items": [
+            {
+              "item_id": "1056",
+              "name": "ドラン リング"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [],
+          "situational_items": []
+        }
+      ]
     }
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/cassiopeia/build/mid?patch=16.21",
+    "patch": "16.21",
+    "role": "MID",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
   }
 }

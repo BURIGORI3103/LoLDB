@@ -34,7 +34,7 @@
     {
       "slot": "Passive",
       "name": "旅人の呼び声",
-      "description": "<font color='#FF9900'>ミィプ:</font> ミィプと呼ばれる精霊を呼び寄せて通常攻撃を支援させ、追加魔法ダメージを与える。一定数の<font color='#cccc00'>チャイム</font>を集めると、ミィプの攻撃が範囲攻撃になり、命中した敵にスロウ効果も与えるようになる。<br><br><font color='#FF9900'>いにしえの鐘:</font> 古代の<font color='#cccc00'>チャイム</font>がランダムに出現し、回収するたびに経験値を獲得して、マナが回復するほか、非戦闘時の移動速度が増加する。",
+      "description": "ミィプ: ミィプと呼ばれる精霊を呼び寄せて通常攻撃を支援させ、追加魔法ダメージを与える。一定数のチャイムを集めると、ミィプの攻撃が範囲攻撃になり、命中した敵にスロウ効果も与えるようになる。\n\nいにしえの鐘: 古代のチャイムがランダムに出現し、回収するたびに経験値を獲得して、マナが回復するほか、非戦闘時の移動速度が増加する。",
       "image": "Bard_Passive.png"
     }
   ],
@@ -419,22 +419,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "魔法の靴",
         "なんでも屋"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Move Speed",
-      "Health Scaling"
+      "攻撃速度",
+      "移動速度",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-    "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-    "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+    "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+    "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+    "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
   },
   "damage_profile": {
     "primary_type": "AP",
@@ -455,9 +455,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+        "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
       },
       "runes": {
         "primary": {
@@ -471,16 +471,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "なんでも屋"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Move Speed",
-          "Health Scaling"
+          "攻撃速度",
+          "移動速度",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -771,8 +771,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "デッド マン プレート",
             "ソラリのロケット",
@@ -803,8 +805,23 @@
           ],
           "boots": "スイフトネス ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -915,6 +932,20 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:26:27+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/bard/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/bard/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -922,6 +953,8 @@
     {
       "name": "[AP] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・SUPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "デッド マン プレート",
         "ソラリのロケット",
@@ -952,8 +985,23 @@
       ],
       "boots": "スイフトネス ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3009",
+          "name": "スイフトネス ブーツ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1658,5 +1706,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/bard/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/bard/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "宇宙の平衡を保つことが目的とされる、宇宙からの来訪者 サポートでありながら、多彩な加速と特殊な移動スキルによるロームをコンセプトとする変わり種 戦場にバラ捲かれた鐘を回収して強くなっていき、スキルも全体的に個性的で独自性が強い ただし相手に",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Bard",
+    "source_patch": "未検証"
   }
 }

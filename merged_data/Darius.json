@@ -424,22 +424,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "魔道",
       "choices": [
         "アクシオム アルカニスト",
         "追い風"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health Scaling"
+      "攻撃速度",
+      "アダプティブフォース",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・レーン戦】通常攻撃とスキルで相手に出血スタックを重ねる。Wのスロウを当てた瞬間に一歩下がってQの外周刃を確定ヒットさせ、体力を大幅回復しつつ出血5スタック（紅血の激昂）を狙う。",
-    "teamfight": "【中終盤・集団戦】前衛を攻撃して素早く5スタックを獲得し、攻撃力激増状態でR（ノクサスギロチン）を発動。Rで敵を処刑すればCDがリセットされるため、連続ギロチンで敵チームを殲滅する。",
-    "key_tips": "【スキルの吐きどころ】Eの引き寄せは安易に初手で使わず、相手がフラッシュや逃げスキルを使った瞬間に引き戻すために温存するのが基本。"
+    "laning": "通常攻撃とスキルで相手に出血スタックを重ねる。Wのスロウを当てた瞬間に一歩下がってQの外周刃を確定ヒットさせ、体力を大幅回復しつつ出血5スタック（紅血の激昂）を狙う。",
+    "teamfight": "前衛を攻撃して素早く5スタックを獲得し、攻撃力激増状態でR（ノクサスギロチン）を発動。Rで敵を処刑すればCDがリセットされるため、連続ギロチンで敵チームを殲滅する。",
+    "key_tips": "Eの引き寄せは安易に初手で使わず、相手がフラッシュや逃げスキルを使った瞬間に引き戻すために温存するのが基本。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -460,9 +460,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】通常攻撃とスキルで相手に出血スタックを重ねる。Wのスロウを当てた瞬間に一歩下がってQの外周刃を確定ヒットさせ、体力を大幅回復しつつ出血5スタック（紅血の激昂）を狙う。",
-        "teamfight": "【中終盤・集団戦】前衛を攻撃して素早く5スタックを獲得し、攻撃力激増状態でR（ノクサスギロチン）を発動。Rで敵を処刑すればCDがリセットされるため、連続ギロチンで敵チームを殲滅する。",
-        "key_tips": "【スキルの吐きどころ】Eの引き寄せは安易に初手で使わず、相手がフラッシュや逃げスキルを使った瞬間に引き戻すために温存するのが基本。"
+        "laning": "通常攻撃とスキルで相手に出血スタックを重ねる。Wのスロウを当てた瞬間に一歩下がってQの外周刃を確定ヒットさせ、体力を大幅回復しつつ出血5スタック（紅血の激昂）を狙う。",
+        "teamfight": "前衛を攻撃して素早く5スタックを獲得し、攻撃力激増状態でR（ノクサスギロチン）を発動。Rで敵を処刑すればCDがリセットされるため、連続ギロチンで敵チームを殲滅する。",
+        "key_tips": "Eの引き寄せは安易に初手で使わず、相手がフラッシュや逃げスキルを使った瞬間に引き戻すために温存するのが基本。"
       },
       "runes": {
         "primary": {
@@ -476,16 +476,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "魔道",
           "choices": [
             "アクシオム アルカニスト",
             "追い風"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -776,8 +776,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・TOPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "妖夢の霊剣",
             "デッド マン プレート",
@@ -809,8 +811,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1055",
+              "name": "ドラン ブレード"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -925,6 +946,20 @@
         "patch_verified": true,
         "role": "TOP",
         "fetched_at": "2026-10-30T09:26:31+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/darius/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/darius/build/top?patch=16.21",
+        "patch": "16.21",
+        "role": "TOP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "JUG": {
@@ -936,9 +971,9 @@
       "skill_order": "Q > E > W",
       "role_note": "高速なジャングルキャンプ巡回、ガンクによるレーン介入、ドラゴン・ヘラルドのオブジェクト管理を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・レーン戦】通常攻撃とスキルで相手に出血スタックを重ねる。Wのスロウを当てた瞬間に一歩下がってQの外周刃を確定ヒットさせ、体力を大幅回復しつつ出血5スタック（紅血の激昂）を狙う。",
-        "teamfight": "【中終盤・集団戦】前衛を攻撃して素早く5スタックを獲得し、攻撃力激増状態でR（ノクサスギロチン）を発動。Rで敵を処刑すればCDがリセットされるため、連続ギロチンで敵チームを殲滅する。",
-        "key_tips": "【スキルの吐きどころ】Eの引き寄せは安易に初手で使わず、相手がフラッシュや逃げスキルを使った瞬間に引き戻すために温存するのが基本。"
+        "laning": "通常攻撃とスキルで相手に出血スタックを重ねる。Wのスロウを当てた瞬間に一歩下がってQの外周刃を確定ヒットさせ、体力を大幅回復しつつ出血5スタック（紅血の激昂）を狙う。",
+        "teamfight": "前衛を攻撃して素早く5スタックを獲得し、攻撃力激増状態でR（ノクサスギロチン）を発動。Rで敵を処刑すればCDがリセットされるため、連続ギロチンで敵チームを殲滅する。",
+        "key_tips": "Eの引き寄せは安易に初手で使わず、相手がフラッシュや逃げスキルを使った瞬間に引き戻すために温存するのが基本。"
       },
       "runes": {
         "primary": {
@@ -952,16 +987,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "栄華",
           "choices": [
             "凱旋",
             "レジェンド: 迅速"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health Scaling"
+          "攻撃速度",
+          "アダプティブフォース",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -1252,8 +1287,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・JUGの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "妖夢の霊剣",
             "デッド マン プレート",
@@ -1280,13 +1317,27 @@
             }
           ],
           "starter": [
-            "ガストウォーカーの幼体",
-            "体力ポーション"
+            "ガストウォーカーの幼体"
           ],
           "boots": "スイフトネス ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1102",
+              "name": "ガストウォーカーの幼体"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3009",
+              "name": "スイフトネス ブーツ"
+            },
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -1355,10 +1406,6 @@
           {
             "item_id": "1102",
             "name": "ガストウォーカーの幼体"
-          },
-          {
-            "item_id": "2003",
-            "name": "体力ポーション"
           }
         ],
         "boots": [
@@ -1401,6 +1448,20 @@
         "patch_verified": true,
         "role": "JUG",
         "fetched_at": "2026-10-30T09:26:32+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/darius/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/darius/build/jungle?patch=16.21",
+        "patch": "16.21",
+        "role": "JUG",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -1408,6 +1469,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・TOPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "妖夢の霊剣",
         "デッド マン プレート",
@@ -1439,8 +1502,27 @@
       ],
       "boots": "プレート スチールキャップ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1055",
+          "name": "ドラン ブレード"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -2463,5 +2545,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/darius/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/darius/build/top?patch=16.21",
+    "patch": "16.21",
+    "role": "TOP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "侵略を受けた小国の出身でありながら、実力主義のノクサスで頭角を現した大戦士 処刑人・ドレイヴンは実の弟で、性格はかなり違うが兄弟仲は割と良好な模様 ストーリー上は割と知略にも長ずる面を見せるが、戦闘においては荒々しい斧術によるロングトレード",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Darius",
+    "source_patch": "未検証"
   }
 }

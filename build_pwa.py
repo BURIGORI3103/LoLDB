@@ -12,6 +12,7 @@ import hashlib
 import html
 import re
 import zipfile
+from audit_normalization import project_for_display
 from pathlib import Path
 
 # 過去バージョンの詳細箇条書き定義（Update_History.md側が1段落要約のみの古いエントリをリッチ表示するための補完辞書）
@@ -402,19 +403,13 @@ def build():
     # パッチ番号をマスターデータから一元抽出
     first_champ = next(iter(all_champs.values()), {})
     build_patch = first_champ.get("patch", "16.20.1")
+    if not re.fullmatch(r"\d+\.\d+\.\d+", build_patch) or {champ.get("patch") for champ in all_champs.values()} != {build_patch}:
+        raise ValueError("生成対象のパッチが不正または混在しています")
     short_patch = ".".join(build_patch.split(".")[:2])
     latest_version, changelog_items_html = load_and_render_changelog(base_dir, dist_dir)
+    if not re.fullmatch(r"v\d+\.\d+\.\d+", latest_version):
+        raise ValueError("生成対象のバージョンが不正です")
     print(f"最新バージョン検出: {latest_version} (Patch {short_patch})")
-
-    # 分割JSONファイルとしても data/ に出力
-    for d_base in (dist_dir / "data", base_dir / "data"):
-        d_base.mkdir(parents=True, exist_ok=True)
-        (d_base / "champions.json").write_text(
-            json.dumps(all_champs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
-        )
-        (d_base / "items.json").write_text(
-            json.dumps(all_items, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
-        )
 
     def safe_json_for_script(obj) -> str:
         raw = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
@@ -428,12 +423,11 @@ def build():
 
     # HTML <script> 内への安全なシリアライズ (</script> 等の混入を完全防止)
     # 廃止したシミュレーター専用の対面マトリクスは配布HTMLへ含めない。
-    display_champs = {cid: {key: value for key, value in champ.items()
-                            if key not in ("matchup_matrix", "matchup_matrix_by_role")}
-                      for cid, champ in all_champs.items()}
+    display_champs = project_for_display(all_champs)
     json_str = safe_json_for_script(display_champs)
     items_json_str = safe_json_for_script(all_items)
 
+    ui_helpers = (base_dir / "ui_helpers.js").read_text(encoding="utf-8")
     html_content = f"""<!DOCTYPE html>
 <html lang="ja" class="dark">
 <head>
@@ -1124,6 +1118,7 @@ def build():
       font-weight: 600;
     }}
     .skill-desc {{
+      white-space: pre-line;
       font-size: 12px;
       color: #cbd5e1;
       line-height: 1.4;
@@ -1969,6 +1964,7 @@ def build():
             <button class="chip-btn active" data-filter="attack" data-val="ALL">すべて</button>
             <button class="chip-btn" data-filter="attack" data-val="MELEE">🗡️ 近接</button>
             <button class="chip-btn" data-filter="attack" data-val="RANGED">🏹 遠隔</button>
+            <button class="chip-btn" data-filter="attack" data-val="HYBRID">🔄 両用</button>
           </div>
           <div class="filter-group">
             <span class="filter-label">属性:</span>
@@ -2071,13 +2067,13 @@ def build():
   </main>
 
   <!-- アップデート履歴（リリースノート）モーダル -->
-  <div class="modal-overlay" id="changelogModal">
+  <div class="modal-overlay" id="changelogModal" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="changelogHeading" tabindex="-1">
     <div class="modal-content" style="max-width: 650px;">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <h2 style="font-size: 17px; font-weight: 800; color: #fff;">📜 LoLDB アップデート履歴</h2>
+          <h2 id="changelogHeading" style="font-size: 17px; font-weight: 800; color: #fff;">📜 LoLDB アップデート履歴</h2>
         </div>
-        <button class="modal-close-btn" id="changelogCloseBtn">&times;</button>
+        <button class="modal-close-btn" aria-label="閉じる" id="changelogCloseBtn">&times;</button>
       </div>
       <div class="modal-body">
         <div class="changelog-list">
@@ -2088,21 +2084,21 @@ def build():
   </div>
 
   <!-- 詳細モーダル -->
-  <div class="modal-overlay" id="detailModal">
+  <div class="modal-overlay" id="detailModal" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="modalChampName" tabindex="-1">
     <div class="modal-content">
       <div class="modal-header">
         <div class="modal-title-wrap">
           <h2 id="modalChampName" style="font-size: 18px; font-weight: 800;">チャンピオン名</h2>
           <span id="modalChampTitle" style="font-size: 12px; color: var(--text-muted);">二つ名</span>
         </div>
-        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        <button class="modal-close-btn" aria-label="閉じる" id="modalCloseBtn">&times;</button>
       </div>
       <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
   <!-- アイテム詳細モーダル -->
-  <div class="modal-overlay" id="itemDetailModal" style="z-index: 120;">
+  <div class="modal-overlay" id="itemDetailModal" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="itemDetailName" tabindex="-1" style="z-index: 120;">
     <div class="modal-content" style="max-width: 620px;">
       <div class="modal-header">
         <div class="item-detail-header-wrap">
@@ -2112,7 +2108,7 @@ def build():
             <div id="itemDetailPrices" style="margin-top: 4px;"></div>
           </div>
         </div>
-        <button class="modal-close-btn" id="itemDetailCloseBtn">&times;</button>
+        <button class="modal-close-btn" aria-label="閉じる" id="itemDetailCloseBtn">&times;</button>
       </div>
       <div class="modal-body" id="itemDetailBody">
         <!-- 基本ステータス -->
@@ -2156,134 +2152,13 @@ def build():
     }}
 
     // ビルド時一元管理パッチ番号
-    const DEFAULT_PATCH = "{build_patch}";
+    const DEFAULT_PATCH = {safe_json_for_script(build_patch)};
 
     // インライン内包されたマスターデータ (<script>安全エスケープ済)
     const CHAMPIONS = {json_str};
     const ITEMS = {items_json_str};
 
-    // クライアントサイド・ヒューリスティック特性推定エンジン (実測データがないペア・レーン用)
-    function computeHeuristicMatchup(me, opp, role) {{
-      const patch = me.patch || DEFAULT_PATCH;
-      if (me.id === opp.id) {{
-        return {{
-          winrate: null,
-          winrate_display: null,
-          advantage: "even",
-          advantage_label: "五分（ミラーマッチ）",
-          reason: "同チャンピオン対決です。ルーン選択、スキルの命中率、ウェーブコントロール等の技量勝負になります。",
-          source: "mirror",
-          is_estimated: false,
-          role: role || "ALL",
-          patch: patch,
-          estimation_factors: [],
-          estimation_limitation: ""
-        }};
-      }}
-      let score = 0;
-      const meDp = me.damage_profile || {{}};
-      const oppDp = opp.damage_profile || {{}};
-      const meSustain = !!(me.sustain_info && me.sustain_info.has_sustain);
-      const oppSustain = !!(opp.sustain_info && opp.sustain_info.has_sustain);
-      const reasons = [];
-      const factors = [];
-
-      if (["Malphite", "Rammus"].includes(me.id) && oppDp.primary_type === "AD") {{
-        score += 3;
-        factors.push("対AD物理防御特化 (+3)");
-        reasons.push("物理防御(AR)スケールにより、相手のAD物理ダメージを大幅に軽減できます");
-      }} else if (["Malphite", "Rammus"].includes(opp.id) && meDp.primary_type === "AD") {{
-        score -= 3;
-        factors.push("相手の対AD物理防御特化 (-3)");
-        reasons.push("相手の高い物理防御と通常攻撃反射により、ADダメージが通りにくい対面です");
-      }}
-
-      if (["Galio", "Kassadin"].includes(me.id) && oppDp.primary_type === "AP") {{
-        score += 3;
-        factors.push("対AP魔法耐性特化 (+3)");
-        reasons.push("魔法耐性パッシブと魔法シールドにより、相手のAPバーストを容易に耐えきれます");
-      }} else if (["Galio", "Kassadin"].includes(opp.id) && meDp.primary_type === "AP") {{
-        score -= 3;
-        factors.push("相手の対AP魔法耐性特化 (-3)");
-        reasons.push("相手の対AP防御性能とシールドにより、こちらの魔法バーストが軽減されます");
-      }}
-
-      if (meSustain && !oppSustain) {{
-        score += 1;
-        factors.push("サステイン優位 (+1)");
-        reasons.push("高い固有サステインによりショートトレード後の体力差でレーン主導権を握れます");
-      }} else if (!meSustain && oppSustain) {{
-        score -= 1;
-        factors.push("相手サステイン優位 (-1)");
-        reasons.push("相手のサステイン回復により消耗戦で不利になりやすいため、早期の重傷アイテム購入が有効です");
-      }}
-
-      const meClasses = me.classes || me.tags || [];
-      const oppClasses = opp.classes || opp.tags || [];
-      const isOppAssassin = oppClasses.includes("Assassin") || ["Zed", "Talon", "Qiyana", "Katarina"].some(k => opp.id.includes(k));
-      const isMeAssassin = meClasses.includes("Assassin") || ["Zed", "Talon", "Qiyana", "Katarina"].some(k => me.id.includes(k));
-
-      if ((meClasses.includes("Tank") || meDp.primary_type === "TANK") && isOppAssassin) {{
-        score += 2;
-        factors.push("タンク対アサシン耐久優位 (+2)");
-        reasons.push("アサシンの瞬間バーストを耐久力で受け止め、CCで拘束して反撃できます");
-      }} else if ((oppClasses.includes("Tank") || oppDp.primary_type === "TANK") && isMeAssassin) {{
-        score -= 2;
-        factors.push("アサシン対タンク突破難 (-2)");
-        reasons.push("相手の高耐久を削りきれず、アサシン側のバーストが通りにくい構成です");
-      }}
-
-      if (["Vayne", "Fiora", "Gwen", "KogMaw"].includes(me.id) && oppDp.primary_type === "TANK") {{
-        score += 2;
-        factors.push("対タンク割合・確定ダメージ (+2)");
-        reasons.push("最大体力割合ダメージと確定ダメージにより、相手の防具を無視して削れます");
-      }} else if (["Vayne", "Fiora", "Gwen", "KogMaw"].includes(opp.id) && meDp.primary_type === "TANK") {{
-        score -= 2;
-        factors.push("相手の対タンク割合・確定ダメージ (-2)");
-        reasons.push("相手の割合ダメージ・確定ダメージにより、防具を積んでも耐えきれないリスクがあります");
-      }}
-
-      const meRange = me.stats?.attackrange || 175;
-      const oppRange = opp.stats?.attackrange || 175;
-      if (meRange >= 500 && oppRange <= 200) {{
-        score += 1;
-        factors.push(`通常攻撃射程優位 (${{meRange}} vs ${{oppRange}}, +1)`);
-        reasons.push("射程差を活かしたアウトレンジポークで安全にハラスできます");
-      }} else if (oppRange >= 500 && meRange <= 200) {{
-        score -= 1;
-        factors.push(`相手射程優位 (${{meRange}} vs ${{oppRange}}, -1)`);
-        reasons.push("相手の遠距離ポークにより序盤の被弾に注意し、不用意なヘルスロスを避ける必要があります");
-      }}
-
-      if (factors.length === 0) factors.push("標準ステータス均衡 (0)");
-
-      let adv = "even";
-      let advLabel = "判定材料不足（実測統計なし）";
-      let reasonText = reasons.length ? reasons.join(" ＆ ") + "。これだけでは有利・不利を判定できません。" : "このレーンの実測統計がなく、基礎特性だけでは有利・不利を判定できません。";
-      if (score >= 2) {{
-        adv = "fav";
-        advLabel = "特性推定: 有利傾向 (実測統計なし)";
-        reasonText = reasons.join(" ＆ ");
-      }} else if (score <= -2) {{
-        adv = "unfav";
-        advLabel = "特性推定: 警戒傾向 (実測統計なし)";
-        reasonText = reasons.join(" ＆ ");
-      }}
-
-      return {{
-        winrate: null,
-        winrate_display: null,
-        advantage: adv,
-        advantage_label: advLabel,
-        reason: reasonText,
-        source: "synergy_estimate",
-        is_estimated: true,
-        role: role || "ESTIMATED",
-        patch: patch,
-        estimation_factors: factors,
-        estimation_limitation: "基礎ステータス（射程・ダメージ属性・サステイン・クラス特性）に基づくヒューリスティック推定であり、OP.GGの実戦統計勝率ではありません。"
-      }};
-    }}
+    {ui_helpers}
 
     let currentRole = "ALL";
     let searchKeyword = "";
@@ -2329,8 +2204,8 @@ def build():
     function matchSearch(text, query) {{
       if (!query) return true;
       if (!text) return false;
-      const t = text.toLowerCase();
-      const q = query.toLowerCase();
+      const t = String(text).normalize("NFKC").toLowerCase();
+      const q = String(query).normalize("NFKC").toLowerCase();
       if (t.includes(q)) return true;
       const th = toHiragana(t);
       const qh = toHiragana(q);
@@ -2359,7 +2234,7 @@ def build():
             if (attType !== "MELEE" && attType !== "HYBRID") return;
           }} else if (currentAttackFilter === "RANGED") {{
             if (attType !== "RANGED" && attType !== "HYBRID") return;
-          }}
+          }} else if (currentAttackFilter === "HYBRID" && attType !== "HYBRID") return;
         }}
 
         // 3. ダメージ属性フィルター (AD / AP / TANK)
@@ -2394,16 +2269,18 @@ def build():
 
         const card = document.createElement("div");
         card.className = "champ-card";
+        card.tabIndex = 0; card.setAttribute("role", "button");
+        card.onkeydown = event => {{ if (event.key === "Enter" || event.key === " ") {{ event.preventDefault(); openDetail(champ.id); }} }};
         card.onclick = () => openDetail(champ.id);
 
         const rolesHtml = (champ.roles || []).map(r => 
-          `<span class="mini-badge ${{getRoleBadgeClass(r)}}">${{r}}</span>`
+          `<span class="mini-badge ${{getRoleBadgeClass(r)}}">${{escapeHtml(r)}}</span>`
         ).join("");
 
         // ダメージ属性バッジ (AD / AP / HYBRID / TANK)
         const dp = champ.damage_profile || {{}};
         const dmgBadgeHtml = dp.badge_text ? 
-          `<span class="damage-badge ${{dp.badge_class || 'badge-ad'}}">${{dp.badge_text}}</span>` : "";
+          `<span class="damage-badge ${{safeBadgeClass(dp.badge_class)}}">${{escapeHtml(dp.badge_text)}}</span>` : "";
 
         // AA攻撃タイプバッジ (近接 / 遠隔 / 両用)
         const att = champ.attack_type || {{}};
@@ -2418,7 +2295,7 @@ def build():
           attClass = "badge-att-hybrid";
           attIcon = "🔄";
         }}
-        const attBadgeHtml = `<span class="attack-type-badge ${{attClass}}" title="${{escapeHtml(att.label || `${{attBadge}} [射程 ${{attRange}}]`)}}">${{attIcon}} ${{attBadge}}</span>`;
+        const attBadgeHtml = `<span class="attack-type-badge ${{attClass}}" title="${{escapeHtml(att.label || `${{escapeHtml(attBadge)}} [射程 ${{attRange}}]`)}}">${{attIcon}} ${{escapeHtml(attBadge)}}</span>`;
 
         // Data Dragon公式CDNまたはフォールバック
         const patch = champ.patch || DEFAULT_PATCH;
@@ -2426,8 +2303,8 @@ def build():
 
         card.innerHTML = `
           <div class="champ-card-img-wrap">
-            <img class="champ-card-img" src="${{imgUrl}}" alt="${{champ.name}}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="champ-card-img-placeholder" style="display:none;">${{champ.name.charAt(0)}}</div>
+            <img class="champ-card-img" src="${{safeImageUrl(imgUrl)}}" alt="${{escapeHtml(champ.name)}}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="champ-card-img-placeholder" style="display:none;">${{escapeHtml(champ.name.charAt(0))}}</div>
             <div class="role-badge-list">${{rolesHtml}}</div>
             <div class="card-top-badges">
               ${{dmgBadgeHtml}}
@@ -2435,8 +2312,8 @@ def build():
             </div>
           </div>
           <div class="champ-info">
-            <div class="champ-name">${{champ.name}}</div>
-            <div class="champ-title">${{champ.title || ""}}</div>
+            <div class="champ-name">${{escapeHtml(champ.name)}}</div>
+            <div class="champ-title">${{escapeHtml(champ.title || "")}}</div>
           </div>
         `;
         gridEl.appendChild(card);
@@ -2467,8 +2344,8 @@ def build():
 
       // 選択中ロール（未指定時は第1ロール）
       const currentSelectedRole = activeRole || (c.roles && c.roles.length > 0 ? c.roles[0] : "TOP");
-      const roleSpecificData = (c.role_data && c.role_data[currentSelectedRole]) ? c.role_data[currentSelectedRole] : {{}};
-      const currentSpells = roleSpecificData.spells || c.summoner_spells || ["フラッシュ", "テレポート"];
+      const roleSpecificData = getRoleData(c, currentSelectedRole);
+      const currentSpells = roleSpecificData.spells || c.summoner_spells || [];
 
       // 複数ロール切り替えサブタブ
       let roleTabsHtml = "";
@@ -2476,9 +2353,9 @@ def build():
         roleTabsHtml = `
           <div class="modal-role-tabs">
             ${{c.roles.map(r => `
-              <button class="modal-role-btn ${{r === currentSelectedRole ? "active" : ""}}" data-modal-role="${{r}}">
-                <span class="mini-badge ${{getRoleBadgeClass(r)}}">${{r}}</span>
-                <span>${{r}} レーン</span>
+              <button class="modal-role-btn ${{r === currentSelectedRole ? "active" : ""}}" data-modal-role="${{escapeHtml(r)}}">
+                <span class="mini-badge ${{getRoleBadgeClass(r)}}">${{escapeHtml(r)}}</span>
+                <span>${{escapeHtml(r)}} レーン</span>
               </button>
             `).join("")}}
           </div>
@@ -2501,7 +2378,7 @@ def build():
       const attackTypeHeaderHtml = `
         <div class="modal-attack-type-wrap">
           <span class="modal-damage-title">🎯 通常攻撃 (AA):</span>
-          <span class="attack-type-badge ${{attBadgeClass}}">${{attIcon}} ${{escapeHtml(att.label || `${{attBadge}} [射程 ${{attRange}}]`)}}</span>
+          <span class="attack-type-badge ${{attBadgeClass}}">${{attIcon}} ${{escapeHtml(att.label || `${{escapeHtml(attBadge)}} [射程 ${{attRange}}]`)}}</span>
           ${{att.desc ? `<span class="modal-attack-type-desc">${{escapeHtml(att.desc)}}</span>` : ""}}
         </div>
       `;
@@ -2514,15 +2391,15 @@ def build():
         damageBadgeHtml = `
           <div class="modal-damage-header">
             <span class="modal-damage-title">⚡ 主ダメージ属性:</span>
-            <span class="damage-badge ${{dp.badge_class || "badge-ad"}}">${{dp.badge_text}} (${{dp.label || ""}})</span>
-            <span class="modal-damage-counter">🛡️ 対面時の推奨防具: <strong>${{dp.counter_defense || "AR/MR"}}</strong></span>
+            <span class="damage-badge ${{safeBadgeClass(dp.badge_class)}}">${{escapeHtml(dp.badge_text)}} (${{escapeHtml(dp.label || "")}})</span>
+            <span class="modal-damage-counter">🛡️ 対面時の推奨防具: <strong>${{escapeHtml(dp.counter_defense || "AR/MR")}}</strong></span>
           </div>
         `;
       }}
       if (dp.has_dual_build) {{
         dualBuildAlertHtml = `
           <div class="dual-build-alert">
-            ⚡ <strong>【AD / AP 両型ビルド対応】</strong> ${{dp.dual_build_desc}}
+            ⚡ <strong>【AD / AP 両型ビルド対応】</strong> ${{escapeHtml(dp.dual_build_desc)}}
           </div>
         `;
       }}
@@ -2543,8 +2420,8 @@ def build():
         sustainReasonHtml = `<div class="sustain-reason-box">⚠️ <strong>【対面注意・維持能力】</strong> ${{escapeHtml(susReason)}}</div>`;
       }}
 
-      const skillOrder = roleSpecificData.skill_order || c.skill_order || "Q > E > W";
-      const skillOrderBadgeHtml = `<span class="badge-skill-order">⚡ スキル上げ順: ${{skillOrder}}</span>`;
+      const skillOrder = roleSpecificData.skill_order || "未取得";
+      const skillOrderBadgeHtml = `<span class="badge-skill-order">⚡ スキル上げ順: ${{escapeHtml(skillOrder)}}</span>`;
 
       // サモナースペル（採用率上位2セット）
       const spellSets = roleSpecificData.spell_sets || c.spell_sets || [
@@ -2554,15 +2431,15 @@ def build():
         <div class="spells-sets-wrap">
           ${{spellSets.map(ss => `
             <div class="spell-set-card">
-              <div class="spell-set-title">⚡ ${{ss.name}}</div>
+              <div class="spell-set-title">⚡ ${{escapeHtml(ss.name)}}</div>
               <div class="spells-badge-list">
                 ${{ss.spells.map(s => {{
-                  const sImg = SPELL_IMG_MAP[s] || "SummonerFlash.png";
+                  const sImg = SPELL_IMG_MAP[s] || "";
                   const sUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/spell/${{sImg}}`;
                   return `
                     <span class="spell-pill">
-                      <img class="spell-img" src="${{sUrl}}" alt="${{s}}" onerror="this.style.display='none';">
-                      <span>${{s}}</span>
+                      <img class="spell-img" src="${{safeImageUrl(sUrl)}}" alt="${{escapeHtml(s)}}" onerror="this.style.display='none';">
+                      <span>${{escapeHtml(s)}}</span>
                     </span>
                   `;
                 }}).join("")}}
@@ -2573,9 +2450,7 @@ def build():
       `;
 
       // スキル取得順マトリクス表 (Lv 1〜18)
-      const skillMatrix = roleSpecificData.skill_matrix || c.skill_matrix || {{
-        Q: [1, 4, 5, 7, 9], W: [3, 14, 15, 17, 18], E: [2, 8, 10, 12, 13], R: [6, 11, 16]
-      }};
+      const skillMatrix = roleSpecificData.skill_matrix || {{}};
       const matrixSlots = ["Q", "W", "E", "R"];
       let matrixTableRows = matrixSlots.map(slot => {{
         const points = skillMatrix[slot] || [];
@@ -2588,6 +2463,7 @@ def build():
       }}).join("");
 
       const skillMatrixHtml = `
+        ${{roleSpecificData.guidance_sources?.skill_matrix && Object.values(skillMatrix).flat().length < 18 ? '<div class="guidance-source">取得元の掲載はLv1〜15。未取得レベルは空欄です。</div>' : ""}}
         <div class="skill-matrix-container">
           <div class="skill-matrix-scroll">
             <table class="skill-matrix-table">
@@ -2607,33 +2483,25 @@ def build():
 
       // 特徴・強み・弱み (フォールバック保証付き)
       const ov = c.overview || {{}};
-      let strengthsList = (Array.isArray(ov.strengths) && ov.strengths.length > 0) ? ov.strengths : [
-        `${{c.name}}の主力スキルを活かした強力なダメージトレード能力`,
-        `集団戦や局所戦における高い影響力と主導権の掌握`,
-        `安定したピック性能と明確なパワースパイク`
-      ];
-      let weaknessesList = (Array.isArray(ov.weaknesses) && ov.weaknesses.length > 0) ? ov.weaknesses : [
-        `主要スキルのクールダウン中における無防備さ`,
-        `敵のハードCCや集中フォーカスに対する脆さ`,
-        `レーンでの立ち位置やウェーブ管理の精度が要求される点`
-      ];
-      const strengthsHtml = strengthsList.map(s => `<li>${{s}}</li>`).join("");
-      const weaknessesHtml = weaknessesList.map(w => `<li>${{w}}</li>`).join("");
+      const strengthsList = ov.strengths?.length ? ov.strengths : ["確認済みデータなし"];
+      const weaknessesList = ov.weaknesses?.length ? ov.weaknesses : ["確認済みデータなし"];
+      const strengthsHtml = strengthsList.map(s => `<li>${{escapeHtml(s)}}</li>`).join("");
+      const weaknessesHtml = weaknessesList.map(w => `<li>${{escapeHtml(w)}}</li>`).join("");
 
       // 立ち回りメモ
       const gn = roleSpecificData.gameplay_notes || c.gameplay_notes || {{}};
-      const roleNoteHtml = roleSpecificData.role_note ? `<div style="font-size:12px; margin-bottom:8px; color:#38bdf8; line-height:1.5;"><strong>【${{currentSelectedRole}}ロールの主務】</strong> ${{roleSpecificData.role_note}}</div>` : "";
-      const laningNote = gn.laning || "相手のスキルクールダウンやミニオンウェーブの位置を注視してトレードを行う。";
-      const tfNote = gn.teamfight || "集団戦では味方とフォーカスを合わせ、自身の役割を完遂する。";
+      const roleNoteHtml = roleSpecificData.role_note ? `<div style="font-size:12px; margin-bottom:8px; color:#38bdf8; line-height:1.5;"><strong>【${{escapeHtml(currentSelectedRole)}}ロールの主務】</strong> ${{escapeHtml(roleSpecificData.role_note)}}</div>` : "";
+      const laningNote = gn.laning || "ロール専用の確認済みデータは未取得です。";
+      const tfNote = gn.teamfight || "ロール専用の確認済みデータは未取得です。";
       const tipNote = gn.key_tips || "";
 
       // 実戦コンボ
-      const combos = c.combos || [];
+      const combos = roleSpecificData.combos || [];
       const combosHtml = combos.map(cb => `
         <div class="combo-card">
-          <div class="combo-name">🥊 ${{cb.name}}</div>
-          <div class="combo-recipe">${{cb.recipe}}</div>
-          <div class="combo-desc">${{cb.desc}}</div>
+          <div class="combo-name">🥊 ${{escapeHtml(cb.name)}}</div>
+          <div class="combo-recipe">${{escapeHtml(cb.recipe)}}</div>
+          <div class="combo-desc">${{escapeHtml(cb.desc)}}</div>
         </div>
       `).join("");
 
@@ -2643,80 +2511,22 @@ def build():
       let buildContentHtml = "";
 
       function renderBuildPatternInner(bp) {{
-        const pCoreHtml = (bp.core_items || []).map((ci, sIdx) => {{
-          const cImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{ci.item_id}}.png`;
-          return `
-            <span class="item-pill clickable-item" data-item-id="${{ci.item_id}}" title="タップして詳細を表示">
-              <span class="item-step">${{sIdx + 1}}</span>
-              <img class="item-img" src="${{cImg}}" alt="${{ci.name}}" onerror="this.src='icon.png';">
-              <span>${{ci.name}}</span>
-            </span>
-          `;
-        }}).join("");
-
-        const pStarterHtml = (bp.starter || []).map(sName => {{
-          const sItem = Object.values(ITEMS).find(it => it.name === sName);
-          const sId = sItem ? sItem.id : "1055";
-          const sImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{sId}}.png`;
-          return `
-            <span class="item-pill clickable-item" data-item-id="${{sId}}" title="タップして詳細を表示">
-              <img class="item-img" src="${{sImg}}" alt="${{sName}}" onerror="this.src='icon.png';">
-              <span>${{sName}}</span>
-            </span>
-          `;
-        }}).join("");
-
-        const bootName = bp.boots || "プレート スチールキャップ";
-        const bootItem = Object.values(ITEMS).find(it => it.name === bootName);
-        const bootId = bootItem ? bootItem.id : "3047";
-        const bootImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{bootId}}.png`;
-        const pBootsHtml = `
-          <span class="item-pill clickable-item" data-item-id="${{bootId}}" title="タップして詳細を表示">
-            <img class="item-img" src="${{bootImg}}" alt="${{bootName}}" onerror="this.src='icon.png';">
-            <span>${{bootName}}</span>
-          </span>
-        `;
-
-        const pSitHtml = (bp.situational || []).map(sitName => {{
-          const sitItem = Object.values(ITEMS).find(it => it.name === sitName);
-          const sitId = sitItem ? sitItem.id : "1001";
-          const sitImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{sitId}}.png`;
-          return `
-            <span class="item-pill clickable-item" data-item-id="${{sitId}}" title="タップして詳細を表示">
-              <img class="item-img" src="${{sitImg}}" alt="${{sitName}}" onerror="this.src='icon.png';">
-              <span>${{sitName}}</span>
-            </span>
-          `;
-        }}).join("");
-
-        return `
-          <div class="build-pat-desc">💡 ${{bp.desc}}</div>
-          <div class="build-group">
-            <div class="build-group-title">スタートアイテム</div>
-            <div class="item-tags">${{pStarterHtml}}</div>
-          </div>
-          <div class="build-group">
-            <div class="build-group-title">推奨靴</div>
-            <div class="item-tags">${{pBootsHtml}}</div>
-          </div>
-          <div class="build-group">
-            <div class="build-group-title">推奨コアアイテム（進行順）</div>
-            <div class="item-tags">${{pCoreHtml}}</div>
-          </div>
-          ${{pSitHtml ? `
-            <div class="build-group">
-              <div class="build-group-title">状況別・後半選択アイテム</div>
-              <div class="item-tags">${{pSitHtml}}</div>
-            </div>
-          ` : ""}}
-        `;
+        const core = renderItemPills(bp.core_items, patch, true);
+        const starter = renderItemPills(bp.starter_items, patch);
+        const boots = renderItemPills(bp.boots_items, patch);
+        const situational = renderItemPills(bp.situational_items, patch);
+        return `<div class="build-pat-desc">💡 ${{escapeHtml(bp.desc)}}</div>
+          <div class="build-group"><div class="build-group-title">スタートアイテム</div><div class="item-tags">${{starter || "取得データなし"}}</div></div>
+          ${{boots ? `<div class="build-group"><div class="build-group-title">推奨靴</div><div class="item-tags">${{boots}}</div></div>` : c.id === "Cassiopeia" ? "<div>靴：パッシブにより購入不可</div>" : ""}}
+          <div class="build-group"><div class="build-group-title">推奨コアアイテム（進行順）</div><div class="item-tags">${{core || "取得データなし"}}</div></div>
+          ${{situational ? `<div class="build-group"><div class="build-group-title">状況別アイテム</div><div class="item-tags">${{situational}}</div></div>` : ""}}`;
       }}
 
       if (buildPatterns.length > 0) {{
         buildTabsHtml = `
           <div class="build-pat-tabs">
             ${{buildPatterns.map((bp, idx) => `
-              <button class="build-pat-btn ${{idx === 0 ? "active" : ""}}" data-build-idx="${{idx}}">${{bp.name}}</button>
+              <button class="build-pat-btn ${{idx === 0 ? "active" : ""}}" data-build-idx="${{idx}}">${{escapeHtml(bp.name)}}</button>
             `).join("")}}
           </div>
         `;
@@ -2750,7 +2560,7 @@ def build():
           && evidence.role === currentSelectedRole
           && evidence.advantage === (isFav ? "favorable" : "unfavorable")
           && evidence.source_url?.startsWith("https://");
-        const reasonHtml = hasConfirmedReason ? `<div class="matchup-reason">${{escapeHtml(evidence.reason)}}<br><a href="${{escapeHtml(evidence.source_url)}}" target="_blank" rel="noopener noreferrer">出典</a>（参照元 Patch ${{escapeHtml(evidence.source_patch || "未確認")}}・現在の勝率の因果関係は未検証）</div>` : "";
+        const reasonHtml = hasConfirmedReason ? `<div class="matchup-reason">${{escapeHtml(evidence.reason)}}<br><a href="${{safeExternalUrl(evidence.source_url)}}" target="_blank" rel="noopener noreferrer">出典</a>（参照元 Patch ${{escapeHtml(evidence.source_patch || "未確認")}}・現在の勝率の因果関係は未検証）</div>` : "";
 
         const badgeClass = isFav ? "badge-fav" : "badge-unfav";
 
@@ -2758,12 +2568,12 @@ def build():
           <div class="matchup-item">
             <div class="matchup-header">
               <div class="matchup-champ-info">
-                <img class="matchup-champ-img" src="${{oppImg}}" alt="${{oppName}}" onerror="this.style.display='none';">
+                <img class="matchup-champ-img" src="${{safeImageUrl(oppImg)}}" alt="${{oppName}}" onerror="this.style.display='none';">
                 <span class="matchup-champ-name">${{oppName}}</span>
               </div>
               <span class="${{badgeClass}}">${{escapeHtml(winrateText)}}</span>
             </div>
-            ${{m.games ? `<div style="font-size:11px; color:var(--text-muted);">${{Number(m.games).toLocaleString("ja-JP")}}試合・Patch ${{escapeHtml(m.patch || patch)}}・${{escapeHtml(m.role || currentSelectedRole)}}${{m.source_url?.startsWith("https://www.op.gg/") ? `・<a href="${{escapeHtml(m.source_url)}}" target="_blank" rel="noopener noreferrer">OP.GG</a>` : ""}}</div>` : ""}}
+            ${{m.games ? `<div style="font-size:11px; color:var(--text-muted);">${{Number(m.games).toLocaleString("ja-JP")}}試合・Patch ${{escapeHtml(m.patch || patch)}}・${{escapeHtml(m.role || currentSelectedRole)}}${{m.source_url?.startsWith("https://www.op.gg/") ? `・<a href="${{safeExternalUrl(m.source_url)}}" target="_blank" rel="noopener noreferrer">OP.GG</a>` : ""}}</div>` : ""}}
             ${{reasonHtml}}
           </div>
         `;
@@ -2797,12 +2607,12 @@ def build():
           skillsHtml += `
             <div class="skill-card">
               <div class="skill-icon-wrap">
-                <img class="skill-img" src="${{pImg}}" alt="${{a.name}}" onerror="this.style.display='none';">
+                <img class="skill-img" src="${{safeImageUrl(pImg)}}" alt="${{escapeHtml(a.name)}}" onerror="this.style.display='none';">
                 <span class="skill-slot-badge">P</span>
               </div>
               <div class="skill-content">
-                <div class="skill-name">${{a.name}}</div>
-                <div class="skill-desc">${{a.description || ""}}</div>
+                <div class="skill-name">${{escapeHtml(a.name)}}</div>
+                <div class="skill-desc">${{escapeHtml(a.description || "")}}</div>
               </div>
             </div>
           `;
@@ -2814,13 +2624,13 @@ def build():
           skillsHtml += `
             <div class="skill-card">
               <div class="skill-icon-wrap">
-                <img class="skill-img" src="${{spImg}}" alt="${{s.name}}" onerror="this.style.display='none';">
-                <span class="skill-slot-badge">${{s.slot}}</span>
+                <img class="skill-img" src="${{safeImageUrl(spImg)}}" alt="${{escapeHtml(s.name)}}" onerror="this.style.display='none';">
+                <span class="skill-slot-badge">${{escapeHtml(s.slot)}}</span>
               </div>
               <div class="skill-content">
-                <div class="skill-name">${{s.name}}</div>
-                <div class="skill-meta">CD: ${{s.cooldown || "なし"}} | コスト: ${{s.cost || "0"}}</div>
-                <div class="skill-desc">${{s.description || ""}}</div>
+                <div class="skill-name">${{escapeHtml(s.name)}}</div>
+                <div class="skill-meta">CD: ${{escapeHtml(s.cooldown || "なし")}} | コスト: ${{escapeHtml(s.cost || "0")}}</div>
+                <div class="skill-desc">${{escapeHtml(s.description || "")}}</div>
               </div>
             </div>
           `;
@@ -2847,7 +2657,8 @@ def build():
         <!-- チャンピオン概要 (特徴・強み・弱み) -->
         <div class="detail-section">
           <div class="detail-heading">📖 チャンピオン概要（特徴・強み・弱み）</div>
-          <div class="overview-text">${{ov.summary || ""}}</div>
+          <div class="overview-text">${{escapeHtml(ov.summary || "確認済みデータなし")}}</div>
+          ${{safeExternalUrl(ov.source_url) ? `<div class="guidance-source"><a href="${{safeExternalUrl(ov.source_url)}}" target="_blank" rel="noopener noreferrer">概要の出典</a>・パッチ対応未検証</div>` : ""}}
           <div class="pros-cons-grid">
             <div class="pros-box">
               <div class="pros-cons-title pros-title">💪 強み (Strengths)</div>
@@ -2864,9 +2675,10 @@ def build():
         <div class="detail-section">
           <div class="detail-heading">📝 立ち回り概要メモ & スキルの吐きどころ</div>
           ${{roleNoteHtml}}
-          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【序盤・レーン戦】</strong> ${{laningNote}}</div>
-          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【中終盤・集団戦】</strong> ${{tfNote}}</div>
-          ${{tipNote ? `<div style="font-size:12px; color:#f59e0b; line-height:1.5;"><strong>【極意】</strong> ${{tipNote}}</div>` : ""}}
+          ${{guidanceSourcesHtml(roleSpecificData)}}
+          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【序盤・レーン戦】</strong> ${{escapeHtml(laningNote)}}</div>
+          <div style="font-size:12px; margin-bottom:6px; color:#e2e8f0; line-height:1.5;"><strong>【中終盤・集団戦】</strong> ${{escapeHtml(tfNote)}}</div>
+          ${{tipNote ? `<div style="font-size:12px; color:#f59e0b; line-height:1.5;"><strong>【極意】</strong> ${{escapeHtml(tipNote)}}</div>` : ""}}
         </div>
 
         <!-- 実戦コンボ -->
@@ -2874,7 +2686,7 @@ def build():
           <div class="detail-heading">📚 wiki掲載の敵・味方との相性</div>
           <div style="font-size:11px; color:var(--text-muted); margin-bottom:8px;">折りたたみ内を含む掲載文の自動抽出。ロール・現在パッチの指定なし。OP.GGの勝率理由とは別の資料です。</div>
           ${{(c.wiki_matchups?.groups || []).map(g => `<details style="margin-bottom:10px;"><summary>${{g.relation === "ally" ? "味方" : "敵"}}・${{g.advantage === "favorable" ? "有利／相性良好" : "不利／相性不良"}}：${{escapeHtml(g.label || "対象チャンピオン")}}（${{g.champion_ids.map(id => escapeHtml(CHAMPIONS[id]?.name || id)).join("、")}}）</summary><p style="font-size:12px; white-space:pre-wrap; line-height:1.7;">${{escapeHtml(g.text)}}</p></details>`).join("") || "構造化して取得できた相性項目はありません。"}}
-          ${{c.wiki_matchups?.source_url?.startsWith("https://www.loljp-wiki.jp/") ? `<a href="${{escapeHtml(c.wiki_matchups.source_url)}}" target="_blank" rel="noopener noreferrer">出典の相性・対策欄を開く</a>` : ""}}
+          ${{c.wiki_matchups?.source_url?.startsWith("https://www.loljp-wiki.jp/") ? `<a href="${{safeExternalUrl(c.wiki_matchups.source_url)}}" target="_blank" rel="noopener noreferrer">出典の相性・対策欄を開く</a>` : ""}}
         </div>
 
         <!-- 実戦コンボ -->
@@ -2882,18 +2694,18 @@ def build():
           <div class="detail-heading">📖 wikiの考察・対策</div>
           ${{Object.entries(c.wiki_info?.sections || {{}}).map(([heading, text]) => `<div style="font-size:12px; margin-bottom:8px;">${{escapeHtml(heading)}}：${{escapeHtml(text)}}</div>`).join("")}}
           <div style="font-size:11px; color:var(--text-muted);">取得日：${{escapeHtml((c.wiki_info?.fetched_at || "").slice(0, 10))}}・パッチ対応未検証</div>
-          ${{c.wiki_info?.source_url?.startsWith("https://www.loljp-wiki.jp/") ? `<a href="${{escapeHtml(c.wiki_info.source_url)}}" target="_blank" rel="noopener noreferrer">出典：LoLJPWiki</a>` : ""}}
+          ${{c.wiki_info?.source_url?.startsWith("https://www.loljp-wiki.jp/") ? `<a href="${{safeExternalUrl(c.wiki_info.source_url)}}" target="_blank" rel="noopener noreferrer">出典：LoLJPWiki</a>` : ""}}
         </div>
 
         <!-- 実戦コンボ -->
         <div class="detail-section">
           <div class="detail-heading">🥊 実戦コンボ・スキル回し（Flash併用含む）</div>
-          <div class="combo-grid">${{combosHtml}}</div>
+          <div class="combo-grid">${{combosHtml || "確認済みのロール専用コンボは未取得です。"}}</div>
         </div>
 
         <!-- 推奨スペル -->
         <div class="detail-section">
-          <div class="detail-heading">⚔️ 推奨サモナースペル（${{currentSelectedRole}}運用・採用率上位）</div>
+          <div class="detail-heading">⚔️ 推奨サモナースペル（${{escapeHtml(currentSelectedRole)}}運用・採用率上位）</div>
           ${{spellsHtml}}
         </div>
 
@@ -2922,9 +2734,9 @@ def build():
         <!-- ルーン構成 -->
         <div class="detail-section">
           <div class="detail-heading">🔮 推奨ルーン構成</div>
-          <div class="rune-row"><span class="rune-title">メインパス [${{r.primary?.path || "精密"}}]:</span><strong>${{r.primary?.keystone_name || "征服者"}}</strong> (${{priChoices}})</div>
-          <div class="rune-row"><span class="rune-title">サブパス [${{r.secondary?.path || "不撓"}}]:</span>${{secChoices}}</div>
-          <div class="rune-row"><span class="rune-title">シャード:</span>${{shards}}</div>
+          <div class="rune-row"><span class="rune-title">メインパス [${{escapeHtml(r.primary?.path || "未取得")}}]:</span><strong>${{escapeHtml(r.primary?.keystone_name || "未取得")}}</strong> (${{escapeHtml(priChoices)}})</div>
+          <div class="rune-row"><span class="rune-title">サブパス [${{escapeHtml(r.secondary?.path || "未取得")}}]:</span>${{escapeHtml(secChoices)}}</div>
+          <div class="rune-row"><span class="rune-title">シャード:</span>${{escapeHtml(shards)}}</div>
         </div>
 
         <!-- 全スキル詳細 -->
@@ -2983,33 +2795,10 @@ def build():
       if (mContent) mContent.scrollTop = 0;
       modalBodyEl.scrollTop = 0;
 
-      // スマホの戻るスワイプ対応: History APIにモーダル状態を追加
-      if (!history.state || history.state.modal !== 'champion_detail') {{
-        history.pushState({{ modal: 'champion_detail', champId: champId }}, '');
-      }}
+      recordModal({{modal: 'champion_detail', champId, role: currentSelectedRole}});
     }}
-
-    function closeDetailModal() {{
-      modalEl.classList.remove("open");
-    }}
-
-    modalCloseBtn.onclick = () => {{
-      if (history.state && history.state.modal === 'champion_detail') {{
-        history.back();
-      }} else {{
-        closeDetailModal();
-      }}
-    }};
-
-    modalEl.onclick = (e) => {{
-      if (e.target === modalEl) {{
-        if (history.state && history.state.modal === 'champion_detail') {{
-          history.back();
-        }} else {{
-          closeDetailModal();
-        }}
-      }}
-    }};
+    modalCloseBtn.onclick = closeTopModal;
+    modalEl.onclick = event => {{ if (event.target === modalEl) closeTopModal(); }};
 
     // リリースノート（アプデ履歴）モーダル制御
     const changelogModalEl = document.getElementById("changelogModal");
@@ -3020,40 +2809,15 @@ def build():
       changelogModalEl.classList.add("open");
       const cContent = changelogModalEl.querySelector(".modal-content");
       if (cContent) cContent.scrollTop = 0;
-      if (!history.state || history.state.modal !== 'changelog') {{
-        history.pushState({{ modal: 'changelog' }}, '');
-      }}
+      recordModal({{modal: 'changelog'}});
     }}
-
-    function closeChangelogModal() {{
-      changelogModalEl.classList.remove("open");
-    }}
-
     if (patchBadgeEl) {{
-      patchBadgeEl.onclick = () => openChangelogModal();
+      patchBadgeEl.onclick = openChangelogModal;
+      patchBadgeEl.tabIndex = 0; patchBadgeEl.setAttribute("role", "button");
+      patchBadgeEl.onkeydown = event => {{ if (event.key === "Enter" || event.key === " ") {{ event.preventDefault(); openChangelogModal(); }} }};
     }}
-
-    if (changelogCloseBtn) {{
-      changelogCloseBtn.onclick = () => {{
-        if (history.state && history.state.modal === 'changelog') {{
-          history.back();
-        }} else {{
-          closeChangelogModal();
-        }}
-      }};
-    }}
-
-    if (changelogModalEl) {{
-      changelogModalEl.onclick = (e) => {{
-        if (e.target === changelogModalEl) {{
-          if (history.state && history.state.modal === 'changelog') {{
-            history.back();
-          }} else {{
-            closeChangelogModal();
-          }}
-        }}
-      }};
-    }}
+    changelogCloseBtn.onclick = closeTopModal;
+    changelogModalEl.onclick = event => {{ if (event.target === changelogModalEl) closeTopModal(); }};
 
     // ==========================================
     // アイテム詳細モーダル制御 (Phase 2)
@@ -3078,23 +2842,23 @@ def build():
       if (!item) return;
 
       const patch = DEFAULT_PATCH;
-      itemDetailIcon.src = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
+      itemDetailIcon.src = safeImageUrl(`https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`);
       itemDetailIcon.style.display = "block";
-      itemDetailName.textContent = item.name;
+      itemDetailName.textContent = item.display_name || item.name;
 
       // 価格
       const totalGold = item.gold?.total || 0;
       const sellGold = item.gold?.sell || 0;
       itemDetailPrices.innerHTML = `
-        <span class="item-card-price">💰 価格: ${{totalGold}} G</span>
-        <span style="font-size: 11px; color: var(--text-muted); margin-left: 8px;">(売却: ${{sellGold}} G)</span>
+        <span class="item-card-price">💰 価格: ${{escapeHtml(totalGold)}} G</span>
+        <span style="font-size: 11px; color: var(--text-muted); margin-left: 8px;">(売却: ${{escapeHtml(sellGold)}} G)</span>
       `;
 
       // ステータス整形 (絵文字・アイコンなしのクリーン表示)
       const statsList = item.stats_list || [];
       if (statsList.length > 0) {{
         itemDetailStatsSec.style.display = "block";
-        itemDetailStatsText.innerHTML = statsList.map(st => `<span class="stat-badge">${{st}}</span>`).join("");
+        itemDetailStatsText.innerHTML = statsList.map(st => `<span class="stat-badge">${{escapeHtml(st)}}</span>`).join("");
       }} else {{
         const statsObj = item.stats || {{}};
         const statEntries = Object.entries(statsObj);
@@ -3118,9 +2882,9 @@ def build():
             else if (k === "PercentTenacityMod") {{ label = "行動妨害耐性"; val = `+${{Math.round(val * 100)}}%`; }}
 
             if (typeof val === "number" && !val.toString().startsWith("+") && val > 0) {{
-              val = `+${{val}}`;
+              val = `+${{escapeHtml(val)}}`;
             }}
-            return `<span class="stat-badge">${{label}}: ${{val}}</span>`;
+            return `<span class="stat-badge">${{escapeHtml(label)}}: ${{escapeHtml(val)}}</span>`;
           }}).join("");
           itemDetailStatsText.innerHTML = statsHtml;
         }} else {{
@@ -3144,16 +2908,16 @@ def build():
         itemRecipeFromBox.style.display = "block";
         itemRecipeFromList.innerHTML = fromIds.map(fid => {{
           const fItem = ITEMS[fid];
-          const fName = fItem ? fItem.name : `ID:${{fid}}`;
+          const fName = fItem ? fItem.name : `ID:${{escapeHtml(fid)}}`;
           const fPrice = fItem ? `${{fItem.gold?.total || 0}} G` : "無料";
-          const fImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{fid}}.png`;
-          const fStats = fItem?.stats_summary ? `<span style="font-size:10px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${{fItem.stats_summary}}</span>` : "";
+          const fImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{escapeHtml(fid)}}.png`;
+          const fStats = fItem?.stats_summary ? `<span style="font-size:10px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${{escapeHtml(fItem.stats_summary)}}</span>` : "";
           return `
-            <div class="recipe-item-card" data-recipe-id="${{fid}}" title="${{fName}} の詳細を表示">
-              <img src="${{fImg}}" alt="${{fName}}" onerror="this.src='icon.png';">
+            <div class="recipe-item-card" data-recipe-id="${{escapeHtml(fid)}}" title="${{escapeHtml(fName)}} の詳細を表示">
+              <img src="${{safeImageUrl(fImg)}}" alt="${{escapeHtml(fName)}}" onerror="this.src='icon.png';">
               <div class="recipe-item-info">
-                <span class="recipe-item-name">${{fName}}</span>
-                <span class="recipe-item-price">💰 ${{fPrice}}</span>
+                <span class="recipe-item-name">${{escapeHtml(fName)}}</span>
+                <span class="recipe-item-price">💰 ${{escapeHtml(fPrice)}}</span>
                 ${{fStats}}
               </div>
             </div>
@@ -3169,16 +2933,16 @@ def build():
         itemRecipeIntoBox.style.display = "block";
         itemRecipeIntoList.innerHTML = intoIds.map(iid => {{
           const iItem = ITEMS[iid];
-          const iName = iItem ? iItem.name : `ID:${{iid}}`;
+          const iName = iItem ? iItem.name : `ID:${{escapeHtml(iid)}}`;
           const iPrice = iItem ? `${{iItem.gold?.total || 0}} G` : "無料";
-          const iImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{iid}}.png`;
-          const iStats = iItem?.stats_summary ? `<span style="font-size:10px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${{iItem.stats_summary}}</span>` : "";
+          const iImg = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{escapeHtml(iid)}}.png`;
+          const iStats = iItem?.stats_summary ? `<span style="font-size:10px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${{escapeHtml(iItem.stats_summary)}}</span>` : "";
           return `
-            <div class="recipe-item-card" data-recipe-id="${{iid}}" title="${{iName}} の詳細を表示">
-              <img src="${{iImg}}" alt="${{iName}}" onerror="this.src='icon.png';">
+            <div class="recipe-item-card" data-recipe-id="${{escapeHtml(iid)}}" title="${{escapeHtml(iName)}} の詳細を表示">
+              <img src="${{safeImageUrl(iImg)}}" alt="${{escapeHtml(iName)}}" onerror="this.src='icon.png';">
               <div class="recipe-item-info">
-                <span class="recipe-item-name">${{iName}}</span>
-                <span class="recipe-item-price">💰 ${{iPrice}}</span>
+                <span class="recipe-item-name">${{escapeHtml(iName)}}</span>
+                <span class="recipe-item-price">💰 ${{escapeHtml(iPrice)}}</span>
                 ${{iStats}}
               </div>
             </div>
@@ -3209,37 +2973,10 @@ def build():
       const iBody = itemDetailModalEl.querySelector(".modal-body");
       if (iBody) iBody.scrollTop = 0;
 
-      // History API
-      if (!history.state || history.state.modal !== 'item_detail') {{
-        history.pushState({{ modal: 'item_detail', itemId: itemId }}, '');
-      }}
+      recordModal({{modal: 'item_detail', itemId: String(itemId)}});
     }}
-
-    function closeItemDetailModal() {{
-      itemDetailModalEl.classList.remove("open");
-    }}
-
-    if (itemDetailCloseBtn) {{
-      itemDetailCloseBtn.onclick = () => {{
-        if (history.state && history.state.modal === 'item_detail') {{
-          history.back();
-        }} else {{
-          closeItemDetailModal();
-        }}
-      }};
-    }}
-
-    if (itemDetailModalEl) {{
-      itemDetailModalEl.onclick = (e) => {{
-        if (e.target === itemDetailModalEl) {{
-          if (history.state && history.state.modal === 'item_detail') {{
-            history.back();
-          }} else {{
-            closeItemDetailModal();
-          }}
-        }}
-      }};
-    }}
+    itemDetailCloseBtn.onclick = closeTopModal;
+    itemDetailModalEl.onclick = event => {{ if (event.target === itemDetailModalEl) closeTopModal(); }};
 
     // ==========================================
     // アイテム図鑑の制御・検索・ソート (Phase 2)
@@ -3319,17 +3056,19 @@ def build():
       itemsList.forEach(item => {{
         const card = document.createElement("div");
         card.className = "item-grid-card";
+        card.tabIndex = 0; card.setAttribute("role", "button");
+        card.onkeydown = event => {{ if (event.key === "Enter" || event.key === " ") {{ event.preventDefault(); openItemDetail(item.id); }} }};
         card.onclick = () => openItemDetail(item.id);
 
         const patch = DEFAULT_PATCH;
         const imgUrl = `https://ddragon.leagueoflegends.com/cdn/${{patch}}/img/item/${{item.id}}.png`;
         const price = item.gold?.total ? `${{item.gold.total}} G` : "無料";
-        const statsSummary = item.stats_summary ? `<div class="item-card-stats" title="${{item.stats_summary}}">${{item.stats_summary}}</div>` : "";
+        const statsSummary = item.stats_summary ? `<div class="item-card-stats" title="${{escapeHtml(item.stats_summary)}}">${{escapeHtml(item.stats_summary)}}</div>` : "";
 
         card.innerHTML = `
-          <img class="item-card-icon" src="${{imgUrl}}" alt="${{item.name}}" loading="lazy" onerror="this.src='icon.png';">
-          <div class="item-card-name" title="${{item.name}}">${{item.name}}</div>
-          <div class="item-card-price">💰 ${{price}}</div>
+          <img class="item-card-icon" src="${{safeImageUrl(imgUrl)}}" alt="${{escapeHtml(item.display_name || item.name)}}" loading="lazy" onerror="this.src='icon.png';">
+          <div class="item-card-name" title="${{escapeHtml(item.display_name || item.name)}}">${{escapeHtml(item.display_name || item.name)}}</div>
+          <div class="item-card-price">💰 ${{escapeHtml(price)}}</div>
           ${{statsSummary}}
         `;
         itemsGridEl.appendChild(card);
@@ -3378,42 +3117,6 @@ def build():
       }};
     }}
 
-    // スマホのジェスチャースワイプ「戻る」イベント対応（アプリ終了防止・モーダル多重スタック制御）
-    window.addEventListener("popstate", (e) => {{
-      if (itemDetailModalEl && itemDetailModalEl.classList.contains("open")) {{
-        closeItemDetailModal();
-        return;
-      }}
-      if (modalEl && modalEl.classList.contains("open")) {{
-        closeDetailModal();
-        return;
-      }}
-      if (changelogModalEl && changelogModalEl.classList.contains("open")) {{
-        closeChangelogModal();
-        return;
-      }}
-    }});
-
-    // ESCキー対応（モーダル多重スタック制御）
-    window.addEventListener("keydown", (e) => {{
-      if (e.key === "Escape") {{
-        if (itemDetailModalEl && itemDetailModalEl.classList.contains("open")) {{
-          if (history.state && history.state.modal === 'item_detail') history.back();
-          else closeItemDetailModal();
-          return;
-        }}
-        if (modalEl && modalEl.classList.contains("open")) {{
-          if (history.state && history.state.modal === 'champion_detail') history.back();
-          else closeDetailModal();
-          return;
-        }}
-        if (changelogModalEl && changelogModalEl.classList.contains("open")) {{
-          if (history.state && history.state.modal === 'changelog') history.back();
-          else closeChangelogModal();
-        }}
-      }}
-    }});
-
     // メインナビゲーションタブ切り替え
     const champControlsEl = document.getElementById("champControls");
     const viewChampsEl = document.getElementById("viewChampions");
@@ -3421,29 +3124,22 @@ def build():
     const viewPicksEl = document.getElementById("viewPicks");
 
     // ユーザー提供のガレン対面表と、暫定の補足候補。勝率統計ではない。
-    const pickRows = [
-      ["アカリ","ガレン","耐えて短期トレード"],["アトロックス","ガレン","Qの外側を避ける"],["アンベッサ","ガレン","ダッシュ後を狙う"],["イラオイ","モルデカイザー","Eを避け、触手の位置を意識して戦う"],["ウラジミール","ガレン","序盤に圧力"],["オラフ","ガレン","R中の長期戦を避ける"],["カシオペア","ガレン","接近が難しいので慎重に"],["ガリオ","ガレン","AP耐久型に物理ダメージ"],["ガングプランク","ガレン","樽の処理が重要"],["クレッド","ガレン","乗馬中の長期戦を避ける"],["グウェン","ガレン","Q中央を回避"],["グラガス","ガレン","回復と妨害に注意"],["ケイル","モルデカイザー","序盤に主導権。射程とRに注意"],["ケネン","ガレン","無理な接近を避ける"],["コグ＝マウ","ガレン","珍しいTOP、序盤に圧力"],["ザーヘン","ガレン","長期戦を避ける"],["シンジド","ガレン","追いかけすぎない"],["スウェイン","ガレン","長期戦を避ける"],["ダリウス","ガレン","不利ならBANを検討"],["トランドル","ガレン","長い殴り合いを避ける"],["ニーコ","ガレン","分身とEに注意"],["ヘイマーディンガー","ガレン","タレットに無理に突っ込まない"],["ボリベア","ガレン","2回目のWを受けない"],["ランブル","ガレン","長い炎上トレードを避ける"],["リヴェン","ガレン","短期トレードで対応"],["リサンドラ","ガレン","無理なダイブをしない"],["リリア","ガレン","移動速度と継続ダメージに注意"],["ワーウィック","ガレン","低HP時の回復に注意"],
-      ["マルファイト","モルデカイザー","対タンク枠。孤立Qを狙う"],["オーン","モルデカイザー","タンク対策。鍛冶神の呼び声に注意"],["サイオン","モルデカイザー","継続魔法ダメージ。Qの範囲から出る"],["チョ＝ガス","モルデカイザー","タンク対策。QとRに注意"],["タム・ケンチ","モルデカイザー","長期戦と割合ダメージを意識"],
-      ["ウディア","モルデカイザー","継続戦闘を意識"],["カ・サンテ","モルデカイザー","AP継続ダメージを活用"],["ガレン","モルデカイザー","長期戦で優位を狙う"],["シェン","モルデカイザー","Rで相手のRによる離脱を妨害"],["セト","モルデカイザー","W中央を回避"],["ティーモ","モルデカイザー","Qのブラインドを受けてもスキルで戦える"],["ドクター・ムンド","モルデカイザー","パッシブによる行動妨害への耐性に注意"],["ナサス","モルデカイザー","序盤にスタックを妨害"],["ポッピー","モルデカイザー","AP継続ダメージを活用"],["ヨリック","モルデカイザー","メイデンとグールの処理に注意"],
-      ["トリンダメア","マルファイト","通常攻撃対策。R中の殴り合いを避ける"],["ヤスオ","マルファイト","対AD通常攻撃。Eの攻撃速度低下を活用"],["ヨネ","マルファイト","通常攻撃主体への候補。魔法ダメージとEの戻り位置に注意"],["クイン","マルファイト","対ADレンジ。R習得後に反撃"],["ヴェイン","マルファイト","対ADレンジ。Wの確定ダメージに注意"],["ジェイス","マルファイト","対ADレンジ。遠隔攻撃を受けすぎない"],
-      ["アーゴット","マルファイト","Eで攻撃速度を下げる"],["アッシュ","マルファイト","対ADレンジ"],["ジャックス","マルファイト","Eの攻撃速度低下を活用。魔法ダメージに注意"],["イレリア","マルファイト","攻撃速度低下を活用"],["ウーコン","マルファイト","物理ダメージ対策"],["カミール","マルファイト","対ADだが確定ダメージに注意"],["ジャーヴァンIV","マルファイト","対AD。防御低下に注意"],["ナー","マルファイト","対ADレンジ。メガナーに注意"],["ノクターン","マルファイト","対AD。スペルシールドに注意"],["パンテオン","マルファイト","対AD。序盤は慎重に"],["フィオラ","マルファイト","Wと確定ダメージに注意"],["ブライアー","マルファイト","通常攻撃主体。回復に注意"],["レネクトン","マルファイト","序盤のバーストを耐える"],["レク＝サイ","マルファイト","対AD。確定ダメージに注意"],
-      ["モルデカイザー","ガレン","使い慣れたガレンで対応。長期戦を避け、短期トレードを意識"]
-    ];
+    const pickRows = [["Akali", "Garen", "耐えて短期トレード", ["アカリ"]], ["Aatrox", "Garen", "Qの外側を避ける", ["アトロックス"]], ["Ambessa", "Garen", "ダッシュ後を狙う", ["アンベッサ"]], ["Illaoi", "Mordekaiser", "Eを避け、触手の位置を意識して戦う", ["イラオイ"]], ["Vladimir", "Garen", "序盤に圧力", ["ウラジミール"]], ["Olaf", "Garen", "R中の長期戦を避ける", ["オラフ"]], ["Cassiopeia", "Garen", "接近が難しいので慎重に", ["カシオペア"]], ["Galio", "Garen", "AP耐久型に物理ダメージ", ["ガリオ"]], ["Gangplank", "Garen", "樽の処理が重要", ["ガングプランク"]], ["Kled", "Garen", "乗馬中の長期戦を避ける", ["クレッド"]], ["Gwen", "Garen", "Q中央を回避", ["グウェン"]], ["Gragas", "Garen", "回復と妨害に注意", ["グラガス"]], ["Kayle", "Mordekaiser", "序盤に主導権。射程とRに注意", ["ケイル"]], ["Kennen", "Garen", "無理な接近を避ける", ["ケネン"]], ["KogMaw", "Garen", "珍しいTOP、序盤に圧力", ["コグ＝マウ"]], ["Zaahen", "Garen", "長期戦を避ける", ["ザーヘン"]], ["Singed", "Garen", "追いかけすぎない", ["シンジド"]], ["Swain", "Garen", "長期戦を避ける", ["スウェイン"]], ["Darius", "Garen", "不利ならBANを検討", ["ダリウス"]], ["Trundle", "Garen", "長い殴り合いを避ける", ["トランドル"]], ["Neeko", "Garen", "分身とEに注意", ["ニーコ"]], ["Heimerdinger", "Garen", "タレットに無理に突っ込まない", ["ヘイマーディンガー"]], ["Volibear", "Garen", "2回目のWを受けない", ["ボリベア"]], ["Rumble", "Garen", "長い炎上トレードを避ける", ["ランブル"]], ["Riven", "Garen", "短期トレードで対応", ["リヴェン"]], ["Lissandra", "Garen", "無理なダイブをしない", ["リサンドラ"]], ["Lillia", "Garen", "移動速度と継続ダメージに注意", ["リリア"]], ["Warwick", "Garen", "低HP時の回復に注意", ["ワーウィック"]], ["Malphite", "Mordekaiser", "対タンク枠。孤立Qを狙う", ["マルファイト"]], ["Ornn", "Mordekaiser", "タンク対策。鍛冶神の呼び声に注意", ["オーン"]], ["Sion", "Mordekaiser", "継続魔法ダメージ。Qの範囲から出る", ["サイオン"]], ["Chogath", "Mordekaiser", "タンク対策。QとRに注意", ["チョ＝ガス"]], ["TahmKench", "Mordekaiser", "長期戦と割合ダメージを意識", ["タム・ケンチ"]], ["Udyr", "Mordekaiser", "継続戦闘を意識", ["ウディア"]], ["KSante", "Mordekaiser", "AP継続ダメージを活用", ["カ・サンテ"]], ["Garen", "Mordekaiser", "長期戦で優位を狙う", ["ガレン"]], ["Shen", "Mordekaiser", "Rで相手のRによる離脱を妨害", ["シェン"]], ["Sett", "Mordekaiser", "W中央を回避", ["セト"]], ["Teemo", "Mordekaiser", "Qのブラインドを受けてもスキルで戦える", ["ティーモ"]], ["DrMundo", "Mordekaiser", "パッシブによる行動妨害への耐性に注意", ["ドクター・ムンド"]], ["Nasus", "Mordekaiser", "序盤にスタックを妨害", ["ナサス"]], ["Poppy", "Mordekaiser", "AP継続ダメージを活用", ["ポッピー"]], ["Yorick", "Mordekaiser", "メイデンとグールの処理に注意", ["ヨリック"]], ["Tryndamere", "Malphite", "通常攻撃対策。R中の殴り合いを避ける", ["トリンダメア"]], ["Yasuo", "Malphite", "対AD通常攻撃。Eの攻撃速度低下を活用", ["ヤスオ"]], ["Yone", "Malphite", "通常攻撃主体への候補。魔法ダメージとEの戻り位置に注意", ["ヨネ"]], ["Quinn", "Malphite", "対ADレンジ。R習得後に反撃", ["クイン"]], ["Vayne", "Malphite", "対ADレンジ。Wの確定ダメージに注意", ["ヴェイン"]], ["Jayce", "Malphite", "対ADレンジ。遠隔攻撃を受けすぎない", ["ジェイス"]], ["Urgot", "Malphite", "Eで攻撃速度を下げる", ["アーゴット"]], ["Ashe", "Malphite", "対ADレンジ", ["アッシュ"]], ["Jax", "Malphite", "Eの攻撃速度低下を活用。魔法ダメージに注意", ["ジャックス"]], ["Irelia", "Malphite", "攻撃速度低下を活用", ["イレリア"]], ["MonkeyKing", "Malphite", "物理ダメージ対策", ["ウーコン"]], ["Camille", "Malphite", "対ADだが確定ダメージに注意", ["カミール"]], ["JarvanIV", "Malphite", "対AD。防御低下に注意", ["ジャーヴァンIV"]], ["Gnar", "Malphite", "対ADレンジ。メガナーに注意", ["ナー"]], ["Nocturne", "Malphite", "対AD。スペルシールドに注意", ["ノクターン"]], ["Pantheon", "Malphite", "対AD。序盤は慎重に", ["パンテオン"]], ["Fiora", "Malphite", "Wと確定ダメージに注意", ["フィオラ"]], ["Briar", "Malphite", "通常攻撃主体。回復に注意", ["ブライアー"]], ["Renekton", "Malphite", "序盤のバーストを耐える", ["レネクトン"]], ["RekSai", "Malphite", "対AD。確定ダメージに注意", ["レク＝サイ"]], ["Mordekaiser", "Garen", "使い慣れたガレンで対応。長期戦を避け、短期トレードを意識", ["モルデカイザー"]]];
     let pickFilter = "すべて";
     function renderPickGuide() {{
       const query = document.getElementById("pickSearch").value.trim().toLocaleLowerCase();
       const normalizedQuery = query === "アックス" ? "ジャックス" : query;
-      const rows = pickRows.filter(row => (pickFilter === "すべて" || row[1] === pickFilter) && row[0].toLocaleLowerCase().includes(normalizedQuery)).sort((a,b) => a[0].localeCompare(b[0], "ja"));
+      const rows = pickRows.filter(row => (pickFilter === "すべて" || CHAMPIONS[row[1]]?.name === pickFilter) && [CHAMPIONS[row[0]]?.name, row[0], ...row[3]].some(name => matchSearch(name, normalizedQuery))).sort((a,b) => CHAMPIONS[a[0]].name.localeCompare(CHAMPIONS[b[0]].name, "ja"));
       document.getElementById("pickCount").textContent = rows.length + "対面を表示";
       const list = document.getElementById("pickList");
       list.replaceChildren();
       if (!rows.length) {{ list.textContent = "該当する対面はありません。未掲載の対面はガレンを基準に検討してください。"; return; }}
       rows.forEach(row => {{
         const card = document.createElement("div"); card.className = "pick-row";
-        const title = document.createElement("strong"); title.textContent = row[0] + " → ";
+        const title = document.createElement("strong"); title.textContent = CHAMPIONS[row[0]].name + " → ";
         const choice = document.createElement("span");
         const choiceClasses = {{ "ガレン": "garen", "モルデカイザー": "mordekaiser", "マルファイト": "malphite" }};
-        choice.className = "pick-choice-" + choiceClasses[row[1]]; choice.textContent = row[1];
+        choice.className = "pick-choice-" + choiceClasses[CHAMPIONS[row[1]].name]; choice.textContent = CHAMPIONS[row[1]].name;
         title.append(choice);
         const reason = document.createElement("p"); reason.textContent = row[2];
         card.append(title, reason); list.append(card);
@@ -3554,11 +3250,11 @@ def build():
 
     // チャンピオン画像バックグラウンド・プリフェッチ（完全オフライン化）
     function prewarmChampionImages() {{
-      if (!('serviceWorker' in navigator) || !navigator.onLine) return;
+      if (!('serviceWorker' in navigator) || !navigator.onLine || navigator.connection?.saveData || ['slow-2g','2g','3g'].includes(navigator.connection?.effectiveType)) return;
       const champList = Object.values(CHAMPIONS);
       let idx = 0;
       function fetchNextBatch() {{
-        if (idx >= champList.length) return;
+        if (idx >= champList.length || !navigator.onLine || navigator.connection?.saveData || ['slow-2g','2g','3g'].includes(navigator.connection?.effectiveType)) return;
         const end = Math.min(idx + 10, champList.length);
         for (let i = idx; i < end; i++) {{
           const c = champList[i];

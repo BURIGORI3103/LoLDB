@@ -50,7 +50,7 @@
     {
       "slot": "W",
       "name": "バスティオン",
-      "description": "自動効果: このスキルで繋がっている味方チャンピオンとタリックの物理防御が増加する。<br><br>発動効果: 指定した味方チャンピオンと繋がり、両者にシールドを付与するが、離れすぎると繋がりは一時的に消滅する。さらにタリックの全スキルは、繋がっている味方チャンピオンからも同様に発動される。",
+      "description": "自動効果: このスキルで繋がっている味方チャンピオンとタリックの物理防御が増加する。\n\n発動効果: 指定した味方チャンピオンと繋がり、両者にシールドを付与するが、離れすぎると繋がりは一時的に消滅する。さらにタリックの全スキルは、繋がっている味方チャンピオンからも同様に発動される。",
       "cooldown": "15",
       "cost": "60",
       "image": "TaricW.png"
@@ -388,20 +388,20 @@
     "core": [
       {
         "step": 1,
-        "item_id": "3070",
-        "name": "女神の涙",
-        "description": "推奨コア"
-      },
-      {
-        "step": 2,
         "item_id": "3190",
         "name": "ソラリのロケット",
         "description": "推奨コア"
       },
       {
-        "step": 3,
+        "step": 2,
         "item_id": "3121",
         "name": "フィンブルウィンター",
+        "description": "推奨コア"
+      },
+      {
+        "step": 3,
+        "item_id": "3109",
+        "name": "騎士の誓い",
         "description": "推奨コア"
       }
     ],
@@ -419,22 +419,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "不滅",
       "choices": [
         "心身調整",
         "生気付与"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Health Scaling",
-      "Health Scaling"
+      "攻撃速度",
+      "スケーリング体力",
+      "スケーリング体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-    "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-    "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+    "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+    "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+    "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
   },
   "damage_profile": {
     "primary_type": "AP",
@@ -455,9 +455,9 @@
       "skill_order": "Q > E > W",
       "role_note": "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・ボットレーン主導権＆視界支配】レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
-        "teamfight": "【中終盤・視界確保＆キャリーのピール】オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
-        "key_tips": "【スキルの吐きどころ】主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
+        "laning": "レベル2先行を強く意識してプッシュをサポート。リコールタイミングで敵ジャングル入口やドラゴン周りに深いワードを置き、ガンクを未然に察知する。",
+        "teamfight": "オブジェクト発生1分前からのデワード・視界展開。集団戦では飛び込んできた敵アサシンを拘束し、味方ADC・MIDを最後まで守り抜く。",
+        "key_tips": "主要なCCやシールド・回復スキルを無駄撃ちしない。相手が仕掛けてきたカウンター、または味方の決定打に合わせてピンポイントで放つ。"
       },
       "runes": {
         "primary": {
@@ -471,16 +471,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "不滅",
           "choices": [
             "心身調整",
             "生気付与"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Health Scaling",
-          "Health Scaling"
+          "攻撃速度",
+          "スケーリング体力",
+          "スケーリング体力"
         ]
       },
       "matchups": {
@@ -771,30 +771,32 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AP] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・SUPの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
-            "女神の涙",
             "ソラリのロケット",
-            "フィンブルウィンター"
+            "フィンブルウィンター",
+            "騎士の誓い"
           ],
           "core_items": [
             {
               "step": 1,
-              "item_id": "3070",
-              "name": "女神の涙",
-              "description": "推奨コア"
-            },
-            {
-              "step": 2,
               "item_id": "3190",
               "name": "ソラリのロケット",
               "description": "推奨コア"
             },
             {
-              "step": 3,
+              "step": 2,
               "item_id": "3121",
               "name": "フィンブルウィンター",
+              "description": "推奨コア"
+            },
+            {
+              "step": 3,
+              "item_id": "3109",
+              "name": "騎士の誓い",
               "description": "推奨コア"
             }
           ],
@@ -803,8 +805,23 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -890,20 +907,20 @@
         "core": [
           {
             "step": 1,
-            "item_id": "3070",
-            "name": "女神の涙",
-            "description": "推奨コア"
-          },
-          {
-            "step": 2,
             "item_id": "3190",
             "name": "ソラリのロケット",
             "description": "推奨コア"
           },
           {
-            "step": 3,
+            "step": 2,
             "item_id": "3121",
             "name": "フィンブルウィンター",
+            "description": "推奨コア"
+          },
+          {
+            "step": 3,
+            "item_id": "3109",
+            "name": "騎士の誓い",
             "description": "推奨コア"
           }
         ],
@@ -915,6 +932,20 @@
         "patch_verified": true,
         "role": "SUP",
         "fetched_at": "2026-10-30T09:27:14+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/taric/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/taric/build/support?patch=16.21",
+        "patch": "16.21",
+        "role": "SUP",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
@@ -922,28 +953,30 @@
     {
       "name": "[AP] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・SUPの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
-        "女神の涙",
         "ソラリのロケット",
-        "フィンブルウィンター"
+        "フィンブルウィンター",
+        "騎士の誓い"
       ],
       "core_items": [
         {
           "step": 1,
-          "item_id": "3070",
-          "name": "女神の涙",
-          "description": "推奨コア"
-        },
-        {
-          "step": 2,
           "item_id": "3190",
           "name": "ソラリのロケット",
           "description": "推奨コア"
         },
         {
-          "step": 3,
+          "step": 2,
           "item_id": "3121",
           "name": "フィンブルウィンター",
+          "description": "推奨コア"
+        },
+        {
+          "step": 3,
+          "item_id": "3109",
+          "name": "騎士の誓い",
           "description": "推奨コア"
         }
       ],
@@ -952,8 +985,23 @@
       ],
       "boots": "プレート スチールキャップ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        },
+        {
+          "item_id": "3111",
+          "name": "マーキュリー ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1727,5 +1775,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/taric/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/taric/build/support?patch=16.21",
+    "patch": "16.21",
+    "role": "SUP",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "軍務放棄の咎を受けて祖国を追放された後、霊峰ターゴンの試練を乗り越え守護の神髄へと生まれ変わったデマーシアの元軍人。 飛び込んできた敵へのカウンターを得意とするタンクと回復・シールド・無敵を付与するエンチャンター、二つの側面を持つチャンピオ",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Taric",
+    "source_patch": "未検証"
   }
 }

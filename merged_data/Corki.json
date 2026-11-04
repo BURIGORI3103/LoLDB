@@ -34,7 +34,7 @@
     {
       "slot": "Passive",
       "name": "ヘクステック榴散弾",
-      "description": "通常攻撃ダメージの一定割合を追加<trueDamage>確定ダメージ</trueDamage>として与える。",
+      "description": "通常攻撃ダメージの一定割合を追加確定ダメージとして与える。",
       "image": "Corki_RapidReload.png"
     }
   ],
@@ -42,7 +42,7 @@
     {
       "slot": "Q",
       "name": "閃光弾",
-      "description": "爆弾を発射し、範囲内の敵に魔法ダメージを与える。<br>範囲内の敵は一定時間可視状態になる。",
+      "description": "爆弾を発射し、範囲内の敵に魔法ダメージを与える。\n範囲内の敵は一定時間可視状態になる。",
       "cooldown": "9/8.5/8/7.5/7",
       "cost": "60/65/70/75/80",
       "image": "PhosphorusBomb.png"
@@ -66,7 +66,7 @@
     {
       "slot": "R",
       "name": "連発ミサイル",
-      "description": "指定方向にミサイルを発射する。ミサイルは敵ユニットに命中すると爆発し、範囲内の敵ユニットにダメージを与える。ミサイルのストックは最大に達するまで一定時間ごとにチャージされる。<br>3発ごとに「ドデカミサイル」が発射され、通常より大きいダメージを与える。",
+      "description": "指定方向にミサイルを発射する。ミサイルは敵ユニットに命中すると爆発し、範囲内の敵ユニットにダメージを与える。ミサイルのストックは最大に達するまで一定時間ごとにチャージされる。\n3発ごとに「ドデカミサイル」が発射され、通常より大きいダメージを与える。",
       "cooldown": "2",
       "cost": "35",
       "image": "MissileBarrage.png"
@@ -423,22 +423,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "キャッシュバック",
         "トリプル トニック"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health"
+      "攻撃速度",
+      "アダプティブフォース",
+      "体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-    "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-    "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+    "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+    "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+    "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
   },
   "damage_profile": {
     "primary_type": "HYBRID",
@@ -459,9 +459,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -475,16 +475,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "キャッシュバック",
             "トリプル トニック"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health"
+          "攻撃速度",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "matchups": {
@@ -775,8 +775,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[HYBRID] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "エッセンス リーバー",
             "コレクター",
@@ -808,8 +810,27 @@
           ],
           "boots": "プレート スチールキャップ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3047",
+              "name": "プレート スチールキャップ"
+            },
+            {
+              "item_id": "3008",
+              "name": "グラトナス ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -924,13 +945,29 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:26:31+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/corki/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/corki/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     }
   },
   "build_patterns": [
     {
-      "name": "[AD] OP.GG 推奨ビルド",
+      "name": "[HYBRID] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・ADCの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "エッセンス リーバー",
         "コレクター",
@@ -962,8 +999,27 @@
       ],
       "boots": "プレート スチールキャップ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1086",
+          "name": "ドラン ボウ"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3047",
+          "name": "プレート スチールキャップ"
+        },
+        {
+          "item_id": "3008",
+          "name": "グラトナス ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -1636,5 +1692,24 @@
     "scope": "wiki_general_not_role_specific",
     "patch_verified": false,
     "groups": []
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/corki/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/corki/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "ピルトーヴァー製の飛行機を自由自在に乗り回すヨードルのベテラン操縦士 AoEが豊富でPushが早め、固定値でのAR・MRの低下で序盤から高いダメージを発揮するADC オールイン、ポークどちらもこなせてブリンクも持ち、ADCとして非常に万能な",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Corki",
+    "source_patch": "未検証"
   }
 }

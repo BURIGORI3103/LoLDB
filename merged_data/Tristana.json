@@ -59,7 +59,7 @@
     {
       "slot": "E",
       "name": "ヨードルグレネード",
-      "description": "自動効果: ユニットを倒すと砲弾が炸裂して金属片が飛び散り、周辺の敵ユニットにダメージを与える。<br><br>発動効果: 対象にグレネードを付着させる。グレネードは数秒後に起爆し、対象と周囲のユニットにダメージを与える。",
+      "description": "自動効果: ユニットを倒すと砲弾が炸裂して金属片が飛び散り、周辺の敵ユニットにダメージを与える。\n\n発動効果: 対象にグレネードを付着させる。グレネードは数秒後に起爆し、対象と周囲のユニットにダメージを与える。",
       "cooldown": "16/15.5/15/14.5/14",
       "cost": "50/55/60/65/70",
       "image": "TristanaE.png"
@@ -424,22 +424,22 @@
       ]
     },
     "secondary": {
-      "path": "",
+      "path": "天啓",
       "choices": [
         "キャッシュバック",
         "トリプル トニック"
       ]
     },
     "shards": [
-      "Attack Speed",
-      "Adaptive Force",
-      "Health"
+      "攻撃速度",
+      "アダプティブフォース",
+      "体力"
     ]
   },
   "gameplay_notes": {
-    "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-    "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-    "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+    "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+    "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+    "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
   },
   "damage_profile": {
     "primary_type": "AD",
@@ -460,9 +460,9 @@
       "skill_order": "Q > E > W",
       "role_note": "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。",
       "gameplay_notes": {
-        "laning": "【序盤・CS最優先＆安全なトレード】サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
-        "teamfight": "【中終盤・ポジショニング＆継続DPS】敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
-        "key_tips": "【スキルの吐きどころ】移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
+        "laning": "サポートのCC合わせや敵のスキルCDを見極めてダメージトレード。無理なキル狙いよりも安定したウェーブ管理とアイテム完成を最優先にする。",
+        "teamfight": "敵の主要CCやアサシンの位置を確認するまで決して前に出ない。最も近い安全な対象から順番に通常攻撃で最大火力を出し続ける。",
+        "key_tips": "移動・自衛スキルは逃げやポジション修正のために温存する。前ブリンクでの突っ込みは敵全員のスキルが落ちた瞬間のみ。"
       },
       "runes": {
         "primary": {
@@ -476,16 +476,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "キャッシュバック",
             "トリプル トニック"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health"
+          "攻撃速度",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "matchups": {
@@ -776,8 +776,10 @@
       },
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・ADCの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ユン・タル ワイルドアロー",
             "インフィニティ エッジ",
@@ -809,8 +811,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3008",
+              "name": "グラトナス ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "combos": [
@@ -925,6 +946,20 @@
         "patch_verified": true,
         "role": "ADC",
         "fetched_at": "2026-10-30T09:27:15+09:00"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/tristana/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/tristana/build/adc?patch=16.21",
+        "patch": "16.21",
+        "role": "ADC",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
       }
     },
     "MID": {
@@ -985,16 +1020,16 @@
           ]
         },
         "secondary": {
-          "path": "",
+          "path": "天啓",
           "choices": [
             "魔法の靴",
             "ビスケットデリバリー"
           ]
         },
         "shards": [
-          "Attack Speed",
-          "Adaptive Force",
-          "Health"
+          "攻撃速度",
+          "アダプティブフォース",
+          "体力"
         ]
       },
       "matchups": {
@@ -1297,8 +1332,10 @@
       ],
       "build_patterns": [
         {
-          "name": "OP.GG 推奨ビルド",
+          "name": "[AD] OP.GG 推奨ビルド",
           "desc": "パッチ16.21.1・MIDの取得済み統計",
+          "source": "opgg_stats",
+          "patch": "16.21.1",
           "core": [
             "ユン・タル ワイルドアロー",
             "インフィニティ エッジ",
@@ -1330,8 +1367,27 @@
           ],
           "boots": "バーサーカー ブーツ",
           "situational": [],
-          "source": "opgg_stats",
-          "patch": "16.21.1"
+          "starter_items": [
+            {
+              "item_id": "1086",
+              "name": "ドラン ボウ"
+            },
+            {
+              "item_id": "2003",
+              "name": "体力ポーション"
+            }
+          ],
+          "boots_items": [
+            {
+              "item_id": "3006",
+              "name": "バーサーカー ブーツ"
+            },
+            {
+              "item_id": "3111",
+              "name": "マーキュリー ブーツ"
+            }
+          ],
+          "situational_items": []
         }
       ],
       "spell_sets": [
@@ -1349,6 +1405,80 @@
         "badge": "遠隔",
         "range": 550,
         "desc": "通常攻撃射程 550 の遠隔攻撃チャンピオンです。"
+      },
+      "build_source": {
+        "url": "https://op.gg/lol/champions/tristana/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "runes_source": {
+        "url": "https://op.gg/lol/champions/tristana/build/mid?patch=16.21",
+        "patch": "16.21",
+        "role": "MID",
+        "patch_verified": true,
+        "fetched_at": "2026-11-04T15:38:32+09:00"
+      },
+      "gameplay_notes": {
+        "laning": "EとQを合わせた短いバーストトレードを狙う。Wを前に使う前に周囲の視界を確保し、不用意な飛び込みを避ける。",
+        "teamfight": "後半は近い敵から通常攻撃を続け、立ち位置を調整する。戦闘がない時間はファームを確保するが、味方から長く離れない。",
+        "key_tips": "Wは離脱を優先し、Rも自衛に利用する。Eを十分に重ねられない飛び込みではWの再使用を当てにしない。"
+      },
+      "guidance_sources": {
+        "gameplay_notes": {
+          "source_url": "https://mobalytics.gg/lol/champions/tristana/guide/mid",
+          "source_patch": "未検証",
+          "checked_at": "2026-11-04T15:38:29+09:00"
+        },
+        "combos": {
+          "source_url": "https://mobalytics.gg/lol/champions/tristana/guide/mid",
+          "source_patch": "未検証",
+          "checked_at": "2026-11-04T15:38:29+09:00"
+        },
+        "skill_order": {
+          "source_url": "https://op.gg/lol/champions/tristana/build/mid?patch=16.21",
+          "source_patch": "16.21.1",
+          "checked_at": "2026-11-04T15:38:29+09:00"
+        },
+        "skill_matrix": {
+          "source_url": "https://op.gg/lol/champions/tristana/build/mid?patch=16.21",
+          "source_patch": "16.21.1",
+          "checked_at": "2026-11-04T15:38:29+09:00"
+        }
+      },
+      "combos": [
+        {
+          "name": "EとQのトレード",
+          "recipe": "E → Q → AA",
+          "desc": "Eを付けた相手へQで攻撃速度を上げて通常攻撃を重ねる。Wの前進を必須にしない。"
+        }
+      ],
+      "skill_order": "E > Q > W",
+      "skill_matrix": {
+        "Q": [
+          3,
+          8,
+          10,
+          12,
+          13
+        ],
+        "W": [
+          2,
+          14,
+          15
+        ],
+        "E": [
+          1,
+          4,
+          5,
+          7,
+          9
+        ],
+        "R": [
+          6,
+          11
+        ]
       }
     }
   },
@@ -1356,6 +1486,8 @@
     {
       "name": "[AD] OP.GG 推奨ビルド",
       "desc": "パッチ16.21.1・ADCの取得済み統計",
+      "source": "opgg_stats",
+      "patch": "16.21.1",
       "core": [
         "ユン・タル ワイルドアロー",
         "インフィニティ エッジ",
@@ -1387,8 +1519,27 @@
       ],
       "boots": "バーサーカー ブーツ",
       "situational": [],
-      "source": "opgg_stats",
-      "patch": "16.21.1"
+      "starter_items": [
+        {
+          "item_id": "1086",
+          "name": "ドラン ボウ"
+        },
+        {
+          "item_id": "2003",
+          "name": "体力ポーション"
+        }
+      ],
+      "boots_items": [
+        {
+          "item_id": "3006",
+          "name": "バーサーカー ブーツ"
+        },
+        {
+          "item_id": "3008",
+          "name": "グラトナス ブーツ"
+        }
+      ],
+      "situational_items": []
     }
   ],
   "skill_order": "Q > E > W",
@@ -2417,5 +2568,24 @@
         "has_caveat": false
       }
     ]
+  },
+  "build_source": {
+    "url": "https://op.gg/lol/champions/tristana/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "runes_source": {
+    "url": "https://op.gg/lol/champions/tristana/build/adc?patch=16.21",
+    "patch": "16.21",
+    "role": "ADC",
+    "patch_verified": true,
+    "fetched_at": "2026-11-04T15:38:32+09:00"
+  },
+  "overview": {
+    "summary": "相棒の火砲・ブーマーを小脇にバンドルシティを警邏しているヨードルのマークスマン EのバーストとWの機動力によりスノーボール性能が高く、Rの拒否もあって単体性能が高いためしばしばmidでも使われる レベルにより射程が延長されていくためレイトス",
+    "source_url": "https://www.loljp-wiki.jp/wiki/?Champion/Tristana",
+    "source_patch": "未検証"
   }
 }
