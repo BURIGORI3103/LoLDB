@@ -49,12 +49,12 @@ class TestLoLDBQuality(unittest.TestCase):
             "damage_profile": {"primary_type": "AD"},
             "sustain_info": {"has_sustain": True},
             "matchups": {
-                "favorable": [{"champion_id": "Varus", "name": "ヴァルス", "winrate": "59.03%", "role": "TOP"}]
+                "favorable": [{"champion_id": "Varus", "name": "ヴァルス", "winrate": "59.03%", "winrate_num": 59.03, "role": "TOP", "patch": "16.20.1", "games": 20, "source": "opgg_stats"}]
             },
             "role_data": {
                 "TOP": {
                     "matchups": {
-                        "favorable": [{"champion_id": "Varus", "name": "ヴァルス", "winrate": "59.03%", "role": "TOP"}],
+                        "favorable": [{"champion_id": "Varus", "name": "ヴァルス", "winrate": "59.03%", "winrate_num": 59.03, "role": "TOP", "patch": "16.20.1", "games": 20, "source": "opgg_stats"}],
                         "unfavorable": [],
                     }
                 },

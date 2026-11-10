@@ -15,10 +15,11 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 1. fetch_champions.py が Data Dragon から基礎データを取得します。
 2. process_url_list.py が docs/LoL_URL_list.md を参照し、攻略情報を収集します。
-3. merge_data.py / update_champion_damage_types.py / update_champion_attack_types.py / update_champion_sustain.py / sync_all_roles_complete.py / build_advanced_champion_data.py / scratch/generate_matchup_reasons.py / build_comprehensive_matchups.py が収集データを統合・正規化・補完します。
+3. merge_data.py / update_champion_damage_types.py / update_champion_attack_types.py / update_champion_sustain.py / build_advanced_champion_data.py / scratch/generate_matchup_reasons.py / build_comprehensive_matchups.py が収集データを統合・正規化・補完します。
    - AA通常攻撃タイプは公式の `stats.attackrange` に基づき、近接（Melee: <=250）、遠隔（Ranged: >250）、および特殊可変形態（Jayce, Nidalee, Elise, Gnar, Kayle: HYBRID）を厳密に判定して保持。
    - サステイン能力は公式スキル・パッシブ説明文から体力回復（吸血・リジェネ強化）および自己シールドを厳密解析し `sustain_info` として保持。
    - ダメージ属性（AD/AP/タンク/両型）およびサステイン特性を付与し、UI上のチャンピオン一覧で複合絞り込み（AND条件）をサポート。
+   - 旧入口の sync_all_roles_complete.py と migrate_matchups.py は停止済み。現行の取得・統合の手順を使用する。
    - マッチアップは正規スキーマ（champion_id, name, winrate, winrate_display, reason, role, patch, source, is_estimated）で管理。
    - 実測データ（opgg_stats）と推定相性（synergy_estimate）を厳格に分離し、ハッシュ値による疑似勝率生成は廃止。
    - 相性解説は data/matchup_reason_evidence.json に出典付きで登録し、対面・ロール・有利不利の方向が一致した文献確認済みのものだけを表示する。未確認の対面カードには解説を出さず、勝率を保持する。文献上の相性説明と現在パッチの勝率の因果関係は区別する。

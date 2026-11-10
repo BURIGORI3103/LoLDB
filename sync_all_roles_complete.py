@@ -15,7 +15,6 @@ enrich_role_builds.py
 import json
 import os
 from pathlib import Path
-from tqdm import tqdm
 
 def get_item_id(item_name, item_map):
     if not item_name:
@@ -322,127 +321,11 @@ def get_role_matchups(champ_id, role, orig_matchups):
     }
 
 def main():
-    base_dir = Path(__file__).resolve().parent
-    master_file = base_dir / "merged_data" / "all_champions.json"
-    items_file = base_dir / "merged_data" / "all_items.json"
+    raise SystemExit(
+        "旧ロール同期は検証済みデータを上書きするため停止しています。"
+        " 現行の取得・統合は refresh_role_stats.py と merge_data.py を使用してください。"
+    )
 
-    with open(master_file, "r", encoding="utf-8") as f:
-        champions = json.load(f)
-
-    with open(items_file, "r", encoding="utf-8") as f:
-        items_db = json.load(f)
-
-    item_map = {v["name"]: k for k, v in items_db.items()}
-
-    print(f"全 {len(champions)} 体のロール別全データ（スキル順・立ち回り・ルーン・相性・ビルド・スペル）の完全同期を開始...")
-
-    # enrichmentスクリプトからビルド生成関数を借用
-    from enrich_role_builds import generate_role_patterns
-
-    for cid, c in tqdm(champions.items(), desc="全レーンデータ同期中"):
-        c_roles = c.get("roles", ["TOP"])
-        primary_role = c_roles[0] if c_roles else "TOP"
-        arch = detect_champ_archetype(cid, c, items_db)
-
-        spells_list = c.get("spells", [])
-        q_name = spells_list[0].get("name", "Q") if len(spells_list) > 0 else "Q"
-        w_name = spells_list[1].get("name", "W") if len(spells_list) > 1 else "W"
-        e_name = spells_list[2].get("name", "E") if len(spells_list) > 2 else "E"
-        r_name = spells_list[3].get("name", "R") if len(spells_list) > 3 else "R"
-
-        role_data = {}
-        for r_name in c_roles:
-            is_primary = (r_name == primary_role)
-
-            # 1. 召喚士スペル
-            if r_name == "JUG":
-                if cid in ["Hecarim", "Warwick", "Olaf", "Singed"]:
-                    r_spells = ["スマイト", "ゴースト"]
-                elif cid in ["Shaco"]:
-                    r_spells = ["スマイト", "イグナイト"]
-                else:
-                    r_spells = ["スマイト", "フラッシュ"]
-                r_note = "高速なジャングルキャンプ巡回、ガンクによるレーン介入、ドラゴン・ヘラルドのオブジェクト管理を担当。"
-
-            elif r_name == "SUP":
-                if cid in ["Soraka", "Janna", "Lulu", "Yuumi", "Milio"]:
-                    r_spells = ["フラッシュ", "イグゾースト"]
-                elif cid in ["Pyke", "Blitzcrank", "Leona", "Nautilus", "Thresh", "Brand", "Zyra"]:
-                    r_spells = ["フラッシュ", "イグナイト"]
-                else:
-                    r_spells = ["フラッシュ", "イグナイト"]
-                r_note = "ボットレーンでの視界支配（ワード管理）、味方ADCのピール、集団戦でのイニシエートまたは回復支援を担当。"
-
-            elif r_name == "ADC":
-                if cid in ["Jinx", "Twitch", "Zeri", "Ashe"]:
-                    r_spells = ["フラッシュ", "ゴースト"]
-                elif cid in ["Ezreal", "Vayne", "Kaisa"]:
-                    r_spells = ["フラッシュ", "ヒール"]
-                else:
-                    r_spells = ["フラッシュ", "バリア"]
-                r_note = "序盤のCS安定確保、後半集団戦での安全なポジションからの持続DPS出力を担当。"
-
-            elif r_name == "MID":
-                if cid in ["Zed", "Talon", "Katarina", "Fizz", "Akali", "Naafiri", "Leblanc"]:
-                    r_spells = ["フラッシュ", "イグナイト"]
-                else:
-                    r_spells = ["フラッシュ", "テレポート"]
-                r_note = "ウェーブプッシュによるサイドレーンへのローム支援、中盤以降の重要オブジェクト戦での火力担当。"
-
-            else: # TOP
-                if cid in ["Gwen", "Darius", "Olaf", "Singed"]:
-                    r_spells = ["ゴースト", "フラッシュ"]
-                elif cid in ["Camille", "Akali"]:
-                    r_spells = ["テレポート", "イグナイト"]
-                else:
-                    r_spells = ["フラッシュ", "テレポート"]
-                r_note = "ソロレーンでの対面有利拡大、サイドレーンプッシュ（スプリット）、テレポートでの集団戦合流を担当。"
-
-            # 2. スキル上げ順序
-            r_skill_order = get_role_skill_order(cid, r_name, c.get("skill_order", "Q > E > W"))
-
-            # 3. 立ち回り概要メモ
-            r_gameplay = get_role_gameplay_notes(c.get("name", cid), r_name, arch, q_name, w_name, e_name, r_name)
-
-            # 4. 推奨ルーン
-            if is_primary and c.get("runes"):
-                r_runes = c["runes"]
-            else:
-                r_runes = get_role_runes(cid, r_name, arch, c.get("runes", {}))
-
-            # 5. 対面相性
-            if is_primary and c.get("matchups") and c["matchups"].get("favorable"):
-                r_matchups = c["matchups"]
-            else:
-                r_matchups = get_role_matchups(cid, r_name, c.get("matchups", {}))
-
-            # 6. 推奨ビルドパターン (3パターン)
-            r_patterns = generate_role_patterns(cid, c, r_name, is_primary, arch, item_map)
-
-            role_data[r_name] = {
-                "role": r_name,
-                "spells": r_spells,
-                "skill_order": r_skill_order,
-                "role_note": r_note,
-                "gameplay_notes": r_gameplay,
-                "runes": r_runes,
-                "matchups": r_matchups,
-                "build_patterns": r_patterns
-            }
-
-        c["role_data"] = role_data
-
-        # c["build_patterns"] も第1ロールのパターンで同期
-        if primary_role in role_data:
-            c["build_patterns"] = role_data[primary_role]["build_patterns"]
-            c["gameplay_notes"] = role_data[primary_role]["gameplay_notes"]
-            c["skill_order"] = role_data[primary_role]["skill_order"]
-
-    # 保存
-    with open(master_file, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
-
-    print(f"\n[SUCCESS] 全 {len(champions)} 体のロール別全データ（スキル順・立ち回り・ルーン・相性・ビルド・スペル）を完全同期しました！")
 
 if __name__ == "__main__":
     main()
