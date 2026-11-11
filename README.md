@@ -1,10 +1,10 @@
-LoLDB — チャンピオン・アイテム・対面情報
+# LoLDB — チャンピオン・アイテム・対面情報
 
-公開アプリ：[LoLDB](https://burigori3103.github.io/LoLDB/)
+**公開アプリ**：[LoLDB](https://burigori3103.github.io/LoLDB/)
 
 League of Legendsのチャンピオン、ロール別ビルド、ルーン、スキル、対面統計とwiki掲載相性を検索するPWAです。収録データはパッチ16.21.1、173体・264ロール・225アイテムです。
 
-【主な機能】
+## 主な機能
 
 - 公式名・英語ID・ひらがな検索。ロール、通常攻撃の近接・遠隔・両用、ダメージ属性などの複合絞り込み。
 - ロール別ビルド、ルーン、スキル順、立ち回り、コンボ。追加調査した攻略情報には出典・参照パッチ・確認日を表示。
@@ -15,7 +15,7 @@ League of Legendsのチャンピオン、ロール別ビルド、ルーン、ス
 
 対面シミュレーターは廃止済みです。確認できない攻略情報は未取得と表示します。新規3ロールのレベル別取得表は出典に掲載されたLv1〜15のみを表示し、残りを推測で補いません。
 
-【スマートフォンとオフライン】
+## スマートフォンとオフライン
 
 1. 公開アプリを一度オンラインで開きます。
 2. iOS Safariは共有メニュー、Android Chromeはブラウザーメニューからホーム画面へ追加します。
@@ -23,20 +23,20 @@ League of Legendsのチャンピオン、ロール別ビルド、ルーン、ス
 
 HTMLはオンライン時に最新優先、画像はキャッシュを利用しながら更新します。省データ設定・低速回線では全チャンピオン画像の先読みを止めます。
 
-【開発と検証】
+## 開発と検証
 
 - Pythonの収集・統合スクリプトと、外部フレームワークに依存しないJavaScript/CSSを使用します。
-- index.htmlは生成物です。UIはbuild_pwa.pyとui_helpers.jsを修正し、python build_pwa.pyで再生成します。
-- python -m unittest discover -s tests、node tests/test_ui_behavior.cjs、python verify_patch_data.py、python verify_matchup_fix.pyで検証します。
-- python repair_audit_data.py --patch 16.21.1はビルド・ルーンだけを再取得し、対面統計を保持して全件検証後に保存します。--fetch-onlyはHTML取得のみ、--reuse-cacheは取得済みHTMLの明示的再利用です。
-- GitHub Pagesはmainブランチ直下を配信します。配布ZIPはプロジェクト直下のLoLDB_dist.zipです。
+- `index.html` は生成物です。UIは `build_pwa.py` と `ui_helpers.js` を修正し、`python build_pwa.py` で再生成します。
+- `python -m unittest discover -s tests`、`node tests/test_ui_behavior.cjs`、`python verify_patch_data.py`、`python verify_matchup_fix.py` で検証します。
+- `python repair_audit_data.py --patch 16.21.1` はビルド・ルーンだけを再取得し、対面統計を保持して全件検証後に保存します。`--fetch-only` はHTML取得のみ、`--reuse-cache` は取得済みHTMLの明示的再利用です。
+- GitHub Pagesは `main` ブランチ直下を配信します。配布ZIPはプロジェクト直下の `LoLDB_dist.zip` です。
 
-【ライセンスと出典】
+## ライセンスと出典
 
 本ツールはRiot Gamesの公式製品ではありません。ゲーム情報はRiot GamesのData Dragon、OP.GG、LoLJPWikiなどに基づきます。追加したロール攻略の要約はMobalyticsの対象ロール別ガイドを参照し、パッチ対応未検証の文章を実測統計から区別します。
 
-【HTMLキャッシュの内容検証】
+## HTMLキャッシュの内容検証
 
-- service_worker_template.jsを生成元とし、インストール時はHTTPキャッシュを再利用せず、HTML本文のSHA-256がビルド時の値と一致した場合だけキャッシュとSWを切り替える。
+- `service_worker_template.js` を生成元とし、インストール時はHTTPキャッシュを再利用せず、HTML本文のSHA-256がビルド時の値と一致した場合だけキャッシュとSWを切り替える。
 - オンラインで別ビルドのHTMLを受け取っても、現在の検証済みオフラインキャッシュを上書きしない。オフライン時は現在のコアキャッシュだけを参照する。
-- node tests/test_service_worker.cjsで旧HTMLの混入拒否、切替順序、切断後の復帰、他アプリのキャッシュ保護を検証する。
+- `node tests/test_service_worker.cjs` で旧HTMLの混入拒否、切替順序、切断後の復帰、他アプリのキャッシュ保護を検証する。
