@@ -9,6 +9,7 @@ merged_data/all_champions.json を出力します。
 import argparse
 import json
 import copy
+import math
 import os
 import tempfile
 from pathlib import Path
@@ -125,6 +126,42 @@ def find_strategy_file(strategy_dir, champ_id):
             return p
     return None
 
+OFFICIAL_STAT_FIELDS = frozenset("""
+    hp hpperlevel mp mpperlevel movespeed armor armorperlevel spellblock spellblockperlevel
+    attackrange hpregen hpregenperlevel mpregen mpregenperlevel crit critperlevel
+    attackdamage attackdamageperlevel attackspeedperlevel attackspeed
+""".split())
+
+
+def _has_skill_fields(skill):
+    return (
+        isinstance(skill, dict)
+        and all(isinstance(skill.get(field), str) for field in ("slot", "name", "description", "image"))
+        and bool(skill["name"] and skill["image"])
+    )
+
+
+def validate_official_record(base, path):
+    """公式スナップショットが正本の能力値・スキルを空にするのを防ぐ。"""
+    if (not isinstance(base, dict) or base.get("id") != path.stem
+            or not isinstance(base.get("patch"), str) or not base["patch"]):
+        raise ValueError(f"公式チャンピオンデータが不正です: {path}")
+
+    stats = base.get("stats")
+    if (not isinstance(stats, dict) or not OFFICIAL_STAT_FIELDS <= stats.keys()
+            or any(type(stats[field]) not in (int, float) or not math.isfinite(stats[field])
+                   for field in OFFICIAL_STAT_FIELDS)):
+        raise ValueError(f"公式チャンピオンの能力値が不正です: {path}")
+
+    spells = base.get("spells")
+    abilities = base.get("abilities")
+    if (not isinstance(spells, list) or not all(_has_skill_fields(skill) for skill in spells)
+            or [skill["slot"] for skill in spells[:4]] != ["Q", "W", "E", "R"]
+            or not isinstance(abilities, list) or not all(_has_skill_fields(skill) for skill in abilities)
+            or not any(skill["slot"] == "Passive" for skill in abilities)):
+        raise ValueError(f"公式チャンピオンのスキルが不正です: {path}")
+
+
 def merge_champion_data(*, check_only=False):
     base_dir = "champions_data"
     strategy_dir = "strategy_data"
@@ -149,9 +186,7 @@ def merge_champion_data(*, check_only=False):
     for base_path in tqdm(base_paths, desc="データ統合中", unit="champ"):
         champ_id = base_path.stem
         base = load_json(base_path)
-        if (not isinstance(base, dict) or base.get("id") != champ_id
-                or not isinstance(base.get("patch"), str) or not base["patch"]):
-            raise ValueError(f"公式チャンピオンデータが不正です: {base_path}")
+        validate_official_record(base, base_path)
         if patch is not None and base["patch"] != patch:
             raise ValueError(f"公式データに複数パッチが混在しています: {base_path}")
         patch = base["patch"]
