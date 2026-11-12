@@ -74,9 +74,15 @@ def verify_all():
 
     # Service Worker
     sw_file = (BASE_DIR / "dist" / "sw.js").read_text(encoding="utf-8")
+    root_sw = (BASE_DIR / "sw.js").read_text(encoding="utf-8")
+    if root_sw != sw_file:
+        errors.append("ルートとdistのService Workerが不一致です")
+    expected_html_hash = hashlib.sha256(root_html.encode("utf-8")).hexdigest()
+    if f"const HTML_HASH = '{expected_html_hash}';" not in sw_file:
+        errors.append("Service WorkerのHTML検証ハッシュが生成HTMLと不一致です")
     from build_pwa import _parse_markdown_update_block
     version = _parse_markdown_update_block((BASE_DIR / "UPDATE.md").read_text(encoding="utf-8"))["version"]
-    expected_cache = f"loldb-core-{version}-{hashlib.sha256(root_html.encode('utf-8')).hexdigest()[:8]}"
+    expected_cache = f"loldb-core-{version}-{expected_html_hash[:8]}"
     if expected_cache not in sw_file:
         errors.append(f"Service Workerのキャッシュ名が生成HTMLと不一致: {expected_cache}")
     else:
