@@ -27,6 +27,15 @@ ESTIMATION_LIMITATION_NOTE = (
 )
 
 
+def _is_current_measurement(entry, patch, role):
+    games = entry.get("games")
+    winrate = entry.get("winrate_num")
+    return (entry.get("source") == "opgg_stats" and entry.get("is_estimated") is not True
+            and entry.get("patch") == patch and entry.get("role") == role
+            and type(games) is int and games > 0
+            and type(winrate) in (int, float) and 0 <= winrate <= 100)
+
+
 def _enrich_measured_entry(entry: dict, adv: str, default_role: str, patch: str) -> dict:
     """実測統計エントリに参照元・地域・ランク・取得日などのメタデータを補完して返す"""
     wr_str = entry.get("winrate")
@@ -221,29 +230,24 @@ def calculate_matchup(me: dict, opp: dict, target_role: str | None = None) -> di
     role_fav = []
     role_unfav = []
 
-    def is_current_measurement(entry):
-        return (not entry.get("is_estimated", False)
-                and entry.get("source", "opgg_stats") == "opgg_stats"
-                and (not entry.get("patch") or entry["patch"] == patch))
-
     role_info = me.get("role_data", {}).get(target_role, {})
     if role_info:
         for m in role_info.get("matchups", {}).get("favorable", []):
-            if m.get("role", target_role) == target_role and is_current_measurement(m):
+            if _is_current_measurement(m, patch, target_role):
                 role_fav.append(m)
         for m in role_info.get("matchups", {}).get("unfavorable", []):
-            if m.get("role", target_role) == target_role and is_current_measurement(m):
+            if _is_current_measurement(m, patch, target_role):
                 role_unfav.append(m)
 
     # トップレベル matchups も role が target_role と明示一致するものだけ許可
     primary_role = (me.get("roles") or ["TOP"])[0]
     for m in me.get("matchups", {}).get("favorable", []):
         m_role = m.get("role") or primary_role
-        if m_role == target_role and is_current_measurement(m):
+        if m_role == target_role and _is_current_measurement(m, patch, target_role):
             role_fav.append(m)
     for m in me.get("matchups", {}).get("unfavorable", []):
         m_role = m.get("role") or primary_role
-        if m_role == target_role and is_current_measurement(m):
+        if m_role == target_role and _is_current_measurement(m, patch, target_role):
             role_unfav.append(m)
 
     # 同一レーン内で有利・不利の両方に登録されている異常データがないか勝率数値で客観判定
@@ -261,7 +265,8 @@ def calculate_matchup(me: dict, opp: dict, target_role: str | None = None) -> di
                 # 万が一同一レーンの有利と不利の両方にあった場合は winrate_num が 50.0 以上かで決定
                 wr_num = unfav.get("winrate_num") or matched_entry.get("winrate_num") or 50.0
                 matched_adv = "fav" if float(wr_num) >= 50.0 else "unfav"
-                matched_entry = fav if matched_adv == "fav" else unfav
+                if matched_adv == "unfav":
+                    matched_entry = unfav
             else:
                 matched_entry = unfav
                 matched_adv = "unfav"
@@ -281,6 +286,16 @@ def main():
     champ_list = list(champions.values())
     total_champs = len(champ_list)
     print(f"🔧 ステップ 2/3: 全 {total_champs} 体のレーン別実測相性辞書（推定・実測厳格分離）を構築中... (66%)")
+
+    for champion in tqdm(champ_list, desc="対面データの取得条件を検証"):
+        patch = champion["patch"]
+        roles = champion["roles"]
+        records = [(roles[0], champion.get("matchups", {}))]
+        records.extend((role, data.get("matchups", {})) for role, data in champion.get("role_data", {}).items())
+        for role, matchups in records:
+            if any(not _is_current_measurement(entry, patch, role)
+                   for group in matchups.values() for entry in group):
+                raise ValueError(f"未検証の対面統計があるため保存を中止しました: {champion['id']} {role}")
 
     measured_pair_count = 0
     for me in tqdm(champ_list, desc="レーン別マッチアップ構築"):

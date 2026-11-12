@@ -47,7 +47,12 @@ def choose_matchups(previous, measured, patch, role):
 
 def merge_record(base, strategy, previous):
     """手動補完を保ちつつ統計を現在パッチ・現在ロールの取得結果へ置換する。"""
-    if not strategy or strategy.get("patch") != base["patch"] or not strategy.get("opgg_source", {}).get("patch_verified"):
+    patch = base["patch"]
+    short_patch = ".".join(patch.split(".")[:2])
+    strategy_source = strategy.get("opgg_source", {}) if strategy else {}
+    if (not strategy or strategy.get("patch") != patch
+            or strategy_source.get("patch") != short_patch
+            or strategy_source.get("patch_verified") is not True):
         raise ValueError(f"最新パッチの検証済み攻略データがありません: {base['id']}")
     merged = copy.deepcopy(previous)
     merged.update(base)
@@ -65,7 +70,9 @@ def merge_record(base, strategy, previous):
     roles = {}
     for role in merged["roles"]:
         measured = strategy.get("role_data", {}).get(role)
-        if not measured or measured.get("opgg_source", {}).get("role") != role:
+        source = measured.get("opgg_source", {}) if measured else {}
+        if (not measured or measured.get("patch") != patch or source.get("role") != role
+                or source.get("patch") != short_patch or source.get("patch_verified") is not True):
             raise ValueError(f"ロール別統計がありません: {base['id']} {role}")
         rd = copy.deepcopy(old_roles.get(role, {}))
         rd.update({key: copy.deepcopy(measured[key]) for key in ("build", "runes", "matchups", "opgg_source")})

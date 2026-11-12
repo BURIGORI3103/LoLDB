@@ -1,7 +1,5 @@
-import json
 import re
 from pathlib import Path
-from tqdm import tqdm
 
 BASE_DIR = Path(__file__).resolve().parent
 MERGED_DIR = BASE_DIR / "merged_data"
@@ -194,30 +192,11 @@ def migrate_champion_matchups(champ_data):
     return champ_data
 
 def main():
-    print("データ移行を開始します...")
-    with open(ALL_CHAMPS_FILE, "r", encoding="utf-8") as f:
-        champions = json.load(f)
+    raise SystemExit(
+        "旧マッチアップ移行は取得元と試合数を保持できないため停止しています。"
+        " 現行の取得は refresh_matchup_stats.py を使用してください。"
+    )
 
-    migrated_count = 0
-    total = len(champions)
-
-    for cid, cdata in tqdm(champions.items(), desc="マッチアップ正規化・同期中"):
-        migrate_champion_matchups(cdata)
-        migrated_count += 1
-
-    # all_champions.json に書き出し
-    print("all_champions.json に書き込み中...")
-    with open(ALL_CHAMPS_FILE, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
-
-    # 個別チャンピオンJSONの同期書き出し
-    print("個別チャンピオンJSONファイルを同期更新中...")
-    for cid, cdata in tqdm(champions.items(), desc="個別JSON同期中"):
-        indiv_file = MERGED_DIR / f"{cid}.json"
-        with open(indiv_file, "w", encoding="utf-8") as f:
-            json.dump(cdata, f, ensure_ascii=False, indent=2)
-
-    print(f"[完了] 全 {migrated_count} 体のチャンピオンデータを正規スキーマへ移行・同期しました。")
 
 if __name__ == "__main__":
     main()

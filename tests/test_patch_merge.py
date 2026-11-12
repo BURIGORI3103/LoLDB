@@ -6,8 +6,8 @@ from merge_data import merge_record
 class MergeTests(unittest.TestCase):
     def inputs(self):
         base = {"id": "Garen", "patch": "16.21.1", "roles": ["Fighter"]}
-        measured = {"build": {"core": [{"name": "新アイテム", "item_id": "1"}], "starter": [], "boots": []}, "runes": {}, "matchups": {"favorable": [], "unfavorable": []}, "summoner_spells": ["フラッシュ"], "opgg_source": {"role": "TOP"}}
-        strategy = {"patch": "16.21.1", "roles": ["TOP"], "role_data": {"TOP": measured}, "opgg_source": {"patch_verified": True}}
+        measured = {"patch": "16.21.1", "build": {"core": [{"name": "新アイテム", "item_id": "1"}], "starter": [], "boots": []}, "runes": {}, "matchups": {"favorable": [], "unfavorable": []}, "summoner_spells": ["フラッシュ"], "opgg_source": {"role": "TOP", "patch": "16.21", "patch_verified": True}}
+        strategy = {"patch": "16.21.1", "roles": ["TOP"], "role_data": {"TOP": measured}, "opgg_source": {"patch": "16.21", "patch_verified": True}}
         return base, strategy
 
     def test_preserves_manual_extras_replaces_statistics(self):
