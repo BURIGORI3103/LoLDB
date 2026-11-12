@@ -45,7 +45,7 @@
 
 `role_guidance_evidence.json` は `champion_id`・`role`・`field`・`value`・`source_url`・`source_patch`・`checked_at`・`verified` を持つレコード配列。対象と確認済み状態を照合して適用し、明示パッチが正本と違う情報は適用しない。文章のパッチ対応未検証は表示する。
 
-Lux ADC・Sion MID・Tristana MIDはOP.GGのパッチ16.21のスキル順と、対象ロールを明示したMobalyticsの文章攻略を参照する。取得表は掲載されたLv1〜15のみを保存する。未取得は未取得と表示し、別ロールや汎用テンプレートを専用情報として出さない。
+Lux ADC・Sion MID・Tristana MIDはOP.GGのパッチ16.22で再確認したスキル順（16.21から変化なし）と、対象ロールを明示したMobalyticsの文章攻略を参照する。パッチ16.22ではLux ADCがOP.GGの運用ロールから外れたため表示対象外とし、記録は保持する。取得表は掲載されたLv1〜15のみを保存する。未取得は未取得と表示し、別ロールや汎用テンプレートを専用情報として出さない。
 
 対面の相性理由は別の `matchup_reason_evidence.json` を使用する。チャンピオン・相手・ロール・有利不利方向が一致する文献確認済み理由のみを表示し、文章攻略を勝率の根拠へ転用しない。
 

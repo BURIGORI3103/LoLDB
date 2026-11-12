@@ -2,7 +2,7 @@
 
 **公開アプリ**：[LoLDB](https://burigori3103.github.io/LoLDB/)
 
-League of Legendsのチャンピオン、ロール別ビルド、ルーン、スキル、対面統計とwiki掲載相性を検索するPWAです。収録データはパッチ16.21.1、173体・264ロール・225アイテムです。
+League of Legendsのチャンピオン、ロール別ビルド、ルーン、スキル、対面統計とwiki掲載相性を検索するPWAです。収録データはパッチ16.22.1（Riotパッチ26.22）、173体・263ロール・225アイテムです。
 
 ## 主な機能
 
@@ -28,7 +28,7 @@ HTMLはオンライン時に最新優先、画像はキャッシュを利用し�
 - Pythonの収集・統合スクリプトと、外部フレームワークに依存しないJavaScript/CSSを使用します。
 - `index.html` は生成物です。UIは `build_pwa.py` と `ui_helpers.js` を修正し、`python build_pwa.py` で再生成します。
 - `python -m unittest discover -s tests`、`node tests/test_ui_behavior.cjs`、`python verify_patch_data.py`、`python verify_matchup_fix.py` で検証します。
-- `python repair_audit_data.py --patch 16.21.1` はビルド・ルーンだけを再取得し、対面統計を保持して全件検証後に保存します。`--fetch-only` はHTML取得のみ、`--reuse-cache` は取得済みHTMLの明示的再利用です。
+- `python repair_audit_data.py --patch 16.22.1` はビルド・ルーンだけを再取得し、対面統計を保持して全件検証後に保存します。`--fetch-only` はHTML取得のみ、`--reuse-cache` は取得済みHTMLの明示的再利用です。
 - GitHub Pagesは `main` ブランチ直下を配信します。配布ZIPはプロジェクト直下の `LoLDB_dist.zip` です。
 
 ## ライセンスと出典

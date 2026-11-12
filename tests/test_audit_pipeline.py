@@ -89,12 +89,21 @@ class CompleteDataTests(unittest.TestCase):
                     self.assertRegex(pattern['name'],r'^\[(AD|AP|TANK|HYBRID)\] ')
 
     def test_three_new_roles_have_evidence_and_no_invented_levels(self):
+        present=0
         for cid,role in [('Lux','ADC'),('Sion','MID'),('Tristana','MID')]:
+            if role not in self.champs[cid]['roles']:
+                # OP.GGの運用ロールから外れたロールは補完で復活させない。
+                self.assertNotIn(role,self.champs[cid]['role_data'],(cid,role))
+                continue
+            present+=1
             data=self.champs[cid]['role_data'][role]
             for key in ('gameplay_notes','combos','skill_order','skill_matrix'):
                 self.assertTrue(data[key])
                 self.assertTrue(data['guidance_sources'][key]['source_url'].startswith('https://'))
+            for key in ('skill_order','skill_matrix'):
+                self.assertEqual(data['guidance_sources'][key]['source_patch'],self.champs[cid]['patch'],(cid,role,key))
             self.assertEqual(sorted(level for values in data['skill_matrix'].values() for level in values),list(range(1,16)))
+        self.assertGreater(present,0)
 
     def test_display_projection_keeps_all_role_data_and_skills(self):
         before=copy.deepcopy(self.champs)

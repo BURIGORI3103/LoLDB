@@ -57,7 +57,7 @@ def analyze_champion_sustain(cid, cdata):
                 heals.append({"slot": slot, "name": name, "desc": desc})
 
         # 2. シールド判定
-        shield_pattern = r"シールドを(獲得|得る|付与|張る|展開|生成|纏|身にまとう|付加)|シールドが(付与|生成|展開)|シールドを身に"
+        shield_pattern = r"シールドを(獲得|得る|付与|張る|展開|生成|纏|身にまとう|付加)|シールドが(付与|生成|展開)|シールドを身に|シールドと[^。]{0,20}を(獲得|付与)"
         if re.search(shield_pattern, desc):
             if not is_passive_receiver and not is_debuff:
                 shields.append({"slot": slot, "name": name, "desc": desc})
