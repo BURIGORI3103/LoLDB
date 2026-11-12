@@ -1509,7 +1509,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.21 / v2.7.10 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.21 / v2.7.11 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1647,6 +1647,18 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.7.11</span>
+              <span class="changelog-date">2026-11-12</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>ロール別統計の統合時に、パッチ不一致・未検証のデータを拒否するようにした。</li>
+              <li>パッチ・出典・試合数が欠けた対面データを実測扱いにしないようにした。</li>
+              <li>旧更新経路の sync_all_roles_complete.py と migrate_matchups.py は、データを開く前に停止して現行手順を案内する。</li>
+              <li>表示データの内容は変更していない。</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.7.10</span>
