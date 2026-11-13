@@ -15,6 +15,9 @@ def require(condition, message):
 
 
 def run(*, write_report=True):
+    from data_transaction import require_recovered
+
+    require_recovered(BASE)
     def read(path):
         return json.loads(path.read_text(encoding="utf-8"))
     champions = read(BASE / "merged_data/all_champions.json")

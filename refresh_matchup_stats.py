@@ -7,6 +7,7 @@ import time
 import urllib.request
 from datetime import datetime
 from pathlib import Path
+from data_transaction import json_bytes, publish, require_recovered, revision
 
 from bs4 import BeautifulSoup
 from tqdm import tqdm
@@ -76,6 +77,8 @@ def main():
     parser.add_argument("--reuse-cache", action="store_true", help="今回取得済みのHTMLで保存前検証を再開する")
     args = parser.parse_args()
     master_path = BASE / "merged_data/all_champions.json"
+    require_recovered(BASE)
+    base_revision = revision(master_path)
     master = json.loads(master_path.read_text(encoding="utf-8"))
     champions = {}
     strategies = {}
@@ -134,13 +137,13 @@ def main():
         report.append({"champion_id": cid, "role": role, "available": available,
                        "status": "ok" if available else "insufficient_sample",
                        "favorable": len(matchups["favorable"]), "unfavorable": len(matchups["unfavorable"]), "url": url})
-    def save(path, data):
-        path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    for cid, (path, strategy) in tqdm(strategies.items(), desc="対面データ保存"):
-        save(path, strategy)
-        save(BASE / "merged_data" / f"{cid}.json", master[cid])
-    save(master_path, master)
-    save(BASE / "docs/matchup_refresh_report.json", report)
+    outputs = []
+    for cid, (path, strategy) in strategies.items():
+        outputs.extend(((path, json_bytes(strategy, trailing_newline=True)),
+                        (BASE / "merged_data" / f"{cid}.json", json_bytes(master[cid], trailing_newline=True))))
+    outputs.extend(((BASE / "docs/matchup_refresh_report.json", json_bytes(report, trailing_newline=True)),
+                    (master_path, json_bytes(master, trailing_newline=True))))
+    publish(BASE, outputs, expected=(master_path, base_revision))
     print(f"{len(master)}体・{len(results)}ロールの有利不利を最大{LIMIT}体へ更新しました。")
 
 

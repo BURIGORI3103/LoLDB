@@ -14,6 +14,7 @@ import os
 import tempfile
 from pathlib import Path
 from tqdm import tqdm
+from data_transaction import json_bytes, publish, recover, require_recovered, revision
 from audit_normalization import normalize_with_evidence, pattern_from_build
 
 def load_json(path):
@@ -166,7 +167,13 @@ def merge_champion_data(*, check_only=False):
     base_dir = "champions_data"
     strategy_dir = "strategy_data"
     output_dir = "merged_data"
-    combined_file = os.path.join(output_dir, "all_champions.json")
+    root = Path.cwd()
+    if check_only:
+        require_recovered(root)
+    else:
+        recover(root)
+    combined_file = root / output_dir / "all_champions.json"
+    base_revision = revision(combined_file)
     previous = load_json(combined_file)
     if previous is None and not os.path.exists(combined_file):
         previous = {}
@@ -199,9 +206,9 @@ def merge_champion_data(*, check_only=False):
         return
 
     # 全件の検証を通過するまで既存のマスター・個別JSONへ書き込まない。
-    for cid, merged in tqdm(all_champions_dict.items(), desc="検証済みJSON保存"):
-        save_json(merged, os.path.join(output_dir, f"{cid}.json"))
-    save_json(all_champions_dict, combined_file)
+    outputs = [(root / output_dir / f"{cid}.json", json_bytes(merged)) for cid, merged in all_champions_dict.items()]
+    outputs.append((combined_file, json_bytes(all_champions_dict)))
+    publish(root, outputs, expected=(combined_file, base_revision))
 
     file_size_kb = os.path.getsize(combined_file) / 1024 if os.path.exists(combined_file) else 0
 
@@ -213,5 +220,11 @@ def merge_champion_data(*, check_only=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="公式データと取得済み統計の統合")
-    parser.add_argument("--check", action="store_true", help="検証のみ行い、保存しない")
-    merge_champion_data(check_only=parser.parse_args().check)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--check", action="store_true", help="検証のみ行い、保存しない")
+    mode.add_argument("--recover", action="store_true", help="中断した書き込みを復元する")
+    args = parser.parse_args()
+    if args.recover:
+        print("旧データを復元しました。" if recover(Path.cwd()) else "復元待ちの更新はありません。")
+    else:
+        merge_champion_data(check_only=args.check)

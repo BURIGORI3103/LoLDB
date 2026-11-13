@@ -27,6 +27,7 @@ HTMLはオンライン時に最新優先、画像はキャッシュを利用し�
 
 - Pythonの収集・統合スクリプトと、外部フレームワークに依存しないJavaScript/CSSを使用します。
 - 統合前は `python merge_data.py --check`、生成後は `python verify_patch_data.py --check` でデータを保存せず検証できます。
+- マスターと関連する個別JSONはまとめて復旧できます。処理が中断した場合は、同じ作業フォルダで `python merge_data.py --recover` を実行し、生成前に読み取り検証を通してください。
 - `index.html` は生成物です。UIは `build_pwa.py` と `ui_helpers.js` を修正し、`python build_pwa.py` で再生成します。
 - `python -m unittest discover -s tests`、`node tests/test_ui_behavior.cjs`、`python verify_patch_data.py`、`python verify_matchup_fix.py` で検証します。
 - `python repair_audit_data.py --patch 16.22.1` はビルド・ルーンだけを再取得し、対面統計を保持して全件検証後に保存します。`--fetch-only` はHTML取得のみ、`--reuse-cache` は取得済みHTMLの明示的再利用です。

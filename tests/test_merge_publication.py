@@ -1,11 +1,14 @@
 """不完全な公式入力で既存の配布データが失われないことを確認する。"""
 import json
 import os
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from data_transaction import JOURNAL_NAME, publish, recover, require_recovered, revision
 from merge_data import OFFICIAL_STAT_FIELDS, merge_champion_data, save_json
 import test_patch_merge
 
@@ -99,3 +102,85 @@ class MergePublicationTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, "Garen"):
                     merge_champion_data()
                 self.assert_previous_preserved()
+
+    def prepare_valid_update(self):
+        base, strategy = self.official_inputs()
+        Path("strategy_data").mkdir()
+        for cid in ("Annie", "Garen"):
+            Path(f"champions_data/{cid}.json").write_text(
+                json.dumps({**base, "id": cid}), encoding="utf-8"
+            )
+            Path(f"strategy_data/{cid.lower()}.json").write_text(json.dumps(strategy), encoding="utf-8")
+
+    def test_partial_merge_write_restores_old_and_removes_new_individual(self):
+        self.prepare_valid_update()
+        replace = os.replace
+
+        def fail_master(source, target):
+            if Path(target).name == self.master.name:
+                raise PermissionError("保存できません")
+            return replace(source, target)
+
+        with patch("os.replace", side_effect=fail_master):
+            with self.assertRaises(PermissionError):
+                merge_champion_data()
+        self.assert_previous_preserved()
+        self.assertFalse(Path("merged_data/Annie.json").exists())
+
+    def interrupt_process_during_update(self):
+        script = """
+import os
+from pathlib import Path
+from unittest.mock import patch
+from data_transaction import publish
+
+root = Path.cwd()
+replace = os.replace
+
+def stop_after_first_output(source, target):
+    replace(source, target)
+    if Path(target).name == "Garen.json":
+        os._exit(43)
+
+with patch("os.replace", side_effect=stop_after_first_output):
+    publish(root, [
+        (root / "merged_data/Garen.json", b'{"new":true}'),
+        (root / "merged_data/all_champions.json", b'{"new":true}'),
+    ])
+"""
+        modules = str(Path(__file__).resolve().parents[1])
+        result = subprocess.run(
+            [sys.executable, "-c", script], cwd=self.root, capture_output=True,
+            env={**os.environ, "PYTHONPATH": modules}, timeout=15
+        )
+        self.assertEqual(result.returncode, 43, result.stderr)
+        self.assertNotEqual(self.individual.read_bytes(), self.original_individual)
+        self.assertTrue((self.root / JOURNAL_NAME / "pending.json").is_file())
+
+    def test_forced_exit_blocks_readers_until_recovery(self):
+        self.interrupt_process_during_update()
+        with self.assertRaisesRegex(RuntimeError, "--recover"):
+            require_recovered(self.root)
+        self.assertTrue(recover(self.root))
+        self.assert_previous_preserved()
+        self.assertFalse(recover(self.root))
+
+    def test_damaged_backup_preserves_pending_and_can_be_repaired(self):
+        self.interrupt_process_during_update()
+        backup = self.root / JOURNAL_NAME / "0.old"
+        backup.write_bytes(b"broken")
+        with self.assertRaisesRegex(RuntimeError, "破損"):
+            recover(self.root)
+        with self.assertRaises(RuntimeError):
+            require_recovered(self.root)
+        backup.write_bytes(self.original_individual)
+        self.assertTrue(recover(self.root))
+        self.assert_previous_preserved()
+
+    def test_stale_update_cannot_replace_newer_master(self):
+        master = self.root / self.master
+        old_revision = revision(master)
+        publish(self.root, [(master, b'{"newer":true}')], expected=(master, old_revision))
+        with self.assertRaisesRegex(RuntimeError, "マスターが更新"):
+            publish(self.root, [(master, b'{"stale":true}')], expected=(master, old_revision))
+        self.assertEqual(master.read_bytes(), b'{"newer":true}')

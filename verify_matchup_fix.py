@@ -6,6 +6,9 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 def verify_all():
+    from data_transaction import require_recovered
+
+    require_recovered(BASE_DIR)
     errors = []
     print("=== 1. merged_data/all_champions.json の検証 ===")
     with open(BASE_DIR / "merged_data" / "all_champions.json", "r", encoding="utf-8") as f:
