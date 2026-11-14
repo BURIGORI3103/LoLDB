@@ -1509,7 +1509,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.7.12 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.7.13 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1647,6 +1647,17 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.7.13</span>
+              <span class="changelog-date">2026-11-14</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>統合・対面更新・監査補正などの複数JSONを、ジャーナル付きで一括置換。途中の失敗や中断では旧版へ戻し、`merge_data.py --recover` で復旧できる。</li>
+              <li>古いマスターを元にした更新、能力値・スキルが欠けた公式データを拒否。検証は assert から明示的な例外に変更。</li>
+              <li>テスト51件、UI・Service Workerの検証、データ検証（173体・パッチ16.22.1）成功。</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.7.12</span>
