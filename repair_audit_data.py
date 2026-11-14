@@ -8,6 +8,7 @@ import time
 import urllib.request
 from datetime import datetime
 from pathlib import Path
+from data_transaction import json_bytes, publish, require_recovered, revision
 
 from tqdm import tqdm
 from audit_normalization import normalize_champion, normalize_runes, plain_text, rune_parent_names, pattern_from_build, validate_build_references
@@ -19,14 +20,6 @@ ROLE_PATH = {"TOP": "top", "JUG": "jungle", "MID": "mid", "ADC": "adc", "SUP": "
 ROLE_TITLE = {"TOP": "Top", "JUG": "Jungle", "MID": "Middle", "ADC": "Bottom", "SUP": "Support"}
 
 
-def write_json(path, value):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    temporary.replace(path)
-
-
-
 
 def run():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -35,6 +28,8 @@ def run():
     parser.add_argument("--reuse-cache", action="store_true", help="同一パッチで取得したHTMLを明示的に再利用")
     args = parser.parse_args()
     master_path = BASE / "merged_data/all_champions.json"
+    require_recovered(BASE)
+    base_revision = revision(master_path)
     previous = json.loads(master_path.read_text(encoding="utf-8"))
     if {champ["patch"] for champ in previous.values()} != {args.patch}:
         raise ValueError("パッチが正本と一致しません")
@@ -125,14 +120,21 @@ def run():
                 skill["description"] = plain_text(skill.get("description"))
         bases[cid] = base
     print("ステップ3/3: 全件の検証完了後に保存します (85%)", flush=True)
-    for cid in tqdm(updated, desc="検証済みJSON保存"):
-        write_json(BASE / "champions_data" / f"{cid}.json", bases[cid])
-        write_json(BASE / "merged_data" / f"{cid}.json", updated[cid])
-        write_json(strategies[cid], strategy_data[cid])
-    write_json(master_path, updated)
-    write_json(BASE / "data/rune_reference.json", {"patch": version, "parents": parents})
-    write_json(BASE / "docs/audit_data_report.json", {"patch": version, "fetched_at": now, "champions": len(updated),
-               "roles": len(pages), "core_shortages": core_shortages, "matchups_preserved": True})
+    outputs = []
+    for cid in updated:
+        outputs.extend((
+            (BASE / "champions_data" / f"{cid}.json", json_bytes(bases[cid], trailing_newline=True)),
+            (BASE / "merged_data" / f"{cid}.json", json_bytes(updated[cid], trailing_newline=True)),
+            (strategies[cid], json_bytes(strategy_data[cid], trailing_newline=True)),
+        ))
+    report = {"patch": version, "fetched_at": now, "champions": len(updated),
+              "roles": len(pages), "core_shortages": core_shortages, "matchups_preserved": True}
+    outputs.extend((
+        (BASE / "data/rune_reference.json", json_bytes({"patch": version, "parents": parents}, trailing_newline=True)),
+        (BASE / "docs/audit_data_report.json", json_bytes(report, trailing_newline=True)),
+        (master_path, json_bytes(updated, trailing_newline=True)),
+    ))
+    publish(BASE, outputs, expected=(master_path, base_revision))
     print(f"{len(updated)}体・{len(pages)}ロールを補正しました (100%)")
 
 

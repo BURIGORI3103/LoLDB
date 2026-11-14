@@ -2,6 +2,7 @@
 import copy
 import json
 from pathlib import Path
+from data_transaction import json_bytes, publish, require_recovered, revision
 from tqdm import tqdm
 
 BASE = Path(__file__).resolve().parent
@@ -41,14 +42,17 @@ def load_evidence():
 
 def main():
     path = BASE / "merged_data/all_champions.json"
+    require_recovered(BASE)
+    base_revision = revision(path)
     champions = json.loads(path.read_text(encoding="utf-8"))
     evidence = load_evidence()
     count = 0
     for cid, c in tqdm(champions.items(), desc="出典確認済み理由を反映"):
         apply_reasons(c, evidence)
         count += sum(bool(e.get("reason_evidence")) for rd in c.get("role_data", {}).values() for es in rd.get("matchups", {}).values() for e in es)
-        (BASE / "merged_data" / f"{cid}.json").write_text(json.dumps(c, ensure_ascii=False, indent=2), encoding="utf-8")
-    path.write_text(json.dumps(champions, ensure_ascii=False, indent=2), encoding="utf-8")
+    outputs = [(BASE / "merged_data" / f"{cid}.json", json_bytes(value)) for cid, value in champions.items()]
+    outputs.append((path, json_bytes(champions)))
+    publish(BASE, outputs, expected=(path, base_revision))
     print(f"文献確認済み解説: {count}件")
 
 

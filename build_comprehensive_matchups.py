@@ -10,6 +10,7 @@ build_comprehensive_matchups.py - レーン別・パッチ別・実測/推定厳
 import json
 import sys
 from pathlib import Path
+from data_transaction import json_bytes, publish, require_recovered, revision
 from tqdm import tqdm
 
 if sys.stdout.encoding != "utf-8":
@@ -279,6 +280,8 @@ def calculate_matchup(me: dict, opp: dict, target_role: str | None = None) -> di
 
 
 def main():
+    require_recovered(BASE_DIR)
+    base_revision = revision(MERGED_JSON)
     print("🔧 ステップ 1/3: チャンピオンデータ読み込み中... (33%)")
     with open(MERGED_JSON, "r", encoding="utf-8") as f:
         champions = json.load(f)
@@ -343,14 +346,10 @@ def main():
     print(f"  -> レーン別実測ペア登録数: {measured_pair_count} 件（推定ペアはオンデマンド計算化によりデータサイズを大幅削減）")
 
     print("🔧 ステップ 3/3: マスターJSONおよび個別JSONへ書き出し中... (100%)")
-    with open(MERGED_JSON, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
-
     merged_dir = BASE_DIR / "merged_data"
-    for cid, cdata in tqdm(champions.items(), desc="個別JSON同期中"):
-        indiv_file = merged_dir / f"{cid}.json"
-        with open(indiv_file, "w", encoding="utf-8") as f:
-            json.dump(cdata, f, ensure_ascii=False, indent=2)
+    outputs = [(merged_dir / f"{cid}.json", json_bytes(value)) for cid, value in champions.items()]
+    outputs.append((MERGED_JSON, json_bytes(champions)))
+    publish(BASE_DIR, outputs, expected=(MERGED_JSON, base_revision))
 
     print(f"[SUCCESS] レーン別相性マトリクスの構築と軽量化が完了しました: {MERGED_JSON}")
 

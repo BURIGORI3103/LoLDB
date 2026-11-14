@@ -6,11 +6,15 @@ champions_data（公式基礎値）と strategy_data（攻略統計値）をチ�
 merged_data/all_champions.json を出力します。
 """
 
+import argparse
 import json
 import copy
+import math
 import os
+import tempfile
 from pathlib import Path
 from tqdm import tqdm
+from data_transaction import json_bytes, publish, recover, require_recovered, revision
 from audit_normalization import normalize_with_evidence, pattern_from_build
 
 def load_json(path):
@@ -21,8 +25,19 @@ def load_json(path):
 
 def save_json(data, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", dir=os.path.dirname(path), delete=False
+        ) as temp:
+            temp_path = Path(temp.name)
+            json.dump(data, temp, ensure_ascii=False, indent=2)
+            temp.flush()
+            os.fsync(temp.fileno())
+        os.replace(temp_path, path)
+    finally:
+        if temp_path is not None:
+            temp_path.unlink(missing_ok=True)
 
 # Data DragonのチャンピオンIDとOP.GGスラッグの表記揺れエイリアス辞書
 CHAMPION_SLUG_ALIASES = {
@@ -112,105 +127,104 @@ def find_strategy_file(strategy_dir, champ_id):
             return p
     return None
 
-def merge_champion_data():
+OFFICIAL_STAT_FIELDS = frozenset("""
+    hp hpperlevel mp mpperlevel movespeed armor armorperlevel spellblock spellblockperlevel
+    attackrange hpregen hpregenperlevel mpregen mpregenperlevel crit critperlevel
+    attackdamage attackdamageperlevel attackspeedperlevel attackspeed
+""".split())
+
+
+def _has_skill_fields(skill):
+    return (
+        isinstance(skill, dict)
+        and all(isinstance(skill.get(field), str) for field in ("slot", "name", "description", "image"))
+        and bool(skill["name"] and skill["image"])
+    )
+
+
+def validate_official_record(base, path):
+    """公式スナップショットが正本の能力値・スキルを空にするのを防ぐ。"""
+    if (not isinstance(base, dict) or base.get("id") != path.stem
+            or not isinstance(base.get("patch"), str) or not base["patch"]):
+        raise ValueError(f"公式チャンピオンデータが不正です: {path}")
+
+    stats = base.get("stats")
+    if (not isinstance(stats, dict) or not OFFICIAL_STAT_FIELDS <= stats.keys()
+            or any(type(stats[field]) not in (int, float) or not math.isfinite(stats[field])
+                   for field in OFFICIAL_STAT_FIELDS)):
+        raise ValueError(f"公式チャンピオンの能力値が不正です: {path}")
+
+    spells = base.get("spells")
+    abilities = base.get("abilities")
+    if (not isinstance(spells, list) or not all(_has_skill_fields(skill) for skill in spells)
+            or [skill["slot"] for skill in spells[:4]] != ["Q", "W", "E", "R"]
+            or not isinstance(abilities, list) or not all(_has_skill_fields(skill) for skill in abilities)
+            or not any(skill["slot"] == "Passive" for skill in abilities)):
+        raise ValueError(f"公式チャンピオンのスキルが不正です: {path}")
+
+
+def merge_champion_data(*, check_only=False):
     base_dir = "champions_data"
     strategy_dir = "strategy_data"
     output_dir = "merged_data"
-    combined_file = os.path.join(output_dir, "all_champions.json")
-    previous = load_json(combined_file) or {}
+    root = Path.cwd()
+    if check_only:
+        require_recovered(root)
+    else:
+        recover(root)
+    combined_file = root / output_dir / "all_champions.json"
+    base_revision = revision(combined_file)
+    previous = load_json(combined_file)
+    if previous is None and not os.path.exists(combined_file):
+        previous = {}
+    if not isinstance(previous, dict):
+        raise ValueError("既存マスターが不正です。データを確認してから再実行してください。")
 
-    if not os.path.exists(base_dir):
-        print(f"エラー: 基本データフォルダ（{base_dir}）が見つかりません。")
-        return
-
-    os.makedirs(strategy_dir, exist_ok=True)
-    os.makedirs(output_dir, exist_ok=True)
-
-    default_strategy = {
-        "roles": [],
-        "summoner_spells": [],
-        "matchups": {
-            "favorable": [],
-            "unfavorable": []
-        },
-        "build": {
-            "starter": [],
-            "boots": [],
-            "core": [],
-            "situational": []
-        },
-        "runes": {
-            "primary": {
-                "path": "",
-                "keystone": "",
-                "keystone_name": "",
-                "choices": []
-            },
-            "secondary": {
-                "path": "",
-                "choices": []
-            },
-            "shards": []
-        },
-        "gameplay_notes": {
-            "laning": "",
-            "teamfight": ""
-        }
-    }
-
-    base_files = [f for f in os.listdir(base_dir) if f.endswith(".json")]
-    all_champions_dict = {}
-    merged_count = 0
-    strategy_applied_count = 0
+    base_paths = sorted(Path(base_dir).glob("*.json"))
+    if not base_paths:
+        raise ValueError("公式チャンピオンデータがありません。")
+    missing_ids = previous.keys() - {path.stem for path in base_paths}
+    if missing_ids:
+        raise ValueError(f"既存チャンピオンの公式データが欠落しています: {', '.join(sorted(missing_ids))}")
 
     print("データの結合処理を開始します...")
-
-    for filename in tqdm(sorted(base_files), desc="データ統合中", unit="champ"):
-        champ_id = os.path.splitext(filename)[0]
-        base_path = os.path.join(base_dir, filename)
+    all_champions_dict = {}
+    patch = None
+    for base_path in tqdm(base_paths, desc="データ統合中", unit="champ"):
+        champ_id = base_path.stem
+        base = load_json(base_path)
+        validate_official_record(base, base_path)
+        if patch is not None and base["patch"] != patch:
+            raise ValueError(f"公式データに複数パッチが混在しています: {base_path}")
+        patch = base["patch"]
         strategy_path = find_strategy_file(strategy_dir, champ_id)
+        strategy = load_json(strategy_path) if strategy_path else None
+        all_champions_dict[champ_id] = merge_record(base, strategy, previous.get(champ_id, {}))
 
-        base_data = load_json(base_path)
-        if not base_data:
-            continue
-
-        strategy_data = load_json(strategy_path) if strategy_path else None
-        merged = merge_record(base_data, strategy_data, previous.get(champ_id, {}))
-        # 公式の基本クラス情報（Fighter, Mage, Tank 等）を classes として保持
-        merged["classes"] = list(base_data.get("roles", []))
-
-        if strategy_data:
-            if strategy_data.get("roles"):
-                merged["roles"] = strategy_data.get("roles")
-            merged["summoner_spells"] = strategy_data.get("summoner_spells", [])
-            merged["build"] = strategy_data.get("build", default_strategy["build"])
-            merged["runes"] = strategy_data.get("runes", default_strategy["runes"])
-            # wiki抜粋はwiki_infoへ保持し、レーン戦・集団戦の専用メモと混同しない。
-            strategy_applied_count += 1
-        else:
-            merged["roles"] = default_strategy["roles"]
-            merged["summoner_spells"] = default_strategy["summoner_spells"]
-            merged["matchups"] = default_strategy["matchups"]
-            merged["build"] = default_strategy["build"]
-            merged["runes"] = default_strategy["runes"]
-            merged["gameplay_notes"] = default_strategy["gameplay_notes"]
-
-        all_champions_dict[champ_id] = merged
-        merged_count += 1
+    if check_only:
+        print(f"書き込みなしで検証済み: {len(all_champions_dict)} 体 / パッチ {patch}")
+        return
 
     # 全件の検証を通過するまで既存のマスター・個別JSONへ書き込まない。
-    for cid, merged in tqdm(all_champions_dict.items(), desc="検証済みJSON保存"):
-        save_json(merged, os.path.join(output_dir, f"{cid}.json"))
-    save_json(all_champions_dict, combined_file)
+    outputs = [(root / output_dir / f"{cid}.json", json_bytes(merged)) for cid, merged in all_champions_dict.items()]
+    outputs.append((combined_file, json_bytes(all_champions_dict)))
+    publish(root, outputs, expected=(combined_file, base_revision))
 
     file_size_kb = os.path.getsize(combined_file) / 1024 if os.path.exists(combined_file) else 0
 
     print("結合処理が完了しました。")
-    print(f"全チャンピオン数: {merged_count} 体")
-    print(f"攻略データ適用数: {strategy_applied_count} 体")
+    print(f"全チャンピオン数: {len(all_champions_dict)} 体")
     print(f"マスターファイル容量: {file_size_kb:.2f} KB")
     print(f"出力先フォルダ: {output_dir}")
     print(f"統合データファイル: {combined_file}")
 
 if __name__ == "__main__":
-    merge_champion_data()
+    parser = argparse.ArgumentParser(description="公式データと取得済み統計の統合")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--check", action="store_true", help="検証のみ行い、保存しない")
+    mode.add_argument("--recover", action="store_true", help="中断した書き込みを復元する")
+    args = parser.parse_args()
+    if args.recover:
+        print("旧データを復元しました。" if recover(Path.cwd()) else "復元待ちの更新はありません。")
+    else:
+        merge_champion_data(check_only=args.check)

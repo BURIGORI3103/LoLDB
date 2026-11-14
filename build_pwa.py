@@ -377,7 +377,10 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]
     return latest_version, "\n".join(html_blocks)
 
 def build():
+    from data_transaction import require_recovered
+
     base_dir = Path(__file__).resolve().parent
+    require_recovered(base_dir)
     master_file = base_dir / "merged_data" / "all_champions.json"
     items_file = base_dir / "merged_data" / "all_items.json"
     dist_dir = base_dir / "dist"
