@@ -1509,7 +1509,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.7.13 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.7.14 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1647,6 +1647,15 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.7.14</span>
+              <span class="changelog-date">2026-11-18</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【別チャンピオン・別パッチの混入と正本欠損時の配布物上書きを防止】2026-11-18総合レビュー指摘12・13・14に対応。OP.GG検証を正規URL・タイトルによる主役チャンピオン照合に変更（取得済み実ページ267件で一致を確認）。process_url_list --patchで現行以外のパッチは通信前に非0終了。build_pwaは正本の欠損・破損・空を出力前に検出し既存配布物を保持して非0終了。回帰テスト9件追加（計60件成功）。</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.7.13</span>
