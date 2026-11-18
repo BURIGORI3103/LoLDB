@@ -48,10 +48,10 @@
 
 ## 6. Obsidian（XO）およびGoogle Driveとの連携情報
 1. **正本仕様書（ローカル）**：`C:\Project\LoLDB\project_context.md`
-2. **Obsidian Vault側ミラー仕様書**：`C:\Project\graviXObsidian\Topics\LoLDB\project_context.md`
-3. **Obsidian Vault側アップデート履歴**：`C:\Project\graviXObsidian\Topics\LoLDB\Update_History.md`
+2. **Obsidian Vault側ミラー仕様書**：`C:\Project\XObsidian\Topics\LoLDB\project_context.md`
+3. **Obsidian Vault側アップデート履歴**：`C:\Project\XObsidian\Topics\LoLDB\Update_History.md`
 4. **Google Drive同期コードバンドル出力先**：`C:\Users\gorir\マイドライブ\GeminiBook_Sources\LoLDB\LoLDB_CodeBundle.md`（および `C:\Project\GeminiBook_Sources\LoLDB\LoLDB_CodeBundle.md`）
 5. **参照・更新ルール**：
    - 作業前に必ず `C:\Project\LoLDB\project_context.md` と `docs/LoL_Database_Specification.md` を確認すること。
-   - `build_pwa.py` は `UPDATE.md` と `C:\Project\graviXObsidian\Topics\LoLDB\Update_History.md` を動的パースしてアプリ内の更新履歴モーダルとバージョンバッジを自動生成する。
+   - `build_pwa.py` は `UPDATE.md` と `C:\Project\XObsidian\Topics\LoLDB\Update_History.md` を動的パースしてアプリ内の更新履歴モーダルとバージョンバッジを自動生成する。
    - 区切りのタイミングで `python c:\Project\add_update.py --project LoLDB --version <Ver> --title <Title> --desc <Desc>` を実行すると、XO履歴記帳と同時に `build_pwa.py` も自動実行される（コミット・同期不要の指示がある場合は除く）。

@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import NotRequired, TypedDict
 
 
-XO_HISTORY_PATH = Path(r"C:\Project\graviXObsidian\Topics\LoLDB\Update_History.md")
+XO_HISTORY_PATH = Path(r"C:\Project\XObsidian\Topics\LoLDB\Update_History.md")
 
 
 class _ChangelogEntry(TypedDict):

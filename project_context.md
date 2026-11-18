@@ -41,7 +41,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 - `index.html` と `dist/index.html` は生成物です。UI の変更は可能な限り生成元の `build_pwa.py` に反映し、ビルド後に出力を確認します。
 - `build_pwa.py` の再ビルド時は、`merged_data/all_champions.json` および個別JSONが正本として同一同期されていることを保証します。`all_champions.json`・`all_items.json` のどちらかが欠損・破損・空の場合は、既存の配布物を変更せずに非0で終了します。
 - OP.GG取得結果は、ページの正規URL（canonical）またはタイトル先頭から主役チャンピオンを特定し、要求したチャンピオンと一致しないページや主役を特定できないページは保存しません。表示パッチが一致しないページも拒否します。`process_url_list.py --patch` は OP.GG が現行パッチしか返さないため、現行と異なるパッチの指定は通信前に中止します。
-- アプリ上部のバージョンバッジ（`#patchBadge`）およびアップデート履歴モーダル（`#changelogModal`）は、`build_pwa.py` 実行時に `UPDATE.md` および `graviXObsidian/Topics/LoLDB/Update_History.md`（ならびに `data/changelog_history.json`）を動的パースして100%自動生成されます。さらに `c:\Project\add_update.py` 実行時に `build_pwa.py` が自動呼び出しされ、アップデート記帳と同時にPWA成果物が最新バージョンへ再ビルドされます。
+- アプリ上部のバージョンバッジ（`#patchBadge`）およびアップデート履歴モーダル（`#changelogModal`）は、`build_pwa.py` 実行時に `UPDATE.md` および `XObsidian/Topics/LoLDB/Update_History.md`（ならびに `data/changelog_history.json`）を動的パースして100%自動生成されます。さらに `c:\Project\add_update.py` 実行時に `build_pwa.py` が自動呼び出しされ、アップデート記帳と同時にPWA成果物が最新バージョンへ再ビルドされます。
 - Service Worker のキャッシュ名（`CORE_CACHE`）は `loldb-core-{latest_version}-{html_hash}` としてビルド時に自動算出され、更新時のキャッシュ残留を防止します。
 - 旧URL（Netlify等）からの移転案内用パッケージとして `dist_old_url_migration/` および `LoLDB_old_url_migration.zip` を管理し、旧URLアクセス者を新URLへ自動誘導します。
 - 配布用ZIP（`LoLDB_dist.zip` 等）はプロジェクト直下（`c:\Project\LoLDB\`）のみで生成・管理し、デスクトップへの自動出力は行いません。
@@ -54,7 +54,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 - `fetch_champions.py`、`process_url_list.py`、`merge_data.py`: データ収集・統合
 - `build_pwa.py`、`sw.js`、`manifest.json`: アプリ生成とオフライン動作
 - `UPDATE.md`: 直近の変更要約
-- `graviXObsidian/Topics/LoLDB/Update_History.md`: 変更履歴
+- `XObsidian/Topics/LoLDB/Update_History.md`: 変更履歴
 
 ## ピックと対面表示の現行仕様
 
