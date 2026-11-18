@@ -1,7 +1,7 @@
 ---
 project: LoLDB
 status: active
-last_reviewed: 2026-11-04
+last_reviewed: 2026-11-18
 summary: LoL のチャンピオン・アイテム・対面情報を集約し、スマートフォンでも使えるオフライン対応 PWA を生成するプロジェクト。
 ---
 
@@ -70,7 +70,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 - `data/role_guidance_evidence.json` で出典・参照パッチ・確認日を管理する。Lux ADC・Sion MID・Tristana MIDは追加調査済み。文章のパッチ対応未検証、取得表の掲載範囲Lv1〜15を明示する。
 - `build_advanced_champion_data.py` と `enrich_role_builds.py` の実行入口は既存データを保持し、確認済み補完だけを同期する。`merge_data.py` も同一パッチの新しい対面取得結果と攻略補完を保持する。
 - 公式入力が空・欠落・不正・混在パッチの場合や、能力値・パッシブ・QWERを欠く場合は、統合済みJSONの置換前に停止する。既存マスターを最後に置換する。 統合・対面取得・対面マトリクス・出典補完・監査補正は更新前のファイルを退避し、マスターの基準版を照合する。中断中は生成と検証を停止し、--recover で旧版を復元する。
-- UI生成元は `build_pwa.py` と埋め込み用 `ui_helpers.js`。配布HTMLだけで重複を減らし、パッシブと通常スキルを両方保持する。未使用の分割チャンピオン・アイテムJSONは生成・配布しない。
+- UI生成元は `build_pwa.py`、その内部モジュール `pwa_builder/`（`changelog.py`, `sources.py`, `rendering.py`, `packager.py`）、およびテンプレート `pwa_templates/`（`index.html.tmpl`, `styles.css`, `app.js`）と埋め込み用 `ui_helpers.js`。単一パス置換により単一HTMLとして出力し、配布HTMLだけで重複を減らし、パッシブと通常スキルを両方保持する。未使用の分割チャンピオン・アイテムJSONは生成・配布しない。
 - テキストとURLを文脈別に検証する。モーダルの履歴で対象とロールを復元し、最上位だけを操作可能にする。ピック検索は公式名・通称・英語ID・ひらがなに対応する。両用フィルターは5体を対象とする。
 - `node tests/test_ui_behavior.cjs` を回帰検証へ追加する。画像先読みは省データ設定・低速回線・オフラインでは停止する。
 
