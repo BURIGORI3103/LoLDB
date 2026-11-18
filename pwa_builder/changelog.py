@@ -4,13 +4,23 @@ import html
 import json
 import re
 from pathlib import Path
+from typing import NotRequired, TypedDict
 
 
 XO_HISTORY_PATH = Path(r"C:\Project\graviXObsidian\Topics\LoLDB\Update_History.md")
 
 
+class _ChangelogEntry(TypedDict):
+    """保存済み履歴と Markdown から統合する一件分の記録。"""
+
+    version: str
+    date: NotRequired[str]
+    title: NotRequired[str]
+    items: NotRequired[list[str]]
+
+
 # 過去バージョンの詳細箇条書き定義（Update_History.md側が1段落要約のみの古いエントリをリッチ表示するための補完辞書）
-CURATED_CHANGELOG_ITEMS = {
+CURATED_CHANGELOG_ITEMS: dict[str, list[str]] = {
     "v2.5.2": [
         "【サステイン絞り込み機能の修正＆公式スキル解析】全173体のスキル・パッシブ説明文から体力回復（吸血・リジェネ強化）・自己シールド能力を厳密解析しDBへ格納。サステイン絞り込みでヒット数0になっていた不具合を解消（全99体が正常ヒット）",
         "【詳細モーダルへのサステイン情報反映】チャンピオン詳細画面に対象スキルの名称や回復・シールド特性、重傷推奨ガイダンスを正確に表示",
@@ -147,7 +157,7 @@ CURATED_CHANGELOG_ITEMS = {
     ],
 }
 
-VERSION_ICONS = {
+VERSION_ICONS: dict[str, str] = {
     "v1.7.1": "🛡️",
     "v1.6.0": "⚡",
     "v1.5.0": "🛡️",
@@ -159,14 +169,15 @@ VERSION_ICONS = {
 
 
 def _parse_version_tuple(ver_str: str) -> tuple[int, ...]:
+    """バージョンから並べ替え用の数字を最大三つ取り出し、欠けた桁はゼロで補う。"""
     nums = [int(x) for x in re.findall(r"\d+", ver_str)]
     while len(nums) < 3:
         nums.append(0)
     return tuple(nums[:3])
 
 
-def _parse_markdown_update_block(block_text: str) -> dict | None:
-    """UPDATE.md または Update_History.md の1ブロックから version, date, title, items を自動抽出する"""
+def _parse_markdown_update_block(block_text: str) -> _ChangelogEntry | None:
+    """Markdown の履歴一件からバージョン、日付、見出し、更新内容を抽出する。"""
     text = block_text.replace("\\n", "\n").strip()
     date_str = ""
     ver_str = ""
@@ -262,11 +273,8 @@ def _parse_markdown_update_block(block_text: str) -> dict | None:
 
 
 def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]:
-    """
-    UPDATE.md、ObsidianのUpdate_History.md、およびdata/changelog_history.jsonを統合・自動パースし、
-    最新バージョン文字列（例: 'v2.6.0'）と #changelogModal 内のHTMLリストを動的生成する。
-    """
-    entries_by_ver: dict[str, dict] = {}
+    """保存済み履歴と Markdown を統合し、最新バージョンと履歴 HTML を返す。"""
+    entries_by_ver: dict[str, _ChangelogEntry] = {}
 
     # 1. ローカル保存済み changelog_history.json があれば読み込む（単体環境用バックアップ）
     history_json_path = base_dir / "data" / "changelog_history.json"
@@ -288,9 +296,7 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]
             parsed = _parse_markdown_update_block(chunk)
             if parsed and parsed["version"] != "v0.1.0":
                 v = parsed["version"]
-                if v in CURATED_CHANGELOG_ITEMS and len(parsed["items"]) <= 1:
-                    parsed["items"] = CURATED_CHANGELOG_ITEMS[v]
-                elif v in CURATED_CHANGELOG_ITEMS and v in ("v2.5.0", "v2.5.2"):
+                if v in CURATED_CHANGELOG_ITEMS and (len(parsed["items"]) <= 1 or v in ("v2.5.0", "v2.5.2")):
                     parsed["items"] = CURATED_CHANGELOG_ITEMS[v]
                 entries_by_ver[v] = parsed
 

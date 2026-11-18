@@ -1,10 +1,4 @@
-"""
-build_pwa.py - 統合マスターデータを内包したオフラインPWAアプリケーションの生成
-================================================================================
-merged_data/all_champions.json をインラインで内包し、
-完全オフライン動作可能な単一HTML（dist/index.html）および
-Service Worker（dist/sw.js）、PWAマニフェスト（dist/manifest.json）を構築します。
-"""
+"""統合マスターデータを埋め込んだオフライン PWA を生成する。"""
 
 import re
 from pathlib import Path
@@ -22,7 +16,8 @@ from pwa_builder.rendering import render_page
 from pwa_builder.sources import _load_required_source
 
 
-def build(base_dir: Path | None = None):
+def build(base_dir: Path | None = None) -> None:
+    """指定ディレクトリの正本と更新履歴から PWA の配布物を生成する。"""
     from data_transaction import require_recovered
 
     base_dir = Path(base_dir) if base_dir is not None else Path(__file__).resolve().parent

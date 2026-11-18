@@ -13,12 +13,12 @@ _TOKEN = re.compile(r"__[A-Z][A-Z0-9_]*?__")
 
 
 def render_template(template: str, values: Mapping[str, str]) -> str:
-    """テンプレート内のトークンを一度だけ置換し、挿入値は再走査しない。"""
+    """テンプレートのトークンだけを一度走査し、登録外のトークンは KeyError で報告する。"""
     return _TOKEN.sub(lambda match: values[match.group()], template)
 
 
 def _read_template(filename: str) -> str:
-    # ソースとしての末尾改行を除き、元のインライン出力と改行位置をそろえる。
+    """ソース末尾の改行一つを除き、出力中の改行位置を保つ。"""
     return (_TEMPLATE_DIR / filename).read_text(encoding="utf-8").removesuffix("\n")
 
 
