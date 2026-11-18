@@ -11,6 +11,8 @@ import argparse
 from tqdm import tqdm
 from audit_normalization import canonical_item_ids, referenced_item_ids
 
+FETCH_TIMEOUT_SECONDS = 30
+
 def format_stat_line(line):
     line = re.sub(r'<[^>]+>', ' ', line).strip()
     line = re.sub(r'\s+', ' ', line)
@@ -102,7 +104,8 @@ def determine_categories(item_name, desc_text, stats_list, tags, stats):
 
 def main(patch=None):
     print("最新Data Dragonバージョンを取得中...")
-    with urllib.request.urlopen("https://ddragon.leagueoflegends.com/api/versions.json") as res:
+    # 応答が止まった場合に無期限で待たないよう、他の取得スクリプトと同様に期限を設ける。
+    with urllib.request.urlopen("https://ddragon.leagueoflegends.com/api/versions.json", timeout=FETCH_TIMEOUT_SECONDS) as res:
         versions = json.loads(res.read().decode("utf-8"))
         latest_version = patch or versions[0]
     print(f"最新バージョン: {latest_version}")
@@ -110,7 +113,7 @@ def main(patch=None):
     item_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_version}/data/ja_JP/item.json"
     print(f"Data Dragon item.json ダウンロード中: {item_url}")
     req = urllib.request.Request(item_url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req) as res:
+    with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT_SECONDS) as res:
         raw_data = json.loads(res.read().decode("utf-8"))["data"]
 
     # チャンピオンデータから使われているアイテムIDも確認

@@ -69,6 +69,11 @@ class DataDragonFixtureTests(PipelineTemporaryFiles):
         self.assertEqual(urlopen.call_count, 2)
         self.assertTrue(urlopen.call_args_list[0].args[0].endswith("/api/versions.json"))
         self.assertTrue(urlopen.call_args_list[1].args[0].full_url.endswith("/16.22.1/data/ja_JP/item.json"))
+        # 応答が止まっても無期限に待たないよう、両方の取得に期限を渡す。
+        self.assertEqual(
+            [request.kwargs.get("timeout") for request in urlopen.call_args_list],
+            [items.FETCH_TIMEOUT_SECONDS] * 2,
+        )
         catalog = self.read_json("merged_data/all_items.json")
         self.assertEqual(set(catalog), {"1001", "1002", "1003", "1005", "1006"})
         self.assertEqual({entry["patch"] for entry in catalog.values()}, {"16.22.1"})
