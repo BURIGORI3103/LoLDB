@@ -7,6 +7,7 @@ Service Worker（dist/sw.js）、PWAマニフェスト（dist/manifest.json）�
 """
 
 import json
+import sys
 import os
 import hashlib
 import html
@@ -376,30 +377,40 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]
 
     return latest_version, "\n".join(html_blocks)
 
-def build():
+def _load_required_source(path: Path, label: str) -> dict:
+    """配布物の生成に必須の正本を読み込む。欠損・破損・空なら既存の配布物を残して非0終了する。"""
+    if not path.exists():
+        print(f"エラー: {label} {path} が見つかりません。既存の配布物は変更せずに中止します。")
+        sys.exit(1)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError) as exc:
+        print(f"エラー: {label} {path} を読み込めません ({exc})。既存の配布物は変更せずに中止します。")
+        sys.exit(1)
+    if not isinstance(data, dict) or not data:
+        print(f"エラー: {label} {path} が空または形式不正です。既存の配布物は変更せずに中止します。")
+        sys.exit(1)
+    return data
+
+
+def build(base_dir: Path | None = None):
     from data_transaction import require_recovered
 
-    base_dir = Path(__file__).resolve().parent
+    base_dir = Path(base_dir) if base_dir is not None else Path(__file__).resolve().parent
     require_recovered(base_dir)
     master_file = base_dir / "merged_data" / "all_champions.json"
     items_file = base_dir / "merged_data" / "all_items.json"
+
+    # 両方の正本を配布物へ書き込む前に検証する（欠損時に空の ITEMS で上書きしたり、正常終了したりしない）
+    print("マスターデータを読み込み中...")
+    all_champs = _load_required_source(master_file, "マスターデータファイル")
+    print("アイテムデータを読み込み中...")
+    all_items = _load_required_source(items_file, "アイテムデータファイル")
+    print(f"合計 {len(all_items)} 件のアイテムデータを読み込みました。")
+
     dist_dir = base_dir / "dist"
     dist_dir.mkdir(parents=True, exist_ok=True)
-
-    if not master_file.exists():
-        print(f"エラー: マスターデータファイル {master_file} が見つかりません。")
-        return
-
-    print("マスターデータを読み込み中...")
-    with open(master_file, "r", encoding="utf-8") as f:
-        all_champs = json.load(f)
-
-    all_items = {}
-    if items_file.exists():
-        print("アイテムデータを読み込み中...")
-        with open(items_file, "r", encoding="utf-8") as f:
-            all_items = json.load(f)
-        print(f"合計 {len(all_items)} 件のアイテムデータを読み込みました。")
 
     print(f"合計 {len(all_champs)} 体のチャンピオンデータを読み込みました。")
 

@@ -12,6 +12,7 @@ import json
 import argparse
 import os
 import re
+import sys
 import time
 import urllib.request
 import urllib.parse
@@ -273,6 +274,34 @@ def parse_opgg_rsc(html, item_dict, rune_dict, path_dict, champ_dict, latest_ver
     return result
 
 
+def _normalize_champion_slug(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", value.lower())
+
+
+def extract_main_champion_slug(html: str) -> str | None:
+    """OP.GGページの主役チャンピオンを、正規URL（canonical / og:url）またはタイトル先頭から取り出す。"""
+    for pattern in (
+        r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\'][^"\']*/champions/([^/"\'?#]+)',
+        r'<link[^>]+href=["\'][^"\']*/champions/([^/"\'?#]+)[^>]+rel=["\']canonical["\']',
+        r'<meta[^>]+property=["\']og:url["\'][^>]+content=["\'][^"\']*/champions/([^/"\'?#]+)',
+    ):
+        match = re.search(pattern, html, re.I)
+        if match:
+            return _normalize_champion_slug(match.group(1)) or None
+    title = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+    if title:
+        head = re.match(r"\s*(.+?)\s+(?:Build|Builds|Counters?|Runes|Stats)\b", title.group(1), re.I)
+        if head:
+            return _normalize_champion_slug(head.group(1)) or None
+    return None
+
+
+def page_matches_patch(html: str, version: str) -> bool:
+    """ページに表示された対象パッチ（例: Patch 16.22）が指定バージョンと一致するか。"""
+    short_patch = ".".join(version.split(".")[:2])
+    return bool(re.search(r"Patch\s+" + re.escape(short_patch) + r"(?![\d.]*\d)", html, re.I))
+
+
 def validate_parsed_opgg_data(parsed: dict, html: str, expected_slug: str) -> tuple[bool, str]:
     """
     HTTP 200 のみで成功と誤認しないよう、解析結果の必須項目・件数・対象チャンピオンを検証する。
@@ -280,10 +309,13 @@ def validate_parsed_opgg_data(parsed: dict, html: str, expected_slug: str) -> tu
     if not html or len(html) < 500:
         return False, "HTMLレスポンスが空または極端に短いためブロック画面の可能性があります"
 
-    # 対象チャンピオンのslugがHTMLまたはURL構造に含まれているか確認
-    slug_norm = expected_slug.lower().replace("_", "").replace("-", "").replace("'", "")
-    if slug_norm not in html.lower():
-        return False, f"対象チャンピオン識別子 ({expected_slug}) がページ内に見つかりません"
+    # ページの主役チャンピオンを特定し、要求したチャンピオンと一致するか確認する。
+    # ページ全体の部分一致では、対面欄の名前だけで別チャンピオンのページを受け入れてしまう。
+    main_champion = extract_main_champion_slug(html)
+    if not main_champion:
+        return False, f"ページの主役チャンピオンを特定できないため保存しません (要求: {expected_slug})"
+    if main_champion != _normalize_champion_slug(expected_slug):
+        return False, f"ページの主役チャンピオン ({main_champion}) が要求 ({expected_slug}) と一致しません"
 
     roles = parsed.get("roles", [])
     if not roles:
@@ -326,7 +358,7 @@ def run():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh", action="store_true", help="チェック済みも再取得")
     parser.add_argument("--reuse-wiki", action="store_true", help="取得済みのwiki情報を再利用")
-    parser.add_argument("--patch", help="取得対象のData Dragonパッチ（省略時は最新）")
+    parser.add_argument("--patch", help="取得対象のData Dragonパッチ（省略時は最新）。OP.GGは現行パッチのみ取得できるため、旧パッチ指定は中止する")
     args = parser.parse_args()
     base_dir = Path(__file__).resolve().parent
     doc_paths = [
@@ -346,6 +378,16 @@ def run():
         return
 
     print(f"URLリスト参照先: {md_path}")
+    if args.patch:
+        # OP.GG の取得URLは常に現行パッチを返し、パッチを切り替える経路がない。
+        # 旧パッチを指定しても全件が検証で弾かれるだけなので、通信前に止める。
+        current = fetch_json("https://ddragon.leagueoflegends.com/api/versions.json")[0]
+        if ".".join(args.patch.split(".")[:2]) != ".".join(current.split(".")[:2]):
+            print(
+                f"エラー: OP.GG の取得は現行パッチ ({current}) のみ対応しています。"
+                f"--patch {args.patch} の統計は取得できないため中止しました。"
+            )
+            sys.exit(2)
     latest_version, item_dict, rune_dict, path_dict, champ_dict, spell_dict = build_dictionaries(args.patch)
     output_dir = base_dir / "strategy_data"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -426,7 +468,7 @@ def run():
                 )
                 is_valid, reason_msg = validate_parsed_opgg_data(parsed, html, champ_slug)
                 short_patch = ".".join(latest_version.split(".")[:2])
-                if not re.search(r'Patch\s+' + re.escape(short_patch) + r'\b', html, re.I):
+                if not page_matches_patch(html, latest_version):
                     is_valid, reason_msg = False, "ページの対象パッチを確認できません"
                 if is_valid:
                     strategy_json.update(parsed)
