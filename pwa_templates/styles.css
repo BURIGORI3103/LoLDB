@@ -1,0 +1,1488 @@
+    :root {
+      --bg-base: #0b0f19;
+      --bg-surface: #151d30;
+      --bg-card: #1c2640;
+      --bg-card-hover: #233152;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --accent: #f59e0b;
+      --border: #2e3c5d;
+      --favorable: #10b981;
+      --unfavorable: #f43f5e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      background: linear-gradient(180deg, #162035 0%, #0e1626 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-badge {
+      background: linear-gradient(135deg, #0ea5e9, #6366f1);
+      color: #fff;
+      font-weight: 900;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .app-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .patch-badge {
+      font-size: 11px;
+      background: #1e293b;
+      color: #38bdf8;
+      border: 1px solid #334155;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+    .patch-badge:hover {
+      background: #0284c7;
+      color: #fff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 8px;
+    }
+    .nav-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .nav-tab.active {
+      background: #1e293b;
+      color: var(--primary);
+      border-color: #334155;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 600px) {
+      .main-nav { flex-wrap: nowrap; gap: 2px; overflow-x: auto; }
+      .nav-tab { flex: 0 0 auto; white-space: nowrap; font-size: 11px; padding: 8px 5px; }
+    }
+    .pick-guide { max-width: 1000px; margin: 20px auto; padding: 0 12px; }
+    .pick-guide p { color: #cbd5e1; line-height: 1.6; }
+    .pick-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .pick-filters button { background: #1e293b; color: #e2e8f0; border: 1px solid #475569; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+    .pick-filters button.active { border-color: #38bdf8; color: #38bdf8; }
+    @media (max-width: 600px) {
+      .pick-filters { flex-wrap: nowrap; gap: 4px; overflow-x: auto; }
+      .pick-filters button { flex: 0 0 auto; white-space: nowrap; font-size: 11px; padding: 8px 5px; }
+    }
+    .pick-list { display: grid; gap: 8px; }
+    .pick-row { background: #172235; border: 1px solid #334155; border-radius: 10px; padding: 12px; }
+    .pick-row strong { color: #7dd3fc; }
+    .pick-choice-garen { color: #fcd34d; }
+    .pick-choice-mordekaiser { color: #d8b4fe; }
+    .pick-choice-malphite { color: #86efac; }
+    .pick-row p { margin: 5px 0 0; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 180px;
+      background-color: #0b0f19;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+    .role-tabs {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .role-btn {
+      background: #151d30;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .role-btn:hover {
+      background: #1c2640;
+      color: #fff;
+    }
+    .role-btn.active {
+      background: #0284c7;
+      color: #fff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    }
+    main {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 16px;
+      flex: 1;
+    }
+    .count-status {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
+      }
+    }
+    .champ-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+      display: flex;
+      flex-direction: column;
+    }
+    .champ-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    .champ-card-img-wrap {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #0b0f19;
+      position: relative;
+      overflow: hidden;
+    }
+    .champ-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .champ-card-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 32px;
+      color: #475569;
+      background: #111827;
+    }
+    .role-badge-list {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .mini-badge {
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 5px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+    .badge-top { background-color: #dc2626; }
+    .badge-jug { background-color: #16a34a; }
+    .badge-mid { background-color: #2563eb; }
+    .badge-adc { background-color: #eab308; color: #000; }
+    .badge-sup { background-color: #9333ea; }
+    .badge-default { background-color: #475569; }
+    /* ダメージタイプバッジ (一覧カード右上 & 詳細モーダル用) */
+    .damage-badge-wrap {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 2;
+    }
+    .damage-badge {
+      font-size: 9.5px;
+      font-weight: 900;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      backdrop-filter: blur(2px);
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .badge-ad {
+      background: rgba(220, 38, 38, 0.9);
+      color: #fff;
+      border: 1px solid #ef4444;
+    }
+    .badge-ap {
+      background: rgba(147, 51, 234, 0.9);
+      color: #fff;
+      border: 1px solid #c084fc;
+    }
+    .badge-hybrid {
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.92) 0%, rgba(147, 51, 234, 0.92) 100%);
+      color: #fff;
+      border: 1px solid #fbbf24;
+    }
+    .badge-tank {
+      background: rgba(16, 185, 129, 0.9);
+      color: #fff;
+      border: 1px solid #34d399;
+    }
+    /* カード右上バッジコンテナ (ダメージ属性 & AAタイプ) */
+    .card-top-badges {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 3px;
+    }
+    /* AA攻撃タイプバッジ (近接 / 遠隔 / 両用) */
+    .attack-type-badge {
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 5px;
+      border-radius: 4px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      backdrop-filter: blur(2px);
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      color: #fff;
+    }
+    .badge-melee {
+      background: rgba(180, 83, 9, 0.92);
+      border: 1px solid #f59e0b;
+      color: #fef3c7;
+    }
+    .badge-ranged {
+      background: rgba(2, 132, 199, 0.92);
+      border: 1px solid #38bdf8;
+      color: #e0f2fe;
+    }
+    .badge-att-hybrid {
+      background: rgba(124, 58, 237, 0.92);
+      border: 1px solid #a855f7;
+      color: #f3e8ff;
+    }
+
+    /* 多機能フィルターチップスバー (メイン一覧用 & シミュレーターピッカー用) */
+    .filter-chips-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+    }
+    .filter-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding-right: 8px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .filter-group:last-of-type {
+      border-right: none;
+    }
+    .filter-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+      margin-right: 2px;
+      white-space: nowrap;
+    }
+    .chip-btn {
+      padding: 3px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .chip-btn:hover {
+      background: #334155;
+      color: #f8fafc;
+      border-color: #475569;
+    }
+    .chip-btn.active {
+      background: var(--primary);
+      color: #0b0f19;
+      border-color: var(--primary-light);
+      font-weight: 900;
+      box-shadow: 0 0 8px rgba(200, 155, 60, 0.4);
+    }
+    .chip-btn.toggle-chip.active {
+      background: #0284c7;
+      color: #fff;
+      border-color: #38bdf8;
+      box-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+    }
+    .chip-reset-btn {
+      margin-left: auto;
+      padding: 3px 8px;
+      font-size: 10.5px;
+      font-weight: 700;
+      background: transparent;
+      border: 1px dashed #475569;
+      color: #94a3b8;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .chip-reset-btn:hover {
+      border-color: #ef4444;
+      color: #f87171;
+    }
+    
+    /* モーダル内AA表示 */
+    .modal-attack-type-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .modal-attack-type-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+    /* 詳細モーダル用ダメージ属性・防具対策ガイド */
+    .modal-damage-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 8px 12px;
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .modal-damage-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+    .modal-damage-counter {
+      font-size: 11.5px;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-left: auto;
+    }
+    .dual-build-alert {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fde68a;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    /* モーダル */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    .modal-overlay.open {
+      display: flex;
+    }
+    .modal-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      animation: modalSlide 0.2s ease-out;
+    }
+    @keyframes modalSlide {
+      from { transform: scale(0.96) translateY(10px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .modal-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      line-height: 1;
+    }
+    .modal-close-btn:hover {
+      color: #fff;
+      background: #1f2937;
+    }
+    .modal-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    /* リリースノートスタイル */
+    .changelog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .changelog-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .changelog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding-bottom: 6px;
+    }
+    .changelog-ver {
+      font-weight: 800;
+      font-size: 14px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .changelog-date {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .changelog-ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 12.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .detail-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .detail-heading {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 8px;
+    }
+    .stat-box {
+      background: #101726;
+      border: 1px solid #1e293b;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+    .stat-label { color: var(--text-muted); font-size: 10px; margin-bottom: 2px; }
+    .stat-val { font-weight: 700; color: #fff; }
+    /* スキル */
+    .skill-card {
+      display: flex;
+      gap: 12px;
+      padding: 10px;
+      background: #101726;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #1e293b;
+      align-items: flex-start;
+    }
+    .skill-icon-wrap {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0b0f19;
+      flex-shrink: 0;
+      border: 1px solid #334155;
+    }
+    .skill-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .skill-slot-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.9);
+      color: #38bdf8;
+      font-weight: 900;
+      font-size: 11px;
+      padding: 1px 4px;
+      border-top-left-radius: 4px;
+      border-left: 1px solid #0284c7;
+      border-top: 1px solid #0284c7;
+    }
+    .skill-content {
+      flex: 1;
+    }
+    .skill-name {
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+    .skill-meta {
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .skill-desc {
+      white-space: pre-line;
+      font-size: 12px;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+    /* 相性カード */
+    .matchups-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 600px) {
+      .matchups-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .matchup-col {
+      background: #101726;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+    }
+    .matchup-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 10px 0;
+      border-bottom: 1px solid #1e293b;
+    }
+    .matchup-item:last-child { border-bottom: none; }
+    .matchup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .matchup-champ-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .matchup-champ-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #334155;
+      background: #0b0f19;
+      flex-shrink: 0;
+    }
+    .matchup-champ-name {
+      font-weight: 700;
+      font-size: 13px;
+      color: #f1f5f9;
+    }
+    .badge-fav {
+      color: var(--favorable);
+      font-weight: 800;
+      font-size: 12px;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .badge-unfav {
+      color: var(--unfavorable);
+      font-weight: 800;
+      font-size: 12px;
+      background: rgba(244, 63, 94, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+    .matchup-reason {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.45;
+      background: #0b0f19;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border-left: 3px solid #38bdf8;
+    }
+    /* ビルド */
+    .build-group {
+      margin-bottom: 12px;
+    }
+    .build-group-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .item-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .item-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #101726;
+      border: 1px solid #1e293b;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #e2e8f0;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .item-pill:hover {
+      border-color: var(--primary);
+      background: #1e293b;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
+    }
+    .item-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #334155;
+    }
+    /* 複数ロール切り替えサブタブ */
+    .modal-role-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .modal-role-btn {
+      background: #101726;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .modal-role-btn:hover {
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .modal-role-btn.active {
+      background: #0284c7;
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }
+    /* サステイン & スキル上げ優先度バッジ */
+    .champ-highlight-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .badge-sustain {
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.4);
+      color: #fb7185;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-skill-order {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 11.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sustain-reason-box {
+      font-size: 11.5px;
+      color: #cbd5e1;
+      background: rgba(244, 63, 94, 0.08);
+      border-left: 3px solid #f43f5e;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+    /* 特徴・強み・弱み */
+    .overview-text {
+      font-size: 12.5px;
+      color: #e2e8f0;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .pros-cons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 600px) {
+      .pros-cons-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .pros-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .cons-box {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .pros-cons-title {
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pros-title { color: var(--favorable); }
+    .cons-title { color: var(--accent); }
+    .pros-cons-ul {
+      list-style: none;
+      font-size: 11.5px;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+    .pros-cons-ul li {
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 14px;
+    }
+    .pros-box li::before {
+      content: "✓";
+      color: var(--favorable);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .cons-box li::before {
+      content: "!";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* 実戦コンボ */
+    .combo-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .combo-card {
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .combo-name {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .combo-recipe {
+      font-size: 12px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      margin-bottom: 6px;
+      word-break: break-all;
+    }
+    .combo-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    /* 複数アイテムビルドタブ */
+    .build-pat-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      margin-bottom: 10px;
+      padding-bottom: 2px;
+    }
+    .build-pat-btn {
+      background: #101726;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .build-pat-btn:hover {
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .build-pat-btn.active {
+      background: #0284c7;
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .build-pat-desc {
+      font-size: 12px;
+      color: #cbd5e1;
+      background: #0b0f19;
+      border-left: 3px solid var(--accent);
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    /* アイテム図鑑スタイル */
+    .item-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .item-controls-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .item-search-input {
+      flex: 1;
+      min-width: 180px;
+      background-color: #0b0f19;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .item-search-input:focus {
+      border-color: var(--primary);
+    }
+    .item-sort-select {
+      background: #151d30;
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+    .item-category-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .item-cat-btn {
+      background: #151d30;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .item-cat-btn:hover {
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .item-cat-btn.active {
+      background: #0284c7;
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+    }
+    @media (min-width: 600px) {
+      .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+    }
+    .item-grid-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      text-align: center;
+    }
+    .item-grid-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .item-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #334155;
+      background: #0b0f19;
+    }
+    .item-card-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 30px;
+    }
+    .item-card-price {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--accent);
+      background: rgba(245, 158, 11, 0.12);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .item-card-stats {
+      font-size: 10px;
+      font-weight: 600;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 3px 6px;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 32px;
+      text-align: left;
+    }
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #e0f2fe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    /* スペル2セット表示 */
+    .spells-sets-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .spell-set-card {
+      background: #101726;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    .spell-set-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    /* スキル取得順マトリクス表 */
+    .skill-matrix-container {
+      margin-top: 10px;
+      background: #0b0f19;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .skill-matrix-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .skill-matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      text-align: center;
+      min-width: 520px;
+    }
+    .skill-matrix-table th, .skill-matrix-table td {
+      padding: 6px 3px;
+      border: 1px solid rgba(51, 65, 85, 0.4);
+    }
+    .skill-matrix-table th {
+      background: #101726;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .skill-matrix-table .sticky-col {
+      position: sticky;
+      left: 0;
+      background: #101726 !important;
+      font-weight: 800;
+      color: #fff !important;
+      z-index: 2;
+      width: 44px;
+    }
+    .skill-point-active {
+      background: #0284c7 !important;
+      color: #fff !important;
+      font-weight: 800;
+      border-radius: 4px;
+    }
+    /* アイテム詳細モーダル */
+    .item-detail-header-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .item-detail-big-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      border: 2px solid var(--primary);
+      object-fit: cover;
+      background: #0b0f19;
+      flex-shrink: 0;
+    }
+    .recipe-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .recipe-item-card {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #111827;
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .recipe-item-card:hover {
+      border-color: var(--primary);
+      background: #1e293b;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+    .recipe-item-card img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      flex-shrink: 0;
+      background: #0b0f19;
+    }
+    .recipe-item-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .recipe-item-name {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #f1f5f9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .recipe-item-price {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .recipe-section-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .recipe-item-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #101726;
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #f1f5f9;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .recipe-item-pill:hover {
+      border-color: var(--primary);
+      background: #1e293b;
+    }
+    .recipe-item-pill img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+    /* アイテム図鑑 2カラムレイアウト & 左側ステータスフィルター */
+    .items-layout-container {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .item-stats-sidebar {
+      width: 210px;
+      flex-shrink: 0;
+      background: #111827;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      position: sticky;
+      top: 130px;
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
+    }
+    .stats-sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .stats-sidebar-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stat-count-pill {
+      background: var(--primary);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+    .stat-clear-btn {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #f87171;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .stat-clear-btn:hover {
+      background: rgba(239, 68, 68, 0.3);
+    }
+    .stats-filter-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .stat-chk-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #cbd5e1;
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 6px;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .stat-chk-item:hover {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+    }
+    .stat-chk-item input {
+      accent-color: var(--primary);
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+    }
+    .items-main-area {
+      flex: 1;
+      min-width: 0;
+    }
+    @media (max-width: 768px) {
+      .items-layout-container {
+        flex-direction: column;
+      }
+      .item-stats-sidebar {
+        width: 100%;
+        position: static;
+        max-height: none;
+        padding: 10px;
+      }
+      .stats-filter-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+      }
+    }
+    .item-step {
+      background: #0284c7;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spell-img {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      object-fit: cover;
+      border: 1px solid #334155;
+    }
+    /* ルーン */
+    .rune-row {
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #e2e8f0;
+      line-height: 1.4;
+    }
+    .rune-title {
+      font-weight: 700;
+      color: var(--accent);
+      margin-right: 6px;
+    }
+    .spells-badge-list {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+    .spell-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #101726;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    }

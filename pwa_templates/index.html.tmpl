@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LoLDB</title>
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="全チャンピオンのスキル、推奨ビルド、ルーン、レーン別対面相性を網羅した攻略PWA（コアデータ即時オフライン・画像オンデマンド＆段階キャッシュ対応）">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+__STYLES__
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-top">
+        <div class="logo-area">
+          <span class="logo-badge">PWA</span>
+          <span class="app-title">LoLDB</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch __SHORT_PATCH__ / __LATEST_VERSION__ ℹ️</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-tab active" data-tab="champions">👑 チャンピオン</button>
+        <button class="nav-tab" data-tab="items">🛡️ アイテム図鑑</button>
+        <button class="nav-tab" data-tab="picks">📋 ピック早見表</button>
+      </nav>
+      <div class="controls" id="champControls">
+        <input type="text" id="searchInput" class="search-input" placeholder="チャンピオン名・英語名・ひらがなで検索..." autocomplete="off">
+        <div class="role-tabs">
+          <button class="role-btn active" data-role="ALL">ALL</button>
+          <button class="role-btn" data-role="TOP">TOP</button>
+          <button class="role-btn" data-role="JUG">JUG</button>
+          <button class="role-btn" data-role="MID">MID</button>
+          <button class="role-btn" data-role="ADC">ADC</button>
+          <button class="role-btn" data-role="SUP">SUP</button>
+        </div>
+        <!-- 複合絞り込みフィルターバー (AA近接/遠隔・AD/AP/タンク・特性) -->
+        <div class="filter-chips-bar" id="champFilterBar">
+          <div class="filter-group">
+            <span class="filter-label">通常攻撃:</span>
+            <button class="chip-btn active" data-filter="attack" data-val="ALL">すべて</button>
+            <button class="chip-btn" data-filter="attack" data-val="MELEE">🗡️ 近接</button>
+            <button class="chip-btn" data-filter="attack" data-val="RANGED">🏹 遠隔</button>
+            <button class="chip-btn" data-filter="attack" data-val="HYBRID">🔄 両用</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">属性:</span>
+            <button class="chip-btn active" data-filter="damage" data-val="ALL">すべて</button>
+            <button class="chip-btn" data-filter="damage" data-val="AD">⚔️ AD</button>
+            <button class="chip-btn" data-filter="damage" data-val="AP">🔮 AP</button>
+            <button class="chip-btn" data-filter="damage" data-val="TANK">🛡️ タンク</button>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">特性:</span>
+            <button class="chip-btn toggle-chip" data-filter="trait" data-val="SUSTAIN" title="高サステイン・回復持ち">🩸 サステイン</button>
+            <button class="chip-btn toggle-chip" data-filter="trait" data-val="DUAL" title="AD/AP両型対応ビルド">⚡ 両型あり</button>
+          </div>
+          <button class="chip-reset-btn" id="chipResetBtn" title="追加フィルターをリセット">リセット</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- チャンピオン一覧ビュー -->
+    <div id="viewChampions">
+      <div class="count-status" id="countStatus">表示中: 0 体</div>
+      <div class="grid-container" id="champGrid"></div>
+    </div>
+
+    <!-- アイテム図鑑ビュー (Phase 2 & 濱田くんの機能拡張) -->
+    <div id="viewItems" style="display: none;">
+      <div class="item-controls">
+        <div class="item-controls-row">
+          <input type="text" id="itemSearchInput" class="item-search-input" placeholder="アイテム名・通称・ひらがな（例: bc, 帽子, ドラン, 時計）で検索..." autocomplete="off">
+          <select id="itemSortSelect" class="item-sort-select">
+            <option value="price_desc">価格が高い順</option>
+            <option value="price_asc">価格が安い順</option>
+            <option value="name_asc">名前順</option>
+          </select>
+        </div>
+        <div class="item-category-tabs">
+          <button class="item-cat-btn active" data-cat="ALL">ALL</button>
+          <button class="item-cat-btn" data-cat="STARTUP">スタートアップ</button>
+          <button class="item-cat-btn" data-cat="AD">攻撃力(AD)</button>
+          <button class="item-cat-btn" data-cat="AP">魔力(AP)</button>
+          <button class="item-cat-btn" data-cat="TANK">防具・タンク</button>
+          <button class="item-cat-btn" data-cat="BOOTS">靴</button>
+          <button class="item-cat-btn" data-cat="SUPPORT">サポート</button>
+          <button class="item-cat-btn" data-cat="CONSUMABLE">消耗品/その他</button>
+        </div>
+      </div>
+
+      <!-- 2カラム構成: 左側ステータスフィルター + 右側アイテム一覧 -->
+      <div class="items-layout-container">
+        <aside class="item-stats-sidebar" id="itemStatsSidebar">
+          <div class="stats-sidebar-header">
+            <div class="stats-sidebar-title">
+              <span>ステータス絞り込み</span>
+              <span id="activeStatBadge" class="stat-count-pill" style="display:none;">0</span>
+            </div>
+            <button id="clearStatFiltersBtn" class="stat-clear-btn" type="button" title="全ステータスフィルターをクリア">全解除</button>
+          </div>
+          <div class="stats-filter-list">
+            <label class="stat-chk-item"><input type="checkbox" value="AD" class="stat-filter-chk"><span>攻撃力 (AD)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AP" class="stat-filter-chk"><span>魔力 (AP)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AS" class="stat-filter-chk"><span>攻撃速度 (AS)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AR" class="stat-filter-chk"><span>物理防御 (AR)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MR" class="stat-filter-chk"><span>魔法防御 (MR)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="HP" class="stat-filter-chk"><span>体力 (HP)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="AH" class="stat-filter-chk"><span>スキルヘイスト</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="CRIT" class="stat-filter-chk"><span>クリティカル</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MS" class="stat-filter-chk"><span>移動速度 (MS)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="LETHALITY" class="stat-filter-chk"><span>脅威 (Lethality)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MAGICPEN" class="stat-filter-chk"><span>魔防貫通</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="VAMP" class="stat-filter-chk"><span>吸血/ヴァンプ</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="MANA" class="stat-filter-chk"><span>マナ (Mana)</span></label>
+            <label class="stat-chk-item"><input type="checkbox" value="HPREGEN" class="stat-filter-chk"><span>体力自動回復</span></label>
+          </div>
+        </aside>
+
+        <div class="items-main-area">
+          <div class="count-status" id="itemCountStatus">表示中: 0 個</div>
+          <div class="items-grid" id="itemsGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="viewPicks" style="display: none;">
+      <section class="pick-guide">
+        <h2>ピック早見表</h2>
+        <p>ガレンの習熟度を優先。相性が僅差ならガレン、APが必要ならモルデカイザーも検討。</p>
+        <p>パッチ26.21を基準にした実戦用の暫定判断です。勝率を検証した統計表ではありません。相手チームにAPが多い場合はマルファイトを再検討してください。</p>
+        <input id="pickSearch" class="search-input" type="search" placeholder="相手チャンピオン名で検索" aria-label="相手チャンピオン名で検索">
+        <div class="pick-filters" aria-label="推奨チャンピオンで絞り込み">
+          <button type="button" class="active" data-pick="すべて" aria-pressed="true">すべて</button><button type="button" data-pick="ガレン" aria-pressed="false">ガレン</button><button type="button" data-pick="モルデカイザー" aria-pressed="false">モルデカイザー</button><button type="button" data-pick="マルファイト" aria-pressed="false">マルファイト</button>
+        </div>
+        <p id="pickCount" aria-live="polite"></p><div id="pickList" class="pick-list"></div>
+        <h3>先出し・BANの目安</h3>
+        <p>先出しはガレン。味方がAD過多ならモルデカイザーも候補。ガレンのBANはダリウスかカミール、モルデカイザーのBANはオラフかグウェンを検討。</p>
+        <p>相手がモルデカイザーならガレンを選択。イラオイとケイルへの後出しはモルデカイザーを選択します。</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- アップデート履歴（リリースノート）モーダル -->
+  <div class="modal-overlay" id="changelogModal" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="changelogHeading" tabindex="-1">
+    <div class="modal-content" style="max-width: 650px;">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2 id="changelogHeading" style="font-size: 17px; font-weight: 800; color: #fff;">📜 LoLDB アップデート履歴</h2>
+        </div>
+        <button class="modal-close-btn" aria-label="閉じる" id="changelogCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="changelog-list">
+__CHANGELOG_ITEMS_HTML__
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 詳細モーダル -->
+  <div class="modal-overlay" id="detailModal" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="modalChampName" tabindex="-1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2 id="modalChampName" style="font-size: 18px; font-weight: 800;">チャンピオン名</h2>
+          <span id="modalChampTitle" style="font-size: 12px; color: var(--text-muted);">二つ名</span>
+        </div>
+        <button class="modal-close-btn" aria-label="閉じる" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- アイテム詳細モーダル -->
+  <div class="modal-overlay" id="itemDetailModal" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="itemDetailName" tabindex="-1" style="z-index: 120;">
+    <div class="modal-content" style="max-width: 620px;">
+      <div class="modal-header">
+        <div class="item-detail-header-wrap">
+          <img id="itemDetailIcon" class="item-detail-big-icon" src="" alt="" onerror="this.style.display='none';">
+          <div>
+            <h2 id="itemDetailName" style="font-size: 17px; font-weight: 800; color: #fff;">アイテム名</h2>
+            <div id="itemDetailPrices" style="margin-top: 4px;"></div>
+          </div>
+        </div>
+        <button class="modal-close-btn" aria-label="閉じる" id="itemDetailCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="itemDetailBody">
+        <!-- 基本ステータス -->
+        <div class="detail-section" id="itemDetailStatsSec">
+          <div class="detail-heading">📊 基本ステータス</div>
+          <div id="itemDetailStatsText" style="font-size: 13px; color: #e2e8f0; line-height: 1.6; font-weight: 600;"></div>
+        </div>
+        <!-- レシピツリー (ゲーム内ショップ風: ステータス直後に大きく配置) -->
+        <div class="detail-section" id="itemDetailRecipeSec">
+          <div class="detail-heading">🔨 合成ツリー (素材 ＆ 派生先)</div>
+          <div class="recipe-tree-wrap">
+            <div id="itemRecipeFromBox" style="margin-bottom: 12px;">
+              <div class="recipe-section-title">🔽 合成素材アイテム (Builds From):</div>
+              <div id="itemRecipeFromList" class="recipe-grid"></div>
+            </div>
+            <div id="itemRecipeIntoBox">
+              <div class="recipe-section-title">🔼 派生先上位アイテム (Builds Into):</div>
+              <div id="itemRecipeIntoList" class="recipe-grid"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 効果説明 -->
+        <div class="detail-section" id="itemDetailDescSec">
+          <div class="detail-heading">✨ 特殊効果（パッシブ / アクティブ）</div>
+          <div id="itemDetailDescText" style="font-size: 12.5px; color: #cbd5e1; line-height: 1.6; white-space: pre-line;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+__APP_JS__
+  </script>
+</body>
+</html>
