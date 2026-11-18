@@ -1509,7 +1509,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.7.14 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.8.0 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1647,6 +1647,15 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.8.0</span>
+              <span class="changelog-date">2026-11-18</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【build_pwa.pyのテンプレート/ビルダー分離と回帰テスト拡充】3,373行のbuild_pwa.pyをpwa_builder/（changelog, sources, rendering, packager）4モジュールとpwa_templates/（index.html.tmpl, styles.css, app.js）へ分離し、単一パス置換で単一HTML配布を維持。テンプレート等価性・補助データ更新スクリプト等のテスト31件を追加し、Python 91件・UI/SWのNode検証・データ整合性チェックが全成功。</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.7.14</span>

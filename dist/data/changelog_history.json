@@ -1,5 +1,13 @@
 [
   {
+    "version": "v2.8.0",
+    "date": "2026-11-18",
+    "title": "build_pwa.pyのテンプレート/ビルダー分離と回帰テスト拡充",
+    "items": [
+      "【build_pwa.pyのテンプレート/ビルダー分離と回帰テスト拡充】3,373行のbuild_pwa.pyをpwa_builder/（changelog, sources, rendering, packager）4モジュールとpwa_templates/（index.html.tmpl, styles.css, app.js）へ分離し、単一パス置換で単一HTML配布を維持。テンプレート等価性・補助データ更新スクリプト等のテスト31件を追加し、Python 91件・UI/SWのNode検証・データ整合性チェックが全成功。"
+    ]
+  },
+  {
     "version": "v2.7.14",
     "date": "2026-11-18",
     "title": "別チャンピオン・別パッチの混入と正本欠損時の配布物上書きを防止",
