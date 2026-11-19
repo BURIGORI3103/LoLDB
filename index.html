@@ -1509,7 +1509,7 @@
         <div class="logo-area">
           <span class="logo-badge">PWA</span>
           <span class="app-title">LoLDB</span>
-          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.8.2 ℹ️</span>
+          <span class="patch-badge" id="patchBadge" title="タップして更新履歴を表示">Patch 16.22 / v2.8.3 ℹ️</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -1647,6 +1647,15 @@
       </div>
       <div class="modal-body">
         <div class="changelog-list">
+          <div class="changelog-item">
+            <div class="changelog-header">
+              <span class="changelog-ver">⚔️ v2.8.3</span>
+              <span class="changelog-date">2026-11-20</span>
+            </div>
+            <ul class="changelog-ul">
+              <li>【wiki相性の再取得失敗で前回データが消える問題を修正】collect_wiki_matchups.py --refresh で取得に失敗したチャンピオンの相性データが空で上書きされ、正常終了していた。1件でも失敗したら何も保存せず非0で終了するようにした（--refresh なしの再実行でキャッシュから集計できる）。再現テストを追加した。</li>
+            </ul>
+          </div>
           <div class="changelog-item">
             <div class="changelog-header">
               <span class="changelog-ver">⚔️ v2.8.2</span>
