@@ -29,3 +29,35 @@ class CollectionTests(unittest.TestCase):
     def test_missing_structure_is_not_invented(self):
         groups, _ = parse_matchups('<div id="body"><h3>相性・対策</h3><p>まだ記載されていない</p></div>', {})
         self.assertEqual(groups, [])
+
+
+class RefreshFailureTests(unittest.TestCase):
+    def test_failed_fetch_keeps_previous_matchups(self):
+        """--refresh 中に取得が失敗したら、前回の相性データを空で上書きせず非0で終了する。"""
+        import json
+        import sys
+        import tempfile
+        from pathlib import Path
+        from unittest.mock import patch
+
+        import collect_wiki_matchups as module
+
+        with tempfile.TemporaryDirectory() as folder:
+            base = Path(folder)
+            (base / "merged_data").mkdir()
+            (base / "data").mkdir()
+            (base / "docs").mkdir()
+            champion = {"name": "ラックス", "wiki_info": {"source_url": "https://example.invalid/lux"},
+                        "wiki_matchups": {"status": "extracted", "groups": [{"relation": "enemy"}]}}
+            master = base / "merged_data/all_champions.json"
+            master.write_text(json.dumps({"Lux": champion}, ensure_ascii=False), encoding="utf-8")
+            before = master.read_text(encoding="utf-8")
+            with patch.object(module, "BASE", base), patch.object(module, "CACHE", base / "cache"), \
+                    patch.object(module.urllib.request, "urlopen", side_effect=OSError("timeout")), \
+                    patch.object(module.time, "sleep"), patch.object(sys, "argv", ["collect", "--refresh"]):
+                with self.assertRaises(SystemExit) as raised:
+                    module.main()
+            self.assertEqual(raised.exception.code, 1)
+            self.assertEqual(master.read_text(encoding="utf-8"), before)
+            self.assertFalse((base / "merged_data/Lux.json").exists())
+            self.assertFalse((base / "data/wiki_matchups.json").exists())

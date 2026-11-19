@@ -3,6 +3,7 @@ import concurrent.futures
 import argparse
 import json
 import re
+import sys
 import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
@@ -161,6 +162,14 @@ def main():
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         collected = dict(tqdm(pool.map(fetch, champions.items()), total=len(champions), desc="wiki相性欄を集計"))
+    failed = {cid: v["error"] for cid, v in collected.items() if v["status"] == "failed"}
+    if failed:
+        # 取得に失敗したまま保存すると、前回抽出した相性データが空で上書きされて消える。
+        # 取得できたページはキャッシュ済みなので、--refresh なしで再実行すれば前回のHTMLで補って集計できる。
+        for cid, error in sorted(failed.items()):
+            print(f"取得失敗: {cid}: {error}", file=sys.stderr)
+        print(f"{len(failed)}件の取得に失敗したため、何も保存せずに終了します。", file=sys.stderr)
+        sys.exit(1)
     (BASE / "data/wiki_matchups.json").write_text(json.dumps(collected, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for cid, c in tqdm(champions.items(), desc="相性資料をアプリデータへ同期"):
         c["wiki_matchups"] = collected[cid]
