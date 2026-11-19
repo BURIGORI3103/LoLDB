@@ -4,7 +4,7 @@
 
 ---
 
-# アップデート（2026年11月18日 - v2.8.0 / build_pwa.pyのテンプレート/ビルダー分離と回帰テスト拡充）
+# アップデート（2026年11月19日 - v2.8.1 / アイテム取得の通信にタイムアウトを設定）
 
 ## 概要
-3,373行のbuild_pwa.pyをpwa_builder/（changelog, sources, rendering, packager）4モジュールとpwa_templates/（index.html.tmpl, styles.css, app.js）へ分離し、単一パス置換で単一HTML配布を維持。テンプレート等価性・補助データ更新スクリプト等のテスト31件を追加し、Python 91件・UI/SWのNode検証・データ整合性チェックが全成功。
+generate_all_items.py の Data Dragon への urlopen 2か所に期限がなく、応答が止まると無期限に待っていた。他の取得スクリプトと同じく30秒のタイムアウトを指定し、既存テスト（tests/test_pipeline_helpers.py）で期限が渡ることを検証した。2026-11-18の総合レビュー記録も追加。
