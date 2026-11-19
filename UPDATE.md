@@ -4,7 +4,7 @@
 
 ---
 
-# アップデート（2026年11月19日 - v2.8.1 / アイテム取得の通信にタイムアウトを設定）
+# アップデート（2026年11月19日 - v2.8.2 / 配布物の置き換えを一括化し中断時の版混在を防止）
 
 ## 概要
-generate_all_items.py の Data Dragon への urlopen 2か所に期限がなく、応答が止まると無期限に待っていた。他の取得スクリプトと同じく30秒のタイムアウトを指定し、既存テスト（tests/test_pipeline_helpers.py）で期限が渡ることを検証した。2026-11-18の総合レビュー記録も追加。
+レビュー指摘L3への対応。pwa_builder/packager.py の write_distribution で、ルートと dist の index.html・sw.js・manifest.json を一時ファイルへ書き終えてから os.replace で置き換えるようにした。LoLDB_dist.zip も一時ファイル経由で作る。中断で残った一時ファイルはZIPに含めない。生成物は修正前とバイト一致。tests/test_packager_atomic.py を追加し、テスト94件成功。
