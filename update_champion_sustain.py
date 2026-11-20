@@ -9,7 +9,10 @@ update_champion_sustain.py
 import json
 import re
 from pathlib import Path
+
 from tqdm import tqdm
+
+from data_transaction import json_bytes, publish, require_recovered, revision
 
 BASE_DIR = Path(__file__).resolve().parent
 MERGED_JSON = BASE_DIR / "merged_data" / "all_champions.json"
@@ -98,6 +101,9 @@ def analyze_champion_sustain(cid, cdata):
     }
 
 def main():
+    root = MERGED_JSON.parent.parent
+    require_recovered(root)
+    base_revision = revision(MERGED_JSON)
     print("チャンピオンマスターデータ読み込み中...")
     with open(MERGED_JSON, "r", encoding="utf-8") as f:
         champions = json.load(f)
@@ -105,6 +111,7 @@ def main():
     sustain_count = 0
     heal_count = 0
     shield_count = 0
+    outputs = []
 
     print(f"全 {len(champions)} 体のチャンピオンにサステイン情報（sustain_info）を付与中...")
     for cid, cdata in tqdm(champions.items(), desc="サステイン解析・付与"):
@@ -124,12 +131,10 @@ def main():
             with open(indiv_path, "r", encoding="utf-8") as f:
                 indiv_data = json.load(f)
             indiv_data["sustain_info"] = sustain_info
-            with open(indiv_path, "w", encoding="utf-8") as f:
-                json.dump(indiv_data, f, ensure_ascii=False, indent=2)
+            outputs.append((indiv_path, json_bytes(indiv_data)))
 
-    # all_champions.json を保存
-    with open(MERGED_JSON, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
+    outputs.append((MERGED_JSON, json_bytes(champions)))
+    publish(root, outputs, expected=(MERGED_JSON, base_revision))
 
     print("\n[SUCCESS] サステイン情報の付与・同期が完了しました！")
     print(f"  サステイン保持（回復またはシールド）: {sustain_count} 体")

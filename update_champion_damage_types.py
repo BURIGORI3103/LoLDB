@@ -211,6 +211,12 @@ def get_damage_profile(champ_id, champ_data):
     }
 
 def main():
+    from data_transaction import json_bytes, publish, require_recovered, revision
+
+    master_path = Path(MERGED_JSON)
+    root = master_path.parent.parent
+    require_recovered(root)
+    base_revision = revision(master_path)
     print("チャンピオンマスターデータ読み込み中...")
     with open(MERGED_JSON, "r", encoding="utf-8") as f:
         champions = json.load(f)
@@ -222,10 +228,13 @@ def main():
 
         from audit_normalization import normalize_with_evidence
         champions[cid] = normalize_with_evidence(cdata, Path(__file__).resolve().parent)
-        (Path(MERGED_JSON).parent / f"{cid}.json").write_text(json.dumps(champions[cid], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    with open(MERGED_JSON, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
+    outputs = [
+        (master_path.parent / f"{cid}.json", json_bytes(cdata, trailing_newline=True))
+        for cid, cdata in champions.items()
+    ]
+    outputs.append((master_path, json_bytes(champions)))
+    publish(root, outputs, expected=(master_path, base_revision))
 
     print(f"[SUCCESS] {len(champions)} 体のチャンピオンデータを更新しました: {MERGED_JSON}")
 

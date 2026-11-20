@@ -2,6 +2,8 @@
 
 import io
 import json
+import stat
+import sys
 import tempfile
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
@@ -144,6 +146,33 @@ class EnricherPublicationTests(unittest.TestCase):
         updated = self.read_json(self.master)["Fixture"]
         self.assertEqual(updated["sustain_info"]["type"], "HEAL")
         self.assertEqual(self.read_json(individual), {**updated, "note": "個別の保存項目"})
+
+    @unittest.skipUnless(sys.platform == "win32", "Windows の読み取り専用属性を検証します")
+    def test_read_only_individual_leaves_all_enrichment_outputs_unchanged(self):
+        champions = {
+            name: {"id": name, "patch": "16.22.1", "stats": {"attackrange": 175}}
+            for name in ("FixtureA", "FixtureB")
+        }
+        first = self.merged / "FixtureA.json"
+        protected = self.merged / "FixtureB.json"
+        cases = (
+            (attack, {"MERGED_DIR": self.merged}),
+            (damage, {"__file__": str(self.root / "entry.py")}),
+            (sustain, {"MERGED_DIR": self.merged}),
+        )
+        for module, paths in cases:
+            with self.subTest(enricher=module.__name__):
+                self.write_json(self.master, champions)
+                self.write_json(first, champions["FixtureA"])
+                self.write_json(protected, champions["FixtureB"])
+                before = {path: path.read_bytes() for path in (self.master, first, protected)}
+                protected.chmod(stat.S_IREAD)
+                try:
+                    with patch.multiple(module, MERGED_JSON=self.master, **paths), self.assertRaises(PermissionError):
+                        module.main()
+                    self.assertEqual({path: path.read_bytes() for path in before}, before)
+                finally:
+                    protected.chmod(stat.S_IWRITE)
 
     def test_item_enrichment_normalizes_startup_categories_idempotently(self):
         path = self.merged / "all_items.json"

@@ -8,7 +8,10 @@ update_champion_attack_types.py
 
 import json
 from pathlib import Path
+
 from tqdm import tqdm
+
+from data_transaction import json_bytes, publish, require_recovered, revision
 
 BASE_DIR = Path(__file__).resolve().parent
 MERGED_JSON = BASE_DIR / "merged_data" / "all_champions.json"
@@ -88,6 +91,9 @@ def determine_attack_type(cid, cdata):
         }
 
 def main():
+    root = MERGED_JSON.parent.parent
+    require_recovered(root)
+    base_revision = revision(MERGED_JSON)
     print("チャンピオンマスターデータ読み込み中...")
     with open(MERGED_JSON, "r", encoding="utf-8") as f:
         champions = json.load(f)
@@ -112,15 +118,9 @@ def main():
         else:
             hybrid_count += 1
 
-    # all_champions.json に書き出し
-    with open(MERGED_JSON, "w", encoding="utf-8") as f:
-        json.dump(champions, f, ensure_ascii=False, indent=2)
-
-    # 個別JSONも同期更新
-    for cid, cdata in tqdm(champions.items(), desc="個別JSON同期"):
-        indiv_file = MERGED_DIR / f"{cid}.json"
-        with open(indiv_file, "w", encoding="utf-8") as f:
-            json.dump(cdata, f, ensure_ascii=False, indent=2)
+    outputs = [(MERGED_DIR / f"{cid}.json", json_bytes(cdata)) for cid, cdata in champions.items()]
+    outputs.append((MERGED_JSON, json_bytes(champions)))
+    publish(root, outputs, expected=(MERGED_JSON, base_revision))
 
     print("\n[SUCCESS] AAタイプ付与が完了しました:")
     print(f"  - 近接 (MELEE): {melee_count} 体")
