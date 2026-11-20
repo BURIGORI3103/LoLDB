@@ -278,15 +278,29 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]
 
     # 1. ローカル保存済み changelog_history.json があれば読み込む（単体環境用バックアップ）
     history_json_path = base_dir / "data" / "changelog_history.json"
-    if history_json_path.exists():
-        try:
-            cached_list = json.loads(history_json_path.read_text(encoding="utf-8"))
-            for item in cached_list:
-                v = item.get("version", "")
-                if v:
-                    entries_by_ver[v] = item
-        except Exception:
-            pass
+    invalid_cache = f"更新履歴ファイルの形式が不正です: {history_json_path}"
+    try:
+        cached_list = json.loads(history_json_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        cached_list = []
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        raise ValueError(invalid_cache) from error
+    if not isinstance(cached_list, list):
+        raise ValueError(invalid_cache)
+    for entry in cached_list:
+        if not isinstance(entry, dict):
+            raise ValueError(invalid_cache)
+        version = entry.get("version", "")
+        items = entry.get("items", [])
+        if (
+            not isinstance(version, str)
+            or not isinstance(entry.get("date", ""), str)
+            or not isinstance(items, list)
+            or any(not isinstance(item, str) for item in items)
+        ):
+            raise ValueError(invalid_cache)
+        if version:
+            entries_by_ver[version] = entry
 
     # 2. Obsidian (XO) の全履歴マスター Update_History.md をパース
     if XO_HISTORY_PATH.exists():

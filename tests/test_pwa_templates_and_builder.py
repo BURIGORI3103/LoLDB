@@ -147,6 +147,19 @@ class BuilderFixtureTests(unittest.TestCase):
         self.assertEqual(self.xo.read_text(encoding="utf-8"), xo_source)
         self.assertEqual(cache.read_bytes(), (self.dist / "data/changelog_history.json").read_bytes())
 
+    def test_corrupted_changelog_cache_keeps_all_existing_artifacts(self):
+        artifacts = self.existing_artifacts()
+        cache = self.root / "data/changelog_history.json"
+        for invalid in (b'[{"version":"v2', b'[{"version":"v98.1.0","items":null}]'):
+            with self.subTest(invalid=invalid):
+                cache.write_bytes(invalid)
+                artifacts[cache] = invalid
+
+                with self.assertRaisesRegex(ValueError, "changelog_history.json"):
+                    build_pwa.build(self.root)
+
+                self.assertEqual({path: path.read_bytes() for path in artifacts}, artifacts)
+
     def test_complete_build_embeds_data_and_creates_matching_distribution_zip(self):
         (self.dist / "icon.png").write_bytes(b"synthetic logo")
         build_pwa.build(self.root)
