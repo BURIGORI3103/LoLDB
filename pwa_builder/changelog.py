@@ -272,7 +272,7 @@ def _parse_markdown_update_block(block_text: str) -> _ChangelogEntry | None:
     }
 
 
-def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]:
+def load_and_render_changelog(base_dir: Path, dist_dir: Path, *, xo_history_text: str | None = None) -> tuple[str, str]:
     """保存済み履歴と Markdown を統合し、最新バージョンと履歴 HTML を返す。"""
     entries_by_ver: dict[str, _ChangelogEntry] = {}
 
@@ -303,8 +303,10 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path) -> tuple[str, str]
             entries_by_ver[version] = entry
 
     # 2. Obsidian (XO) の全履歴マスター Update_History.md をパース
-    if XO_HISTORY_PATH.exists():
+    xo_text = xo_history_text
+    if xo_text is None and XO_HISTORY_PATH.exists():
         xo_text = XO_HISTORY_PATH.read_text(encoding="utf-8")
+    if xo_text:
         chunks = re.split(r"(?=### 📅 \d{4}-\d{2}-\d{2}\s*\|\s*📢 アップデート)", xo_text)
         for chunk in chunks[1:]:
             parsed = _parse_markdown_update_block(chunk)

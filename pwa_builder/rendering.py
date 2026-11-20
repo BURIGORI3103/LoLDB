@@ -17,9 +17,9 @@ def render_template(template: str, values: Mapping[str, str]) -> str:
     return _TOKEN.sub(lambda match: values[match.group()], template)
 
 
-def _read_template(filename: str) -> str:
+def _read_template(template_dir: Path, filename: str) -> str:
     """ソース末尾の改行一つを除き、出力中の改行位置を保つ。"""
-    return (_TEMPLATE_DIR / filename).read_text(encoding="utf-8").removesuffix("\n")
+    return (template_dir / filename).read_text(encoding="utf-8").removesuffix("\n")
 
 
 def render_page(
@@ -31,10 +31,12 @@ def render_page(
     champions: dict[str, Any],
     items: dict[str, Any],
     ui_helpers: str,
+    template_dir: Path | None = None,
 ) -> str:
     """正本 JSON と UI ヘルパーを埋め込み、単一 HTML を生成する。"""
+    template_dir = template_dir if template_dir is not None else _TEMPLATE_DIR
     app_js = render_template(
-        _read_template("app.js"),
+        _read_template(template_dir, "app.js"),
         {
             "__DEFAULT_PATCH_JSON__": safe_json_for_script(build_patch),
             "__CHAMPIONS_JSON__": safe_json_for_script(champions),
@@ -43,12 +45,12 @@ def render_page(
         },
     )
     return render_template(
-        _read_template("index.html.tmpl"),
+        _read_template(template_dir, "index.html.tmpl"),
         {
             "__SHORT_PATCH__": short_patch,
             "__LATEST_VERSION__": latest_version,
             "__CHANGELOG_ITEMS_HTML__": changelog_items_html,
-            "__STYLES__": _read_template("styles.css"),
+            "__STYLES__": _read_template(template_dir, "styles.css"),
             "__APP_JS__": app_js,
         },
     )

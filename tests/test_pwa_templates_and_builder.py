@@ -3,6 +3,7 @@
 import hashlib
 import io
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -102,6 +103,7 @@ class BuilderFixtureTests(unittest.TestCase):
         )
         for name in ("ui_helpers.js", "service_worker_template.js"):
             shutil.copyfile(REPOSITORY / name, self.root / name)
+        shutil.copytree(REPOSITORY / "pwa_templates", self.root / "pwa_templates")
 
     def write_json(self, path, value):
         path.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
@@ -223,3 +225,108 @@ class BuilderFixtureTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "--recover"):
             build_pwa.build(self.root)
         self.assertEqual({path: path.read_bytes() for path in artifacts}, artifacts)
+
+    def test_staged_update_uses_proposed_version_and_leaves_real_outputs_untouched(self):
+        artifacts = self.existing_artifacts()
+        history = self.root / "data/changelog_history.json"
+        self.write_json(history, [])
+        artifacts[history] = history.read_bytes()
+        update = self.root / "UPDATE.md"
+        artifacts[update] = update.read_bytes()
+        proposed = self.root / "proposed.md"
+        proposed.write_text(
+            "# アップデート（2026年11月19日 - v99.20.0 / 新版）\n\n## 概要\n- 新しい記録\n",
+            encoding="utf-8",
+        )
+        self.xo.write_text(
+            "### 📅 2026-11-19 | 📢 アップデート (v99.19.0)\n"
+            "# アップデート（2026年11月19日 - v99.19.0 / 旧履歴）\n\n## 概要\n- XO にある前回の記録\n",
+            encoding="utf-8",
+        )
+        (self.dist / "icon.png").write_bytes(b"synthetic logo")
+        (self.dist / "work-in-progress.md").write_text("配布対象外", encoding="utf-8")
+        stage = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+
+        build_pwa.stage_update(self.root, stage, proposed, "v99.20.0")
+
+        publication = json.loads((stage / "publication.json").read_text(encoding="utf-8"))
+        expected_outputs = [path.relative_to(self.root).as_posix() for path in artifacts if path != update]
+        self.assertCountEqual(publication, expected_outputs)
+        self.assertTrue(all((stage / path).is_file() for path in publication))
+        inputs = json.loads((stage / "publication_inputs.json").read_text(encoding="utf-8"))
+        app_js = self.root / "pwa_templates/app.js"
+        self.assertEqual(inputs["pwa_templates/app.js"], hashlib.sha256(app_js.read_bytes()).hexdigest())
+        self.assertIsNone(inputs["dist/icon-512.png"])
+        self.assertNotIn("dist/work-in-progress.md", inputs)
+        html = (stage / "index.html").read_text(encoding="utf-8")
+        self.assertIn("Patch 16.22 / v99.20.0", html)
+        self.assertIn("XO にある前回の記録", html)
+        with ZipFile(stage / "LoLDB_dist.zip") as archive:
+            self.assertEqual(archive.read("icon.png"), b"synthetic logo")
+            self.assertNotIn("work-in-progress.md", archive.namelist())
+        self.assertEqual({path: path.read_bytes() for path in artifacts}, artifacts)
+
+    def test_staged_update_refuses_an_unexpected_version_and_keeps_real_artifacts(self):
+        artifacts = self.existing_artifacts()
+        history = self.root / "data/changelog_history.json"
+        self.write_json(history, [])
+        artifacts[history] = history.read_bytes()
+        stage = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+
+        with self.assertRaisesRegex(ValueError, "v99.20.0.*v99.10.0"):
+            build_pwa.stage_update(self.root, stage, self.root / "UPDATE.md", "v99.20.0")
+
+        self.assertFalse((stage / "publication.json").exists())
+        self.assertEqual({path: path.read_bytes() for path in artifacts}, artifacts)
+
+    def test_staged_update_rejects_an_older_proposal_than_the_changelog(self):
+        history = self.root / "data/changelog_history.json"
+        history.parent.mkdir()
+        self.write_json(history, [{"version": "v99.20.0", "items": ["新しい記録"]}])
+        stage = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+
+        with self.assertRaisesRegex(ValueError, "v99.10.0.*v99.20.0"):
+            build_pwa.stage_update(self.root, stage, self.root / "UPDATE.md", "v99.10.0")
+
+        self.assertFalse((stage / "publication.json").exists())
+
+    def test_staged_update_checks_the_source_data_transaction(self):
+        journal = self.root / JOURNAL_NAME
+        journal.mkdir()
+        (journal / "pending.json").write_text("[]", encoding="utf-8")
+        stage = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+
+        with self.assertRaisesRegex(RuntimeError, "--recover"):
+            build_pwa.stage_update(self.root, stage, self.root / "UPDATE.md", "v99.10.0")
+
+        self.assertEqual(list(stage.iterdir()), [])
+
+    def test_staged_update_rejects_modified_inputs_during_build(self):
+        stage = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+        original_build = build_pwa.build
+
+        def change_source_while_building(*args, **kwargs):
+            original_build(*args, **kwargs)
+            (self.merged / "all_items.json").write_text("{}", encoding="utf-8")
+
+        with patch.object(build_pwa, "build", side_effect=change_source_while_building):
+            with self.assertRaisesRegex(RuntimeError, "元の入力が変更"):
+                build_pwa.stage_update(self.root, stage, self.root / "UPDATE.md", "v99.10.0")
+
+        self.assertFalse((stage / "publication.json").exists())
+
+    def test_staged_update_rejects_a_linked_asset_directory(self):
+        stage = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+        source = self.root / "linked-assets"
+        source.mkdir()
+        (source / "icon.png").write_bytes(b"outside artifact")
+        self.dist.rmdir()
+        if os.name == "nt":
+            subprocess.run(["cmd", "/c", "mklink", "/J", str(self.dist), str(source)], check=True, capture_output=True)
+        else:
+            self.dist.symlink_to(source, target_is_directory=True)
+
+        with self.assertRaisesRegex(ValueError, "リンクを使用できません"):
+            build_pwa.stage_update(self.root, stage, self.root / "UPDATE.md", "v99.10.0")
+
+        self.assertFalse((stage / "publication.json").exists())
