@@ -45,7 +45,7 @@ def _require_no_pending_xo_install(base_dir: Path) -> None:
     except FileNotFoundError:
         return
     if (state["directory"] == str(base_dir)
-            and state["next"] in {"install", "project_commit", "project_push"}):
+            and state["next"] in {"contexts", "install", "project_commit", "project_push"}):
         raise RuntimeError("XOの配布処理が中断しています。先に add_update.py --project LoLDB --resume を実行してください。")
 
 

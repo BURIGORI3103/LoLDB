@@ -239,11 +239,13 @@ class BuilderFixtureTests(unittest.TestCase):
     def test_pending_xo_install_blocks_normal_build(self):
         pending = self.root.parent / "XObsidian/System_Inbox/.add_update/LoLDB/pending/state.json"
         pending.parent.mkdir(parents=True)
-        self.write_json(pending, {"directory": str(self.root), "next": "install"})
-        with patch.object(build_pwa, "_load_required_source") as read:
-            with self.assertRaisesRegex(RuntimeError, "--resume"):
-                build_pwa.build(self.root)
-        read.assert_not_called()
+        for next_phase in ("contexts", "install"):
+            with self.subTest(next=next_phase):
+                self.write_json(pending, {"directory": str(self.root), "next": next_phase})
+                with patch.object(build_pwa, "_load_required_source") as read:
+                    with self.assertRaisesRegex(RuntimeError, "--resume"):
+                        build_pwa.build(self.root)
+                read.assert_not_called()
 
     def test_pending_transaction_blocks_build_without_changing_distribution(self):
         artifacts = self.existing_artifacts()
