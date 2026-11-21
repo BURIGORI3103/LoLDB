@@ -26,6 +26,21 @@ class CollectionTests(unittest.TestCase):
         self.assertEqual(groups[2]["relation"], "ally")
         self.assertNotIn("無関係", groups[2]["text"])
 
+    def test_ally_heading_variants_switch_relation(self):
+        """「相性のいい味方」「好相性/悪相性」の見出しで、直前の敵・不利を引き継がない。"""
+        html = '''<div id="body"><h3>相性・対策</h3>
+        <p>敵との相性</p><p>不利(Weak Against)</p><p><img src="image/champ/80/ico_Darius.jpg">/ジャガーノート</p>
+        <p>引き撃ちできないので無理に戦わない。</p>
+        <p>相性のいい味方</p><p>好相性(Strong With)</p><p><img src="image/champ/80/ico_Leona.jpg">/拘束系ヴァンガード</p>
+        <p>先に捕まえてもらうとスキルを当てやすい。</p>
+        <p>悪相性（Weak With）</p><p><img src="image/champ/80/ico_Yuumi.jpg">/キルメイクが苦手</p>
+        <p>レーンで圧をかけにくく、序盤のキルが取りづらい。</p></div>'''
+        groups, _ = parse_matchups(html, {"Darius": "ダリウス", "Leona": "レオナ", "Yuumi": "ユーミ"})
+        self.assertEqual([(g["champion_ids"], g["relation"], g["advantage"]) for g in groups],
+                         [(["Darius"], "enemy", "unfavorable"), (["Leona"], "ally", "favorable"),
+                          (["Yuumi"], "ally", "unfavorable")])
+        self.assertNotIn("味方", groups[0]["text"])
+
     def test_missing_structure_is_not_invented(self):
         groups, _ = parse_matchups('<div id="body"><h3>相性・対策</h3><p>まだ記載されていない</p></div>', {})
         self.assertEqual(groups, [])

@@ -97,14 +97,17 @@ def parse_matchups(html, names):
     for line in (re.sub(r"[ \t\r]+", " ", x).strip() for x in "".join(parser.parts).split("\n")):
         if not line:
             continue
-        if "敵との相性" in line or "味方との相性" in line:
+        # 見出しの書き方はページごとに違う（例：サイオンは「相性のいい味方」→「好相性(Strong With)」）。
+        # 敵味方の切り替えを見落とすと、直前の「敵・不利」を引き継いで味方を敵に誤分類する。
+        if "[[" not in line and ("敵との相性" in line or "味方との相性" in line
+                                 or re.fullmatch(r"相性の(?:いい|良い|悪い)(?:味方|敵)", line)):
             flush()
             relation = "ally" if "味方" in line else "enemy"
             advantage = None
             continue
-        if re.match(r"^(?:(?:有利|不利|良い|悪い)\s*(?:[（(]|$)|Strong\s+(?:Against|With)|Weak\s+(?:Against|With))", line, re.I) and "[[" not in line:
+        if re.match(r"^(?:(?:有利|不利|良い|悪い|好相性|悪相性)\s*(?:[（(]|$)|Strong\s+(?:Against|With)|Weak\s+(?:Against|With))", line, re.I) and "[[" not in line:
             flush()
-            advantage = "unfavorable" if re.match(r"不利|悪い|Weak", line, re.I) else "favorable"
+            advantage = "unfavorable" if re.match(r"不利|悪い|悪相性|Weak", line, re.I) else "favorable"
             if re.search(r"With", line, re.I):
                 relation = "ally"
             elif re.search(r"Against", line, re.I):
