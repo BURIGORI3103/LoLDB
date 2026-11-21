@@ -6,6 +6,8 @@ import subprocess
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
+from pwa_builder.sources import validate_catalog_patches
+
 BASE = Path(__file__).resolve().parent
 
 
@@ -23,9 +25,7 @@ def run(*, write_report=True):
     champions = read(BASE / "merged_data/all_champions.json")
     official = {p.stem: read(p) for p in (BASE / "champions_data").glob("*.json")}
     items = read(BASE / "merged_data/all_items.json")
-    patches = {c["patch"] for c in champions.values()}
-    require(len(patches) == 1, "マスターが空か複数パッチが混在")
-    patch = next(iter(patches))
+    patch = validate_catalog_patches(champions, items)
     short = ".".join(patch.split(".")[:2])
     require(champions.keys() == official.keys(), "公式一覧とマスターが不一致")
     roles = pairs = 0

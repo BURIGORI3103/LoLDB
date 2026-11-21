@@ -39,10 +39,11 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 - ピック早見表は、ガレンを優先する3体の手動登録候補を検索・絞り込みできる。パッチ26.21を基準にした暫定判断であり、全対面を網羅した統計や勝率の保証ではない。追加候補は対面の特性とチーム構成、プレイヤーの習熟度を踏まえて検討する。
 - `index.html` と `dist/index.html` は生成物です。UI の変更は可能な限り生成元の `build_pwa.py` に反映し、ビルド後に出力を確認します。
-- `build_pwa.py` の再ビルド時は、`merged_data/all_champions.json` および個別JSONが正本として同一同期されていることを保証します。`all_champions.json`・`all_items.json` のどちらかが欠損・破損・空の場合は、既存の配布物を変更せずに非0で終了します。
+- `build_pwa.py` の再ビルド時は、`merged_data/all_champions.json` および個別JSONが正本として同一同期されていることを保証します。`all_champions.json`・`all_items.json` のどちらかが欠損・破損・空の場合、またはチャンピオンとアイテムの完全パッチが欠落・混在する場合は、既存の配布物を変更せずに非0で終了します。
 - OP.GG取得結果は、ページの正規URL（canonical）またはタイトル先頭から主役チャンピオンを特定し、要求したチャンピオンと一致しないページや主役を特定できないページは保存しません。表示パッチが一致しないページも拒否します。`process_url_list.py --patch` は OP.GG が現行パッチしか返さないため、現行と異なるパッチの指定は通信前に中止します。
 - アプリ上部のバージョンバッジ（`#patchBadge`）およびアップデート履歴モーダル（`#changelogModal`）は、`build_pwa.py` 実行時に `UPDATE.md`、`XObsidian/Topics/LoLDB/Update_History.md`、`data/changelog_history.json` から生成されます。
 - `add_update.py` からは `build_pwa.py --stage-update <空ディレクトリ> --update-file <更新文> --expected-version <版>` で隔離ビルドします。更新処理は、指定版を確認した成果物一覧 `publication.json` と入力の内容ハッシュ `publication_inputs.json` を受け取って実ディレクトリに反映します。隔離ビルドの ZIP は、既定のアイコンと生成物を収録します。
+- 通常ビルドは正本の読み込みから配置完了までデータ更新・XO 配布と同じロックを使います。ルートと dist の配布物、履歴 JSON、ZIP をまとめて仮生成し、置換途中に失敗したときは旧版へ戻します。プロセスが中断し復旧記録が残った場合は `python merge_data.py --recover` で復元します。XO の配置・コミット・プッシュが中断中の場合は `add_update.py --project LoLDB --resume` で先に再開します。
 - Service Worker のキャッシュ名（`CORE_CACHE`）は `loldb-core-{latest_version}-{html_hash}` としてビルド時に自動算出され、更新時のキャッシュ残留を防止します。
 - 旧URL（Netlify等）からの移転案内用パッケージとして `dist_old_url_migration/` および `LoLDB_old_url_migration.zip` を管理し、旧URLアクセス者を新URLへ自動誘導します。
 - 配布用ZIP（`LoLDB_dist.zip` 等）はプロジェクト直下（`c:\Project\LoLDB\`）のみで生成・管理し、デスクトップへの自動出力は行いません。

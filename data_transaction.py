@@ -1,4 +1,4 @@
-"""チャンピオン更新の中断を記録し、旧ファイルをまとめて復元する。"""
+"""データ更新・PWA出力の中断を記録し、旧ファイルをまとめて復元する。"""
 from contextlib import contextmanager
 import hashlib
 import json
@@ -13,6 +13,9 @@ from tqdm import tqdm
 
 JOURNAL_NAME = ".loldb-update"
 LOCK_NAME = ".loldb-update.lock"
+
+_PWA_FILES = ("index.html", "sw.js", "manifest.json", ".nojekyll", "data/changelog_history.json")
+PWA_OUTPUT_FILES = (*_PWA_FILES, *(f"dist/{name}" for name in _PWA_FILES), "LoLDB_dist.zip")
 
 
 def json_bytes(value, *, trailing_newline=False):
@@ -52,7 +55,7 @@ def update_lock(root):
 
 def require_recovered(root):
     if (root / JOURNAL_NAME / "pending.json").exists():
-        raise RuntimeError("中断したデータ更新があります。先に python merge_data.py --recover を実行してください。")
+        raise RuntimeError("中断したデータ更新またはPWA出力があります。先に python merge_data.py --recover を実行してください。")
 
 
 def _atomic_write(path, data):
@@ -69,26 +72,33 @@ def _atomic_write(path, data):
             temp_path.unlink(missing_ok=True)
 
 
-def _target(root, name):
+def _target(root, name, *, publication):
     relative = PurePosixPath(name)
-    if (relative.is_absolute() or len(relative.parts) != 2
-            or relative.parts[0] not in {"champions_data", "strategy_data", "merged_data", "data", "docs"}
-            or re.fullmatch(r"[A-Za-z0-9_.-]+\.json", relative.name) is None):
+    if publication:
+        if name not in PWA_OUTPUT_FILES:
+            raise ValueError("PWAの配布対象パスが不正です")
+    elif (relative.as_posix() != name or len(relative.parts) != 2
+          or relative.parts[0] not in {"champions_data", "strategy_data", "merged_data", "data", "docs"}
+          or re.fullmatch(r"[A-Za-z0-9_.-]+\.json", relative.name) is None):
         raise ValueError("更新対象のJSONパスが不正です")
     target = root.joinpath(*relative.parts)
     if target.parent.resolve() != target.parent or target.is_symlink():
-        raise ValueError("リンクをデータ更新に使用できません")
+        raise ValueError("更新対象にリンクを使用できません")
     return target
 
 
 def _restore(root, journal):
     marker = journal / "pending.json"
-    entries = json.loads(marker.read_text(encoding="utf-8"))
+    record = json.loads(marker.read_text(encoding="utf-8"))
+    publication = isinstance(record, dict) and record.get("kind") == "pwa"
+    entries = record["entries"] if publication else record
+    if not isinstance(entries, list):
+        raise ValueError("復旧記録の形式が不正です")
     files = []
     seen = set()
     for index, entry in enumerate(entries):
         name, old_hash, new_hash = entry
-        target = _target(root, name)
+        target = _target(root, name, publication=publication)
         if target in seen:
             raise ValueError("復旧記録のパスが重複しています")
         seen.add(target)
@@ -99,7 +109,7 @@ def _restore(root, journal):
         if old_hash is not None and revision(backup) != old_hash:
             raise RuntimeError(f"復旧用のデータが欠損または破損しています: {name}")
         files.append((target, current, old_hash, backup))
-    for target, current, old_hash, backup in tqdm(reversed(files), total=len(files), desc="旧データを復元"):
+    for target, current, old_hash, backup in tqdm(reversed(files), total=len(files), desc="旧ファイルを復元"):
         if current == old_hash:
             continue
         if revision(target) != current:
@@ -107,7 +117,9 @@ def _restore(root, journal):
         if old_hash is None:
             target.unlink()
         else:
-            _atomic_write(target, backup.read_bytes())
+            restored = journal / "restore.tmp"
+            _atomic_write(restored, backup.read_bytes())
+            os.replace(restored, target)
     marker.unlink()
 
 
@@ -130,23 +142,29 @@ def recover(root):
         return _recover_locked(root)
 
 
-def publish(root, data, *, expected=None):
+def publish(root, data, *, expected=None, publication=False):
     """全出力を準備してから置換し、完了前の中断では旧版へ戻す。"""
     root = root.resolve()
     with update_lock(root):
-        _recover_locked(root)
-        if expected is not None:
-            path, before = expected
-            if revision(path) != before:
-                raise RuntimeError("処理開始後にマスターが更新されました。最初から実行してください。")
-        journal = root / JOURNAL_NAME
-        journal.mkdir()
-        marker = journal / "pending.json"
+        publish_locked(root, data, expected=expected, publication=publication)
+
+
+def publish_locked(root, data, *, expected=None, publication=False):
+    """呼び出し元が update_lock を保持している間に一括反映する。"""
+    _recover_locked(root)
+    if expected is not None:
+        path, before = expected
+        if revision(path) != before:
+            raise RuntimeError("処理開始後にマスターが更新されました。最初から実行してください。")
+    journal = root / JOURNAL_NAME
+    journal.mkdir()
+    marker = journal / "pending.json"
+    try:
         entries = []
         seen = set()
         for index, (path, content) in enumerate(tqdm(data, total=len(data), desc="更新を準備")):
             name = path.relative_to(root).as_posix()
-            target = _target(root, name)
+            target = _target(root, name, publication=publication)
             if target in seen:
                 raise ValueError(f"更新対象のパスが重複しています: {name}")
             seen.add(target)
@@ -158,17 +176,18 @@ def publish(root, data, *, expected=None):
                     raise RuntimeError(f"バックアップ中に別の変更を検出しました: {name}")
             _atomic_write(journal / f"{index}.new", content)
             entries.append((name, old_hash, hashlib.sha256(content).hexdigest()))
-        _atomic_write(marker, json.dumps(entries, ensure_ascii=False).encode("utf-8"))
-        try:
-            for index, (name, old_hash, _) in enumerate(tqdm(entries, desc="検証済みJSON保存")):
-                target = _target(root, name)
-                if revision(target) != old_hash:
-                    raise RuntimeError(f"置換前に別の変更を検出しました: {name}")
-                os.replace(journal / f"{index}.new", target)
-            marker.unlink()
-        except BaseException:
+        record = {"kind": "pwa", "entries": entries} if publication else entries
+        _atomic_write(marker, json.dumps(record, ensure_ascii=False).encode("utf-8"))
+        for index, (name, old_hash, _) in enumerate(tqdm(entries, desc="検証済みファイルを反映")):
+            target = _target(root, name, publication=publication)
+            if revision(target) != old_hash:
+                raise RuntimeError(f"置換前に別の変更を検出しました: {name}")
+            os.replace(journal / f"{index}.new", target)
+        marker.unlink()
+    except BaseException:
+        if marker.exists():
             _restore(root, journal)
-            raise
-        finally:
-            if not marker.exists():
-                shutil.rmtree(journal)
+        raise
+    finally:
+        if not marker.exists():
+            shutil.rmtree(journal)

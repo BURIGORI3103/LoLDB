@@ -161,7 +161,7 @@ class PatchVerificationTests(PipelineTemporaryFiles):
             }
             self.write_json(f"champions_data/{champion}.json", {"patch": "16.22.1"})
         self.save_champions()
-        self.write_json("merged_data/all_items.json", {"1001": {}})
+        self.write_json("merged_data/all_items.json", {"1001": {"patch": "16.22.1"}})
         self.checklist = self.root / "docs/LoL_URL_list.md"
         self.checklist.write_text("- [x] Fixture\n- [x] Opponent\n", encoding="utf-8")
         self.scripts = ('const patch = "16.22";', 'const roles = ["TOP"];')
@@ -219,8 +219,18 @@ class PatchVerificationTests(PipelineTemporaryFiles):
         self.javascript.assert_not_called()
         self.assertFalse(self.report.exists())
 
+    def test_rejects_wrong_or_missing_item_patch_before_checking_html(self):
+        self.report.write_bytes(b"previous report")
+        for item in ({"patch": "16.22.2"}, {"patch": "16.21.1"}, {}):
+            with self.subTest(item=item):
+                self.write_json("merged_data/all_items.json", {"1001": item})
+                with self.assertRaisesRegex(ValueError, "アイテム.*1001"):
+                    validator.run()
+                self.assertEqual(self.report.read_bytes(), b"previous report")
+        self.javascript.assert_not_called()
+
     def test_rejects_unknown_core_item_before_rendered_html_checks(self):
-        self.write_json("merged_data/all_items.json", {})
+        self.write_json("merged_data/all_items.json", {"1002": {"patch": "16.22.1"}})
         with self.assertRaisesRegex(ValueError, "アイテム辞書に未登録"):
             validator.run(write_report=False)
         self.javascript.assert_not_called()

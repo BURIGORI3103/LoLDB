@@ -1,10 +1,13 @@
 """HTML、Service Worker、マニフェストと配布 ZIP を出力する。"""
 
 import hashlib
+import io
 import os
 import re
 import zipfile
 from pathlib import Path
+
+from data_transaction import publish_locked, update_lock
 
 
 _SERVICE_WORKER_TOKEN = re.compile(r"__(?:VER_HASH|DYNAMIC_CORE_CACHE|HTML_HASH)__")
@@ -35,32 +38,45 @@ _MANIFEST_CONTENT = """{
 _TEMP_SUFFIX = ".loldb-tmp"
 
 
-def _temporary_path(path: Path) -> Path:
-    return path.with_name(f".{path.name}.{os.getpid()}{_TEMP_SUFFIX}")
+def _distribution_zip(dist_dir: Path, generated: dict[str, bytes]) -> bytes:
+    """今回生成した内容と既存素材を組み合わせて、配布ZIPを先に完成させる。"""
+    output = io.BytesIO()
+    with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
+        for path in sorted(dist_dir.rglob("*")):
+            name = path.relative_to(dist_dir).as_posix()
+            if name in generated or path.name.endswith(_TEMP_SUFFIX):
+                continue
+            if path.is_file():
+                archive.write(path, name)
+        for name, content in generated.items():
+            archive.writestr(name, content)
+    return output.getvalue()
 
 
-def _publish_texts(outputs: list[tuple[Path, str]]) -> None:
-    """全ファイルを一時ファイルへ書き終えてから置き換え、版の混在を残さない。"""
-    staged: list[tuple[Path, Path]] = []
-    try:
-        for path, content in outputs:
-            temporary = _temporary_path(path)
-            staged.append((temporary, path))
-            temporary.write_text(content, encoding="utf-8")
-        for temporary, path in staged:
-            os.replace(temporary, path)
-    finally:
-        for temporary, _ in staged:
-            temporary.unlink(missing_ok=True)
+def write_distribution(
+    base_dir: Path,
+    dist_dir: Path,
+    html_content: str,
+    latest_version: str,
+    *,
+    changelog_history: str | None = None,
+) -> None:
+    """配布物作成の単独入口。"""
+    base_dir = base_dir.resolve()
+    with update_lock(base_dir):
+        write_distribution_locked(base_dir, dist_dir.absolute(), html_content, latest_version,
+                                  changelog_history=changelog_history)
 
 
-def write_distribution(base_dir: Path, dist_dir: Path, html_content: str, latest_version: str) -> None:
-    """同じ PWA をルートと dist に出力し、dist の内容を ZIP にまとめる。"""
-    index_path = dist_dir / "index.html"
-    root_index_path = base_dir / "index.html"
-    print(f"単一HTML {index_path} および {root_index_path} を出力中...")
-
-    # HTML とバージョンから Service Worker のキャッシュ名を決める。
+def write_distribution_locked(
+    base_dir: Path,
+    dist_dir: Path,
+    html_content: str,
+    latest_version: str,
+    *,
+    changelog_history: str | None,
+) -> None:
+    """排他中に、ルート・dist・ZIPを一回の更新で配布する。"""
     html_hash = hashlib.sha256(html_content.encode("utf-8")).hexdigest()
     version_hash = f"{latest_version}-{html_hash[:8]}"
     worker_values = {
@@ -70,41 +86,33 @@ def write_distribution(base_dir: Path, dist_dir: Path, html_content: str, latest
     }
     sw_template = (base_dir / "service_worker_template.js").read_text(encoding="utf-8")
     sw_content = _SERVICE_WORKER_TOKEN.sub(lambda match: worker_values[match.group()], sw_template)
-    sw_path = dist_dir / "sw.js"
-    print(f"Service Worker {sw_path} を出力中...")
+    texts = {"index.html": html_content, "sw.js": sw_content, "manifest.json": _MANIFEST_CONTENT}
+    if changelog_history is not None:
+        texts["data/changelog_history.json"] = changelog_history
+    # Windowsでも従来のテキスト出力と同じ改行で書き出す。
+    generated = {name: content.replace("\n", os.linesep).encode("utf-8") for name, content in texts.items()}
 
-    manifest_path = dist_dir / "manifest.json"
-    print(f"Manifest {manifest_path} を出力中...")
-    _publish_texts([
-        (index_path, html_content),
-        (root_index_path, html_content),
-        (sw_path, sw_content),
-        (base_dir / "sw.js", sw_content),
-        (manifest_path, _MANIFEST_CONTENT),
-        (base_dir / "manifest.json", _MANIFEST_CONTENT),
-    ])
+    distribution = {}
+    for directory in (dist_dir, base_dir):
+        marker = directory / ".nojekyll"
+        distribution[directory] = {
+            **generated,
+            ".nojekyll": marker.read_bytes() if marker.is_file() else b"",
+        }
+    zip_content = _distribution_zip(dist_dir, distribution[dist_dir])
+    outputs = [
+        (directory / name, content)
+        for directory, files in distribution.items()
+        for name, content in files.items()
+    ]
+    outputs.append((base_dir / "LoLDB_dist.zip", zip_content))
+    for path, _ in outputs:
+        path.parent.mkdir(parents=True, exist_ok=True)
+    publish_locked(base_dir, outputs, publication=True)
 
-    # GitHub Pages用 .nojekyll の配置
-    (dist_dir / ".nojekyll").touch(exist_ok=True)
-    (base_dir / ".nojekyll").touch(exist_ok=True)
-
-    # プロジェクト直下の配布用ZIP (LoLDB_dist.zip) も自動同期更新
-    zip_path = base_dir / "LoLDB_dist.zip"
-    temporary_zip = _temporary_path(zip_path)
-    try:
-        with zipfile.ZipFile(temporary_zip, "w", zipfile.ZIP_DEFLATED) as zf:
-            for root, _, files in os.walk(dist_dir):
-                for file in files:
-                    if file.endswith(_TEMP_SUFFIX):
-                        continue  # 中断した過去のビルドの一時ファイルは配布しない
-                    full_p = Path(root) / file
-                    zf.write(full_p, full_p.relative_to(dist_dir))
-        os.replace(temporary_zip, zip_path)
-    finally:
-        temporary_zip.unlink(missing_ok=True)
-
+    index_path = dist_dir / "index.html"
     html_size_kb = index_path.stat().st_size / 1024
     print("[SUCCESS] PWA build completed successfully!")
     print(f"出力ファイル: {index_path} ({html_size_kb:.2f} KB)")
-    print(f"Service Worker: {sw_path}")
-    print(f"Manifest: {manifest_path}")
+    print(f"Service Worker: {dist_dir / 'sw.js'}")
+    print(f"Manifest: {dist_dir / 'manifest.json'}")

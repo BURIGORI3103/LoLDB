@@ -31,7 +31,7 @@ class PatchValidatorTests(unittest.TestCase):
             **dict.fromkeys(("attack_type", "damage_profile", "sustain_info", "combos", "skill_matrix")),
         }
         (base / "champions_data/Garen.json").write_text('{"patch":"16.22.1"}', encoding="utf-8")
-        (base / "merged_data/all_items.json").write_text('{"1":{}}', encoding="utf-8")
+        (base / "merged_data/all_items.json").write_text('{"1":{"patch":"16.22.1"}}', encoding="utf-8")
         (base / "docs/LoL_URL_list.md").write_text("- [x] Garen\n", encoding="utf-8")
         for html in ("index.html", "dist/index.html"):
             (base / html).write_text("Patch 16.22 wikiの考察・対策", encoding="utf-8")

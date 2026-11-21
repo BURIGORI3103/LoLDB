@@ -272,8 +272,8 @@ def _parse_markdown_update_block(block_text: str) -> _ChangelogEntry | None:
     }
 
 
-def load_and_render_changelog(base_dir: Path, dist_dir: Path, *, xo_history_text: str | None = None) -> tuple[str, str]:
-    """保存済み履歴と Markdown を統合し、最新バージョンと履歴 HTML を返す。"""
+def prepare_changelog(base_dir: Path, *, xo_history_text: str | None = None) -> tuple[str, str, str]:
+    """保存済み履歴と Markdown を統合し、書き込まずに最新バージョン・HTML・JSONを返す。"""
     entries_by_ver: dict[str, _ChangelogEntry] = {}
 
     # 1. ローカル保存済み changelog_history.json があれば読み込む（単体環境用バックアップ）
@@ -355,14 +355,6 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path, *, xo_history_text
         reverse=True,
     )
 
-    # ローカルおよびdistの data/changelog_history.json に保存（常に同期）
-    for d_base in (base_dir / "data", dist_dir / "data"):
-        d_base.mkdir(parents=True, exist_ok=True)
-        (d_base / "changelog_history.json").write_text(
-            json.dumps(sorted_entries, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-
     latest_version = sorted_entries[0]["version"] if sorted_entries else "v2.6.0"
 
     # HTMLの生成
@@ -389,4 +381,14 @@ def load_and_render_changelog(base_dir: Path, dist_dir: Path, *, xo_history_text
         )
         html_blocks.append(block_html)
 
-    return latest_version, "\n".join(html_blocks)
+    return latest_version, "\n".join(html_blocks), json.dumps(sorted_entries, ensure_ascii=False, indent=2)
+
+
+def load_and_render_changelog(base_dir: Path, dist_dir: Path, *, xo_history_text: str | None = None) -> tuple[str, str]:
+    """履歴を単独で更新する既存の入口。"""
+    version, rendered, history = prepare_changelog(base_dir, xo_history_text=xo_history_text)
+    for directory in (base_dir, dist_dir):
+        path = directory / "data" / "changelog_history.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(history, encoding="utf-8")
+    return version, rendered

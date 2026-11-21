@@ -16,6 +16,7 @@ from unittest.mock import patch
 from zipfile import ZipFile
 
 import build_pwa
+from data_transaction import update_lock
 from data_transaction import JOURNAL_NAME
 from pwa_builder import changelog
 from pwa_builder.rendering import render_template
@@ -83,7 +84,8 @@ class TemplateTests(unittest.TestCase):
 
 class BuilderFixtureTests(unittest.TestCase):
     def setUp(self):
-        self.root = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve()
+        self.root = Path(self.enterContext(tempfile.TemporaryDirectory())).resolve() / "LoLDB"
+        self.root.mkdir()
         self.dist = self.root / "dist"
         self.dist.mkdir()
         self.merged = self.root / "merged_data"
@@ -93,7 +95,7 @@ class BuilderFixtureTests(unittest.TestCase):
         self.enterContext(redirect_stdout(io.StringIO()))
         text = '__STYLES__ __APP_JS__ __CHAMPIONS_JSON__ __ITEMS_JSON__ </script> & "日本語"'
         self.champions = {"Fixture": {"id": "Fixture", "patch": "16.22.1", "description": text}}
-        self.items = {"1001": {"id": "1001", "description": text}}
+        self.items = {"1001": {"id": "1001", "patch": "16.22.1", "description": text}}
         self.write_json(self.merged / "all_champions.json", self.champions)
         self.write_json(self.merged / "all_items.json", self.items)
         (self.root / "UPDATE.md").write_text(
@@ -203,6 +205,17 @@ class BuilderFixtureTests(unittest.TestCase):
             for name in expected:
                 self.assertEqual(archive.read(name), (self.dist / name).read_bytes())
 
+    def test_item_patch_mismatch_or_absence_keeps_existing_artifacts(self):
+        build_pwa.build(self.root)
+        paths = [*self.artifact_paths(), self.root / "LoLDB_dist.zip"]
+        before = {path: path.read_bytes() for path in paths}
+        for item in ({"patch": "16.22.2"}, {"patch": "16.21.1"}, {}):
+            with self.subTest(item=item):
+                self.write_json(self.merged / "all_items.json", {"1001": item})
+                with self.assertRaisesRegex(ValueError, "アイテム.*1001"):
+                    build_pwa.build(self.root)
+                self.assertEqual({path: path.read_bytes() for path in paths}, before)
+
     def test_broken_or_wrong_shape_sources_keep_all_existing_artifacts(self):
         artifacts = self.existing_artifacts()
         for name in ("all_champions.json", "all_items.json"):
@@ -216,6 +229,21 @@ class BuilderFixtureTests(unittest.TestCase):
                     self.assertNotEqual(failure.exception.code, 0)
                     self.assertEqual({path: path.read_bytes() for path in artifacts}, artifacts)
             source.write_bytes(original)
+
+    def test_build_checks_shared_lock_before_reading_release_inputs(self):
+        with update_lock(self.root), patch.object(build_pwa, "_load_required_source") as read:
+            with self.assertRaises(OSError):
+                build_pwa.build(self.root)
+        read.assert_not_called()
+
+    def test_pending_xo_install_blocks_normal_build(self):
+        pending = self.root.parent / "XObsidian/System_Inbox/.add_update/LoLDB/pending/state.json"
+        pending.parent.mkdir(parents=True)
+        self.write_json(pending, {"directory": str(self.root), "next": "install"})
+        with patch.object(build_pwa, "_load_required_source") as read:
+            with self.assertRaisesRegex(RuntimeError, "--resume"):
+                build_pwa.build(self.root)
+        read.assert_not_called()
 
     def test_pending_transaction_blocks_build_without_changing_distribution(self):
         artifacts = self.existing_artifacts()

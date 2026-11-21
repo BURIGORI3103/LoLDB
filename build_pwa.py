@@ -10,17 +10,19 @@ from pathlib import Path
 from tqdm import tqdm
 
 from audit_normalization import project_for_display
+from data_transaction import PWA_OUTPUT_FILES as _PUBLICATION_FILES, require_recovered, update_lock
 from pwa_builder import changelog
 from pwa_builder.changelog import (
     CURATED_CHANGELOG_ITEMS as CURATED_CHANGELOG_ITEMS,
     VERSION_ICONS as VERSION_ICONS,
     _parse_markdown_update_block as _parse_markdown_update_block,
     _parse_version_tuple as _parse_version_tuple,
-    load_and_render_changelog,
+    load_and_render_changelog as load_and_render_changelog,
+    prepare_changelog,
 )
-from pwa_builder.packager import write_distribution
+from pwa_builder.packager import write_distribution_locked
 from pwa_builder.rendering import render_page
-from pwa_builder.sources import _load_required_source
+from pwa_builder.sources import _load_required_source, validate_catalog_patches
 
 
 _STAGED_INPUTS = (
@@ -33,8 +35,18 @@ _STAGED_INPUTS = (
     "pwa_templates/styles.css",
 )
 _OPTIONAL_STAGED_INPUTS = ("data/changelog_history.json", "dist/icon.png", "dist/icon-512.png")
-_PWA_FILES = ("index.html", "sw.js", "manifest.json", ".nojekyll", "data/changelog_history.json")
-_PUBLICATION_FILES = (*_PWA_FILES, *(f"dist/{name}" for name in _PWA_FILES), "LoLDB_dist.zip")
+
+
+def _require_no_pending_xo_install(base_dir: Path) -> None:
+    """XOが中断した配布の再開用ファイルを通常ビルドで上書きしない。"""
+    state_path = base_dir.parent / "XObsidian/System_Inbox/.add_update/LoLDB/pending/state.json"
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return
+    if (state["directory"] == str(base_dir)
+            and state["next"] in {"install", "project_commit", "project_push"}):
+        raise RuntimeError("XOの配布処理が中断しています。先に add_update.py --project LoLDB --resume を実行してください。")
 
 
 def build(
@@ -45,53 +57,48 @@ def build(
     template_dir: Path | None = None,
 ) -> None:
     """指定ディレクトリの正本と更新履歴から PWA の配布物を生成する。"""
-    from data_transaction import require_recovered
+    base_dir = Path(base_dir).resolve() if base_dir is not None else Path(__file__).resolve().parent
+    with update_lock(base_dir):
+        require_recovered(base_dir)
+        _require_no_pending_xo_install(base_dir)
+        master_file = base_dir / "merged_data" / "all_champions.json"
+        items_file = base_dir / "merged_data" / "all_items.json"
 
-    base_dir = Path(base_dir) if base_dir is not None else Path(__file__).resolve().parent
-    require_recovered(base_dir)
-    master_file = base_dir / "merged_data" / "all_champions.json"
-    items_file = base_dir / "merged_data" / "all_items.json"
+        # 両方の正本を配布物へ書き込む前に検証する（欠損時に空の ITEMS で上書きしたり、正常終了したりしない）
+        print("マスターデータを読み込み中...")
+        all_champs = _load_required_source(master_file, "マスターデータファイル")
+        print("アイテムデータを読み込み中...")
+        all_items = _load_required_source(items_file, "アイテムデータファイル")
+        print(f"合計 {len(all_items)} 件のアイテムデータを読み込みました。")
 
-    # 両方の正本を配布物へ書き込む前に検証する（欠損時に空の ITEMS で上書きしたり、正常終了したりしない）
-    print("マスターデータを読み込み中...")
-    all_champs = _load_required_source(master_file, "マスターデータファイル")
-    print("アイテムデータを読み込み中...")
-    all_items = _load_required_source(items_file, "アイテムデータファイル")
-    print(f"合計 {len(all_items)} 件のアイテムデータを読み込みました。")
+        print(f"合計 {len(all_champs)} 体のチャンピオンデータを読み込みました。")
+        build_patch = validate_catalog_patches(all_champs, all_items)
+        dist_dir = base_dir / "dist"
+        short_patch = ".".join(build_patch.split(".")[:2])
+        latest_version, changelog_items_html, changelog_history = prepare_changelog(base_dir, xo_history_text=xo_history_text)
+        if not re.fullmatch(r"v\d+\.\d+\.\d+", latest_version):
+            raise ValueError("生成対象のバージョンが不正です")
+        if expected_version is not None and latest_version != expected_version:
+            raise ValueError(f"指定版 {expected_version} と生成版 {latest_version} が一致しません")
+        print(f"最新バージョン検出: {latest_version} (Patch {short_patch})")
 
-    dist_dir = base_dir / "dist"
-    dist_dir.mkdir(parents=True, exist_ok=True)
+        # 廃止したシミュレーター専用の対面マトリクスは配布 HTML へ含めない。
+        display_champs = project_for_display(all_champs)
+        ui_helpers = (base_dir / "ui_helpers.js").read_text(encoding="utf-8")
+        html_content = render_page(
+            build_patch=build_patch,
+            short_patch=short_patch,
+            latest_version=latest_version,
+            changelog_items_html=changelog_items_html,
+            champions=display_champs,
+            items=all_items,
+            ui_helpers=ui_helpers,
+            template_dir=template_dir,
+        )
 
-    print(f"合計 {len(all_champs)} 体のチャンピオンデータを読み込みました。")
-
-    # パッチ番号をマスターデータから一元抽出
-    first_champ = next(iter(all_champs.values()), {})
-    build_patch = first_champ.get("patch", "16.20.1")
-    if not re.fullmatch(r"\d+\.\d+\.\d+", build_patch) or {champ.get("patch") for champ in all_champs.values()} != {build_patch}:
-        raise ValueError("生成対象のパッチが不正または混在しています")
-    short_patch = ".".join(build_patch.split(".")[:2])
-    latest_version, changelog_items_html = load_and_render_changelog(base_dir, dist_dir, xo_history_text=xo_history_text)
-    if not re.fullmatch(r"v\d+\.\d+\.\d+", latest_version):
-        raise ValueError("生成対象のバージョンが不正です")
-    if expected_version is not None and latest_version != expected_version:
-        raise ValueError(f"指定版 {expected_version} と生成版 {latest_version} が一致しません")
-    print(f"最新バージョン検出: {latest_version} (Patch {short_patch})")
-
-    # 廃止したシミュレーター専用の対面マトリクスは配布 HTML へ含めない。
-    display_champs = project_for_display(all_champs)
-    ui_helpers = (base_dir / "ui_helpers.js").read_text(encoding="utf-8")
-    html_content = render_page(
-        build_patch=build_patch,
-        short_patch=short_patch,
-        latest_version=latest_version,
-        changelog_items_html=changelog_items_html,
-        champions=display_champs,
-        items=all_items,
-        ui_helpers=ui_helpers,
-        template_dir=template_dir,
-    )
-
-    write_distribution(base_dir, dist_dir, html_content, latest_version)
+        write_distribution_locked(
+            base_dir, dist_dir, html_content, latest_version, changelog_history=changelog_history,
+        )
 
 
 def _read_stage_input(path: Path, *, optional: bool = False) -> bytes | None:
@@ -112,8 +119,6 @@ def _read_stage_input(path: Path, *, optional: bool = False) -> bytes | None:
 
 def stage_update(base_dir: Path, stage_dir: Path, update_file: Path, expected_version: str) -> None:
     """指定された更新文を使い、既存の配布物に触れずに候補を生成する。"""
-    from data_transaction import require_recovered
-
     base_dir = base_dir.resolve()
     stage_dir = stage_dir.absolute()
     if stage_dir.resolve() != stage_dir or stage_dir.is_symlink() or stage_dir.is_junction():
