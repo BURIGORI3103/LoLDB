@@ -2,6 +2,7 @@
 
 import io
 import os
+import stat
 import subprocess
 import sys
 import tempfile
@@ -71,6 +72,24 @@ class PackagerAtomicTests(unittest.TestCase):
             with self.assertRaises(PermissionError):
                 self.build("<p>新版</p>\n", "v2.0.0")
         self.assertEqual(self.snapshot(), before)
+
+    def test_read_only_journal_is_removed_after_publication(self):
+        # Google ドライブ同期で、作業中の復旧記録フォルダに読み取り専用属性が付いた状態を再現する。
+        self.build("<p>旧版</p>\n")
+        journal = self.base / data_transaction.JOURNAL_NAME
+        replace_file = os.replace
+
+        def mark_journal_read_only(source, destination):
+            if journal.is_dir():
+                for path in (journal, *journal.rglob("*")):
+                    if path.is_dir():
+                        os.chmod(path, stat.S_IREAD)
+            return replace_file(source, destination)
+
+        with patch.object(os, "replace", side_effect=mark_journal_read_only):
+            self.build("<p>新版</p>\n", "v2.0.0")
+        self.assertFalse(journal.exists())
+        self.assertIn("新版", (self.dist / "index.html").read_text(encoding="utf-8"))
 
     def test_failure_during_zip_generation_leaves_previous_version(self):
         self.build("<p>旧版</p>\n")

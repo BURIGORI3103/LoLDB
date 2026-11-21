@@ -3,6 +3,8 @@ import zipfile
 from pathlib import Path
 from tqdm import tqdm
 
+from data_transaction import remove_tree
+
 BASE_DIR = Path(__file__).resolve().parent
 MIGRATION_DIR = BASE_DIR / "dist_old_url_migration"
 DIST_DIR = BASE_DIR / "dist"
@@ -13,7 +15,7 @@ NEW_URL = "https://burigori3103.github.io/LoLDB/"
 def build_migration_package():
     print(f"旧URL専用移転パッケージフォルダを作成中: {MIGRATION_DIR}")
     if MIGRATION_DIR.exists():
-        shutil.rmtree(MIGRATION_DIR)
+        remove_tree(MIGRATION_DIR)
     MIGRATION_DIR.mkdir(parents=True, exist_ok=True)
 
     # 1. index.html の作成 (クリーンアップ＆リダイレクトUI)

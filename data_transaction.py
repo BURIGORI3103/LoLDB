@@ -6,6 +6,7 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
+import stat
 import tempfile
 
 from tqdm import tqdm
@@ -51,6 +52,21 @@ def update_lock(root):
                 msvcrt.locking(lock.fileno(), msvcrt.LK_UNLCK, 1)
             else:
                 fcntl.flock(lock, fcntl.LOCK_UN)
+
+
+def remove_tree(path):
+    """読み取り専用属性の付いた項目も削除する。
+
+    C:\\Project は Google ドライブの同期対象で、作成から数秒でフォルダに読み取り専用属性が付く。
+    Windows では読み取り専用のフォルダを削除できないため、その場合だけ属性を外して再試行する。
+    """
+    def clear_readonly(function, target, error):
+        if not isinstance(error, PermissionError) or os.path.islink(target) or os.path.isjunction(target):
+            raise error
+        os.chmod(target, stat.S_IWRITE)
+        function(target)
+
+    shutil.rmtree(path, onexc=clear_readonly)
 
 
 def require_recovered(root):
@@ -133,7 +149,7 @@ def _recover_locked(root):
     pending = marker.exists()
     if pending:
         _restore(root, journal)
-    shutil.rmtree(journal)
+    remove_tree(journal)
     return pending
 
 
@@ -190,4 +206,4 @@ def publish_locked(root, data, *, expected=None, publication=False):
         raise
     finally:
         if not marker.exists():
-            shutil.rmtree(journal)
+            remove_tree(journal)
