@@ -29,7 +29,7 @@ League of Legends のチャンピオン、アイテム、ロール別ビルド�
 
 - `refresh_wiki.py` は公式取得済みチャンピオン一覧から日本語名と参照URLを再生成し、現行の `www.loljp-wiki.jp/wiki/?Champion/<英語ID>` から「考察」「相性・対策」の短い抜粋を再取得します。
 - wikiの取得結果は `strategy_data` の `wiki_info` と `docs/wiki_refresh_report.json` に、出典URL・取得日時・成否を付けて保存します。wikiのパッチ対応は未検証であり、OP.GGの取得チェックとは別に管理します。失敗時は本文を生成して成功扱いにしません。
-- OP.GGの正式slugはウーコンが `monkeyking`、レナータが `renata`。`process_url_list.py --refresh --reuse-wiki` で全件を再取得し、ページ表示のパッチを検証します。`refresh_role_stats.py` が実運用ロールごとのページから統計を取得し、表示ロールとパッチを検証して `role_data` へ保存します。
+- OP.GGの正式slugはウーコンが `monkeyking`、レナータが `renata`。`process_url_list.py --refresh --reuse-wiki` で全件を再取得し、ページ表示のパッチを検証します。`refresh_role_stats.py` が実運用ロールごとのページから統計を取得し、表示ロールとパッチを検証して `role_data` へ保存します。保存は対面更新（`refresh_matchup_stats.py`）と同じ更新ロックの中で一括反映し、両方とも読み込んだ攻略JSONが取得中に変わっていれば保存せずに止まります（古い内容での上書きを防ぐため。最初から実行し直します）。
 - `merge_data.py` はパッチ・ロール別の取得が未完了なら停止し、検証済みデータで統計を置換します。コンボ・スキル順などの既存補完を保持し、ダメージ属性・AAタイプ・サステインと対面マトリクスを後段で再計算します。`sync_all_roles_complete.py` の固定相性・固定ビルドによる補完はパッチ更新フローでは実行しません。
 - `apply_matchup_reasons.py` は文献確認済み解説をマスター・個別JSON・対面マトリクスへ同期する。基礎特性から推測した説明は相性理由として採用しない。確認済み解説のない対面カードは、勝率のみを表示する。
 - `collect_wiki_matchups.py --refresh` は全173体のwiki相性欄を取得し、CSSで折りたたまれた本文も対象画像群・有利不利・敵味方・説明文に分けて `data/wiki_matchups.json` へ集計する。保存済みHTMLからの再集計は引数なし。本文中の補足参照や例外を対象画像群へ追加しない。結果と取得不可・抽出項目なしのページは `docs/wiki_matchup_collection_report.json` に記録する。

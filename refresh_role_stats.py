@@ -1,6 +1,7 @@
 """OP.GGのロール別統計を検証して攻略JSONへ保存する。"""
 import concurrent.futures
 import argparse
+import hashlib
 import json
 import re
 import time
@@ -11,6 +12,7 @@ from pathlib import Path
 from process_url_list import (build_dictionaries, parse_opgg_rsc,
                               validate_parsed_opgg_data, get_headers, JST, tqdm)
 from merge_data import find_strategy_file
+from data_transaction import json_bytes, publish, require_recovered
 
 BASE = Path(__file__).resolve().parent
 ROLE_PATH = {"TOP": "top", "JUG": "jungle", "MID": "mid", "ADC": "adc", "SUP": "support"}
@@ -21,13 +23,18 @@ def run():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--patch", help="取得対象パッチ（省略時は最新）")
     args = parser.parse_args()
+    require_recovered(BASE)
     version, items, runes, paths, champs, spells = build_dictionaries(args.patch)
     short = ".".join(version.split(".")[:2])
     datasets = {}
     tasks = []
+    expected = []
     for base in sorted((BASE / "champions_data").glob("*.json")):
         target = Path(find_strategy_file(str(BASE / "strategy_data"), base.stem))
-        data = json.loads(target.read_text(encoding="utf-8"))
+        raw = target.read_bytes()
+        data = json.loads(raw.decode("utf-8"))
+        # 取得中に対面更新などが攻略JSONを保存した場合、古い内容で上書きしない。
+        expected.append((target, hashlib.sha256(raw).hexdigest()))
         if data.get("patch") != version or not data.get("opgg_source", {}).get("patch_verified"):
             raise ValueError(f"最新統計の取得が未完了: {base.stem}")
         datasets[base.stem] = (target, data)
@@ -62,8 +69,9 @@ def run():
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         for cid, role, parsed in tqdm(pool.map(fetch, tasks), total=len(tasks), desc="ロール別統計取得"):
             datasets[cid][1]["role_data"][role] = parsed
-    for target, data in datasets.values():
-        target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # 対面更新と同じ更新ロックの中で、読込後に変更がないことを確かめてから一括反映する。
+    outputs = [(target, json_bytes(data, trailing_newline=True)) for target, data in datasets.values()]
+    publish(BASE, outputs, expected=expected)
     print(f"全{len(datasets)}体・{len(tasks)}ロールのパッチ{short}統計を保存しました。")
 
 

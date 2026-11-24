@@ -1,6 +1,7 @@
 """既存パッチのOP.GG対面一覧を検証し、有利・不利を各最大7体保存する。"""
 import concurrent.futures
 import argparse
+import hashlib
 import json
 import re
 import time
@@ -83,12 +84,16 @@ def main():
     champions = {}
     strategies = {}
     tasks = []
+    expected = [(master_path, base_revision)]
     for cid, champ in master.items():
         # 基礎JSONの英語名はIDと異なるため、OP.GGの画像altを同じパッチの英語辞書で照合する。
         champions[cid] = {"name": champ["name"], "name_en": cid}
         strategy_path = Path(find_strategy_file(str(BASE / "strategy_data"), cid))
-        strategy = json.loads(strategy_path.read_text(encoding="utf-8"))
+        raw = strategy_path.read_bytes()
+        strategy = json.loads(raw.decode("utf-8"))
         strategies[cid] = (strategy_path, strategy)
+        # 取得中にロール別統計などが攻略JSONを保存した場合、古い内容で上書きしない。
+        expected.append((strategy_path, hashlib.sha256(raw).hexdigest()))
         for role in champ["roles"]:
             tasks.append((cid, role, strategy["slug"], champ["patch"]))
     for patch in {task[3] for task in tasks}:
@@ -143,7 +148,7 @@ def main():
                         (BASE / "merged_data" / f"{cid}.json", json_bytes(master[cid], trailing_newline=True))))
     outputs.extend(((BASE / "docs/matchup_refresh_report.json", json_bytes(report, trailing_newline=True)),
                     (master_path, json_bytes(master, trailing_newline=True))))
-    publish(BASE, outputs, expected=(master_path, base_revision))
+    publish(BASE, outputs, expected=expected)
     print(f"{len(master)}体・{len(results)}ロールの有利不利を最大{LIMIT}体へ更新しました。")
 
 

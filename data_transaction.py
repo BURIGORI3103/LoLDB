@@ -168,10 +168,13 @@ def publish(root, data, *, expected=None, publication=False):
 def publish_locked(root, data, *, expected=None, publication=False):
     """呼び出し元が update_lock を保持している間に一括反映する。"""
     _recover_locked(root)
-    if expected is not None:
-        path, before = expected
-        if revision(path) != before:
-            raise RuntimeError("処理開始後にマスターが更新されました。最初から実行してください。")
+    if expected:
+        # (パス, 読込時のrevision) を1組、または複数組のリストで受け取る。
+        checks = [expected] if isinstance(expected[0], (str, os.PathLike)) else expected
+        for index, (path, before) in enumerate(checks):
+            if revision(Path(path)) != before:
+                label = "マスター" if index == 0 else Path(path).name
+                raise RuntimeError(f"処理開始後に{label}が更新されました。最初から実行してください。")
     journal = root / JOURNAL_NAME
     journal.mkdir()
     marker = journal / "pending.json"
