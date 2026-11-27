@@ -1,7 +1,7 @@
-// LoLDBのHTML内容検証付き2層キャッシュ v2.8.10-f7f2f383
+// LoLDBのHTML内容検証付き2層キャッシュ v2.8.10-3188b47d
 const CACHE_PREFIX = 'loldb-';
-const CORE_CACHE = 'loldb-core-v2.8.10-f7f2f383';
-const HTML_HASH = 'f7f2f3839f9e5c38aa85fc79c914ee4b5ca58f71cb28d3373719bb87d9ca8d2c';
+const CORE_CACHE = 'loldb-core-v2.8.10-3188b47d';
+const HTML_HASH = '3188b47d61304b42b1a63ee1d3957ec99d884c43a3a702bff31c8d31273c954f';
 const IMAGE_CACHE = 'loldb-images-v1';
 const ASSETS_TO_CACHE = ['./index.html', './manifest.json', './icon.png', './icon-512.png'];
 
